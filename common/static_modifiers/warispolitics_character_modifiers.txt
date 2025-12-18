@@ -1,0 +1,8 @@
+﻿warispolitics_character_lost_war = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitulate_negative.dds
+	character_popularity_add = -20
+}
+warispolitics_character_won_war = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_mobilization_positive.dds
+	character_popularity_add = 15
+}

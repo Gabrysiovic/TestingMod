@@ -1,0 +1,115 @@
+﻿l_english:
+
+ #####
+ # Technology
+ #####
+
+ predreadnought_tech: "Pre-Dreadnought"
+ predreadnought_tech_desc: "With large caliber guns and steel armor, pre-dreadnought battleships are powerful vessels."
+ steel_shipbuilding_tech: "Steel Shipbuilding"
+ steel_shipbuilding_tech_desc: "TODO"
+ turbine_powered_ships_tech: "Turbine-Powered Ships"
+ turbine_powered_ships_tech_desc: "TODO"
+ large_scale_shipbuilding_tech: "Large Scale Shipbuilding"
+ large_scale_shipbuilding_tech_desc: "TODO"
+ fully_rigged_ships: "Fully Rigged Ships"
+ fully_rigged_ships_desc: "Ships with a full set of sails can move faster and carry more armament."
+
+######
+# Modifier Types
+######
+ unit_naval_armor_add: "[concept_naval_armor]"
+ unit_naval_armor_add_desc: "A change in the armor of the unit"
+ unit_naval_pen_add: "[concept_naval_pen]"
+ unit_naval_pen_add_desc: "A change in the penetration of the unit"
+
+ #####
+ # Goods
+ #####
+ tts_capital_ships: "Capital Ships"
+
+ ######
+ # Production Methods
+ #####
+
+ # Mil Shipyards
+ pm_military_shipbuilding_ironclad: "Ironclads"
+ pm_military_shipbuilding_steel: "Steel-Hulled Ships"
+ pm_military_shipbuilding_turbine: "Turbine-Powered Ships"
+ pm_military_shipbuilding_arc_welding: "Large Battleships"
+
+######
+# Custom triggers
+######
+
+# Goods
+ goods_input_tts_capital_ships_add: "@tts_capital_ships! Capital Ships input"
+ goods_input_tts_capital_ships_add_desc: "The amount of @tts_capital_ships! Capital Ships consumed by buildings"
+
+ goods_output_tts_capital_ships_add: "@tts_capital_ships! Capital Ships output"
+ goods_output_tts_capital_ships_add_desc: "The amount of @tts_capital_ships! Capital Ships produced by buildings"
+
+ # Unit combat modifiers
+ unit_combat_unit_type_destroyer_offense_mult: "$combat_unit_type_destroyer$ $unit_offense_mult$"
+ unit_combat_unit_type_destroyer_offense_mult_desc: "$combat_unit_type_destroyer$ $unit_offense_mult$"
+ unit_combat_unit_type_destroyer_defense_mult: "$combat_unit_type_destroyer$ $unit_defense_mult$"
+ unit_combat_unit_type_destroyer_defense_mult_desc: "$combat_unit_type_destroyer$ $unit_defense_mult$"
+ unit_combat_unit_type_scout_cruiser_offense_mult: "$combat_unit_type_scout_cruiser$ $unit_offense_mult$"
+ unit_combat_unit_type_scout_cruiser_offense_mult_desc: "$combat_unit_type_scout_cruiser$ $unit_offense_mult$"
+ unit_combat_unit_type_scout_cruiser_defense_mult: "$combat_unit_type_scout_cruiser$ $unit_defense_mult$"
+ unit_combat_unit_type_scout_cruiser_defense_mult_desc: "$combat_unit_type_scout_cruiser$ $unit_defense_mult$"
+ unit_combat_unit_type_torpedo_boat_offense_mult: "$combat_unit_type_torpedo_boat$ $unit_offense_mult$"
+ unit_combat_unit_type_torpedo_boat_offense_mult_desc: "$combat_unit_type_torpedo_boat$ $unit_offense_mult$"
+ unit_combat_unit_type_torpedo_boat_defense_mult: "$combat_unit_type_torpedo_boat$ $unit_defense_mult$"
+ unit_combat_unit_type_torpedo_boat_defense_mult_desc: "$combat_unit_type_torpedo_boat$ $unit_defense_mult$"
+ unit_combat_unit_type_submarine_defense_mult: "$combat_unit_type_submarine$ $unit_defense_mult$"
+ unit_combat_unit_type_submarine_defense_mult_desc: "$combat_unit_type_submarine$ $unit_defense_mult$"
+
+#####
+# Unit description modifiers
+#####
+
+ unit_is_equipped_with_torpedoes_bool: "Unit is Equipped with Torpedoes"
+ unit_is_equipped_with_torpedoes_bool_desc: "This unit is equipped with torpedoes. If the enemy side on a battle is composed of less than 50% escort ships, this unit can perform a devastating [GetBattleCondition('battle_condition_torpedo_run').GetName]."
+ unit_is_wind_dependent_bool: "Unit Depends on Wind"
+ unit_is_wind_dependent_bool_desc: "This unit has ships propelled by sails. If more than half the ships present in a battle are wind powered, they can receive the [GetBattleCondition('battle_condition_unfavorable_wind').GetName] or [GetBattleCondition('battle_condition_no_wind').GetName] battle conditions."
+ unit_provides_air_support_bool: "Unit Provides Air Support"
+ unit_provides_air_support_bool_desc: "This unit is equipped with aircraft. If the enemy has no air support of their own, this fleet can receive the [GetBattleCondition('battle_condition_scouting_advantage').GetName] battle condition."
+
+#####
+# Battle Conditions
+#####
+ battle_condition_cant_penetrate_ship: "Lacking Penetration"
+ battle_condition_cant_penetrate_ship_desc: "This fleet's cannons are lacking in penetration to damage the enemy's armor."
+ battle_condition_scouting_advantage: "Scouting Advantage"
+ battle_condition_scouting_advantage_desc: "This fleet's carriers allowed it to outmaneuver the enemy with better scouting."
+ battle_condition_torpedo_run: "Torpedo Run"
+ battle_condition_torpedo_run_desc: "This fleet's torpedo-equipped ships are conducting a devastating torpedo run on the enemy's undefended capital ships."
+ battle_condition_unfavorable_wind: "Unfavorable Wind"
+ battle_condition_unfavorable_wind_desc: "The wind is blowing in a way that makes it difficult for this fleet to maneuver."
+ battle_condition_no_wind: "No Wind"
+ battle_condition_no_wind_desc: "There's no wind blowing, making this fleet very vulnerable to enemy steam powered ships."
+
+######
+# Alerts
+######
+
+# Combat unit grouos
+ combat_unit_group_raiding_ship: "Raiders"
+
+######
+# Combat Unit types
+######
+
+ combat_unit_type_caravel: "Caravels"
+ combat_unit_type_caravel_desc: "Obsolete by the 19th century, caravels were small ships used for trade and exploration."
+ combat_unit_type_screw_frigate: "Screw Frigates"
+ combat_unit_type_screw_frigate_desc: "The development of steam propulsion allowed frigates to become even more maneuverable. The independence from wind conditions give them a large advantage in calm weather."
+ combat_unit_type_carrack: "Carracks"
+ combat_unit_type_carrack_desc: "Carracks were large ships used in the 15th and 16th centuries."
+ combat_unit_type_steam_ship_of_the_line: "Steam Ships of the Line"
+ combat_unit_type_steam_ship_of_the_line_desc: "A terrifying combination of the bulk and firepower of a ship of the line and the reliability and speed of a steamer, made possible by the adoption of the screw propeller."
+ combat_unit_type_predreadnought: "Pre-Dreadnoughts"
+ combat_unit_type_predreadnought_desc: "A steel warship carrying guns in turrets. It mounts several small, quick firing guns meant to disable their opponents, and a few large caliber weapons to finish off larger ships."
+ combat_unit_type_experimental_carrier: "Experimental Carriers"
+ combat_unit_type_experimental_carrier_desc: "After the invention of the aeroplane, putting them on a ship was the next logical step. But the implementation wasn't obvious, and a lot of trial and error was needed. During this experimental phase of naval aviation, many battleships and battlecruisers were converted to aircraft carriers, but some small purpose-built carriers were also made."

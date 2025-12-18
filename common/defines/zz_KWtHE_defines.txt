@@ -1,0 +1,21 @@
+﻿NAI = {
+	AI_PEACE_AGREEMENT_BASE_VALUE = -50 # Was 0.
+	AI_PEACE_AGREEMENT_WHITE_PEACE = 0 # Was 10.
+	#AI_PEACE_AGREEMENT_WAR_SUPPORT_FACTOR = -2 # Was -1, war support should be a big factor for AI in negotiated peace.
+	#AI_PEACE_AGREEMENT_ALLY_WARGOAL_FACTOR = 25 # Was 10
+	#AI_PEACE_AGREEMENT_SELF_WARGOAL_FACTOR = 50 # Was 30, bilateral peace was a cool mechanic, but setting this at 30 basically crippled the idea
+	#AI_PEACE_AGREEMENT_ENEMY_WARGOAL_SELF_FACTOR = -50 # Was -50
+	#AI_PEACE_AGREEMENT_ENEMY_WARGOAL_ALLY_FACTOR = -25 # Was -10
+	#AI_PEACE_AGREEMENT_PEACE_DESIRE_FACTOR = 1.0 # Was 1.0. Not touching this, would be nice if this were dynamic and decreases over time to simulate WW1
+	#	
+	#AI_PEACE_DESIRE_DROP_WAR_GOAL_THRESHOLD = 25 # Was 20. Now it's' easier for AI to white peace; ill make them a little greedier to compensate.
+	#AI_PEACE_DESIRE_DROP_ALL_WAR_GOALS_THRESHOLD = 100 # Was 100.
+	AI_MONTHS_OF_REDUCED_PEACE_DESIRE = 12 #10 Before this amount of months, reduce AI peace desire
+	AI_PEACE_DESIRE_FROM_SHORT_WAR = -25 #-10 Subtract this amount of peace desire for the above number of months (multiplied by AI_MONTHS_OF_REDUCED_PEACE_DESIRE - months of war duration)
+	#AI_PEACE_DESIRE_FROM_TURMOIL = 25 # Was 25. This has own suite of effects and if a country wanted to fight radicals alone aingon change that.
+	AI_PEACE_DESIRE_FROM_LOYALISTS = -400 # Was -25. If folks are 100% behind the Gov/SotN, they'd fight to the bitter end, out of spite if nothing else
+	#AI_PEACE_DESIRE_FROM_DEVASTATION = 100 # Was 50. If all your factories are bombed I don't think you would wanna stick around.
+	#AI_PEACE_DESIRE_FROM_DEBT_LEVEL = 400 # Was 100. Counties probably learned a little from the French Revolution... probably
+	#AI_PEACE_DESIRE_FROM_GOLD_RESERVES = -25 # Was -50. No amount of gold can turn a war around, the era of the Die Reisläufer is over.
+	AI_PEACE_DESIRE_FROM_FORCE_BALANCE = 100
+}

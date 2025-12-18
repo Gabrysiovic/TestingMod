@@ -1,0 +1,37 @@
+﻿l_french:
+
+#Ferdinand-Philippe
+ canon_death.1.t:0 "Un tragique accident"
+ canon_death.1.d:0 "Ferdinand-Philippe a été grièvement blessé lors d'un accident de voiture. Nous ne savons pas encore s'il a survécu."
+ canon_death.1.f:0 "“Le 13 juillet 1842, de retour de Pombières, le prince Ferdinand-Philippe, héritier du trône, se rendait au château de Neuilly, juste à côté de Paris, pour faire ses adieux à sa famille avant de partir en tournée d'inspection militaire à Saint-Omer. Près de la Porte Maillot, le cocher perdit le contrôle de ses chevaux, et de la calèche, tandis que le prince fut projeté hors de la voiture, chutant lourdement sur le pavé, qui lui brisa le crâne. Il resta alité, inconscient, durant quelques heures, avant de succomber.”"
+ canon_death.1.a:0 "Faites qu'il se réveille…"
+
+#Tsesarevich Nikolai
+ canon_death.2.t:0 "[SCOPE.sCharacter('canonically_dead_2').GetName] est terriblement malade"
+ canon_death.2.d:0 "[SCOPE.sCharacter('canonically_dead_2').GetName] est cloué au lit après avoir attrapé une maladie inconnue. Sa santé se détériore rapidement et nous ne savons pas encore s'il pourra survivre."
+ canon_death.2.f:0 "“[SCOPE.sCharacter('canonically_dead_2').GetName] était à l'étranger quand il tomba malade. Dans un premier temps, cela ne l'empêcha pas de continuer à se déplacer, mais, rapidement, sa condition s'est détériorée jusqu'à ce qu'une hémorragie cérébrale cause une paralysie temporaire de tout son côté gauche. Tout le reste de la famille impériale fait route pour lui rendre visite, peut-être pour la dernière fois.”"
+ canon_death.2.a:0 "Quelles terribles nouvelles !"
+
+#Rudolf von Habsburg
+ canon_death.3.t:0 "Un mystère à Mayerling"
+ canon_death.3.d:0 "Rudolf von Habsburg a été retrouvé mort, sous de mystérieuses circonstances, dans son pavillon de chasse de Mayerling. Une enquête est en cours pour dévoiler la vérité derrière ce drame."
+ canon_death.3.f:0 "“Le trentenaire a été retrouvé mort aux côté de sa maîtresse Marie Vetsera, après qu'ils aient, semble-t-il, conclu un pacte de suicide. Son mariage forcé, ses problèmes de santé mentales, ainsi que des facteurs politiques sont autant d'ingrédients qui semblent avoir joué un rôle jusqu'à cette issue fatale. L'onde de choc a ébranlé la famille de Habsbourg jusqu'en son cœur.”"
+ canon_death.3.a:0 "Quelle horreur !"
+
+#Albert 01
+ canon_death.4.t:0 "La mort d'Eddie"
+ canon_death.4.d:0 "Albert Victor, est décédé des suites d'une grippe qui s'est aggravée en pneumonie, fatale. Sa mort a été vivement ressentie comme une grande perte dans tout le pays, et a donné lieu à d'immenses manifestations de deuil national."
+ canon_death.4.f:0 "“Le 14 janvier 1892, le pays s'est réveillé sous le choc de la nouvelle du décès de Son Altesse Royal le Prince Albert Victor, populairement surnommé Eddie, à Sandringham House, dans le Norfolk. Sa mort a plongé des millions de personnes, de tous âges, de toutes classes et de toutes origine, au sein du Royaume mais aussi bien au-delà, dans un dans un deuil d'un profonde acuité, tout en exacerbant leurs sympathies envers la famille royale, si durement touchée.”"
+ canon_death.4.a:0 "Ce devait être la volonté du Seigneur…"
+
+#Maria 02
+ canon_death.5.t:0 "Le dernier enfant de Maria"
+ canon_death.5.d:0 "Maria, Reine de Portugal, fait face à de graves complications médicales, alors qu'elle doit donner naissance à son onzième enfant. Nous ne savons pas encore si elle pourra y survivre."
+ canon_death.5.f:0 "“Après une suite de gestations difficiles, les médecins avaient prévenu la reine Marie des risques qu'elle encourrait en cas de future grossesse. Celle-ci, cependant, leur a opposé la plus grande indifférence, leur signifiant que, dût-elle mourir, du moins le ferait-elle à son poste, en remplissant son rôle et ses devoirs.”"
+ canon_death.5.a:0 "Puissent nos mères rejoindre le Seigneur…"
+
+#Pedro 05
+ canon_death.6.t:0 "Le jeune Pedro"
+ canon_death.6.d:0 "Sa Majesté le Roi Pedro est malade. Une épidémie a récemment touché la famille royale prenant la vie de plusieurs de ses membres. Le Roi est fort, mais nous ne savons pas encore s'il le sera assez."
+ canon_death.6.f:0 "“À peine âgé de 24 ans, c'est maintenant le jeune roi lui-même qui souffre d'une terrible maladie, alors qu'un de ses frères, qui vient d'y succomber, n'est pas même encore en terre, et qu'un second souffre du même mal.”"
+ canon_death.6.a:0 "Pourquoi faut-il que les meilleurs partent les premiers ?…"

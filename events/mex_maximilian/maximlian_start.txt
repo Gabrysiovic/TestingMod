@@ -1,0 +1,38 @@
+﻿namespace = maximilian_start
+
+maximilian_start.1 = {
+	type = country_event
+
+	title = maximilian_start.1.t
+	desc = maximilian_start.1.d
+	flavor = maximilian_start.1.f
+	dlc = dlc_mexhabs
+
+	gui_window = event_window_1char_tabloid
+	
+	left_icon = ruler
+	
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	trigger = {
+	    has_variable = mex_mornarchy
+		NOT = { has_variable = maximilian_start_eve }
+	}
+	
+	immediate = {
+	    set_variable = maximilian_start_eve
+	}
+
+	option = {
+		name = maximilian_start.1.a
+		ig:ig_landowners = {
+			remove_ideology = ideology_republican_paternalistic
+			add_ideology = ideology_paternalistic
+		}
+	}
+}

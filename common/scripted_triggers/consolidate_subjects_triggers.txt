@@ -1,0 +1,101 @@
+﻿can_consolidate_subject = {
+	has_technology_researched = nationalism
+	is_subject = no
+	is_diplomatic_play_committed_participant = no
+	is_revolutionary = no
+	scope:target_country ?= {
+		subject_can_be_consolidation_target = yes
+	}
+}
+
+subject_can_be_consolidation_target = {
+	is_ai = yes
+	is_direct_subject_of = root
+	is_revolutionary = no
+	is_diplomatic_play_committed_participant = no 
+	liberty_desire < 25
+	OR = {
+		#Subject must be low-tier
+		custom_tooltip = {
+			text = consolidate_subject_country_tier_tt
+			OR = {
+				country_tier = city_state
+				country_tier = principality
+				country_tier = grand_principality
+			}
+		}
+		#Researching Pan-Nationalism unlocks consolidating Kingdom-tier subjects
+		AND = {
+			custom_tooltip = {
+				text = consolidate_subject_country_tier_kingdom_tt
+				country_tier = kingdom
+			}
+			overlord = {
+				has_technology_researched = pan-nationalism
+			}
+		}
+	}
+	consolidate_subject_valid_subject_type = yes
+	overlord = {
+		any_direct_subject = {
+			can_be_consolidation_recipient = yes
+		}
+	}
+}
+
+can_be_consolidation_recipient = {
+	save_temporary_scope_as = recipient_subject
+	is_diplomatic_play_committed_participant = no
+	is_direct_subject_of = root 
+	is_revolutionary = no
+	liberty_desire < 50
+	hidden_trigger = {
+		NOT = {
+			scope:target_country ?= this
+		}
+	}
+	is_adjacent_to_country = scope:target_country
+	consolidate_subject_valid_subject_type = yes
+	OR = {
+		#By default, must have an overlapping primary culture
+		custom_tooltip = {
+			text = consolidate_subject_primary_culture_tt
+			any_primary_culture = {
+				is_primary_culture_of = scope:target_country
+			}
+		}
+		#Witth Pan-Nationalism and Civilizing Mission, overlapping traits are good enough, as long as cultural acceptance is high enough
+		custom_tooltip = {
+			text = consolidate_subject_acceptance_tt
+			AND = {
+				overlord = {
+					has_technology_researched = pan-nationalism
+					has_technology_researched = civilizing_mission
+				}
+				scope:target_country = {
+					any_primary_culture = {
+						count = all
+						OR = {
+							shares_language_trait_group_with_any_primary_culture = scope:recipient_subject
+							shares_heritage_trait_group_with_any_primary_culture = scope:recipient_subject
+						}
+						scope:recipient_subject = {
+							cultural_acceptance_base = { target = PREV value >= acceptance_status_4 }
+						}
+						
+					}
+				}
+			}
+		}
+	}
+}
+
+consolidate_subject_valid_subject_type = {
+	custom_tooltip = {
+		text = consolidate_subject_vassal_type_tt
+		OR = {
+			is_subject_type = subject_type_vassal
+			is_subject_type = subject_type_puppet
+		}
+	}
+}

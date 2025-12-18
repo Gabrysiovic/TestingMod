@@ -1,0 +1,1661 @@
+﻿# Great Britain - Prime Ministers
+
+ecchi_gbr_grey_character_template = {
+    first_name = Charles
+    last_name = Grey
+    historical = yes
+    culture = cu:british
+
+    religion = rel:protestant
+    ideology = ideology_reformer
+    interest_group = ig_intelligentsia
+    birth_date = 1764.3.13
+    traits = { innovative tactful arrogant }
+	dna = ecchi_dna_charles_grey
+    interest_group_leader_usage = {
+        country_trigger = {
+            OR = {
+                AND = {
+                    exists = c:GBR
+                    this = c:GBR
+                    NOT = { exists = c:ENG }
+                }
+                AND = {
+                    exists = c:ENG
+                    this = c:ENG
+                }
+            }
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1845.7.17
+        chance = 65
+    }
+}
+
+ecchi_gbr_john_russell_character_template = {
+    first_name = John
+    last_name = Russell
+    historical = yes
+    culture = cu:british
+
+    religion = rel:protestant
+    ideology = ideology_reformer
+    interest_group = ig_intelligentsia
+    birth_date = 1792.8.18
+	dna = ecchi_dna_john_russell
+    traits = { reckless basic_political_operator }
+    interest_group_leader_usage = {
+        country_trigger = {
+            OR = {
+                AND = {
+                    exists = c:GBR
+                    this = c:GBR
+                    NOT = { exists = c:ENG }
+                }
+                AND = {
+                    exists = c:ENG
+                    this = c:ENG
+                }
+            }
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1839.8.30
+        latest_usage_date = 1878.5.28
+        chance = 65
+    }
+}
+
+# ecchi_gbr_hamilton_gordon_character_template = {
+#     first_name = George
+#     last_name = ecchi_Hamilton_Gordon
+#     historical = yes
+#     culture = cu:british
+# 
+#     religion = rel:protestant
+#     ideology = ideology_pacifist
+#     interest_group = ig_industrialists
+# 	dna = ecchi_dna_george_hamilton_gordon
+#     birth_date = 1784.1.28
+#     traits = { experienced_diplomat reserved meticulous }
+#     interest_group_leader_usage = {
+#         country_trigger = {
+#             OR = {
+#                 AND = {
+#                     exists = c:GBR
+#                     this = c:GBR
+#                     NOT = { exists = c:ENG }
+#                 }
+#                 AND = {
+#                     exists = c:ENG
+#                     this = c:ENG
+#                 }
+#             }
+#         }
+#         interest_group_trigger = {
+#             ig_counts_as_marginal = no
+# 			OR = {
+# 				is_interest_group_type = ig_industrialists
+# 				is_interest_group_type = ig_petty_bourgeoisie
+# 			}
+#         }
+#         earliest_usage_date = 1836.1.1
+#         latest_usage_date = 1860.12.14
+#         chance = 65
+#     }
+# }
+
+ecchi_gbr_cecil_character_template = {
+    first_name = Robert
+    last_name = ecchi_Gascoyne_Cecil
+    historical = yes
+    culture = cu:british
+
+    religion = rel:protestant
+    ideology = ideology_traditionalist
+    interest_group = ig_industrialists
+    birth_date = 1830.2.3
+	dna = ecchi_dna_robert_gascoyne_cecil
+    traits = { experienced_diplomat arrogant }
+    interest_group_leader_usage = {
+        country_trigger = {
+            OR = {
+                AND = {
+                    exists = c:GBR
+                    this = c:GBR
+                    NOT = { exists = c:ENG }
+                }
+                AND = {
+                    exists = c:ENG
+                    this = c:ENG
+                }
+            }
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            OR = {
+				is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_petty_bourgeoisie
+			}
+        }
+        earliest_usage_date = 1878.4.2
+        latest_usage_date = 1903.8.22
+        chance = 65
+    }
+}
+
+ecchi_gbr_primrose_character_template = {
+    first_name = Archibald
+    last_name = Primrose
+    historical = yes
+    culture = cu:british
+
+    religion = rel:protestant
+    ideology = ideology_jingoist_leader
+    interest_group = ig_intelligentsia
+    birth_date = 1847.5.7
+	dna = ecchi_dna_archibald_primrose
+    traits = { inspirational_orator hedonist cautious }
+    interest_group_leader_usage = {
+        country_trigger = {
+            OR = {
+                AND = {
+                    exists = c:GBR
+                    this = c:GBR
+                    NOT = { exists = c:ENG }
+                }
+                AND = {
+                    exists = c:ENG
+                    this = c:ENG
+                }
+            }
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+			OR = {
+				is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_landowners
+			}
+        }
+        earliest_usage_date = 1885.2.13
+        latest_usage_date = 1929.5.21
+        chance = 65
+    }
+}
+
+# ecchi_gbr_balfour_character_template = {
+#     first_name = Arthur
+#     last_name = Balfour
+#     historical = yes
+#     culture = cu:british
+# 
+#     religion = rel:protestant
+#     ideology = ideology_moderate
+#     interest_group = ig_industrialists
+#     birth_date = 1848.7.25
+# 	dna = ecchi_dna_arthur_balfour
+#     traits = { pious expensive_tastes reserved }
+#     interest_group_leader_usage = {
+#         country_trigger = {
+#             OR = {
+#                 AND = {
+#                     exists = c:GBR
+#                     this = c:GBR
+#                     NOT = { exists = c:ENG }
+#                 }
+#                 AND = {
+#                     exists = c:ENG
+#                     this = c:ENG
+#                 }
+#             }
+#         }
+#         interest_group_trigger = {
+#             ig_counts_as_marginal = no
+#             OR = {
+# 				is_interest_group_type = ig_industrialists
+# 				is_interest_group_type = ig_petty_bourgeoisie
+# 			}
+#         }
+#         earliest_usage_date = 1885.6.24
+#         latest_usage_date = 1930.3.19
+#         chance = 65
+#     }
+# }
+
+ecchi_gbr_campbell_bannerman_character_template = {
+    first_name = Henry
+    last_name = Campbell-Bannerman
+    historical = yes
+    culture = cu:british
+
+    religion = rel:protestant
+    ideology = ideology_radical
+    interest_group = ig_intelligentsia
+    birth_date = 1836.9.7
+	dna = ecchi_dna_henry_campbell_bannerman
+    traits = { basic_political_operator brave direct }
+    interest_group_leader_usage = {
+        country_trigger = {
+            OR = {
+                AND = {
+                    exists = c:GBR
+                    this = c:GBR
+                    NOT = { exists = c:ENG }
+                }
+                AND = {
+                    exists = c:ENG
+                    this = c:ENG
+                }
+            }
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+			OR = {
+				is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_trade_unions
+			}
+        }
+        earliest_usage_date = 1892.8.18
+        latest_usage_date = 1908.4.22
+        chance = 65
+    }
+}
+
+ecchi_gbr_asquith_character_template = {
+    first_name = ecchi_H_H
+    last_name = ecchi_Asquith
+    historical = yes
+    culture = cu:british
+
+    religion = rel:protestant
+    ideology = ideology_reformer
+    interest_group = ig_intelligentsia
+    birth_date = 1852.9.12
+	dna = ecchi_dna_h_h_asquith
+    traits = { cautious arrogant }
+    interest_group_leader_usage = {
+        country_trigger = {
+            OR = {
+                AND = {
+                    exists = c:GBR
+                    this = c:GBR
+                    NOT = { exists = c:ENG }
+                }
+                AND = {
+                    exists = c:ENG
+                    this = c:ENG
+                }
+            }
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1892.8.18
+        latest_usage_date = 1928.2.15
+        chance = 65
+    }
+}
+
+# ecchi_gbr_george_character_template = {
+#     first_name = ecchi_David_Lloyd
+#     last_name = George
+#     historical = yes
+#     culture = cu:british
+# 
+#     religion = rel:protestant
+#     ideology = ideology_reformer
+#     interest_group = ig_intelligentsia
+#     birth_date = 1863.1.17
+# 	dna = ecchi_dna_david_lloyd_george
+#     traits = { inspirational_orator experienced_diplomat meticulous }
+#     interest_group_leader_usage = {
+#         country_trigger = {
+#             OR = {
+#                 AND = {
+#                     exists = c:GBR
+#                     this = c:GBR
+#                     NOT = { exists = c:ENG }
+#                 }
+#                 AND = {
+#                     exists = c:ENG
+#                     this = c:ENG
+#                 }
+#             }
+#         }
+#         interest_group_trigger = {
+#             is_interest_group_type = ig_intelligentsia
+#         }
+#         earliest_usage_date = 1908.4.12
+#         latest_usage_date = 1945.3.26
+#         chance = 65
+#     }
+# }
+
+ecchi_gbr_law_character_template = {
+    first_name = ecchi_Bonar
+    last_name = Law
+    historical = yes
+    culture = cu:scottish
+
+    religion = rel:protestant
+    ideology = ideology_traditionalist
+    interest_group = ig_industrialists
+    birth_date = 1858.9.16
+	dna = ecchi_dna_bonar_law
+    traits = { persistent tactful cancer }
+    interest_group_leader_usage = {
+        country_trigger = {
+			OR ={
+				AND = {
+					exists = c:GBR
+					this = c:GBR
+					NOT = { exists = c:SCO }
+				}
+				AND = {
+					exists = c:SCO
+					this = c:SCO
+				}
+			}
+		}
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+             OR = {
+				is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_petty_bourgeoisie
+			}
+        }
+        earliest_usage_date = 1916.12.10
+        latest_usage_date = 1923.10.30
+        chance = 65
+    }
+}
+
+ecchi_gbr_baldwin_character_template = {
+    first_name = Stanley
+    last_name = Baldwin
+    historical = yes
+    culture = cu:british
+
+    religion = rel:protestant
+    ideology = ideology_moderate
+    interest_group = ig_industrialists
+    birth_date = 1867.8.3
+	dna = ecchi_dna_stanley_baldwin
+    traits = { innovative tactful experienced_political_operator }
+    interest_group_leader_usage = {
+        country_trigger = {
+            OR = {
+                AND = {
+                    exists = c:GBR
+                    this = c:GBR
+                    NOT = { exists = c:ENG }
+                }
+                AND = {
+                    exists = c:ENG
+                    this = c:ENG
+                }
+            }
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            OR = {
+				is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_petty_bourgeoisie
+			}
+        }
+        earliest_usage_date = 1917.6.18
+        latest_usage_date = 1947.12.14
+        chance = 65
+    }
+}
+
+ecchi_gbr_macdonald_character_template = {
+    first_name = Ramsay
+    last_name = MacDonald
+    historical = yes
+    culture = cu:scottish
+
+    religion = rel:protestant
+    ideology = ideology_reformer
+    interest_group = ig_trade_unions
+    birth_date = 1866.10.12
+	dna = ecchi_dna_ramsay_macdonald
+    traits = { inspirational_orator charismatic cautious }
+    interest_group_leader_usage = {
+        country_trigger = {
+			OR ={
+				AND = {
+					exists = c:GBR
+					this = c:GBR
+					NOT = { exists = c:SCO }
+				}
+				AND = {
+					exists = c:SCO
+					this = c:SCO
+				}
+			}
+		}
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+			OR = {
+				is_interest_group_type = ig_trade_unions
+				is_interest_group_type = ig_intelligentsia
+			}
+        }
+        earliest_usage_date = 1911.2.6
+        latest_usage_date = 1937.11.9
+        chance = 65
+    }
+}
+
+ecchi_gbr_chamberlain_character_template = {
+    first_name = Neville
+    last_name = Chamberlain
+    historical = yes
+    culture = cu:british
+
+    religion = rel:protestant
+    ideology = ideology_pacifist
+    interest_group = ig_industrialists
+    birth_date = 1869.3.18
+	dna = ecchi_dna_neville_chamberlain
+    traits = { cautious experienced_diplomat direct }
+    interest_group_leader_usage = {
+        country_trigger = {
+            OR = {
+                AND = {
+                    exists = c:GBR
+                    this = c:GBR
+                    NOT = { exists = c:ENG }
+                }
+                AND = {
+                    exists = c:ENG
+                    this = c:ENG
+                }
+            }
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            OR = {
+				is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_petty_bourgeoisie
+			}
+        }
+        earliest_usage_date = 1923.2.5
+        latest_usage_date = 1940.10.9
+        chance = 65
+    }
+}
+
+ecchi_gbr_churchill_character_template = {
+    first_name = Winston
+    last_name = Churchill
+    historical = yes
+    culture = cu:british
+
+    religion = rel:protestant
+    ideology = ideology_traditionalist
+    interest_group = ig_industrialists
+    birth_date = 1874.11.30
+	dna = ecchi_dna_winston_churchill
+    traits = { alcoholic direct charismatic romantic masterful_diplomat }
+    interest_group_leader_usage = {
+        country_trigger = {
+            OR = {
+                AND = {
+                    exists = c:GBR
+                    this = c:GBR
+                    NOT = { exists = c:ENG }
+                }
+                AND = {
+                    exists = c:ENG
+                    this = c:ENG
+                }
+            }
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_industrialists
+        }
+        earliest_usage_date = 1911.10.24
+        latest_usage_date = 1965.1.24
+        chance = 65
+    }
+}
+
+# Great Britain - Officers
+
+# ecchi_gbr_elphinstone_character_template = { 1.8
+# 	first_name = William
+# 	last_name = Elphinstone
+# 	culture = cu:scottish
+# 	female = no
+# 	religion = rel:protestant
+# 	ideology = ideology_traditionalist
+# 	commander_rank = default
+# 	interest_group = ig_armed_forces
+# 	birth_date = 1782.1.26
+# 	dna = ecchi_dna_william_elphinstone
+# 	traits = { senile reckless plains_commander }
+# 	commander_usage = {
+# 		country_trigger = {
+# 			OR ={
+# 				AND = {
+# 					exists = c:GBR
+# 					this = c:GBR
+# 					NOT = { exists = c:SCO }
+# 				}
+# 				AND = {
+# 					exists = c:SCO
+# 					this = c:SCO
+# 				}
+# 			}
+# 		}
+# 		role = general
+# 		earliest_usage_date = 1836.1.1
+# 		latest_usage_date = 1842.4.23
+# 		chance = 50
+# 	}
+# }
+
+# ecchi_gbr_haig_character_template = {
+# 	first_name = Douglas
+# 	last_name = Haig
+# 	culture = cu:british
+# 	female = no
+# 	religion = rel:protestant
+# 	ideology = ideology_moderate
+# 	commander_rank = default
+# 	interest_group = ig_armed_forces
+# 	birth_date = 1861.6.19
+# 	dna = ecchi_dna_douglas_haig
+# 	traits = { trench_rat expert_defensive_strategist experienced_artillery_commander }
+# 	commander_usage = {
+#         country_trigger = {
+#             hga_is_active = no
+#             OR = {
+#                 AND = {
+#                     exists = c:GBR
+#                     this = c:GBR
+#                     NOT = { exists = c:ENG }
+#                 }
+#                 AND = {
+#                     exists = c:ENG
+#                     this = c:ENG
+#                 }
+#             }
+#         }
+# 		role = general
+# 		earliest_usage_date = 1903.1.1
+# 		latest_usage_date = 1928.1.29
+# 		chance = 50
+# 	}
+# }
+
+ecchi_gbr_lawrence_character_template = {
+    first_name = ecchi_T_E
+    last_name = Lawrence
+    historical = yes
+    culture = cu:british
+
+    religion = rel:protestant
+    ideology = ideology_traditionalist
+    interest_group = ig_armed_forces
+	dna = ecchi_dna_t_e_lawrence
+    birth_date = 1888.8.16
+    traits = { plains_commander experienced_diplomat experienced_offensive_planner }
+    commander_usage = {
+        country_trigger = {
+            OR = {
+                AND = {
+                    exists = c:GBR
+                    this = c:GBR
+                    NOT = { exists = c:ENG }
+                }
+                AND = {
+                    exists = c:ENG
+                    this = c:ENG
+                }
+            }
+        }
+		role = general
+		earliest_usage_date = 1903.1.1
+		latest_usage_date = 1928.1.29
+		chance = 50
+	}
+}
+
+# British theologians
+
+ecchi_gbr_darby_character_template = {
+    first_name = ecchi_John_Nelson
+    last_name = ecchi_Darby
+    historical = yes
+    culture = cu:british
+
+    religion = rel:protestant
+    ideology = ideology_theocrat
+    interest_group = ig_devout
+	dna = ecchi_dna_john_n_darby
+    birth_date = 1800.11.18
+    traits = { inspirational_orator imperious persistent }
+    interest_group_leader_usage = {
+        country_trigger = {
+            OR = {
+                AND = {
+                    exists = c:GBR
+                    this = c:GBR
+                    NOT = { exists = c:ENG }
+                }
+                AND = {
+                    exists = c:ENG
+                    this = c:ENG
+                }
+            }
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_devout
+        }
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1882.4.29
+        chance = 65
+    }
+}
+
+ecchi_gbr_livingstone_character_template = {
+    first_name = David
+    last_name = Livingstone
+    historical = yes
+    culture = cu:scottish
+
+    religion = rel:protestant
+    ideology = ideology_royalist
+    interest_group = ig_devout
+	dna = ecchi_dna_david_livingstone
+    birth_date = 1813.3.19
+    traits = { explorer brave pious charismatic }
+    interest_group_leader_usage = {
+        country_trigger = {
+            morgenrote_is_active = no #This character is in Morgenröte and should not spawn if Morgenröte is active
+            OR = {
+                AND = {
+                    exists = c:GBR
+                    this = c:GBR
+                    NOT = { exists = c:SCO }
+                }
+                AND = {
+                    exists = c:SCO
+                    this = c:SCO
+                }
+            }
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            OR = {
+                is_interest_group_type = ig_devout
+                is_interest_group_type = ig_armed_forces
+            }
+        }
+        earliest_usage_date = 1840.1.1
+        latest_usage_date = 1873.5.1
+        chance = 65
+    }
+}
+
+
+# British intelligentsia
+
+ecchi_gbr_albert_character_template = {
+    first_name = Albert
+    last_name = of_Saxe-Coburg-Gotha
+    historical = yes
+    culture = cu:north_german
+
+    religion = rel:protestant
+    ideology = ideology_royalist
+    interest_group = ig_intelligentsia
+	dna = ecchi_dna_prince_albert
+    birth_date = 1819.8.26
+    traits = { tactful pious expensive_tastes experienced_diplomat }
+    interest_group_leader_usage = {
+        country_trigger = {
+            OR = {
+                AND = {
+                    exists = c:GBR
+                    this = c:GBR
+                    NOT = { exists = c:ENG }
+                }
+                AND = {
+                    exists = c:ENG
+                    this = c:ENG
+                }
+            }
+        }
+        interest_group_trigger = {
+			is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1841.1.1
+        latest_usage_date = 1861.12.14
+        chance = 65
+    }
+}
+
+# ecchi_gbr_darwin_character_template = {
+#     first_name = Charles
+#     last_name = ecchi_Darwin
+#     historical = yes
+#     culture = cu:british
+# 
+#     religion = rel:protestant
+#     ideology = ideology_nihilist
+#     interest_group = ig_intelligentsia
+# 	dna = ecchi_dna_charles_darwin
+#     birth_date = 1809.2.12
+#     traits = { innovative explorer persistent }
+#     interest_group_leader_usage = {
+#         country_trigger = {
+#             morgenrote_is_active = no #This character is in Morgenröte and should not spawn if Morgenröte is active
+#             OR = {
+#                 AND = {
+#                     exists = c:GBR
+#                     this = c:GBR
+#                     NOT = { exists = c:ENG }
+#                 }
+#                 AND = {
+#                     exists = c:ENG
+#                     this = c:ENG
+#                 }
+#             }
+#         }
+#         interest_group_trigger = {
+#             is_interest_group_type = ig_intelligentsia
+#         }
+#         earliest_usage_date = 1855.1.1
+#         latest_usage_date = 1882.4.19
+#         chance = 65
+#     }
+# }
+
+
+## John Stuart Mill
+## already in the vanilla game
+
+ecchi_gbr_bertrand_russell_character_template = {
+    first_name = Bertrand
+    last_name = Russell
+    historical = yes
+    culture = cu:british
+
+    religion = rel:protestant
+    ideology = ideology_pacifist
+    interest_group = ig_intelligentsia
+	dna = ecchi_dna_bertrand_russell
+    birth_date = 1872.5.18
+    traits = { basic_diplomat innovative }
+    interest_group_leader_usage = {
+        country_trigger = {
+            OR = {
+                AND = {
+                    exists = c:GBR
+                    this = c:GBR
+                    NOT = { exists = c:WLS }
+                }
+                AND = {
+                    exists = c:WLS
+                    this = c:WLS
+                }
+            }
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1905.1.1
+        latest_usage_date = 1970.2.2
+        chance = 65
+    }
+}
+
+ecchi_gbr_lionel_de_rothschild_sr_character_template = {
+    first_name = Lionel
+    last_name = ecchi_de_Rothschild
+    historical = yes
+    culture = cu:british
+
+    religion = rel:jewish
+    ideology = ideology_moderate
+    interest_group = ig_industrialists
+	dna = ecchi_dna_lionel_de_rothschild
+    birth_date = 1808.11.22
+    traits = { arrogant hedonist }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:GBR
+            this = c:GBR
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            OR = {
+                is_interest_group_type = ig_industrialists
+                is_interest_group_type = ig_landowners
+            }
+        }
+        earliest_usage_date = 1838.1.1
+        latest_usage_date = 1879.6.3
+        chance = 65
+    }
+}
+
+ecchi_gbr_conan_doyle_character_template = {
+    first_name = Arthur
+    last_name = ecchi_Conan_Doyle
+    historical = yes
+    culture = cu:scottish
+
+    religion = rel:protestant
+    ideology = ideology_royalist
+    interest_group = ig_intelligentsia
+	dna = ecchi_dna_arthur_conan_doyle
+    birth_date = 1859.5.22
+    traits = { meticulous persistent cautious }
+    agitator_usage = {
+        country_trigger = {
+            morgenrote_is_active = no #This character is in Morgenröte and should not spawn if Morgenröte is active
+            OR = {
+                AND = {
+                    exists = c:GBR
+                    this = c:GBR
+                    NOT = { exists = c:SCO }
+                }
+                AND = {
+                    exists = c:SCO
+                    this = c:SCO
+                }
+            }
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1890.1.1
+        latest_usage_date = 1930.7.7
+        chance = 65
+    }
+}
+
+# ecchi_gbr_dickens_character_template = {
+#     first_name = Charles
+#     last_name = ecchi_Dickens
+#     historical = yes
+#     culture = cu:british
+# 
+#     religion = rel:protestant
+#     ideology = ideology_reformer
+#     interest_group = ig_intelligentsia
+# 	dna = ecchi_dna_charles_dickens
+#     birth_date = 1812.2.7
+#     traits = { inspirational_orator }
+#     agitator_usage = {
+#         country_trigger = {
+#             exists = c:GBR
+#             this = c:GBR
+#         }
+#         interest_group_trigger = {
+#             is_interest_group_type = ig_intelligentsia
+#         }
+#         earliest_usage_date = 1836.1.1
+#         latest_usage_date = 1870.6.9
+#         chance = 65
+#     }
+# }
+
+ecchi_gbr_shackleton_character_template = {
+    first_name = ecchi_Ernest
+    last_name = ecchi_Shackleton
+    historical = yes
+    culture = cu:irish
+
+    religion = rel:protestant
+    ideology = ideology_royalist
+    interest_group = ig_armed_forces
+	dna = ecchi_dna_ernest_shackleton
+    birth_date = 1874.2.15
+    traits = { explorer surveyor }
+    commander_rank = default
+    commander_usage = {
+        country_trigger = {
+            OR = {
+                AND = {
+                    exists = c:GBR
+                    this = c:GBR
+                    NOT = { exists = c:IRE }
+                }
+                AND = {
+                    exists = c:IRE
+                    this = c:IRE
+                }
+            }
+        }
+        role = admiral
+        earliest_usage_date = 1900.1.1
+        latest_usage_date = 1922.1.5
+        chance = 65
+    }
+}
+
+ecchi_gbr_nightinghale_character_template = {
+    first_name = Florence
+    last_name = ecchi_Nightingale
+    historical = yes
+    culture = cu:british
+    female = yes
+    religion = rel:protestant
+    ideology = ideology_reformer
+    interest_group = ig_intelligentsia
+	dna = ecchi_dna_florence_nightingale
+    birth_date = 1820.5.12
+    traits = { charismatic brave }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:GBR
+            this = c:GBR
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1850.1.1
+        latest_usage_date = 1910.8.13
+        chance = 65
+    }
+}
+
+ecchi_gbr_stanley_character_template = {
+    first_name = ecchi_Henry_Morton
+    last_name = Stanley
+    historical = yes
+    culture = cu:welsh
+
+    religion = rel:protestant
+    ideology = ideology_traditionalist
+    interest_group = ig_rural_folk
+	dna = ecchi_dna_henry_morgan_stanley
+    birth_date = 1841.1.28
+    traits = { bigoted explorer }
+    interest_group_leader_usage = {
+        country_trigger = {
+            OR = {
+                AND = {
+                    exists = c:GBR
+                    this = c:GBR
+                    NOT = { exists = c:WLS }
+                }
+                AND = {
+                    exists = c:WLS
+                    this = c:WLS
+                }
+            }
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            OR = {
+                is_interest_group_type = ig_rural_folk
+                is_interest_group_type = ig_intelligentsia
+            }
+        }
+        earliest_usage_date = 1870.1.1
+        latest_usage_date = 1904.5.10
+        chance = 65
+    }
+}
+
+ecchi_gbr_tolkien_character_template = {
+    first_name = ecchi_J_R_R
+    last_name = ecchi_Tolkien
+    historical = yes
+    culture = cu:british
+
+    religion = rel:catholic
+    ideology = ideology_pacifist
+    interest_group = ig_intelligentsia
+	dna = ecchi_dna_j_r_r_tolkien
+    birth_date = 1892.1.3
+    traits = { romantic reserved explorer }
+    commander_rank = default
+    commander_usage = {
+        country_trigger = {
+            morgenrote_is_active = no #This character is in Morgenröte and should not spawn if Morgenröte is active
+            exists = c:GBR
+            this = c:GBR
+        }
+        role = general
+        earliest_usage_date = 1912.1.1
+        latest_usage_date = 1973.9.2
+        chance = 65
+    }
+}
+
+ecchi_gbr_ross_character_template = {
+    first_name = ecchi_James_Clark
+    last_name = Ross
+    historical = yes
+    culture = cu:british
+
+    religion = rel:protestant
+    ideology = ideology_reformer
+    interest_group = ig_armed_forces
+	dna = ecchi_dna_james_clark_ross
+    birth_date = 1800.4.15
+    traits = { explorer surveyor }
+    commander_rank = default
+    commander_usage = {
+        country_trigger = {
+            OR = {
+                AND = {
+                    exists = c:GBR
+                    this = c:GBR
+                    NOT = { exists = c:SCO }
+                }
+                AND = {
+                    exists = c:SCO
+                    this = c:SCO
+                }
+            }
+        }
+        role = admiral
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1862.4.3
+        chance = 65
+    }
+}
+
+ecchi_gbr_franklin_character_template = {
+    first_name = John
+    last_name = Franklin
+    historical = yes
+    culture = cu:british
+
+    religion = rel:protestant
+    ideology = ideology_moderate
+    interest_group = ig_armed_forces
+	dna = ecchi_dna_john_franklin
+    birth_date = 1786.4.16
+    traits = { explorer persistent popular_commander }
+    commander_rank = default
+    commander_usage = {
+        country_trigger = {
+            exists = c:GBR
+            this = c:GBR
+        }
+        role = admiral
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1850.1.1
+        chance = 65
+    }
+}
+
+ecchi_gbr_scott_character_template = {
+    first_name = ecchi_Robert_Falcon
+    last_name = Scott
+    historical = yes
+    culture = cu:british
+
+    religion = rel:protestant
+    ideology = ideology_royalist
+    interest_group = ig_armed_forces
+	dna = ecchi_dna_robert_falcon_scott
+    birth_date = 1868.6.6
+    traits = { explorer persistent reckless direct }
+    commander_rank = default
+    commander_usage = {
+        country_trigger = {
+            exists = c:GBR
+            this = c:GBR
+        }
+        role = admiral
+        earliest_usage_date = 1900.1.1
+        latest_usage_date = 1920.1.1
+        chance = 65
+    }
+}
+
+ecchi_gbr_kipling_character_template = {
+    first_name = Rudyard
+    last_name = ecchi_Kipling
+    historical = yes
+    culture = cu:british
+
+    religion = rel:protestant
+    ideology = ideology_royalist
+    interest_group = ig_petty_bourgeoisie
+	dna = ecchi_dna_rudyard_kipling
+    birth_date = 1865.12.30
+    traits = { bigoted romantic arrogant }
+    interest_group_leader_usage = {
+        country_trigger = {
+            morgenrote_is_active = no
+            OR = {
+                AND = {
+                    exists = c:GBR
+                    this = c:GBR
+                    NOT = { exists = c:BIC }
+                }
+                AND = {
+                    exists = c:BIC
+                    this = c:BIC
+                }
+            }
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            OR = {
+                is_interest_group_type = ig_petty_bourgeoisie
+                is_interest_group_type = ig_rural_folk
+            }
+        }
+        earliest_usage_date = 1890.1.1
+        latest_usage_date = 1936.1.18
+        chance = 25
+    }
+}
+
+ecchi_gbr_harcourt_character_template = {
+    first_name = William
+    last_name = Harcourt
+    historical = yes
+    culture = cu:british
+
+    religion = rel:protestant
+    ideology = ideology_reformer
+    interest_group = ig_intelligentsia
+	dna = ecchi_dna_william_harcourt
+    birth_date = 1827.10.14
+    traits = { inspirational_orator imperious }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:GBR
+            this = c:GBR
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            OR = {
+                is_interest_group_type = ig_intelligentsia
+                is_interest_group_type = ig_rural_folk
+            }
+        }
+        earliest_usage_date = 1868.1.1
+        latest_usage_date = 1904.10.1
+        chance = 65
+    }
+}
+
+# ecchi_gbr_keynes_character_template = {
+#     first_name = ecchi_John_Maynard
+#     last_name = ecchi_Keynes
+#     historical = yes
+#     culture = cu:british
+# 
+#     religion = rel:protestant
+#     ideology = ideology_social_democrat
+#     interest_group = ig_intelligentsia
+# 	dna = ecchi_dna_john_maynard_keynes
+#     birth_date = 1883.6.5
+#     traits = { tactful meticulous }
+#     interest_group_leader_usage = {
+#         country_trigger = {
+#             exists = c:GBR
+#             this = c:GBR
+#         }
+#         interest_group_trigger = {
+#             ig_counts_as_marginal = no
+#             OR = {
+#                 is_interest_group_type = ig_intelligentsia
+#                 is_interest_group_type = ig_rural_folk
+#                 is_interest_group_type = ig_trade_unions
+#             }
+#         }
+#         earliest_usage_date = 1930.1.1
+#         latest_usage_date = 1946.4.21
+#         chance = 65
+#     }
+# }
+
+ecchi_gbr_carlyle_character_template = {
+    first_name = Thomas
+    last_name = ecchi_Carlyle
+    historical = yes
+    culture = cu:scottish
+
+    religion = rel:protestant
+    ideology = ideology_royalist
+    interest_group = ig_intelligentsia
+	dna = ecchi_dna_thomas_carlyle
+    birth_date = 1795.12.4
+    traits = { bigoted arrogant demagogue inspirational_orator romantic }
+    interest_group_leader_usage = {
+        country_trigger = {
+            OR = {
+                AND = {
+                    exists = c:GBR
+                    this = c:GBR
+                    NOT = { exists = c:SCO }
+                }
+                AND = {
+                    exists = c:SCO
+                    this = c:SCO
+                }
+            }
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            OR = {
+                is_interest_group_type = ig_landowners
+                is_interest_group_type = ig_petty_bourgeoisie
+                is_interest_group_type = ig_intelligentsia
+            }
+        }
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1881.2.5
+        chance = 65
+    }
+}
+
+ecchi_gbr_wood_character_template = {
+    first_name = ecchi_Jemmy
+    last_name = Wood
+    historical = yes
+    culture = cu:british
+
+    religion = rel:protestant
+    ideology = ideology_traditionalist
+    interest_group = ig_industrialists
+	dna = ecchi_dna_jemmy_wood
+    birth_date = 1756.10.7
+    traits = { reserved imperious cautious }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:GBR
+            this = c:GBR
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_industrialists
+        }
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1836.4.20
+        chance = 65
+    }
+}
+
+## Richard Cobden
+
+ecchi_gbr_cobden_character_template = {
+    first_name = Richard
+    last_name = ecchi_Cobden
+    historical = yes
+    culture = cu:british
+
+    religion = rel:protestant
+    ideology = ideology_radical
+    interest_group = ig_industrialists
+    dna = ecchi_dna_richard_cobden
+    birth_date = 1804.6.3
+    traits = { tactful masterful_diplomat }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:GBR
+            this = c:GBR
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_industrialists
+        }
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1865.4.20
+        chance = 65
+    }
+}
+
+## Millicent Fawcett
+
+ecchi_gbr_fawcett_character_template = {
+    first_name = Millicent
+    last_name = ecchi_Fawcett
+    historical = yes
+    culture = cu:british
+    female = yes
+    religion = rel:protestant
+    ideology = ideology_feminist
+    interest_group = ig_industrialists
+    dna = ecchi_dna_millicent_fawcett
+    birth_date = 1847.6.11
+    traits = { persistent inspirational_orator honorable }
+    agitator_usage = {
+        country_trigger = {
+            exists = c:GBR
+            this = c:GBR
+			has_technology_researched = feminism
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1869.1.1
+        latest_usage_date = 1929.8.5
+        chance = 65
+    }
+}
+
+## Bram Stoker
+
+ecchi_ire_stoker_bram_character_template = {
+	dna = mr_ire_stoker_bram
+	first_name = ecchi_bram
+	last_name = ecchi_stoker
+	culture = cu:irish
+	female = no
+	interest_group = ig_intelligentsia
+	birth_date = 1847.11.8
+	historical = yes
+    ideology = ideology_reformer
+	traits = {
+		literary
+		charismatic
+		erudite
+	}
+    agitator_usage = {
+        country_trigger = {
+            morgenrote_is_active = no
+            OR = {
+                AND = {
+                    exists = c:IRE
+                    this = c:IRE
+                }
+                AND = {
+                    exists = c:GBR
+                    this = c:GBR
+                    NOT = { exists = c:IRE }
+                }
+            }
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1878.1.1
+        latest_usage_date = 1912.4.20
+        chance = 45
+    }
+}
+
+## James Joyce
+
+ecchi_ire_joyce_james_character_template = {
+	dna = mr_ire_joyce_james
+	first_name = ecchi_james
+	last_name = ecchi_joyce
+	culture = cu:irish
+	female = no
+	interest_group = ig_intelligentsia
+	birth_date = 1882.2.2
+	historical = yes
+    ideology = ideology_reformer
+	traits = {
+		literary
+		innovative
+		direct
+		meticulous
+	}
+    agitator_usage = {
+        country_trigger = {
+            morgenrote_is_active = no
+            OR = {
+                AND = {
+                    exists = c:IRE
+                    this = c:IRE
+                }
+                AND = {
+                    exists = c:GBR
+                    this = c:GBR
+                    NOT = { exists = c:IRE }
+                }
+            }
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1902.1.1
+        latest_usage_date = 1941.4.20
+        chance = 45
+    }
+}
+
+## H. G. Wells
+
+ecchi_gbr_wells_hg_character_template = {
+	dna = mr_gbr_wells_hg
+	first_name = ecchi_H_G
+	last_name = ecchi_Wells
+	culture = cu:british
+	female = no
+	interest_group = ig_intelligentsia
+	birth_date = 1866.9.21
+	historical = yes
+    ideology = ideology_social_democrat
+	traits = {
+		literary
+		innovative
+		bigoted
+		persistent
+	}
+    agitator_usage = {
+        country_trigger = {
+            morgenrote_is_active = no
+            OR = {
+                AND = {
+                    exists = c:GBR
+                    this = c:GBR
+                    NOT = { exists = c:ENG }
+                }
+                AND = {
+                    exists = c:ENG
+                    this = c:ENG
+                }
+            }
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1891.1.1
+        latest_usage_date = 1946.8.13
+        chance = 55
+    }
+}
+
+## Robert Lewis Stevenson
+
+ecchi_gbr_stevenson_robert_character_template = {
+    dna = ecchi_gbr_stevenson_robert
+    first_name = ecchi_Robert_Lewis
+    last_name = ecchi_Stevenson
+    culture = cu:scottish
+
+    interest_group = ig_intelligentsia
+    birth_date = 1850.11.13
+    historical = yes
+    ideology = ideology_reformer
+    traits = {
+        literary
+        innovative
+        romantic
+        explorer
+    }
+    agitator_usage = {
+        country_trigger = {
+            morgenrote_is_active = no
+            OR = {
+                AND = {
+                    exists = c:GBR
+                    this = c:GBR
+                    NOT = { exists = c:SCO }
+                }
+                AND = {
+                    exists = c:SCO
+                    this = c:SCO
+                }
+            }
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1870.1.1
+        latest_usage_date = 1894.4.20
+        chance = 45
+    }
+}
+
+## George Stephenson
+
+# ecchi_gbr_stephenson_george_character_template = {
+#     dna = ecchi_gbr_stephenson_george
+#     first_name = George
+#     last_name = Stephenson
+#     culture = cu:british
+# 
+#     interest_group = ig_industrialists
+#     birth_date = 1781.6.9
+#     historical = yes
+#     ideology = ideology_positivist
+#     religion = rel:protestant
+#     traits = {
+#         engineer
+#         persistent
+#         innovative
+#     }
+#     agitator_usage = {
+#         country_trigger = {
+#             OR = {
+#                 AND = {
+#                     exists = c:GBR
+#                     this = c:GBR
+#                     NOT = { exists = c:ENG }
+#                 }
+#                 AND = {
+#                     exists = c:ENG
+#                     this = c:ENG
+#                 }
+#             }
+#         }
+#         interest_group_trigger = {
+#             is_interest_group_type = ig_industrialists
+#         }
+#         earliest_usage_date = 1814.1.1
+#         latest_usage_date = 1848.8.12
+#         chance = 55
+#     }
+# }
+
+## Charlie Chaplin
+
+ecchi_gbr_chaplin_charlie_character_template = {
+    dna = ecchi_gbr_chaplin_charlie
+    first_name = Charlie
+    last_name = ecchi_Chaplin
+    culture = cu:british
+
+    interest_group = ig_petty_bourgeoisie
+    birth_date = 1889.4.16
+    historical = yes
+    ideology = ideology_reformer
+    traits = {
+        demagogue
+        tactful
+        charismatic
+    }
+    agitator_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:british value < acceptance_status_4 }
+            }
+            OR = {
+                AND = {
+                    exists = c:GBR
+                    this = c:GBR
+                    NOT = { year >= 1912 }
+                }
+                AND = {
+                    exists = c:USA
+                    this = c:USA
+                    year >= 1912
+                }
+            }
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_petty_bourgeoisie
+        }
+        earliest_usage_date = 1900.1.1
+        latest_usage_date = 1977.12.25
+        chance = 60
+    }
+}
+
+## Arthur Conolly
+
+ecchi_gbr_conolly_arthur_character_template = {
+    dna = ecchi_gbr_conolly_arthur
+    first_name = Arthur
+    last_name = Conolly
+    culture = cu:british
+
+    interest_group = ig_armed_forces
+    birth_date = 1807.7.2
+    historical = yes
+    ideology = ideology_traditionalist
+    commander_rank = default
+    traits = {
+        plains_commander
+        explorer
+        charismatic
+        literary
+    }
+    commander_usage = {
+        country_trigger = {
+            OR = {
+                has_state_in_state_region = STATE_HOME_COUNTIES
+                NOT = {
+                    country_average_cultural_acceptance = { target = cu:british value < acceptance_status_4 }
+                }
+            }
+        }
+        role = general
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1842.6.17
+        chance = 50
+    }
+}
+
+#Gilbert Keith Chesterton
+ecchi_gbr_chesterton_character_template = {
+    first_name = ecchi_Gilbert_Keith
+    last_name = ecchi_Chesterton
+    historical = yes
+    culture = cu:british
+    female = no
+    religion = rel:catholic
+    ideology = ideology_liberal_leader
+    interest_group = ig_devout
+    dna = mr_gbr_chesterton_gilbert_keith
+    birth_date = 1874.5.29
+    traits = { literary honorable erudite }
+    agitator_usage = {
+        country_trigger = {
+            morgenrote_is_active = no #This character is in Morgenröte and should not spawn if Morgenröte is active
+            exists = c:GBR
+            this = c:GBR
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_devout
+        }
+        earliest_usage_date = 1900.1.1
+        latest_usage_date = 1936.6.14
+        chance = 65
+    }
+}

@@ -1,0 +1,26 @@
+﻿l_russian:
+consolidate_subject: "Консолидировать подданного"
+consolidate_subject_action_name: "Консолидировать [concept_subject]"
+consolidate_subject_desc: "Объединить целевого [concept_subject] с соседним [concept_subject], сформировав единое [concept_country]. Оба подданных должны иметь низкий [concept_autonomy], низкий [concept_liberty_desire] и общие культурные черты."
+consolidate_subject_action_notification_name: "[INITIATOR_COUNTRY.GetName] консолидирует администрацию"
+consolidate_subject_action_notification_desc: "[INITIATOR_COUNTRY.GetName] решил консолидировать нас."
+consolidate_subject_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName] консолидирует подданных"
+consolidate_subject_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] консолидировал [TARGET_COUNTRY.GetName]."
+
+is_not_african_subject: "Этот подданный не является одной из наших африканских колониальных администраций"
+consolidate_subject_country_tier_tt: "Уровень [concept_country_tier] подданного — $country_tier_city_state$, $country_tier_principality$ или $country_tier_grand_principality$"
+consolidate_subject_country_tier_kingdom_tt: "Уровень [concept_country_tier] подданного — $country_tier_kingdom$"
+consolidate_subject_vassal_type_tt: "Является $subject_type_vassal$ или $subject_type_puppet$"
+consolidate_subject_primary_culture_tt: "Имеет общую [Concept('concept_primary_cultures', '$concept_primary_culture$')] с консолидируемым подданным"
+consolidate_subject_acceptance_tt: "[concept_overlord] исследовал пан-национализм и миссию цивилизации, и все [concept_primary_cultures] консолидируемого подданного должны иметь общую черту и как минимум @acceptance_status_4! $second_rate_citizen$ [concept_acceptance_status]"
+
+alert_overlord_can_consolidate_subject_name: "[GetDiplomaticActionType('consolidate_subject').GetName] доступно для [SCOPE.GetRootScope.GetCountry.GetName]"
+alert_overlord_can_consolidate_subject_desc: "Наш [concept_subject] [SCOPE.GetRootScope.GetCountry.GetName] может быть консолидирован в соседнего подданного."
+alert_overlord_can_consolidate_subject_hint: "Вы можете использовать вкладку Подданные в панели Дипломатии, чтобы выполнить [GetDiplomaticActionType('consolidate_subject').GetName] [concept_diplomatic_action]."
+alert_overlord_can_consolidate_subject_action: "Панель Дипломатии"
+
+ag_can_consolidate_subject_name: "Можно [GetDiplomaticActionType('consolidate_subject').GetName]"
+ag_can_consolidate_subject_desc: "Есть [concept_subject] [Concept('concept_country', '$concept_countries$')], которые подходят для действия [GetDiplomaticActionType('consolidate_subject').GetName]"
+ag_can_consolidate_subject_tooltip: "#header $ag_can_consolidate_subject_name$#!\n$TOOLTIP_DELIMITER$\n$ag_can_consolidate_subject_desc$\n\n$ALERT_GROUP_TOOLTIP_FOOTER$"
+
+#credit to TechPower$ 

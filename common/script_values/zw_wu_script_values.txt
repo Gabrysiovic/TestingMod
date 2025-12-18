@@ -1,0 +1,37 @@
+﻿zw_value_clothes_westernization_monthly_progress = {
+	if = {
+		limit = {
+			NOR = {
+				has_law = law_type:law_traditionalism
+				has_law = law_type:law_isolationism
+				has_law = law_type:law_serfdom
+				has_law = law_type:law_peasant_levies
+			}
+		}
+		add = 1
+	}
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					exists = ig:ig_industrialists
+					ig:ig_industrialists = { ig_clout >= 0.10 }
+				}
+				AND = {
+					exists = ig:ig_intelligentsia
+					ig:ig_intelligentsia = { ig_clout >= 0.10 }
+				}				
+			}
+		}
+		add = 0.50
+	}
+	if = {
+		limit = {
+			OR = {
+				is_country_type = colonial
+				is_country_type = recognized
+			}
+		}
+		add = 0.50
+	}
+}

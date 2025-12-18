@@ -1,0 +1,13 @@
+﻿MEX = {
+	flag_definition = {
+		coa = MEX_habsburg
+		subject_canton = MEX_habsburg
+		priority = 100
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+}

@@ -1,0 +1,1704 @@
+﻿zw_wc_clothes_character = {
+
+	usage = game
+	selection_behavior = weighted_random
+
+	# character: politician_executive, weight = 1000
+
+	zw_westernized_clothes_character_politician_executive = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = waistcoats
+				template = european_waistcoats
+				range = { 0 0.66 }
+			}
+			accessory = {
+				mode = add
+				gene = civilian_coats
+				template = european_civilian_coats
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = legwear
+				template = european_legwear
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = props
+				template = gene_lences
+				range = { 0 1 }
+			}
+		}
+
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				zw_trigger_westernized_clothes_character_politician_executive = yes
+			}
+		}
+	}
+
+	# character: politician_executive_dlc, weight = 1000 + 100 = 1100
+
+	zw_westernized_clothes_character_politician_executive_dlc_mp1 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = top_layer
+				template = executive_overcoat
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = civilian_coats
+				template = european_executive_coats
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = legwear
+				template = european_legwear
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = props
+				template = gene_lences
+				range = { 0 1 }
+			}
+		}
+
+		weight = {
+			base = 0
+			modifier = {
+				add = 1100
+				zw_trigger_westernized_clothes_character_politician_executive_dlc_mp1 = yes
+			}
+		}
+	}
+
+	# character: politician_executive_winter, weight = 1000 + 100 + 100 = 1200
+
+	zw_westernized_clothes_character_politician_executive_winter = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = legwear
+				template = european_legwear
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = civilian_coats
+				template = greatcoat
+				range = { 0 1 }
+			}
+		}
+
+		weight = {
+			base = 0
+			modifier = {
+				add = 1200
+				zw_trigger_westernized_clothes_character_politician_executive = yes
+				has_dlc_feature = ep1_cosmetics
+				scope:character ?= {
+					OR = {
+						is_interest_group_type = ig_landowners
+						is_interest_group_type = ig_industrialists
+						is_interest_group_type = ig_intelligentsia
+						is_interest_group_type = ig_petty_bourgeoisie
+					}
+					OR = {
+						month > 10
+						month < 3
+					}
+					is_ruler = no
+				}
+			}
+		}
+	}
+
+	# character: agitator, weight = 1000
+
+	zw_westernized_clothes_character_agitator = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = outfits
+				template = european_outfits_agitator
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = legwear
+				template = european_legwear
+				range = { 0 1 }
+			}
+		}
+
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				zw_trigger_westernized_clothes_character_agitator = yes
+			}
+		}
+	}
+
+	# character: child, weight = 4000
+
+	zw_westernized_clothes_character_child = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = outfits
+				template = children_outfit_royal
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 4000
+				zw_trigger_westernized_clothes_character_child = yes
+			}
+		}
+	}
+
+	# character: general, weight = 2000
+
+	zw_westernized_clothes_character_general = {
+		dna_modifiers = {
+			# coats
+			accessory = {
+				mode = add
+				gene = coats
+				template = european_uniform_coats
+				range = { 0 0.35 }
+			}
+			# legs
+			accessory = {
+				mode = add
+				gene = legwear
+				template = european_legwear
+				range = { 0 1 }	
+			}
+			# epaulettes
+			accessory = {
+				mode = add
+				gene = epaulettes
+				template = all_epaulettes
+				range = { 0.05 1 }
+			}
+			# belts
+			accessory = {
+				mode = add
+				gene = belts
+				template = all_belts
+				range = { 0 0.66 }
+			}
+			# medals
+			accessory = {
+				mode = add
+				gene = medals
+				template = generic_medals
+				range = { 0 1 }
+			}
+			# sashes
+			#accessory = {
+				#mode = add
+				#gene = sashes
+				#template = all_sashes
+				#range = { 0 1 }
+			#}
+			# aiguillettes
+			accessory = {
+				mode = add
+				gene = aiguillettes
+				template = all_aiguillettes
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2000
+				zw_trigger_westernized_clothes_character_general = yes
+			}
+		}
+	}
+
+	# character: general_late, weight = 3000
+
+	zw_westernized_clothes_character_general_late = {
+		dna_modifiers = {
+			# coats
+			accessory = {
+				mode = add
+				gene = coats
+				template = european_late_military_coats
+				range = { 0 1 }
+			}
+			# legwear
+			accessory = {
+				mode = add
+				gene = legwear
+				template = european_late_military_legwear
+				range = { 0 1 }
+			}
+			# epaulettes
+			accessory = {
+				mode = add
+				gene = epaulettes
+				template = late_military_epaulettes
+				accessory = male_epaulettes_military_01
+			}
+			# belts
+			accessory = {
+				mode = add
+				gene = belts
+				template = late_military_belts
+				range = { 0 1 }
+			}
+			# medals
+			accessory = {
+				mode = add
+				gene = medals
+				template = generic_medals
+				range = { 0 1 }
+			}
+			# aiguillettes
+			accessory = {
+				mode = add
+				gene = aiguillettes
+				template = all_aiguillettes
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 3000
+				zw_trigger_westernized_clothes_character_general_late = yes
+			}
+		}
+	}
+
+	# character: admiral, weight = 2000
+
+	zw_westernized_clothes_character_admiral = {
+		dna_modifiers = {
+			# coats
+			accessory = {
+				mode = add
+				gene = coats
+				template = european_uniform_coats
+				range = { 0 0.35 }
+			}
+			# legs
+			accessory = {
+				mode = add
+				gene = legwear
+				template = european_legwear
+				range = { 0 1 }
+			}
+			# epaulettes
+			accessory = {
+				mode = add
+				gene = epaulettes
+				template = all_epaulettes
+				range = { 0.05 1 }
+			}
+			# belts
+			accessory = {
+				mode = add
+				gene = belts
+				template = all_belts
+				range = { 0 0.66 }
+			}
+			# medals
+			accessory = {
+				mode = add
+				gene = medals
+				template = generic_medals
+				range = { 0 1 }
+			}
+			# sashes
+			#accessory = {
+				#mode = add
+				#gene = sashes
+				#template = all_sashes
+				#range = { 0 1 }
+			#}
+			# aiguillettes
+			accessory = {
+				mode = add
+				gene = aiguillettes
+				template = all_aiguillettes
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2000
+				zw_trigger_westernized_clothes_character_admiral = yes
+			}
+		}
+	}
+
+	# character: ruler_monarchy, weight = 2000
+
+	zw_westernized_clothes_character_ruler_monarchy_1 = {
+		dna_modifiers = {
+			# coats
+			accessory = {
+				mode = add
+				gene = zw_gene_coats
+				template = zw_template_coats_military
+				range = { 0 0.13 } # single-breasted
+			}
+			# legs
+			accessory = {
+				mode = add
+				gene = legwear
+				template = european_legwear
+				range = { 0 1 }
+			}
+			# epaulettes
+			accessory = {
+				mode = add
+				gene = zw_gene_epaulettes
+				template = zw_template_epaulettes_monarchy
+				range = { 0 1 }
+			}
+			# belts
+			accessory = {
+				mode = add
+				gene = zw_gene_belts
+				template = zw_template_belts_saber
+				range = { 0 1 }
+			}
+			# medals
+			accessory = {
+				mode = add
+				gene = medals
+				template = generic_medals
+				range = { 0 1 }
+			}
+			# sashes
+			#accessory = {
+				#mode = add
+				#gene = zw_gene_sashes
+				#template = zw_template_sashes
+				#range = { 0 1 }
+			#}
+			# aiguillettes
+			accessory = {
+				mode = add
+				gene = aiguillettes
+				template = all_aiguillettes
+				range = { 0 0.5 } # has aiguillettes
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2000
+				zw_trigger_westernized_clothes_character_ruler_monarchy = yes
+			}
+		}
+	}
+
+	zw_westernized_clothes_character_ruler_monarchy_2 = {
+		dna_modifiers = {
+			# coats
+			accessory = {
+				mode = add
+				gene = zw_gene_coats
+				template = zw_template_coats_military
+				range = { 0.14 0.26 } # double-breasted
+			}
+			# legs
+			accessory = {
+				mode = add
+				gene = legwear
+				template = european_legwear
+				range = { 0 1 }
+			}
+			# epaulettes
+			accessory = {
+				mode = add
+				gene = zw_gene_epaulettes
+				template = zw_template_epaulettes_monarchy
+				range = { 0 1 }
+			}
+			# belts
+			accessory = {
+				mode = add
+				gene = zw_gene_belts
+				template = zw_template_belts_saber
+				range = { 0 1 }
+			}
+			# medals
+			accessory = {
+				mode = add
+				gene = medals
+				template = generic_medals
+				range = { 0 1 }
+			}
+			# sashes
+			accessory = {
+				mode = add
+				gene = zw_gene_sashes
+				template = zw_template_sashes
+				range = { 0 1 }
+			}
+			# aiguillettes
+			#accessory = {
+				#mode = add
+				#gene = aiguillettes
+				#template = all_aiguillettes
+				#range = { 0 0.5 } # has aiguillettes
+			#}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2000
+				zw_trigger_westernized_clothes_character_ruler_monarchy = yes
+			}
+		}
+	}
+
+	# character: ruler_monarchy_female, weight = 3000
+
+	zw_westernized_clothes_character_ruler_monarchy_female = {
+		dna_modifiers = {
+			 accessory = {
+				mode = add
+				gene = outfits
+				template = european_royal_outfits
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 3000
+				zw_trigger_westernized_clothes_character_ruler_monarchy_female = yes
+			}
+		}
+	}
+
+	# Special Templates: military
+
+	# character: military, grey, weight = 2000 + 100 = 2100
+
+	zw_westernized_clothes_character_military_special_1 = {
+		dna_modifiers = {
+			# coats
+			accessory = {
+				mode = add
+				gene = zw_gene_coats
+				template = zw_template_coats_military
+				accessory = male_coat_german_military_01_entity # grey
+
+			}
+			# legwear
+			accessory = {
+				mode = add
+				gene = zw_gene_legwear
+				template = zw_template_legwear_military
+				accessory = male_legwear_european_01
+			}
+			# epaulettes
+			accessory = {
+				mode = add
+				gene = epaulettes
+				template = all_epaulettes
+				range = { 0.05 1 }
+			}
+			# belts
+			accessory = {
+				mode = add
+				gene = belts
+				template = all_belts
+				range = { 0 0.66 }
+			}
+			# medals
+			accessory = {
+				mode = add
+				gene = medals
+				template = generic_medals
+				range = { 0 1 }
+			}
+			# sashes
+			accessory = {
+				mode = add
+				gene = sashes
+				template = all_sashes
+				range = { 0 0.5 } # no sashes
+				#range = { 0 1 } # mixed sashes
+			}
+			# aiguillettes
+			accessory = {
+				mode = add
+				gene = aiguillettes
+				template = all_aiguillettes
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2100
+				zw_trigger_westernized_clothes_character_military_special = {
+					style_num = 1
+				}
+			}
+		}
+	}
+
+	# character: military, blue, weight = 2000 + 100 = 2100
+
+	zw_westernized_clothes_character_military_special_2 = {
+		dna_modifiers = {
+			# coats
+			accessory = {
+				mode = add
+				gene = zw_gene_coats
+				template = zw_template_coats_military
+				accessory = male_coat_french_01 # blue
+			}
+			# legwear
+			accessory = {
+				mode = add
+				gene = zw_gene_legwear
+				template = zw_template_legwear_military
+				accessory = male_legwear_european_01
+			}
+			# epaulettes
+			accessory = {
+				mode = add
+				gene = epaulettes
+				template = all_epaulettes
+				range = { 0.05 1 }
+			}
+			# belts
+			accessory = {
+				mode = add
+				gene = belts
+				template = all_belts
+				range = { 0 0.66 }
+			}
+			# medals
+			accessory = {
+				mode = add
+				gene = medals
+				template = generic_medals
+				range = { 0 1 }
+			}
+			# sashes
+			accessory = {
+				mode = add
+				gene = sashes
+				template = all_sashes
+				range = { 0 0.5 } # no sashes
+				#range = { 0 1 } # mixed sashes
+			}
+			# aiguillettes
+			accessory = {
+				mode = add
+				gene = aiguillettes
+				template = all_aiguillettes
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2100
+				OR = {
+					zw_trigger_westernized_clothes_character_military_special = {
+						style_num = 2
+					}
+					zw_trigger_westernized_clothes_character_military_special = {
+						style_num = 11
+					}
+				}
+			}
+		}
+	}
+
+	# character: military, black, weight = 2000 + 100 = 2100
+
+	zw_westernized_clothes_character_military_special_3 = {
+		dna_modifiers = {
+			# coats
+			accessory = {
+				mode = add
+				gene = zw_gene_coats
+				template = zw_template_coats_military
+				accessory = male_coat_persian_01 # black
+			}
+			# legwear
+			accessory = {
+				mode = add
+				gene = zw_gene_legwear
+				template = zw_template_legwear_military
+				accessory = male_legwear_european_01_black
+			}
+			# epaulettes
+			accessory = {
+				mode = add
+				gene = epaulettes
+				template = all_epaulettes
+				range = { 0.05 1 }
+			}
+			# belts
+			accessory = {
+				mode = add
+				gene = belts
+				template = all_belts
+				range = { 0 0.66 }
+			}
+			# medals
+			accessory = {
+				mode = add
+				gene = medals
+				template = generic_medals
+				range = { 0 1 }
+			}
+			# sashes
+			accessory = {
+				mode = add
+				gene = sashes
+				template = all_sashes
+				range = { 0 0.5 } # no sashes
+				#range = { 0 1 } # mixed sashes
+			}
+			# aiguillettes
+			accessory = {
+				mode = add
+				gene = aiguillettes
+				template = all_aiguillettes
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2100
+				zw_trigger_westernized_clothes_character_military_special = {
+					style_num = 3
+				}
+			}
+		}
+	}
+
+	# character: military, red, weight = 2000 + 100 = 2100
+
+	zw_westernized_clothes_character_military_special_4 = {
+		dna_modifiers = {
+			# coats
+			accessory = {
+				mode = add
+				gene = zw_gene_coats
+				template = zw_template_coats_military
+				accessory = male_coat_british_01 # red
+			}
+			# legwear
+			accessory = {
+				mode = add
+				gene = zw_gene_legwear
+				template = zw_template_legwear_military
+				accessory = male_legwear_european_01
+			}
+			# epaulettes
+			accessory = {
+				mode = add
+				gene = epaulettes
+				template = all_epaulettes
+				range = { 0.05 1 }
+			}
+			# belts
+			accessory = {
+				mode = add
+				gene = belts
+				template = all_belts
+				range = { 0 0.66 }
+			}
+			# medals
+			accessory = {
+				mode = add
+				gene = medals
+				template = generic_medals
+				range = { 0 1 }
+			}
+			# sashes
+			accessory = {
+				mode = add
+				gene = sashes
+				template = all_sashes
+				range = { 0 0.5 } # no sashes
+				#range = { 0 1 } # mixed sashes
+			}
+			# aiguillettes
+			accessory = {
+				mode = add
+				gene = aiguillettes
+				template = all_aiguillettes
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2100
+				OR = {
+					zw_trigger_westernized_clothes_character_military_special = {
+						style_num = 4
+					}
+					zw_trigger_westernized_clothes_character_military_special = {
+						style_num = 12
+					}
+				}
+			}
+		}
+	}
+
+	# character: military, dark_blue, weight = 2000 + 100 = 2100
+
+	zw_westernized_clothes_character_military_special_5 = {
+		dna_modifiers = {
+			# coats
+			accessory = {
+				mode = add
+				gene = zw_gene_coats
+				template = zw_template_coats_military
+				accessory = male_coat_american_01 # dark blue
+			}
+			# legwear
+			accessory = {
+				mode = add
+				gene = zw_gene_legwear
+				template = zw_template_legwear_military
+				accessory = male_legwear_european_01
+			}
+			# epaulettes
+			accessory = {
+				mode = add
+				gene = epaulettes
+				template = all_epaulettes
+				range = { 0.05 1 }
+			}
+			# belts
+			accessory = {
+				mode = add
+				gene = belts
+				template = all_belts
+				range = { 0 0.66 }
+			}
+			# medals
+			accessory = {
+				mode = add
+				gene = medals
+				template = generic_medals
+				range = { 0 1 }
+			}
+			# sashes
+			accessory = {
+				mode = add
+				gene = sashes
+				template = all_sashes
+				range = { 0 0.5 } # no sashes
+				#range = { 0 1 } # mixed sashes
+			}
+			# aiguillettes
+			accessory = {
+				mode = add
+				gene = aiguillettes
+				template = all_aiguillettes
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2100
+				OR = {
+					zw_trigger_westernized_clothes_character_military_special = {
+						style_num = 5
+					}
+					zw_trigger_westernized_clothes_character_military_special = {
+						style_num = 13
+					}
+				}
+			}
+		}
+	}
+
+	# character: military, medium_coat_blue, weight = 2000 + 100 = 2100
+
+	zw_westernized_clothes_character_military_special_6 = {
+		dna_modifiers = {
+			# coats
+			accessory = {
+				mode = add
+				gene = zw_gene_coats
+				template = zw_template_coats_military
+				accessory = male_coat_french_06
+			}
+			# legwear
+			accessory = {
+				mode = add
+				gene = zw_gene_legwear
+				template = zw_template_legwear_military
+				accessory = male_legwear_european_01
+			}
+			# epaulettes
+			accessory = {
+				mode = add
+				gene = epaulettes
+				template = all_epaulettes
+				range = { 0.05 1 }
+			}
+			# belts
+			accessory = {
+				mode = add
+				gene = belts
+				template = all_belts
+				range = { 0 0.66 }
+			}
+			# medals
+			accessory = {
+				mode = add
+				gene = medals
+				template = generic_medals
+				range = { 0 1 }
+			}
+			# sashes
+			accessory = {
+				mode = add
+				gene = sashes
+				template = all_sashes
+				#range = { 0 0.5 } # no sashes
+				range = { 0 1 } # mixed sashes
+			}
+			# aiguillettes
+			#accessory = {
+				#mode = add
+				#gene = aiguillettes
+				#template = all_aiguillettes
+				#range = { 0 1 }
+			#}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2100
+				OR = {
+					zw_trigger_westernized_clothes_character_military_special = {
+						style_num = 6
+					}
+					zw_trigger_westernized_clothes_character_military_special = {
+						style_num = 11
+					}
+				}
+			}
+		}
+	}
+
+	# character: military, medium_coat_red, weight = 2000 + 100 = 2100
+
+	zw_westernized_clothes_character_military_special_7 = {
+		dna_modifiers = {
+			# coats
+			accessory = {
+				mode = add
+				gene = zw_gene_coats
+				template = zw_template_coats_military
+				accessory = male_coat_british_06
+			}
+			# legwear
+			accessory = {
+				mode = add
+				gene = zw_gene_legwear
+				template = zw_template_legwear_military
+				accessory = male_legwear_european_01
+			}
+			# epaulettes
+			accessory = {
+				mode = add
+				gene = epaulettes
+				template = all_epaulettes
+				range = { 0.05 1 }
+			}
+			# belts
+			accessory = {
+				mode = add
+				gene = belts
+				template = all_belts
+				range = { 0 0.66 }
+			}
+			# medals
+			accessory = {
+				mode = add
+				gene = medals
+				template = generic_medals
+				range = { 0 1 }
+			}
+			# sashes
+			accessory = {
+				mode = add
+				gene = sashes
+				template = all_sashes
+				#range = { 0 0.5 } # no sashes
+				range = { 0 1 } # mixed sashes
+			}
+			# aiguillettes
+			#accessory = {
+				#mode = add
+				#gene = aiguillettes
+				#template = all_aiguillettes
+				#range = { 0 1 }
+			#}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2100
+				OR = {
+					zw_trigger_westernized_clothes_character_military_special = {
+						style_num = 7
+					}
+					zw_trigger_westernized_clothes_character_military_special = {
+						style_num = 12
+					}
+				}
+			}
+		}
+	}
+
+	# character: military, medium_coat_dark_blue, weight = 2000 + 100 = 2100
+
+	zw_westernized_clothes_character_military_special_8 = {
+		dna_modifiers = {
+			# coats
+			accessory = {
+				mode = add
+				gene = zw_gene_coats
+				template = zw_template_coats_military
+				accessory = male_coat_american_06
+			}
+			# legwear
+			accessory = {
+				mode = add
+				gene = zw_gene_legwear
+				template = zw_template_legwear_military
+				accessory = male_legwear_european_01
+			}
+			# epaulettes
+			accessory = {
+				mode = add
+				gene = epaulettes
+				template = all_epaulettes
+				range = { 0.05 1 }
+			}
+			# belts
+			accessory = {
+				mode = add
+				gene = belts
+				template = all_belts
+				range = { 0 0.66 }
+			}
+			# medals
+			accessory = {
+				mode = add
+				gene = medals
+				template = generic_medals
+				range = { 0 1 }
+			}
+			# sashes
+			accessory = {
+				mode = add
+				gene = sashes
+				template = all_sashes
+				#range = { 0 0.5 } # no sashes
+				range = { 0 1 } # mixed sashes
+			}
+			# aiguillettes
+			#accessory = {
+				#mode = add
+				#gene = aiguillettes
+				#template = all_aiguillettes
+				#range = { 0 1 }
+			#}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2100
+				OR = {
+					zw_trigger_westernized_clothes_character_military_special = {
+						style_num = 8
+					}
+					zw_trigger_westernized_clothes_character_military_special = {
+						style_num = 13
+					}
+				}
+			}
+		}
+	}
+
+	# character: military, long_coat_white, weight = 2000 + 100 = 2100
+
+	zw_westernized_clothes_character_military_special_9 = {
+		dna_modifiers = {
+			# coats
+			accessory = {
+				mode = add
+				gene = zw_gene_coats
+				template = zw_template_coats_military
+				accessory = male_coat_european_08_white
+			}
+			# legwear
+			accessory = {
+				mode = add
+				gene = zw_gene_legwear
+				template = zw_template_legwear_military
+				accessory = male_legwear_european_01
+			}
+			# epaulettes
+			accessory = {
+				mode = add
+				gene = zw_gene_epaulettes
+				template = zw_template_epaulettes_small
+				range = { 0 1 }
+			}
+			# belts
+			accessory = {
+				mode = add
+				gene = belts
+				template = all_belts
+				range = { 0 0.66 }
+			}
+			# medals
+			accessory = {
+				mode = add
+				gene = medals
+				template = generic_medals
+				range = { 0 1 }
+			}
+			# sashes
+			#accessory = {
+				#mode = add
+				#gene = sashes
+				#template = all_sashes
+				#range = { 0 1 } # mixed sashes
+			#}
+			# aiguillettes
+			#accessory = {
+				#mode = add
+				#gene = aiguillettes
+				#template = all_aiguillettes
+				#range = { 0 1 }
+			#}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2100
+				zw_trigger_westernized_clothes_character_military_special = {
+					style_num = 9
+				}
+			}
+		}
+	}
+
+	# character: military, long_coat_blue, weight = 2000 + 100 = 2100
+
+	zw_westernized_clothes_character_military_special_10 = {
+		dna_modifiers = {
+			# coats
+			accessory = {
+				mode = add
+				gene = zw_gene_coats
+				template = zw_template_coats_military
+				accessory = male_coat_european_08_blue
+			}
+			# legwear
+			accessory = {
+				mode = add
+				gene = zw_gene_legwear
+				template = zw_template_legwear_military
+				accessory = male_legwear_european_01
+			}
+			# epaulettes
+			accessory = {
+				mode = add
+				gene = zw_gene_epaulettes
+				template = zw_template_epaulettes_small
+				range = { 0 1 }
+			}
+			# belts
+			accessory = {
+				mode = add
+				gene = belts
+				template = all_belts
+				range = { 0 0.66 }
+			}
+			# medals
+			accessory = {
+				mode = add
+				gene = medals
+				template = generic_medals
+				range = { 0 1 }
+			}
+			# sashes
+			#accessory = {
+				#mode = add
+				#gene = sashes
+				#template = all_sashes
+				#range = { 0 1 } # mixed sashes
+			#}
+			# aiguillettes
+			#accessory = {
+				#mode = add
+				#gene = aiguillettes
+				#template = all_aiguillettes
+				#range = { 0 1 }
+			#}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2100
+				zw_trigger_westernized_clothes_character_military_special = {
+					style_num = 10
+				}
+			}
+		}
+	}
+
+	# Special Templates: monarch
+
+	# character: ruler_monarchy, black, weight = 2000 + 100 = 2100
+
+	zw_westernized_clothes_character_ruler_monarchy_special_1s = {
+		dna_modifiers = {
+			# coats
+			accessory = {
+				mode = add
+				gene = zw_gene_coats
+				template = zw_template_coats_military
+				accessory = male_coat_persian_01 # black
+			}
+			# legs
+			accessory = {
+				mode = add
+				gene = legwear
+				template = european_legwear
+				range = { 0 1 }
+			}
+			# epaulettes
+			accessory = {
+				mode = add
+				gene = zw_gene_epaulettes
+				template = zw_template_epaulettes_monarchy
+				range = { 0 1 }
+			}
+			# belts
+			accessory = {
+				mode = add
+				gene = zw_gene_belts
+				template = zw_template_belts_saber
+				range = { 0 1 }
+			}
+			# medals
+			accessory = {
+				mode = add
+				gene = medals
+				template = generic_medals
+				range = { 0 1 }
+			}
+			# sashes
+			#accessory = {
+				#mode = add
+				#gene = zw_gene_sashes
+				#template = zw_template_sashes
+				#range = { 0 1 }
+			#}
+			# aiguillettes
+			accessory = {
+				mode = add
+				gene = aiguillettes
+				template = all_aiguillettes
+				range = { 0 0.5 } # has aiguillettes
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2100
+				zw_trigger_westernized_clothes_character_ruler_monarchy_special = {
+					style_num = 1
+				}
+			}
+		}
+	}
+
+	# character: ruler_monarchy, blue, weight = 2000 + 100 = 2100
+
+	zw_westernized_clothes_character_ruler_monarchy_special_2s = {
+		dna_modifiers = {
+			# coats
+			accessory = {
+				mode = add
+				gene = zw_gene_coats
+				template = zw_template_coats_military
+				accessory = male_coat_french_01 # blue
+			}
+			# legs
+			accessory = {
+				mode = add
+				gene = legwear
+				template = european_legwear
+				range = { 0 1 }
+			}
+			# epaulettes
+			accessory = {
+				mode = add
+				gene = zw_gene_epaulettes
+				template = zw_template_epaulettes_monarchy
+				range = { 0 1 }
+			}
+			# belts
+			accessory = {
+				mode = add
+				gene = zw_gene_belts
+				template = zw_template_belts_saber
+				range = { 0 1 }
+			}
+			# medals
+			accessory = {
+				mode = add
+				gene = medals
+				template = generic_medals
+				range = { 0 1 }
+			}
+			# sashes
+			#accessory = {
+				#mode = add
+				#gene = zw_gene_sashes
+				#template = zw_template_sashes
+				#range = { 0 1 }
+			#}
+			# aiguillettes
+			accessory = {
+				mode = add
+				gene = aiguillettes
+				template = all_aiguillettes
+				range = { 0 0.5 } # has aiguillettes
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2100
+				zw_trigger_westernized_clothes_character_ruler_monarchy_special = {
+					style_num = 2
+				}
+			}
+		}
+	}
+
+	zw_westernized_clothes_character_ruler_monarchy_special_2d = {
+		dna_modifiers = {
+			# coats
+			accessory = {
+				mode = add
+				gene = zw_gene_coats
+				template = zw_template_coats_military
+				accessory = male_coat_french_06
+			}
+			# legs
+			accessory = {
+				mode = add
+				gene = legwear
+				template = european_legwear
+				range = { 0 1 }
+			}
+			# epaulettes
+			accessory = {
+				mode = add
+				gene = zw_gene_epaulettes
+				template = zw_template_epaulettes_monarchy
+				range = { 0 1 }
+			}
+			# belts
+			accessory = {
+				mode = add
+				gene = zw_gene_belts
+				template = zw_template_belts_saber
+				range = { 0 1 }
+			}
+			# medals
+			accessory = {
+				mode = add
+				gene = medals
+				template = generic_medals
+				range = { 0 1 }
+			}
+			# sashes
+			accessory = {
+				mode = add
+				gene = zw_gene_sashes
+				template = zw_template_sashes
+				range = { 0 1 }
+			}
+			# aiguillettes
+			#accessory = {
+				#mode = add
+				#gene = aiguillettes
+				#template = all_aiguillettes
+				#range = { 0 0.5 } # has aiguillettes
+			#}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2100
+				zw_trigger_westernized_clothes_character_ruler_monarchy_special = {
+					style_num = 2
+				}
+			}
+		}
+	}
+
+	# character: ruler_monarchy, red, weight = 2000 + 100 = 2100
+
+	zw_westernized_clothes_character_ruler_monarchy_special_3s = {
+		dna_modifiers = {
+			# coats
+			accessory = {
+				mode = add
+				gene = zw_gene_coats
+				template = zw_template_coats_military
+				accessory = male_coat_british_01 # red
+			}
+			# legs
+			accessory = {
+				mode = add
+				gene = legwear
+				template = european_legwear
+				range = { 0 1 }
+			}
+			# epaulettes
+			accessory = {
+				mode = add
+				gene = zw_gene_epaulettes
+				template = zw_template_epaulettes_monarchy
+				range = { 0 1 }
+			}
+			# belts
+			accessory = {
+				mode = add
+				gene = zw_gene_belts
+				template = zw_template_belts_saber
+				range = { 0 1 }
+			}
+			# medals
+			accessory = {
+				mode = add
+				gene = medals
+				template = generic_medals
+				range = { 0 1 }
+			}
+			# sashes
+			#accessory = {
+				#mode = add
+				#gene = zw_gene_sashes
+				#template = zw_template_sashes
+				#range = { 0 1 }
+			#}
+			# aiguillettes
+			accessory = {
+				mode = add
+				gene = aiguillettes
+				template = all_aiguillettes
+				range = { 0 0.5 } # has aiguillettes
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2100
+				zw_trigger_westernized_clothes_character_ruler_monarchy_special = {
+					style_num = 3
+				}
+			}
+		}
+	}
+
+	zw_westernized_clothes_character_ruler_monarchy_special_3d = {
+		dna_modifiers = {
+			# coats
+			accessory = {
+				mode = add
+				gene = zw_gene_coats
+				template = zw_template_coats_military
+				accessory = male_coat_british_06
+			}
+			# legs
+			accessory = {
+				mode = add
+				gene = legwear
+				template = european_legwear
+				range = { 0 1 }
+			}
+			# epaulettes
+			accessory = {
+				mode = add
+				gene = zw_gene_epaulettes
+				template = zw_template_epaulettes_monarchy
+				range = { 0 1 }
+			}
+			# belts
+			accessory = {
+				mode = add
+				gene = zw_gene_belts
+				template = zw_template_belts_saber
+				range = { 0 1 }
+			}
+			# medals
+			accessory = {
+				mode = add
+				gene = medals
+				template = generic_medals
+				range = { 0 1 }
+			}
+			# sashes
+			accessory = {
+				mode = add
+				gene = zw_gene_sashes
+				template = zw_template_sashes
+				range = { 0 1 }
+			}
+			# aiguillettes
+			#accessory = {
+				#mode = add
+				#gene = aiguillettes
+				#template = all_aiguillettes
+				#range = { 0 0.5 } # has aiguillettes
+			#}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2100
+				zw_trigger_westernized_clothes_character_ruler_monarchy_special = {
+					style_num = 3
+				}
+			}
+		}
+	}
+
+	# character: ruler_monarchy, dark blue, weight = 2000 + 100 = 2100
+
+	zw_westernized_clothes_character_ruler_monarchy_special_4s = {
+		dna_modifiers = {
+			# coats
+			accessory = {
+				mode = add
+				gene = zw_gene_coats
+				template = zw_template_coats_military
+				accessory = male_coat_american_01 # dark blue
+			}
+			# legs
+			accessory = {
+				mode = add
+				gene = legwear
+				template = european_legwear
+				range = { 0 1 }
+			}
+			# epaulettes
+			accessory = {
+				mode = add
+				gene = zw_gene_epaulettes
+				template = zw_template_epaulettes_monarchy
+				range = { 0 1 }
+			}
+			# belts
+			accessory = {
+				mode = add
+				gene = zw_gene_belts
+				template = zw_template_belts_saber
+				range = { 0 1 }
+			}
+			# medals
+			accessory = {
+				mode = add
+				gene = medals
+				template = generic_medals
+				range = { 0 1 }
+			}
+			# sashes
+			#accessory = {
+				#mode = add
+				#gene = zw_gene_sashes
+				#template = zw_template_sashes
+				#range = { 0 1 }
+			#}
+			# aiguillettes
+			accessory = {
+				mode = add
+				gene = aiguillettes
+				template = all_aiguillettes
+				range = { 0 0.5 } # has aiguillettes
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2100
+				zw_trigger_westernized_clothes_character_ruler_monarchy_special = {
+					style_num = 4
+				}
+			}
+		}
+	}
+
+	zw_westernized_clothes_character_ruler_monarchy_special_4d = {
+		dna_modifiers = {
+			# coats
+			accessory = {
+				mode = add
+				gene = zw_gene_coats
+				template = zw_template_coats_military
+				accessory = male_coat_american_06
+			}
+			# legs
+			accessory = {
+				mode = add
+				gene = legwear
+				template = european_legwear
+				range = { 0 1 }
+			}
+			# epaulettes
+			accessory = {
+				mode = add
+				gene = zw_gene_epaulettes
+				template = zw_template_epaulettes_monarchy
+				range = { 0 1 }
+			}
+			# belts
+			accessory = {
+				mode = add
+				gene = zw_gene_belts
+				template = zw_template_belts_saber
+				range = { 0 1 }
+			}
+			# medals
+			accessory = {
+				mode = add
+				gene = medals
+				template = generic_medals
+				range = { 0 1 }
+			}
+			# sashes
+			accessory = {
+				mode = add
+				gene = zw_gene_sashes
+				template = zw_template_sashes
+				range = { 0 1 }
+			}
+			# aiguillettes
+			#accessory = {
+				#mode = add
+				#gene = aiguillettes
+				#template = all_aiguillettes
+				#range = { 0 0.5 } # has aiguillettes
+			#}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2100
+				zw_trigger_westernized_clothes_character_ruler_monarchy_special = {
+					style_num = 4
+				}
+			}
+		}
+	}
+
+	# character: ruler_monarchy, long coat, weight = 2000 + 100 = 2100
+
+	zw_westernized_clothes_character_ruler_monarchy_special_5d = {
+		dna_modifiers = {
+			# coats
+			accessory = {
+				mode = add
+				gene = zw_gene_coats
+				template = zw_template_coats_military
+				accessory = male_coat_european_08 # long, standing collar
+			}
+			# legs
+			accessory = {
+				mode = add
+				gene = legwear
+				template = european_legwear
+				range = { 0 1 }
+			}
+			# epaulettes
+			accessory = {
+				mode = add
+				gene = zw_gene_epaulettes
+				template = zw_template_epaulettes_monarchy
+				range = { 0 1 }
+			}
+			# belts
+			accessory = {
+				mode = add
+				gene = zw_gene_belts
+				template = zw_template_belts_saber
+				range = { 0 1 }
+			}
+			# medals
+			accessory = {
+				mode = add
+				gene = medals
+				template = generic_medals
+				range = { 0 1 }
+			}
+			# sashes
+			accessory = {
+				mode = add
+				gene = zw_gene_sashes
+				template = zw_template_sashes
+				range = { 0 1 }
+			}
+			# aiguillettes
+			#accessory = {
+				#mode = add
+				#gene = aiguillettes
+				#template = all_aiguillettes
+				#range = { 0 0.5 } # has aiguillettes
+			#}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2100
+				zw_trigger_westernized_clothes_character_ruler_monarchy_special = {
+					style_num = 5
+				}
+			}
+		}
+	}
+}

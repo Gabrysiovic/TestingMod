@@ -1,0 +1,3 @@
+﻿leverage_threshold_to_invite_ai = 200 	# Minimum leverage advantage from power bloc on country to be able to invite the country
+
+leverage_threshold_to_invite_player = 50 	# Minimum leverage advantage from power bloc on country to be able to invite the country

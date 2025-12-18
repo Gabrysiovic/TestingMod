@@ -1,0 +1,26 @@
+﻿# Mexico - revolutionaries
+
+chilam_villa_character_template = {
+    first_name = Francisco
+    last_name = Villa
+    historical = yes
+    culture = cu:mexican
+    religion = rel:catholic
+    ideology = ideology_radical
+    interest_group = ig_armed_forces
+    dna = ecchi_dna_pancho_villa
+    birth_date = 1878.6.5
+    traits = { social_bandit demagogue pillager ambitious experienced_offensive_planner }
+    commander_usage = {
+        country_trigger = {
+            exists = c:MEX
+            this = c:MEX
+        }
+        role = general
+        earliest_usage_date = 1910.1.1
+        latest_usage_date = 1923.7.10
+        chance = 60
+    }
+}
+
+## Emiliano Zapata already in the vanilla game

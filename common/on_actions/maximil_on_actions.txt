@@ -1,0 +1,13 @@
+﻿on_monthly_pulse_country = {
+	on_actions = {
+		maximil_monthly_pulse
+	}
+}
+
+maximil_monthly_pulse = {
+	events = {
+		maximilian_start.1 #막시밀리안 시작 이벤트
+	}
+	random_events = {
+    }
+}

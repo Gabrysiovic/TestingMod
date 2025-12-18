@@ -1,0 +1,27 @@
+﻿l_french:
+ HTAB: "$TAB$#b -#!$TAB$"
+ TOOLTIP_DELIMITER_LONG: "@divider_start!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_end!"
+
+ # GDP Ownership Display
+ COUNTRY_GDP_OWNERSHIP_ONE_LINE: "#title [Concept('concept_building_owners', 'Propriété du PIB')]#!"
+ GDP_OWNERSHIP_RATIO_TT: "#header [Concept('concept_building_owners', 'Propriété du PIB')]#!\n[Country.GetAdjective] $GDP_SHORT$ Propriété : @money![Country.GetGDP|Dv] / [Country.MakeScope.ScriptValue('gdp_ownership_by_self')|%v] + [Country.MakeScope.ScriptValue('gdp_ownership_of_other')|%v] ([Country.GetGDPRanking])\n[SelectLocalization(IsZero_CFixedPoint(Country.MakeScope.ScriptValue('gdp_ownership_by_other_count')), 'DA_OVERSEA_INVESTMENT_NONE_TT', 'DA_OVERSEA_INVESTMENT_TT')]\n[SelectLocalization(IsZero_CFixedPoint(Country.MakeScope.ScriptValue('gdp_ownership_of_other_count')), 'DA_FOREIGN_INVESTMENT_NONE_TT', 'DA_FOREIGN_INVESTMENT_TT')][AddLocalizationIf(Not(ObjectsEqual(GetPlayer, Country.Self)), 'DA_GDP_OTHER_TT')]"
+
+ DA_OVERSEA_INVESTMENT_TT: "#b Investissement à l'étranger:#! Dans [Country.MakeScope.ScriptValue('gdp_ownership_by_other_count')|v0] pays, équivaut à #tooltippable;tooltip:[Country.GetTooltipTag],da_gui_gdp_ownership_other [Country.MakeScope.ScriptValue('gdp_ownership_of_other')|%v+2]#! du $GDP_SHORT$ de [Country.GetAdjective]"
+ DA_OVERSEA_INVESTMENT_NONE_TT: "[Country.GetName] n'a #b PAS#! d'investissement à l'étranger"
+ DA_FOREIGN_INVESTMENT_TT: "#b Investissement étranger:#! En provenance de [Country.MakeScope.ScriptValue('gdp_ownership_of_other_count')|v0] pays, équivaut à #tooltippable;tooltip:[Country.GetTooltipTag],da_gui_gdp_ownership_self [Country.MakeScope.ScriptValue('gdp_ownership_by_other')|%v-2]#! du $GDP_SHORT$ de [Country.GetAdjective]"
+ DA_FOREIGN_INVESTMENT_NONE_TT: "[Country.GetName] n'a #b PAS#! d'investissement étranger"
+
+ da_gui_gdp_ownership_title: "#title $GDP_SHORT$ $HTAB$ Part $TAB$#b -#! [Concept('concept_building_level', 'Niveau')] #b - #!$TAB$[concept_country]#!"
+ da_gui_gdp_ownership_self: "[GetScriptedGui('da_gui_gdp_ownership_self_list').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).End)]"
+ da_gui_gdp_ownership_self_tt: "@money![Multiply_CFixedPoint(Country.GetInvestmentGdpFractionInCountry(THIS.GetCountry.Self), Country.GetGDP)|Dv]$HTAB$[Country.GetInvestmentGdpFractionInCountry(THIS.GetCountry.Self)|%2v]$HTAB$[Country.GetInvestmentLevelsInCountry(THIS.GetCountry.Self)|v]$HTAB$[THIS.GetCountry.GetName]"
+ da_gui_gdp_ownership_other: "[GetScriptedGui('da_gui_gdp_ownership_other_list').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).End)]"
+ da_gui_gdp_ownership_other_tt: "@money![Multiply_CFixedPoint(THIS.GetCountry.GetInvestmentGdpFractionInCountry(Country.Self), THIS.GetCountry.GetGDP)|Dv]$HTAB$[THIS.GetCountry.GetInvestmentGdpFractionInCountry(Country.Self)|%2v]$HTAB$[THIS.GetCountry.GetInvestmentLevelsInCountry(Country.Self)|v]$HTAB$[THIS.GetCountry.GetName]"
+
+ DA_GDP_OTHER_TT: "\n$TOOLTIP_DELIMITER_LONG$\n[SelectLocalization(IsZero(Country.GetInvestmentLevelsInCountry(GetPlayer)), 'DA_GDP_OTHER_00', 'DA_GDP_OTHER_01')]\n[SelectLocalization(IsZero(GetPlayer.GetInvestmentLevelsInCountry(Country.Self)), 'DA_GDP_OTHER_10', 'DA_GDP_OTHER_11')]"
+ DA_GDP_OTHER_00: "[GetPlayer.GetName] n'a #b PAS#! de [concept_building_level] dans [Country.GetName]"
+ DA_GDP_OTHER_01: "[GetPlayer.GetName] possède [Country.GetInvestmentLevelsInCountry(GetPlayer)|v] [Concept('concept_building_level', '$concept_building_levels$')] dans [Country.GetName], soit [Country.GetInvestmentGdpFractionInCountry(GetPlayer)|%2v] du $GDP_SHORT$ de [Country.GetAdjective]"
+ DA_GDP_OTHER_10: "[Country.GetName] n'a #b PAS#! de [concept_building_level] dans [GetPlayer.GetName]"
+ DA_GDP_OTHER_11: "[Country.GetName] possède [GetPlayer.GetInvestmentLevelsInCountry(Country.Self)|v] [Concept('concept_building_level', '$concept_building_levels$')] dans [GetPlayer.GetName], soit [GetPlayer.GetInvestmentGdpFractionInCountry(Country.Self)|%2v] du $GDP_SHORT$ de [GetPlayer.GetAdjective]"
+
+ ATTITUDE_DETAILS: "[COUNTRY.GetAttitudeTowards(TARGET_COUNTRY.Self).GetReasonsDesc]\n$TOOLTIP_DELIMITER$\n[TARGET_COUNTRY.GetName] possède [COUNTRY.GetInvestmentLevelsInCountry(TARGET_COUNTRY.Self)|v] [Concept('concept_building_level', '$concept_building_levels$')] dans [COUNTRY.GetName], soit [COUNTRY.GetInvestmentGdpFractionInCountry(TARGET_COUNTRY.Self)|%2v] du $GDP_SHORT$ de [COUNTRY.GetAdjective]\n[COUNTRY.GetName] possède [TARGET_COUNTRY.GetInvestmentLevelsInCountry(COUNTRY.Self)|v] [Concept('concept_building_level', '$concept_building_levels$')] dans [TARGET_COUNTRY.GetName], soit [TARGET_COUNTRY.GetInvestmentGdpFractionInCountry(COUNTRY.Self)|%2v] du $GDP_SHORT$ de [TARGET_COUNTRY.GetAdjective]"
+ ai_attitude_human_tooltip: "#header $ai_attitude_human$#!\n$ai_attitude_human_desc$\n$TOOLTIP_DELIMITER$\n$ATTITUDE_DETAILS$"

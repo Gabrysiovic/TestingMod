@@ -1,0 +1,369 @@
+﻿zw_wc_headgear_character = {
+
+	usage = game
+	selection_behavior = weighted_random
+
+	# character: politician, weight = 1000
+
+	zw_westernized_headgear_character_politician = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = zw_gene_headgear
+				template = zw_template_headgear_politician
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				zw_trigger_westernized_headgear_character_politician = yes
+			}
+		}
+	}
+
+	# character: politician_executive, weight = 1000 + 100 = 1100
+
+	zw_westernized_headgear_character_politician_executive = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = european_executive_hats
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				zw_trigger_westernized_headgear_character_politician_executive = yes
+			}
+		}
+	}
+
+	# character: agitator, weight = 1000
+
+	zw_westernized_headgear_character_agitator = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = european_headgear_agitators
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				zw_trigger_westernized_headgear_character_agitator = yes
+			}
+		}
+	}
+
+	# character: general, weight = 2000
+
+	zw_westernized_headgear_character_general = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = german_military_headgear # peaked caps only # european_military_headgear
+				range = { 0 0.5 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2000
+				zw_trigger_westernized_headgear_character_general = yes
+			}
+		}
+	}
+
+	# character: general_late, weight = 3000
+
+	zw_westernized_headgear_character_general_late = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template  = european_late_military_headgear
+				accessory = male_headgear_european_military_cap_01
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 3000
+				zw_trigger_westernized_headgear_character_general_late = yes
+			}
+		}
+	}
+
+	# character: admiral, weight = 2000
+
+	zw_westernized_headgear_character_admiral = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = european_admiral_headgear
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2000
+				zw_trigger_westernized_headgear_character_admiral = yes
+			}
+		}
+	}
+
+	# Special Templates: military
+
+	# character: general, peaked cap black, weight = 2000 + 100 = 2100
+
+	zw_westernized_headgear_character_general_special_1 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = zw_gene_headgear
+				template = zw_template_headgear_military
+				accessory = male_headgear_european_military_03_russian # peaked cap black
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2100
+				zw_trigger_westernized_headgear_character_military_special = {
+					style_num = 1
+				}
+			}
+		}
+	}
+
+	# character: general, kepi cap, weight = 2000 + 100 = 2100
+
+	zw_westernized_headgear_character_general_special_2 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = zw_gene_headgear
+				template = zw_template_headgear_military
+				accessory = male_headgear_european_military_02 # kepi
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2100
+				zw_trigger_westernized_headgear_character_military_special = {
+					style_num = 2
+				}
+			}
+		}
+	}
+
+	# character: general, kepi cap black, weight = 2000 + 100 = 2100
+
+	zw_westernized_headgear_character_general_special_3 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = zw_gene_headgear
+				template = zw_template_headgear_military
+				accessory = male_headgear_european_military_02_black # kepi black
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2100
+				zw_trigger_westernized_headgear_character_military_special = {
+					style_num = 3
+				}
+			}
+		}
+	}
+
+	# character: general, kepi cap blue, weight = 2000 + 100 = 2100
+
+	zw_westernized_headgear_character_general_special_4 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = zw_gene_headgear
+				template = zw_template_headgear_military
+				accessory = male_headgear_european_military_02_blue # kepi blue
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2100
+				zw_trigger_westernized_headgear_character_military_special = {
+					style_num = 4
+				}
+			}
+		}
+	}
+
+	# character: general, kepi cap red, weight = 2000 + 100 = 2100
+
+	zw_westernized_headgear_character_general_special_5 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = zw_gene_headgear
+				template = zw_template_headgear_military
+				accessory = male_headgear_european_military_02_red # kepi red
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2100
+				zw_trigger_westernized_headgear_character_military_special = {
+					style_num = 5
+				}
+			}
+		}
+	}
+
+	# character: general, campaign hat, weight = 2000 + 100 = 2100
+
+	zw_westernized_headgear_character_general_special_6 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = zw_gene_headgear
+				template = zw_template_headgear_military
+				accessory = male_headgear_european_military_06 # USA campaign hat
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2100
+				zw_trigger_westernized_headgear_character_military_special = {
+					style_num = 6
+				}
+			}
+		}
+	}
+
+	# character: general, USA cap dark blue, weight = 2000 + 100 = 2100
+
+	zw_westernized_headgear_character_general_special_7 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = zw_gene_headgear
+				template = zw_template_headgear_military
+				accessory = male_headgear_european_military_01 # USA cap dark blue
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2100
+				zw_trigger_westernized_headgear_character_military_special = {
+					style_num = 7
+				}
+			}
+		}
+	}
+
+	# character: general, USA cap grey, weight = 2000 + 100 = 2100
+
+	zw_westernized_headgear_character_general_special_8 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = zw_gene_headgear
+				template = zw_template_headgear_military
+				accessory = male_headgear_european_military_01_grey # USA cap grey
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2100
+				zw_trigger_westernized_headgear_character_military_special = {
+					style_num = 8
+				}
+			}
+		}
+	}
+
+	# character: general_late, khaki peaked cap, weight = 3000 + 100 = 3100
+
+	zw_westernized_headgear_character_general_late_special_1 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = zw_gene_headgear
+				template  = zw_template_headgear_military_late
+				accessory = male_headgear_european_military_03_late_russian # khaki peaked cap
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 3100
+				zw_trigger_westernized_headgear_character_general_late_special = {
+					style_num = 1
+				}
+			}
+		}
+	}
+
+	# character: general_late, flat peaked cap, weight = 3000 + 100 = 3100
+
+	zw_westernized_headgear_character_general_late_special_2 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = zw_gene_headgear
+				template  = zw_template_headgear_military_late
+				accessory = male_headgear_european_late_military_04 # flat peaked cap
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 3100
+				zw_trigger_westernized_headgear_character_general_late_special = {
+					style_num = 2
+				}
+			}
+		}
+	}
+
+	# character: general_late, khaki campaign hat, weight = 3000 + 100 = 3100
+
+	zw_westernized_headgear_character_general_late_special_3 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = zw_gene_headgear
+				template  = zw_template_headgear_military_late
+				accessory = male_headgear_european_military_late_06 # khaki campaign hat
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 3100
+				zw_trigger_westernized_headgear_character_general_late_special = {
+					style_num = 3
+				}
+			}
+		}
+	}
+}

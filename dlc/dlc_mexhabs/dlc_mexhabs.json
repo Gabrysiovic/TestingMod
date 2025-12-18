@@ -1,0 +1,21 @@
+{
+	"id":
+	{
+		"steam": "",
+		"paradox": "dlc_mexhabs"
+	},
+	"displayName":
+	{
+		"en": "The Emperor and his Golden eagle"
+	},
+	"category":
+	{
+		"en": "DLC"
+	},
+	"description":
+	{
+		"en": "The Emperor and his Golden eagle: Second Mexican Empire Flavor Pack"
+	},
+	"thumbnailPath": "thumbnail.png",
+	"thirdPartyContent": true
+}

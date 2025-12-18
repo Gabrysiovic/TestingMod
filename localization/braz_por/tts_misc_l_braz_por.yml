@@ -1,0 +1,807 @@
+﻿l_braz_por:
+
+ #####
+ # Technology
+ #####
+
+  predreadnought_tech: "Pré-Dreadnought"
+  predreadnought_tech_desc: "Com canhões de grande calibre e armadura de aço, os navios pré-dreadnought são embarcações poderosas."
+  steel_shipbuilding_tech: "Construção Naval em Aço"
+  steel_shipbuilding_tech_desc: "TODO"
+  turbine_powered_ships_tech: "Navios com Turbinas"
+  turbine_powered_ships_tech_desc: "TODO"
+  large_scale_shipbuilding_tech: "Construção Naval em Grande Escala"
+  large_scale_shipbuilding_tech_desc: "TODO"
+  fleet_carrier_tech: "Porta-Aviões de Frota"
+  fleet_carrier_tech_desc: "TODO"
+  armored_carrier_tech: "Porta-Aviões Blindados"
+  armored_carrier_tech_desc: "TODO"
+  fully_rigged_ships: "Navio de Aparelho Completo"
+  fully_rigged_ships_desc: "Navios de aparelho completo são mais velozes e carregam mais armamento."
+
+
+ #####
+ # Goods
+ #####
+
+  tts_capital_ships: "Navios Capitais"
+
+######
+# Buildings
+######
+
+  building_battleship_import_office: "Escritório de Importação de Encouraçados"
+  building_naval_yards: "Estaleiros Navais"
+  building_admiralty: "Almirantado"
+  building_admiralty_build_tooltip: "Concluiu o diário do Almirantado"
+
+ ######
+ # Production Methods
+ #####
+
+ # Mil Shipyards
+  pmg_tts_naval_yards: "$pm_base$"
+  pmg_ownership_capital_building_navy_yards: "$pmg_ownership$"
+  pm_military_shipbuilding_ironclad: "Navios de Casco de Ferro"
+  pm_military_shipbuilding_steel: "Navios de Casco de Aço"
+  pm_military_shipbuilding_turbine: "Navios com Turbinas"
+  pm_military_shipbuilding_arc_welding: "Grandes Navios de Guerra"
+
+  # Naval Base
+  pm_tts_ships_of_the_line: "Navios de Linha"
+  pm_tts_steam_ships_of_the_line: "Navios de Linha a Vapor"
+  pm_tts_ironclads: "Ironclads"
+  pm_tts_predreadnoughts: "Pré-Dreadnoughts"
+  pm_tts_dreadnoughts: "Dreadnoughts"
+  pm_tts_battleships: "Encouraçados"
+  pm_tts_commerce_raider: "Corsários"
+  pm_tts_torpedo_boat: "Barcos Torpedeiros"
+  pm_tts_submarine: "Submarinos"
+  pm_tts_frigates: "Fragatas"
+  pm_tts_destroyers: "Destróiers"
+  pm_tts_carriers: "Porta-Aviões"
+  
+  pmg_carriers: "Uso de Porta-Aviões"
+  pm_tts_no_carriers: "Sem Porta-Aviões"
+  pm_tts_experimental_carriers: "Porta-Aviões Experimentais"
+  pm_tts_armored_carriers: "Porta-Aviões Blindados"
+  pm_tts_strike_carriers: "Porta-Aviões de Ataque"
+
+
+  # Misc
+  pmg_battleship_import: "Importações"
+  pm_battleship_import: "Importações de Encouraçados"
+
+  # Admiralty
+  pmg_admiralty_base: "Base"
+  pm_tts_admiralty_base: "Administração Central da Marinha"
+  pmg_admiralty: "Equipe do Almirantado"
+  pm_tts_traditionalist_admiralty: "Tradicionalista"
+  pm_tts_naval_veterans_admiralty: "Veteranos Navais"
+  pm_tts_technical_expertise_admiralty: "Expertise Técnica"
+
+
+######
+# Modifiers
+######
+ 
+  relaxed_safety_procedures: "Procedimentos de Segurança Relaxados"
+  exploding_ships: "Navios Explodindo"
+  cheating_the_treaty: "Trapaceando o Tratado"
+  funding_great_eastern: "Financiando o Great Eastern"
+  developing_predreadnoughts: "Desenvolvendo Pré-Dreadnoughts"
+  developing_dreadnoughts: "Desenvolvendo Dreadnoughts"
+  developing_battleships: "Desenvolvendo Navios de Guerra"
+  naval_innovations: "Inovações Navais"
+  naval_innovations_predreadnoughts: "Inovações Navais"
+  naval_innovations_dreadnoughts: "Inovações Navais"
+  naval_innovations_battleships: "Inovações Navais"
+  naval_innovations_tooltip: "Este modificador será removido quando navios de guerra mais poderosos forem pesquisados."
+  naval_innovator: "Inovador Naval"
+  developed_mahanian_thought: "Desenvolveu o Pensamento Mahaniano"
+  battleship_building_holiday: "Feriado de Construção de Navios de Guerra"
+  naval_base_treaty_tooltip: "O país não está sob um Feriado de Construção de Navios de Guerra"
+  purchasing_battleships: "Comprando Navios de Guerra"
+  receiving_payment_for_battleships: "Recebendo Pagamento por Navios de Guerra"
+  great_white_fleet_modifier: "A Grande Frota Branca"
+  battleship_explosion_state: "Explosão de Navios de Guerra"
+  battleship_explosion_building: "Explosão de Navios de Guerra"
+  unstable_ship_sunk: "Navio Instável Afundado"
+  high_navy_prof_modifier: "Alta Profissionalização da Marinha"
+  medium_navy_prof_modifier: "Média Profissionalização da Marinha"
+  low_navy_prof_modifier: "Baixa Profissionalização da Marinha"
+  very_low_navy_prof_modifier: "Profissionalização da Marinha Muito Baixa"
+  paying_for_naval_training: "Pagando pelo Treinamento Naval"
+  stopped_ruler_from_diverting_funds: "Impediu o Governante de Desviar Fundos"
+  torpedo_juice: "Suco de Torpedo"
+  laced_torpedo_juice: "Suco de Torpedo Adulterado"
+  faulty_shells: "Cartuchos Defeituosos"
+  relaxed_discipline: "Disciplina Relaxada"
+  enforcing_harsh_discipline: "Impondo Disciplina Rígida"
+  replacing_defective_shells: "Substituindo Cartuchos Defeituosos"
+  didnt_honor_admirals_favor: "Não Honrou o Favor dos Almirantes"
+  navy_discipline_breakdown: "Quebra de Disciplina da Marinha"
+  cracking_down_on_mutineers: "Reprimindo os Amotinados"
+  well_engineered_hulls: "Casco Bem Projetado"
+  paying_for_naval_equipment: "Pagando pelo Equipamento Naval"
+  lacking_specialized_workers: "Falta de Trabalhadores Especializados"
+  paying_extra_for_shipyard_workers: "Pagando Extra por Trabalhadores de Estaleiro"
+  restructuring_navy: "Reestruturando a Marinha"
+  conducting_major_naval_exercises: "Realizando Grandes Exercícios Navais"
+  conducting_naval_exercises: "Realizando Exercícios Navais"
+  paying_for_naval_exercises: "Pagando por Exercícios Navais"
+  paying_for_fleet_review: "Pagando por Revisão da Frota"
+  fleet_review_modifier_rival: "Boa Revisão da Frota"
+  fleet_review_modifier_no_rival: "Boa Revisão da Frota"
+  fleet_review_modifier_bad: "Revisão da Frota Decepcionante"
+  converted_warship_to_carrier_modifier: "Navio de Guerra Convertido para Porta-Aviões"
+  paying_for_ocean_liner: "Pagando por Transatlântico"
+  carrier_innovator: "Inovador de Porta-Aviões"
+  emergency_carrier_budget: "Orçamento de Emergência para Porta-Aviões"
+  setting_up_admiralty: "Configurando a Marinha de Guerra"
+  efficient_turrets: "Torretas Eficientes"
+  turret_innovator: "Inovador de Torretas"
+  navy_professionalization_effort: "Mutirão de Profissionalismo da Marinha"
+  eroding_navy_professionalism: "Profissionalismo da Marinha Erodindo"
+  early_navy_adopter: "Pioneiro Naval"
+  importing_battleships: "Importando Encouraçados"
+
+  # Opinion modifiers
+  meeting_two_power_standard: "Cumprindo o Padrão de Duas Potências"
+  not_meeting_two_power_standard: "Não Cumprindo o Padrão de Duas Potências"
+  rejected_two_power_standard: "Padrão de Duas Potências Rejeitado"
+  abandoned_two_power_standard: "Padrão de Duas Potências Abandonado"
+  denied_battleships: "Negado o Pedido de Encouraçados"
+  navy_concerns_ignored: "Preocupações da Marinha Ignoradas"
+  navy_modernized: "Marinha Modernizada"
+  navy_left_behind: "Marinha Deixada para Trás"
+  let_our_naval_superiority_slip: "Deixando Nossa Superioridade Naval Escapar"
+  ignored_advice_on_shipbuilding: "Conselhos sobre Construção Naval Ignorados"
+  purged_corrupt_officers: "Oficiais Corruptos Depurados"
+  enforcing_discipline: "Impondo Disciplina"
+  accepted_revolters_demands: "Demandas dos Revoltosos Aceitas"
+  prosecuting_ammunition_thieves: "Processando Ladrões de Munição"
+  refused_to_promote_admiral: "Recusa em Promover Almirante"
+  renamed_battleships: "Renomeando Encouraçados"
+  officer_purge: "Depuração de Oficiais"
+  officer_reshuffle: "Reorganização de Oficiais"
+  fired_admiral: "Almirante Demitido"
+  admiralty_concessions_denied: "Concessões ao Almirantado Negadas"
+
+
+
+  ######
+  # Laws
+  ######
+  lawgroup_naval_treaty: "Restrições Navais"
+  law_no_naval_treaty: "Marinha Irrestrita"
+  law_no_naval_treaty_desc: "O país atualmente não está vinculado a nenhuma limitação naval."
+  law_moderate_naval_treaty: "Tratado Naval Moderado"
+  law_moderate_naval_treaty_desc: "O país está sob uma redução moderada de ativos navais, conforme determinado por uma conferência de desarmamento naval."
+  moderate_treaty_effect_tooltip: "As marinhas serão reduzidas para aproximadamente três quartos da força anterior. Elas também serão impedidas de se expandir por cinco anos."
+  law_extensive_naval_treaty: "Tratado Naval Extensivo"
+  law_extensive_naval_treaty_desc: "Existem limitações significativas impostas à marinha do país como resultado de uma conferência de desarmamento naval."
+  extensive_treaty_effect_tooltip: "As marinhas serão reduzidas para aproximadamente metade da força anterior. Elas também serão impedidas de se expandir por cinco anos."
+  law_minimal_navy: "Marinha Mínima"
+  law_minimal_navy_desc: "O país possui uma marinha muito pequena."
+
+  ######
+  # Journal Entries
+  ######
+
+  je_naval_conference: "Naval Conference"
+  is_main_naval_power_tooltip: "We are one of the [concept_main_naval_powers]"
+  je_naval_conference_status: "You can hold a naval disarmament conference."
+  je_naval_conference_reason: "Recent developments in naval technology have led to increasingly high expenses. We might want to try to limit naval expansion, lest we fall into a costly arms race."
+  voting_on_treaty_is_host: "is the Host Country."
+  voting_on_treaty_yes: "is voting #p YES#!."
+  voting_on_treaty_no: "is voting #n NO#!."
+  je_naval_conference_ongoing: "A naval conference is currently in progress. We shall wait for the results."
+  je_naval_conference_complete: "All countries voted in favor of the treaty."
+
+  je_naval_conference_host: "The [GetGlobalVariable('naval_conference_state_region').GetStateRegion.GetCityHubName] Naval Conference"
+  je_naval_conference_host_status: "The Naval Conference is ongoing."
+  je_naval_conference_host_reason: "We are currently discussing the enactment of a [GetGlobalVariable('treaty_law_var').GetLawType.GetName]. For it to pass, all 7 [concept_main_naval_powers] must vote in agreement. As the Host Nation, we can use our intelligence network to tap into their communications and determine #tooltippable;tooltip:[Country.GetTooltipTag],je_naval_conference_intelligence_tooltip how likely they are#! to vote for the treaty on their own. However, if they prove resistant, we might need to persuade them by other means. The current status of the vote is:\n[ROOT.GetVariable('treaty_country_1').GetCountry.GetName] [ROOT.GetVariable('treaty_country_1').GetCountry.GetCustom('voting_on_treaty_loc')]\n[ROOT.GetVariable('treaty_country_2').GetCountry.GetName] [ROOT.GetVariable('treaty_country_2').GetCountry.GetCustom('voting_on_treaty_loc')]\n[ROOT.GetVariable('treaty_country_3').GetCountry.GetName] [ROOT.GetVariable('treaty_country_3').GetCountry.GetCustom('voting_on_treaty_loc')]\n[ROOT.GetVariable('treaty_country_4').GetCountry.GetName] [ROOT.GetVariable('treaty_country_4').GetCountry.GetCustom('voting_on_treaty_loc')]\n[ROOT.GetVariable('treaty_country_5').GetCountry.GetName] [ROOT.GetVariable('treaty_country_5').GetCountry.GetCustom('voting_on_treaty_loc')]\n[ROOT.GetVariable('treaty_country_6').GetCountry.GetName] [ROOT.GetVariable('treaty_country_6').GetCountry.GetCustom('voting_on_treaty_loc')]\n[ROOT.GetVariable('treaty_country_7').GetCountry.GetName] [ROOT.GetVariable('treaty_country_7').GetCountry.GetCustom('voting_on_treaty_loc')]"
+  je_naval_conference_intelligence_tooltip: "According to our intelligence, the chance for each country to vote in favor of the treaty each week is:\n[Country.MakeScope.Var('treaty_country_1').GetCountry.GetCustom('treaty_acceptance_chance')]\n[Country.MakeScope.Var('treaty_country_2').GetCountry.GetCustom('treaty_acceptance_chance')]\n[Country.MakeScope.Var('treaty_country_3').GetCountry.GetCustom('treaty_acceptance_chance')]\n[Country.MakeScope.Var('treaty_country_4').GetCountry.GetCustom('treaty_acceptance_chance')]\n[Country.MakeScope.Var('treaty_country_5').GetCountry.GetCustom('treaty_acceptance_chance')]\n[Country.MakeScope.Var('treaty_country_6').GetCountry.GetCustom('treaty_acceptance_chance')]\n[Country.MakeScope.Var('treaty_country_7').GetCountry.GetCustom('treaty_acceptance_chance')]"
+  treaty_acceptance_host: "[ROOT.GetCountry.GetFlagTextIcon] is the #white Host#!."
+  treaty_acceptance_high: "[ROOT.GetCountry.GetFlagTextIcon] has a #p HIGH#! chance of voting for the treaty."
+  treaty_acceptance_medium: "[ROOT.GetCountry.GetFlagTextIcon] has a #Yellow MEDIUM#! chance of voting for the treaty."
+  treaty_acceptance_low: "[ROOT.GetCountry.GetFlagTextIcon] has a #Gold LOW#! chance of voting for the treaty."
+  treaty_acceptance_very_low: "[ROOT.GetCountry.GetFlagTextIcon] has a #n VERY LOW#! chance of voting for the treaty."
+  treaty_acceptance_already_voting: "[ROOT.GetCountry.GetFlagTextIcon] is #p already voting#! for the treaty."
+  treaty_acceptance_low_intel: "[ROOT.GetCountry.GetFlagTextIcon] encryption ability is too high to predict their actions."
+
+  je_naval_conference_participant: "The [GetGlobalVariable('naval_conference_state_region').GetStateRegion.GetCityHubName] Naval Conference"
+  je_naval_conference_participant_status_waiting: "We haven't agreed to the terms."
+  je_naval_conference_participant_status_voted: "We have agreed to the treaty."
+  je_naval_conference_participant_reason: "We are currently discussing the enactment of a [GetGlobalVariable('treaty_law_var').GetLawType.GetName]. For it to pass, all 7 [concept_main_naval_powers] must vote in agreement."
+
+  je_two_power_standard: "O Padrão de Duas Potências"
+  je_two_power_standard_met: "Atualmente, estamos #BOLD cumprindo #!o Padrão de Duas Potências"
+  je_two_power_standard_not_met: "Atualmente, NÃO estamos cumprindo o Padrão de Duas Potências"
+  je_two_power_standard_reason: "Atualmente, nossa Marinha tem um tamanho de #BOLD [ROOT.GetCountry.GetWarships|0]#!, e as duas maiores [Concept('concept_great_power', '$concept_great_powers$')] têm um tamanho de Marinha combinado de #BOLD [ROOT.ScriptValue('sum_two_powers')|0]#!."
+  je_two_power_standard_fail: "Desistimos do Padrão."
+
+  je_south_american_dreadnoughts: "A Corrida aos Encouraçados Sul-Americanos"
+  je_south_american_dreadnoughts_status: "TODO"
+  je_south_american_dreadnoughts_reason: "TODO"
+
+  je_predreadnought_tech: "Desenvolvendo Pré-Dreadnoughts"
+  je_predreadnought_tech_status_inactive: "Não começamos o desenvolvimento ainda."
+  je_predreadnought_tech_status: "Estamos desenvolvendo novas técnicas de construção naval, que serão usadas na construção de encouraçados Pré-Dreadnought."
+  je_predreadnought_tech_reason: "Nosso nível atual de Inovação Naval é #BOLD #gold [ROOT.GetCountry.MakeScope.Var('naval_innovations').GetValue|0]#!#!. Isso resultará em um aumento na capacidade de combate de #BOLD #gold [ROOT.GetCountry.MakeScope.Var('naval_innovations').GetValue|0]%#!#! uma vez concluída a pesquisa."
+  je_predreadnought_tech_goal: "A pesquisa está concluída"
+
+  je_dreadnought_tech: "Desenvolvendo Dreadnoughts"
+  je_dreadnought_tech_status_inactive: "Não começamos o desenvolvimento ainda."
+  je_dreadnought_tech_status: "Estamos desenvolvendo novas técnicas de construção naval, que serão usadas na construção de encouraçados Dreadnought."
+  je_dreadnought_tech_reason: "Nosso nível atual de Inovação Naval é #BOLD #gold [ROOT.GetCountry.MakeScope.Var('naval_innovations').GetValue|0]#!#!. Isso resultará em um aumento na capacidade de combate de #BOLD #gold [ROOT.GetCountry.MakeScope.Var('naval_innovations').GetValue|0]%#!#! uma vez concluída a pesquisa."
+  je_dreadnought_tech_goal: "A pesquisa está concluída"
+
+  je_battleship_tech: "Desenvolvendo Encouraçados"
+  je_battleship_tech_status_inactive: "Não começamos o desenvolvimento ainda."
+  je_battleship_tech_status: "Estamos desenvolvendo novas técnicas de construção naval, que serão usadas na construção de encouraçados Super-Dreadnought."
+  je_battleship_tech_reason: "Nosso nível atual de Inovação Naval é #BOLD #gold [ROOT.GetCountry.MakeScope.Var('naval_innovations').GetValue|0]#!#!. Isso resultará em um aumento na capacidade de combate de #BOLD #gold [ROOT.GetCountry.MakeScope.Var('naval_innovations').GetValue|0]%#!#! uma vez concluída a pesquisa."
+  je_battleship_tech_goal: "A pesquisa está concluída"
+
+  je_american_modernization: "Modernização da Marinha"
+  je_american_modernization_status: "Estamos no processo de expandir e modernizar nossa Marinha."
+  je_american_modernization_reason: "Nossa Marinha é lamentavelmente pequena para uma nação de nossa estatura. Precisamos expandi-la se quisermos ter um lugar nos assuntos mundiais."
+  je_american_modernization_goal: "Nossa Marinha triplicou de tamanho."
+
+  je_fleet_review: "Revisão da Frota"
+  je_fleet_review_reason: "Uma Revisão da Frota é uma oportunidade para avaliar o estado de nossa Marinha e demonstrar nossas capacidades a observadores externos."
+  je_fleet_review_status_0_deciding_on_budget: "Estamos decidindo sobre um orçamento."
+  je_fleet_review_status_1_inviting_guests: "Estamos convidando convidados."
+  je_fleet_review_status_2_in_progress: "A Revisão da Frota está em andamento."
+
+  je_carrier_tech: "Desenvolvendo Porta-Aviões"
+  je_carrier_tech_reason: "Nossos porta-aviões atuais são principalmente pequenos, experimentais ou cascos convertidos, e nossa tecnologia e doutrina de aeronaves ainda estão em sua infância. Para aproveitar ao máximo as capacidades de nossos porta-aviões, é necessário mais pesquisa e desenvolvimento.\n\nNossa pesquisa progredirá enquanto qualquer Base Naval tiver o método de produção de Porta-Aviões ativo."
+  je_carrier_tech_goal: "A pesquisa está concluída."
+
+  je_build_admiralty: "Almirantado"
+  je_build_admiralty_reason: "Estamos estabelecendo um Almirantado mais recente e centralizado para administrar nossa Marinha."
+  je_build_admiralty_goal: "A configuração está completa."
+
+
+  #######
+  # Decisions
+  #######
+
+  cheat_treaty_decision: "Trapacear o tratado"
+  cheat_treaty_decision_desc: "Ao manipular os registros, podemos fingir estar seguindo o tratado enquanto secretamente permanecemos acima dos limites estabelecidos."
+  pre_dreadnoughts_decision: "Desenvolver Pré-Dreadnoughts"
+  pre_dreadnoughts_decision_desc: "Inicie o processo de desenvolvimento da tecnologia para construir Pré-Dreadnoughts."
+  dreadnoughts_decision: "Desenvolver Dreadnoughts"
+  dreadnoughts_decision_desc: "Inicie o processo de desenvolvimento da tecnologia para construir Dreadnoughts."
+  battleships_decision: "Desenvolver Encouraçados"
+  battleships_decision_desc: "Inicie o processo de desenvolvimento da tecnologia para construir Encouraçados Super-Dreadnought."
+  buy_predreadnoughts_decision: "Comprar Pré-Dreadnoughts"
+  buy_predreadnoughts_decision_desc: "Compraremos alguns novos encouraçados para nossa marinha."
+  buy_dreadnoughts_decision: "Comprar Dreadnoughts"
+  buy_dreadnoughts_decision_desc: "Dreadnoughts são o futuro da guerra naval, devemos tentar comprá-los."
+  great_white_fleet_decision: "A Grande Frota Branca"
+  great_white_fleet_decision_desc: "Vamos exibir nossa frota para o mundo."
+  gwf_decision_peace_tooltip: "Nenhum país no itinerário está em guerra."
+  increase_professionalism_decision: "Aumentar Profissionalismo da Marinha"
+  increase_professionalism_decision_desc: "Tome medidas para aumentar nosso Profissionalismo da Marinha."
+  increase_professionalism_decision_possible: "Não aumentamos nosso Profissionalismo da Marinha em menos de um ano."
+  increase_professionalism_decision_tooltip: "Receberemos uma oportunidade de aumentar nosso Profissionalismo da Marinha."
+  maintain_current_navyprof_decision: "Manter o Profissionalismo Atual da Marinha"
+  maintain_current_navyprof_decision_desc: "Ao investir continuamente em nossa marinha, podemos evitar que nosso Profissionalismo da Marinha decaia. No entanto, não seremos capazes de aumentá-lo."
+  stop_maintaining_navyprof_decision: "Parar de Manter o Profissionalismo da Marinha"
+  stop_maintaining_navyprof_decision_desc: "Vamos parar de manter nosso nível atual de Profissionalismo da Marinha. Isso permitirá que ele decaia naturalmente, mas poderemos aumentá-lo por meio de outras decisões."
+  fleet_review_decision: "Realizar Revisão da Frota"
+  fleet_review_decision_desc: "Nossa frota se apresentará diante de nosso governante e dignitários estrangeiros."
+  fleet_review_decision_tt: "Não realizamos uma revisão da frota nos últimos 20 anos."
+  carriers_decision: "Desenvolver Porta-Aviões de Frota"
+  carriers_decision_desc: "Investir na pesquisa de melhores porta-aviões e aeronaves para usá-los."
+  build_admiralty_decision: "Construir Almirantado"
+  build_admiralty_decision_desc: "Iniciaremos o processo de configuração de um local centralizado para administrar nossa marinha."
+
+ 
+
+  ######
+  # Names
+  ######
+
+  Isambard_Kingdom: "Isambard Kingdom"
+  Brunel: "Brunel"
+  alfred_thayer: "Alfred Thayer"
+  mahan: "Mahan"
+
+  ######
+  # Notifications
+  ######
+
+  notification_dreadnought_notification_name: "Dreadnought Lançado"
+  notification_dreadnought_notification_desc: "[SCOPE.sCountry('dreadnought_country').GetName] lançou o primeiro encouraçado Dreadnought, mudando a face da guerra naval."
+  notification_dreadnought_notification_tooltip: "#header $notification_dreadnought_notification_name$#!\n$TOOLTIP_DELIMITER$\n$notification_dreadnought_notification_desc$"
+
+  notification_battleship_explosion_notification_name: "[SCOPE.sCountry('exploding_country').GetAdjective] Encouraçado Explode!"
+  notification_battleship_explosion_notification_desc: "Um encouraçado pertencente a [SCOPE.sCountry('exploding_country').GetCustom('use_the')][SCOPE.sCountry('exploding_country').GetName] explodiu. Eles estão culpando [SCOPE.sCountry('scapegoat_country').GetCustom('use_the')][SCOPE.sCountry('scapegoat_country').GetName] pelo incidente."
+  notification_battleship_explosion_notification_tooltip: "#header $notification_battleship_explosion_notification_name$#!\n$TOOLTIP_DELIMITER$\n$notification_battleship_explosion_notification_desc$"
+
+
+  ######
+  # Customizable Localization
+  ######
+
+  # Navy Names
+
+  generic_navy_name: "[ROOT.GetCountry.GetAdjectiveNoFormatting] Marinha"
+  generic_imperial_navy: "Marinha Imperial [ROOT.GetCountry.GetAdjectiveNoFormatting]"
+  generic_royal_navy: "Marinha Real [ROOT.GetCountry.GetAdjectiveNoFormatting]"
+  royal_navy: "Marinha Real"
+  united_states_navy: "Marinha dos Estados Unidos"
+  confederate_states_navy: "Marinha dos Estados Confederados"
+  japanese_navy: "Marinha Japonesa"
+  soviet_navy: "Marinha Soviética"
+  imperial_chinese_navy: "Marinha Imperial Chinesa"
+  republic_of_china_navy: "Marinha da República da China"
+  peoples_liberation_army_navy: "Marinha do Exército de Libertação do Povo"
+
+  # Propellants
+  cordite: "Cordite"
+  poudre_b: "Pólvora B"
+  smokeless_powder: "pólvora sem fumaça"
+
+
+  # South American Battleship
+  riachuelo: "Riachuelo"
+  libertad: "Libertad"
+  capitan_prat: "Capitán Prat"
+  almirante_grau: "Almirante Grau"
+  generic_new_battleship: "novo encouraçado"
+
+  # The or not the, that's the question
+  the: "o "
+  no_the: ""
+
+  # Purchased Dreadnought
+  bb_minas_geraes: "encouraçado Minas Geraes"
+  bb_rivadavia: "encouraçado Rivadavia"
+  bb_almirante_latorre: "encouraçado Almirante Latorre"
+  bb_osman_i: "encouraçado Sultan Osman I"
+  generic_new_dreadnought: "novo encouraçado"
+
+
+  # Reason for taking funds out of the navy
+  fund_alcohol_addiction: "financiar o alcoolismo deles"
+  fund_opium_addiction: "financiar o vício deles em ópio"
+  fund_questionable_parties: "realizar festas de natureza duvidosa"
+  build_new_summer_palace: "construir um novo palácio de verão"
+  fund_cocaine_addiction: "financiar o vício deles em cocaína"
+  build_fairytale_castle: "construir um castelo de contos de fadas"
+  fund_banquets: "realizar banquetes caros"
+
+
+  # The country's first dreadnought
+  generic_first_dreadnought: "primeiro encouraçado do tipo dreadnought em nosso país"
+  custom_dreadnought: "#yellow [ROOT.GetCountry.GetCustom('prefixo_da_esquadra')] Dreadnought#!"
+  custom_nassau: "#yellow [ROOT.GetCountry.GetCustom('prefixo_da_esquadra')] Nassau#!"
+  custom_westfalen: "#yellow [ROOT.GetCountry.GetCustom('prefixo_da_esquadra')] Westfalen#!"
+  custom_kawachi: "#yellow [ROOT.GetCountry.GetCustom('prefixo_da_esquadra')] Kawachi#!"
+  custom_dante_alighieri: "#yellow [ROOT.GetCountry.GetCustom('prefixo_da_esquadra')] Dante Alighieri#!"
+  custom_tegetthoff: "#yellow [ROOT.GetCountry.GetCustom('prefixo_da_esquadra')] Tegetthoff#!"
+  custom_courbet: "#yellow [ROOT.GetCountry.GetCustom('prefixo_da_esquadra')] Courbet#!"
+  custom_gangut: "#yellow [ROOT.GetCountry.GetCustom('prefixo_da_esquadra')] Gangut#!"
+  custom_delaware: "#yellow [ROOT.GetCountry.GetCustom('prefixo_da_esquadra')] Delaware#!"
+
+
+  # The gun caliber of their first super-dreadnought
+
+  13p5_inch: "13,5 polegadas"
+  14_inch: "14 polegadas"
+  340_mm: "340 mm"
+  356_mm: "356 mm"
+  381_mm: "381 mm"
+  35_cm: "35 cm"
+  36_cm: "36 cm"
+  38_cm: "38 cm"
+
+
+  # Flagship name for fleet review
+  custom_hms_victoria: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Victoria"
+  custom_duke_of_wellington: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Duke of Wellington"
+  custom_warrior: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Warrior"
+  custom_devastation: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Devastation"
+  custom_royal_sovereign: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Royal Sovereign"
+  custom_hms_colossus: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Colossus"
+  custom_hms_neptune: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Neptune"
+  custom_hms_hood: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Hood"
+  custom_warspite: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Warspite"
+  custom_orion: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Orion"
+  custom_uss_constitution: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Constitution"
+  custom_uss_washington: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Washington"
+  custom_monitor: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Monitor"
+  custom_indiana: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Indiana"
+  custom_connecticut: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Connecticut"
+  custom_wyoming: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Wyoming"
+  custom_pennsylvania: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Pennsylvania"
+  custom_colorado: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Colorado"
+  custom_valmy: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Valmy"
+  custom_ship_napoleon: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Napoléon"
+  custom_gloire: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Gloire"
+  custom_charles_martel: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Charles Martel"
+  custom_review_courbet: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Courbet"
+  custom_review_paris: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Paris"
+  custom_bretagne: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Bretagne"
+  custom_lorraine: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Lorraine"
+  custom_lyon: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Lyon"
+  custom_deutschland: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Deutschland"
+  custom_brandenburg: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Brandenburg"
+  custom_fdg: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Friedrich der Große"
+  custom_bayern: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Bayern"
+  custom_imperatritsa_maria: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Imperatritsa Maria"
+  custom_imperator_nikolai_i: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Imperator Nikolai I"
+  custom_general-admiral: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] General-Admiral"
+  custom_potemkin: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Potemkin"
+  custom_review_gangut: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Gangut"
+  custom_oktyabrskaya_revolyutsiya: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Oktyabrskaya Revolyutsiya"
+  custom_sovetsky_soyuz: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Sovetsky Soyuz"
+  custom_katsuragi: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Katsuragi"
+  custom_kongo: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Kongō"
+  custom_azuma: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Azuma"
+  custom_fuji: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Fuji"
+  custom_mikasa: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Mikasa"
+  custom_review_kawachi: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Kawachi"
+  custom_nagato: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Nagato"
+  custom_fuso: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Fusō"
+  custom_vesuvio: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Vesuvio"
+  custom_san_michele: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] San Michele"
+  custom_carlo_alberto: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Carlo Alberto"
+  custom_monarca: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Monarca"
+  custom_re_galantuomo: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Re Galantuomo"
+  custom_affondatore: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Affondatore"
+  custom_ammiraglio_di_saint_bon: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Ammiraglio di Saint Bon"
+  custom_review_leonardo_da_vinci: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Leonardo da Vinci"
+  custom_littorio: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Littorio"
+  custom_review_italia: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Italia"
+
+  # Ship types for fleet review event
+  custom_ship_of_the_line_review: "um Navio de Linha, com suas grandes velas infladas pelo vento."
+  custom_steam_ship_of_the_line_review: "um Navio de Linha a Vapor. Um navio curioso, com chaminés se projetando do convés, entre as velas e os mastros."
+  custom_ironclad_review: "um Ironclad, com sua chaminé deixando um rastro de fumaça."
+  custom_steel_battleship_review: "um Encouraçado de Aço, com suas torres imponentes parecendo prontas para disparar."
+  custom_dreadnought_battleship_review: "um Encouraçado Dreadnought, exibindo seu armamento com canhões enormes."
+  custom_super_dreadnought_battleship_review: "um Encouraçado Super-Dreadnought, um verdadeiro gigante de aço."
+
+  # Battleships and battlecruisers converted to carrier
+  custom_conversion_lexington: "cruzador de batalha #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Lexington#!"
+  custom_conversion_saratoga: "cruzador de batalha #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Saratoga#!"
+  custom_conversion_courageous: "cruzador de batalha #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Courageous#!"
+  custom_conversion_glorious: "cruzador de batalha #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Glorious#!"
+  custom_conversion_furious: "cruzador de batalha #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Furious#!"
+  custom_conversion_eagle: "encouraçado #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Eagle#!"
+  custom_conversion_akagi: "cruzador de batalha #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Akagi#!"
+  custom_conversion_kaga: "encouraçado #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Kaga#!"
+  custom_conversion_amagi: "cruzador de batalha #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Amagi#!"
+  custom_conversion_bearn: "encouraçado #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Béarn#!"
+  custom_conversion_generic_battleship: "encouraçado recém-desenvolvido"
+
+  # Ocean liners converted into carrier
+  custom_conte_rosso_to_argus: "o transatlântico Conte Rosso deverá ser convertido ao porta-aviões #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Aquila#!"
+  custom_izumo_maru_to_hiyo: "o transatlântico Izumo Maru deverá ser convertido ao porta-aviões #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Hiyō#!"
+  custom_kashiwara_maru_to_junyo: "o transatlântico Kashiwara Maru deverá ser convertido ao porta-aviões #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Jun'yō#!"
+  custom_ss_roma_to_aquila: "o transatlântico SS Roma deverá ser convertido ao porta-aviões #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Aquila#!"
+  custom_ms_augustus_to_sparviero: "o transatlântico MS Augustus deverá ser convertido ao porta-aviões #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Sparviero#!"
+  custom_ss_gneisenau_to_jade: "o transatlântico SS Gneisenau deverá ser convertido ao porta-aviões #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Jade#!"
+  custom_ss_potsdam_to_elbe: "o transatlântico SS Potsdam deverá ser convertido ao porta-aviões #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Elbe#!"
+  custom_generic_converted_liner: "um transatlântico deverá ser convertido a porta-aviões"
+
+  # General-purpose carrier (including a space in front of the name)
+  custom_hms_eagle: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Eagle"
+  custom_courageous: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Courageous"
+  custom_glorious: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Glorious"
+  custom_furious: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Furious"
+  custom_hms_hermes: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Hermes"
+  custom_ark_royal: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Ark Royal"
+  custom_illustrious: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Illustrious"
+  custom_formidable: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Formidable"
+  custom_victorious: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Victorious"
+  custom_lexington: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Lexington"
+  custom_saratoga: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Saratoga"
+  custom_ranger: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Ranger"
+  custom_yorktown: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Yorktown"
+  custom_enterprise: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Enterprise"
+  custom_hornet: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Hornet"
+  custom_akagi: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Akagi"
+  custom_kaga: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Kaga"
+  custom_amagi: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Amagi"
+  custom_hiryu: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Hiryū"
+  custom_soryu: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Sōryū"
+  custom_shokaku: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Shōkaku"
+  custom_zuikaku: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Zuikaku"
+  custom_taiho: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Taihō"
+  custom_aquila: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Áquila"
+  custom_sparviero: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Sparviero"
+  custom_bearn: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Béarn"
+  custom_joffre: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Joffre"
+  custom_painleve: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Painlevé"
+  custom_elbe: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Elbe"
+  custom_jade: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Jade"
+  custom_graf_zeppelin: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Graf Zeppelin"
+  custom_peter_strasser: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Peter Strasser"
+  custom_carrier_fallback: ""
+
+
+  # First Carrier-borne Monoplane Fighter
+  custom_f2a_buffalo: "Brewster #WHITE F2A Buffalo#!"
+  custom_a5m: "Mitsubishi #WHITE A5M#!"
+  custom_re2001_falco_ii: "Reggiane #WHITE Re.2001 Falco II#!"
+  custom_g50_freccia: "Fiat #WHITE G.50 Freccia#!"
+  custom_sea_hurricane: "Hawker #WHITE Sea Hurricane#!"
+  custom_d373: "Dewoitine #WHITE D.371#!"
+  custom_fighter: "caça"
+
+  # Names of the Political Head of the Navy
+
+  custom_secretary_of_the_navy: "Secretário da Marinha"
+  custom_first_lord_of_the_admiralty: "Primeiro Lorde do Almirantado"
+  custom_minister_of_the_navy: "Ministro da Marinha"
+
+
+  ######
+  # Custom triggers
+  ######
+
+  predreadnought_trigger_tt: "Pelo menos 5 níveis de [GetBuildingType('building_military_shipyards').GetName] com produção de couraçados em ferro ativa"
+  dreadnought_trigger_tt: "Pelo menos 10 níveis de [GetBuildingType('building_military_shipyards').GetName] com construção de navios de aço ativa"
+  battleship_trigger_tt: "Pelo menos 15 níveis de [GetBuildingType('building_military_shipyards').GetName] com construção de navios a turbina ativa"
+  high_navyprof_option_tt: "Esta opção está disponível devido ao nosso #p ALTO#! @navyprof![concept_navy_professionalism]"
+
+
+  ######
+  # AI Strategies
+  ######
+
+  ai_strategy_maintain_two_power_standard: "Manter o Padrão de Duas Potências"
+  ai_strategy_maintain_two_power_standard_desc: "[COUNTRY.GetName] deseja manter a supremacia naval."
+
+
+
+  ######
+  # Modifier Types
+  ######
+  building_group_bg_navy_mortality_mult: "Mortalidade dos Empregados de Base Naval"
+  building_group_bg_navy_mortality_mult_desc: "Uma mudança na mortalidade de empregados em Bases Navais"
+  building_group_bg_navy_soldiers_mortality_mult: "Mortalidade dos Militares de Base Naval"
+  building_group_bg_navy_soldiers_mortality_mult_desc: "Uma mudança na mortalidade de militares em bases navais"
+  building_group_bg_navy_soldiers_standard_of_living_add: "Padrão de Vida dos Militares de Base Naval"
+  building_group_bg_navy_soldiers_standard_of_living_add_desc: "Uma mudança no padrão de vida de militares empregados em bases navais"
+
+  unit_naval_armor_add: "[concept_naval_armor]"
+  unit_naval_armor_add_desc: "Uma mudança da blindagem da unidada"
+  unit_naval_pen_add: "[concept_naval_pen]"
+  unit_naval_pen_add_desc: "Uma mudança da penetração da unidade"
+
+
+  # Goods
+  building_input_manowars_add: "Insumo de @manowars! Naus de Guerra"
+  building_input_manowars_add_desc: "A quantidade de @manowars! Naus de Guerra utilizadas por construções"
+  building_input_ironclads_add: "Insumo de @ironclads! Navios de Guerra"
+  building_input_ironclads_add_desc: "A quantidade de @ironclads! Navios de Guerra utilizados por construções"
+  building_input_tts_capital_ships_add: "Insumo de @tts_capital_ships! Navios Capitais"
+  building_input_tts_capital_ships_add_desc: "A quantidade de @tts_capital_ships! Navios Capitais utilizados por construções"
+
+  building_output_manowars_add: "Produção de @manowars! Naus de Guerra"
+  building_output_manowars_add_desc: "A quantidade de @manowars! Naus de Guerra produzidas por construções"
+  building_output_ironclads_add: "Produção de @ironclads! Navios de Guerra"
+  building_output_ironclads_add_desc: "A quantidade de @ironclads! Navios de Guerra produzidos por construções"
+  building_output_tts_capital_ships_add: "Produção de @tts_capital_ships! Navios Capitais"
+  building_output_tts_capital_ships_add_desc: "A quantidade de @tts_capital_ships! Navios Capitais produzidos por construções"
+
+  # Sell Orders modifiers
+  state_sell_orders_tts_capital_ships_add: "Ordens de Venda de [GetGoods('tts_capital_ships').GetTextIcon][Nbsp][GetGoods('tts_capital_ships').GetNameNoFormatting]"
+  state_sell_orders_tts_capital_ships_add_desc: "Um aumento ou diminuição das [concept_sell_orders] de [GetGoods('tts_capital_ships').GetName] em um [concept_state]"
+
+  state_sell_orders_manowars_add: "Ordens de Venda de [GetGoods('manowars').GetTextIcon][Nbsp][GetGoods('manowars').GetNameNoFormatting]"
+  state_sell_orders_manowars_add_desc: "Um aumento ou diminuição das [concept_sell_orders] de [GetGoods('manowars').GetName] em um [concept_state]"
+
+  state_sell_orders_ironclads_add: "Ordens de Venda de [GetGoods('ironclads').GetTextIcon][Nbsp][GetGoods('ironclads').GetNameNoFormatting]"
+  state_sell_orders_ironclads_add_desc: "Um aumento ou diminuição das [concept_sell_orders] de [GetGoods('ironclads').GetName] em um [concept_state]"
+
+  state_sell_orders_oil_add: "Ordens de Venda de [GetGoods('oil').GetTextIcon][Nbsp][GetGoods('oil').GetNameNoFormatting]"
+  state_sell_orders_oil_add_desc: "Um aumento ou diminuição das [concept_sell_orders] de [GetGoods('oil').GetName] em um [concept_state]"
+
+  state_sell_orders_coal_add: "Ordens de Venda de [GetGoods('coal').GetTextIcon][Nbsp][GetGoods('coal').GetNameNoFormatting]"
+  state_sell_orders_coal_add_desc: "Um aumento ou diminuição das [concept_sell_orders] de [GetGoods('coal').GetName] em um [concept_state]"
+
+  state_sell_orders_aeroplanes_add: "Ordens de Venda de [GetGoods('aeroplanes').GetTextIcon][Nbsp][GetGoods('aeroplanes').GetNameNoFormatting]"
+  state_sell_orders_aeroplanes_add_desc: "Um aumento ou diminuição das [concept_sell_orders] de [GetGoods('aeroplanes').GetName] em um [concept_state]"
+
+  # country
+  country_navy_professionalism_admiralty_add: "Profissionalismo da Marinha pelo Almirantado"
+  country_navy_professionalism_admiralty_add_desc: "Um bônus à posição natural do [concept_navy_professionalism] pelo Almirantado"
+  country_navy_professionalism_add: "Posição Natural do Profissionalismo da Marinha"
+  country_navy_professionalism_add_desc: "Um bônus à posição natural do [concept_navy_professionalism]"
+  country_navy_professionalism_laws_add: "Profissionalismo da Marinha pelas Leis"
+  country_navy_professionalism_laws_add_desc: "Um bônus à posição natural do [concept_navy_professionalism] pelas Leis"
+
+  # Unit combat modifiers
+  unit_combat_unit_type_man_o_war_offense_mult: "$combat_unit_type_man_o_war$ $unit_offense_mult$"
+  unit_combat_unit_type_man_o_war_offense_mult_desc: "$combat_unit_type_man_o_war$ $unit_offense_mult$"
+  unit_combat_unit_type_man_o_war_defense_mult: "$combat_unit_type_man_o_war$ $unit_defense_mult$"
+  unit_combat_unit_type_man_o_war_defense_mult_desc: "$combat_unit_type_man_o_war$ $unit_defense_mult$"
+  unit_combat_unit_type_steam_ship_of_the_line_offense_mult: "$combat_unit_type_steam_ship_of_the_line$ $unit_offense_mult$"
+  unit_combat_unit_type_steam_ship_of_the_line_offense_mult_desc: "$combat_unit_type_steam_ship_of_the_line$ $unit_offense_mult$"
+  unit_combat_unit_type_steam_ship_of_the_line_defense_mult: "$combat_unit_type_steam_ship_of_the_line$ $unit_defense_mult$"
+  unit_combat_unit_type_steam_ship_of_the_line_defense_mult_desc: "$combat_unit_type_steam_ship_of_the_line$ $unit_defense_mult$"
+  unit_combat_unit_type_ironclad_offense_mult: "$combat_unit_type_ironclad$ $unit_offense_mult$"
+  unit_combat_unit_type_ironclad_offense_mult_desc: "$combat_unit_type_ironclad$ $unit_offense_mult$"
+  unit_combat_unit_type_ironclad_defense_mult: "$combat_unit_type_ironclad$ $unit_defense_mult$"
+  unit_combat_unit_type_ironclad_defense_mult_desc: "$combat_unit_type_ironclad$ $unit_defense_mult$"
+  unit_combat_unit_type_predreadnought_offense_mult: "$combat_unit_type_predreadnought$ $unit_offense_mult$"
+  unit_combat_unit_type_predreadnought_offense_mult_desc: "$combat_unit_type_predreadnought$ $unit_offense_mult$"
+  unit_combat_unit_type_predreadnought_defense_mult: "$combat_unit_type_predreadnought$ $unit_defense_mult$"
+  unit_combat_unit_type_predreadnought_defense_mult_desc: "$combat_unit_type_predreadnought$ $unit_defense_mult$"
+  unit_combat_unit_type_dreadnought_offense_mult: "$combat_unit_type_dreadnought$ $unit_offense_mult$"
+  unit_combat_unit_type_dreadnought_offense_mult_desc: "$combat_unit_type_dreadnought$ $unit_offense_mult$"
+  unit_combat_unit_type_dreadnought_defense_mult: "$combat_unit_type_dreadnought$ $unit_defense_mult$"
+  unit_combat_unit_type_dreadnought_defense_mult_desc: "$combat_unit_type_dreadnought$ $unit_defense_mult$"
+  unit_combat_unit_type_battleship_offense_mult: "$combat_unit_type_battleship$ $unit_offense_mult$"
+  unit_combat_unit_type_battleship_offense_mult_desc: "$combat_unit_type_battleship$ $unit_offense_mult$"
+  unit_combat_unit_type_battleship_defense_mult: "$combat_unit_type_battleship$ $unit_defense_mult$"
+  unit_combat_unit_type_battleship_defense_mult_desc: "$combat_unit_type_battleship$ $unit_defense_mult$"
+  unit_combat_unit_type_frigate_offense_mult: "$combat_unit_type_frigate$ $unit_offense_mult$"
+  unit_combat_unit_type_frigate_offense_mult_desc: "$combat_unit_type_frigate$ $unit_offense_mult$"
+  unit_combat_unit_type_frigate_defense_mult: "$combat_unit_type_frigate$ $unit_defense_mult$"
+  unit_combat_unit_type_frigate_defense_mult_desc: "$combat_unit_type_frigate$ $unit_defense_mult$"
+  unit_combat_unit_type_screw_frigate_offense_mult: "$combat_unit_type_screw_frigate$ $unit_offense_mult$"
+  unit_combat_unit_type_screw_frigate_offense_mult_desc: "$combat_unit_type_screw_frigate$ $unit_offense_mult$"
+  unit_combat_unit_type_screw_frigate_defense_mult: "$combat_unit_type_screw_frigate$ $unit_defense_mult$"
+  unit_combat_unit_type_screw_frigate_defense_mult_desc: "$combat_unit_type_screw_frigate$ $unit_defense_mult$"
+  unit_combat_unit_type_destroyer_offense_mult: "$combat_unit_type_destroyer$ $unit_offense_mult$"
+  unit_combat_unit_type_destroyer_offense_mult_desc: "$combat_unit_type_destroyer$ $unit_offense_mult$"
+  unit_combat_unit_type_destroyer_defense_mult: "$combat_unit_type_destroyer$ $unit_defense_mult$"
+  unit_combat_unit_type_destroyer_defense_mult_desc: "$combat_unit_type_destroyer$ $unit_defense_mult$"
+  unit_combat_unit_type_scout_cruiser_offense_mult: "$combat_unit_type_scout_cruiser$ $unit_offense_mult$"
+  unit_combat_unit_type_scout_cruiser_offense_mult_desc: "$combat_unit_type_scout_cruiser$ $unit_offense_mult$"
+  unit_combat_unit_type_scout_cruiser_defense_mult: "$combat_unit_type_scout_cruiser$ $unit_defense_mult$"
+  unit_combat_unit_type_scout_cruiser_defense_mult_desc: "$combat_unit_type_scout_cruiser$ $unit_defense_mult$"
+  unit_combat_unit_type_torpedo_boat_offense_mult: "$combat_unit_type_torpedo_boat$ $unit_offense_mult$"
+  unit_combat_unit_type_torpedo_boat_offense_mult_desc: "$combat_unit_type_torpedo_boat$ $unit_offense_mult$"
+  unit_combat_unit_type_torpedo_boat_defense_mult: "$combat_unit_type_torpedo_boat$ $unit_defense_mult$"
+  unit_combat_unit_type_torpedo_boat_defense_mult_desc: "$combat_unit_type_torpedo_boat$ $unit_defense_mult$"
+  unit_combat_unit_type_submarine_defense_mult: "$combat_unit_type_submarine$ $unit_defense_mult$"
+  unit_combat_unit_type_submarine_defense_mult_desc: "$combat_unit_type_submarine$ $unit_defense_mult$"
+  unit_combat_unit_type_experimental_carrier_offense_mult: "$combat_unit_type_experimental_carrier$ $unit_offense_mult$"
+  unit_combat_unit_type_experimental_carrier_offense_mult_desc: "$combat_unit_type_experimental_carrier$ $unit_offense_mult$"
+  unit_combat_unit_type_experimental_carrier_defense_mult: "$combat_unit_type_experimental_carrier$ $unit_defense_mult$"
+  unit_combat_unit_type_experimental_carrier_defense_mult_desc: "$combat_unit_type_experimental_carrier$ $unit_defense_mult$"
+  unit_combat_unit_type_fleet_carrier_offense_mult: "$combat_unit_type_fleet_carrier$ $unit_offense_mult$"
+  unit_combat_unit_type_fleet_carrier_offense_mult_desc: "$combat_unit_type_fleet_carrier$ $unit_offense_mult$"
+  unit_combat_unit_type_fleet_carrier_defense_mult: "$combat_unit_type_fleet_carrier$ $unit_defense_mult$"
+  unit_combat_unit_type_fleet_carrier_defense_mult_desc: "$combat_unit_type_fleet_carrier$ $unit_defense_mult$"
+  unit_combat_unit_type_armored_carrier_offense_mult: "$combat_unit_type_armored_carrier$ $unit_offense_mult$"
+  unit_combat_unit_type_armored_carrier_offense_mult_desc: "$combat_unit_type_armored_carrier$ $unit_offense_mult$"
+  unit_combat_unit_type_armored_carrier_defense_mult: "$combat_unit_type_armored_carrier$ $unit_defense_mult$"
+  unit_combat_unit_type_armored_carrier_defense_mult_desc: "$combat_unit_type_armored_carrier$ $unit_defense_mult$"
+
+  country_blocks_building_naval_bases_bool: "Bloqueia Construção de Bases Navais"
+  country_blocks_building_naval_bases_bool_desc: "É proibida a construção de bases navais"
+
+  unit_is_equipped_with_torpedoes_bool: "Unidade Está Equipada com Torpedos"
+  unit_is_equipped_with_torpedoes_bool_desc: "Esta unidade está equipada com torpedos. Se o lado inimigo em uma batalha for composto por menos de 50% de navios de escolta, esta unidade pode conduzir um devastador [GetBattleCondition('battle_condition_torpedo_run').GetName]."
+  unit_is_wind_dependent_bool: "Unidade Depende do Vento"
+  unit_is_wind_dependent_bool_desc: "Esta unidade possui navios propelidos pelo vento. Se mais da metade dos navios em uma batalha são movidos a vela, eles podem receber a condição de batalha [GetBattleCondition('battle_condition_unfavorable_wind').GetName] ou [GetBattleCondition('battle_condition_no_wind').GetName] battle conditions."
+  unit_provides_air_support_bool: "Unidade Fornece Suporte Aéreo"
+  unit_provides_air_support_bool_desc: "Esta unidade está equipada com aviões. Se o inimigo não tiver seu suporte aéreo, esta frota pode receber a condição de batalha [GetBattleCondition('battle_condition_scouting_advantage').GetName]."
+
+
+  #####
+  # Battle Conditions
+  #####
+
+  battle_condition_cant_penetrate_ship: "Falta de Penetração"
+  battle_condition_cant_penetrate_ship_desc: "Os canhões desta frota estão carentes de penetração para danificar a blindagem inimiga."
+  battle_condition_scouting_advantage: "Vantagem de Reconhecimento"
+  battle_condition_scouting_advantage_desc: "Os porta-aviões desta frota permitiram superar o inimigo com um melhor reconhecimento."
+  battle_condition_deck_bombed: "Convés Bombardeado"
+  battle_condition_deck_bombed_desc: "Nossos porta-aviões foram encontrados e estão sendo bombardeados pelos porta-aviões inimigos."
+  battle_condition_deck_shelled: "Convés Bombardeado"
+  battle_condition_deck_shelled_desc: "Nossos porta-aviões foram encontrados pelos encouraçados inimigos e estão sendo bombardeados."
+  battle_condition_exploding_ships: "Navios Explodindo"
+  battle_condition_exploding_ships_desc: "Nossos navios estão sofrendo explosões em seus paióis."
+  battle_condition_torpedo_run: "Ataque de Torpedo"
+  battle_condition_torpedo_run_desc: "Os navios desta frota equipados com torpedos estão conduzindo um ataque de torpedo devastador nos navios capitais mal-defendidos do inimigo."
+  battle_condition_unfavorable_wind: "Vento Desfavorável"
+  battle_condition_unfavorable_wind_desc: "O vento está soprando de uma maneira que torna difícil para esta frota manobrar."
+  battle_condition_no_wind: "Sem Vento"
+  battle_condition_no_wind_desc: "Não há vento soprando, deixando esta frota a mercê de navios inimigos movidos a vapor."
+
+
+  ######
+  # Game Rules
+  ######
+  
+  rule_ahistorical_ship_prefixes: "Prefixos de Navios A-históricos"
+  setting_ahistorical_prefixes_allowed: "Prefixos A-históricos Permitidos"
+  setting_ahistorical_prefixes_allowed_desc: "Prefixos de navios fictícios serão adicionados para algumas marinhas que não os tinham historicamente."
+  setting_no_ahistorical_prefixes: "Sem Prefixos A-históricos"
+  setting_no_ahistorical_prefixes_desc: "Os navios usarão apenas seus prefixos históricos."
+
+
+  ######
+  # Flotilla Prefixes
+  ######
+  
+  flotilla_prefix_hmas: "HMAS"
+  flotilla_prefix_hmcs: "HMCS"
+  flotilla_prefix_ijn: "IJN"
+  flotilla_prefix_hmis: "HMIS"
+  flotilla_prefix_kms: "KMS"
+  flotilla_prefix_plan: "PLAN"
+  flotilla_prefix_cns: "CNS"
+  flotilla_prefix_mn: "MN"
+  flotilla_prefix_hirms: "HIRMS"
+  flotilla_prefix_vmf: "VMF"
+  flotilla_prefix_ins: "INS"
+
+  ######
+  # Custom Buttons
+  ######
+
+  naval_conference_button: "Realizar uma Conferência Naval"
+  naval_conference_button_desc: "Vamos realizar uma conferência de desarmamento naval para evitar que uma corrida armamentista se intensifique."
+  naval_conference_trigger_tt: "Nenhuma Grande Potência está em guerra."
+  naval_conference_decision_tt: "Convoca uma conferência em nossa capital"
+  leave_two_power_standard_button: "Abandonar o Padrão das Duas Potências"
+  leave_two_power_standard_button_desc: "Não é mais sustentável manter o Padrão das Duas Potências, precisamos reduzir os custos."
+  leave_two_power_standard_button_tooltip: "Já se passaram 3 anos desde que adotamos o padrão."
+
+  convince_treaty_country_1_button: "Convince [ROOT.GetVariable('treaty_country_1').GetCountry.GetName]"
+  convince_treaty_country_1_button_desc: "We'll try to persuade [ROOT.GetVariable('treaty_country_1').GetCountry.GetName] to vote in favor of the Treaty, by whatever means necessary "
+  convince_treaty_country_2_button: "Convince [ROOT.GetVariable('treaty_country_2').GetCountry.GetName]"
+  convince_treaty_country_2_button_desc: "We'll try to persuade [ROOT.GetVariable('treaty_country_2').GetCountry.GetName] to vote in favor of the Treaty, by whatever means necessary."
+  convince_treaty_country_3_button: "Convince [ROOT.GetVariable('treaty_country_3').GetCountry.GetName]"
+  convince_treaty_country_3_button_desc: "We'll try to persuade [ROOT.GetVariable('treaty_country_3').GetCountry.GetName] to vote in favor of the Treaty, by whatever means necessary."
+  convince_treaty_country_4_button: "Convince [ROOT.GetVariable('treaty_country_4').GetCountry.GetName]"
+  convince_treaty_country_4_button_desc: "We'll try to persuade [ROOT.GetVariable('treaty_country_4').GetCountry.GetName] to vote in favor of the Treaty, by whatever means necessary."
+  convince_treaty_country_5_button: "Convince [ROOT.GetVariable('treaty_country_5').GetCountry.GetName]"
+  convince_treaty_country_5_button_desc: "We'll try to persuade [ROOT.GetVariable('treaty_country_5').GetCountry.GetName] to vote in favor of the Treaty, by whatever means necessary."
+  convince_treaty_country_6_button: "Convince [ROOT.GetVariable('treaty_country_6').GetCountry.GetName]"
+  convince_treaty_country_6_button_desc: "We'll try to persuade [ROOT.GetVariable('treaty_country_6').GetCountry.GetName] to vote in favor of the Treaty, by whatever means necessary."
+  convince_treaty_country_7_button: "Convince [ROOT.GetVariable('treaty_country_7').GetCountry.GetName]"
+  convince_treaty_country_7_button_desc: "We'll try to persuade [ROOT.GetVariable('treaty_country_7').GetCountry.GetName] to vote in favor of the Treaty, by whatever means necessary."
+  
+  convince_treaty_cooldown_tooltip: "We haven't sent a proposal in the last 2 months"
+
+
+  vote_yes_on_treaty_button: "Vote YES"
+  vote_yes_on_treaty_button_desc: "Vote in agreement with the treaty. All [concept_main_naval_powers] must vote in agreement for it to pass."
+
+  ######
+  # Alerts
+  ######
+
+  new_shipbuilding_tech_decision_setting_name: "Pode Desenvolver Novos Métodos de Produção Navais"
+  alert_new_shipbuilding_tech_decision_name: "Pode Desenvolver Novos Métodos de Produção Navais"
+  alert_new_shipbuilding_tech_decision_desc: "Nós pesquisamos uma nova tecnologia naval, mas para tomar pleno proveito dela, precisamos desenvolver novos métodos de produção navais."
+  alert_new_shipbuilding_tech_decision_hint: "Você pode desenvolver novos métodos de produção navais no painel Diário."
+  alert_new_shipbuilding_tech_decision_action: "a aba Decisões"
+
+  # Combat unit grouos
+    combat_unit_group_raiding_ship: "Corsários"
+
+  ######
+  # Combat Unit Types
+  ######
+
+  combat_unit_type_caravel: "Caravelas"
+  combat_unit_type_caravel_desc: "Obsoletas no século XIX, caravelas eram pequenas embaracações usadas no comércio e exploração."
+  combat_unit_type_screw_frigate: "Fragatas a Hélice"
+  combat_unit_type_screw_frigate_desc: "O desenvolvimento da propulsão a vapor permitiu que as fragatas se tornassem ainda mais manobráveis. A independência das condições de vento lhes dá uma grande vantagem em tempo calmo."
+  combat_unit_type_carrack: "Carracas"
+  combat_unit_type_carrack_desc: "Carracas eram grandes navios usados nos séculos XV e XVI."
+  combat_unit_type_steam_ship_of_the_line: "Navios de Linha a Vapor"
+  combat_unit_type_steam_ship_of_the_line_desc: "Uma combinação aterrorizante do porte e poder de fogo de um navio de linha com a confiabilidade e rapidez de um navio a vapor, possibilitada pela adoção da hélice de parafuso."
+  combat_unit_type_predreadnought: "Pre-Dreadnoughts"
+  combat_unit_type_predreadnought_desc: "Um navio de guerra de aço que carrega canhões em torretas. Ele monta várias armas pequenas, de disparo rápido, destinadas a incapacitar seus oponentes, e algumas armas de grande calibre para acabar com navios maiores."
+  combat_unit_type_experimental_carrier: "Porta-Aviões Experimentais"
+  combat_unit_type_experimental_carrier_desc: "Após a invenção do avião, colocá-los num navio era a próxima etapa lógica. No entanto, a implementação não era óbvia, e foi necessária muita tentativa e erro. Durante essa fase experimental da aviação naval, muitos encouraçados e cruzadores de batalha foram convertidos em porta-aviões, mas também foram construídos alguns pequenos porta-aviões especificamente para esse fim."
+  combat_unit_type_fleet_carrier: "Porta-Aviões de Frota"
+  combat_unit_type_fleet_carrier_desc: "Porta-aviões de frota são construídos especificamente para esse fim, com grandes hangares, muitas vezes próximos a cem aeronaves, o que lhes permite executar ataques enquanto mantêm caças para patrulha aérea."
+  combat_unit_type_armored_carrier: "Porta-Aviões Blindados"
+  combat_unit_type_armored_carrier_desc: "Porta-aviões blindados são construídos com a capacidade de sobrevivência em mente. Eles possuem um convés de vôo blindado para protegê-los de bombas e artilharia de longo alcance, ao custo de uma diminuição no espaço do hangar."

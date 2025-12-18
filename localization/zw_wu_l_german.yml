@@ -1,0 +1,232 @@
+﻿#l_braz_por:
+#l_english:
+#l_french:
+l_german:
+#l_japanese:
+#l_korean:
+#l_polish:
+#l_russian:
+#l_simp_chinese:
+#l_spanish:
+#l_turkish:
+
+# decision
+
+zw_decision_start_clothes_westernization: "Adopt Western Culture"
+zw_decision_start_clothes_westernization_desc: "If we want to be considered as valid nation by the western great powers, we should try to adopt some of their customs."
+
+# JE
+
+zw_je_clothes_westernization: "Adopt Western Culture"
+
+zw_je_clothes_westernization_reason: "$zw_je_clothes_westernization_reason_1$\n$zw_long_delimiter$\n$zw_je_clothes_westernization_reason_progress$\n\n$zw_je_clothes_westernization_reason_progress_1$\n\n$zw_je_clothes_westernization_reason_progress_2$\n\n$zw_je_clothes_westernization_reason_progress_3$\n\n$zw_je_clothes_westernization_reason_2$\n\n$zw_je_clothes_westernization_reason_3$"
+
+zw_je_clothes_westernization_reason_1: "As western influence in our country grows rapidly, if we want to be considered as a valid nation-state by the western great powers, we should try to adopt some of their customs such as dressing habits. Our leaders and army will start wearing western style clothes and uniforms. Our people will also follow this trend and change their dressing habits as their acceptance towards western culture increases."
+
+zw_je_clothes_westernization_reason_progress: "#white #b The progress bar is expected to increase by #green [SCOPE.ScriptValue('zw_value_clothes_westernization_monthly_progress')]#! monthly according to the following conditions:#!#!"
+
+zw_je_clothes_westernization_reason_progress_1: "1. #green #b + 1#!#! monthly progress if these conditions are met:\n    #indent_newline:4 We hasn't enacted [GetLawType('law_traditionalism').GetName], [GetLawType('law_isolationism').GetName], [GetLawType('law_serfdom').GetName] and [GetLawType('law_peasant_levies').GetName]#!."
+
+zw_je_clothes_westernization_reason_progress_2: "2. #green #b + 0.5#!#! monthly progress if these conditions are met:\n    #indent_newline:4 The [concept_clout] of @industrialists! #white #b $ig_industrialists$#!#! or @intelligentsia! #white #b $ig_intelligentsia$#!#! is greater than or equal to 10%.#!"
+
+zw_je_clothes_westernization_reason_progress_3: "3. #green #b + 0.5#!#! monthly progress if these conditions are met:\n   #indent_newline:4 We are a [concept_recognized_power].#!"
+
+zw_je_clothes_westernization_reason_2: "For every 25% progresses, there will be more interest groups or people have accepted western culture. Progressive interest groups and people will accept western culture faster."
+
+zw_je_clothes_westernization_reason_3: "However, as important tradition-supporters, @devout! #white #b $ig_devout$#!#!, #white #b $clergymen$#!#! and common folks such as #white #b $peasants$#!#! and #white #b $laborers$#!#! won't change their dressing habits."
+
+zw_je_clothes_westernization_goal: "The progress bar has reached 100%."
+
+zw_long_delimiter: "  @divider_start!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_end!  "
+
+# buttons: army uniforms
+
+zw_change_army_uniform_button: "Army Uniforms"
+zw_change_army_uniform_button_desc: ""
+
+zw_change_army_uniform_button_effect_breakdown: "Change the uniforms of army generals.\n\nThe following styles are available:#white #b \nGeneric European Uniforms\nStandard Grey Uniforms\nStandard Blue Uniforms\nStandard Black Uniforms\nStandard Red Uniforms\nStandard Dark Blue Uniforms\nMedium Length Blue Coats\nMedium Length Red Coats\nMedium Length Dark Blue Coats\nLong White Coats\nLong Blue Coats\nMixed Blue Uniforms\nMixed Red Uniforms\nMixed Dark Blue Uniforms#!#!\n\nCurrent Style:"
+
+zw_change_army_uniform_button_effect_0: "$zw_change_army_uniform_button_effect_breakdown$ #yellow #b Generic European Uniforms#!#!\n#green Army generals will choose different kinds of European uniforms.#!"
+
+zw_change_army_uniform_button_effect_1: "$zw_change_army_uniform_button_effect_breakdown$ #yellow #b Standard Grey Uniforms#!#!\n#green Army generals will wear standard grey uniforms.#!"
+
+zw_change_army_uniform_button_effect_2: "$zw_change_army_uniform_button_effect_breakdown$ #yellow #b Standard Blue Uniforms#!#!\n#green Army generals will wear standard blue uniforms.#!"
+
+zw_change_army_uniform_button_effect_3: "$zw_change_army_uniform_button_effect_breakdown$ #yellow #b Standard Black Uniforms#!#!\n#green Army generals will wear standard black uniforms.#!"
+
+zw_change_army_uniform_button_effect_4: "$zw_change_army_uniform_button_effect_breakdown$ #yellow #b Standard Red Uniforms#!#!\n#green Army generals will wear standard red uniforms.#!"
+
+zw_change_army_uniform_button_effect_5: "$zw_change_army_uniform_button_effect_breakdown$ #yellow #b Standard Dark Blue Uniforms#!#!\n#green Army generals will wear standard dark blue uniforms.#!"
+
+zw_change_army_uniform_button_effect_6: "$zw_change_army_uniform_button_effect_breakdown$ #yellow #b Medium Length Blue Coats#!#!\n#green Army generals will wear medium length blue coats.#!"
+
+zw_change_army_uniform_button_effect_7: "$zw_change_army_uniform_button_effect_breakdown$ #yellow #b Medium Length Red Coats#!#!\n#green Army generals will wear medium length red coats.#!"
+
+zw_change_army_uniform_button_effect_8: "$zw_change_army_uniform_button_effect_breakdown$ #yellow #b Medium Length Dark Blue Coats#!#!\n#green Army generals will wear medium length dark blue coats.#!"
+
+zw_change_army_uniform_button_effect_9: "$zw_change_army_uniform_button_effect_breakdown$ #yellow #b Long White Coats#!#!\n#green Army generals will wear long white coats.#!"
+
+zw_change_army_uniform_button_effect_10: "$zw_change_army_uniform_button_effect_breakdown$ #yellow #b Long Blue Coats#!#!\n#green Army generals will wear long blue coats.#!"
+
+zw_change_army_uniform_button_effect_11: "$zw_change_army_uniform_button_effect_breakdown$ #yellow #b Mixed Blue Uniforms#!#!\n#green Army generals will wear standard blue uniforms or medium length blue coats.#!"
+
+zw_change_army_uniform_button_effect_12: "$zw_change_army_uniform_button_effect_breakdown$ #yellow #b Mixed Red Uniforms#!#!\n#green Army generals will wear standard red uniforms or medium length red coats.#!"
+
+zw_change_army_uniform_button_effect_13: "$zw_change_army_uniform_button_effect_breakdown$ #yellow #b Mixed Dark Blue Uniforms#!#!\n#green Army generals will wear standard dark blue uniforms or medium length dark blue coats.#!"
+
+# buttons: army headgear
+
+zw_change_army_headgear_button: "Army Headgear"
+zw_change_army_headgear_button_desc: ""
+
+zw_change_army_headgear_button_effect_breakdown: "Change the headgear of army generals.\n\nThe following styles are available:#white #b \nGeneric Peaked Caps\nPeaked Cap (Black)\nGeneric Decorated Kepi Cap\nDecorated Kepi Cap (Black)\nDecorated Kepi Cap (Blue)\nDecorated Kepi Cap (Red)\nCampaign Hat\nOfficer Kepi Cap (Dark Blue)\nOfficer Kepi Cap (Grey)#!#!\n\nCurrent Style:"
+
+zw_change_army_headgear_button_effect_0: "$zw_change_army_headgear_button_effect_breakdown$ #yellow #b Generic Peaked Caps#!#!\n#green Army generals will choose different kinds of peaked caps or choose not to wear any headgear.#!"
+
+zw_change_army_headgear_button_effect_1: "$zw_change_army_headgear_button_effect_breakdown$ #yellow #b Peaked Cap (Black)#!#!\n#green Army generals will wear black peaked cap.#!"
+
+zw_change_army_headgear_button_effect_2: "$zw_change_army_headgear_button_effect_breakdown$ #yellow #b Generic Decorated Kepi Cap#!#!\n#green Army generals will choose different kinds of decorated kepi caps.#!"
+
+zw_change_army_headgear_button_effect_3: "$zw_change_army_headgear_button_effect_breakdown$ #yellow #b Decorated Kepi Cap (Black)#!#!\n#green Army generals will wear black decorated kepi cap.#!"
+
+zw_change_army_headgear_button_effect_4: "$zw_change_army_headgear_button_effect_breakdown$ #yellow #b Decorated Kepi Cap (Blue)#!#!\n#green Army generals will wear blue decorated kepi cap.#!"
+
+zw_change_army_headgear_button_effect_5: "$zw_change_army_headgear_button_effect_breakdown$ #yellow #b Decorated Kepi Cap (Red)#!#!\n#green Army generals will wear red decorated kepi cap.#!"
+
+zw_change_army_headgear_button_effect_6: "$zw_change_army_headgear_button_effect_breakdown$ #yellow #b Campaign Hat#!#!\n#green Army generals will wear campaign hat.#!"
+
+zw_change_army_headgear_button_effect_7: "$zw_change_army_headgear_button_effect_breakdown$ #yellow #b Kepi Cap (Dark Blue)#!#!\n#green Army generals will wear dark blue kepi cap.#!"
+
+zw_change_army_headgear_button_effect_8: "$zw_change_army_headgear_button_effect_breakdown$ #yellow #b Kepi Cap (Grey)#!#!\n#green Army generals will wear grey kepi cap.#!"
+
+# buttons: navy uniforms
+
+zw_change_navy_uniform_button: "Navy Uniforms"
+zw_change_navy_uniform_button_desc: ""
+
+zw_change_navy_uniform_button_effect_breakdown: "Change the uniforms of navy admirals.\n\nThe following styles are available:#white #b \nGeneric European Uniforms\nStandard Grey Uniforms\nStandard Blue Uniforms\nStandard Black Uniforms\nStandard Red Uniforms\nStandard Dark Blue Uniforms\nMedium Length Blue Coats\nMedium Length Red Coats\nMedium Length Dark Blue Coats\nLong White Coats\nLong Blue Coats\nMixed Blue Uniforms\nMixed Red Uniforms\nMixed Dark Blue Uniforms#!#!\n\nCurrent Style:"
+
+zw_change_navy_uniform_button_effect_0: "$zw_change_navy_uniform_button_effect_breakdown$ #yellow #b Generic European Uniforms#!#!\n#green Navy admirals will choose different kinds of European uniforms.#!"
+
+zw_change_navy_uniform_button_effect_1: "$zw_change_navy_uniform_button_effect_breakdown$ #yellow #b Standard Grey Uniforms#!#!\n#green Navy admirals will wear standard grey uniforms.#!"
+
+zw_change_navy_uniform_button_effect_2: "$zw_change_navy_uniform_button_effect_breakdown$ #yellow #b Standard Blue Uniforms#!#!\n#green Navy admirals will wear standard blue uniforms.#!"
+
+zw_change_navy_uniform_button_effect_3: "$zw_change_navy_uniform_button_effect_breakdown$ #yellow #b Standard Black Uniforms#!#!\n#green Navy admirals will wear standard black uniforms.#!"
+
+zw_change_navy_uniform_button_effect_4: "$zw_change_navy_uniform_button_effect_breakdown$ #yellow #b Standard Red Uniforms#!#!\n#green Navy admirals will wear standard red uniforms.#!"
+
+zw_change_navy_uniform_button_effect_5: "$zw_change_navy_uniform_button_effect_breakdown$ #yellow #b Standard Dark Blue Uniforms#!#!\n#green Navy admirals will wear standard dark blue uniforms.#!"
+
+zw_change_navy_uniform_button_effect_6: "$zw_change_navy_uniform_button_effect_breakdown$ #yellow #b Medium Length Blue Coats#!#!\n#green Navy admirals will wear medium length blue coats.#!"
+
+zw_change_navy_uniform_button_effect_7: "$zw_change_navy_uniform_button_effect_breakdown$ #yellow #b Medium Length Red Coats#!#!\n#green Navy admirals will wear medium length red coats.#!"
+
+zw_change_navy_uniform_button_effect_8: "$zw_change_navy_uniform_button_effect_breakdown$ #yellow #b Medium Length Dark Blue Coats#!#!\n#green Navy admirals will wear medium length dark blue coats.#!"
+
+zw_change_navy_uniform_button_effect_9: "$zw_change_navy_uniform_button_effect_breakdown$ #yellow #b Long White Coats#!#!\n#green Navy admirals will wear long white coats.#!"
+
+zw_change_navy_uniform_button_effect_10: "$zw_change_navy_uniform_button_effect_breakdown$ #yellow #b Long Blue Coats#!#!\n#green Navy admirals will wear long blue coats.#!"
+
+zw_change_navy_uniform_button_effect_11: "$zw_change_navy_uniform_button_effect_breakdown$ #yellow #b Mixed Blue Uniforms#!#!\n#green Navy admirals will wear standard blue uniforms or medium length blue coats.#!"
+
+zw_change_navy_uniform_button_effect_12: "$zw_change_navy_uniform_button_effect_breakdown$ #yellow #b Mixed Red Uniforms#!#!\n#green Navy admirals will wear standard red uniforms or medium length red coats.#!"
+
+zw_change_navy_uniform_button_effect_13: "$zw_change_navy_uniform_button_effect_breakdown$ #yellow #b Mixed Dark Blue Uniforms#!#!\n#green Navy admirals will wear standard dark blue uniforms or medium length dark blue coats.#!"
+
+# buttons: navy headgear
+
+zw_change_navy_headgear_button: "Navy Headgear"
+zw_change_navy_headgear_button_desc: ""
+
+zw_change_navy_headgear_button_effect_breakdown: "Change the headgear of navy admirals.\n\nThe following styles are available:#white #b \nGeneric Admiral Hat\nPeaked Cap (Black)\nGeneric Decorated Kepi Cap\nDecorated Kepi Cap (Black)\nDecorated Kepi Cap (Blue)\nDecorated Kepi Cap (Red)\nCampaign Hat\nOfficer Kepi Cap (Dark Blue)\nOfficer Kepi Cap (Grey)#!#!\n\nCurrent Style:"
+
+zw_change_navy_headgear_button_effect_0: "$zw_change_navy_headgear_button_effect_breakdown$ #yellow #b Generic Admiral Hat#!#!\n#green Navy admirals will wear admiral hat.#!"
+
+zw_change_navy_headgear_button_effect_1: "$zw_change_navy_headgear_button_effect_breakdown$ #yellow #b Peaked Cap (Black)#!#!\n#green Navy admirals will wear black peaked cap.#!"
+
+zw_change_navy_headgear_button_effect_2: "$zw_change_navy_headgear_button_effect_breakdown$ #yellow #b Generic Decorated Kepi Cap#!#!\n#green Navy admirals will choose different kinds of decorated kepi caps.#!"
+
+zw_change_navy_headgear_button_effect_3: "$zw_change_navy_headgear_button_effect_breakdown$ #yellow #b Decorated Kepi Cap (Black)#!#!\n#green Navy admirals will wear black decorated kepi cap.#!"
+
+zw_change_navy_headgear_button_effect_4: "$zw_change_navy_headgear_button_effect_breakdown$ #yellow #b Decorated Kepi Cap (Blue)#!#!\n#green Navy admirals will wear blue decorated kepi cap.#!"
+
+zw_change_navy_headgear_button_effect_5: "$zw_change_navy_headgear_button_effect_breakdown$ #yellow #b Decorated Kepi Cap (Red)#!#!\n#green Navy admirals will wear red decorated kepi cap.#!"
+
+zw_change_navy_headgear_button_effect_6: "$zw_change_navy_headgear_button_effect_breakdown$ #yellow #b Campaign Hat#!#!\n#green Navy admirals will wear campaign hat.#!"
+
+zw_change_navy_headgear_button_effect_7: "$zw_change_navy_headgear_button_effect_breakdown$ #yellow #b Kepi Cap (Dark Blue)#!#!\n#green Navy admirals will wear dark blue kepi cap.#!"
+
+zw_change_navy_headgear_button_effect_8: "$zw_change_navy_headgear_button_effect_breakdown$ #yellow #b Kepi Cap (Grey)#!#!\n#green Navy admirals will wear grey kepi cap.#!"
+
+# buttons: army field uniforms
+
+zw_change_army_headgear_late_button: "Army Field Uniforms"
+zw_change_army_headgear_late_button_desc: ""
+
+zw_change_army_headgear_late_button_effect_a: "As the form of war changes, comparing to fancy uniforms, we need a more practical uniform style.\n"
+
+zw_change_army_headgear_late_button_effect_b: "Since the form of war is always changing rapidly, comparing to fancy uniforms, it's likely we will need more practical uniforms in the near future, so it's better to decide the potential generic styles right now.\n"
+
+zw_change_army_headgear_late_button_effect_breakdown: "The following styles are available:#white #b \nField Uniforms And Kepi Cap\nField Uniforms And Peaked Cap\nField Uniforms And Flat Peaked Cap\nField Uniforms And Campaign Hat\nNo Field Uniforms#!#!\n\nCurrent Style:"
+
+zw_change_army_headgear_late_button_effect_0: "$zw_change_army_headgear_late_button_effect_breakdown$ #yellow #b Field Uniforms And Kepi Cap#!#!\n#green Army generals will wear field uniforms and kepi cap.#!"
+
+zw_change_army_headgear_late_button_effect_1: "$zw_change_army_headgear_late_button_effect_breakdown$ #yellow #b Field Uniforms And Peaked Cap#!#!\n#green Army generals will wear field uniforms and peaked cap.#!"
+
+zw_change_army_headgear_late_button_effect_2: "$zw_change_army_headgear_late_button_effect_breakdown$ #yellow #b Field Uniforms And Flat Peaked Cap#!#!\n#green Army generals will wear field uniforms and flat peaked cap.#!"
+
+zw_change_army_headgear_late_button_effect_3: "$zw_change_army_headgear_late_button_effect_breakdown$ #yellow #b Field Uniforms And Campaign Hat#!#!\n#green Army generals will wear field uniforms and campaign hat.#!"
+
+zw_change_army_headgear_late_button_effect_4: "$zw_change_army_headgear_late_button_effect_breakdown$ #yellow #b No Field Uniforms#!#!\n#green Army generals won't change their current uniforms.#!"
+
+# buttons: monarch uniforms
+
+zw_change_monarch_clothes_button: "Full Dress Uniforms"
+zw_change_monarch_clothes_button_desc: ""
+
+zw_change_monarch_clothes_button_effect_a: "Ceremonial full dress uniforms are the most formal uniforms. As the head of state, a monarch will wear these uniforms in formal occasions.\n"
+
+zw_change_monarch_clothes_button_effect_b: "Ceremonial full dress uniforms are usually worn by royals and nobles in formal occasions. Although our country is no longer a monarchy, we should choose a style just for symbolic meanings.\n"
+
+zw_change_monarch_clothes_button_effect_breakdown: "The following styles are available:#white #b \nGeneric European Uniforms\nBlack Uniforms\nBlue Uniforms\nRed Uniforms\nDark Blue Uniforms\nLong Uniforms#!#!\n\nCurrent Style:"
+
+zw_change_monarch_clothes_button_effect_0: "$zw_change_monarch_clothes_button_effect_breakdown$ #yellow #b Generic European Uniforms#!#!\n#green We will use different kinds of European uniforms as our ceremonial uniforms.#!"
+
+zw_change_monarch_clothes_button_effect_1: "$zw_change_monarch_clothes_button_effect_breakdown$ #yellow #b Black Uniforms#!#!\n#green We will use black single-breasted uniforms as our ceremonial uniforms.#!"
+
+zw_change_monarch_clothes_button_effect_2: "$zw_change_monarch_clothes_button_effect_breakdown$ #yellow #b Blue Uniforms#!#!\n#green We will use blue single-breasted and double-breasted uniforms as our ceremonial uniforms.#!"
+
+zw_change_monarch_clothes_button_effect_3: "$zw_change_monarch_clothes_button_effect_breakdown$ #yellow #b Red Uniforms#!#!\n#green We will use red single-breasted and double-breasted uniforms as our ceremonial uniforms.#!"
+
+zw_change_monarch_clothes_button_effect_4: "$zw_change_monarch_clothes_button_effect_breakdown$ #yellow #b Dark Blue Uniforms#!#!\n#green We will use dark blue single-breasted and double-breasted uniforms as our ceremonial uniforms.#!"
+
+zw_change_monarch_clothes_button_effect_5: "$zw_change_monarch_clothes_button_effect_breakdown$ #yellow #b Long Uniforms#!#!\n#green We will use formal long uniforms as our ceremonial uniforms.#!"
+
+# buttons: show ruler outfits
+
+zw_show_outfit_ruler_politician_button: "Display Ruler Outfits"
+zw_show_outfit_ruler_politician_button_desc: ""
+
+# buttons: show commander outfits
+
+zw_show_outfit_general_admiral_button: "Display Commander Uniforms"
+zw_show_outfit_general_admiral_button_desc: ""
+
+# event
+
+zw_event_show_outfits.1.t: "Ruler Outfits"
+zw_event_show_outfits.1.d: "Display outfits of ruler."
+zw_event_show_outfits.1.f: "Check if the ruler's outfits are appropriate."
+zw_event_show_outfits.1.option_1: "End display."
+
+zw_event_show_outfits.2.t: "Army Uniforms"
+zw_event_show_outfits.2.d: "Display army commander uniforms."
+zw_event_show_outfits.2.f: "Check if the army commander uniforms are appropriate."
+zw_event_show_outfits.2.option_1: "Display navy commander uniforms."
+zw_event_show_outfits.2.option_2: "End display."
+
+zw_event_show_outfits.3.t: "Navy Uniforms"
+zw_event_show_outfits.3.d: "Display navy commander uniforms."
+zw_event_show_outfits.3.f: "Check if the navy commander uniforms are appropriate."
+zw_event_show_outfits.3.option_1: "End display."

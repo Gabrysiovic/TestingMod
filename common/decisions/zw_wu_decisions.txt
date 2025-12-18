@@ -1,0 +1,71 @@
+﻿zw_decision_start_clothes_westernization = {
+	is_shown = {
+		# decision hasn't been taken
+		NOT = { has_variable = zw_var_clothes_westernization }
+		# not fully western culture countries
+		any_primary_culture = {
+			NOR = {
+				# European
+				AND = {
+					has_discrimination_trait_group = heritage_group_european
+					# Exclude European that don't wear western clothes
+					NOR = {
+						this = cu:circassian # European and Middle Eastern Heritages
+						this = cu:sephardic # European and Middle Eastern Heritages
+					}
+				}
+				# African diaspora
+				has_discrimination_trait = heritage_african_diaspora
+			}
+		}
+		# country_type
+		NOT = { is_country_type = decentralized }
+	}
+	possible = {
+		# laws
+		NOR = {
+			has_law = law_type:law_traditionalism
+			has_law_or_variant = law_type:law_isolationism
+		}
+		OR = {
+			NOT = { has_law = law_type:law_serfdom }
+			NOT = { has_law = law_type:law_peasant_levies }
+		}
+	}
+	when_taken = {
+		add_journal_entry = { type = zw_je_clothes_westernization }
+	}
+	ai_chance = {
+		value = 0
+		# from literacy rate
+		add = literacy_rate
+		multiply = 20
+		# from country type
+		if = {
+			limit = {
+				OR = {
+					is_country_type = colonial
+					is_country_type = recognized
+				}
+			}
+			add = 10 
+		}
+		# from ai strategy
+		if = {
+			limit = {
+				OR = {
+					has_strategy = ai_strategy_progressive_agenda
+					has_strategy = ai_strategy_egalitarian_agenda
+				}
+			}
+			add = 10
+		}
+		# from overlord
+		if = {
+			limit = {
+				zw_trigger_overlord_is_western_or_westernized = yes
+			}
+			add = 10
+		}
+	}
+}

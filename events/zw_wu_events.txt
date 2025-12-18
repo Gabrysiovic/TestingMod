@@ -1,0 +1,110 @@
+﻿namespace = zw_event_show_outfits
+
+# ruler + politician
+zw_event_show_outfits.1 = {
+
+	type = country_event
+
+	placement = ROOT
+	title = zw_event_show_outfits.1.t
+	desc = zw_event_show_outfits.1.d
+	flavor = zw_event_show_outfits.1.f
+
+	duration = 0
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = ruler
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	option = {
+		name = zw_event_show_outfits.1.option_1
+		default_option = yes
+	}
+}
+
+# general + admiral
+zw_event_show_outfits.2 = {
+
+	type = country_event
+
+	placement = ROOT
+	title = zw_event_show_outfits.2.t
+	desc = zw_event_show_outfits.2.d
+	flavor = zw_event_show_outfits.2.f
+
+	duration = 0
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:zw_scope_outfit_model_general
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	cancellation_trigger = {
+		NOT = { exists = scope:zw_scope_outfit_model_general }
+	}
+
+	immediate = {
+		random_scope_general = {
+			save_scope_as = zw_scope_outfit_model_general
+		}
+	}
+
+	option = {
+		name = zw_event_show_outfits.2.option_1
+		trigger = {
+			any_scope_character = { has_role = admiral }
+		}
+		trigger_event = {
+			id = zw_event_show_outfits.3
+			popup = yes
+		}
+	}
+
+	option = {
+		name = zw_event_show_outfits.2.option_2
+		default_option = yes
+	}
+}
+
+# general + admiral
+zw_event_show_outfits.3 = {
+
+	type = country_event
+
+	placement = ROOT
+	title = zw_event_show_outfits.3.t
+	desc = zw_event_show_outfits.3.d
+	flavor = zw_event_show_outfits.3.f
+
+	duration = 0
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:zw_scope_outfit_model_admiral
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	cancellation_trigger = {
+		NOT = { exists = scope:zw_scope_outfit_model_admiral }
+	}
+
+	immediate = {
+		random_scope_admiral = {
+			save_scope_as = zw_scope_outfit_model_admiral
+		}
+	}
+
+	option = {
+		name = zw_event_show_outfits.3.option_1
+		default_option = yes
+	}
+}

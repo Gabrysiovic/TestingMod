@@ -1,0 +1,158 @@
+﻿namespace = dsk_france
+
+dsk_france.1 = {
+	type = country_event
+	placement = ROOT
+
+	event_image = { 
+		texture = "gfx/event_pictures/soe_event_pictures/1848_france2.dds"
+	}
+	
+	icon = "gfx/interface/icons/event_icons/france3.dds"
+	
+	title = dsk_france.1.t
+	desc = dsk_france.1.d
+	flavor = dsk_france.1.f
+	
+	duration = 3
+	
+	trigger = {
+	}
+	
+	immediate = {
+		
+	}
+	option = {
+		name = dsk_france.1.a
+		add_loyalists = {
+			value = 0.02
+		}
+		add_modifier = {
+			name = modifier_fra_winner
+			years = 10
+		}
+	}
+}
+
+dsk_france.2 = {
+	type = country_event
+	placement = ROOT
+
+	event_image = {
+		texture = "gfx/event_pictures/soe_event_pictures/ger_empire.dds"
+	}
+
+	icon = "gfx/interface/icons/event_icons/fra.dds"
+	
+	title = dsk_france.2.t
+	desc = dsk_france.2.d
+	flavor = dsk_france.2.f
+
+	duration = 3
+	
+	trigger = {
+	}
+	
+	immediate = {
+#		every_scope_character = {
+#			limit = {
+#				has_template = fra_napoleon_iii_character_template
+#				OR = {
+#				is_agitators = yes
+#				is_ruler = yes
+#				}
+#			}
+#			kill_character = yes
+#		}
+	}
+	
+	option = {
+		name = dsk_france.2.a
+		add_modifier = {
+			name = modifier_fra_loser
+			years = 10
+		}
+		
+	}
+}
+
+
+
+dsk_france.3  = {
+	type = country_event
+	placement = ROOT
+
+	event_image = {
+		texture = "gfx/event_pictures/soe_event_pictures/ger_empire.dds"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	
+	title = dsk_france.3.t
+	desc = dsk_france.3.d
+	flavor = dsk_france.3.f
+	
+	duration = 3
+	
+	trigger = {
+	}
+	immediate = {
+		c:GER = {
+			save_scope_as = ger_scope
+		}
+	}
+	option = {
+		name = dsk_france.3.a
+		default_option = yes
+	}
+}
+
+
+dsk_france.4 = {
+	type = country_event
+	placement = root
+	title = dsk_france.4.t
+	desc = dsk_france.4.d
+	flavor = dsk_france.4.f
+
+	duration = 3
+
+	event_image = {
+		texture = "gfx/event_pictures/soe_event_pictures/ger_empire.dds"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	
+	trigger = {
+	}
+	
+	option = {
+	name = dsk_france.4.a
+	default_option = yes
+	add_modifier = {
+	name = modifier_ger_winner
+	months = 360
+			}
+        hidden_effect = { 
+                every_country = {
+                 limit = {
+                    OR = {
+                         #country_rank = rank_value:great_power
+                         #country_rank = rank_value:super_power
+                         #country_rank = rank_value:major_power
+						 is_ai = no
+                    }
+                    NOT = { this = c:GER }
+					NOT = { this = c:NGF }
+                    NOT = { this = c:FRA }
+					NOT = { this = c:PRU }
+                }
+                trigger_event = {
+                    id = dsk_france.3
+                    days = { 3 15 }
+                }			
+        }
+		}
+}
+}
+

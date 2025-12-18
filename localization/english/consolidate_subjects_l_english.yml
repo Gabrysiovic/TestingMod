@@ -1,0 +1,33 @@
+﻿l_english:
+consolidate_subject: "Consolidate Subject"
+consolidate_subject_action_name: "Consolidate [concept_subject]"
+consolidate_subject_desc: "Merge a target [concept_subject] into a neighboring [concept_subject], forming a single [concept_country]. Both subjects must have low [concept_autonomy], low [concept_liberty_desire], and share cultural traits."
+consolidate_subject_action_notification_name: "[INITIATOR_COUNTRY.GetName] consolidates administration"
+consolidate_subject_action_notification_desc: "[INITIATOR_COUNTRY.GetName] has chosen to consolidate us."
+consolidate_subject_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName] consolidates subjects"
+consolidate_subject_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] has consolidated [TARGET_COUNTRY.GetName]."
+
+is_not_african_subject: "This subject not one of our African colonial administrations"
+consolidate_subject_country_tier_tt: "Subject's [concept_country_tier] is $country_tier_city_state$, $country_tier_principality$, or $country_tier_grand_principality$"
+consolidate_subject_country_tier_kingdom_tt: "Subject's [concept_country_tier] is $country_tier_kingdom$"
+consolidate_subject_vassal_type_tt: "Is a $subject_type_vassal$ or $subject_type_puppet$"
+consolidate_subject_primary_culture_tt: "Shares a [Concept('concept_primary_cultures', '$concept_primary_culture$')] with the Consolidated Subject"
+consolidate_subject_acceptance_tt: "[SCOPE.sC('target_country').GetOverlord.GetName] has researched [GetTechnology('pan-nationalism').GetName] and [GetTechnology('civilizing_mission').GetName], and all of the Consolidated Subject's [concept_primary_cultures] must share a [Concept('concept_discrimination_trait', '$concept_discrimination_trait_short$')] and have at least @acceptance_status_4! $second_rate_citizen$ [concept_acceptance_status]"
+
+overlord_can_consolidate_subject_setting_name: "Consolidate Subject"
+ alert_overlord_can_consolidate_subject_name: "[GetDiplomaticActionType('consolidate_subject').GetName] available for [SCOPE.GetRootScope.GetCountry.GetName]"
+ alert_overlord_can_consolidate_subject_desc: "Our [concept_subject] [SCOPE.GetRootScope.GetCountry.GetName] can be consolidated into a neighboring subject."
+ alert_overlord_can_consolidate_subject_hint: "You can use the Subjects tab in the Diplomacy Panel to perform a [GetDiplomaticActionType('consolidate_subject').GetName] [concept_diplomatic_action]."
+ alert_overlord_can_consolidate_subject_action: "Diplomacy Panel"
+
+ ag_can_consolidate_subject_name: "Can [GetDiplomaticActionType('consolidate_subject').GetName]"
+ ag_can_consolidate_subject_desc: "There are [concept_subject] [Concept('concept_country', '$concept_countries$')] which are eligible for the [GetDiplomaticActionType('consolidate_subject').GetName] action"
+ ag_can_consolidate_subject_tooltip: "#header $ag_can_consolidate_subject_name$#!\n$TOOLTIP_DELIMITER$\n$ag_can_consolidate_subject_desc$\n\n$ALERT_GROUP_TOOLTIP_FOOTER$"
+
+rule_consolidate_subject_action: "Consolidate Subjects"
+setting_consolidate_subject_enabled: "Enabled"
+setting_consolidate_subject_enabled_desc: "[Concept('concept_subject', '$concept_subjects$')] with similar [concept_primary_cultures] can be merged via [concept_overlord_action]."
+setting_consolidate_subject_player_only: "Player Only"
+setting_consolidate_subject_player_only_desc: "[Concept('concept_subject', '$concept_subjects$')] with similar [concept_primary_cultures] can be merged via [concept_overlord_action]. The AI cannot consolidate subjects."
+setting_consolidate_subject_disabled: "Disabled"
+setting_consolidate_subject_disabled_desc: "The Consolidate Subject [concept_overlord_action] is unavailable."

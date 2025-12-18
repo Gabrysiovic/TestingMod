@@ -1,0 +1,55 @@
+﻿l_braz_por:
+ #####
+ # Technology
+ #####
+
+ dreadnought: "Dreadnought"
+ dreadnought_desc: "Equipado com armamento unificado e turbinas a vapor, o encouraçado tipo \"Dreadnought\" revolucionou o combate naval."
+ battleship_tech_desc: "Os chamados \"Encouraçados super-dreadnought\" carregam canhões maiores, blindagem mais espessa e motores mais potentes, fazendo o Dreadnought parecer obsoleto."
+ 
+#####
+# Goods
+#####
+ manowars: "Naus de Guerra"
+ ironclads: "Navios de Guerra"
+ 
+ modifier_goods_input_manowars_add: "Uso de @manowars! Naus de Guerra por level"
+ modifier_goods_input_ironclads_add: "Uso de @ironclads! Navios de Guerra por level"
+ modifier_goods_output_manowars_add: "Produção de @manowars! Naus de Guerra por level"
+ modifier_goods_output_ironclads_add: "Produção de @ironclads! Navios de Guerra por level"
+ 
+######
+# Combat Unit Group Types
+######
+ combat_unit_group_light_ship: "Escoltas"
+ combat_unit_group_capital_ship: "Navios Capitais"
+ combat_unit_group_support_ship: "Aviação"
+
+######
+# Combat Unit Types
+######
+
+
+ combat_unit_type_frigate: "Fragatas"
+ combat_unit_type_frigate_desc: "Um navio a vela sem muita proteção, equipado com canhões. Portando um aparelho de velas completo e desenhado com rapidez e manobravilidade em mente, é um navio de escolta versátil da era da navegação a vela."
+ combat_unit_type_destroyer: "Destróieres"
+ combat_unit_type_destroyer_desc: "Um navio rápido, relativamente pequeno. Originalmente desenhados para proteger embarcações maiores da ameaça de barcos torpedeiros, destróieres tipicamente carrengam seus próprios torpedos, e podem ser um oponente bastante perigoso."
+ combat_unit_type_scout_cruiser: "Cruzadores"
+ combat_unit_type_scout_cruiser_desc: "Uma nau multi-propósito, cruzadores podem atuar como escoltas para navios maiores or servir como lideres de seu próprio esquadrão. Geralmente construídos para missões de longo alcance, cruzadores são úteis para âmbas escolta de comboios e ataque ao comércio"
+ combat_unit_type_man_o_war: "Navios de Linha"
+ combat_unit_type_man_o_war_desc: "O pináculo de #ITALIC design#! da era da navegação a vela, navios de linha ostentam múltiplos deques de canhões, casco de madeira grossa e uma tripulação que aproxima os milhares."
+ combat_unit_type_ironclad: "Ironclads"
+ combat_unit_type_ironclad_desc: "Um navio coberto em uma couraça de ferro. Alguns dos primeiros ironclads não tinham pentração o suficiente para derrotar a blindagem de seus pares, e batalhas poderiam acabar de forma inconclusiva."
+ combat_unit_type_dreadnought: "Dreadnoughts"
+ combat_unit_type_dreadnought_desc: "Avanços em artilharia permitiram que os navios do tipo Dreadnought trocassem as baterias mistas de seus antecessores por um armamento unificado de canhões de alto calibre."
+ combat_unit_type_battleship: "Encouraçados"
+ combat_unit_type_battleship_desc: "Os maiores navios de guerra nos mares, encouraçados Super-Dreadnought são a palavra final em poder naval."
+ combat_unit_type_torpedo_boat: "Barcos Torpedeiros"
+ combat_unit_type_torpedo_boat_desc: "Embarcações ágeis de pequeno porte, que usam torpedos para combater navios maiores."
+
+# Buildings
+  building_military_shipyards: "Estaleiros Militares"
+
+# Production Methods
+ pm_military_shipbuilding_wooden: "Navios de Guerra de Madeira"
+ pm_military_shipbuilding_wooden_2: "Fragatas de Hélice"

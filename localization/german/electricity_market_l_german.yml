@@ -1,0 +1,42 @@
+﻿l_german:
+ electrical_generation: "Gleichstromerzeugung"
+ electrical_generation_desc: "Die Erzeugung und Nutzung von Gleichstrom ermöglicht eine zuverlässige und dezentrale Stromversorgung, ideal für lokale Industriezentren und isolierte Netze, aber begrenzt in Reichweite und Effizienz."
+
+ alternating_voltage: "Wechselstromerzeugung"
+ alternating_voltage_desc: "Die Einführung der Wechselstromtechnologie revolutioniert die Stromverteilung und erlaubt eine zentrale Erzeugung sowie die Übertragung über große Distanzen. Dies öffnet den Weg zu einer landesweiten Industrialisierung und Versorgung."
+
+ electricity: "Gleichstrom"
+ electricity_market: "Wechselstrom"
+
+
+ electricity_price_equilibrium: "$electricity$-Preisziel:"
+
+ concept_direct_current: "$electricity$"
+ concept_direct_current_desc: "$electrical_generation_desc$"
+ concept_alternating_current: "$electricity_market$"
+ concept_alternating_current_desc: "$alternating_voltage_desc$"
+ 
+ building_substation: "Umspannungswerke"
+ pmg_base_building_substation: "Umspannungsrichtung"
+
+ pm_substation_up: "Aufwärtstransformation"
+ pm_substation_down: "Abwärtstransformation"
+
+ substation_multiplier_up: "Mengen-Multiplizierer"
+ substation_multiplier_down: "Mengen-Multiplizierer"
+
+ goods_output_electricity_market_add: "$goods_output_electricity_add$"
+ goods_output_electricity_market_add_desc: "$goods_output_electricity_add_desc$"
+
+ goods_input_electricity_market_add: "$goods_input_electricity_add$"
+ goods_input_electricity_market_add_desc: "$goods_input_electricity_add_desc$"
+ 
+ goods_output_electricity_market_mult: "$goods_output_electricity_mult$"
+ goods_output_electricity_market_mult_desc: "$goods_output_electricity_mult_desc$"
+
+ pm_early_power_plant_market: "$pm_early_power_plant$"
+ pm_coal-fired_plant_market: "$pm_coal-fired_plant$"
+ pm_oil-fired_plant_market: "$pm_oil-fired_plant$"
+
+ country_can_share_electricity_in_market_bool: "Elektrizität kann auf dem [concept_market] gehandelt werden"
+ country_can_share_electricity_in_market_bool_desc: "Schaltet die neue Ware @electricity! $electricity_market$ frei, die marktweit verteilten Strom repräsentiert. $building_substation$ können $electricity_market$ in lokalen $electricity$ umwandeln und ermöglichen so eine zentrale Stromversorgung im gesamten [concept_market]."

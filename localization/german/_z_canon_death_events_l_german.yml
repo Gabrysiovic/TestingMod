@@ -1,0 +1,37 @@
+﻿l_german:
+
+#Ferdinand-Philippe
+ canon_death.1.t:0 "Tragischer Unfall"
+ canon_death.1.d:0 "Ferdinand-Philippe ist bei einem Kutschenunfall schwer verletzt worden. Es ist unklar, ob er den Vorfall überlebt hat."
+ canon_death.1.f:0 ""Am 13. Juli 1842 war Ferdinand-Philippe auf dem Weg zum Schloss Neuilly bei Paris, um Verwandte zu besuchen, bevor er zu einer militärischen Inspektion nach Saint-Omer aufbrach. In der Nähe der Porte Maillot verlor der Kutscher die Kontrolle über die offene Kutsche, als seine beiden Pferde ausbrachen, und er stürzte schwer auf den Bürgersteig. Er hat das Bewusstsein nicht wiedererlangt.""
+ canon_death.1.a:0 "Bitte wach auf..."
+
+#Tsesarevich Nikolai
+ canon_death.2.t:0 "[SCOPE.sCharacter('canonically_dead_2').GetName] ist schwerkrank"
+ canon_death.2.d:0 "[SCOPE.sCharacter('canonically_dead_2').GetName] ist bettlägerig, nachdem er sich eine unbekannte Krankheit eingefangen hat. Sein Gesundheitszustand verschlechtert sich rapide, und es ist unklar, ob er überleben wird."
+ canon_death.2.f:0 ""[SCOPE.sCharacter('canonically_dead_2').GetName] war auf einer Auslandsreise, als er plötzlich krank wurde. Die Krankheit wurde zunächst ignoriert, als er seine Reisen fortsetzte. Der Zustand verschlimmerte sich jedoch, als eine Hirnblutung dazu führte, dass eine Seite seines Körpers vorübergehend gelähmt war. Der Rest der königlichen Familie ist auf dem Weg zu ihm, um ihn zu besuchen, vielleicht zum letzten Mal.""
+ canon_death.2.a:0 "Verheerende Nachrichten!"
+
+#Rudolf von Habsburg
+ canon_death.3.t:0 "Rätsel in Mayerling"
+ canon_death.3.d:0 "Rudolf von Habsburg wurde unter mysteriösen Umständen tot im Jagdschloss Mayerling aufgefunden. Eine Untersuchung ist im Gange, um die Wahrheit hinter dem Vorfall aufzudecken."
+ canon_death.3.f:0 ""Der 30-Jährige wurde zusammen mit seiner Geliebten tot aufgefunden, wobei es sich offenbar um einen Selbstmordpakt handelte. Es wird vermutet, dass seine angespannte Ehe, psychische Probleme und politische Faktoren die Ursache für Rudolfs vorzeitiges Ableben waren. Der schockierende Vorfall hat die Familie Habsburg in ihren Grundfesten erschüttert.""
+ canon_death.3.a:0 "Oh, wie schrecklich!"
+
+#Albert 01
+ canon_death.4.t:0 "Der Tod von Eddie"
+ canon_death.4.d:0 "Albert Victor, im Volksmund Eddie genannt, ist nach einem grippalen Infekt, der sich zu einer tödlichen Lungenentzündung entwickelte, gestorben. Sein Tod wurde im ganzen Land mit großer Betroffenheit aufgenommen und löste eine große nationale Trauer aus."
+ canon_death.4.f:0 ""Am 14. Januar 1892 wurde das Land von der Nachricht erschüttert, dass Seine Königliche Hoheit Albert Victor, im Volksmund Eddie genannt, in Sandringham House in Norfolk gestorben ist. Der Tod stürzt Millionen von Menschen aller Altersgruppen, Klassen und Rassen in diesem Königreich und weit über seine Grenzen hinaus in tiefe Trauer und in das tiefste Mitgefühl mit der königlichen Familie, die in dieser Stunde so schwer getroffen ist.""
+ canon_death.4.a:0 "Gottes Wille geschehe..."
+
+#Maria 02
+ canon_death.5.t:0 "Marias letztes Kind"
+ canon_death.5.d:0 "Maria, Königin von Portugal, hat Komplikationen bei der Geburt ihres elften Kindes. Es ist ungewiss, ob sie den Eingriff überleben wird."
+ canon_death.5.f:0 ""Nach einer Reihe von schwierigen Schwangerschaften warnten die Ärzte sie vor den Risiken, die sie bei zukünftigen Schwangerschaften eingehen könnte. Königin Maria begegnete den Ratschlägen jedoch mit völliger Gleichgültigkeit und sagte ihnen: "Wenn ich sterbe, sterbe ich auf meinem Posten".""
+ canon_death.5.a:0 "Gott ist mit unserer guten Mutter..."
+
+#Pedro 05
+ canon_death.6.t:0 "Der junge Pedro"
+ canon_death.6.d:0 "Seine Majestät König Pedro ist krank. Eine kürzlich aufgetretene Epidemie hat den königlichen Kreis erreicht und einigen Mitgliedern der königlichen Familie das Leben gekostet. Der König ist stark, aber es ist unklar, ob er es schaffen wird."
+ canon_death.6.f:0 ""Im Alter von 24 Jahren stirbt der junge portugiesische Monarch nun selbst an einer schrecklichen Krankheit, nach einem von Schwierigkeiten geprägten Leben, während einer seiner gerade verstorbenen Brüder noch immer ohne Sarg daliegt und ein dritter der Brüder an derselben Krankheit leidet.""
+ canon_death.6.a:0 "Nur die Guten sterben jung..."

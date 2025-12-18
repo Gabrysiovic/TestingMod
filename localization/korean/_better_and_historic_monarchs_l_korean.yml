@@ -1,0 +1,13 @@
+﻿l_korean:
+
+ historic_monarch_death.t:0 "우리의 군주가 죽었습니다."
+ historic_monarch_death.d:0 "[ROOT.GetCountry.GetName]에 암울한 장막이 내렸습니다. 우리의 주권자인 [SCOPE.sCharacter('dead_character').GetFirstName]이 서거했다는 소식이 전해졌습니다. 동시에 모든 시선은 왕좌를 차지할  [SCOPE.sCharacter('dead_character').GetHerHis] 후계자, [ROOT.GetCountry.GetRuler.GetFirstName]에게로 향합니다."
+ historic_monarch_death.f:0 "“[ROOT.GetCountry.GetName]이 고인이 된 [SCOPE.sCharacter('dead_character').GetFirstName]에게 작별을 고합니다. [ROOT.GetCountry.GetRuler.GetFirstName]아래 새로운 시대를 맞이합니다. [ROOT.GetCountry.GetRuler.GetSheHe]는 어제의 희망과 내일의 꿈을 안고 무거운 짐을 짊어지며 왕좌에 올랐습니다.”"
+
+ historic_heir_death.t:0 "후계자가 죽었습니다."
+ historic_heir_death.d:0 "후계자인[SCOPE.sCharacter('dead_character').GetFirstName]이 사망하면서 비극이 닥쳤습니다. 전국에 혼란의 분위기가 감돌고 있습니다."
+ historic_heir_death.f:0 "“[ROOT.GetCountry.GetAdjectiveNoFormatting]의 왕위 계승자인 [SCOPE.sCharacter('dead_character').GetFirstName]의 서거를 애도합니다. 장례 행렬이 지나가고, 호기심 많은 구경꾼들이  “[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]”을 보기 위해 앞을 다투어 몰려듭니다. 어떤 사람들은 [ROOT.GetCountry.GetRuler.GetSheHe]가 군주가 되었다면 어땠을지 궁금해합니다. 좋든 나쁘든, 번영이든 가난이든, 후계자는 죽었으니 더 이상 중요하지 않습니다.”"
+
+ historic_monarch_birth.t:0 "후계자의 탄생"
+ historic_monarch_birth.d:0 "우리의 [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]이 후계자의 탄생을 기쁜 마음으로 발표했습니다. 이번 출산으로 후계자 계승이 확정되었습니다."
+ historic_monarch_birth.f:0 "“왕궁은 분주한 활동으로 가득합니다. 의사, 간호사, 조산사들이 사방에서 분주하게 움직입니다. 침실에서 왕비는 한 번에 한 번씩 '절차'를 진행합니다. 모든 것이 끝나면 안도의 한숨이 나옵니다. 신이시여, [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]을 구해주시길.”"

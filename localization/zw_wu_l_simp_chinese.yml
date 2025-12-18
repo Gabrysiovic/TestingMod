@@ -1,0 +1,233 @@
+﻿#l_braz_por:
+#l_english:
+#l_french:
+#l_german:
+#l_japanese:
+#l_korean:
+#l_polish:
+#l_russian:
+l_simp_chinese:
+#l_spanish:
+#l_turkish:
+
+
+# decision
+
+zw_decision_start_clothes_westernization: "接纳西方文化"
+zw_decision_start_clothes_westernization_desc: "随着西方国家的影响力逐渐增加，我们应尝试接纳部分西方习俗从而更好地融入国际社会。"
+
+# JE
+
+zw_je_clothes_westernization: "接纳西方文化"
+
+zw_je_clothes_westernization_reason: "$zw_je_clothes_westernization_reason_1$\n$zw_long_delimiter$\n$zw_je_clothes_westernization_reason_progress$\n\n$zw_je_clothes_westernization_reason_progress_1$\n\n$zw_je_clothes_westernization_reason_progress_2$\n\n$zw_je_clothes_westernization_reason_progress_3$\n\n$zw_je_clothes_westernization_reason_2$\n\n$zw_je_clothes_westernization_reason_3$"
+
+zw_je_clothes_westernization_reason_1: "随着西方国家在我国影响力的增加，为了能与西方列强平等交流以及更好地融入国际社会，我们应尝试适应部分西方习俗，这包括他们的衣着礼仪。我们的领导人和军队将开始采用西式服饰和制服，并且随着民众对西方文化接纳度的提高，更多的人群会跟随该潮流改变其衣着习惯。"
+
+zw_je_clothes_westernization_reason_progress: "#white #b 根据以下条件，进度条预计下月将增加#green [SCOPE.ScriptValue('zw_value_clothes_westernization_monthly_progress')]#!：#!#!"
+
+zw_je_clothes_westernization_reason_progress_1: "1. 满足以下条件时，进度条将每月增加#green #b 1#!#!：\n    我们未制定[GetLawType('law_traditionalism').GetName]、[GetLawType('law_isolationism').GetName]、[GetLawType('law_serfdom').GetName]和[GetLawType('law_peasant_levies').GetName]"
+
+zw_je_clothes_westernization_reason_progress_2: "2. 满足以下条件时，进度条将每月增加#green #b 0.5#!#!：\n    @industrialists!#white #b $ig_industrialists$#!#!或@intelligentsia!#white #b $ig_intelligentsia$#!#!的[concept_clout]大于或等于10%。"
+
+zw_je_clothes_westernization_reason_progress_3: "3. 满足以下条件时，进度条将每月增加#green #b 0.5#!#!：\n    我们是[concept_recognized_power]。"
+
+zw_je_clothes_westernization_reason_2: "进度条每增加25，意味着更多的人群和利益集团已接纳了西方文化，其中进步的利益集团和人群会更快地接纳西方文化。"
+
+zw_je_clothes_westernization_reason_3: "然而，作为传统习俗的主要支持者，@devout!#white #b $ig_devout$#!#!、#white #b $clergymen$#!#!、#white #b $peasants$#!#!和#white #b $laborers$#!#!将不会仅仅为此而改变他们的衣着习惯。"
+
+zw_je_clothes_westernization_goal: "进度条达到100%"
+
+zw_long_delimiter: "  @divider_start!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_end!  "
+
+# buttons: army uniforms
+
+zw_change_army_uniform_button: "陆军制服"
+zw_change_army_uniform_button_desc: ""
+
+zw_change_army_uniform_button_effect_breakdown: "更换陆军将领的制服风格。\n\n可选择以下的样式：#white #b \n通用欧式制服\n标准灰色制服\n标准蓝色制服\n标准黑色制服\n标准红色制服\n标准深蓝制服\n中款蓝色外套\n中款红色外套\n中款深蓝外套\n长款白色外套\n长款蓝色外套\n混合蓝色制服\n混合红色制服\n混合深蓝制服#!#!\n\n当前风格："
+
+zw_change_army_uniform_button_effect_0: "$zw_change_army_uniform_button_effect_breakdown$#yellow #b 通用欧式制服#!#!\n#green 陆军将领会灵活选择各式欧式制服。#!"
+
+zw_change_army_uniform_button_effect_1: "$zw_change_army_uniform_button_effect_breakdown$#yellow #b 标准灰色制服#!#!\n#green 陆军将领会穿着以灰色为主基调的标准样式制服。#!"
+
+zw_change_army_uniform_button_effect_2: "$zw_change_army_uniform_button_effect_breakdown$#yellow #b 标准蓝色制服#!#!\n#green 陆军将领会穿着以蓝色为主基调的标准样式制服。#!"
+
+zw_change_army_uniform_button_effect_3: "$zw_change_army_uniform_button_effect_breakdown$#yellow #b 标准黑色制服#!#!\n#green 陆军将领会穿着以黑色为主基调的标准样式制服。#!"
+
+zw_change_army_uniform_button_effect_4: "$zw_change_army_uniform_button_effect_breakdown$#yellow #b 标准红色制服#!#!\n#green 陆军将领会穿着以红色为主基调的标准样式制服。#!"
+
+zw_change_army_uniform_button_effect_5: "$zw_change_army_uniform_button_effect_breakdown$#yellow #b 标准深蓝制服#!#!\n#green 陆军将领会穿着以深蓝为主基调的标准样式制服。#!"
+
+zw_change_army_uniform_button_effect_6: "$zw_change_army_uniform_button_effect_breakdown$#yellow #b 中款蓝色外套#!#!\n#green 陆军将领会穿着中款蓝色外套。#!"
+
+zw_change_army_uniform_button_effect_7: "$zw_change_army_uniform_button_effect_breakdown$#yellow #b 中款红色外套#!#!\n#green 陆军将领会穿着中款红色外套。#!"
+
+zw_change_army_uniform_button_effect_8: "$zw_change_army_uniform_button_effect_breakdown$#yellow #b 中款深蓝外套#!#!\n#green 陆军将领会穿着中款深蓝外套。#!"
+
+zw_change_army_uniform_button_effect_9: "$zw_change_army_uniform_button_effect_breakdown$#yellow #b 长款白色外套#!#!\n#green 陆军将领会穿着长款白色外套。#!"
+
+zw_change_army_uniform_button_effect_10: "$zw_change_army_uniform_button_effect_breakdown$#yellow #b 长款蓝色外套#!#!\n#green 陆军将领会穿着长款蓝色外套。#!"
+
+zw_change_army_uniform_button_effect_11: "$zw_change_army_uniform_button_effect_breakdown$#yellow #b 混合蓝色制服#!#!\n#green 陆军将领会穿着蓝色标准制服和中款蓝色外套。#!"
+
+zw_change_army_uniform_button_effect_12: "$zw_change_army_uniform_button_effect_breakdown$#yellow #b 混合红色制服#!#!\n#green 陆军将领会穿着红色标准制服和中款红色外套。#!"
+
+zw_change_army_uniform_button_effect_13: "$zw_change_army_uniform_button_effect_breakdown$#yellow #b 混合深蓝制服#!#!\n#green 陆军将领会穿着深蓝标准制服和中款深蓝外套。#!"
+
+# buttons: army headgear
+
+zw_change_army_headgear_button: "陆军军帽"
+zw_change_army_headgear_button_desc: ""
+
+zw_change_army_headgear_button_effect_breakdown: "更换陆军将领的军帽。\n\n可选择以下的样式：#white #b \n通用大檐帽\n大檐帽（黑色）\n通用花纹平顶帽\n花纹平顶帽（黑色）\n花纹平顶帽（蓝色）\n花纹平顶帽（红色）\n圆边帽\n平顶帽（深蓝）\n平顶帽（灰色）#!#!\n\n当前风格："
+
+zw_change_army_headgear_button_effect_0: "$zw_change_army_headgear_button_effect_breakdown$#yellow #b 通用大檐帽#!#!\n#green 陆军将领会灵活选择各式大檐帽或不佩戴军帽。#!"
+
+zw_change_army_headgear_button_effect_1: "$zw_change_army_headgear_button_effect_breakdown$#yellow #b 大檐帽（黑色）#!#!\n#green 陆军将领会统一佩戴黑色大檐帽。#!"
+
+zw_change_army_headgear_button_effect_2: "$zw_change_army_headgear_button_effect_breakdown$#yellow #b 通用花纹平顶帽#!#!\n#green 陆军将领会灵活选择各式花纹平顶帽。#!"
+
+zw_change_army_headgear_button_effect_3: "$zw_change_army_headgear_button_effect_breakdown$#yellow #b 花纹平顶帽（黑色）#!#!\n#green 陆军将领会统一佩戴黑色花纹平顶帽。#!"
+
+zw_change_army_headgear_button_effect_4: "$zw_change_army_headgear_button_effect_breakdown$#yellow #b 花纹平顶帽（蓝色）#!#!\n#green 陆军将领会统一佩戴蓝色花纹平顶帽。#!"
+
+zw_change_army_headgear_button_effect_5: "$zw_change_army_headgear_button_effect_breakdown$#yellow #b 花纹平顶帽（红色）#!#!\n#green 陆军将领会统一佩戴红色花纹平顶帽。#!"
+
+zw_change_army_headgear_button_effect_6: "$zw_change_army_headgear_button_effect_breakdown$#yellow #b 圆边帽#!#!\n#green 陆军将领会统一佩戴圆边帽。#!"
+
+zw_change_army_headgear_button_effect_7: "$zw_change_army_headgear_button_effect_breakdown$#yellow #b 平顶帽（深蓝）#!#!\n#green 陆军将领会统一佩戴蓝色平顶帽。#!"
+
+zw_change_army_headgear_button_effect_8: "$zw_change_army_headgear_button_effect_breakdown$#yellow #b 平顶帽（灰色）#!#!\n#green 陆军将领会统一佩戴灰色平顶帽。#!"
+
+# buttons: navy uniforms
+
+zw_change_navy_uniform_button: "海军制服"
+zw_change_navy_uniform_button_desc: ""
+
+zw_change_navy_uniform_button_effect_breakdown: "更换海军将领的制服风格。\n\n可选择以下的样式：#white #b \n通用欧式制服\n标准灰色制服\n标准蓝色制服\n标准黑色制服\n标准红色制服\n标准深蓝制服\n中款蓝色外套\n中款红色外套\n中款深蓝外套\n长款白色外套\n长款蓝色外套\n混合蓝色制服\n混合红色制服\n混合深蓝制服#!#!\n\n当前风格："
+
+zw_change_navy_uniform_button_effect_0: "$zw_change_navy_uniform_button_effect_breakdown$#yellow #b 通用欧式制服#!#!\n#green 海军将领会灵活选择各式欧式制服。#!"
+
+zw_change_navy_uniform_button_effect_1: "$zw_change_navy_uniform_button_effect_breakdown$#yellow #b 标准灰色制服#!#!\n#green 海军将领会穿着以灰色为主基调的标准样式制服。#!"
+
+zw_change_navy_uniform_button_effect_2: "$zw_change_navy_uniform_button_effect_breakdown$#yellow #b 标准蓝色制服#!#!\n#green 海军将领会穿着以蓝色为主基调的标准样式制服。#!"
+
+zw_change_navy_uniform_button_effect_3: "$zw_change_navy_uniform_button_effect_breakdown$#yellow #b 标准黑色制服#!#!\n#green 海军将领会穿着以黑色为主基调的标准样式制服。#!"
+
+zw_change_navy_uniform_button_effect_4: "$zw_change_navy_uniform_button_effect_breakdown$#yellow #b 标准红色制服#!#!\n#green 海军将领会穿着以红色为主基调的标准样式制服。#!"
+
+zw_change_navy_uniform_button_effect_5: "$zw_change_navy_uniform_button_effect_breakdown$#yellow #b 标准深蓝制服#!#!\n#green 海军将领会穿着以深蓝为主基调的标准样式制服。#!"
+
+zw_change_navy_uniform_button_effect_6: "$zw_change_navy_uniform_button_effect_breakdown$#yellow #b 中款蓝色外套#!#!\n#green 海军将领会穿着中款蓝色外套。#!"
+
+zw_change_navy_uniform_button_effect_7: "$zw_change_navy_uniform_button_effect_breakdown$#yellow #b 中款红色外套#!#!\n#green 海军将领会穿着中款红色外套。#!"
+
+zw_change_navy_uniform_button_effect_8: "$zw_change_navy_uniform_button_effect_breakdown$#yellow #b 中款深蓝外套#!#!\n#green 海军将领会穿着中款深蓝外套。#!"
+
+zw_change_navy_uniform_button_effect_9: "$zw_change_navy_uniform_button_effect_breakdown$#yellow #b 长款白色外套#!#!\n#green 海军将领会穿着长款白色外套。#!"
+
+zw_change_navy_uniform_button_effect_10: "$zw_change_navy_uniform_button_effect_breakdown$#yellow #b 长款蓝色外套#!#!\n#green 海军将领会穿着长款蓝色外套。#!"
+
+zw_change_navy_uniform_button_effect_11: "$zw_change_navy_uniform_button_effect_breakdown$#yellow #b 混合蓝色制服#!#!\n#green 海军将领会穿着蓝色标准制服和中款蓝色外套。#!"
+
+zw_change_navy_uniform_button_effect_12: "$zw_change_navy_uniform_button_effect_breakdown$#yellow #b 混合红色制服#!#!\n#green 海军将领会穿着红色标准制服和中款红色外套。#!"
+
+zw_change_navy_uniform_button_effect_13: "$zw_change_navy_uniform_button_effect_breakdown$#yellow #b 混合深蓝制服#!#!\n#green 海军将领会穿着深蓝标准制服和中款深蓝外套。#!"
+
+# buttons: navy headgear
+
+zw_change_navy_headgear_button: "海军军帽"
+zw_change_navy_headgear_button_desc: ""
+
+zw_change_navy_headgear_button_effect_breakdown: "更换海军将领的军帽。\n\n可选择以下的样式：#white #b \n海军双角帽\n大檐帽（黑色）\n通用花纹平顶帽\n花纹平顶帽（黑色）\n花纹平顶帽（蓝色）\n花纹平顶帽（红色）\n圆边帽\n平顶帽（深蓝）\n平顶帽（灰色）#!#!\n\n当前风格："
+
+zw_change_navy_headgear_button_effect_0: "$zw_change_navy_headgear_button_effect_breakdown$#yellow #b 海军双角帽#!#!\n#green 海军将领会统一佩戴海军双角帽。#!"
+
+zw_change_navy_headgear_button_effect_1: "$zw_change_navy_headgear_button_effect_breakdown$#yellow #b 大檐帽（黑色）#!#!\n#green 海军将领会统一佩戴黑色大檐帽。#!"
+
+zw_change_navy_headgear_button_effect_2: "$zw_change_navy_headgear_button_effect_breakdown$#yellow #b 通用花纹平顶帽#!#!\n#green 海军将领会灵活选择各式花纹平顶帽。#!"
+
+zw_change_navy_headgear_button_effect_3: "$zw_change_navy_headgear_button_effect_breakdown$#yellow #b 花纹平顶帽（黑色）#!#!\n#green 海军将领会统一佩戴黑色花纹平顶帽。#!"
+
+zw_change_navy_headgear_button_effect_4: "$zw_change_navy_headgear_button_effect_breakdown$#yellow #b 花纹平顶帽（蓝色）#!#!\n#green 海军将领会统一佩戴蓝色花纹平顶帽。#!"
+
+zw_change_navy_headgear_button_effect_5: "$zw_change_navy_headgear_button_effect_breakdown$#yellow #b 花纹平顶帽（红色）#!#!\n#green 海军将领会统一佩戴红色花纹平顶帽。#!"
+
+zw_change_navy_headgear_button_effect_6: "$zw_change_navy_headgear_button_effect_breakdown$#yellow #b 圆边帽#!#!\n#green 海军将领会统一佩戴圆边帽。#!"
+
+zw_change_navy_headgear_button_effect_7: "$zw_change_navy_headgear_button_effect_breakdown$#yellow #b 平顶帽（深蓝）#!#!\n#green 海军将领会统一佩戴深蓝平顶帽。#!"
+
+zw_change_navy_headgear_button_effect_8: "$zw_change_navy_headgear_button_effect_breakdown$#yellow #b 平顶帽（灰色）#!#!\n#green 海军将领会统一佩戴灰色平顶帽。#!"
+
+# buttons: army field uniforms
+
+zw_change_army_headgear_late_button: "战地制服"
+zw_change_army_headgear_late_button_desc: ""
+
+zw_change_army_headgear_late_button_effect_a: "制定新式陆军制服。\n\n随着战争形态的发展，比起花俏美观的制服，我们更需要一套更实用的制服。\n"
+
+zw_change_army_headgear_late_button_effect_b: "制定潜在新式陆军制服风格。\n\n战争形态日新月异，比起花俏美观的制服，也许在不远的未来我们更需要一套实用的制服，因此现在便确定潜在新制服的大致风格不失为一个明智选择。\n"
+
+zw_change_army_headgear_late_button_effect_breakdown: "可选择以下的样式：#white #b \n战地制服和平顶帽\n战地制服和大檐帽\n战地制服和扁平大檐帽\n战地制服和圆边帽\n不更换制服#!#!\n\n当前风格："
+
+zw_change_army_headgear_late_button_effect_0: "$zw_change_army_headgear_late_button_effect_breakdown$#yellow #b 战地制服和平顶帽#!#!\n#green 陆军将领会穿着和佩戴适合野战配色的标准制服和平顶军帽。#!"
+
+zw_change_army_headgear_late_button_effect_1: "$zw_change_army_headgear_late_button_effect_breakdown$#yellow #b 战地制服和大檐帽#!#!\n#green 陆军将领会穿着和佩戴适合野战配色的标准制服和大檐帽。#!"
+
+zw_change_army_headgear_late_button_effect_2: "$zw_change_army_headgear_late_button_effect_breakdown$#yellow #b 战地制服和扁平大檐帽#!#!\n#green 陆军将领会穿着和佩戴适合野战配色的标准制服和扁平大檐帽。#!"
+
+zw_change_army_headgear_late_button_effect_3: "$zw_change_army_headgear_late_button_effect_breakdown$#yellow #b 战地制服和圆边帽#!#!\n#green 陆军将领会穿着和佩戴适合野战配色的标准制服和圆边帽。#!"
+
+zw_change_army_headgear_late_button_effect_4: "$zw_change_army_headgear_late_button_effect_breakdown$#yellow #b 不更换制服#!#!\n#green 陆军将领不会更换当前的制服。#!"
+
+# buttons: monarch uniforms
+
+zw_change_monarch_clothes_button: "礼仪制服"
+zw_change_monarch_clothes_button_desc: ""
+
+zw_change_monarch_clothes_button_effect_a: "制定礼仪制服。\n\n作为国家的元首，我们的君主会在正式场合穿着该制服。\n"
+
+zw_change_monarch_clothes_button_effect_b: "制定礼仪制服。\n\n礼仪制服通常作为王室和贵族在正式场合的着装。尽管我们已经不是君主制国家，我们仍应出于象征性意义设计一套属于我们的礼仪制服。\n"
+
+zw_change_monarch_clothes_button_effect_breakdown: "可选择以下的样式：#white #b \n通用欧式制服\n黑色制服\n蓝色制服\n红色制服\n深蓝制服\n长款制服#!#!\n\n当前风格："
+
+zw_change_monarch_clothes_button_effect_0: "$zw_change_monarch_clothes_button_effect_breakdown$#yellow #b 通用欧式制服#!#!\n#green 我们会使用各式欧式制服作为礼仪制服。#!"
+
+zw_change_monarch_clothes_button_effect_1: "$zw_change_monarch_clothes_button_effect_breakdown$#yellow #b 黑色制服#!#!\n#green 我们会使用黑色的单排扣外套作为礼仪制服。#!"
+
+zw_change_monarch_clothes_button_effect_2: "$zw_change_monarch_clothes_button_effect_breakdown$#yellow #b 蓝色制服#!#!\n#green 我们会使用蓝色的单排扣或双排扣外套作为礼仪制服。#!"
+
+zw_change_monarch_clothes_button_effect_3: "$zw_change_monarch_clothes_button_effect_breakdown$#yellow #b 红色制服#!#!\n#green 我们会使用红色的单排扣或双排扣外套作为礼仪制服。#!"
+
+zw_change_monarch_clothes_button_effect_4: "$zw_change_monarch_clothes_button_effect_breakdown$#yellow #b 深蓝制服#!#!\n#green 我们会使用深蓝的单排扣或双排扣外套作为礼仪制服。#!"
+
+zw_change_monarch_clothes_button_effect_5: "$zw_change_monarch_clothes_button_effect_breakdown$#yellow #b 长款制服#!#!\n#green 我们会使用正式的长款外套作为礼仪制服。#!"
+
+# buttons: show ruler outfits
+
+zw_show_outfit_ruler_politician_button: "展示统治者服饰"
+zw_show_outfit_ruler_politician_button_desc: ""
+
+# buttons: show commander outfits
+
+zw_show_outfit_general_admiral_button: "展示指挥官服饰"
+zw_show_outfit_general_admiral_button_desc: ""
+
+# event
+
+zw_event_show_outfits.1.t: "统治者服饰"
+zw_event_show_outfits.1.d: "展示统治者的服装。"
+zw_event_show_outfits.1.f: "检查统治者的服装风格是否合适。"
+zw_event_show_outfits.1.option_1: "结束展示。"
+
+zw_event_show_outfits.2.t: "陆军将领服饰"
+zw_event_show_outfits.2.d: "展示陆军将领的服装。"
+zw_event_show_outfits.2.f: "检查指挥官的服装风格是否合适。"
+zw_event_show_outfits.2.option_1: "继续展示海军将领服饰。"
+zw_event_show_outfits.2.option_2: "结束展示。"
+
+zw_event_show_outfits.3.t: "海军将领服饰"
+zw_event_show_outfits.3.d: "展示海军将领的服装。"
+zw_event_show_outfits.3.f: "检查指挥官的服装风格是否合适。"
+zw_event_show_outfits.3.option_1: "结束展示。"

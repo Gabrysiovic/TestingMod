@@ -1,0 +1,8 @@
+name = "The Emperor and his Golden eagle"
+path = "dlc/dlc_mexhabs"
+steam_id = ""
+pops_id = "dlc_mexhabs"
+mp_synced = yes
+affects_save_compatibility = yes
+localizable_name = "dlc_mexhabs"
+checksum = ""

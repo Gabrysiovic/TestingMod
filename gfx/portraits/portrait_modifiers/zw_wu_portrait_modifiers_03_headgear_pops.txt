@@ -1,0 +1,85 @@
+﻿zw_wc_headgear_pop = {
+
+	usage = game
+	selection_behavior = weighted_random
+
+	# pop_shopkeepers, weight = 1000
+
+	zw_westernized_headgear_pop_shopkeepers = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = european_bowlerhat
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				zw_trigger_westernized_headgear_pop_shopkeepers = yes
+			}
+		}
+	}
+
+	# pop_upper, weight = 1000
+
+	zw_westernized_headgear_pop_upper = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = european_tophat
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				zw_trigger_westernized_headgear_pop_upper = yes
+			}
+		}
+	}
+
+	# pop_middle, weight = 1000
+
+	zw_westernized_headgear_pop_middle = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = european_bowlerhat
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				zw_trigger_westernized_headgear_pop_middle = yes
+			}
+		}
+	}
+
+	# pop_poor, weight = 1000
+
+	zw_westernized_headgear_pop_poor = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = european_flatcap
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				zw_trigger_westernized_headgear_pop_poor = yes
+			}
+		}
+	}
+}

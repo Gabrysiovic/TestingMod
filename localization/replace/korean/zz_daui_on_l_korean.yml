@@ -1,0 +1,27 @@
+﻿﻿l_korean:
+ HTAB: "$TAB$#b -#!$TAB$"
+ TOOLTIP_DELIMITER_LONG: "@divider_start!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_end!"
+
+ # GDP Ownership Display
+ COUNTRY_GDP_OWNERSHIP_ONE_LINE: "#title [Concept('concept_building_owners', 'GDP 소유 지분')]#!"
+ GDP_OWNERSHIP_RATIO_TT: "#header [Concept('concept_building_owners', 'GDP 소유 지분')]#!\n[Country.GetAdjective] $GDP_SHORT$ 소유권: @money![Country.GetGDP|Dv] / [Country.MakeScope.ScriptValue('gdp_ownership_by_self')|%v] + [Country.MakeScope.ScriptValue('gdp_ownership_of_other')|%v] ([Country.GetGDPRanking])\n[SelectLocalization(IsZero_CFixedPoint(Country.MakeScope.ScriptValue('gdp_ownership_by_other_count')), 'DA_OVERSEA_INVESTMENT_NONE_TT', 'DA_OVERSEA_INVESTMENT_TT')]\n[SelectLocalization(IsZero_CFixedPoint(Country.MakeScope.ScriptValue('gdp_ownership_of_other_count')), 'DA_FOREIGN_INVESTMENT_NONE_TT', 'DA_FOREIGN_INVESTMENT_TT')][AddLocalizationIf(Not(ObjectsEqual(GetPlayer, Country.Self)), 'DA_GDP_OTHER_TT')]"
+
+ DA_OVERSEA_INVESTMENT_TT: "#b 자국이 소유한 해외 GDP 지분:#! [Country.MakeScope.ScriptValue('gdp_ownership_by_other_count')|v0]개의 나라에 대해, [Country.GetAdjective] $GDP_SHORT$의 #tooltippable;tooltip:[Country.GetTooltipTag],da_gui_gdp_ownership_other [Country.MakeScope.ScriptValue('gdp_ownership_of_other')|%v+2]#!와 맞먹는 양의 GDP 지분을 보유하고 있습니다"
+ DA_OVERSEA_INVESTMENT_NONE_TT: "[Country.GetName]에는 타국에 대해 소유한 해외 GDP 지분이 #b 없습니다#! "
+ DA_FOREIGN_INVESTMENT_TT: "#b 타국이 소유한 국내 GDP 지분:#! [Country.MakeScope.ScriptValue('gdp_ownership_of_other_count')|v0]개의 나라에서, #tooltippable;tooltip:[Country.GetTooltipTag],da_gui_gdp_ownership_self [Country.MakeScope.ScriptValue('gdp_ownership_by_other')|%v-2]#!의 [Country.GetAdjective] 내 $GDP_SHORT$ 지분을 보유하고 있습니다"
+ DA_FOREIGN_INVESTMENT_NONE_TT: "[Country.GetName]에는 타국이 소유한 국내 GDP 지분이 #b 없습니다#!"
+
+ da_gui_gdp_ownership_title: "#title     $GDP_SHORT$   $HTAB$  공유 $TAB$#b -#! [Concept('concept_building_level', 'Level')]  #b - #!$TAB$[concept_country]#!"
+ da_gui_gdp_ownership_self: "[GetScriptedGui('da_gui_gdp_ownership_self_list').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).End)]"
+ da_gui_gdp_ownership_self_tt: "@money![Multiply_CFixedPoint(Country.GetInvestmentGdpFractionInCountry(THIS.GetCountry.Self), Country.GetGDP)|Dv]$HTAB$[Country.GetInvestmentGdpFractionInCountry(THIS.GetCountry.Self)|%2v]$HTAB$[Country.GetInvestmentLevelsInCountry(THIS.GetCountry.Self)|v]$HTAB$[THIS.GetCountry.GetName]"
+ da_gui_gdp_ownership_other: "[GetScriptedGui('da_gui_gdp_ownership_other_list').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).End)]"
+ da_gui_gdp_ownership_other_tt: "@money![Multiply_CFixedPoint(THIS.GetCountry.GetInvestmentGdpFractionInCountry(Country.Self), THIS.GetCountry.GetGDP)|Dv]$HTAB$[THIS.GetCountry.GetInvestmentGdpFractionInCountry(Country.Self)|%2v]$HTAB$[THIS.GetCountry.GetInvestmentLevelsInCountry(Country.Self)|v]$HTAB$[THIS.GetCountry.GetName]"
+
+ DA_GDP_OTHER_TT: "\n$TOOLTIP_DELIMITER_LONG$\n[SelectLocalization(IsZero(Country.GetInvestmentLevelsInCountry(GetPlayer)), 'DA_GDP_OTHER_00', 'DA_GDP_OTHER_01')]\n[SelectLocalization(IsZero(GetPlayer.GetInvestmentLevelsInCountry(Country.Self)), 'DA_GDP_OTHER_10', 'DA_GDP_OTHER_11')]"
+ DA_GDP_OTHER_00: "[GetPlayer.GetName]는 [Country.GetName]에 소유한 [concept_building_level]가 #b 없습니다#!"
+ DA_GDP_OTHER_01: "[GetPlayer.GetName]는 [Country.GetName]에 대해 [GetPlayer.GetInvestmentLevelsInCountry(Country.Self)|v]개의 [Concept('concept_building_level', '$concept_building_levels$')]를 소유하며, 이는 [GetPlayer.GetAdjective] $GDP_SHORT$의 [GetPlayer.GetInvestmentGdpFractionInCountry(Country.Self)|%2v] 에 맞먹습니다"
+ DA_GDP_OTHER_10: "[Country.GetName]는 [GetPlayer.GetName]에 소유한 [concept_building_level]가 #b 없습니다#!"
+ DA_GDP_OTHER_11: "[Country.GetName]는 [GetPlayer.GetName]에 대해 [GetPlayer.GetInvestmentLevelsInCountry(Country.Self)|v]개의 [Concept('concept_building_level', '$concept_building_levels$')]를 소유하며, 이는 [TARGET_COUNTRY.GetAdjective] $GDP_SHORT$의 [TARGET_COUNTRY.GetInvestmentGdpFractionInCountry(COUNTRY.Self)|%2v] 에 맞먹습니다"
+
+ ATTITUDE_DETAILS: "[COUNTRY.GetAttitudeTowards(TARGET_COUNTRY.Self).GetReasonsDesc]\n$TOOLTIP_DELIMITER$\n[TARGET_COUNTRY.GetName]는 [COUNTRY.GetName]에 대해 [COUNTRY.GetInvestmentLevelsInCountry(TARGET_COUNTRY.Self)|v]개의 [Concept('concept_building_level', '$concept_building_levels$')] 를 소유하며, 이는 [COUNTRY.GetAdjective] $GDP_SHORT$의 [COUNTRY.GetInvestmentGdpFractionInCountry(TARGET_COUNTRY.Self)|%2v]에 맞먹습니다 \n[COUNTRY.GetAttitudeTowards(TARGET_COUNTRY.Self).GetReasonsDesc]\n$TOOLTIP_DELIMITER$\n[COUNTRY.GetName]는 [TARGET_COUNTRY.GetName]에 대해 [TARGET_COUNTRY.GetInvestmentLevelsInCountry(COUNTRY.Self)|v]개의 [Concept('concept_building_level', '$concept_building_levels$')] 를 소유하며, 이는 [TARGET_COUNTRY.GetAdjective] $GDP_SHORT$의 [TARGET_COUNTRY.GetInvestmentGdpFractionInCountry(COUNTRY.Self)|%2v]에 맞먹습니다"
+ ai_attitude_human_tooltip: "#header $ai_attitude_human$#!\n$ai_attitude_human_desc$\n$TOOLTIP_DELIMITER$\n$ATTITUDE_DETAILS$"

@@ -1,0 +1,1408 @@
+﻿# Netherlands
+
+#ecchi_net_thorbecke_character_template = {
+#    first_name = ecchi_Johan_Rudolph
+#    last_name = ecchi_Thorbecke
+#    historical = yes
+#    culture = cu:dutch
+#
+#    religion = rel:protestant
+#    ideology = ideology_liberal_leader
+#    interest_group = ig_intelligentsia
+#	dna = ecchi_dna_johan_rudolph_thorbecke
+#    birth_date = 1798.1.14
+#    traits = { erudite meticulous experienced_political_operator }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            exists = c:NET
+#            this = c:NET
+#        }
+#        interest_group_trigger = {
+#            is_interest_group_type = ig_intelligentsia
+#        }
+#        earliest_usage_date = 1836.1.1
+#        latest_usage_date = 1872.6.4
+#        chance = 100
+#    }
+#}
+
+ecchi_net_van_den_bosch_character_template = {
+    first_name = Johannes
+    last_name = van_den_Bosch
+    historical = yes
+    culture = cu:dutch
+
+    religion = rel:protestant
+    ideology = ideology_jingoist_leader
+    interest_group = ig_armed_forces
+	dna = ecchi_dna_johannes_van_den_bosch
+    birth_date = 1780.2.2
+    traits = { wrathful grifter surveyor }
+    commander_rank = default
+    commander_usage = {
+        country_trigger = {
+            OR = {
+                AND = {
+                    exists = c:NET
+                    this = c:NET
+                    NOT = { exists = c:DEI }
+                }
+                AND = {
+                    exists = c:DEI
+                    this = c:DEI
+                }
+            }
+        }
+        role = general
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1844.1.28
+        chance = 65
+    }
+}
+
+ecchi_net_kuyper_character_template = {
+    first_name = Abraham
+    last_name = ecchi_Kuyper
+    historical = yes
+    culture = cu:dutch
+
+    religion = rel:protestant
+    ideology = ideology_theocrat
+    interest_group = ig_devout
+	dna = ecchi_dna_abraham_kuyper
+    birth_date = 1837.10.29
+    traits = { pious ambitious persistent }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:NET
+            this = c:NET
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_devout
+        }
+        earliest_usage_date = 1874.1.1
+        latest_usage_date = 1920.11.8
+        chance = 65
+    }
+}
+
+ecchi_net_troelstra_character_template = {
+    first_name = ecchi_Pieter_Jelles
+    last_name = ecchi_Troelstra
+    historical = yes
+    culture = cu:dutch
+
+    religion = rel:protestant
+    ideology = ideology_republican
+    interest_group = ig_trade_unions
+	dna = ecchi_dna_pieter_jelles_troelstra
+    birth_date = 1860.4.20
+    traits = { reckless romantic persistent }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:NET
+            this = c:NET
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            OR = {
+                is_interest_group_type = ig_trade_unions
+                is_interest_group_type = ig_intelligentsia
+            }
+        }
+        earliest_usage_date = 1900.1.1
+        latest_usage_date = 1930.5.12
+        chance = 65
+    }
+}
+
+net_prinsterer_character_template = {
+    first_name = Guillaume
+    last_name = ecchi_Groen_van_Prinsterer
+    historical = yes
+    culture = cu:dutch
+
+    religion = rel:protestant
+    ideology = ideology_theocrat
+    interest_group = ig_devout
+	dna = mr_net_groen_van_prinsterer_guillaume
+    birth_date = 1801.7.21
+    traits = { pious persistent literary }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:NET
+            this = c:NET
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_devout
+        }
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1866.1.1
+        chance = 100
+    }
+}
+
+net_d_ablaing_van_giessenburg_character_template = {
+    first_name = Johan
+    last_name = D_Ablaing_van_Giessenburg
+    historical = yes
+    culture = cu:dutch
+
+    religion = rel:protestant
+    ideology = ideology_royalist
+    interest_group = ig_armed_forces
+	dna = mr_net_johan_d_ablaing_van_giessenburg
+    birth_date = 1779.5.6
+    traits = { brave popular_commander }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:NET
+            this = c:NET
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_armed_forces
+        }
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1859.5.27
+        chance = 100
+    }
+}
+
+#net_mutsaers_character_template = {
+#    first_name = Jacobus_Arnoldus
+#    last_name = Mutsaers
+#    historical = yes
+#    culture = cu:dutch
+#
+#    religion = rel:catholic
+#    ideology = ideology_traditionalist
+#    interest_group = ig_petty_bourgeoisie
+#	#dna = mr_net_groen_van_prinsterer_guillaume
+#    birth_date = 1805.1.28
+#    traits = { pious tactful }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            exists = c:NET
+#            this = c:NET
+#        }
+#        interest_group_trigger = {
+#            is_interest_group_type = ig_petty_bourgeoisie
+#        }
+#        earliest_usage_date = 1836.1.1
+#        latest_usage_date = 1870.1.1
+#        chance = 100
+#    }
+#}
+
+net_nieuwenhuis_character_template = {
+	first_name = Ferdinand_Domela
+	last_name = Nieuwenhuis
+	historical = yes
+	culture = cu:dutch
+	religion = rel:protestant
+	interest_group = ig_trade_unions
+	ideology = ideology_anarchist
+	birth_date = 1846.12.31
+	dna = dna_debs_eugene
+	traits = { ambitious direct charismatic }
+	agitator_usage = {
+		country_trigger = {
+			c:NET ?= this
+		}
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_trade_unions
+        }
+		earliest_usage_date = 1879.1.1
+		latest_usage_date = 1919.11.18
+		chance = 50
+	}
+}
+
+net_van_houten_character_template = {
+	first_name = Samuel
+	last_name = van_Houten
+	historical = yes
+	culture = cu:dutch
+	religion = rel:protestant
+	interest_group = ig_intelligentsia
+	ideology = ideology_reformer
+	birth_date = 1837.2.17
+	dna = mr_net_van_houten_samuel
+	traits = { imposing experienced_political_operator }
+	agitator_usage = {
+		country_trigger = {
+			c:NET ?= this
+		}
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_intelligentsia
+        }
+		earliest_usage_date = 1864.1.1
+		latest_usage_date = 1924.11.18
+		chance = 50
+	}
+}
+
+net_jacobs_character_template = {
+	first_name = Aletta
+	last_name = Jacobs
+	historical = yes
+	culture = cu:dutch
+	religion = rel:jewish
+    female = yes
+	interest_group = ig_intelligentsia
+	ideology = ideology_feminist
+	birth_date = 1854.2.9
+	dna = mr_net_jacobs_aletta
+	traits = { persistent erudite }
+	agitator_usage = {
+		country_trigger = {
+			c:NET ?= this
+		}
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_intelligentsia
+        }
+		earliest_usage_date = 1881.1.1
+		latest_usage_date = 1929.7.10
+		chance = 100
+	}
+}
+
+net_snijders_character_template = {
+	first_name = Cornelis_Jacobus
+	last_name = Snijders
+	historical = yes
+	culture = cu:dutch
+	religion = rel:protestant
+	interest_group = ig_armed_forces
+	ideology = ideology_royalist
+	birth_date = 1852.9.29
+	dna = mr_net_snijders_cornelius_jacobus
+	traits = { brave honorable popular_commander }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_HOLLAND
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_armed_forces
+        }
+        earliest_usage_date = 1885.1.1
+        latest_usage_date = 1939.5.26
+        chance = 50
+    }
+    commander_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_HOLLAND
+        }
+        role = general
+        earliest_usage_date = 1885.1.1
+        latest_usage_date = 1939.5.26
+        chance = 50
+    }
+}
+
+net_hoevell_character_template = {
+    first_name = Wolter_Robert
+    last_name = van_Hoevell
+    historical = yes
+    culture = cu:dutch
+
+    religion = rel:protestant
+    ideology = ideology_abolitionist
+    interest_group = ig_intelligentsia
+	#dna = mr_net_groen_van_prinsterer_guillaume
+    birth_date = 1812.6.14
+    traits = { pious }
+	agitator_usage = {
+		country_trigger = {
+			c:NET ?= this
+		}
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_intelligentsia
+        }
+		earliest_usage_date = 1841.1.1
+		latest_usage_date = 1862.1.1
+		chance = 50
+	}
+}
+
+net_regout_character_template = {
+    first_name = Petrus_Laurentius
+    last_name = Regout
+    historical = yes
+    culture = cu:dutch
+
+    religion = rel:catholic
+    ideology = ideology_protectionist
+    interest_group = ig_industrialists
+	#dna = mr_net_groen_van_prinsterer_guillaume
+    birth_date = 1801.4.23
+    traits = { ambitious reckless experienced_entrepreneur }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:NET
+            this = c:NET
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_industrialists
+        }
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1878.2.18
+        chance = 100
+    }
+}
+
+net_schimmelpenninck_character_template = {
+    first_name = Gerrit
+    last_name = Schimmelpenninck
+    historical = yes
+    culture = cu:dutch
+
+    religion = rel:protestant
+    ideology = ideology_royalist
+    interest_group = ig_petty_bourgeoisie
+	#dna = mr_net_groen_van_prinsterer_guillaume
+    birth_date = 1794.2.25
+    traits = { direct basic_entrepreneur experienced_diplomat }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:NET
+            this = c:NET
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_petty_bourgeoisie
+        }
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1863.10.4
+        chance = 100
+    }
+}
+
+net_teenstra_character_template = {
+    first_name = Marten_Douwes
+    last_name = Teenstra
+    historical = yes
+    culture = cu:dutch
+
+    religion = rel:protestant
+    ideology = ideology_abolitionist
+    interest_group = ig_rural_folk
+	#dna = mr_net_groen_van_prinsterer_guillaume
+    birth_date = 1795.9.17
+    traits = { literary meticulous }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:NET
+            this = c:NET
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_rural_folk
+        }
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1864.10.29
+        chance = 100
+    }
+}
+
+net_van_der_voo_character_template = {
+    first_name = Goose
+    last_name = van_der_Voo
+    historical = yes
+    culture = cu:dutch
+
+    religion = rel:protestant
+    ideology = ideology_utopian
+    interest_group = ig_trade_unions
+	#dna = mr_net_groen_van_prinsterer_guillaume
+    birth_date = 1806.1.1
+    traits = { ambitious persistent }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:NET
+            this = c:NET
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_trade_unions
+        }
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1870.1.1
+        chance = 100
+    }
+}
+
+net_luzac_character_template = {
+    first_name = Lodewijk_Caspar
+    last_name = Luzac
+    historical = yes
+    culture = cu:dutch
+
+    religion = rel:protestant
+    ideology = ideology_liberal_leader
+    interest_group = ig_intelligentsia
+	#dna = mr_net_groen_van_prinsterer_guillaume
+    birth_date = 1786.8.1
+    traits = { experienced_political_operator ambitious }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:NET
+            this = c:NET
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1861.2.18
+        chance = 100
+    }
+}
+
+net_de_jonge_van_campensnieuwland_character_template = {
+    first_name = Marinus
+    last_name = de_Jonge_van_Campensnieuwland
+    historical = yes
+    culture = cu:dutch
+
+    religion = rel:protestant
+    ideology = ideology_royalist
+    interest_group = ig_landowners
+	#dna = mr_net_groen_van_prinsterer_guillaume
+    birth_date = 1786.3.29
+    traits = { inspirational_orator persistent }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:NET
+            this = c:NET
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_landowners
+        }
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1858.9.11
+        chance = 100
+    }
+}
+
+## Pieter Cort van der Linden
+net_cort_van_der_linden_character_template = {
+    first_name = Pieter_Cort
+    last_name = van_der_Linden
+    historical = yes
+    culture = cu:dutch
+    religion = rel:protestant
+    ideology = ideology_liberal_leader
+    interest_group = ig_intelligentsia
+    birth_date = 1846.5.14
+    traits = { erudite meticulous experienced_political_operator }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_HOLLAND
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1905.1.1
+        latest_usage_date = 1935.7.15
+        chance = 50
+    }
+}
+
+## Charles Ruijs de Beerenbrouck
+net_ruijs_de_beerenbrouck_character_template = {
+    first_name = Charles
+    last_name = ecchi_Ruijs_de_Beerenbrouck
+    historical = yes
+    culture = cu:dutch
+    religion = rel:catholic
+    ideology = ideology_utilitarian #was nicknamed the red junker because of him being a nobleman supporting welfare
+    interest_group = ig_landowners
+    birth_date = 1873.7.28
+    dna = ecchi_net_ruijs_de_beerenbrouck_charles
+    traits = { tactful meticulous experienced_political_operator }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_GELRE
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_landowners
+        }
+        earliest_usage_date = 1905.1.1
+        latest_usage_date = 1936.6.21
+        chance = 50
+    }
+}
+
+## Louis de Visser
+net_de_visser_character_template = {
+    first_name = Louis
+    last_name = ecchi_de_Visser
+    historical = yes
+    culture = cu:dutch
+    religion = rel:protestant
+    ideology = ideology_vanguardist
+    interest_group = ig_trade_unions
+    birth_date = 1878.5.21
+    dna = ecchi_net_de_visser_louis
+    traits = { ambitious direct charismatic }
+    agitator_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_HOLLAND
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_trade_unions
+        }
+        earliest_usage_date = 1905.1.1
+        latest_usage_date = 1945.5.3
+        chance = 50
+    }
+}
+
+## August Weitzel 
+net_weitzel_character_template = {
+    first_name = August
+    last_name = Weitzel
+    historical = yes
+    culture = cu:dutch
+    religion = rel:protestant
+    ideology = ideology_moderate
+    interest_group = ig_armed_forces
+    birth_date = 1816.1.6
+    dna = ecchi_net_weitzel_august
+    traits = { brave honorable popular_commander }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_HOLLAND
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_armed_forces
+        }
+        earliest_usage_date = 1853.1.1
+        latest_usage_date = 1896.3.29
+        chance = 50
+    }
+    commander_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_HOLLAND
+        }
+        role = general
+        earliest_usage_date = 1873.1.1
+        latest_usage_date = 1896.3.29
+        chance = 50
+    }
+}
+
+## Henri Staal
+net_staal_character_template = {
+    first_name = Henri
+    last_name = Staal
+    historical = yes
+    culture = cu:dutch
+    religion = rel:protestant
+    ideology = ideology_liberal_leader
+    interest_group = ig_armed_forces
+    birth_date = 1845.6.17
+    dna = ecchi_net_staal_henri
+    traits = { pious demagogue erudite }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_FRIESLAND
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_armed_forces
+        }
+        earliest_usage_date = 1880.1.1
+        latest_usage_date = 1910.1.1
+        chance = 50
+    }
+    commander_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_FRIESLAND
+        }
+        role = general
+        earliest_usage_date = 1866.1.1
+        latest_usage_date = 1920.10.15
+        chance = 50
+    }
+}
+
+## Pieter Oud
+net_oud_character_template = {
+    first_name = Pieter
+    last_name = ecchi_Oud
+    historical = yes
+    culture = cu:dutch
+    religion = rel:protestant
+    ideology = ideology_market_liberal
+    interest_group = ig_petty_bourgeoisie
+    birth_date = 1886.11.5
+    traits = { cautious persistent inspirational_orator }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_HOLLAND
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_petty_bourgeoisie
+        }
+        earliest_usage_date = 1924.1.1
+        latest_usage_date = 1963.1.1
+        chance = 50
+    }
+}
+
+## Willem Drees
+net_drees_character_template = {
+    first_name = Willem
+    last_name = ecchi_Drees
+    historical = yes
+    culture = cu:dutch
+    religion = rel:protestant
+    ideology = ideology_social_democrat
+    interest_group = ig_trade_unions
+    birth_date = 1886.6.5
+    traits = { experienced_political_operator honorable direct }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_HOLLAND
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_trade_unions
+        }
+        earliest_usage_date = 1927.1.1
+        latest_usage_date = 1970.1.1
+        chance = 50
+    }
+}
+
+## Jan Kappeyne van de Coppello
+net_kappeyne_van_de_coppello_character_template = {
+    first_name = Jan
+    last_name = ecchi_Kappeyne_van_de_Coppello
+    historical = yes
+    culture = cu:dutch
+    religion = rel:protestant
+    ideology = ideology_reformer
+    interest_group = ig_intelligentsia
+    birth_date = 1822.10.2
+    traits = { erudite ambitious }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_HOLLAND
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1862.1.1
+        latest_usage_date = 1888.1.1
+        chance = 50
+    }
+}
+
+## Wiel Nolens
+net_nolens_character_template = {
+    first_name = ecchi_Wiel
+    last_name = ecchi_Nolens
+    historical = yes
+    culture = cu:dutch
+    religion = rel:catholic
+    ideology = ideology_reformer
+    interest_group = ig_petty_bourgeoisie
+    birth_date = 1860.9.7
+    traits = { pious imposing reserved }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_GELRE
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_petty_bourgeoisie
+        }
+        earliest_usage_date = 1905.1.1
+        latest_usage_date = 1931.8.27
+        chance = 50
+    }
+}
+
+## Lodewijk van Mierop
+net_van_mierop_character_template = {
+    first_name = Lodewijk
+    last_name = ecchi_van_Mierop
+    historical = yes
+    culture = cu:dutch
+    religion = rel:protestant
+    ideology = ideology_anarchist
+    interest_group = ig_devout
+    birth_date = 1870.1.1
+    traits = { charismatic ambitious }
+    agitator_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_HOLLAND
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_devout
+        }
+        earliest_usage_date = 1899.1.1
+        latest_usage_date = 1930.6.13
+        chance = 50
+    }
+}
+
+## Anton Pannekoek
+net_pannekoek_character_template = {
+    first_name = Anton
+    last_name = ecchi_Pannekoek
+    historical = yes
+    culture = cu:dutch
+    religion = rel:protestant
+    ideology = ideology_communist
+    interest_group = ig_intelligentsia
+    birth_date = 1873.1.2
+    traits = { persistent erudite }
+    agitator_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_GELRE
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1906.1.1
+        latest_usage_date = 1960.4.28
+        chance = 50
+    }
+}
+## Wouter Lutkie
+net_lutkie_character_template = {
+    first_name = ecchi_Wouter
+    last_name = ecchi_Lutkie
+    historical = yes
+    culture = cu:dutch
+    religion = rel:catholic
+    ideology = ideology_fascist
+    interest_group = ig_devout
+    birth_date = 1887.2.23
+    traits = { literary inspirational_orator }
+    agitator_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_GELRE
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_devout
+        }
+        earliest_usage_date = 1924.1.1
+        latest_usage_date = 1965.1.1
+        chance = 50
+    }
+}
+
+## Anton Jurgens
+net_jurgens_character_template = {
+    first_name = Anton
+    last_name = ecchi_Jurgens
+    historical = yes
+    culture = cu:dutch
+    religion = rel:catholic
+    ideology = ideology_moderate
+    interest_group = ig_industrialists
+    birth_date = 1867.2.8
+    traits = { charismatic persistent }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_GELRE
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_industrialists
+        }
+        earliest_usage_date = 1899.1.1
+        latest_usage_date = 1945.1.1
+        chance = 50
+    }
+}
+
+## Joan Röell
+net_roell_character_template = {
+    first_name = Joan
+    last_name = Roell
+    historical = yes
+    culture = cu:dutch
+    religion = rel:protestant
+    ideology = ideology_liberal_leader
+    interest_group = ig_landowners
+    birth_date = 1844.7.21
+    traits = { meticulous tactful }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_HOLLAND
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_landowners
+        }
+        earliest_usage_date = 1877.1.1
+        latest_usage_date = 1909.1.1
+        chance = 50
+    }
+}
+
+## Charles Theodorus Stork
+net_stork_character_template = {
+    first_name = ecchi_Charles_Theodorus
+    last_name = ecchi_Stork
+    historical = yes
+    culture = cu:dutch
+    religion = rel:protestant
+    ideology = ideology_moderate
+    interest_group = ig_industrialists
+    birth_date = 1822.2.6
+    traits = { experienced_entrepreneur inspirational_orator ambitious }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_FRIESLAND
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_industrialists
+        }
+        earliest_usage_date = 1860.1.1
+        latest_usage_date = 1895.6.4
+        chance = 50
+    }
+}
+
+## Levinus Wilhelmus Christiaan Keuchenius
+net_keuchenius_character_template = {
+    first_name = ecchi_Levinus
+    last_name = ecchi_Keuchenius
+    historical = yes
+    culture = cu:dutch
+    religion = rel:protestant
+    ideology = ideology_moderate
+    interest_group = ig_devout
+    birth_date = 1822.10.21
+    traits = { colonial_administrator pious bigoted }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_HOLLAND
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_devout
+        }
+        earliest_usage_date = 1862.1.1
+        latest_usage_date = 1893.12.17
+        chance = 50
+    }
+}
+
+## Aloysius Franciscus Xaverius Luyben
+net_luyben_character_template = {
+    first_name = ecchi_Aloysius
+    last_name = ecchi_Luyben
+    historical = yes
+    culture = cu:dutch
+    religion = rel:catholic
+    ideology = ideology_liberal_leader
+    interest_group = ig_petty_bourgeoisie
+    birth_date = 1818.1.20
+    traits = { pious direct reckless }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_GELRE
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_petty_bourgeoisie
+        }
+        earliest_usage_date = 1859.1.1
+        latest_usage_date = 1893.1.1
+        chance = 50
+    }
+}
+
+## Jan Westerdijk
+net_westerdijk_character_template = {
+    first_name = Jan
+    last_name = ecchi_Westerdijk
+    historical = yes
+    culture = cu:dutch
+    religion = rel:protestant
+    ideology = ideology_liberal_leader
+    interest_group = ig_rural_folk
+    birth_date = 1860.1.14
+    traits = { honorable meticulous inspirational_orator }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_FRIESLAND
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_rural_folk
+        }
+        earliest_usage_date = 1891.1.1
+        latest_usage_date = 1934.2.7
+        chance = 50
+    }
+}
+
+## Carel Gerretson
+net_gerretson_character_template = {
+    first_name = Carel
+    last_name = ecchi_Gerretson
+    historical = yes
+    culture = cu:dutch
+    religion = rel:protestant
+    ideology = ideology_authoritarian
+    interest_group = ig_intelligentsia
+    birth_date = 1884.2.9
+    traits = { literary direct erudite }
+    agitator_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_HOLLAND
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1911.1.1
+        latest_usage_date = 1956.1.1
+        chance = 50
+    }
+}
+
+## Gerlach Cornelis Joannes van Reenen
+net_van_reenen_character_template = {
+    first_name = ecchi_Gerlach
+    last_name = ecchi_van_Reenen
+    historical = yes
+    culture = cu:dutch
+    religion = rel:protestant
+    ideology = ideology_royalist
+    interest_group = ig_landowners
+    birth_date = 1818.9.30
+    traits = { honorable meticulous persistent }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_HOLLAND
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_landowners
+        }
+        earliest_usage_date = 1858.1.1
+        latest_usage_date = 1893.5.31
+        chance = 50
+    }
+}
+
+## Jacob Adriaan de Wilde
+net_de_wilde_character_template = {
+    first_name = ecchi_Jacob_Adriaan
+    last_name = ecchi_de_Wilde
+    historical = yes
+    culture = cu:dutch
+    religion = rel:protestant
+    ideology = ideology_royalist
+    interest_group = ig_devout
+    birth_date = 1879.1.7
+    traits = { tactful honorable }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_HOLLAND
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_devout
+        }
+        earliest_usage_date = 1922.1.1
+        latest_usage_date = 1953.1.1
+        chance = 50
+    }
+}
+
+## Derk Welt
+net_welt_character_template = {
+    first_name = ecchi_Derk
+    last_name = ecchi_Welt
+    historical = yes
+    culture = cu:dutch
+    religion = rel:protestant
+    ideology = ideology_liberal_leader
+    interest_group = ig_rural_folk
+    birth_date = 1835.10.18
+    traits = { meticulous cautious }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_FRIESLAND
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_rural_folk
+        }
+        earliest_usage_date = 1865.1.1
+        latest_usage_date = 1900.1.1
+        chance = 50
+    }
+}
+
+## Willem Roëll
+net_general_roell_character_template = {
+    first_name = Willem
+    last_name = Roell
+    historical = yes
+    culture = cu:dutch
+    religion = rel:protestant
+    ideology = ideology_royalist
+    interest_group = ig_armed_forces
+    birth_date = 1873.11.20
+    traits = { direct popular_commander inspirational_orator }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_HOLLAND
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_armed_forces
+        }
+        earliest_usage_date = 1822.1.1
+        latest_usage_date = 1950.1.1
+        chance = 50
+    }
+    commander_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_HOLLAND
+        }
+        role = general
+        earliest_usage_date = 1822.1.1
+        latest_usage_date = 1950.1.1
+        chance = 50
+    }
+}
+
+## Frans Beelaerts van Blokland
+net_beelaerts_van_blokland_character_template = {
+    first_name = ecchi_Frans
+    last_name = ecchi_Beelaerts_van_Blokland
+    historical = yes
+    culture = cu:dutch
+    religion = rel:protestant
+    ideology = ideology_royalist
+    interest_group = ig_landowners #was not a major landownwer himself but he is a nobleman and was loyal to queen Wilhelmina
+    birth_date = 1872.1.21
+    traits = { imposing direct experienced_diplomat }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_HOLLAND
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_landowners
+        }
+        earliest_usage_date = 1823.1.1
+        latest_usage_date = 1956.3.27
+        chance = 50
+    }
+}
+
+## Dolf Joekes
+net_joekes_character_template = {
+    first_name = ecchi_Dolf
+    last_name = ecchi_Joekes
+    historical = yes
+    culture = cu:dutch
+    religion = rel:protestant
+    ideology = ideology_modernizer
+    interest_group = ig_intelligentsia
+    birth_date = 1885.5.4
+    traits = { literary master_bureaucrat meticulous  }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_HOLLAND
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1925.1.1
+        latest_usage_date = 1952.1.1
+        chance = 50
+    }
+}
+
+## Laurentius Nicolaas Deckers
+net_deckers_character_template = {
+    first_name = ecchi_Laurentius_Nicolaas
+    last_name = ecchi_Deckers
+    historical = yes
+    culture = cu:dutch
+    religion = rel:catholic
+    ideology = ideology_moderate
+    interest_group = ig_rural_folk
+    birth_date = 1883.2.14
+    traits = { pious master_bureaucrat inspirational_orator }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_GELRE
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_rural_folk
+        }
+        earliest_usage_date = 1925.1.1
+        latest_usage_date = 1958.1.1
+        chance = 50
+    }
+}
+
+## Jan Jakob Lodewijk ten Kate
+net_ten_kate_character_template = {
+    first_name = Jan
+    last_name = ecchi_ten_Kate
+    historical = yes
+    culture = cu:dutch
+    religion = rel:protestant
+    ideology = ideology_theocrat
+    interest_group = ig_devout
+    birth_date = 1819.11.23
+    traits = { literary meticulous   }
+    agitator_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_HOLLAND
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_devout
+        }
+        earliest_usage_date = 1852.1.1
+        latest_usage_date = 1887.1.1
+        chance = 50
+    }
+}
+
+## Isaac da Costa
+net_da_costa_character_template = {
+    first_name = Isaac
+    last_name = ecchi_da_Costa
+    historical = yes
+    culture = cu:dutch
+    religion = rel:jewish
+    ideology = ideology_theocrat
+    interest_group = ig_devout
+    birth_date = 1798.1.14
+    traits = { literary charismatic persistent }
+    agitator_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_HOLLAND
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_devout
+        }
+        earliest_usage_date = 1830.1.1
+        latest_usage_date = 1860.4.28
+        chance = 50
+    }
+}
+
+## Bernard van der Wijck
+net_van_der_wijckcharacter_template = {
+    first_name = Bernard
+    last_name = ecchi_van_der_Wijckcharacter
+    historical = yes
+    culture = cu:dutch
+    religion = rel:protestant
+    ideology = ideology_jingoist_leader
+    interest_group = ig_landowners
+    birth_date = 1836.3.30
+    traits = { erudite pious direct }
+    agitator_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_HOLLAND
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_landowners
+        }
+        earliest_usage_date = 1868.1.1
+        latest_usage_date = 1925.3.13
+        chance = 50
+    }
+}
+
+## Conrad Busken Huet
+net_busken_huet_template = {
+    first_name = ecchi_Conrad
+    last_name = ecchi_Busken_Huet
+    historical = yes
+    culture = cu:dutch
+    religion = rel:protestant
+    ideology = ideology_royalist
+    interest_group = ig_intelligentsia
+    birth_date = 1826.11.28
+    traits = { literary direct reckless inspirational_orator }
+    agitator_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_HOLLAND
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1854.1.1
+        latest_usage_date = 1884.1.1
+        chance = 50
+    }
+}
+
+## Gerard Heymans
+net_heymans_template = {
+    first_name = ecchi_Gerard
+    last_name = ecchi_Heymans
+    historical = yes
+    culture = cu:dutch
+    religion = rel:protestant
+    ideology = ideology_moderate
+    interest_group = ig_intelligentsia
+    dna = mr_net_heymans_gerard
+    birth_date = 1857.4.17
+    traits = { erudite ambitious innovative }
+    agitator_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_FRIESLAND
+            morgenrote_is_active = no
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1890.1.1
+        latest_usage_date = 1830.2.18
+        chance = 50
+    }
+}
+
+## René de Marees van Swinderen
+net_de_marees_van_swinderen_template = {
+    first_name = Rene
+    last_name = ecchi_de_Marees_van_Swinderen
+    historical = yes
+    culture = cu:dutch
+    religion = rel:protestant
+    ideology = ideology_moderate
+    interest_group = ig_landowners
+    dna = ecchi_net_de_marees_van_swinderen_rene
+    birth_date = 1860.10.6
+    traits = { experienced_diplomat inept charismatic }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                country_average_cultural_acceptance = { target = cu:dutch value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_HOLLAND
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_landowners
+        }
+        earliest_usage_date = 1910.1.1
+        latest_usage_date = 1955.1.17
+        chance = 50
+    }
+}

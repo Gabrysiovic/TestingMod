@@ -1,0 +1,133 @@
+﻿consolidate_subject = {
+	groups= {
+		overlord
+	}
+	
+	texture = "gfx/interface/icons/diplomatic_action_icons/consolidate_subject.dds"
+	confirmation_sound = "event:/SFX/UI/MapInteraction/SubjectInteractions/diplomatic_action_subjects_13_handle_states"
+	
+	requires_approval = no
+	should_notify_third_parties = yes
+	show_effect_in_tooltip = yes
+
+	potential = {
+		OR = {
+			has_game_rule = consolidate_subject_enabled
+			AND = {
+				is_player = yes
+				has_game_rule = consolidate_subject_player_only
+			}
+		}
+	}
+
+	possible = {
+		can_consolidate_subject = yes
+	}
+
+	accept_effect = {
+		scope:target_country = {
+			ordered_country ?= {
+				limit = {
+					can_be_consolidation_recipient = yes
+				}
+				order_by = country_rank
+				annex_with_incorporation = scope:target_country
+				add_liberty_desire = -20
+				overlord = {
+					create_unidirectional_truce = { country = prev months = 12 }
+				}
+			}
+		}	
+	}
+
+	ai = {
+		evaluation_chance = {
+			value = 1		
+		}	
+		propose_score = {
+			value = 100
+		}
+	}
+}
+
+	# possible = {
+	# 	# Don't rely on can_be_consolidation_recipient tooltip for this trigger in here - it doesn't resolve correctly as a trigger.
+	# 	can_consolidate_subject = yes		# Consequently, full scope of that trigger part is duplicated here.
+		
+	# 	any_direct_subject ?= {
+	# 		is_adjacent_to_country = scope:target_country
+	# 		is_direct_subject_of = root
+	# 		is_diplomatic_play_committed_participant = no 
+	# 		liberty_desire < 50																# disable for testing
+	# 		hidden_trigger = {
+	# 			NOT = { this ?= scope:target_country }
+	# 			is_revolutionary = no
+	# 		}
+	# 		OR = {
+	# 			is_subject_type = subject_type_puppet
+	# 			is_subject_type = subject_type_vassal
+	# 			is_subject_type = subject_type_dominion
+	# 			is_subject_type = subject_type_colony
+	# 		#	is_subject_type = subject_type_protectorate # temporary testing
+	# 			AND = {
+	# 				is_subject_type = subject_type_personal_union
+	# 				overlord = {
+	# 					has_technology_researched = philosophical_pragmatism
+	# 					has_technology_researched = pan-nationalism
+	# 				}
+	# 			}
+	# 			AND = {
+	# 				has_government_type = gov_chartered_company
+	# 				overlord = {
+	# 					has_technology_researched = corporatism
+	# 					has_technology_researched = civilizing_mission
+	# 				}
+	# 			}
+	# 		}
+	# 		OR = {
+	# 			# Only primary cultures match:
+	# 			any_primary_culture = {				# Confirmed working without the custom tooltip.
+	# 				custom_tooltip = {
+	# 					text = consolidate_subject_primary_culture_tt
+	# 					is_primary_culture_of = scope:target_country
+	# 				}
+	# 			}
+	# 			# New madness from Cael:
+	# 			custom_tooltip = {
+	# 				text = consolidate_subject_acceptance_tt
+	# 				AND = {
+	# 					overlord = {
+	# 						has_technology_researched = pan-nationalism
+	# 						has_technology_researched = civilizing_mission
+	# 					}
+	# 					scope:target_country = {
+	# 						any_primary_culture = {
+	# 							count = all
+	# 							shares_trait_with_any_primary_culture = scope:recipient_subject
+	# 							scope:recipient_subject = {
+	# 								cultural_acceptance_base = { target = PREV value >= acceptance_status_4 }
+	# 							}
+	# 						}
+	# 					}
+	# 				}
+	# 			}
+	# 			# *Any* primary culture traits overlap
+	# 			custom_tooltip = {					# Confirmed working without the custom tooltip.
+	# 				text = consolidate_subject_multicultural_tt
+	# 				AND = {
+	# 					any_primary_culture = {
+	# 						shares_trait_with_any_primary_culture = scope:target_country
+	# 					}
+	# 					has_law = law_type:law_multicultural
+	# 					has_technology_researched = corporatism
+	# 					has_technology_researched = human_rights
+	# 					overlord = {
+	# 						has_technology_researched = pan-nationalism
+	# 						has_technology_researched = civilizing_mission
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# }
+

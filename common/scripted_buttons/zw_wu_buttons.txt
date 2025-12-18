@@ -1,0 +1,469 @@
+﻿zw_change_army_uniform_button = {
+	name = "zw_change_army_uniform_button"
+	desc = "zw_change_army_uniform_button_desc"
+	effect = {
+		# set variable
+		if = {
+			limit = { has_variable = zw_var_special_clothes_general }
+			if = {
+				limit = { var:zw_var_special_clothes_general < 13 }
+				change_variable = {
+					name = zw_var_special_clothes_general
+					add = 1
+				}
+			}
+			else = {
+				remove_variable = zw_var_special_clothes_general
+			}
+		}
+		else = {
+			set_variable = {
+				name = zw_var_special_clothes_general
+				value = 1
+			}
+		}
+		# button description
+		if = {
+			limit = {
+				NOT = { has_variable = zw_var_special_clothes_general }
+			}
+			custom_tooltip = zw_change_army_uniform_button_effect_0
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_general = 1 }
+			custom_tooltip = zw_change_army_uniform_button_effect_1
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_general = 2 }
+			custom_tooltip = zw_change_army_uniform_button_effect_2
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_general = 3 }
+			custom_tooltip = zw_change_army_uniform_button_effect_3
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_general = 4 }
+			custom_tooltip = zw_change_army_uniform_button_effect_4
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_general = 5 }
+			custom_tooltip = zw_change_army_uniform_button_effect_5
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_general = 6 }
+			custom_tooltip = zw_change_army_uniform_button_effect_6
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_general = 7 }
+			custom_tooltip = zw_change_army_uniform_button_effect_7
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_general = 8 }
+			custom_tooltip = zw_change_army_uniform_button_effect_8
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_general = 9 }
+			custom_tooltip = zw_change_army_uniform_button_effect_9
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_general = 10 }
+			custom_tooltip = zw_change_army_uniform_button_effect_10
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_general = 11 }
+			custom_tooltip = zw_change_army_uniform_button_effect_11
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_general = 12 }
+			custom_tooltip = zw_change_army_uniform_button_effect_12
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_general = 13 }
+			custom_tooltip = zw_change_army_uniform_button_effect_13
+		}
+	}
+	ai_chance = { value = 0 }
+}
+
+zw_change_army_headgear_button = {
+	name = "zw_change_army_headgear_button"
+	desc = "zw_change_army_headgear_button_desc"
+	effect = {
+		# set variable
+		if = {
+			limit = { has_variable = zw_var_special_headgear_general }
+			if = {
+				limit = { var:zw_var_special_headgear_general < 8 }
+				change_variable = {
+					name = zw_var_special_headgear_general
+					add = 1
+				}
+			}
+			else = {
+				remove_variable = zw_var_special_headgear_general
+			}
+		}
+		else = {
+			set_variable = {
+				name = zw_var_special_headgear_general
+				value = 1
+			}
+		}
+		# button description
+		if = {
+			limit = {
+				NOT = { has_variable = zw_var_special_headgear_general }
+			}
+			custom_tooltip = zw_change_army_headgear_button_effect_0
+		}
+		else_if = {
+			limit = { var:zw_var_special_headgear_general = 1 }
+			custom_tooltip = zw_change_army_headgear_button_effect_1
+		}
+		else_if = {
+			limit = { var:zw_var_special_headgear_general = 2 }
+			custom_tooltip = zw_change_army_headgear_button_effect_2
+		}
+		else_if = {
+			limit = { var:zw_var_special_headgear_general = 3 }
+			custom_tooltip = zw_change_army_headgear_button_effect_3
+		}
+		else_if = {
+			limit = { var:zw_var_special_headgear_general = 4 }
+			custom_tooltip = zw_change_army_headgear_button_effect_4
+		}
+		else_if = {
+			limit = { var:zw_var_special_headgear_general = 5 }
+			custom_tooltip = zw_change_army_headgear_button_effect_5
+		}
+		else_if = {
+			limit = { var:zw_var_special_headgear_general = 6 }
+			custom_tooltip = zw_change_army_headgear_button_effect_6
+		}
+		else_if = {
+			limit = { var:zw_var_special_headgear_general = 7 }
+			custom_tooltip = zw_change_army_headgear_button_effect_7
+		}
+		else_if = {
+			limit = { var:zw_var_special_headgear_general = 8 }
+			custom_tooltip = zw_change_army_headgear_button_effect_8
+		}
+	}
+	ai_chance = { value = 0 }
+}
+
+zw_change_navy_uniform_button = {
+	name = "zw_change_navy_uniform_button"
+	desc = "zw_change_navy_uniform_button_desc"
+	effect = {
+		# set variable
+		if = {
+			limit = { has_variable = zw_var_special_clothes_admiral }
+			if = {
+				limit = { var:zw_var_special_clothes_admiral < 13 }
+				change_variable = {
+					name = zw_var_special_clothes_admiral
+					add = 1
+				}
+			}
+			else = {
+				remove_variable = zw_var_special_clothes_admiral
+			}
+		}
+		else = {
+			set_variable = {
+				name = zw_var_special_clothes_admiral
+				value = 1
+			}
+		}
+		# button description
+		if = {
+			limit = {
+				NOT = { has_variable = zw_var_special_clothes_admiral }
+			}
+			custom_tooltip = zw_change_navy_uniform_button_effect_0
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_admiral = 1 }
+			custom_tooltip = zw_change_navy_uniform_button_effect_1
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_admiral = 2 }
+			custom_tooltip = zw_change_navy_uniform_button_effect_2
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_admiral = 3 }
+			custom_tooltip = zw_change_navy_uniform_button_effect_3
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_admiral = 4 }
+			custom_tooltip = zw_change_navy_uniform_button_effect_4
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_admiral = 5 }
+			custom_tooltip = zw_change_navy_uniform_button_effect_5
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_admiral = 6 }
+			custom_tooltip = zw_change_navy_uniform_button_effect_6
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_admiral = 7 }
+			custom_tooltip = zw_change_navy_uniform_button_effect_7
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_admiral = 8 }
+			custom_tooltip = zw_change_navy_uniform_button_effect_8
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_admiral = 9 }
+			custom_tooltip = zw_change_navy_uniform_button_effect_9
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_admiral = 10 }
+			custom_tooltip = zw_change_navy_uniform_button_effect_10
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_admiral = 11 }
+			custom_tooltip = zw_change_navy_uniform_button_effect_11
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_admiral = 12 }
+			custom_tooltip = zw_change_navy_uniform_button_effect_12
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_admiral = 13 }
+			custom_tooltip = zw_change_navy_uniform_button_effect_13
+		}
+	}
+	ai_chance = { value = 0 }
+}
+
+zw_change_navy_headgear_button = {
+	name = "zw_change_navy_headgear_button"
+	desc = "zw_change_navy_headgear_button_desc"
+	effect = {
+		# set variable
+		if = {
+			limit = { has_variable = zw_var_special_headgear_admiral }
+			if = {
+				limit = { var:zw_var_special_headgear_admiral < 8 }
+				change_variable = {
+					name = zw_var_special_headgear_admiral
+					add = 1
+				}
+			}
+			else = {
+				remove_variable = zw_var_special_headgear_admiral
+			}
+		}
+		else = {
+			set_variable = {
+				name = zw_var_special_headgear_admiral
+				value = 1
+			}
+		}
+		# button description
+		if = {
+			limit = {
+				NOT = { has_variable = zw_var_special_headgear_admiral }
+			}
+			custom_tooltip = zw_change_navy_headgear_button_effect_0
+		}
+		else_if = {
+			limit = { var:zw_var_special_headgear_admiral = 1 }
+			custom_tooltip = zw_change_navy_headgear_button_effect_1
+		}
+		else_if = {
+			limit = { var:zw_var_special_headgear_admiral = 2 }
+			custom_tooltip = zw_change_navy_headgear_button_effect_2
+		}
+		else_if = {
+			limit = { var:zw_var_special_headgear_admiral = 3 }
+			custom_tooltip = zw_change_navy_headgear_button_effect_3
+		}
+		else_if = {
+			limit = { var:zw_var_special_headgear_admiral = 4 }
+			custom_tooltip = zw_change_navy_headgear_button_effect_4
+		}
+		else_if = {
+			limit = { var:zw_var_special_headgear_admiral = 5 }
+			custom_tooltip = zw_change_navy_headgear_button_effect_5
+		}
+		else_if = {
+			limit = { var:zw_var_special_headgear_admiral = 6 }
+			custom_tooltip = zw_change_navy_headgear_button_effect_6
+		}
+		else_if = {
+			limit = { var:zw_var_special_headgear_admiral = 7 }
+			custom_tooltip = zw_change_navy_headgear_button_effect_7
+		}
+		else_if = {
+			limit = { var:zw_var_special_headgear_admiral = 8 }
+			custom_tooltip = zw_change_navy_headgear_button_effect_8
+		}
+	}
+	ai_chance = { value = 0 }
+}
+
+zw_change_army_headgear_late_button = {
+	name = "zw_change_army_headgear_late_button"
+	desc = "zw_change_army_headgear_late_button_desc"
+	effect = {
+		# set variable
+		if = {
+			limit = { has_variable = zw_var_special_headgear_general_late }
+			if = {
+				limit = { var:zw_var_special_headgear_general_late < 4 }
+				change_variable = {
+					name = zw_var_special_headgear_general_late
+					add = 1
+				}
+			}
+			else = {
+				remove_variable = zw_var_special_headgear_general_late
+			}
+		}
+		else = {
+			set_variable = {
+				name = zw_var_special_headgear_general_late
+				value = 1
+			}
+		}
+		# button description
+		if = {
+			limit = { has_technology_researched = bolt_action_rifles }
+			custom_tooltip = zw_change_army_headgear_late_button_effect_a
+		}
+		else = {
+			custom_tooltip = zw_change_army_headgear_late_button_effect_b
+		}
+		if = {
+			limit = {
+				NOT = { has_variable = zw_var_special_headgear_general_late }
+			}
+			custom_tooltip = zw_change_army_headgear_late_button_effect_0
+		}
+		else_if = {
+			limit = { var:zw_var_special_headgear_general_late = 1 }
+			custom_tooltip = zw_change_army_headgear_late_button_effect_1
+		}
+		else_if = {
+			limit = { var:zw_var_special_headgear_general_late = 2 }
+			custom_tooltip = zw_change_army_headgear_late_button_effect_2
+		}
+		else_if = {
+			limit = { var:zw_var_special_headgear_general_late = 3 }
+			custom_tooltip = zw_change_army_headgear_late_button_effect_3
+		}
+		else_if = {
+			limit = { var:zw_var_special_headgear_general_late = 4 }
+			custom_tooltip = zw_change_army_headgear_late_button_effect_4
+		}
+	}
+	ai_chance = { value = 0 }
+}
+
+zw_change_monarch_clothes_button = {
+	name = "zw_change_monarch_clothes_button"
+	desc = "zw_change_monarch_clothes_button_desc"
+	effect = {
+		# set variable
+		if = {
+			limit = { has_variable = zw_var_special_clothes_monarch }
+			if = {
+				limit = { var:zw_var_special_clothes_monarch < 5 }
+				change_variable = {
+					name = zw_var_special_clothes_monarch
+					add = 1
+				}
+			}
+			else = {
+				remove_variable = zw_var_special_clothes_monarch
+			}
+		}
+		else = {
+			set_variable = {
+				name = zw_var_special_clothes_monarch
+				value = 1
+			}
+		}
+		# button description
+		if = {
+			limit = { has_law = law_type:law_monarchy }
+			custom_tooltip = zw_change_monarch_clothes_button_effect_a
+		}
+		else = {
+			custom_tooltip = zw_change_monarch_clothes_button_effect_b
+		}
+		if = {
+			limit = {
+				NOT = { has_variable = zw_var_special_clothes_monarch }
+			}
+			custom_tooltip = zw_change_monarch_clothes_button_effect_0
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_monarch = 1 }
+			custom_tooltip = zw_change_monarch_clothes_button_effect_1
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_monarch = 2 }
+			custom_tooltip = zw_change_monarch_clothes_button_effect_2
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_monarch = 3 }
+			custom_tooltip = zw_change_monarch_clothes_button_effect_3
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_monarch = 4 }
+			custom_tooltip = zw_change_monarch_clothes_button_effect_4
+		}
+		else_if = {
+			limit = { var:zw_var_special_clothes_monarch = 5 }
+			custom_tooltip = zw_change_monarch_clothes_button_effect_5
+		}
+	}
+	ai_chance = { value = 0 }
+}
+
+zw_show_outfit_ruler_politician_button = {
+	name = "zw_show_outfit_ruler_politician_button"
+	desc = "zw_show_outfit_ruler_politician_button_desc"
+	effect = {
+		trigger_event = {
+			id = zw_event_show_outfits.1
+			popup = yes
+		}
+	}
+	ai_chance = { value = 0 }
+}
+
+zw_show_outfit_general_admiral_button = {
+	name = "zw_show_outfit_general_admiral_button"
+	desc = "zw_show_outfit_general_admiral_button_desc"
+	effect = {
+		if = {
+			limit = {
+				any_scope_character = {
+					has_role = general
+				}
+			}
+			trigger_event = {
+				id = zw_event_show_outfits.2
+				popup = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_scope_character = {
+					has_role = admiral
+				}
+			}
+			trigger_event = {
+				id = zw_event_show_outfits.3
+				popup = yes
+			}
+		}
+	}
+	ai_chance = { value = 0 }
+}

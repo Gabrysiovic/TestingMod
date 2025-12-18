@@ -1,0 +1,34 @@
+﻿hb_spread_action = {
+	type = country
+	text = {
+		trigger = {
+			country_rank = rank_value:great_power
+		}
+		localization_key = hb_spread_great_action
+	}
+	text = {
+		trigger = {
+			country_rank = rank_value:major_power
+		}
+		localization_key = hb_spread_major_action
+	}
+	text = {
+		trigger = {
+			is_subject = no
+		}
+		localization_key = hb_spread_minor_action
+	}
+	text = {
+		trigger = {
+			has_diplomatic_pact = {
+				who = overlord
+				type = da_knowledge_sharing
+				is_initiator = no
+			}
+		}
+		localization_key = hb_spread_dominion_action
+	}
+	text = {
+		localization_key = hb_spread_subject_action
+	}
+}

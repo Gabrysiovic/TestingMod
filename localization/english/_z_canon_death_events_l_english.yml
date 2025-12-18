@@ -1,0 +1,37 @@
+﻿l_english:
+
+#Ferdinand-Philippe
+ canon_death.1.t:0 "Tragic Accident"
+ canon_death.1.d:0 "Ferdinand-Philippe has been gravely injured in a carriage accident. It is unclear whether he has survived the incident."
+ canon_death.1.f:0 "“On 13 July 1842, Ferdinand-Philippe was on his way to Castle Neuilly near Paris to visit relatives before leaving for a military inspection at Saint-Omer. Near Porte Maillot, the coachman lost control of the open carriage when his two horses bolted, and he fell badly onto the pavement. He has not regained consciousness.”"
+ canon_death.1.a:0 "Please wake up…"
+
+#Tsesarevich Nikolai
+ canon_death.2.t:0 "[SCOPE.sCharacter('canonically_dead_2').GetName] is Gravely Ill"
+ canon_death.2.d:0 "[SCOPE.sCharacter('canonically_dead_2').GetName] is bedridden after catching an unidentified illness. His health is rapidly deteriorating, and it is unclear whether he will survive."
+ canon_death.2.f:0 "“[SCOPE.sCharacter('canonically_dead_2').GetName] was on a tour abroad when he suddenly got sick. It was initially brushed aside as he continued his travels. However, the condition worsened as a cerebral hemorrhage left one side of his body temporarily paralyzed. The rest of the royal family are on their way to visit him, perhaps for the final time.”"
+ canon_death.2.a:0 "Devastating news!"
+
+#Rudolf von Habsburg
+ canon_death.3.t:0 "Mystery at Mayerling"
+ canon_death.3.d:0 "Rudolf von Habsburg has been found dead in the Mayerling hunting lodge under mysterious circumstances. An investigation is on its way to uncover the truth behind the incident."
+ canon_death.3.f:0 "“The 30-year old was found dead alongside his lover, in what appears to be a suicide pact. His strained marriage, mental health issues, as well as political factors are believed to be at the core of Rudolf’s untimely demise. The shocking incident has shaken the Habsburg family to its core.”"
+ canon_death.3.a:0 "Oh the horror!"
+
+#Albert 01
+ canon_death.4.t:0 "The Death of Eddie"
+ canon_death.4.d:0 "Albert Victor, popularly known as Eddie, has died after a flu infection developed into fatal pneumonia. His death was keenly felt throughout the entire land, and it was proceeded by a huge outpouring of national grief."
+ canon_death.4.f:0 "“On the 14th January 1892, the country was stunned by news that HRH [Title] Albert Victor, popularly known as Eddie, had died at Sandringham House, in Norfolk. The death plunges millions of all ages, classes, and races in this kingdom, and far beyond its limits, into a sorrow of profound acuteness, and into the keenest sympathy with the Royal family, who at this hour are so sorely stricken. The suddenness of it, the sadness of it, the pity of it – this speedy death of Eddie.”"
+ canon_death.4.a:0 "God’s will be done…"
+
+#Maria 02
+ canon_death.5.t:0 "Maria’s Last Child"
+ canon_death.5.d:0 "Maria, Queen of Portugal is experiencing complications giving birth to her eleventh child. It is uncertain if she will survive the procedure."
+ canon_death.5.f:0 "“Following a succession of difficult gestations, the doctors warned her of the risks she might face in her future pregnancies. Queen Maria, however, met the advice with utter indifference and told them, if I die, I die at my post.”"
+ canon_death.5.a:0 "God is with our good mother…"
+
+#Pedro 05
+ canon_death.6.t:0 "Young Pedro"
+ canon_death.6.d:0 "His majesty King Pedro is ill. A recent epidemic has reached the royal circle, taking the lives of a few royal family members. The King is strong, but it is unclear if he will make it."
+ canon_death.6.f:0 "“At the age of 24 the young Portuguese monarch himself now dies of a terrible disease, after a life chequered with troubles, while one of his just dead brothers still lies uncoffined, and a third of the brothers is prostrate with the same disease.”"
+ canon_death.6.a:0 "Only the good die young…"

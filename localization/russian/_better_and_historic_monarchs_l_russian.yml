@@ -1,0 +1,13 @@
+﻿l_russian:
+
+ historic_monarch_death.t: "Наш монарх мертв."
+ historic_monarch_death.d: "Мрачная пелена опустилась на [ROOT.GetCountry.GetName] по мере распространения новостей о кончине нашего государя, [SCOPE.sCharacter('dead_character').GetFirstName]. Одновременно все взоры обращаются к наследнику [SCOPE.sCharacter('dead_character').GetHerHis], [ROOT.GetCountry.GetRuler.GetFirstName], который взойдёт на трон."
+ historic_monarch_death.f: "“[ROOT.GetCountry.GetName] прощается с покойным [SCOPE.sCharacter('dead_character').GetFirstName], приветствуя новую эру под началом [ROOT.GetCountry.GetRuler.GetFirstName]. [ROOT.GetCountry.GetRuler.GetSheHe] восходит на трон с тяжким бременем, неся с собой [ROOT.GetCountry.GetRuler.GetHerHim] надежды вчерашнего дня и мечты о завтрашнем дне.”"
+
+ historic_heir_death.t: "Наследник мёртв."
+ histori_heir_death.d: "Трагедия произошла со смертью наследника, [SCOPE.sCharacter('dead_character').GetFirstName]. Над страной нависла атмосфера неопределённости."
+ historic_heir_death.f: "“Страна оплакивает кончину [SCOPE.sCharacter('dead_character').GetFirstName], наследника престола [ROOT.GetCountry.GetAdjectiveNoFormatting]. Похоронные процессии уже в пути, и любопытные проталкиваются, чтобы увидеть бывшего претендента на “[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]”. Некоторые задаются вопросом, как бы всё было, если бы [ROOT.GetCountry.GetRuler.GetSheHe] стал монархом. Хорошее это или плохое, процветание или бедность — это уже не имеет значения, ведь они мертвы.”"
+
+ historic_monarch_birth.t: "Рождение наследника"
+ histori_monarch_birth.d: "Наш [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] с радостью объявил о рождении наследника. Рождение закрепило линию наследования."
+ historic_monarch_birth.f: "“В королевском дворце кипит жизнь. Повсюду снуют врачи, медсестры и акушерки. В спальне Её Королевское Высочество проводит ‘процедуру’, потуги за потугой. В конце концов, вздох облегчения. Боже, храни [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle].”"

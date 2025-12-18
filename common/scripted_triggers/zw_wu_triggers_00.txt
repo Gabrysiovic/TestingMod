@@ -1,0 +1,228 @@
+﻿# pop/character's culture is non-western, scope: pop/character
+
+zw_trigger_non_western_culture = {
+	culture = {
+		NOR = {
+			# European heritage
+			AND = {
+				has_discrimination_trait_group = heritage_group_european
+				# Exclude European that don't wear western clothes
+				NOR = {
+					this = cu:circassian # European and Middle Eastern Heritages
+					this = cu:sephardic # European and Middle Eastern Heritages
+				}
+			}
+			# African diaspora
+			has_discrimination_trait = heritage_african_diaspora
+		}
+	}
+}
+
+# country's is westernized, scope: country
+
+zw_trigger_country_is_westernized = {
+	has_variable = zw_var_clothes_westernization
+	NAND = {
+		OR = {
+			# exclude AI Japan if they are westernized via vanilla events
+			has_variable = KOR_korean_empire_declared
+			# exclude AI Korea if they are westernized via vanilla events
+			has_variable = meiji_restoration_complete
+			# exclude AI Persia
+			AND = {
+				exists = c:PER
+				this = c:PER
+			}
+		}
+		is_player = no
+	}
+}
+
+# overlord is western or westernized
+
+zw_trigger_overlord_is_western_or_westernized = {
+	is_subject = yes
+	overlord = {
+		OR = {
+			has_variable = zw_var_clothes_westernization
+			any_primary_culture = {
+				OR = {
+					# European
+					AND = {
+						has_discrimination_trait_group = heritage_group_european
+						# Exclude European that don't wear western clothes
+						NOR = {
+							this = cu:circassian # European and Middle Eastern Heritages
+							this = cu:sephardic # European and Middle Eastern Heritages
+						}
+					}
+					# African diaspora
+					has_discrimination_trait = heritage_african_diaspora
+				}
+			}
+		}
+	}
+}
+
+# IG is westernized, scope: characters
+
+zw_trigger_ig_is_westernized = {
+	trigger_if = {
+		limit = { is_interest_group_type = ig_armed_forces }
+		owner.var:zw_var_clothes_westernization >= 0
+	}
+	trigger_else_if = {
+		limit = { is_interest_group_type = ig_industrialists }
+		owner.var:zw_var_clothes_westernization >= 0
+	}
+	trigger_else_if = {
+		limit = { is_interest_group_type = ig_intelligentsia }
+		owner.var:zw_var_clothes_westernization >= 25
+	}
+	trigger_else_if = {
+		limit = { is_interest_group_type = ig_petty_bourgeoisie }
+		owner.var:zw_var_clothes_westernization >= 50
+	}
+	trigger_else_if = {
+		limit = { is_interest_group_type = ig_trade_unions }
+		owner.var:zw_var_clothes_westernization >= 50
+	}
+	trigger_else_if = {
+		limit = { is_interest_group_type = ig_landowners }
+		owner.var:zw_var_clothes_westernization >= 75
+	}
+	trigger_else_if = {
+		limit = { is_interest_group_type = ig_rural_folk }
+		owner.var:zw_var_clothes_westernization >= 100
+	}
+	trigger_else = { always = no } # exclude: devout
+}
+
+# pop is westernized, scope: none
+
+zw_trigger_pop_is_westernized = {
+	exists = scope:pop
+	scope:pop = {
+		# culture isn't western culture
+		zw_trigger_non_western_culture = yes
+		# country has westernized
+		owner ?= { zw_trigger_country_is_westernized = yes }
+		# pop type is westernized: soldier, officers
+		trigger_if = {
+			limit = { is_pop_type = soldiers }
+			owner.var:zw_var_clothes_westernization >= 0
+		}
+		trigger_else_if = {
+			limit = { is_pop_type = officers }
+			owner.var:zw_var_clothes_westernization >= 0
+		}
+		#  pop type is westernized: upper
+		trigger_else_if = {
+			limit = { is_pop_type = aristocrats }
+			owner.var:zw_var_clothes_westernization >= 25
+		}
+		trigger_else_if = {
+			limit = { is_pop_type = capitalists }
+			owner.var:zw_var_clothes_westernization >= 25
+		}
+		trigger_else_if = {
+			limit = { is_pop_type = academics }
+			owner.var:zw_var_clothes_westernization >= 25
+		}
+		#  pop type is westernized: middle
+		trigger_else_if = {
+			limit = { is_pop_type = clerks }
+			owner.var:zw_var_clothes_westernization >= 50
+		}
+		trigger_else_if = {
+			limit = { is_pop_type = engineers }
+			owner.var:zw_var_clothes_westernization >= 50
+		}
+		trigger_else_if = {
+			limit = { is_pop_type = bureaucrats }
+			owner.var:zw_var_clothes_westernization >= 50
+		}
+		#  pop type is westernized: middle (shopkeepers)
+		trigger_else_if = {
+			limit = { is_pop_type = shopkeepers }
+			owner.var:zw_var_clothes_westernization >= 75
+		}
+		#  pop type is westernized: poor
+		trigger_else_if = {
+			limit = { is_pop_type = farmers }
+			owner.var:zw_var_clothes_westernization >= 100
+		}
+		trigger_else_if = {
+			limit = { is_pop_type = machinists }
+			owner.var:zw_var_clothes_westernization >= 100
+		}
+		trigger_else = { always = no }
+	}
+}
+
+# character is westernized, scope: none
+
+zw_trigger_character_is_westernized = {
+	exists = scope:character
+	scope:character ?= {
+		# culture isn't western culture
+		zw_trigger_non_western_culture = yes
+		# country has westernized
+		owner ?= { zw_trigger_country_is_westernized = yes }
+		# character's role or ig is westernized
+		OR = {
+			# is monarch ruler or heir
+			AND = {
+				OR = {
+					is_ruler = yes
+					is_heir = yes
+				}
+				owner = { has_law = law_type:law_monarchy }
+			}
+			# is commander
+			has_role = general
+			has_role = admiral
+			# is from a westernized ig
+			trigger_if = {
+				limit = { is_interest_group_type = ig_armed_forces }
+				owner.var:zw_var_clothes_westernization >= 0
+			}
+			trigger_else_if = {
+				limit = { is_interest_group_type = ig_industrialists }
+				owner.var:zw_var_clothes_westernization >= 0
+			}
+			trigger_else_if = {
+				limit = { is_interest_group_type = ig_intelligentsia }
+				owner.var:zw_var_clothes_westernization >= 25
+			}
+			trigger_else_if = {
+				limit = { is_interest_group_type = ig_petty_bourgeoisie }
+				owner.var:zw_var_clothes_westernization >= 50
+			}
+			trigger_else_if = {
+				limit = { is_interest_group_type = ig_trade_unions }
+				owner.var:zw_var_clothes_westernization >= 50
+			}
+			trigger_else_if = {
+				limit = { is_interest_group_type = ig_landowners }
+				owner.var:zw_var_clothes_westernization >= 75
+			}
+			trigger_else_if = {
+				limit = { is_interest_group_type = ig_rural_folk }
+				owner.var:zw_var_clothes_westernization >= 100
+			}
+			trigger_else = { always = no } # exclude: devout
+		}
+	}
+}
+
+# override
+
+zw_trigger_wu_override = {
+	OR = {
+		# clear vanilla pop clothes before applying new clothes
+		zw_trigger_pop_is_westernized = yes
+		# clear vanilla character clothes before applying new clothes
+		zw_trigger_character_is_westernized = yes
+	}
+}

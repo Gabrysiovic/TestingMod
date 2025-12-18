@@ -1,0 +1,132 @@
+﻿l_russian:
+
+#Afghanistan
+ afg_monarch_birth.1.a: "Знаменательное событие."
+ afg_monarch_birth.2.a: "Знаменательное событие."
+ afg_monarch_birth.3.a: "Знаменательное событие."
+
+#Austria
+ aus_monarch_birth.1.a: "Знаменательное событие."
+ aus_monarch_birth.2.a: "Знаменательное событие."
+ aus_monarch_birth.3.a: "Знаменательное событие."
+ aus_monarch_birth.4.a: "Знаменательное событие."
+ aus_monarch_birth.5.a: "Знаменательное событие."
+
+#Baden
+ bad_monarch_birth.1.a: "Знаменательное событие."
+
+#Bavaria
+ bav_monarch_birth.1.a: "Знаменательное событие."
+ bav_monarch_birth.2.a: "Знаменательное событие."
+ bav_monarch_birth.3.a: "Знаменательное событие."
+
+#Belgium
+ bel_monarch_birth.1.a: "Знаменательное событие."
+ bel_monarch_birth.2.a: "Знаменательное событие."
+ bel_monarch_birth.3.a: "Знаменательное событие."
+
+#Denmark
+ den_monarch_birth.1.a: "Знаменательное событие."
+ den_monarch_birth.2.a: "Знаменательное событие."
+ den_monarch_birth.3.a: "Знаменательное событие."
+
+#France Bonaparte
+fra_bonaparte_monarch_birth.1.a: "Знаменательное событие."
+fra_bonaparte_monarch_birth.2.a: "Знаменательное событие."
+
+#France Orleans
+fra_orleans_monarch_birth.1.a: "Знаменательное событие."
+fra_orleans_monarch_birth.2.a: "Знаменательное событие."
+fra_orleans_monarch_birth.3.a: "Знаменательное событие."
+fra_orleans_monarch_birth.4.a: "Знаменательное событие."
+fra_orleans_monarch_birth.5.a: "Знаменательное событие."
+
+#Great Britain
+ gbr_monarch_birth.1.a: "Знаменательное событие."
+ gbr_monarch_birth.2.a: "Знаменательное событие."
+ gbr_monarch_birth.3.a: "Знаменательное событие."
+ gbr_monarch_birth.4.a: "Знаменательное событие."
+ gbr_monarch_birth.5.a: "Знаменательное событие."
+ gbr_monarch_birth.6.a: "Знаменательное событие."
+ gbr_monarch_birth.7.a: "Знаменательное событие."
+ gbr_monarch_birth.8.a: "Знаменательное событие."
+ gbr_monarch_birth.9.a: "Знаменательное событие."
+ gbr_monarch_birth.10.a: "Знаменательное событие."
+ gbr_monarch_birth.11.a: "Знаменательное событие."
+
+#Hannover
+ han_monarch_birth.1.a: "Знаменательное событие."
+ han_monarch_birth.2.a: "Знаменательное событие."
+ han_monarch_birth.3.a: "Знаменательное событие."
+
+#Netherlands
+ net_monarch_birth.1.a: "Знаменательное событие."
+ net_monarch_birth.2.a: "Знаменательное событие."
+
+#Persia
+ per_monarch_birth.1.a: "Знаменательное событие."
+ per_monarch_birth.2.a: "Знаменательное событие."
+ per_monarch_birth.3.a: "Знаменательное событие."
+ per_monarch_birth.4.a: "Знаменательное событие."
+
+#Portugal
+ por_monarch_birth.1.a: "Знаменательное событие."
+ por_monarch_birth.2.a: "Знаменательное событие."
+ por_monarch_birth.3.a: "Знаменательное событие."
+
+#Prussia
+ pru_monarch_birth.1.a: "Знаменательное событие."
+ pru_monarch_birth.2.a: "Знаменательное событие."
+ pru_monarch_birth.3.a: "Знаменательное событие."
+ pru_monarch_birth.4.a: "Знаменательное событие."
+ pru_monarch_birth.5.a: "Знаменательное событие."
+ pru_monarch_birth.6.a: "Знаменательное событие."
+ pru_monarch_birth.7.a: "Знаменательное событие."
+ pru_monarch_birth.8.a: "Знаменательное событие."
+ pru_monarch_birth.9.a: "Знаменательное событие."
+
+#Russia
+ rus_monarch_birth.1.a: "Знаменательное событие."
+ rus_monarch_birth.2.a: "Знаменательное событие."
+ rus_monarch_birth.3.a: "Знаменательное событие."
+ rus_monarch_birth.4.a: "Знаменательное событие."
+ rus_monarch_birth.5.a: "Знаменательное событие."
+ rus_monarch_birth.6.a: "Знаменательное событие."
+ rus_monarch_birth.7.a: "Знаменательное событие."
+ rus_monarch_birth.8.a: "Знаменательное событие."
+ rus_monarch_birth.9.a: "Знаменательное событие."
+ rus_monarch_birth.10.a: "Знаменательное событие."
+ rus_monarch_birth.11.a: "Знаменательное событие."
+
+#Sardinia
+ sar_monarch_birth.1.a: "Знаменательное событие."
+ sar_monarch_birth.2.a: "Знаменательное событие."
+ sar_monarch_birth.3.a: "Знаменательное событие."
+
+#Saxony
+ sax_monarch_birth.1.a: "Знаменательное событие."
+ sax_monarch_birth.2.a: "Знаменательное событие."
+
+#Two Sicilies
+ sic_monarch_birth.1.a: "Знаменательное событие."
+ sic_monarch_birth.2.a: "Знаменательное событие."
+ sic_monarch_birth.3.a: "Знаменательное событие."
+
+#Spain
+ spa_monarch_birth.1.a: "Знаменательное событие."
+ spa_monarch_birth.2.a: "Знаменательное событие."
+ spa_monarch_birth.3.a: "Знаменательное событие."
+
+#Sweden
+ swe_monarch_birth.1.a: "Знаменательное событие."
+ swe_monarch_birth.2.a: "Знаменательное событие."
+ swe_monarch_birth.3.a: "Знаменательное событие."
+
+#Turkey
+ tur_monarch_birth.1.a: "Знаменательное событие."
+ tur_monarch_birth.2.a: "Знаменательное событие."
+ tur_monarch_birth.3.a: "Знаменательное событие."
+ tur_monarch_birth.4.a: "Знаменательное событие."
+
+#Wurttemberg
+ wur_monarch_birth.1.a: "Знаменательное событие."

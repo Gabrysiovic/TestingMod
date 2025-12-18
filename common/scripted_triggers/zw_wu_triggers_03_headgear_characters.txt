@@ -1,0 +1,213 @@
+﻿zw_trigger_westernized_headgear_character_politician = {
+	# also used for republic ruler
+	exists = scope:character
+	scope:character ?= {
+		# culture isn't western culture
+		zw_trigger_non_western_culture = yes
+		# country has westernized
+		owner ?= { zw_trigger_country_is_westernized = yes }
+		# is politician
+		has_role = politician
+		# is not ruler, heir, child
+		is_ruler = no
+		is_heir = no
+		age >= 15
+		# is from a westernized ig
+		zw_trigger_ig_is_westernized = yes
+	}
+}
+
+zw_trigger_westernized_headgear_character_politician_executive = {
+	# also used for republic ruler
+	exists = scope:character
+	scope:character ?= {
+		# culture isn't western culture
+		zw_trigger_non_western_culture = yes
+		# country has westernized
+		owner ?= { zw_trigger_country_is_westernized = yes }
+		# is ig_industrialists politician or executive
+		OR = {
+			AND = {
+				has_role = politician
+				is_interest_group_type = ig_industrialists
+				# is not ruler, heir, child
+				is_ruler = no
+				is_heir = no
+				age >= 15
+			}
+			has_role = executive
+		}
+		# is from a westernized ig
+		zw_trigger_ig_is_westernized = yes
+	}
+}
+
+zw_trigger_westernized_headgear_character_agitator = {
+	exists = scope:character
+	scope:character ?= {
+		# culture isn't western culture
+		zw_trigger_non_western_culture = yes
+		# country has westernized
+		owner ?= { zw_trigger_country_is_westernized = yes }
+		# is agitator
+		has_role = agitator
+		# is from a westernized ig
+		zw_trigger_ig_is_westernized = yes
+	}
+}
+
+zw_trigger_westernized_headgear_character_general = {
+	exists = scope:character
+	scope:character ?= {
+		# culture isn't western culture
+		zw_trigger_non_western_culture = yes
+		# country has westernized
+		owner ?= { zw_trigger_country_is_westernized = yes }
+		# is general or ig_armed_forces leader
+		OR = {
+			has_role = general
+			AND = {
+				is_interest_group_type = ig_armed_forces
+				interest_group.leader = this
+				NOT = { has_role = admiral }
+			}
+		}
+		# character isn't monarch ruler
+		NAND = {
+			is_ruler = yes
+			owner = { has_law = law_type:law_monarchy }
+		}
+		# isn't late era
+		#trigger_if = {
+			#limit = { has_dlc_feature = ep1_cosmetics }
+			#owner = {
+			#	NOT = { has_technology_researched = bolt_action_rifles }
+			#}
+		#}
+	}
+}
+
+zw_trigger_westernized_headgear_character_general_late = {
+	exists = scope:character
+	scope:character ?= {
+		# culture isn't western culture
+		zw_trigger_non_western_culture = yes
+		# country has westernized
+		owner ?= { zw_trigger_country_is_westernized = yes }
+		# is general or ig_armed_forces leader
+		OR = {
+			has_role = general
+			AND = {
+				is_interest_group_type = ig_armed_forces
+				interest_group.leader = this
+				NOT = { has_role = admiral }
+			}
+		}
+		# character isn't monarch ruler, unused, monarch commander also wears late era uniforms
+		#NAND = {
+			#is_ruler = yes
+			#owner = { has_law = law_type:law_monarchy }
+		#}
+		# is late era
+		has_dlc_feature = ep1_cosmetics
+		owner = {
+			has_technology_researched = bolt_action_rifles
+			NAND = {
+				has_variable = zw_var_special_headgear_general_late
+				var:zw_var_special_headgear_general_late = 4
+			}
+		}
+	}
+}
+
+zw_trigger_westernized_headgear_character_admiral = {
+	exists = scope:character
+	scope:character ?= {
+		# culture isn't western culture
+		zw_trigger_non_western_culture = yes
+		# country has westernized
+		owner ?= { zw_trigger_country_is_westernized = yes }
+		# is admiral
+		has_role = admiral
+	}
+}
+
+zw_trigger_westernized_headgear_character_military_special = {
+	exists = scope:character
+	scope:character ?= {
+		# culture isn't western culture
+		zw_trigger_non_western_culture = yes
+		# country has westernized
+		owner ?= { zw_trigger_country_is_westernized = yes }
+		OR = {
+			# general
+			AND = {
+				owner = { 
+					has_variable = zw_var_special_headgear_general
+					var:zw_var_special_headgear_general = $style_num$
+				}
+				# is general or ig_armed_forces leader
+				OR = {
+					has_role = general
+					AND = {
+						is_interest_group_type = ig_armed_forces
+						interest_group.leader = this
+						NOT = { has_role = admiral }
+					}
+				}
+				## late era = no
+				#trigger_if = {
+					#limit = { has_dlc_feature = ep1_cosmetics }
+					#owner = {
+					#	NOT = { has_technology_researched = bolt_action_rifles }
+					#}
+				#}
+				# character isn't monarch ruler
+				NAND = {
+					is_ruler = yes
+					owner = { has_law = law_type:law_monarchy }
+				}
+			}
+			# admiral
+			AND = {
+				owner = { 
+					has_variable = zw_var_special_headgear_admiral
+					var:zw_var_special_headgear_admiral = $style_num$
+				}
+				# is admiral
+				has_role = admiral
+			}
+		}
+	}
+}
+
+zw_trigger_westernized_headgear_character_general_late_special = {
+	exists = scope:character
+	scope:character ?= {
+		# culture isn't western culture
+		zw_trigger_non_western_culture = yes
+		# country has westernized
+		owner ?= { zw_trigger_country_is_westernized = yes }
+		# is general or ig_armed_forces leader
+		OR = {
+			has_role = general
+			AND = {
+				is_interest_group_type = ig_armed_forces
+				interest_group.leader = this
+				NOT = { has_role = admiral }
+			}
+		}
+		# character isn't monarch ruler, unused, monarch commander also wears late era uniforms
+		#NAND = {
+			#is_ruler = yes
+			#owner = { has_law = law_type:law_monarchy }
+		#}
+		# is late era
+		has_dlc_feature = ep1_cosmetics
+		owner = {
+			has_technology_researched = bolt_action_rifles
+			has_variable = zw_var_special_headgear_general_late
+			var:zw_var_special_headgear_general_late = $style_num$
+		}
+	}
+}

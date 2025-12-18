@@ -1,0 +1,13 @@
+﻿l_english:
+
+ historic_monarch_death.t:0 "Our Monarch is Dead."
+ historic_monarch_death.d:0 "A somber veil has fallen upon [ROOT.GetCountry.GetName] as news spreads of the passing of our sovereign, [SCOPE.sCharacter('dead_character').GetFirstName]. Simultaneously, all eyes turn to [SCOPE.sCharacter('dead_character').GetHerHis] heir, [ROOT.GetCountry.GetRuler.GetFirstName], who will assume the throne."
+ historic_monarch_death.f:0 "“As [ROOT.GetCountry.GetName] bids farewell to the late [SCOPE.sCharacter('dead_character').GetFirstName], it welcomes a new era under [ROOT.GetCountry.GetRuler.GetFirstName]. [ROOT.GetCountry.GetRuler.GetSheHe] ascends to the throne with a heavy burden, carrying with [ROOT.GetCountry.GetRuler.GetHerHim] the hopes of yesterday and the dreams of tomorrow.”"
+
+ historic_heir_death.t:0 "The Heir is Dead."
+ historic_heir_death.d:0 "Tragedy strikes as the heir, [SCOPE.sCharacter('dead_character').GetFirstName] has passed away. An air of uncertainty looms across the nation."
+ historic_heir_death.f:0 "“The nation mourns the passing of [SCOPE.sCharacter('dead_character').GetFirstName], heir to the [ROOT.GetCountry.GetAdjectiveNoFormatting] throne. Funeral processions are on their way and curious onlookers push their way to see the former would-be “[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]”. Some wonder what things would have been like if [ROOT.GetCountry.GetRuler.GetSheHe] became the monarch. Good or bad, prosperity or poverty, it doesn't matter anymore, for they are dead.”"
+
+ historic_monarch_birth.t:0 "The Birth of An Heir"
+ historic_monarch_birth.d:0 "Our [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] has joyously announced the birth of an heir. The birth has secured the line of succession."
+ historic_monarch_birth.f:0 "“The Royal Palace bustles with activity. Doctors, nurses, and midwives scramble everywhere. In the bedroom, her Royal Highness goes through with the ‘procedure’, one push at a time. At the end of it all, a sigh of relief. God save the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle].”"

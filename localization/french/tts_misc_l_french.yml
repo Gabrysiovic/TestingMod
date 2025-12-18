@@ -1,0 +1,765 @@
+﻿l_french:
+
+ #####
+ # Technology
+ #####
+
+ predreadnought_tech: "Pre-Dreadnought"
+ predreadnought_tech_desc: "With large caliber guns and steel armor, pre-dreadnought battleships are powerful vessels."
+ steel_shipbuilding_tech: "Steel Shipbuilding"
+ steel_shipbuilding_tech_desc: "TODO"
+ turbine_powered_ships_tech: "Turbine-Powered Ships"
+ turbine_powered_ships_tech_desc: "TODO"
+ large_scale_shipbuilding_tech: "Large Scale Shipbuilding"
+ large_scale_shipbuilding_tech_desc: "TODO"
+ fleet_carrier_tech: "Fleet Carriers"
+ fleet_carrier_tech_desc: "TODO"
+ armored_carrier_tech: "Armored Carriers"
+ armored_carrier_tech_desc: "TODO"
+ fully_rigged_ships: "Fully Rigged Ships"
+ fully_rigged_ships_desc: "Ships with a full set of sails can move faster and carry more armament."
+
+ #####
+ # Goods
+ #####
+ tts_capital_ships: "Capital Ships"
+
+######
+# Buildings
+######
+
+ building_battleship_import_office: "Battleship Import Office"
+ building_admiralty: "Admiralty"
+ building_admiralty_build_tooltip: "Has finished the Admiralty journal"
+
+ ######
+ # Production Methods
+ #####
+
+ # Mil Shipyards
+ pmg_tts_naval_yards: "$pm_base$"
+ pmg_ownership_capital_building_navy_yards: "$pmg_ownership$"
+ pm_military_shipbuilding_ironclad: "Ironclads"
+ pm_military_shipbuilding_steel: "Steel-Hulled Ships"
+ pm_military_shipbuilding_turbine: "Turbine-Powered Ships"
+ pm_military_shipbuilding_arc_welding: "Large Battleships"
+
+
+ # Naval Base
+ pm_tts_ships_of_the_line: "Ships of the Line"
+ pm_tts_steam_ships_of_the_line: "Steam Ships of the Line"
+ pm_tts_ironclads: "Ironclads"
+ pm_tts_predreadnoughts: "Pre-Dreadnoughts"
+ pm_tts_dreadnoughts: "Dreadnoughts"
+ pm_tts_battleships: "Battleships"
+ pm_tts_commerce_raider: "Commerce Raiders"
+ pm_tts_torpedo_boat: "Torpedo Boats"
+ pm_tts_submarine: "Submarines"
+ pm_tts_frigates: "Frigates"
+ pm_tts_destroyers: "Destroyers"
+ pm_tts_carriers: "Aircraft Carriers"
+
+ pmg_carriers: "Aircraft Carrier Use"
+ pm_tts_no_carriers: "No Aircraft Carriers"
+ pm_tts_experimental_carriers: "Experimental Carriers"
+ pm_tts_armored_carriers: "Armored Carriers"
+ pm_tts_strike_carriers: "Strike Carriers"
+
+ # Misc
+ pmg_battleship_import: "Imports"
+ pm_battleship_import: "Battleship Imports"
+
+ # Admiralty
+ pmg_admiralty_base: "Base"
+ pm_tts_admiralty_base: "Central Navy Administration"
+ pmg_admiralty: "Admiralty Staff"
+ pm_tts_traditionalist_admiralty: "Traditionalist"
+ pm_tts_naval_veterans_admiralty: "Naval Veterans"
+ pm_tts_technical_expertise_admiralty: "Technical Expertise"
+
+######
+# Modifiers
+######
+ 
+ relaxed_safety_procedures: "Relaxed Safety Procedures"
+ exploding_ships: "Exploding Ships"
+ cheating_the_treaty: "Cheating the Treaty"
+ funding_great_eastern: "Funding the Great Eastern"
+ developing_predreadnoughts: "Developing Pre-Dreadnoughts"
+ developing_dreadnoughts: "Developing Dreadnoughts"
+ developing_battleships: "Developing Battleships"
+ naval_innovations: "Naval Innovations"
+ naval_innovations_predreadnoughts: "Naval Innovations"
+ naval_innovations_dreadnoughts: "Naval Innovations"
+ naval_innovations_battleships: "Naval Innovations"
+ naval_innovations_tooltip: "This modifier will be removed once more powerful battleships are researched."
+ naval_innovator: "Naval Innovator"
+ developed_mahanian_thought: "Developed Mahanian Thought"
+ battleship_building_holiday: "Battleship Building Holiday"
+ naval_base_treaty_tooltip: "The country is not under a Battleship Building Holiday"
+ purchasing_battleships: "Purchasing Battleships"
+ receiving_payment_for_battleships: "Receiving Payment for Battleships"
+ great_white_fleet_modifier: "The Great White Fleet"
+ battleship_explosion_state: "Battleship Explosion"
+ battleship_explosion_building: "Battleship Explosion"
+ unstable_ship_sunk: "Unstable Ship Sunk"
+ high_navy_prof_modifier: "High Navy Professionalism"
+ medium_navy_prof_modifier: "Medium Navy Professionalism"
+ low_navy_prof_modifier: "Low Navy Professionalism"
+ very_low_navy_prof_modifier: "Very Low Navy Professionalism"
+ paying_for_naval_training: "Paying for Naval Training"
+ stopped_ruler_from_diverting_funds: "Stopped Ruler from Diverting Funds"
+ torpedo_juice: "Torpedo Juice"
+ laced_torpedo_juice: "Laced Torpedo Juice"
+ faulty_shells: "Faulty Shells"
+ relaxed_discipline: "Relaxed Discipline"
+ enforcing_harsh_discipline: "Enforcing Harsh Discipline"
+ replacing_defective_shells: "Replacing Defective Shells"
+ didnt_honor_admirals_favor: "Did Not Honor Admirals Favor"
+ navy_discipline_breakdown: "Navy Discipline Breakdown"
+ cracking_down_on_mutineers: "Cracking Down on Mutineers"
+ well_engineered_hulls: "Well-Engineered Hulls"
+ paying_for_naval_equipment: "Paying for Naval Equipment"
+ lacking_specialized_workers: "Lacking Specialized Workers"
+ paying_extra_for_shipyard_workers: "Paying Extra for Shipyard Workers"
+ restructuring_navy: "Restructuring Navy"
+ conducting_major_naval_exercises: "Conducting Major Naval Exercises"
+ conducting_naval_exercises: "Conducting Naval Exercises"
+ paying_for_naval_exercises: "Paying for Naval Exercises"
+ paying_for_fleet_review: "Paying for Fleet Review"
+ fleet_review_modifier_rival: "Good Fleet Review"
+ fleet_review_modifier_no_rival: "Good Fleet Review"
+ fleet_review_modifier_bad: "Disappointing Fleet Review"
+ converted_warship_to_carrier_modifier: "Converted Warship to Carrier"
+ paying_for_ocean_liner: "Paying for Ocean Liner"
+ carrier_innovator: "Carrier Innovator"
+ emergency_carrier_budget: "Emergency Carrier Budget"
+ setting_up_admiralty: "Setting Up Admiralty"
+ receiving_naval_conference_bribes: "Naval Conference Bribes"
+ paying_naval_conference_bribes: "Naval Conference Bribes"
+ efficient_turrets: "Efficient Turrets"
+ turret_innovator: "Turret Innovator"
+ navy_professionalization_effort: "Navy Professionalization Effort"
+ eroding_navy_professionalism: "Eroding Navy Professionalism"
+ early_navy_adopter: "Early Navy Adopter"
+
+# Opinion modifiers
+ meeting_two_power_standard: "Meeting Two-Power Standard"
+ not_meeting_two_power_standard: "Not Meeting Two-Power Standard"
+ rejected_two_power_standard: "Rejected Two-Power Standard"
+ abandoned_two_power_standard: "Abandoned Two-Power Standard"
+ denied_battleships: "Denied Battleships"
+ navy_concerns_ignored: "Navy Concerns Ignored"
+ navy_modernized: "Navy Modernized"
+ navy_left_behind: "Navy Left Behind"
+ let_our_naval_superiority_slip: "Let our Naval Superiority Slip"
+ ignored_advice_on_shipbuilding: "Ignored Advice on Shipbuilding"
+ purged_corrupt_officers: "Purged Corrupt Officers"
+ enforcing_discipline: "Enforcing Discipline"
+ accepted_revolter_demands: "Accepted Revolters Demands"
+ prosecuting_ammunition_thieves: "Prosecuting Ammunition Thieves"
+ refused_to_promote_admiral: "Refused to Promote Admiral"
+ renamed_battleships: "Renamed Battleships"
+ officer_purge: "Officer Purge"
+ officer_reshuffle: "Officer Reshuffle"
+ fired_admiral: "Fired Admiral"
+ admiralty_concessions_denied: "Admiralty Concessions Denied"
+
+
+######
+# Laws
+######
+ lawgroup_naval_treaty: "Navy Restrictions"
+ law_no_naval_treaty: "Unrestricted Navy"
+ law_no_naval_treaty_desc: "The country is currently not bound by any navy limitations."
+ law_moderate_naval_treaty: "Moderate Naval Treaty"
+ law_moderate_naval_treaty_desc: "The country is under a moderate reduction of naval assets, as determined by a naval disarmament conference."
+ moderate_treaty_effect_tooltip: "Navies will be reduced to approximately three-quarters of the previous strength. They will also be prevented from expanding for five years."
+ law_extensive_naval_treaty: "Extensive Naval Treaty"
+ law_extensive_naval_treaty_desc: "There are significant limitations out under the country's navy, as a result of a naval disarmament conference"
+ extensive_treaty_effect_tooltip: "Navies will be reduced to approximately half of the previous strength. They will also be prevented from expanding for five years."
+ law_minimal_navy: "Minimal Navy"
+ law_minimal_navy_desc: "The country has a very small navy."
+
+######
+# Journal Entries
+######
+
+ je_naval_conference: "Naval Conference"
+ is_main_naval_power_tooltip: "We are one of the [concept_main_naval_powers]"
+ je_naval_conference_status: "You can hold a naval disarmament conference."
+ je_naval_conference_reason: "Recent developments in naval technology have led to increasingly high expenses. We might want to try to limit naval expansion, lest we fall into a costly arms race."
+ voting_on_treaty_is_host: "is the Host Country."
+ voting_on_treaty_yes: "is voting #p YES#!."
+ voting_on_treaty_no: "is voting #n NO#!."
+ je_naval_conference_ongoing: "A naval conference is currently in progress. We shall wait for the results."
+ je_naval_conference_complete: "All countries voted in favor of the treaty."
+
+ je_naval_conference_host: "The [GetGlobalVariable('naval_conference_state_region').GetStateRegion.GetCityHubName] Naval Conference"
+ je_naval_conference_host_status: "The Naval Conference is ongoing."
+ je_naval_conference_host_reason: "We are currently discussing the enactment of a [GetGlobalVariable('treaty_law_var').GetLawType.GetName]. For it to pass, all 7 [concept_main_naval_powers] must vote in agreement. As the Host Nation, we can use our intelligence network to tap into their communications and determine #tooltippable;tooltip:[Country.GetTooltipTag],je_naval_conference_intelligence_tooltip how likely they are#! to vote for the treaty on their own. However, if they prove resistant, we might need to persuade them by other means. The current status of the vote is:\n[ROOT.GetVariable('treaty_country_1').GetCountry.GetName] [ROOT.GetVariable('treaty_country_1').GetCountry.GetCustom('voting_on_treaty_loc')]\n[ROOT.GetVariable('treaty_country_2').GetCountry.GetName] [ROOT.GetVariable('treaty_country_2').GetCountry.GetCustom('voting_on_treaty_loc')]\n[ROOT.GetVariable('treaty_country_3').GetCountry.GetName] [ROOT.GetVariable('treaty_country_3').GetCountry.GetCustom('voting_on_treaty_loc')]\n[ROOT.GetVariable('treaty_country_4').GetCountry.GetName] [ROOT.GetVariable('treaty_country_4').GetCountry.GetCustom('voting_on_treaty_loc')]\n[ROOT.GetVariable('treaty_country_5').GetCountry.GetName] [ROOT.GetVariable('treaty_country_5').GetCountry.GetCustom('voting_on_treaty_loc')]\n[ROOT.GetVariable('treaty_country_6').GetCountry.GetName] [ROOT.GetVariable('treaty_country_6').GetCountry.GetCustom('voting_on_treaty_loc')]\n[ROOT.GetVariable('treaty_country_7').GetCountry.GetName] [ROOT.GetVariable('treaty_country_7').GetCountry.GetCustom('voting_on_treaty_loc')]"
+ je_naval_conference_intelligence_tooltip: "According to our intelligence, the chance for each country to vote in favor of the treaty each week is:\n[Country.MakeScope.Var('treaty_country_1').GetCountry.GetCustom('treaty_acceptance_chance')]\n[Country.MakeScope.Var('treaty_country_2').GetCountry.GetCustom('treaty_acceptance_chance')]\n[Country.MakeScope.Var('treaty_country_3').GetCountry.GetCustom('treaty_acceptance_chance')]\n[Country.MakeScope.Var('treaty_country_4').GetCountry.GetCustom('treaty_acceptance_chance')]\n[Country.MakeScope.Var('treaty_country_5').GetCountry.GetCustom('treaty_acceptance_chance')]\n[Country.MakeScope.Var('treaty_country_6').GetCountry.GetCustom('treaty_acceptance_chance')]\n[Country.MakeScope.Var('treaty_country_7').GetCountry.GetCustom('treaty_acceptance_chance')]"
+ treaty_acceptance_host: "[ROOT.GetCountry.GetFlagTextIcon] is the #white Host#!."
+ treaty_acceptance_high: "[ROOT.GetCountry.GetFlagTextIcon] has a #p HIGH#! chance of voting for the treaty."
+ treaty_acceptance_medium: "[ROOT.GetCountry.GetFlagTextIcon] has a #Yellow MEDIUM#! chance of voting for the treaty."
+ treaty_acceptance_low: "[ROOT.GetCountry.GetFlagTextIcon] has a #Gold LOW#! chance of voting for the treaty."
+ treaty_acceptance_very_low: "[ROOT.GetCountry.GetFlagTextIcon] has a #n VERY LOW#! chance of voting for the treaty."
+ treaty_acceptance_already_voting: "[ROOT.GetCountry.GetFlagTextIcon] is #p already voting#! for the treaty."
+ treaty_acceptance_low_intel: "[ROOT.GetCountry.GetFlagTextIcon] encryption ability is too high to predict their actions."
+
+ je_naval_conference_participant: "The [GetGlobalVariable('naval_conference_state_region').GetStateRegion.GetCityHubName] Naval Conference"
+ je_naval_conference_participant_status_waiting: "We haven't agreed to the terms."
+ je_naval_conference_participant_status_voted: "We have agreed to the treaty."
+ je_naval_conference_participant_reason: "We are currently discussing the enactment of a [GetGlobalVariable('treaty_law_var').GetLawType.GetName]. For it to pass, all 7 [concept_main_naval_powers] must vote in agreement."
+
+ je_two_power_standard: "The Two-Power Standard"
+ je_two_power_standard_met: "We are currently #BOLD meeting #!the Two-Power Standard"
+ je_two_power_standard_not_met: "We are currently NOT meeting the Two-Power Standard"
+ je_two_power_standard_reason: "We currently have a navy size of #BOLD [ROOT.GetCountry.GetWarships|0]#!, and the two largest [Concept('concept_great_power', '$concept_great_powers$')] have a combined navy size of #BOLD [ROOT.ScriptValue('sum_two_powers')|0]#!."
+ je_two_power_standard_fail: "We give up on the Standard."
+
+ je_south_american_dreadnoughts: "The South American Dreadnought Race"
+ je_south_american_dreadnoughts_status: "TODO"
+ je_south_american_dreadnoughts_reason: "TODO"
+
+ je_predreadnought_tech_preview: "TODO"
+ je_predreadnought_tech_preview_desc: "TODO"
+
+ je_predreadnought_tech: "Developing Pre-Dreadnoughts"
+ je_predreadnought_tech_status_inactive: "Development has not started yet."
+ je_predreadnought_tech_status: "We are developing new shipbuilding techniques, which will be used in the construction of Pre-Dreadnought battleships."
+ je_predreadnought_tech_reason: "Our current level of Naval Innovation is #b #gold [ROOT.GetCountry.MakeScope.Var('naval_innovations').GetValue|0]#!#!. This will result in an increase of combat ability by #b #gold [ROOT.GetCountry.MakeScope.Var('naval_innovations').GetValue|0]%#!#! once research is finished."
+ je_predreadnought_tech_goal: "Research is finished"
+
+ je_dreadnought_tech: "Developing Dreadnoughts"
+ je_dreadnought_tech_status_inactive: "Development has not started yet."
+ je_dreadnought_tech_status: "We are developing new shipbuilding techniques, which will be used in the construction of Dreadnought battleships."
+ je_dreadnought_tech_reason: "Our current level of Naval Innovation is #b #gold [ROOT.GetCountry.MakeScope.Var('naval_innovations').GetValue|0]#!#!. This will result in an increase of combat ability by #b #gold [ROOT.GetCountry.MakeScope.Var('naval_innovations').GetValue|0]%#!#! once research is finished."
+ je_dreadnought_tech_goal: "Research is finished"
+
+ je_battleship_tech: "Developing Battleships"
+ je_battleship_tech_status_inactive: "Development has not started yet."
+ je_battleship_tech_status: "We are developing new shipbuilding techniques, which will be used in the construction of Super-Dreadnought battleships."
+ je_battleship_tech_reason: "Our current level of Naval Innovation is #b #gold [ROOT.GetCountry.MakeScope.Var('naval_innovations').GetValue|0]#!#!. This will result in an increase of combat ability by #b #gold [ROOT.GetCountry.MakeScope.Var('naval_innovations').GetValue|0]%#!#! once research is finished."
+ je_battleship_tech_goal: "Research is finished"
+
+ je_american_modernization: "Modernizing the Navy"
+ je_american_modernization_status: "We are in the process of expanding and modernizing our navy."
+ je_american_modernization_reason: "Our navy is pitifully small for a nation of our stature. We need to expand it if we want to have a place in world affairs."
+ je_american_modernization_goal: "Our navy has tripled in size."
+
+ je_fleet_review: "Fleet Review"
+ je_fleet_review_reason: "A Fleet Review is an opportunity to evaluate the state of our navy, and to display our capabilities to outside observers."
+ je_fleet_review_status_0_deciding_on_budget: "We're deciding on a budget."
+ je_fleet_review_status_1_inviting_guests: "We're inviting guests."
+ je_fleet_review_status_2_in_progress: "The Fleet Review is in progress."
+
+ je_carrier_tech: "Developing Aircraft Carriers"
+ je_carrier_tech_reason: "Our current aircraft carriers are mostly small, experimental, or converted hulls, and our aircraft technology and doctrine are still on their infancy. To use our aircraft carriers' capabilities to their full extent, more research and development is needed.\n\nOur research will progress as long as any Naval Base has the Aircraft Carriers production method active."
+ je_carrier_tech_goal: "Research is finished."
+
+ je_build_admiralty: "Admiralty"
+ je_build_admiralty_reason: "We are setting up a newer, centralized Admiralty to administer our Navy."
+ je_build_admiralty_goal: "The setup is complete."
+
+#######
+# Decisions
+#######
+
+ cheat_treaty_decision: "Cheat the treaty"
+ cheat_treaty_decision_desc: "By fudging the books, we can pretend to be following the treaty while secretly staying above the established limits."
+ pre_dreadnoughts_decision: "Develop Pre-Dreadnoughts"
+ pre_dreadnoughts_decision_desc: "Start the process to develop the technology to build Pre-Dreadnoughts"
+ dreadnoughts_decision: "Develop Dreadnoughts"
+ dreadnoughts_decision_desc: "Start the process to develop the technology to build Dreadnoughts"
+ battleships_decision: "Develop Battleships"
+ battleships_decision_desc: "Start the process to develop the technology to build Super-Dreadnought Battleships"
+ buy_predreadnoughts_decision: "Purchase Pre-Dreadnoughts"
+ buy_predreadnoughts_decision_desc: "We will purchase some new battleships for our navy."
+ buy_dreadnoughts_decision: "Purchase Dreadnoughts"
+ buy_dreadnoughts_decision_desc: "Dreadnoughts are the future of naval warfare, we should try to buy some."
+ great_white_fleet_decision: "The Great White Fleet"
+ great_white_fleet_decision_desc: "Let's display our fleet to the world."
+ gwf_decision_peace_tooltip: "No countries in the itinerary are at war."
+ increase_professionalism_decision: "Increase Navy Professionalism"
+ increase_professionalism_decision_desc: "Take measures to increase our Navy Professionalism."
+ increase_professionalism_decision_possible: "We haven't increased our Navy Professionalism in less than a year."
+ increase_professionalism_decision_tooltip: "We'll receive an opportunity to increase our Navy Professionalism."
+ maintain_current_navyprof_decision: "Maintain Current Navy Professionalism"
+ maintain_current_navyprof_decision_desc: "By continuosly investin in our navy, we can prevent our Navy Professionalism from decaying. However, we won't be able to increase it either."
+ stop_maintaining_navyprof_decision: "Stop Maintaining Navy Professionalism"
+ stop_maintaining_navyprof_decision_desc: "We'll stop maintaining our current level of Navy Professionalism. That will allow it to naturally decay, but we'll be able to increase it through other decisions."
+ fleet_review_decision: "Hold Fleet Review"
+ fleet_review_decision_desc: "Our fleet will perform in front of our ruler and foreign dignataries."
+ fleet_review_decision_tt: "We haven't performed a fleet review in the last 20 years."
+ carriers_decision: "Develop Fleet Carriers"
+ carriers_decision_desc: "Invest on researching better carriers and aircraft to use them."
+ build_admiralty_decision: "Build Admiralty"
+ build_admiralty_decision_desc: "We'll start the process of setting up a centralized place to administer our navy."
+ 
+
+######
+# Names
+######
+
+ Isambard_Kingdom: "Isambard Kingdom"
+ Brunel: "Brunel"
+ alfred_thayer: "Alfred Thayer"
+ mahan: "Mahan"
+
+######
+# Notifications
+######
+
+ notification_dreadnought_notification_name: "Dreadnought Launched"
+ notification_dreadnought_notification_desc: "[SCOPE.sCountry('dreadnought_country').GetName] has launched the first Dreadnought battleship, changing the face of naval warfare"
+ notification_dreadnought_notification_tooltip: "#header $notification_dreadnought_notification_name$#!\n$TOOLTIP_DELIMITER$\n$notification_dreadnought_notification_desc$"
+
+ notification_battleship_explosion_notification_name: "[SCOPE.sCountry('exploding_country').GetAdjective] Battleship Explodes!"
+ notification_battleship_explosion_notification_desc: "A battleship belonging to [SCOPE.sCountry('exploding_country').GetCustom('use_the')][SCOPE.sCountry('exploding_country').GetName] has exploded. They are blaming [SCOPE.sCountry('scapegoat_country').GetCustom('use_the')][SCOPE.sCountry('scapegoat_country').GetName] for the incident."
+ notification_battleship_explosion_notification_tooltip: "#header $notification_battleship_explosion_notification_name$#!\n$TOOLTIP_DELIMITER$\n$notification_battleship_explosion_notification_desc$"
+
+
+
+######
+# Customizable Localization
+######
+
+# Navy Names
+ generic_navy_name: "[ROOT.GetCountry.GetAdjectiveNoFormatting] Navy"
+ generic_imperial_navy: "Imperial [ROOT.GetCountry.GetAdjectiveNoFormatting] Navy"
+ generic_royal_navy: "Royal [ROOT.GetCountry.GetAdjectiveNoFormatting] Navy"
+ royal_navy: "Royal Navy"
+ united_states_navy: "United States Navy"
+ confederate_states_navy: "Confederate States Navy"
+ japanese_navy: "Japanese Navy"
+ soviet_navy: "Soviet Navy"
+ imperial_chinese_navy: "Imperial Chinese Navy"
+ republic_of_china_navy: "Republic of China Navy"
+ peoples_liberation_army_navy: "People's Liberation Army Navy"
+
+# Propellants
+ cordite: "Cordite"
+ poudre_b: "Poudre B"
+ smokeless_powder: "smokeless powder"
+
+# South American Battleship
+ riachuelo: "Riachuelo"
+ libertad: "Libertad"
+ capitan_prat: "Capitán Prat"
+ almirante_grau: "Almirante Grau"
+ generic_new_battleship: "new battleship"
+
+ # The or not the, that's the question
+ the: "the "
+ no_the: ""
+
+ # Purchased Dreadnought
+ bb_minas_geraes: "battleship Minas Geraes"
+ bb_rivadavia: "battleship Rivadavia"
+ bb_almirante_latorre: "battleship Almirante Latorre"
+ bb_osman_i: "battleship Sultan Osman I"
+ generic_new_dreadnought: "new battleship"
+
+ # Reason for taking funds out of the navy
+ fund_alcohol_addiction: "fuel their alcoholism"
+ fund_opium_addiction: "fuel their opium addiction"
+ fund_questionable_parties: "host parties of questionable nature"
+ build_new_summer_palace: "build a new summer palace"
+ fund_cocaine_addiction: "fuel their cocaine addiction"
+ build_fairytale_castle: "build a fairytale castle"
+ fund_banquets: "host expensive banquets"
+
+ # The country's first dreadnought
+ generic_first_dreadnought: "first dreadnought-type battleship in our country"
+ custom_dreadnought: "#yellow [ROOT.GetCountry.GetCustom('flotilla_prefix')] Dreadnought#!"
+ custom_nassau: "#yellow [ROOT.GetCountry.GetCustom('flotilla_prefix')] Nassau#!"
+ custom_westfalen: "#yellow [ROOT.GetCountry.GetCustom('flotilla_prefix')] Westfalen#!"
+ custom_kawachi: "#yellow [ROOT.GetCountry.GetCustom('flotilla_prefix')] Kawachi#!"
+ custom_dante_alighieri: "#yellow [ROOT.GetCountry.GetCustom('flotilla_prefix')] Dante Alighieri#!"
+ custom_tegetthoff: "#yellow [ROOT.GetCountry.GetCustom('flotilla_prefix')] Tegetthoff#!"
+ custom_courbet: "#yellow [ROOT.GetCountry.GetCustom('flotilla_prefix')] Courbet#!"
+ custom_gangut: "#yellow [ROOT.GetCountry.GetCustom('flotilla_prefix')] Gangut#!"
+ custom_delaware: "#yellow [ROOT.GetCountry.GetCustom('flotilla_prefix')] Delaware#!"
+
+ # The gun caliber of their first super-dreadnought
+ 13p5_inch: "13.5 inch"
+ 14_inch: "14 inch"
+ 340_mm: "340 mm"
+ 356_mm: "356 mm"
+ 381_mm: "381 mm"
+ 35_cm: "35 cm"
+ 36_cm: "36 cm"
+ 38_cm: "38 cm"
+
+ # Flagship name for fleet review
+ custom_hms_victoria: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Victoria"
+ custom_duke_of_wellington: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Duke of Wellington"
+ custom_warrior: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Warrior"
+ custom_devastation: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Devastation"
+ custom_royal_sovereign: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Royal Sovereign"
+ custom_hms_colossus: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Colossus"
+ custom_hms_neptune: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Neptune"
+ custom_hms_hood: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Hood"
+ custom_warspite: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Warspite"
+ custom_orion: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Orion"
+ custom_uss_constitution: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Constitution"
+ custom_uss_washington: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Washington"
+ custom_monitor: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Monitor"
+ custom_indiana: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Indiana"
+ custom_connecticut: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Connecticut"
+ custom_wyoming: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Wyoming"
+ custom_pennsylvania: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Pennsylvania"
+ custom_colorado: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Colorado"
+ custom_valmy: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Valmy"
+ custom_ship_napoleon: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Napoléon"
+ custom_gloire: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Gloire"
+ custom_charles_martel: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Charles Martel"
+ custom_review_courbet: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Courbet"
+ custom_review_paris: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Paris"
+ custom_bretagne: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Bretagne"
+ custom_lorraine: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Lorraine"
+ custom_lyon: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Lyon"
+ custom_deutschland: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Deutschland"
+ custom_brandenburg: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Brandenburg"
+ custom_fdg: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Friedrich der Große"
+ custom_bayern: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Bayern"
+ custom_imperatritsa_maria: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Imperatritsa Maria"
+ custom_imperator_nikolai_i: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Imperator Nikolai I"
+ custom_general-admiral: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] General-Admiral"
+ custom_potemkin: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Potemkin"
+ custom_review_gangut: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Gangut"
+ custom_oktyabrskaya_revolyutsiya: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Oktyabrskaya Revolyutsiya"
+ custom_sovetsky_soyuz: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Sovetsky Soyuz"
+ custom_katsuragi: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Katsuragi"
+ custom_kongo: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Kongō"
+ custom_azuma: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Azuma"
+ custom_fuji: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Fuji"
+ custom_mikasa: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Mikasa"
+ custom_review_kawachi: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Kawachi"
+ custom_nagato: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Nagato"
+ custom_fuso: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Fusō"
+ custom_vesuvio: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Vesuvio"
+ custom_san_michele: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] San Michele"
+ custom_carlo_alberto: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Carlo Alberto"
+ custom_monarca: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Monarca"
+ custom_re_galantuomo: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Re Galantuomo"
+ custom_affondatore: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Affondatore"
+ custom_ammiraglio_di_saint_bon: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Ammiraglio di Saint Bon"
+ custom_review_leonardo_da_vinci: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Leonardo da Vinci"
+ custom_littorio: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Littorio"
+ custom_review_italia: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Italia"
+
+ # Ship types for fleet review event
+ custom_ship_of_the_line_review: "a Ship of the Line, with its large sails billowing with the wind."
+ custom_steam_ship_of_the_line_review: "a Steam Ship of the Line. A curious ship, with chimneys poking from the deck, amongst the sails and masts."
+ custom_ironclad_review: "an Ironclad, with its funnel leaving a trail of smoke."
+ custom_steel_battleship_review: "a steel Battleship, with its intimidating turrets looking ready to fire."
+ custom_dreadnought_battleship_review: "a Dreadnought Battleship, displaying its all-big gun armament."
+ custom_super_dreadnought_battleship_review: "a Super-Dreadnought Battleship, a true behemoth of steel."
+
+ # Battleships and battlecruisers converted to carrier
+ custom_conversion_lexington: "battlecruiser #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Lexington#!"
+ custom_conversion_saratoga: "battlecruiser #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Saratoga#!"
+ custom_conversion_courageous: "battlecruiser #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Courageous#!"
+ custom_conversion_glorious: "battlecruiser #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Glorious#!"
+ custom_conversion_furious: "battlecruised #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Furious#!"
+ custom_conversion_eagle: "battleship #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Eagle#!"
+ custom_conversion_akagi: "battlecruiser #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Akagi#!"
+ custom_conversion_kaga: "battleship #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Kaga#!"
+ custom_conversion_amagi: "battlecruiser #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Amagi#!"
+ custom_conversion_bearn: "battleship #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Béarn#!"
+ custom_conversion_generic_battleship: "newly developed battleship"
+
+ # Ocean liners converted into carrier
+ custom_conte_rosso_to_argus: "the ocean liner Conte Rosso should be converted into the aircraft carrier #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Aquila#!"
+ custom_izumo_maru_to_hiyo: "the ocean liner Izumo Maru should be converted into the aircraft carrier #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Hiyō#!"
+ custom_kashiwara_maru_to_junyo: "the ocean liner Kashiwara Maru should be converted into the aircraft carrier #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Jun'yō#!"
+ custom_ss_roma_to_aquila: "the ocean liner SS Roma should be converted into the aircraft carrier #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Aquila#!"
+ custom_ms_augustus_to_sparviero: "the ocean liner MS Augustus should be converted into the aircraft carrier #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Sparviero#!"
+ custom_ss_gneisenau_to_jade: "the ocean liner SS Gneisenau should be converted into the aircraft carrier #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Jade#!"
+ custom_ss_potsdam_to_elbe: "the ocean liner SS Potsdam should be converted into the aircraft carrier #WHITE [ROOT.GetCountry.GetCustom('flotilla_prefix')] Elbe#!"
+ custom_generic_converted_liner: "an ocean liner should be converted into an aircraft carrier"
+
+ # General-purpose carrier (including a space in front of the name)
+ custom_hms_eagle: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Eagle"
+ custom_courageous: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Courageous"
+ custom_glorious: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Glorious"
+ custom_furious: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Furious"
+ custom_hms_hermes: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Hermes"
+ custom_ark_royal: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Ark Royal"
+ custom_illustrious: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Illustrious"
+ custom_formidable: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Formidable"
+ custom_victorious: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Victorious"
+ custom_lexington: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Lexington"
+ custom_saratoga: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Saratoga"
+ custom_ranger: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Ranger"
+ custom_yorktown: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Yorktown"
+ custom_enterprise: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Enterprise"
+ custom_hornet: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Hornet"
+ custom_akagi: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Akagi"
+ custom_kaga: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Kaga"
+ custom_amagi: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Amagi"
+ custom_hiryu: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Hiryū"
+ custom_soryu: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Sōryū"
+ custom_shokaku: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Shōkaku"
+ custom_zuikaku: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Zuikaku"
+ custom_taiho: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Taihō"
+ custom_aquila: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Aquila"
+ custom_sparviero: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Sparviero"
+ custom_bearn: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Béarn"
+ custom_joffre: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Joffre"
+ custom_painleve: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Painlevé"
+ custom_elbe: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Elbe"
+ custom_jade: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Jade"
+ custom_graf_zeppelin: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Graf Zeppelin"
+ custom_peter_strasser: " [ROOT.GetCountry.GetCustom('flotilla_prefix')] Peter Strasser"
+ custom_carrier_fallback: ""
+
+ # First Carrier-borne Monoplane Fighter
+ custom_f2a_buffalo: "Brewster #WHITE F2A Buffalo#!"
+ custom_a5m: "Mitsubishi #WHITE A5M#!"
+ custom_re2001_falco_ii: "Reggiane #WHITE Re.2001 Falco II#!"
+ custom_g50_freccia: "Fiat #WHITE G.50 Freccia#!"
+ custom_sea_hurricane: "Hawker #WHITE Sea Hurricane#!"
+ custom_d373: "Dewoitine #WHITE D.371#!"
+ custom_fighter: "fighter"
+
+ # Names of the Political Head of the Navy
+ custom_secretary_of_the_navy: "Secretary of the Navy"
+ custom_first_lord_of_the_admiralty: "First Lord of the Admiralty"
+ custom_minister_of_the_navy: "Minister of the Navy"
+
+######
+# Custom triggers
+######
+
+ predreadnought_trigger_tt: "At least 5 levels of [GetBuildingType('building_military_shipyards').GetName] with ironclad production active"
+ dreadnought_trigger_tt: "At least 10 levels of [GetBuildingType('building_military_shipyards').GetName] with steel shipbuilding active"
+ battleship_trigger_tt: "At least 15 levels of [GetBuildingType('building_military_shipyards').GetName] with turbine shipbuilding active"
+ high_navyprof_option_tt: "This option is available because of our #p HIGH#! @navyprof![concept_navy_professionalism]"
+
+######
+# AI Strategies
+######
+
+ ai_strategy_maintain_two_power_standard: "Maintain Two-Power Standard"
+ ai_strategy_maintain_two_power_standard_desc: "[COUNTRY.GetName] wants to maintain naval supremacy."
+
+
+######
+# Modifier Types
+######
+
+ building_group_bg_navy_mortality_mult: "Naval Base Employee Mortality"
+ building_group_bg_navy_mortality_mult_desc: "A change in the mortality of employees of Naval Bases"
+ building_group_bg_navy_soldiers_mortality_mult: "Naval Base Servicemen Mortality"
+ building_group_bg_navy_soldiers_mortality_mult_desc: "A change in the mortatlity of servicemen in Naval Bases"
+ building_group_bg_navy_soldiers_standard_of_living_add: "Naval Base Servicemen Standard of Living"
+ building_group_bg_navy_soldiers_standard_of_living_add_desc: "A change in the Standard of Living of servicemen in Naval Bases"
+
+ unit_naval_armor_add: "[concept_naval_armor]"
+ unit_naval_armor_add_desc: "A change in the armor of the unit"
+ unit_naval_pen_add: "[concept_naval_pen]"
+ unit_naval_pen_add_desc: "A change in the penetration of the unit"
+
+# Goods
+ goods_input_tts_capital_ships_add: "@tts_capital_ships! Capital Ships input per level"
+ goods_input_tts_capital_ships_add_desc: "A change in the input of Capital Ships"
+
+ goods_output_tts_capital_ships_add: "@tts_capital_ships! Capital Ships output per level"
+ goods_output_tts_capital_ships_add_desc: "A change in the output of Capital Ships"
+
+ # country
+ country_navy_professionalism_admiralty_add: "Navy Professionalism from Admiralty"
+ country_navy_professionalism_admiralty_add_desc: "A bonus to the natural position of [concept_navy_professionalism] from Admiralties"
+ country_navy_professionalism_add: "Navy Professionalism Natural Position"
+ country_navy_professionalism_add_desc: "A bonus to the natural position of [concept_navy_professionalism]"
+ country_navy_professionalism_laws_add: "Navy Professionalism from Laws"
+ country_navy_professionalism_laws_add_desc: "A bonus to the natural position of [concept_navy_professionalism] from Laws"
+
+ # Unit combat modifiers
+ unit_combat_unit_type_man_o_war_offense_mult: "$combat_unit_type_man_o_war$ $unit_offense_mult$"
+ unit_combat_unit_type_man_o_war_offense_mult_desc: "$combat_unit_type_man_o_war$ $unit_offense_mult$"
+ unit_combat_unit_type_man_o_war_defense_mult: "$combat_unit_type_man_o_war$ $unit_defense_mult$"
+ unit_combat_unit_type_man_o_war_defense_mult_desc: "$combat_unit_type_man_o_war$ $unit_defense_mult$"
+ unit_combat_unit_type_steam_ship_of_the_line_offense_mult: "$combat_unit_type_steam_ship_of_the_line$ $unit_offense_mult$"
+ unit_combat_unit_type_steam_ship_of_the_line_offense_mult_desc: "$combat_unit_type_steam_ship_of_the_line$ $unit_offense_mult$"
+ unit_combat_unit_type_steam_ship_of_the_line_defense_mult: "$combat_unit_type_steam_ship_of_the_line$ $unit_defense_mult$"
+ unit_combat_unit_type_steam_ship_of_the_line_defense_mult_desc: "$combat_unit_type_steam_ship_of_the_line$ $unit_defense_mult$"
+ unit_combat_unit_type_ironclad_offense_mult: "$combat_unit_type_ironclad$ $unit_offense_mult$"
+ unit_combat_unit_type_ironclad_offense_mult_desc: "$combat_unit_type_ironclad$ $unit_offense_mult$"
+ unit_combat_unit_type_ironclad_defense_mult: "$combat_unit_type_ironclad$ $unit_defense_mult$"
+ unit_combat_unit_type_ironclad_defense_mult_desc: "$combat_unit_type_ironclad$ $unit_defense_mult$"
+ unit_combat_unit_type_predreadnought_offense_mult: "$combat_unit_type_predreadnought$ $unit_offense_mult$"
+ unit_combat_unit_type_predreadnought_offense_mult_desc: "$combat_unit_type_predreadnought$ $unit_offense_mult$"
+ unit_combat_unit_type_predreadnought_defense_mult: "$combat_unit_type_predreadnought$ $unit_defense_mult$"
+ unit_combat_unit_type_predreadnought_defense_mult_desc: "$combat_unit_type_predreadnought$ $unit_defense_mult$"
+ unit_combat_unit_type_dreadnought_offense_mult: "$combat_unit_type_dreadnought$ $unit_offense_mult$"
+ unit_combat_unit_type_dreadnought_offense_mult_desc: "$combat_unit_type_dreadnought$ $unit_offense_mult$"
+ unit_combat_unit_type_dreadnought_defense_mult: "$combat_unit_type_dreadnought$ $unit_defense_mult$"
+ unit_combat_unit_type_dreadnought_defense_mult_desc: "$combat_unit_type_dreadnought$ $unit_defense_mult$"
+ unit_combat_unit_type_battleship_offense_mult: "$combat_unit_type_battleship$ $unit_offense_mult$"
+ unit_combat_unit_type_battleship_offense_mult_desc: "$combat_unit_type_battleship$ $unit_offense_mult$"
+ unit_combat_unit_type_battleship_defense_mult: "$combat_unit_type_battleship$ $unit_defense_mult$"
+ unit_combat_unit_type_battleship_defense_mult_desc: "$combat_unit_type_battleship$ $unit_defense_mult$"
+ unit_combat_unit_type_frigate_offense_mult: "$combat_unit_type_frigate$ $unit_offense_mult$"
+ unit_combat_unit_type_frigate_offense_mult_desc: "$combat_unit_type_frigate$ $unit_offense_mult$"
+ unit_combat_unit_type_frigate_defense_mult: "$combat_unit_type_frigate$ $unit_defense_mult$"
+ unit_combat_unit_type_frigate_defense_mult_desc: "$combat_unit_type_frigate$ $unit_defense_mult$"
+ unit_combat_unit_type_screw_frigate_offense_mult: "$combat_unit_type_screw_frigate$ $unit_offense_mult$"
+ unit_combat_unit_type_screw_frigate_offense_mult_desc: "$combat_unit_type_screw_frigate$ $unit_offense_mult$"
+ unit_combat_unit_type_screw_frigate_defense_mult: "$combat_unit_type_screw_frigate$ $unit_defense_mult$"
+ unit_combat_unit_type_screw_frigate_defense_mult_desc: "$combat_unit_type_screw_frigate$ $unit_defense_mult$"
+ unit_combat_unit_type_destroyer_offense_mult: "$combat_unit_type_destroyer$ $unit_offense_mult$"
+ unit_combat_unit_type_destroyer_offense_mult_desc: "$combat_unit_type_destroyer$ $unit_offense_mult$"
+ unit_combat_unit_type_destroyer_defense_mult: "$combat_unit_type_destroyer$ $unit_defense_mult$"
+ unit_combat_unit_type_destroyer_defense_mult_desc: "$combat_unit_type_destroyer$ $unit_defense_mult$"
+ unit_combat_unit_type_scout_cruiser_offense_mult: "$combat_unit_type_scout_cruiser$ $unit_offense_mult$"
+ unit_combat_unit_type_scout_cruiser_offense_mult_desc: "$combat_unit_type_scout_cruiser$ $unit_offense_mult$"
+ unit_combat_unit_type_scout_cruiser_defense_mult: "$combat_unit_type_scout_cruiser$ $unit_defense_mult$"
+ unit_combat_unit_type_scout_cruiser_defense_mult_desc: "$combat_unit_type_scout_cruiser$ $unit_defense_mult$"
+ unit_combat_unit_type_torpedo_boat_offense_mult: "$combat_unit_type_torpedo_boat$ $unit_offense_mult$"
+ unit_combat_unit_type_torpedo_boat_offense_mult_desc: "$combat_unit_type_torpedo_boat$ $unit_offense_mult$"
+ unit_combat_unit_type_torpedo_boat_defense_mult: "$combat_unit_type_torpedo_boat$ $unit_defense_mult$"
+ unit_combat_unit_type_torpedo_boat_defense_mult_desc: "$combat_unit_type_torpedo_boat$ $unit_defense_mult$"
+ unit_combat_unit_type_submarine_defense_mult: "$combat_unit_type_submarine$ $unit_defense_mult$"
+ unit_combat_unit_type_submarine_defense_mult_desc: "$combat_unit_type_submarine$ $unit_defense_mult$"
+ unit_combat_unit_type_experimental_carrier_offense_mult: "$combat_unit_type_experimental_carrier$ $unit_offense_mult$"
+ unit_combat_unit_type_experimental_carrier_offense_mult_desc: "$combat_unit_type_experimental_carrier$ $unit_offense_mult$"
+ unit_combat_unit_type_experimental_carrier_defense_mult: "$combat_unit_type_experimental_carrier$ $unit_defense_mult$"
+ unit_combat_unit_type_experimental_carrier_defense_mult_desc: "$combat_unit_type_experimental_carrier$ $unit_defense_mult$"
+ unit_combat_unit_type_fleet_carrier_offense_mult: "$combat_unit_type_fleet_carrier$ $unit_offense_mult$"
+ unit_combat_unit_type_fleet_carrier_offense_mult_desc: "$combat_unit_type_fleet_carrier$ $unit_offense_mult$"
+ unit_combat_unit_type_fleet_carrier_defense_mult: "$combat_unit_type_fleet_carrier$ $unit_defense_mult$"
+ unit_combat_unit_type_fleet_carrier_defense_mult_desc: "$combat_unit_type_fleet_carrier$ $unit_defense_mult$"
+ unit_combat_unit_type_armored_carrier_offense_mult: "$combat_unit_type_armored_carrier$ $unit_offense_mult$"
+ unit_combat_unit_type_armored_carrier_offense_mult_desc: "$combat_unit_type_armored_carrier$ $unit_offense_mult$"
+ unit_combat_unit_type_armored_carrier_defense_mult: "$combat_unit_type_armored_carrier$ $unit_defense_mult$"
+ unit_combat_unit_type_armored_carrier_defense_mult_desc: "$combat_unit_type_armored_carrier$ $unit_defense_mult$"
+
+ country_blocks_building_naval_bases_bool: "Blocks Building Naval Bases"
+ country_blocks_building_naval_bases_bool_desc: "You are forbidden from building naval bases"
+
+ unit_is_equipped_with_torpedoes_bool: "Unit is Equipped with Torpedoes"
+ unit_is_equipped_with_torpedoes_bool_desc: "This unit is equipped with torpedoes. If the enemy side on a battle is composed of less than 50% escort ships, this unit can perform a devastating [GetBattleCondition('battle_condition_torpedo_run').GetName]."
+ unit_is_wind_dependent_bool: "Unit Depends on Wind"
+ unit_is_wind_dependent_bool_desc: "This unit has ships propelled by sails. If more than half the ships present in a battle are wind powered, they can receive the [GetBattleCondition('battle_condition_unfavorable_wind').GetName] or [GetBattleCondition('battle_condition_no_wind').GetName] battle conditions."
+ unit_provides_air_support_bool: "Unit Provides Air Support"
+ unit_provides_air_support_bool_desc: "This unit is equipped with aircraft. If the enemy has no air support of their own, this fleet can receive the [GetBattleCondition('battle_condition_scouting_advantage').GetName] battle condition."
+
+
+
+#####
+# Battle Conditions
+#####
+
+ battle_condition_cant_penetrate_ship: "Lacking Penetration"
+ battle_condition_cant_penetrate_ship_desc: "This fleet's cannons are lacking in penetration to damage the enemy's armor."
+ battle_condition_scouting_advantage: "Scouting Advantage"
+ battle_condition_scouting_advantage_desc: "This fleet's carriers allowed it to outmaneuver the enemy with better scouting."
+ battle_condition_deck_bombed: "Deck Bombed"
+ battle_condition_deck_bombed_desc: "Our carriers were found and they are being bombed by enemy carriers"
+ battle_condition_deck_shelled: "Deck Shelled"
+ battle_condition_deck_shelled_desc: "Our carriers got found by the enemy battleships and are being shelled."
+ battle_condition_exploding_ships: "Exploding Ships"
+ battle_condition_exploding_ships_desc: "Our ships are suffering from magazine detonations."
+ battle_condition_torpedo_run: "Torpedo Run"
+ battle_condition_torpedo_run_desc: "This fleet's torpedo-equipped ships are conducting a devastating torpedo run on the enemy's undefended capital ships."
+ battle_condition_unfavorable_wind: "Unfavorable Wind"
+ battle_condition_unfavorable_wind_desc: "The wind is blowing in a way that makes it difficult for this fleet to maneuver."
+ battle_condition_no_wind: "No Wind"
+ battle_condition_no_wind_desc: "There's no wind blowing, making this fleet very vulnerable to enemy steam powered ships."
+
+######
+# Game Rules
+######
+ 
+ rule_ahistorical_ship_prefixes: "Ahistorical Ship Prefixes"
+ setting_ahistorical_prefixes_allowed: "Ahistorical Prefixes Allowed"
+ setting_ahistorical_prefixes_allowed_desc: "Fictional ship prefixes will be added for some navies that didn't have them historically"
+ setting_no_ahistorical_prefixes: "No Ahistorical Prefixes"
+ setting_no_ahistorical_prefixes_desc: "Ship will use their historical prefixes only."
+
+######
+# Flotilla Prefixes
+######
+ 
+ flotilla_prefix_hmas: "HMAS"
+ flotilla_prefix_hmcs: "HMCS"
+ flotilla_prefix_ijn: "IJN"
+ flotilla_prefix_hmis: "HMIS"
+ flotilla_prefix_kms: "KMS"
+ flotilla_prefix_plan: "PLAN"
+ flotilla_prefix_cns: "CNS"
+ flotilla_prefix_mn: "MN"
+ flotilla_prefix_hirms: "HIRMS"
+ flotilla_prefix_vmf: "VMF"
+ flotilla_prefix_ins: "INS"
+
+######
+# Custom Buttons
+######
+
+ naval_conference_button: "Hold a Naval Conference"
+ naval_conference_button_desc: "We shall hold a naval disarmament conference, to prevent an arms race from escalating."
+ naval_conference_trigger_tt: "No Main Naval Power is at war."
+ naval_conference_decision_tt: "Calls a conference in our capital"
+ leave_two_power_standard_button: "Abandon the Two-Power Standard"
+ leave_two_power_standard_button_desc: "It's no longer sustainable to maintain the Two-Power Standard, we need to cut costs."
+ leave_two_power_standard_button_tooltip: "It's been 3 years since we adopted the standard."
+
+ convince_treaty_country_1_button: "Convince [ROOT.GetVariable('treaty_country_1').GetCountry.GetName]"
+ convince_treaty_country_1_button_desc: "We'll try to persuade [ROOT.GetVariable('treaty_country_1').GetCountry.GetName] to vote in favor of the Treaty, by whatever means necessary."
+ convince_treaty_country_2_button: "Convince [ROOT.GetVariable('treaty_country_2').GetCountry.GetName]"
+ convince_treaty_country_2_button_desc: "We'll try to persuade [ROOT.GetVariable('treaty_country_2').GetCountry.GetName] to vote in favor of the Treaty, by whatever means necessary."
+ convince_treaty_country_3_button: "Convince [ROOT.GetVariable('treaty_country_3').GetCountry.GetName]"
+ convince_treaty_country_3_button_desc: "We'll try to persuade [ROOT.GetVariable('treaty_country_3').GetCountry.GetName] to vote in favor of the Treaty, by whatever means necessary."
+ convince_treaty_country_4_button: "Convince [ROOT.GetVariable('treaty_country_4').GetCountry.GetName]"
+ convince_treaty_country_4_button_desc: "We'll try to persuade [ROOT.GetVariable('treaty_country_4').GetCountry.GetName] to vote in favor of the Treaty, by whatever means necessary."
+ convince_treaty_country_5_button: "Convince [ROOT.GetVariable('treaty_country_5').GetCountry.GetName]"
+ convince_treaty_country_5_button_desc: "We'll try to persuade [ROOT.GetVariable('treaty_country_5').GetCountry.GetName] to vote in favor of the Treaty, by whatever means necessary."
+ convince_treaty_country_6_button: "Convince [ROOT.GetVariable('treaty_country_6').GetCountry.GetName]"
+ convince_treaty_country_6_button_desc: "We'll try to persuade [ROOT.GetVariable('treaty_country_6').GetCountry.GetName] to vote in favor of the Treaty, by whatever means necessary."
+ convince_treaty_country_7_button: "Convince [ROOT.GetVariable('treaty_country_7').GetCountry.GetName]"
+ convince_treaty_country_7_button_desc: "We'll try to persuade [ROOT.GetVariable('treaty_country_7').GetCountry.GetName] to vote in favor of the Treaty, by whatever means necessary."
+ 
+ convince_treaty_cooldown_tooltip: "We haven't sent a proposal in the last 2 months"
+
+
+ vote_yes_on_treaty_button: "Vote YES"
+ vote_yes_on_treaty_button_desc: "Vote in agreement with the treaty. All [concept_main_naval_powers] must vote in agreement for it to pass."
+
+######
+# Alerts
+######
+
+ new_shipbuilding_tech_decision_setting_name: "Can Research New Shipbuilding Tech"
+ alert_new_shipbuilding_tech_decision_name: "Can Research New Shipbuilding Tech"
+ alert_new_shipbuilding_tech_decision_desc: "We have researched a new naval technology, but to take full advantage of it, we must develop new shipbuilding methods."
+ alert_new_shipbuilding_tech_decision_hint: "You can develop new shipbuilding methods in the Journal panel"
+ alert_new_shipbuilding_tech_decision_action: "Decisions Tab"
+
+# Combat unit grouos
+ combat_unit_group_raiding_ship: "Raiders"
+
+######
+# Combat Unit types
+######
+
+ combat_unit_type_caravel: "Caravels"
+ combat_unit_type_caravel_desc: "Obsolete by the 19th century, caravels were small ships used for trade and exploration."
+ combat_unit_type_screw_frigate: "Screw Frigates"
+ combat_unit_type_screw_frigate_desc: "The development of steam propulsion allowed frigates to become even more maneuverable. The independence from wind conditions give them a large advantage in calm weather."
+ combat_unit_type_carrack: "Carracks"
+ combat_unit_type_carrack_desc: "Carracks were large ships used in the 15th and 16th centuries."
+ combat_unit_type_steam_ship_of_the_line: "Steam Ships of the Line"
+ combat_unit_type_steam_ship_of_the_line_desc: "A terrifying combination of the bulk and firepower of a ship of the line and the reliability and speed of a steamer, made possible by the adoption of the screw propeller."
+ combat_unit_type_predreadnought: "Pre-Dreadnoughts"
+ combat_unit_type_predreadnought_desc: "A steel warship carrying guns in turrets. It mounts several small, quick firing guns meant to disable their opponents, and a few large caliber weapons to finish off larger ships."
+ combat_unit_type_experimental_carrier: "Experimental Carriers"
+ combat_unit_type_experimental_carrier_desc: "After the invention of the aeroplane, putting them on a ship was the next logical step. But the implementation wasn't obvious, and a lot of trial and error was needed. During this experimental phase of naval aviation, many battleships and battlecruisers were converted to aircraft carriers, but some small purpose-built carriers were also made."
+ combat_unit_type_fleet_carrier: "Fleet Carriers"
+ combat_unit_type_fleet_carrier_desc: "Fleet carriers are purpose-built carriers with large hangars, often nearing a hundred aircraft, allowing them to execute strikes while maintaining fighters for air patrol."
+ combat_unit_type_armored_carrier: "Armored Carriers"
+ combat_unit_type_armored_carrier_desc: "Armored carriers are built with survivability in mind. They have an armored flight deck to protect them from bombs and long-range gunnery, at the cost of a reduced hangar space."

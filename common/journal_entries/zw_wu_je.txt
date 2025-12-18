@@ -1,0 +1,273 @@
+﻿zw_je_clothes_westernization = {
+
+	icon = "gfx/interface/icons/invention_icons/corporate_management.dds"
+	group = je_group_internal_affairs
+	weight = 99999
+	should_be_pinned_by_default = yes
+
+	scripted_button = zw_change_army_uniform_button
+	scripted_button = zw_change_army_headgear_button
+	scripted_button = zw_change_navy_uniform_button
+	scripted_button = zw_change_navy_headgear_button
+	scripted_button = zw_change_army_headgear_late_button
+	scripted_button = zw_change_monarch_clothes_button
+	scripted_button = zw_show_outfit_ruler_politician_button
+	scripted_button = zw_show_outfit_general_admiral_button
+
+	progressbar = yes
+
+	current_value = { value = var:zw_var_clothes_westernization }
+	
+	goal_add_value = { value = 100 }
+
+	immediate = {
+		set_variable = {
+			name = zw_var_clothes_westernization
+			value = 0
+		}
+		# for AI countries
+		if = {
+			# random_list is somehow a joke
+			# using date to simulate the randomness instead
+			limit = { is_player = no }
+			# mixed_blue
+			if = {
+				limit = { month = 1 }
+				# ruler
+				if = {
+					limit = { has_law = law_type:law_monarchy }
+					set_variable = {
+						name = zw_var_special_clothes_monarch
+						value = 2
+					}
+				}
+				# general
+				if = {
+					limit = {
+						NAND = {
+							has_dlc_feature = ep1_cosmetics
+							has_technology_researched = bolt_action_rifles
+						}
+					}
+					# general_clothes
+					set_variable = {
+						name = zw_var_special_clothes_general
+						value = 11
+					}
+					# general_headgear: kepi_blue
+					set_variable = {
+						name = zw_var_special_headgear_general
+						value = 4
+					}
+				}
+				# admiral
+				set_variable = {
+					name = zw_var_special_clothes_admiral
+					value = 11
+				}
+			}
+			# mixed_red
+			else_if = {
+				limit = { month = 3 }
+				# ruler
+				if = {
+					limit = { has_law = law_type:law_monarchy }
+					set_variable = {
+						name = zw_var_special_clothes_monarch
+						value = 3
+					}
+				}
+				# general
+				if = {
+					limit = {
+						NAND = {
+							has_dlc_feature = ep1_cosmetics
+							has_technology_researched = bolt_action_rifles
+						}
+					}
+					# general_clothes
+					set_variable = {
+						name = zw_var_special_clothes_general
+						value = 12
+					}
+					# general_headgear: kepi_red
+					set_variable = {
+						name = zw_var_special_headgear_general
+						value = 5
+					}
+				}
+				# admiral
+				set_variable = {
+					name = zw_var_special_clothes_admiral
+					value = 12
+				}
+			}
+			# mixed_dark_blue
+			else_if = {
+				limit = { month = 7 }
+				# ruler
+				if = {
+					limit = { has_law = law_type:law_monarchy }
+					set_variable = {
+						name = zw_var_special_clothes_monarch
+						value = 4
+					}
+				}
+				# general
+				if = {
+					limit = {
+						NAND = {
+							has_dlc_feature = ep1_cosmetics
+							has_technology_researched = bolt_action_rifles
+						}
+					}
+					# general_clothes
+					set_variable = {
+						name = zw_var_special_clothes_general
+						value = 13
+					}
+					# general_headgear: USA_cap_dark_blue
+					set_variable = {
+						name = zw_var_special_headgear_general
+						value = 7
+					}
+				}
+				# admiral
+				set_variable = {
+					name = zw_var_special_clothes_admiral
+					value = 13
+				}
+			}
+			# long_blue
+			else_if = {
+				limit = { month = 9 }
+				# ruler
+				if = {
+					limit = { has_law = law_type:law_monarchy }
+					set_variable = {
+						name = zw_var_special_clothes_monarch
+						value = 5
+					}
+				}
+				# general
+				if = {
+					limit = {
+						NAND = {
+							has_dlc_feature = ep1_cosmetics
+							has_technology_researched = bolt_action_rifles
+						}
+					}
+					# general_clothes
+					set_variable = {
+						name = zw_var_special_clothes_general
+						value = 10
+					}
+					# general_headgear: peaked_cap_mixed
+				}
+				# admiral
+				set_variable = {
+					name = zw_var_special_clothes_admiral
+					value = 10
+				}
+			}
+			# same as overlord
+			else_if = {
+				limit = {
+					OR = {
+						month = 5
+						month = 11
+					}
+					is_subject = yes
+				}
+				# monarch
+				if = {
+					limit = {
+						has_law = law_type:law_monarchy
+						overlord = { has_variable = zw_var_special_clothes_monarch }
+					}
+					set_variable = {
+						name = zw_var_special_clothes_monarch
+						value = root.overlord.var:zw_var_special_clothes_monarch
+					}
+				}
+				# general
+				if = {
+					limit = {
+						NAND = {
+							has_dlc_feature = ep1_cosmetics
+							has_technology_researched = bolt_action_rifles
+						}
+					}
+					if = {
+						limit = {
+							overlord = { has_variable = zw_var_special_clothes_general }
+						}
+						set_variable = {
+							name = zw_var_special_clothes_general
+							value = root.overlord.var:zw_var_special_clothes_general
+						}
+					}
+					if = {
+						limit = {
+							overlord = { has_variable = zw_var_special_headgear_general }
+						}
+						set_variable = {
+							name = zw_var_special_headgear_general
+							value = root.overlord.var:zw_var_special_headgear_general
+						}
+					}
+				}
+				# general_late
+				if = {
+					limit = {
+						overlord = { has_variable = zw_var_special_headgear_general_late }
+					}
+					set_variable = {
+						name = zw_var_special_headgear_general_late
+						value = root.overlord.var:zw_var_special_headgear_general_late
+					}
+				}
+				# admiral
+				if = {
+					limit = {
+						overlord = { has_variable = zw_var_special_clothes_admiral }
+					}
+					set_variable = {
+						name = zw_var_special_clothes_admiral
+						value = root.overlord.var:zw_var_special_clothes_admiral
+					}
+				}
+				if = {
+					limit = {
+						overlord = { has_variable = zw_var_special_headgear_admiral }
+					}
+					set_variable = {
+						name = zw_var_special_headgear_admiral
+						value = root.overlord.var:zw_var_special_headgear_admiral
+					}
+				}
+			}
+		}
+	}
+
+	on_monthly_pulse = {
+		effect = { 
+			change_variable = {
+				name = zw_var_clothes_westernization
+				add = zw_value_clothes_westernization_monthly_progress
+			}
+		}
+	}
+	
+	complete = {
+		scope:journal_entry = { is_goal_complete = yes }
+	}
+
+	on_complete = {
+		clamp_variable = {
+			name = zw_var_clothes_westernization
+			min = 100
+			max = 100
+		}
+	}
+}

@@ -1,0 +1,13 @@
+﻿l_german:
+
+ historic_monarch_death.t:0 "Unser Monarch ist tot."
+ historic_monarch_death.d:0 "Ein düsterer Schleier ist auf das [ROOT.GetCountry.GetName] gefallen, als sich die Nachricht vom Tod unseres Souveräns [SCOPE.sCharacter('dead_character').GetFirstName] verbreitet. Gleichzeitig richten sich alle Augen auf den Erben [ROOT.GetCountry.GetRuler.GetFirstName] der den Thron besteigen wird."
+ historic_monarch_death.f:0 "“Während [ROOT.GetCountry.GetName] sich vom verstorbenen [SCOPE.sCharacter('dead_character').GetFirstName] verabschiedet, begrüßt es eine neue Ära unter [ROOT.GetCountry.GetRuler.GetFirstName]. [ROOT.GetCountry.GetRuler.GetSheHe] besteigt den Thron mit einer schweren Last und trägt mit [ROOT.GetCountry.GetRuler.GetHerHim] die Hoffnungen von gestern und die Träume von morgen.”"
+
+ historic_heir_death.t:0 "Der Erbe ist tot."
+ historic_heir_death.d:0 "Eine Tragödie ereignet sich, als der Erbe [SCOPE.sCharacter('dead_character').GetFirstName] verstarb. Überall im Land herrscht eine Atmosphäre der Unsicherheit."
+ historic_heir_death.f:0 "“Die Nation trauert um [SCOPE.sCharacter('dead_character').GetFirstName], den Erben des [ROOT.GetCountry.GetAdjectiveNoFormatting] Throns. Trauerzüge sind unterwegs und neugierige Schaulustige drängen sich durch, um den ehemaligen Erben des Titels “[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]” zu sehen. Manche fragen sich, wie es gewesen wäre, wenn [ROOT.GetCountry.GetRuler.GetSheHe] der Monarch geworden wäre. Gut oder schlecht, Wohlstand oder Armut, das spielt keine Rolle mehr, denn er ist tot.”"
+
+ historic_monarch_birth.t:0 "Die Geburt eines Erben"
+ historic_monarch_birth.d:0 "Unser [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] hat freudig die Geburt eines Erben angekündigt. Die Geburt hat die Nachfolge gesichert."
+ historic_monarch_birth.f:0 "“Im Königspalast herrscht geschäftiges Treiben. Überall tummeln sich Ärzte, Krankenschwestern und Hebammen. Im Schlafzimmer führt Ihre Königliche Hoheit die „Prozedur“ Schritt für Schritt durch. Am Ende ein Seufzer der Erleichterung. Gott schütze den [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle].”"

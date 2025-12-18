@@ -1,0 +1,146 @@
+﻿l_english:
+    
+    je_jap_shogun: "Shogunate Isolationism Policy"
+    je_jap_shogun_tt: "The current rulers do not allow us to conduct real foreign policy, disallowing us from pursuing external goals"
+    je_jap_shogun_reason: "We need to change our governance, now!"
+    is_meiji_restoration_complete: "Complete Meiji Restoration"
+    no_dp_modifier: "Closed policy"
+    
+    dsk_fra_empire_time: "The Napoleonic Eagle"
+    GER_FRA_decision: "Demand Britain and Russia not join the Franco-Prussian War"
+    GER_FRA_decision_desc: "They will gladly accept because our strength satisfies their policy of continental balance."
+    #Alsace crisis
+    je_crisis_alsace_france: "The problem of Alsace-Lorraine"
+    je_crisis_alsace_germany: "The question of Alsace-Lorraine"
+    je_crisis_alsace_germany_reason: "We know what the Alsatians want, and we will unify with them! \n If there is an alliance or defensive pact between France and Prussia, the journal entry will resolve peacefully."
+    je_crisis_alsace_france_reason: "Our eastern border keeps getting more and more precarious. If we cannot go back to our natural borders of France, at least we must keep Alsace-Lorraine! \n If there is an alliance or defensive pact between France and Prussia, the journal entry will resolve peacefully. "
+
+    je_fra_pru_tt: "[SCOPE.sCountry('pru_scope').GetName] has taken leadership of Germany"
+    je_fra_aus_tt: "[SCOPE.sCountry('aus_scope').GetName] has taken leadership of Germany"
+    je_fra_ngf_tt: "North Germany has been unified"
+    je_fra_sgf_tt: "South Germany has been unified"
+    je_fra_pru_reason: "[SCOPE.sCountry('pru_scope').GetName] gradually rose to power in the mid-19th century, becoming the leading force in the German region. They achieved significant developments in politics, economy, and military, with their modernized army becoming one of the most powerful military forces in Europe.\n[SCOPE.sCountry('pru_scope').GetName] seeks to unify a Germany excluding [SCOPE.sCountry('aus_scope').GetName] by defeating them in war, which directly conflicts with our expansionist ambitions.\nGreat powers like [SCOPE.sCountry('gbr_scope').GetName] and [SCOPE.sCountry('rus_scope').GetName] are reluctant to see us grow too strong, thus allowing our neighbors to grow stronger."
+    ger_has_fail: "Germany is not unified"
+    ger_has_won: "We did not prevent Prussia from unifying Germany"
+    high_reparations: "Payer of Franco-Prussian War reparations"
+    high_reparations_1: "Recipient of Franco-Prussian War reparations"
+    dsk_france.1.t: "Germany does not exist"
+    dsk_france.1.d: "With the end of the war, [SCOPE.GetRootScope.GetCountry.GetName] firmly established its dominance on the continent."
+    dsk_france.1.f: "At that moment, I felt as if I were back at my grandfather Napoleon I's Battle of Jena. I am not only to forge the glory he once created but also to complete his unfinished task—to create a dazzling France on the European continent."
+    dsk_france.1.a: "Destined to prevail, invincible in battle"
+    modifier_fra_winner: "Destined to Prevail"
+    modifier_fra_loser: "Overpowered by Germany"
+
+    dsk_france.2.t: "Fall of the Second Empire"
+    dsk_france.2.d: "The emperor had finally lost support among the common people, the intelligentsia, and the bourgeoisie. All hopes for a bright future and the ascension of France to greatness, which had arisen at the time of the proclamation of the Second Empire, have dissipated. The Emperor had by his actions nurtured many enemies among the liberals in Paris, and now they chose the moment to strike. They assembled at the Palais des Bourbons, where they announced the overthrow of the Emperor and the proclamation of the Third French Republic. The Bonapartist forces were unable to oppose them, and were forced with great reluctance to acknowledge what had happened."
+    dsk_france.2.f: "«Frenchmen! The people have forestalled the Chamber that was hesitating. To save the country in danger, they claimed for the Republic: it is announced, and this revolution is led to the public law’s and public safety’s names. Citizens, watch over the city that is given to you; tomorrow, you will be with the army of the country’s avengers!» - Léon Gambetta"
+    dsk_france.2.a: "There is nothing we can do"
+
+    aus_alive: "Austria Hungary Empire Exists"
+    ger_alive: "German Empire Established"
+
+    ger_has_formed: "German Empire has been established."
+
+    dsk_france.3: "News from North Germany"
+    dsk_france.3.t: "German success in the Alsace crisis!"
+    dsk_france.3.d: "Germany has been formed"
+    dsk_france.3.f: "News from our diplomatic envoy in Germany: Prussia annexed the Alsace-Lorraine region of France after the Franco-Prussian War and proclaimed the establishment of the German Empire at the Palace of Versailles."
+    dsk_france.3.a: "Whether Germany is a friend or foe is for us to decide."
+    
+    modifier_ger_winner: "Crown of Germany"
+    ally_fra_pru: "If there is an alliance or defensive pact between France and Prussia, the journal entry will resolve peacefully."
+    
+    dsk_france.4: "Crown of Germany - small"
+    dsk_france.4.t: "We are one nation, one people!"
+    dsk_france.4.d: "With our foothold west of the Rhine secured, all nations shall know the might of [SCOPE.GetRootScope.GetCountry.GetName]."
+    dsk_france.4.a: "The unification of the German people will please the populace"
+    dsk_france.4.f: " After long hours of debating we elected to seize the territory which was once German from France. Thanks to our brave soldiers we succeeded in annexing Alsace-Lorraine, our nation now expanding west of the Rhine. The strongholds of Metz and Strassburg will bolster the emerging German nation against attacks and will act as a symbol to our power! The local residents will soon leave behind any fondness they held for their French overlords."
+    #State traits
+    state_trait_toll_yemen: "Strait of Aden"
+    state_trait_toll_copenhagen: "Sound Toll"
+    #Indian independence event
+    bengal.1.t: "Crown Jewel lost!"
+    bengal.1.d: "Because of East Indian Failure, we have lost prestige among the recognized powers"
+    bengal.1.f: "The new nation of Bengal must carve out a path on its own"
+    bengal.1.a: "Woe is me"
+    
+    VOC.1.t: "East Indies shattered!"
+    VOC.1.d: "Because of East Indian Failure, we have lost prestige among the recognized nations"
+    VOC.1.f: "The new regional power must carve out a path on its own"
+    VOC.1.a: "Woe is me"
+    #Ottoman modernisation modifiers
+    healthy_man_of_europe: "Healthy man of Europe"
+    ottos_tech: "#blue Receive instant modernization of technologies"
+    #Spring reforms explanation
+    je_spring_reforms_government_status: "Reform journal entry made for nations that are behind on technology."
+    je_spring_reforms_landowners_status:  "Reform journal entry made for nations that are behind on technology."
+    je_spring_reforms_economic_status:  "Reform journal entry made for nations that are behind on technology."
+    #Spring reforms
+    je_spring_reforms_government: "Liberalize the Government"
+    je_spring_reforms_government_reason: "Modernizing our country requires overturning the archaic power structure in our country and empowering our citizens to promote scientific and political discourse crucial for a rapid transition to a more advanced society"
+    je_spring_reforms_landowners: "Decrease Landowners influence"
+    je_spring_reforms_landowners_reason: "Overwhelming authority of the privileged landlords and church proves to be an impedance in educating the population with new ideas."
+    je_spring_reforms_economic: "Modernize the Economy"
+    je_spring_reforms_economic_reason: "The current economic system severely limits freedom of our citizens to seek better life through education. By liberating our people from what chaining them to endless work on the fields, innovation and creativity in our nation can finally flourish."
+    #Modernization modifiers
+    hb_modernize_economy_modifier: "Rapid Modernization of the Economy"
+    hb_modernize_landowners_modifier: "Rapid Modernization of the Elites"
+    hb_modernize_government_modifier: "Rapid Modernization of the Government"
+    #Goods transfer cap
+    hb_increase_goods_transfer_30: "Increase the capability of transferring/receiving goods via treaties to 30% of the market capacity."
+    hb_increase_goods_transfer_60: "Increase the capability of transferring/receiving goods via treaties to 60% of the market capacity."
+    hb_increase_goods_transfer_100: "Increase the capability of transferring/receiving goods via treaties to 100% of the market capacity."
+    #Tech spread modifiers
+    hb_pro_spread: "Production Slipstream"
+    hb_mil_spread: "Military Slipstream"
+    hb_soc_spread: "Society Slipstream"
+    country_hb_tech_spread_bool: "@information! Slipstream Explanation"
+    country_hb_tech_spread_bool_desc: "#b;white This modifier is based on your nation rank and gets worse the farther down that specific tech tree you are.#! \n [Concept('great_power', 'Great Powers')]: Tier 1– #b;g +10%#! Tier 2– #b;g +5%#! Tier 3-5– #b;white N/A#! \n [Concept('major_power', 'Major Powers')]: Tier 1– #b;g +15%#! Tier 2– #b;g +10%#! Tier 3– #b;g +5%#! Tier 4-5– #b;white N/A#! \n [Concept('minor_power', 'Minor Powers')]: Tier 1– #b;g +20%#! Tier 2– #b;g +15%#! Tier 3– #b;g +10%#! Tier 4– #b;g +5%#! Tier 5– #b;white N/A#! \n Subjects do #b not#! recieve these modifiers."
+    #Tech spread event
+    hb_tech_spread_event.1.t: "The Advent of Global Mass Communication"
+    hb_tech_spread_event.1.d: "As communication has become faster, knowledge of various inventions has spread around the world leading to their faster adoption in less developed societies."
+    hb_spread_great_reaction: "However, our research has also trickled down to the masses and, through them, to some of our rivals and other backwards nations which now think themselves on par with us; this cannot be allowed to go on any longer."
+    hb_spread_major_reaction: "A cause for celebration perhaps, although, if we too wish to establish ourselves as a [concept_great_power] maybe we shouldn't be so blasé with our acomplishments."
+	hb_spread_minor_reaction: "This is what true science looks like, cooperation towards a goal greater than our petty squables! Let those [Concept('great_power', 'Great Powers')] feast on their own hubris while we, the lesser nations of the world, exchange our knowledge!"
+    hb_spread_dominion_reaction: "Our gracious overlord, [SCOPE.sCountry('hb_overlord_scope').GetName], has implemented censorship across their empire, but has decided to honour our #tooltippable;tooltip:da_knowledge_sharing_desc preexisting treaty#! and make a special exception for us to continue enjoying this freedom."
+    hb_spread_subject_reaction: "Our overlord, [SCOPE.sCountry('hb_overlord_scope').GetName], has installed censorship in our nation in order to clamp down on the spread of their innovations. If we wish to modernise to their level, we have to ask them to #tooltippable;tooltip:da_knowledge_sharing_desc lift the ban#! for us."
+    hb_tech_spread_event.1.a: "[ROOT.GetCountry.GetCustom('hb_spread_action')]"
+    hb_tech_spread_event.1.a.tt: "#italic #tooltippable;tooltip:country_hb_tech_spread_bool_desc Slipstream#! is enabled#!"
+    hb_spread_great_action: "Crackdown on it immediately, we can't afford to let it get in the hands of other powers!"
+    hb_spread_major_action: "Restrict the flow of information, but don't censor is completely."
+    hb_spread_minor_action: "The wonders of this age!"
+    hb_spread_dominion_action: "Together, towards a brighter future!"
+    hb_spread_subject_action: "Tis' the plight of a subject..."
+    #Japanese claims
+    japan_korea_decision: "Mukden Incident"
+    japan_korea_decision_desc: "The general staff suspects that, if we caused a false flag incident on our border with Manchuria, we could use it as a pretence to sieze it."
+
+    overlord_can_consolidate_subject_setting_name: "Overlord can consolidate subject"
+    #Apocalypse event [This purely exists to avoid krakatoa variable spam in the error log]
+    hb_apocalypse.1.t: "The Apocalypse"
+    hb_apocalypse.1.d: "With the coming of the year 2000, so have end times."
+    hb_apocalypse.1.f: ""I wish I lived in more enlightened times.""
+    hb_apocalypse.1.a: "We're all doomed!"
+    
+    
+    
+    #Misc
+    
+    ideology_anti_isolationist: "Anti isolationist"
+    ideology_anti_isolationist_desc: "As the pioneers of the western school of thought, intelligentsia desires to end our isolationist mindset"
+    
+    #Intervene
+    intervene_in_war.tt:0 "Join any [concept_war] where [SCOPE.sCountry('target_country_scope').GetName] is the [concept_war_leader]"
+    intervene_in_war:0 "Intervene in War"
+    intervene_in_war_action_name:0 "Join the [TARGET_COUNTRY.GetAdjective] War"
+    intervene_in_war_desc:0 "This [concept_diplomatic_action] allows the initiator to join any [concept_war] where the target country is the [concept_war_leader]."
+    intervene_in_war_action_notification_name:0 "[INITIATOR_COUNTRY.GetAdjective] Intervention in [TARGET_COUNTRY.GetName]"
+    intervene_in_war_action_notification_desc:0 "[INITIATOR_COUNTRY.GetName] has announced that it will give full military support to [TARGET_COUNTRY.GetName] in its war. The [INITIATOR_COUNTRY.GetAdjective] Armed Forces will now join the [TARGET_COUNTRY.GetAdjective] Armed Forces in its military operations."
+    intervene_in_war_action_notification_third_party_name:0 "[INITIATOR_COUNTRY.GetAdjective] Intervention in [TARGET_COUNTRY.GetName]"
+    intervene_in_war_action_notification_third_party_desc:0 "[INITIATOR_COUNTRY.GetName] has announced that it will give full military support to [TARGET_COUNTRY.GetName] in its war. The [INITIATOR_COUNTRY.GetAdjective] Armed Forces will now join the [TARGET_COUNTRY.GetAdjective] Armed Forces in its military operations."
+    
+    join_war:0 "Join War"
+    join_war_effects_desc:0 "• An agreement established by one [concept_country] targeting another, where the first $concept_country$ shall join any [concept_war] where the second $concept_country$ is the [concept_war_leader]."
+    join_war_article_short_desc:0 "[SOURCE_COUNTRY.GetNameNoFormatting] will join all wars where [TARGET_COUNTRY.GetNameNoFormatting] is the $concept_war_leader$"
+    DIPLO_ACTION_RELATIONS_POOR_OR_GREATER:1 "$DIPLO_ACTION_RELATIONS$ are at least $relations_poor$"
+    

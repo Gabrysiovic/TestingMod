@@ -1,0 +1,137 @@
+﻿je_crisis_alsace_france = {
+	group = je_group_internal_affairs
+	icon = "gfx/interface/icons/event_icons/fra.dds"
+
+	is_shown_when_inactive = {
+		c:FRA = ROOT
+    }	
+	
+	
+	possible = 
+	{	
+		c:FRA ?= THIS
+	}
+
+	complete = {
+		Year >= 1871
+		NOT = { exists = c:GER }
+		custom_tooltip = {
+			text = ger_has_fail
+			NOT = { exists = c:GER }
+		}
+		is_at_war = no
+		owns_entire_state_region = STATE_ALSACE_LORRAINE
+	}
+	
+	on_complete = {
+		trigger_event = { id = dsk_france.1 }
+	}
+	
+	fail = {
+		NOT = { owns_entire_state_region = STATE_ALSACE_LORRAINE }
+		custom_tooltip = {
+			text = ger_has_formed
+			exists = c:GER
+		}
+	}
+	on_fail = {
+        trigger_event = { id = dsk_france.2 }
+	}
+	
+	
+	invalid = {
+		custom_tooltip = {
+			text = ally_fra_pru
+			ROOT =
+			{
+				OR =
+				{
+					any_scope_treaty = {
+						binds = c:PRU
+						any_scope_article = {
+							has_type = alliance
+						}
+					}
+					any_scope_treaty = {
+						binds = c:NGF
+						any_scope_article = {
+							has_type = alliance
+						}
+					}
+					any_scope_treaty = {
+						binds = c:GER
+						any_scope_article = {
+							has_type = alliance
+						}
+					}
+				}
+			}		
+		}		
+	}
+	weight = 100
+	should_be_pinned_by_default = yes
+}
+	
+je_crisis_alsace_germany = {
+	group = je_group_internal_affairs
+	icon = "gfx/interface/icons/event_icons/ger.dds"
+
+	is_shown_when_inactive = {
+		c:PRU ?= THIS
+
+    }	
+		
+	possible = 
+	{
+		OR = 
+		{
+			c:PRU ?= THIS
+			c:NGF ?= THIS
+			c:GER ?= THIS		
+		}
+	
+	}
+
+	complete = {
+		Year <= 1871
+		owns_entire_state_region = STATE_ALSACE_LORRAINE
+		custom_tooltip = {
+			text = ger_alive
+			c:GER ?= THIS           
+		}
+	}
+	
+	on_complete = {
+		trigger_event = { id = dsk_france.4	}
+	}
+	fail = {
+		NOT = { owns_entire_state_region = STATE_ALSACE_LORRAINE }
+		OR = 
+			{
+				custom_tooltip = {
+					text = ger_alive
+					c:GER ?= THIS          
+				}
+				Year >= 1871
+			}
+	}
+		
+	invalid = {
+		custom_tooltip = {
+			text = ally_fra_pru
+			ROOT =
+			{
+				any_scope_treaty = {
+					binds = c:FRA
+					any_scope_article = {
+						has_type = alliance
+					}
+				}
+			}			
+		}		
+	}	
+	
+	weight = 100
+	should_be_pinned_by_default = yes
+}
+	

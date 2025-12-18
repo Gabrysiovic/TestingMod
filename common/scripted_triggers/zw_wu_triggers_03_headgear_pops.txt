@@ -1,0 +1,83 @@
+﻿zw_trigger_westernized_headgear_pop_shopkeepers = {
+	exists = scope:pop
+	scope:pop = {
+		# culture isn't western culture
+		zw_trigger_non_western_culture = yes
+		# country has westernized
+		owner ?= { zw_trigger_country_is_westernized = yes }
+		#  pop type is westernized: middle (shopkeepers)
+		trigger_if = {
+			limit = { is_pop_type = shopkeepers }
+			owner.var:zw_var_clothes_westernization >= 75
+		}
+		trigger_else = { always = no }
+	}
+}
+
+zw_trigger_westernized_headgear_pop_upper = {
+	exists = scope:pop
+	scope:pop = {
+		# culture isn't western culture
+		zw_trigger_non_western_culture = yes
+		# country has westernized
+		owner ?= { zw_trigger_country_is_westernized = yes }
+		#  pop type is westernized: upper
+		trigger_if = {
+			limit = { is_pop_type = aristocrats }
+			owner.var:zw_var_clothes_westernization >= 25
+		}
+		trigger_else_if = {
+			limit = { is_pop_type = capitalists }
+			owner.var:zw_var_clothes_westernization >= 25
+		}
+		trigger_else_if = {
+			limit = { is_pop_type = academics }
+			owner.var:zw_var_clothes_westernization >= 25
+		}
+		trigger_else = { always = no }
+	}
+}
+
+zw_trigger_westernized_headgear_pop_middle = {
+	exists = scope:pop
+	scope:pop = {
+		# culture isn't western culture
+		zw_trigger_non_western_culture = yes
+		# country has westernized
+		owner ?= { zw_trigger_country_is_westernized = yes }
+		#  pop type is westernized: middle
+		trigger_if = {
+			limit = { is_pop_type = clerks }
+			owner.var:zw_var_clothes_westernization >= 50
+		}
+		trigger_else_if = {
+			limit = { is_pop_type = engineers }
+			owner.var:zw_var_clothes_westernization >= 50
+		}
+		trigger_else_if = {
+			limit = { is_pop_type = bureaucrats }
+			owner.var:zw_var_clothes_westernization >= 50
+		}
+		trigger_else = { always = no }
+	}
+}
+
+zw_trigger_westernized_headgear_pop_poor = {
+	exists = scope:pop
+	scope:pop = {
+		# culture isn't western culture
+		zw_trigger_non_western_culture = yes
+		# country has westernized
+		owner ?= { zw_trigger_country_is_westernized = yes }
+		#  pop type is westernized: poor
+		trigger_if = {
+			limit = { is_pop_type = farmers }
+			owner.var:zw_var_clothes_westernization >= 100
+		}
+		trigger_else_if = {
+			limit = { is_pop_type = machinists }
+			owner.var:zw_var_clothes_westernization >= 100
+		}
+		trigger_else = { always = no }
+	}
+}

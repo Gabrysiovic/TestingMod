@@ -1,0 +1,62 @@
+﻿##Headlines vanilla overrides
+
+TRY_REPLACE:victoria_notification = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_minor_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+
+TRY_REPLACE:opium_wars_british_response_angry = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_minor_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+
+TRY_REPLACE:opium_wars_british_response_passive = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_minor_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+
+TRY_REPLACE:santa_anna_captured_notification = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_minor_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+
+TRY_REPLACE:brz_isabel_accession = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_minor_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+
+TRY_REPLACE:pbc_peru_bolivia_collapse = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	days = 28
+	color = neutral
+	notification_type = feed
+}
+
+TRY_REPLACE:pbc_peru_bolivia_success = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	days = 28
+	color = neutral
+	notification_type = feed
+}

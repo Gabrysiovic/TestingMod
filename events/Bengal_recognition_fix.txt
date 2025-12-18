@@ -1,0 +1,37 @@
+﻿## Fail event - EIC
+namespace = bengal_fix
+bengal_fix.1 = {
+	type = country_event
+	placement = root
+	title = bengal.1.t
+	desc = bengal.1.d
+	flavor = bengal.1.f
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	duration = 3
+	event_image = {
+		video = "unspecific_factory_closed"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	trigger = {
+		OR = {
+			AND = {
+				exists = c:BGL
+				this = c:BGL
+			}
+			AND = {
+				exists = c:JAV
+				this = c:JAV
+			}
+		}
+		NOT = {
+			has_technology_researched = pan-nationalism
+		}
+	}
+	cooldown = {
+		months = stupidly_long_modifier_time
+	}
+	option = {
+		name = bengal.1.a
+		set_country_type = unrecognized
+	}
+}

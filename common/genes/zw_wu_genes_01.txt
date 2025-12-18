@@ -1,0 +1,410 @@
+﻿special_genes = {
+	accessory_genes = {
+		# hairstyles
+		zw_gene_hairstyles = {
+			inheritable = no
+			no_hairstyles = {
+				index = 0
+				male = {
+					1 = empty
+				}		   
+				female = male
+				boy = male
+				girl = male
+			}
+			zw_template_hairstyles = {
+				index = 1
+				male = {
+					1 = empty
+					# slicked back, short
+					1 = male_hair_indian_02
+					# slicked back, long
+					1 = male_hair_european_04
+					# slicked back, very short, receding hair
+					1 = male_hair_european_05
+					# slicked back, long, side hair
+					1 = male_hair_european_10
+					# parted, middle
+					1 = male_hair_european_07
+					# bald, middle
+					1 = male_hair_european_08
+					# buzz cut
+					1 = male_hair_european_13
+					# bangs
+					1 = male_hair_european_16
+					# sideburns, slicked back, flat
+					1 = male_hair_european_01
+					# sideburns, slicked back, tall
+					1 = male_hair_european_03
+					# sideburns, side parted
+					1 = male_hair_european_06
+					# sideburns, curly
+					1 = male_hair_european_12
+				}
+				female = {
+					1 = female_hair_arabic_01
+					1 = female_hair_european_01
+					1 = female_hair_european_02
+					1 = female_hair_european_03
+					1 = female_hair_european_04
+				}
+				boy = {
+					1 = male_hair_indian_02
+					1 = male_hair_european_04
+					1 = male_hair_european_07
+					1 = male_hair_european_10
+					1 = male_hair_european_13
+					1 = male_hair_european_16
+				}
+				girl = female
+			}
+			zw_template_hairstyles_military = {
+				index = 2
+				male = {
+					# slicked back, long
+					18 = male_hair_european_04
+					# sideburns, slicked back, flat
+					1 = male_hair_european_01
+					# sideburns, slicked back, tall
+					1 = male_hair_european_03
+				}
+				female = {
+					1 = female_hair_arabic_01
+					1 = female_hair_european_03
+					1 = female_hair_european_04
+				}
+				boy = {
+					1 = male_hair_european_04
+					1 = male_hair_european_07
+					1 = male_hair_european_10
+					1 = male_hair_european_13
+					1 = male_hair_european_16
+				}
+				girl = female
+			}
+			zw_template_hairstyles_chinese = {
+				index = 3
+				male = {
+					# slicked back, short
+					2 = male_hair_indian_02
+					# slicked back, long
+					2 = male_hair_european_04
+					# slicked back, very short, receding hair
+					1 = male_hair_european_05
+					# slicked back, long, side hair
+					1 = male_hair_european_10
+					# parted, middle
+					2 = male_hair_european_07
+					# buzz cut
+					1 = male_hair_european_13
+					# bangs
+					4 = male_hair_european_16
+					# sideburns, slicked back, flat
+					1 = male_hair_european_01
+				}
+				female = {
+					1 = female_hair_arabic_01
+					1 = female_hair_european_03
+					1 = female_hair_european_04
+				}
+				boy = {
+					2 = male_hair_indian_02
+					2 = male_hair_european_04
+					2 = male_hair_european_10
+					2 = male_hair_european_13
+					2 = male_hair_european_16
+				}
+				girl = female
+			}
+			zw_template_hairstyles_chinese_military = {
+				index = 4
+				male = {
+					# slicked back, long
+					18 = male_hair_european_04
+					# sideburns, slicked back, flat
+					1 = male_hair_european_01
+					# sideburns, slicked back, tall
+					1 = male_hair_european_03
+				}
+				female = {
+					1 = female_hair_arabic_01
+					1 = female_hair_european_03
+					1 = female_hair_european_04
+				}
+				boy = {
+					1 = male_hair_european_04
+					1 = male_hair_european_07
+					1 = male_hair_european_10
+					1 = male_hair_european_13
+					1 = male_hair_european_16
+				}
+				girl = female
+			}
+		}
+		# coats
+		zw_gene_coats = {
+			inheritable = no
+			no_coat = {
+				index = 0
+				male = {
+					1 = empty
+				}		   
+				female = male
+				boy = male
+				girl = male
+			}
+			zw_template_coats_military = {
+				index = 1
+				male = {
+					# single-breasted, 2/15
+					1 = male_coat_european_01 # non-decorated
+					1 = male_coat_european_09 # decorated
+					# double-breasted, 2/15
+					1 = male_coat_european_06 # medium
+					1 = male_coat_european_08 # long
+					# single-breasted, fixed color, 6/15
+					1 = male_coat_german_military_01_entity # non-decorated: grey
+					1 = male_coat_persian_01 # non-decorated: black
+					1 = male_coat_french_01 # non-decorated: blue
+					1 = male_coat_british_01 # non-decorated: red
+					1 = male_coat_american_01 # non-decorated: dark blue
+					1 = male_coat_russian_military_01 # non-decorated: green
+					# double-breasted, fixed color, 5/15
+					1 = male_coat_french_06 # medium: blue
+					1 = male_coat_british_06 # medium: red
+					1 = male_coat_american_06 # medium: dark blue
+					1 = male_coat_european_08_blue # long: blue
+					1 = male_coat_european_08_white # long: white
+				}
+				female = {
+					1 = female_outfit_european_common_01
+				}
+				boy = male
+				girl = female
+			}
+		}
+		# headgear
+		zw_gene_headgear = {
+			inheritable = no
+			no_headgear = {
+				index = 0
+				male = {
+					1 = empty
+				}		   
+				female = male
+				boy = male
+				girl = male
+			}
+			zw_template_headgear_military = {
+				index = 1
+				male = {
+					# empty
+					1 = empty
+					# USA cap
+					1 = male_headgear_european_military_01 # USA cap
+					1 = male_headgear_european_military_01_grey # USA cap: grey
+					# Kepi
+					1 = male_headgear_european_military_02 # Kepi
+					1 = male_headgear_european_military_02_black # Kepi: black
+					1 = male_headgear_european_military_02_blue # Kepi: blue
+					1 = male_headgear_european_military_02_red # Kepi: red
+					# Peaked cap
+					1 = male_headgear_european_military_03 # Peaked cap
+					1 = male_headgear_european_military_03_russian # Peaked cap: khaki
+					# Admiral
+					1 = male_headgear_european_military_05 # Admiral hat
+					# USA campaign hat
+					1 = male_headgear_european_military_06 # USA campaign hat
+				}
+				female = {}
+				boy = male
+				girl = female
+			}
+			zw_template_headgear_military_late = {
+				index = 2
+				male = {
+					1 = empty
+					1 = male_headgear_european_military_cap_01
+					1 = male_headgear_european_military_03_late_russian
+					1 = male_headgear_european_late_military_04
+					1 = male_headgear_european_military_late_06
+				}
+				female = {}
+				boy = male
+				girl = female
+			}
+			zw_template_headgear_politician = {
+				index = 3
+				male = {
+					2 = empty
+					6 = male_headgear_european_common_01 # flat hat
+					2 = male_headgear_european_common_02 # tall hat
+				}
+
+				female = {
+					1 = empty
+					1 = female_headgear_european_common_01
+				}
+				boy = male
+				girl = female
+			}
+		}
+		# legwear
+		zw_gene_legwear = {
+			inheritable = no
+			no_legwear = {
+				index = 0
+				male = {
+					1 = empty
+				}		   
+				female = male
+				boy = male
+				girl = male
+			}
+			zw_template_legwear_military = {
+				index = 1
+				male = {
+					1 = male_legwear_european_01
+					1 = male_legwear_european_01_white
+					1 = male_legwear_european_01_blue
+					1 = male_legwear_european_01_red
+					1 = male_legwear_european_01_light_blue
+					1 = male_legwear_european_01_black
+				}
+				female = {}
+				boy = male
+				girl = female
+			}
+		}
+		# sashes 
+		zw_gene_sashes = {
+			inheritable = no
+			no_sashes = {
+				index = 0
+				male = {
+					1 = empty
+				}		   
+				female = male
+				boy = male
+				girl = male
+			}
+			zw_template_sashes = {
+				index = 1
+				male = {
+					4 = empty
+					1 = male_sash_european_01_white
+					1 = male_sash_european_01_red
+					1 = male_sash_european_01_orange
+					1 = male_sash_european_01_yellow
+					1 = male_sash_european_01_gold
+					1 = male_sash_european_01_green
+					1 = male_sash_european_01_lightblue
+					1 = male_sash_european_01_blue
+					1 = male_sash_european_01_darkblue
+					1 = male_sash_european_01_purple
+					1 = male_sash_european_01_black
+				}
+				female = {
+					1 = empty
+					1 = female_sash_european_01
+					1 = female_sash_european_02
+				}
+				boy = male
+				girl = female
+			}
+		}
+		# epaulettes
+		zw_gene_epaulettes = {
+			inheritable = no
+			no_epaulettes = {
+				index = 0
+				male = {
+					1 = empty
+				}		   
+				female = male
+				boy = male
+				girl = male
+			}
+			zw_template_epaulettes = {
+				index = 1
+				male = {
+					1 = empty
+					4 = male_epaulettes_01
+					4 = male_epaulettes_02
+					4 = male_epaulettes_03
+					4 = male_epaulettes_04
+					4 = male_epaulettes_08
+				}
+				female = {}
+				boy = male
+				girl = female
+			}
+			zw_template_epaulettes_monarchy = { # prefer bigger epaulettes
+				index = 2
+				male = {
+					#1 = empty
+					4 = male_epaulettes_01
+					1 = male_epaulettes_02
+					1 = male_epaulettes_03
+					8 = male_epaulettes_04
+					#4 = male_epaulettes_08
+				}
+				female = {}
+				boy = male
+				girl = female
+			}
+			zw_template_epaulettes_small = {
+				index = 3
+				male = {
+					1 = male_epaulettes_01
+					1 = male_epaulettes_02
+					1 = male_epaulettes_03
+				}
+				female = {}
+				boy = male
+				girl = female
+			}
+		}
+		# belts
+		zw_gene_belts = {
+			inheritable = no
+			no_belts = {
+				index = 0
+				male = {
+					1 = empty
+				}		   
+				female = male
+				boy = male
+				girl = male
+			}
+			zw_template_belts = {
+				index = 1
+				male = {
+					1 = empty
+					1 = male_belt_generic_01
+					1 = male_belt_generic_02
+					1 = male_belt_generic_03
+				}
+				female = {
+					1 = empty
+				}
+				boy = male
+				girl = female
+			}
+			zw_template_belts_saber = {
+				index = 2
+				male = {
+					#1 = empty
+					1 = male_belt_generic_01
+					3 = male_belt_generic_02
+					1 = male_belt_generic_03
+				}
+				female = {
+					1 = empty
+				}
+				boy = male
+				girl = female
+			}
+		}
+	}
+}

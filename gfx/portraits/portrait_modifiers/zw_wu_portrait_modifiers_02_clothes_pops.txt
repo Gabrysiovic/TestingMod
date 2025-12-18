@@ -1,0 +1,214 @@
+﻿zw_wc_clothes_pop = {
+
+	usage = game
+	selection_behavior = weighted_random
+
+	# pop: soldier, weight = 1000
+
+	zw_westernized_clothes_pop_soldier = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = coats
+				template = european_uniform_coats
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = legwear
+				template = european_legwear
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = epaulettes
+				template = all_epaulettes
+				accessory = male_epaulettes_02
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				zw_trigger_westernized_clothes_pop_soldier = yes
+			}
+		}
+	}
+
+	# pop: soldier_late, weight = 2000
+
+	zw_westernized_clothes_pop_soldier_late = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = coats
+				template = european_late_military_coats
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = legwear
+				template = european_late_military_legwear
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = epaulettes
+				template = late_military_epaulettes
+				accessory = male_epaulettes_military_01
+			}
+			accessory = {
+				mode = add
+				gene = belts
+				template = late_military_belts
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2000
+				zw_trigger_westernized_clothes_pop_soldier_late = yes
+			}
+		}
+	}
+
+	# pop: shopkeepers, weight = 1000
+
+	zw_westernized_clothes_pop_shopkeepers = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = shirt
+				template = european_shirt
+				range = { 0 0.2 }
+			}
+			accessory = {
+				mode = add
+				gene = legwear
+				template = european_legwear
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = outfits
+				template = european_working_class_outfits
+				range = { 0 0.5 }
+			}
+			# accessories
+			accessory = {
+				mode = add
+				gene = misc
+				template = all_misc
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				zw_trigger_westernized_clothes_pop_shopkeepers = yes
+			}
+		}
+	}
+
+	# pop: upper, weight = 1000
+
+	zw_westernized_clothes_pop_upper = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = waistcoats
+				template = european_waistcoats
+				range = { 0 1 }
+			}
+
+			accessory = {
+				mode = add
+				gene = legwear
+				template = european_legwear
+				range = { 0 1 }
+			}
+
+			accessory = {
+				mode = add
+				gene = civilian_coats
+				template = european_civilian_coats
+				range = { 0 1 }
+			}
+		} 
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				zw_trigger_westernized_clothes_pop_upper = yes
+			}
+		}
+	}
+
+	# pop: middle, weight = 1000
+
+	zw_westernized_clothes_pop_middle = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = shirt
+				template = european_shirt
+				range = { 0 1 }
+			}
+
+			accessory = {
+				mode = add
+				gene = legwear
+				template = european_legwear
+				range = { 0 1 }
+			}
+
+			 accessory = {
+				mode = add
+				gene = outfits
+				template = european_working_class_outfits
+				range = { 0 1 }
+			}
+		} 
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				zw_trigger_westernized_clothes_pop_middle = yes # exclude clergy
+			}
+		}
+	}
+
+	# pop: poor, weight = 1000
+
+	zw_westernized_clothes_pop_poor = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = shirt
+				template = working_class_shirt
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = legwear
+				template = european_legwear
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = outfits
+				template = european_working_class_outfits
+				range = { 0 1 }
+			}
+		} 
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				zw_trigger_westernized_clothes_pop_poor = yes
+			}
+		}
+	}
+}

@@ -1,0 +1,92 @@
+﻿overlord_can_consolidate_subject = {
+	texture = "gfx/interface/icons/diplomatic_action_icons/consolidate_subject.dds"
+	script_context = player_subject
+
+	valid = {
+		overlord = {
+			has_technology_researched = nationalism
+			is_subject = no
+			is_diplomatic_play_committed_participant = no
+			is_revolutionary = no
+			# NOR = {
+			# 	c:BIC ?= this
+			# 	c:DEI ?= this
+			# }
+			save_temporary_scope_as = player_overlord
+		}
+		is_ai = yes
+		OR = {
+			custom_tooltip = {
+				text = consolidate_subject_country_tier_tt
+				OR = {
+					country_tier = city_state
+					country_tier = principality
+					country_tier = grand_principality
+				}
+			}
+			AND = {
+				custom_tooltip = {
+					text = consolidate_subject_country_tier_kingdom_tt
+					country_tier = kingdom
+				}
+				overlord = {
+					has_technology_researched = pan-nationalism
+				}
+			}
+		}
+		consolidate_subject_valid_subject_type = yes
+		is_diplomatic_play_committed_participant = no 
+		is_revolutionary = no
+		liberty_desire < 25
+		save_temporary_scope_as = consolidation_subject
+		any_neighbouring_state = {
+			owner = {
+				save_temporary_scope_as = recipient_subject
+				NOT = {
+					this = scope:consolidation_subject
+				}
+				is_subject_of = scope:player_overlord
+				consolidate_subject_valid_subject_type = yes
+				OR = {
+					custom_tooltip = {
+						text = consolidate_subject_primary_culture_tt
+						any_primary_culture = {
+							is_primary_culture_of = scope:consolidation_subject
+						}
+					}
+					custom_tooltip = {
+						text = consolidate_subject_acceptance_tt
+						AND = {
+							overlord = {
+								has_technology_researched = pan-nationalism
+								has_technology_researched = civilizing_mission
+							}
+							scope:consolidation_subject = {
+								any_primary_culture = {
+									count = all
+									OR = {
+										shares_language_trait_group_with_any_primary_culture = scope:recipient_subject
+										shares_heritage_trait_group_with_any_primary_culture = scope:recipient_subject
+									}
+									scope:recipient_subject = {
+										cultural_acceptance_base = { target = PREV value >= acceptance_status_4 }
+									}
+									
+								}
+							}
+						}
+					}
+				}
+				is_diplomatic_play_committed_participant = no 
+				is_revolutionary = no
+				liberty_desire < 50
+			}
+		}
+
+	}
+
+	open_panel = diplomatic_overview|subjects
+    type = important_action
+	color = green
+	alert_group = can_consolidate_subject
+}

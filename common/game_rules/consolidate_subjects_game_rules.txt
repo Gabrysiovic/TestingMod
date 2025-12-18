@@ -1,0 +1,7 @@
+﻿consolidate_subject_action = {
+	default = consolidate_subject_enabled
+
+	consolidate_subject_enabled = {}
+	consolidate_subject_player_only = {}
+	consolidate_subject_disabled = {}
+}

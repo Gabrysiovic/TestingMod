@@ -1,0 +1,52 @@
+﻿hb_modernize_landowners_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_tech_spread_add = 25
+}
+
+hb_modernize_government_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_tech_spread_add = 25
+}
+
+hb_modernize_economy_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_tech_spread_add = 25
+}
+
+outmoded_bureaucracy = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_bureaucracy_mult = -0.15
+	state_tax_capacity_mult = -0.15
+}
+
+broken_truce_10_years = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	country_legitimacy_base_add = -5
+}
+
+healthy_man_of_europe = {
+	icon = gfx/interface/icons/event_icons/ottomans.dds
+	state_construction_mult = 0.1
+	country_legitimacy_base_add = 10
+	interest_group_ig_intelligentsia_approval_add = 5
+	interest_group_ig_intelligentsia_pol_str_mult = 1
+}
+
+#Tech spread
+hb_pro_spread = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_hb_tech_spread_bool = yes
+	country_production_tech_spread_mult = 0.2
+}
+
+hb_mil_spread = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	country_hb_tech_spread_bool = yes
+	country_military_tech_spread_mult = 0.2
+}
+
+hb_soc_spread = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_hb_tech_spread_bool = yes
+	country_society_tech_spread_mult = 0.2
+}

@@ -1,0 +1,104 @@
+﻿zw_wc_hair = {
+	usage = game
+	selection_behavior = weighted_random
+
+	# Japanese, replace traditional hairstyles, weight = 100000
+
+	zw_westernized_hair_japanese = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hairstyles
+				template = east_asian_hairstyles
+				range = { 0 1 } # same as Meiji restoration
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100000
+				zw_trigger_westernized_hair_japanese = yes
+			}
+		}
+	}
+
+	# Chinese, replace Manchu queue, weight = 100000
+
+	zw_westernized_hair_chinese = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = zw_gene_hairstyles
+				template = zw_template_hairstyles_chinese
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100000
+				zw_trigger_westernized_hair_chinese = yes
+			}
+		}
+	}
+
+	# Chinese, replace Manchu queue, military_character, weight = 100000 + 100 = 100100
+
+	#zw_westernized_hair_chinese_military = {
+		#dna_modifiers = {
+		#	accessory = {
+		#		mode = add
+		#		gene = zw_gene_hairstyles
+		#		template = zw_template_hairstyles_chinese_military
+		#		range = { 0 1 }
+		#	}
+		#}
+		#weight = {
+		#	base = 0
+		#	modifier = {
+		#		add = 100100
+		#		zw_trigger_westernized_hair_chinese_military = yes
+		#	}
+		#}
+	#}
+
+	# military_character, weight = 100000 + 100 = 100100
+
+	zw_westernized_hair_military = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = zw_gene_hairstyles
+				template = zw_template_hairstyles_military
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100100
+				zw_trigger_westernized_hair_military = yes
+			}
+		}
+	}
+
+	# Avoid clipping when USA campaign hat is selected, weight = 100000 + 100 + 100 = 100200
+
+	zw_westernized_hair_matching_usa_headgear = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hairstyles
+				template = american_military_hairstyles
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100200
+				zw_trigger_westernized_hair_matching_usa_headgear = yes
+			}
+		}
+	}
+}

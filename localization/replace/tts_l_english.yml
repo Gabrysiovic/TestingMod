@@ -1,0 +1,57 @@
+﻿l_english:
+ #####
+ # Technology
+ #####
+
+ dreadnought: "Dreadnought"
+ dreadnought_desc: "Equipped with powerful all-big-gun armament and steam turbines, the dreadnought battleship revolutionized naval warfare."
+ battleship_tech_desc: "The so-called \"Super-dreadnought battleships\" carry bigger guns, thicker armor and more powerful engines, making the Dreadnought seem obsolete."
+
+#####
+# Goods
+#####
+ manowars: "Men-o-war"
+ ironclads: "Warships"
+ 
+ modifier_goods_input_manowars_add: "@manowars! Men-o-War input per level"
+ modifier_goods_input_ironclads_add: "@ironclads! Warships input per level"
+ modifier_goods_output_manowars_add: "@manowars! Men-o-War output per level"
+ modifier_goods_output_ironclads_add: "@ironclads! Warships output per level"
+
+######
+# Combat Unit Group Types
+######
+ combat_unit_group_light_ship: "Escorts"
+ combat_unit_group_capital_ship: "Capital Ships"
+ combat_unit_group_support_ship: "Aviation"
+
+######
+# Combat Unit Types
+######
+
+ combat_unit_type_frigate: "Frigates"
+ combat_unit_type_frigate_desc: "A lightly armored sailing warship equipped with cannons. Carrying a full rig of sails and designed with speed and maneuverability in mind, a versatile escort ship from the late age of sail."
+ combat_unit_type_destroyer: "Destroyers"
+ combat_unit_type_destroyer_desc: "A relatively small, fast warship. Originally designed to protect larger vessels from the threat of torpedo boats, destroyers typically carry torpedo armament of their own, and can be a very dangerous foe."
+ combat_unit_type_scout_cruiser: "Cruisers"
+ combat_unit_type_scout_cruiser_desc: "A multi-role vessel, cruisers can act as scouts for larger warships or serve as leaders of their own squadron. Usually built for long range missions, cruisers are also useful for both convoy escort and commerce raiding."
+ combat_unit_type_man_o_war: "Ships of the Line"
+ combat_unit_type_man_o_war_desc: "The pinnacle of sailing ship design, Ships of the Line boast multiple gun decks, thick wood planking and a crew nearing a thousand men."
+ combat_unit_type_ironclad: "Ironclads"
+ combat_unit_type_ironclad_desc: "A ship clad in metal armor. Some early ironclads lacked the penetration to defeat a peer opponent's armor, and battles could end inconclusively."
+ combat_unit_type_dreadnought: "Dreadnoughts"
+ combat_unit_type_dreadnought_desc: "Advances in gunnery allowed Dreadnought-type warships to ditch the mixed batteries of its predecessors for an all-big-gun armament."
+ combat_unit_type_battleship: "Battleships"
+ combat_unit_type_battleship_desc: "The largest warships on the sea, Super-Dreadnought Battleships are the ultimate instrument of naval power."
+ combat_unit_type_torpedo_boat: "Torpedo Boats"
+ combat_unit_type_torpedo_boat_desc: "Small, agile craft that use torpedoes to counter larger ships."
+ # Submarine left as it is for now, transform into experimental submarine later
+
+# Buildings
+  building_military_shipyards: "Naval Yards"
+
+# Production Methods
+ pm_military_shipbuilding_wooden: "Men-o-War"
+ pm_military_shipbuilding_wooden_2: "Screw Frigates"
+
+ 
