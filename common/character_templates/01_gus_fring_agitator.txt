@@ -1,0 +1,27 @@
+agitator_gus_fring = {
+	first_name = Gustavo
+	last_name = Fring
+	historical = yes
+	culture = cu:south_andean
+	religion = rel:catholic
+	female = no
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_market_liberal
+	birth_date = 1818.4.26
+	dna = dna_gus_fring
+	traits = {
+		ambitious
+		experienced_entrepreneur
+	}
+    executive_usage = {
+        country_trigger = {
+            has_dlc_feature = mp1_content
+        }
+        company_trigger = {
+            is_company_type = company_type:company_los_pollos_hermanos
+        }
+        earliest_usage_date = 1836.1.1
+		latest_usage_date = 1935.12.31
+        chance = 100
+    }
+}
