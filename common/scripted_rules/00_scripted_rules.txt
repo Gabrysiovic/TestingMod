@@ -1,0 +1,39 @@
+﻿# Root = Country
+TRY_CHANGE:can_lead_power_bloc = {
+	always = yes
+}
+
+
+TRY_CHANGE:unlock_power_bloc_principle_slot_1 = {
+	always = yes
+}
+
+TRY_CHANGE:unlock_power_bloc_principle_slot_2 = {
+	always = yes
+}
+
+# If you ever change these conditions, remember to update the loc-key: TOOLTIP_LOCKED_PRINCIPLE_SLOT_3_DURING_FORMATION
+TRY_CHANGE:unlock_power_bloc_principle_slot_3 = {
+	always = yes
+}
+
+# If you ever change these conditions, remember to update the loc-key: TOOLTIP_LOCKED_PRINCIPLE_SLOT_4_DURING_FORMATION
+TRY_CHANGE:unlock_power_bloc_principle_slot_4 = {
+	always = yes
+}
+
+TRY_CHANGE:unlock_power_bloc_formation_principle_slot_1 = {
+	always = yes
+}
+
+TRY_CHANGE:unlock_power_bloc_formation_principle_slot_2 = {
+	has_dlc_feature = power_bloc_features
+}
+
+TRY_CHANGE:unlock_power_bloc_formation_principle_slot_3 = {
+	always = no
+}
+
+TRY_CHANGE:unlock_power_bloc_formation_principle_slot_4 = {
+	always = no
+}

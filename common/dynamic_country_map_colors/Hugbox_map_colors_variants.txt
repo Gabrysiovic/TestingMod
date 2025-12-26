@@ -1,0 +1,35 @@
+﻿
+TRY_REPLACE:feminist_britain = {
+	color = "plc_pink"
+	possible = {
+		exists = c:GBR
+		c:GBR ?= THIS
+		ruler = {
+			has_ideology = ideology:ideology_feminist
+			is_female = yes
+		}
+		has_law_or_variant = law_type:law_womens_suffrage
+	}
+}
+
+
+TRY_REPLACE:unpleasant_germany = {
+	color = "feldgrau2"
+
+	possible = {
+		exists = c:GER
+		c:GER ?= THIS
+		coa_fascist_trigger = yes
+	}
+}
+
+
+TRY_REPLACE:usa_commie = {
+	color = "usa_commie"
+
+	possible = {
+		exists = c:USA
+		c:USA ?= THIS
+		has_law_or_variant = law_type:law_council_republic
+	}
+}

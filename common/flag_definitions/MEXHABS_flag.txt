@@ -1,4 +1,4 @@
-﻿MEX = {
+MEX = { 
 	flag_definition = {
 		coa = MEX_habsburg
 		subject_canton = MEX_habsburg
@@ -9,5 +9,5 @@
 				has_law = law_type:law_monarchy
 			}
 		}
-	}
+	}	
 }

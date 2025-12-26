@@ -1,0 +1,70 @@
+﻿### Austrian historic monarchs template file ###
+
+is_aus_maximilian_01 = {
+	heir = yes
+	culture = cu:south_german
+	first_name = Maximilian
+	last_name = von_Habsburg
+	historical = yes
+	ig_leader = no
+	noble = yes
+	birth_date = 1832.7.6
+	dna = dna_aus_maximilian_01
+	interest_group = ig_intelligentsia
+	ideology = ideology_humanitarian_royalist
+	traits = {
+		dockyard_master
+		charismatic
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_aus_karl_ludwig_01 = {
+	heir = yes
+	culture = cu:south_german
+	first_name = Karl_Ludwig
+	last_name = von_Habsburg
+	historical = yes
+	ig_leader = no
+	noble = yes
+	birth_date = 1833.7.30
+	dna = dna_aus_karl_ludwig_01
+	interest_group = ig_devout
+	ideology = ideology_traditionalist
+	traits = {
+		bigoted
+		pious
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_mex_miguel_miramón01 = {
+	general	= yes
+	culture = cu:mexican
+	first_name = miguel
+	last_name = miramón
+	historical = yes
+	ig_leader = no
+	noble = yes
+	birth_date = 1831.9.29
+	dna = dna_mex_Miguel_Miramón01
+	interest_group = ig_devout
+	ideology = ideology_traditionalist
+	traits = {
+		bigoted
+		pious
+	}
+	trait_generation = {
+		# nothing!
+	}
+}

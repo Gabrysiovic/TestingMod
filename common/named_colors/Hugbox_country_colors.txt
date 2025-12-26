@@ -1,9 +1,0 @@
-colors = {	
-	german_gray	= rgb { 101 103 105 }
-	german_fascist	= rgb { 105 91 79 }
-	northgermanfederation = rgb { 52 77 94 }
-	southgermanfederation = rgb { 52 89 94 }
-	rusty_austriahungary = rgb { 207 185 119 }
-	red_british = rgb { 120 0 0 }
-	usa_commie = rgb { 161 62 62 }
-} 

@@ -1,0 +1,13 @@
+﻿MEX_habsburg = {	
+	pattern = "pattern_solid.tga"
+	color1 = "green"
+
+	colored_emblem = {
+		texture = "ce_tricolor_vertical.dds"
+		color1 = "white"
+		color2 = "red"
+	}
+	textured_emblem = {
+		texture = "mexhabs.dds"	
+	}
+}

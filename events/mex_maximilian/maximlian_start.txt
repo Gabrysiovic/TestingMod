@@ -30,6 +30,9 @@ maximilian_start.1 = {
 
 	option = {
 		name = maximilian_start.1.a
+		add_loyalists = {
+			value = 0.015
+		}
 		ig:ig_landowners = {
 			remove_ideology = ideology_republican_paternalistic
 			add_ideology = ideology_paternalistic
