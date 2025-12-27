@@ -10,8 +10,8 @@ groups= {
 		is_revolutionary = no
 		has_truce_with = scope:target_country
 		aggressive_diplomatic_plays_permitted = yes	
-		NOT = { scope:target_country = c:CIR }
-		NOT = { scope:target_country = c:CHC }
+		NOT = { scope:target_country = {c:CIR ?= this} }
+		NOT = { scope:target_country = {c:CHC ?= this} }
 		
 	}
 
