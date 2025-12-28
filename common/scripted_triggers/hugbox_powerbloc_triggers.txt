@@ -1,4 +1,5 @@
-﻿country_can_form_power_bloc = {
+﻿### By Oaken: Last Updated 28/12/2025
+REPLACE:country_can_form_power_bloc = {
 	AND = {
 		trigger_if = {
 			limit = {
