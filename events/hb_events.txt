@@ -65,29 +65,3 @@ hb_tech_spread_event.1 = {
 	}
 }
 
-namespace = hb_apocalypse
-hb_apocalypse.1 = {
-	type = country_event
-	placement = root
-	title = hb_apocalypse.1.t
-	desc = hb_apocalypse.1.d
-	flavor = hb_apocalypse.1.f
-	event_image = {
-		video = unspecific_ruler_speaking_to_people
-	}
-	icon = gfx/interface/icons/event_icons/event_skull.dds
-	on_opened_soundeffect = event:/SFX/UI/Alerts/event_appear
-	duration = 1
-	trigger = {
-		year = 2000
-	}
-	immediate = {
-		set_variable = krakatoa_temperature_drop
-		set_variable = krakatoa_crop_failure
-		set_variable = krakatoa_temperature_recovery_rate
-	}
-	option = {
-		name = hb_apocalypse.1.a
-		default_option = yes
-	}
-}
