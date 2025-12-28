@@ -1,4 +1,4 @@
-agitator_gus_fring = {
+﻿agitator_gus_fring = {
 	first_name = Gustavo
 	last_name = Fring
 	historical = yes

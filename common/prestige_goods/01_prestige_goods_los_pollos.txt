@@ -1,4 +1,4 @@
-prestige_good_los_pollos_chicken = {
+﻿prestige_good_los_pollos_chicken = {
 	base_good = groceries
 	prestige_bonus = 0.1
 	texture = "gfx/interface/icons/goods_icons/prestige_goods/los_pollos_chicken.dds"
