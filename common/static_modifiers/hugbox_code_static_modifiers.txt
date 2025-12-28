@@ -1,44 +1,19 @@
-﻿TRY_REPLACE:government_wages_very_low = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
-	country_government_wages_mult = -0.3
-	interest_group_ig_intelligentsia_approval_add = -2
-	interest_group_ig_petty_bourgeoisie_approval_add = -2
-	country_prestige_mult = -0.2
+﻿### Edited by Oaken: 28/12/2025
+
+INJECT:government_wages_very_low = {
+	country_authority_mult = -0.1
 }
 
-TRY_REPLACE:government_wages_low = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
-	country_government_wages_mult = -0.15
-	interest_group_ig_intelligentsia_approval_add = -1
-	interest_group_ig_petty_bourgeoisie_approval_add = -1
-	country_prestige_mult = -0.1
+INJECT:government_wages_low = {
+	country_authority_mult = -0.05
 }
 
-TRY_REPLACE:government_wages_medium = {
-}
-
-TRY_REPLACE:government_wages_high = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-	country_government_wages_mult = 0.15
-	interest_group_ig_intelligentsia_approval_add = 1
-	interest_group_ig_petty_bourgeoisie_approval_add = 1
-	country_authority_mult = 0.05
-}
-
-TRY_REPLACE:government_wages_very_high = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-	country_government_wages_mult = 0.3
-	interest_group_ig_intelligentsia_approval_add = 2
-	interest_group_ig_petty_bourgeoisie_approval_add = 2
-	country_authority_mult = 0.1
-}
-
-TRY_REPLACE:law_enactment_chance = {
+REPLACE:law_enactment_chance = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	country_law_enactment_success_add = 1
 }
 
-TRY_REPLACE:weak_power_bloc = {
+REPLACE:weak_power_bloc = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 	power_bloc_cohesion_mult = 0
 }

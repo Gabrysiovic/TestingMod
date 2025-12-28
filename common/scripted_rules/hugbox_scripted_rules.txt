@@ -1,0 +1,9 @@
+﻿# If you ever change these conditions, remember to update the loc-key: TOOLTIP_LOCKED_PRINCIPLE_SLOT_3_DURING_FORMATION
+REPLACE:unlock_power_bloc_principle_slot_3 = {
+	always = yes
+}
+
+# If you ever change these conditions, remember to update the loc-key: TOOLTIP_LOCKED_PRINCIPLE_SLOT_4_DURING_FORMATION
+REPLACE:unlock_power_bloc_principle_slot_4 = {
+	always = yes
+}

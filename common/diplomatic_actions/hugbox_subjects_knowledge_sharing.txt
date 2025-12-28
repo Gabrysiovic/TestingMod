@@ -1,4 +1,5 @@
-﻿da_knowledge_sharing = {
+﻿REPLACE:da_knowledge_sharing = {
+	### By Oaken: Last updated 28/12/2025
 	groups = {
 		power_bloc_leader
 		overlord

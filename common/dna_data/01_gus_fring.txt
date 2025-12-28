@@ -1,4 +1,4 @@
-dna_gus_fring = {
+﻿dna_gus_fring = {
      portrait_info = {
 
      genes={        hair_color={ 102 246 102 246 }
