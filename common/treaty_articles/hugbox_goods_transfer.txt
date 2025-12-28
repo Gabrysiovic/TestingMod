@@ -1,4 +1,5 @@
-﻿goods_transfer = {
+﻿### By Oaken: Last updated 28/12/2025
+REPLACE:goods_transfer = {
 	kind = directed
 	cost = 10
 	relations_progress_per_day = 0.1

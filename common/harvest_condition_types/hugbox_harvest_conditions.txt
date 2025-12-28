@@ -1,3 +1,4 @@
+﻿### By Merc (Gabriel said), last updated by Oaken: 28/12/2025
 # Negative
 REPLACE:drought = {
 	trigger = {
