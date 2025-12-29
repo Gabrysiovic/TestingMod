@@ -55,11 +55,11 @@ TRY_REPLACE:pm_default_building_forbidden_city = {
 INJECT_OR_CREATE:pm_monument_prestige_only_forbidden_city = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 	
-		disallowing_religions = 
-		{ 
-			confucian
-			shinto
-		}
+	disallowing_religions = 
+	{ 
+		confucian
+		shinto
+	}
 
 	is_hidden_when_unavailable = yes
 
