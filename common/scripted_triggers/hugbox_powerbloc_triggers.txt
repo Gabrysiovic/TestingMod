@@ -1,4 +1,4 @@
-﻿TRY_REPLACE:country_can_form_power_bloc = {
+﻿﻿TRY_REPLACE:country_can_form_power_bloc = {
 	AND = {
 		trigger_if = {
 			limit = {

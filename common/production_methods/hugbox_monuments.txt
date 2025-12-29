@@ -1,0 +1,118 @@
+﻿TRY_REPLACE:pm_default_building_cristo_redentor = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	is_hidden_when_unavailable = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			interest_group_ig_devout_pol_str_mult = 0.15
+			country_prestige_add = 50
+			state_migration_pull_mult = 0.25
+
+		}
+	}
+
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		level_scaled = {
+			building_employment_clergymen_add = 100
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_forbidden_city = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	unlocking_religions = 
+	{ 					
+		confucian
+		shinto
+	}
+
+	is_hidden_when_unavailable = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_legitimacy_headofstate_add = 20
+			country_authority_add = 50
+			country_prestige_add = 25
+		}
+	}
+
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 800
+			building_employment_clergymen_add = 200
+		}
+	}
+}
+
+INJECT_OR_CREATE:pm_monument_prestige_only_forbidden_city = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+	
+		disallowing_religions = 
+		{ 
+			confucian
+			shinto
+		}
+
+	is_hidden_when_unavailable = yes
+
+	country_modifiers = {
+		throughput_scaled = {
+			country_prestige_add = 25
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_vatican_city = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	unlocking_religions =
+	{ 
+		catholic
+		orthodox
+	}
+
+	is_hidden_when_unavailable = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			interest_group_ig_devout_pol_str_mult = 0.25
+			country_influence_add = 100
+			country_authority_add = 100
+		}
+	}
+
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		level_scaled = {
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_monument_prestige_only_vatican_city = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	is_hidden_when_unavailable = yes
+
+	disallowing_religions =
+	{ 
+		catholic
+		orthodox
+	}
+
+	country_modifiers = {
+		throughput_scaled = {
+			country_prestige_add = 25
+		}
+	}
+}
