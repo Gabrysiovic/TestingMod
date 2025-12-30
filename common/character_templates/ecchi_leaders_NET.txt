@@ -74,8 +74,17 @@ ecchi_net_kuyper_character_template = {
     traits = { pious ambitious persistent }
     interest_group_leader_usage = {
         country_trigger = {
-            exists = c:NET
-            this = c:NET
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:NET }
+                }
+                AND = {
+                     exists = c:NET
+					this = c:NET
+                }
+            }
         }
         interest_group_trigger = {
             is_interest_group_type = ig_devout
@@ -100,8 +109,17 @@ ecchi_net_troelstra_character_template = {
     traits = { reckless romantic persistent }
     interest_group_leader_usage = {
         country_trigger = {
-            exists = c:NET
-            this = c:NET
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:NET }
+                }
+                AND = {
+                     exists = c:NET
+					this = c:NET
+                }
+            }
         }
         interest_group_trigger = {
             ig_counts_as_marginal = no
@@ -130,8 +148,17 @@ net_prinsterer_character_template = {
     traits = { pious persistent literary }
     interest_group_leader_usage = {
         country_trigger = {
-            exists = c:NET
-            this = c:NET
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:NET }
+                }
+                AND = {
+                     exists = c:NET
+					this = c:NET
+                }
+            }
         }
         interest_group_trigger = {
             is_interest_group_type = ig_devout
@@ -156,8 +183,17 @@ net_d_ablaing_van_giessenburg_character_template = {
     traits = { brave popular_commander }
     interest_group_leader_usage = {
         country_trigger = {
-            exists = c:NET
-            this = c:NET
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:NET }
+                }
+                AND = {
+                     exists = c:NET
+					this = c:NET
+                }
+            }
         }
         interest_group_trigger = {
             is_interest_group_type = ig_armed_forces
@@ -207,8 +243,18 @@ net_nieuwenhuis_character_template = {
 	traits = { ambitious direct charismatic }
 	agitator_usage = {
 		country_trigger = {
-			c:NET ?= this
-		}
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:NET }
+                }
+                AND = {
+                     exists = c:NET
+					this = c:NET
+                }
+            }
+        }
         interest_group_trigger = {
             ig_counts_as_marginal = no
             is_interest_group_type = ig_trade_unions
@@ -232,8 +278,18 @@ net_van_houten_character_template = {
 	traits = { imposing experienced_political_operator }
 	agitator_usage = {
 		country_trigger = {
-			c:NET ?= this
-		}
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:NET }
+                }
+                AND = {
+                     exists = c:NET
+					this = c:NET
+                }
+            }
+        }
         interest_group_trigger = {
             ig_counts_as_marginal = no
             is_interest_group_type = ig_intelligentsia
@@ -258,8 +314,18 @@ net_jacobs_character_template = {
 	traits = { persistent erudite }
 	agitator_usage = {
 		country_trigger = {
-			c:NET ?= this
-		}
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:NET }
+                }
+                AND = {
+                     exists = c:NET
+					this = c:NET
+                }
+            }
+        }
         interest_group_trigger = {
             ig_counts_as_marginal = no
             is_interest_group_type = ig_intelligentsia
@@ -323,8 +389,18 @@ net_hoevell_character_template = {
     traits = { pious }
 	agitator_usage = {
 		country_trigger = {
-			c:NET ?= this
-		}
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:NET }
+                }
+                AND = {
+                     exists = c:NET
+					this = c:NET
+                }
+            }
+        }
         interest_group_trigger = {
             ig_counts_as_marginal = no
             is_interest_group_type = ig_intelligentsia
@@ -349,8 +425,17 @@ net_regout_character_template = {
     traits = { ambitious reckless experienced_entrepreneur }
     interest_group_leader_usage = {
         country_trigger = {
-            exists = c:NET
-            this = c:NET
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:NET }
+                }
+                AND = {
+                     exists = c:NET
+					this = c:NET
+                }
+            }
         }
         interest_group_trigger = {
             is_interest_group_type = ig_industrialists
@@ -375,8 +460,17 @@ net_schimmelpenninck_character_template = {
     traits = { direct basic_entrepreneur experienced_diplomat }
     interest_group_leader_usage = {
         country_trigger = {
-            exists = c:NET
-            this = c:NET
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:NET }
+                }
+                AND = {
+                     exists = c:NET
+					this = c:NET
+                }
+            }
         }
         interest_group_trigger = {
             is_interest_group_type = ig_petty_bourgeoisie
@@ -401,8 +495,17 @@ net_teenstra_character_template = {
     traits = { literary meticulous }
     interest_group_leader_usage = {
         country_trigger = {
-            exists = c:NET
-            this = c:NET
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:NET }
+                }
+                AND = {
+                     exists = c:NET
+					this = c:NET
+                }
+            }
         }
         interest_group_trigger = {
             is_interest_group_type = ig_rural_folk
@@ -427,8 +530,17 @@ net_van_der_voo_character_template = {
     traits = { ambitious persistent }
     interest_group_leader_usage = {
         country_trigger = {
-            exists = c:NET
-            this = c:NET
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:NET }
+                }
+                AND = {
+                     exists = c:NET
+					this = c:NET
+                }
+            }
         }
         interest_group_trigger = {
             is_interest_group_type = ig_trade_unions
@@ -453,8 +565,17 @@ net_luzac_character_template = {
     traits = { experienced_political_operator ambitious }
     interest_group_leader_usage = {
         country_trigger = {
-            exists = c:NET
-            this = c:NET
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:NET }
+                }
+                AND = {
+                     exists = c:NET
+					this = c:NET
+                }
+            }
         }
         interest_group_trigger = {
             is_interest_group_type = ig_intelligentsia
@@ -479,8 +600,17 @@ net_de_jonge_van_campensnieuwland_character_template = {
     traits = { inspirational_orator persistent }
     interest_group_leader_usage = {
         country_trigger = {
-            exists = c:NET
-            this = c:NET
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:NET }
+                }
+                AND = {
+                     exists = c:NET
+					this = c:NET
+                }
+            }
         }
         interest_group_trigger = {
             is_interest_group_type = ig_landowners

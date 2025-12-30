@@ -243,7 +243,7 @@ ecchi_ire_casement_character_template = {
     culture = cu:irish
 
     religion = rel:catholic
-    ideology = ideology_ethno_nationalist
+    ideology = ideology_reformer
     interest_group = ig_intelligentsia
     dna = ecchi_dna_roger_casement
     birth_date = 1864.9.1

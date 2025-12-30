@@ -13,15 +13,15 @@ ecchi_bel_rogier_character_template = {
     traits = { experienced_diplomat reserved }
     interest_group_leader_usage = {
         country_trigger = {
-            OR = {
+			OR = {
                 AND = {
-                    exists = c:BEL
-                    this = c:BEL
-                    NOT = { exists = c:WLL }
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:BEL }
                 }
                 AND = {
-                    exists = c:WLL
-                    this = c:WLL
+                    exists = c:BEL
+					this = c:BEL
                 }
             }
         }
@@ -47,15 +47,15 @@ ecchi_bel_pirenne_character_template = {
     traits = { direct tactful }
     interest_group_leader_usage = {
         country_trigger = {
-            OR = {
+			OR = {
                 AND = {
-                    exists = c:BEL
-                    this = c:BEL
-                    NOT = { exists = c:WLL }
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:BEL }
                 }
                 AND = {
-                    exists = c:WLL
-                    this = c:WLL
+                    exists = c:BEL
+					this = c:BEL
                 }
             }
         }
@@ -82,17 +82,15 @@ ecchi_bel_brialmont_character_template = {
     commander_rank = default
     commander_usage = {
         country_trigger = {
-            hga_is_active = no
-            morgenrote_is_active = no #This character is in Morgenröte and should not spawn if Morgenröte is active
-            OR = {
+			OR = {
                 AND = {
-                    exists = c:BEL
-                    this = c:BEL
-                    NOT = { exists = c:FLA }
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:BEL }
                 }
                 AND = {
-                    exists = c:FLA
-                    this = c:FLA
+                    exists = c:BEL
+					this = c:BEL
                 }
             }
         }
@@ -115,15 +113,15 @@ ecchi_bel_de_paepe_character_template = {
     traits = { demagogue direct }
     interest_group_leader_usage = {
         country_trigger = {
-            OR = {
+			OR = {
                 AND = {
-                    exists = c:BEL
-                    this = c:BEL
-                    NOT = { exists = c:FLA }
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:BEL }
                 }
                 AND = {
-                    exists = c:FLA
-                    this = c:FLA
+                    exists = c:BEL
+					this = c:BEL
                 }
             }
         }
@@ -152,18 +150,18 @@ ecchi_bel_hamer_character_template = {
     traits = { romantic persistent }
     agitator_usage = {
 		country_trigger = {
-            OR = {
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:BEL }
+                }
                 AND = {
                     exists = c:BEL
-                    this = c:BEL
-                    NOT = { exists = c:FLA }
-                }
-                AND = {
-                    exists = c:FLA
-                    this = c:FLA
+					this = c:BEL
                 }
             }
-			has_technology_researched = feminism
+			has_technology_researched = feminism	
         }
         interest_group_trigger = {
             is_interest_group_type = ig_intelligentsia
@@ -189,15 +187,15 @@ ecchi_bel_la_fontaine_character_template = {
     traits = { persistent erudite }
     agitator_usage = {
         country_trigger = {
-            OR = {
+			OR = {
                 AND = {
-                    exists = c:BEL
-                    this = c:BEL
-                    NOT = { exists = c:FLA }
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:BEL }
                 }
                 AND = {
-                    exists = c:FLA
-                    this = c:FLA
+                    exists = c:BEL
+					this = c:BEL
                 }
             }
         }
@@ -242,8 +240,17 @@ bel_janson_character_template = {
     traits = { persistent ambitious }
     interest_group_leader_usage = {
         country_trigger = {
-            exists = c:BEL
-            this = c:BEL
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:BEL }
+                }
+                AND = {
+                    exists = c:BEL
+					this = c:BEL
+                }
+            }
         }
         interest_group_trigger = {
             is_interest_group_type = ig_intelligentsia
@@ -268,8 +275,18 @@ bel_jottrand_character_template = {
     traits = { literary aesthete }
 	agitator_usage = {
 		country_trigger = {
-			c:BEL ?= this
-		}
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:BEL }
+                }
+                AND = {
+                    exists = c:BEL
+					this = c:BEL
+                }
+            }
+        }
         interest_group_trigger = {
             ig_counts_as_marginal = no
             is_interest_group_type = ig_intelligentsia
@@ -294,15 +311,15 @@ bel_destree_character_template = {
     traits = { aesthete imperious }
     interest_group_leader_usage = {
         country_trigger = {
-            OR = {
+			OR = {
                 AND = {
-                    exists = c:BEL
-                    this = c:BEL
-                    NOT = { exists = c:WLL }
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:BEL }
                 }
                 AND = {
-                    exists = c:WLL
-                    this = c:WLL
+                    exists = c:BEL
+					this = c:BEL
                 }
             }
         }
@@ -329,8 +346,18 @@ net_popelin_character_template = {
 	traits = { ambitious charismatic  }
 	agitator_usage = {
 		country_trigger = {
-			c:BEL ?= this
-		}
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:BEL }
+                }
+                AND = {
+                    exists = c:BEL
+					this = c:BEL
+                }
+            }
+        }
         interest_group_trigger = {
             ig_counts_as_marginal = no
             is_interest_group_type = ig_petty_bourgeoisie
@@ -355,15 +382,15 @@ bel_beernaert_character_template = {
     traits = { aesthete experienced_diplomat }
     interest_group_leader_usage = {
         country_trigger = {
-            OR = {
+			OR = {
                 AND = {
-                    exists = c:BEL
-                    this = c:BEL
-                    NOT = { exists = c:WLL }
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:BEL }
                 }
                 AND = {
-                    exists = c:WLL
-                    this = c:WLL
+                    exists = c:BEL
+					this = c:BEL
                 }
             }
         }
@@ -442,8 +469,17 @@ bel_dumont_character_template = {
     traits = { ambitious experienced_entrepreneur }
     interest_group_leader_usage = {
         country_trigger = {
-            exists = c:BEL
-            this = c:BEL
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:BEL }
+                }
+                AND = {
+                    exists = c:BEL
+					this = c:BEL
+                }
+            }
         }
         interest_group_trigger = {
             is_interest_group_type = ig_industrialists
@@ -468,8 +504,17 @@ bel_eloy_character_template = {
     traits = { persistent honorable }
     interest_group_leader_usage = {
         country_trigger = {
-            exists = c:BEL
-            this = c:BEL
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:BEL }
+                }
+                AND = {
+                    exists = c:BEL
+					this = c:BEL
+                }
+            }
         }
         interest_group_trigger = {
             is_interest_group_type = ig_rural_folk
@@ -494,8 +539,18 @@ bel_daens_character_template = {
     traits = { charismatic pious }
 	agitator_usage = {
 		country_trigger = {
-			c:BEL ?= this
-		}
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:BEL }
+                }
+                AND = {
+                    exists = c:BEL
+					this = c:BEL
+                }
+            }
+        }
         interest_group_trigger = {
             ig_counts_as_marginal = no
             is_interest_group_type = ig_devout
