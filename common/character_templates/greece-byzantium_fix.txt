@@ -1,203 +1,4 @@
-﻿### Greece - GRE character template file ###
-
-GRE_otto_von_wittelsbach = { # King Otto of Greece
-    first_name = "Otto"
-    last_name = "von_Wittelsbach"
-    female = no
-    dna = dna_king_otto_of_greece
-    historical = yes
-    birth_date = 1815.6.1
-    culture = cu:south_german
-    religion = rel:catholic
-    ruler = yes
-    interest_group = ig_landowners
-    ideology = ideology_moderate
-    traits = {
-        inexperienced
-        political_appointee
-        imperious
-        romantic
-    }
-} # Otto had no heir in 1836
-
-GRE_josef_ludwig_von_armansperg = { # Josef Ludwig von Armansperg
-    first_name = "Josef_Ludwig"
-    last_name = von_Armansperg
-    female = no
-    historical = yes
-    birth_date = 1787.2.28
-    culture = cu:south_german
-    religion = rel:catholic
-    ig_leader = yes
-    interest_group = ig_landowners
-    ideology = ideology_moderate
-    traits = {
-        reckless
-    }
-}
-
-GRE_george_i_of_greece = { # George I of Greece
-    first_name = George
-    last_name = of_Glucksburg
-    female = no
-    historical = yes
-    dna = dna_george_i_of_greece
-    birth_date = 1845.12.24
-    culture = cu:danish
-    religion = rel:protestant
-    ruler = yes
-    interest_group = ig_armed_forces
-    ideology = ideology_reformer
-    traits = {
-        romantic
-        charismatic
-        basic_diplomat
-    }
-}
-
-GRE_ioannis_kolettis = { # Ioannis Kolettis
-    first_name = Ioannis
-    last_name = Kolettis
-    female = no
-    historical = yes
-    birth_date = 1774.01.01 # unknown, was born 1773 or 1774
-    culture = cu:greek # hellenized Aromanian
-    ig_leader = yes
-    interest_group = ig_armed_forces
-    ideology = ideology_jingoist_leader
-    traits = {
-        basic_diplomat
-        ambitious
-        charismatic
-    }
-}
-
-GRE_georgios_psyllas = { # Georgios Psyllas
-    first_name = Georgios
-    last_name = Psyllas
-    female = no
-    historical = yes
-    birth_date = 1794.01.01 # Only year known
-    culture = cu:greek
-    religion = rel:orthodox
-    ig_leader = yes
-    interest_group = ig_petty_bourgeoisie
-    ideology = ideology_liberal_leader
-    traits = {
-        master_bureaucrat
-        cautious
-        reserved
-    }
-}
-
-GRE_theophilos_kairis = { # Theophilos Kairis
-    first_name = Theophilos
-    last_name = Kairis
-    female = no
-    historical = yes
-    birth_date = 1784.09.19
-    culture = cu:greek
-    religion = rel:orthodox
-    ig_leader = yes
-    interest_group = ig_intelligentsia
-    ideology = ideology_liberal_leader
-    traits = {
-        erudite
-        pious
-    }
-}
-
-GRE_kitsos_tzavelas = { # Kitsos Tzavelas / Kiço Xhavella
-    first_name = Kitsos
-    last_name = Tzavelas
-    is_general = yes
-    female = no
-    historical = yes
-    birth_date = 1800.02.12 # Only year known
-    culture = cu:albanian # Souliot
-    religion = rel:orthodox
-    ig_leader = yes
-    interest_group = ig_rural_folk
-    ideology = ideology_traditionalist
-    traits = {
-        imperious
-        social_bandit
-        mountain_commander
-    }
-}
-
-GRE_neophytos_metaxas = { # Neophytos Metaxas, Metropolitan of Athens
-    first_name = Neophytos
-    last_name = Metaxas
-    female = no
-    historical = yes
-    birth_date = 1762.11.02
-    culture = cu:greek
-    religion = rel:orthodox
-    ig_leader = yes
-    interest_group = ig_devout
-    ideology = ideology_traditionalist
-    traits = {
-        basic_political_operator
-        tactful
-        pious
-    }
-}
-
-GRE_georgios_kountouriotis = { # Georgios Kountouriotis, Hydriote ship-owner
-    first_name = Georgios
-    last_name = Kountouriotis
-    female = no
-    historical = yes
-    birth_date = 1782.01.02 # Only year known
-    culture = cu:albanian
-    religion = rel:orthodox
-    ig_leader = yes
-    interest_group = ig_industrialists
-    ideology = ideology_moderate
-    traits = {
-        basic_entrepreneur
-        cautious
-    }
-}
-
-# Military
-
-GRE_carl_wilhelm_von_heideck = { # Carl Wilhelm von Heideck
-    is_general = yes
-    first_name = Carl_Wilhelm
-    last_name = von_Heideck
-    historical = yes
-    culture = cu:south_german
-    ideology = ideology_authoritarian
-    female = no
-    religion = rel:catholic
-    dna = dna_karl_wilhelm_von_heideck
-    age = 37
-    traits = {
-        romantic
-        literary
-        resupply_commander
-    }
-}
-
-GRE_antonios_kriezis = { # Antonios Kriezis
-    is_admiral = yes
-    first_name = Antonios
-    last_name = Kriezis
-    historical = yes
-    religion = rel:orthodox
-    ideology = ideology_royalist
-    culture = cu:greek # Arvanite
-    birth_date = 1796.4.4 # Only year known
-    traits = {
-        basic_naval_commander
-        basic_political_operator
-        compliant
-    }
-}
-
-GRE_general_kolokotronis = { # Ioannis Kolokotronis
+﻿TRY_REPLACE:GRE_general_kolokotronis = { # Ioannis Kolokotronis
     first_name = Ioannis
     last_name = Kolokotronis
     historical = yes
@@ -235,7 +36,7 @@ GRE_general_kolokotronis = { # Ioannis Kolokotronis
     }
 }
 
-GRE_general_kallergis = { # Dimitrios Kallergis
+TRY_REPLACE:GRE_general_kallergis = { # Dimitrios Kallergis
     first_name = Dimitrios
     last_name = Kallergis
     historical = yes
@@ -271,7 +72,7 @@ GRE_general_kallergis = { # Dimitrios Kallergis
 
 # Agitators
 
-agitator_ion_dragoumis = { # Ion Dragoumis
+TRY_REPLACE:agitator_ion_dragoumis = { # Ion Dragoumis
     first_name = Ion
     last_name = Dragoumis
     historical = yes
@@ -326,7 +127,7 @@ agitator_ion_dragoumis = { # Ion Dragoumis
 
 # Generated IG Leaders
 # ARMED FORCES
-GRE_ioannis_makriyannis = { # Greek military officer and politician who joined Greek struggle for independence, achieving the rank of general and leading his men to notable victories, being a public figure after the independence.
+TRY_REPLACE:GRE_ioannis_makriyannis = { # Greek military officer and politician who joined Greek struggle for independence, achieving the rank of general and leading his men to notable victories, being a public figure after the independence.
     first_name = Ioannis
     last_name = Makriyannis
     historical = yes
@@ -366,7 +167,7 @@ GRE_ioannis_makriyannis = { # Greek military officer and politician who joined G
 }
 
 # DEVOUT
-GRE_anastasios_nectarios_kephalas = { # Metropolitan of Pentapolis and Wonderworker of Aegina, is one of the most renowned Greek saints, venerated both in the Eastern Orthodox Church and the Eastern Catholic Churches.
+TRY_REPLACE:GRE_anastasios_nectarios_kephalas = { # Metropolitan of Pentapolis and Wonderworker of Aegina, is one of the most renowned Greek saints, venerated both in the Eastern Orthodox Church and the Eastern Catholic Churches.
     first_name = Anastasios_Nectarios
     last_name = Kephalas
     historical = yes
@@ -406,7 +207,7 @@ GRE_anastasios_nectarios_kephalas = { # Metropolitan of Pentapolis and Wonderwor
 }
 
 # INDUSTRIALISTS
-GRE_andreas_syggros = { # Famous Greek banker, co-founder of the Bank of Constantinople.
+TRY_REPLACE:GRE_andreas_syggros = { # Famous Greek banker, co-founder of the Bank of Constantinople.
     first_name = Andreas
     last_name = Syggros
     historical = yes
@@ -446,7 +247,7 @@ GRE_andreas_syggros = { # Famous Greek banker, co-founder of the Bank of Constan
 }
 
 # INTELLIGENTSIA
-GRE_constantine_paparrigopoulos = { # Greek historian, who is considered the founder of modern Greek historiography. He is the founder of the concept of historical continuity of Greece from antiquity to the present.
+TRY_REPLACE:GRE_constantine_paparrigopoulos = { # Greek historian, who is considered the founder of modern Greek historiography. He is the founder of the concept of historical continuity of Greece from antiquity to the present.
     first_name = Constantine
     last_name = Paparrigopoulos
     historical = yes
@@ -485,7 +286,7 @@ GRE_constantine_paparrigopoulos = { # Greek historian, who is considered the fou
 }
 
 # LANDOWNERS
-GRE_petrobey_mavromichalis = { # Greek general and politician who played a major role in the lead-up and during the Greek War of Independence. Before the war, he served as the Bey of Mani.
+TRY_REPLACE:GRE_petrobey_mavromichalis = { # Greek general and politician who played a major role in the lead-up and during the Greek War of Independence. Before the war, he served as the Bey of Mani.
     first_name = Petrobey
     last_name = Mavromichalis
     historical = yes
@@ -525,7 +326,7 @@ GRE_petrobey_mavromichalis = { # Greek general and politician who played a major
 }
 
 # PETITE BOURGEOISIE
-GRE_anastasios_polyzoidis = { # Greek politician and judicial official
+TRY_REPLACE:GRE_anastasios_polyzoidis = { # Greek politician and judicial official
     first_name = Anastasios
     last_name = Polyzoidis
     historical = yes
@@ -565,7 +366,7 @@ GRE_anastasios_polyzoidis = { # Greek politician and judicial official
 }
 
 # RURAL FOLK
-GRE_anastasios_londos = { # Greek politician, mayor of Aigio and senator of the Kingdom of Greece
+TRY_REPLACE:GRE_anastasios_londos = { # Greek politician, mayor of Aigio and senator of the Kingdom of Greece
     first_name = Anastasios
     last_name = Londos
     historical = yes
@@ -604,7 +405,7 @@ GRE_anastasios_londos = { # Greek politician, mayor of Aigio and senator of the 
 }
 
 # TRADE UNION
-GRE_stavros_kallergis = { # Greek revolutionary and socialist. He is known for organizing the first celebration of the First of May in Greece, in 1893, and being active in various socialist groups in fin de siècle Greece. 
+TRY_REPLACE:GRE_stavros_kallergis = { # Greek revolutionary and socialist. He is known for organizing the first celebration of the First of May in Greece, in 1893, and being active in various socialist groups in fin de siècle Greece. 
     first_name = Stavros
     last_name = Kallergis
     historical = yes
@@ -644,7 +445,7 @@ GRE_stavros_kallergis = { # Greek revolutionary and socialist. He is known for o
 }
 
 # AGITATORS
-GRE_alexandros_koumoundouros = { # He was a political personality famous for his work towards national progress, despite him having been in office during a very unsettled period of Greek history.
+TRY_REPLACE:GRE_alexandros_koumoundouros = { # He was a political personality famous for his work towards national progress, despite him having been in office during a very unsettled period of Greek history.
 	first_name = Alexandros
 	last_name = Koumoundouros
 	historical = yes
@@ -684,7 +485,7 @@ GRE_alexandros_koumoundouros = { # He was a political personality famous for his
 }
 
 # GENERALS
-GRE_general_panagiotis_danglis = { # Greek military officer and politician.
+TRY_REPLACE:GRE_general_panagiotis_danglis = { # Greek military officer and politician.
     first_name = Panagiotis
     last_name = Danglis
     historical = yes
@@ -722,7 +523,7 @@ GRE_general_panagiotis_danglis = { # Greek military officer and politician.
 	}
 }
 
-GRE_general_anastasios_papoulas = { # Greek general, most notable as the Greek commander-in-chief during most of the Greco-Turkish War of 1919–22.
+TRY_REPLACE:GRE_general_anastasios_papoulas = { # Greek general, most notable as the Greek commander-in-chief during most of the Greco-Turkish War of 1919–22.
     first_name = Anastasios
     last_name = Papoulas
     historical = yes
@@ -761,7 +562,7 @@ GRE_general_anastasios_papoulas = { # Greek general, most notable as the Greek c
 }
 
 # ADMIRALS
-GRE_admiral_konstantinos_kanaris = { # Greek statesman, admiral, and a hero of the Greek War of Independence.
+TRY_REPLACE:GRE_admiral_konstantinos_kanaris = { # Greek statesman, admiral, and a hero of the Greek War of Independence.
     first_name = Konstantinos
     last_name = Kanaris
     historical = yes
@@ -799,7 +600,7 @@ GRE_admiral_konstantinos_kanaris = { # Greek statesman, admiral, and a hero of t
 	}
 }
 
-GRE_admiral_leonidas_palaskas = { # Distinguished Greek naval officer who served in the French and in the Greek navies, as well as publishing a number of scientific studies.
+TRY_REPLACE:GRE_admiral_leonidas_palaskas = { # Distinguished Greek naval officer who served in the French and in the Greek navies, as well as publishing a number of scientific studies.
     first_name = Leonidas
     last_name = Palaskas
     historical = yes

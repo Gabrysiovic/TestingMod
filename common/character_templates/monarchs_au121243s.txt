@@ -11,9 +11,9 @@ is_aus_maximilian_01 = {
 	birth_date = 1832.7.6
 	dna = dna_aus_maximilian_01
 	interest_group = ig_intelligentsia
-	ideology = ideology_humanitarian_royalist
+	ideology = ideology_democrat
 	traits = {
-		dockyard_master
+		tactful
 		charismatic
 	}
 	on_created = {
