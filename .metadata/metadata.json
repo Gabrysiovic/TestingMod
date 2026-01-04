@@ -1,12 +1,14 @@
 {
-  "name" : "Testingmod",
-	"id" : "",
-  "version" : "",
-  "supported_game_version" : "",
-  "short_description" : "",
-  "tags" : [],
-  "relationships" : [],
-  "game_custom_data" : {
-    "multiplayer_synchronized" : true
+  "name": "Testingmod",
+  "id": "",
+  "version": "",
+  "supported_game_version": "1.12",
+  "short_description": "",
+  "tags": [
+    "1.12"
+  ],
+  "relationships": [],
+  "game_custom_data": {
+    "multiplayer_synchronized": true
   }
 }

@@ -8,6 +8,7 @@ headlines_acw_begin_csa = {
 	days = 28
 	color = neutral
 }
+
 headlines_acw_begin_fsa = {
 	type = country
 	texture = "gfx/interface/icons/notification_icons/news.dds"
@@ -16,6 +17,7 @@ headlines_acw_begin_fsa = {
 	days = 28
 	color = neutral
 }
+
 #ACW Ends
 headlines_acw_end_slaver = {
 	type = country
@@ -25,6 +27,7 @@ headlines_acw_end_slaver = {
 	days = 28
 	color = neutral
 }
+
 headlines_acw_end_emancipation = {
 	type = country
 	texture = "gfx/interface/icons/notification_icons/news.dds"
@@ -33,6 +36,7 @@ headlines_acw_end_emancipation = {
 	days = 28
 	color = neutral
 }
+
 headlines_acw_end_stalemate = {
 	type = country
 	texture = "gfx/interface/icons/notification_icons/news.dds"
@@ -41,6 +45,7 @@ headlines_acw_end_stalemate = {
 	days = 28
 	color = neutral
 }
+
 #Heavenly Kingdom Appears
 headlines_taiping_appears = {
 	type = country
@@ -50,6 +55,7 @@ headlines_taiping_appears = {
 	days = 28
 	color = neutral
 }
+
 #Heavenly Kingdom Wins
 headlines_taiping_victory = {
 	type = country
@@ -59,6 +65,7 @@ headlines_taiping_victory = {
 	days = 28
 	color = neutral
 }
+
 #Heavenly Kingdom Defeated
 headlines_taiping_defeat = {
 	type = country
@@ -68,6 +75,7 @@ headlines_taiping_defeat = {
 	days = 28
 	color = neutral
 }
+
 #Sepoy Mutiny
 headlines_sepoy_mutiny = {
 	type = country
@@ -77,6 +85,7 @@ headlines_sepoy_mutiny = {
 	days = 28
 	color = neutral
 }
+
 #Sepoy Mutiny Success
 headlines_sepoy_mutiny_success = {
 	type = country
@@ -86,6 +95,7 @@ headlines_sepoy_mutiny_success = {
 	days = 28
 	color = neutral
 }
+
 #Sepoy Mutiny Failure
 headlines_sepoy_mutiny_crushed = {
 	type = country
@@ -136,6 +146,7 @@ headlines_uca_collapse = {
 	days = 28
 	color = neutral
 }
+
 #Grand Collapse
 headlines_grand_collapse = {
 	type = country
@@ -145,6 +156,7 @@ headlines_grand_collapse = {
 	days = 28
 	color = neutral
 }
+
 ##Formations
 #NGF Formed
 headlines_ngf_formed = {
@@ -215,6 +227,7 @@ headlines_yugoslavia_formed = {
 	days = 28
 	color = neutral
 }
+
 #India Formed
 headlines_india_formed = {
 	type = country
@@ -224,6 +237,7 @@ headlines_india_formed = {
 	days = 28
 	color = neutral
 }
+
 #USGA Formed
 headlines_usga_formed = {
 	type = country
@@ -233,6 +247,7 @@ headlines_usga_formed = {
 	days = 28
 	color = neutral
 }
+
 #Iberia Formed
 headlines_iberia_formed = {
 	type = country
@@ -242,6 +257,7 @@ headlines_iberia_formed = {
 	days = 28
 	color = neutral
 }
+
 #Iberia Formed - Esperanto
 headlines_iberia_esperanto_formed = {
 	type = country
@@ -251,6 +267,7 @@ headlines_iberia_esperanto_formed = {
 	days = 28
 	color = neutral
 }
+
 ##Regime Changes
 #BEI into Raj
 headlines_british_raj = {
@@ -261,6 +278,7 @@ headlines_british_raj = {
 	days = 28
 	color = neutral
 }
+
 #Meiji Restoration
 headlines_japan_restoration = {
 	type = country
@@ -270,6 +288,7 @@ headlines_japan_restoration = {
 	days = 28
 	color = neutral
 }
+
 #British Republic
 headlines_british_republic = {
 	type = country
@@ -279,6 +298,7 @@ headlines_british_republic = {
 	days = 28
 	color = neutral
 }
+
 #British Council Republic
 headlines_british_council_republic = {
 	type = country
@@ -288,6 +308,7 @@ headlines_british_council_republic = {
 	days = 28
 	color = neutral
 }
+
 #Coronation of Victoria
 headlines_victoria_coronation = {
 	type = country
@@ -297,6 +318,7 @@ headlines_victoria_coronation = {
 	days = 28
 	color = neutral
 }
+
 #Funeral of Victoria
 headlines_victoria_funeral = {
 	type = country
@@ -306,6 +328,7 @@ headlines_victoria_funeral = {
 	days = 28
 	color = neutral
 }
+
 #French Commune
 headlines_french_commune = {
 	type = country
@@ -315,6 +338,7 @@ headlines_french_commune = {
 	days = 28
 	color = neutral
 }
+
 #French Legitimists Restored
 headlines_french_legitimist = {
 	type = country
@@ -324,6 +348,7 @@ headlines_french_legitimist = {
 	days = 28
 	color = neutral
 }
+
 #French Monarchy Restored (post-republic)
 headlines_french_monarchy_returns = {
 	type = country
@@ -333,6 +358,7 @@ headlines_french_monarchy_returns = {
 	days = 28
 	color = neutral
 }
+
 #French Republic Restored
 headlines_french_republic = {
 	type = country
@@ -342,6 +368,7 @@ headlines_french_republic = {
 	days = 28
 	color = neutral
 }
+
 #French Empire Restored
 headlines_french_empire = {
 	type = country
@@ -351,6 +378,7 @@ headlines_french_empire = {
 	days = 28
 	color = neutral
 }
+
 #Communist Germany
 headlines_communist_germany = {
 	type = country
@@ -360,6 +388,7 @@ headlines_communist_germany = {
 	days = 28
 	color = neutral
 }
+
 #Communist US
 headlines_communist_usa = {
 	type = country
@@ -369,6 +398,7 @@ headlines_communist_usa = {
 	days = 28
 	color = neutral
 }
+
 #Monarchy US
 headlines_monarchy_usa = {
 	type = country
@@ -378,6 +408,7 @@ headlines_monarchy_usa = {
 	days = 28
 	color = neutral
 }
+
 #Technocracy US
 headlines_technocracy_usa = {
 	type = country
@@ -387,6 +418,7 @@ headlines_technocracy_usa = {
 	days = 28
 	color = neutral
 }
+
 #Tricolors over Rome
 headlines_roman_republic = {
 	type = country
@@ -396,6 +428,7 @@ headlines_roman_republic = {
 	days = 28
 	color = neutral
 }
+
 #Austria-Hungary Dual Monarchy
 headlines_austria_hungary = {
 	type = country
@@ -405,6 +438,7 @@ headlines_austria_hungary = {
 	days = 28
 	color = neutral
 }
+
 #Austria Triple Monarchy
 headlines_austria_triple = {
 	type = country
@@ -414,6 +448,7 @@ headlines_austria_triple = {
 	days = 28
 	color = neutral
 }
+
 #Democratic Russia
 headlines_democratic_russia = {
 	type = country
@@ -423,6 +458,7 @@ headlines_democratic_russia = {
 	days = 28
 	color = neutral
 }
+
 #Soviet Russia
 headlines_soviet_russia = {
 	type = country
@@ -432,6 +468,7 @@ headlines_soviet_russia = {
 	days = 28
 	color = neutral
 }
+
 #Brazil President Pedro
 headlines_pedro_president = {
 	type = country
@@ -441,6 +478,7 @@ headlines_pedro_president = {
 	days = 28
 	color = neutral
 }
+
 #Brazil Pedro Dies
 headlines_pedro_death = {
 	type = country
@@ -450,6 +488,7 @@ headlines_pedro_death = {
 	days = 28
 	color = neutral
 }
+
 #Carlist Spain
 headlines_carlist_victory = {
 	type = country
@@ -459,6 +498,7 @@ headlines_carlist_victory = {
 	days = 28
 	color = neutral
 }
+
 #Independent Cuba
 headlines_cuba_independent = {
 	type = country
@@ -468,6 +508,7 @@ headlines_cuba_independent = {
 	days = 28
 	color = neutral
 }
+
 #American Cuba
 headlines_cuba_american = {
 	type = country
@@ -477,6 +518,7 @@ headlines_cuba_american = {
 	days = 28
 	color = neutral
 }
+
 ##Constructions
 #Suez Canal Built
 headlines_suez_canal = {
@@ -487,6 +529,7 @@ headlines_suez_canal = {
 	days = 28
 	color = neutral
 }
+
 #Panama Canal Built
 headlines_panama_canal = {
 	type = country
@@ -496,6 +539,7 @@ headlines_panama_canal = {
 	days = 28
 	color = neutral
 }
+
 #Cristo Redentor
 headlines_cristo_redentor = {
 	type = country
@@ -576,6 +620,7 @@ headlines_billion_gdp = {
 	days = 28
 	color = neutral
 }
+
 #Tanzimat Failure
 headlines_tanzimat_fail = {
 	type = country
@@ -595,6 +640,7 @@ headlines_french_algeria = {
 	days = 28
 	color = neutral
 }
+
 #South Pole Reached
 headlines_south_pole = {
 	type = country
@@ -604,6 +650,7 @@ headlines_south_pole = {
 	days = 28
 	color = neutral
 }
+
 #Reconquista
 headlines_reconquista = {
 	type = country
@@ -624,6 +671,7 @@ headlines_gp_war = {
 	days = 28
 	color = neutral
 }
+
 #Major Power Bankrupt
 headlines_notable_bankrupt = {
 	type = country
@@ -633,6 +681,7 @@ headlines_notable_bankrupt = {
 	days = 28
 	color = neutral
 }
+
 #First State Atheism
 headlines_state_atheism = {
 	type = country
@@ -642,8 +691,8 @@ headlines_state_atheism = {
 	days = 28
 	color = neutral
 }
-#Grand Exhibition
 
+#Grand Exhibition
 #London Conference: Favor Belgium
 headlines_london_conference_belgium = {
 	type = country
@@ -653,6 +702,7 @@ headlines_london_conference_belgium = {
 	days = 28
 	color = neutral
 }
+
 #London Conference: Favor Netherlands
 headlines_london_conference_netherlands = {
 	type = country
@@ -662,6 +712,7 @@ headlines_london_conference_netherlands = {
 	days = 28
 	color = neutral
 }
+
 #London Conference: Twenty-Four Points
 headlines_london_conference_compromise = {
 	type = country
@@ -671,6 +722,7 @@ headlines_london_conference_compromise = {
 	days = 28
 	color = neutral
 }
+
 #London Conference: Luxembourg Annexed
 headlines_london_conference_luxembourg = {
 	type = country
@@ -680,8 +732,19 @@ headlines_london_conference_luxembourg = {
 	days = 28
 	color = neutral
 }
+
 #London Conference failure
 headlines_london_conference_failure = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_minor_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+
+#Muken incident -Akiko
+headlines_mukden = {
 	type = country
 	texture = "gfx/interface/icons/notification_icons/news.dds"
 	group = "headlines_minor_group"

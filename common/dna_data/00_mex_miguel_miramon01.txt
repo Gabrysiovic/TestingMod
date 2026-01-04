@@ -1,4 +1,4 @@
-﻿dna_mex_Miguel_Miramon01 = {
+﻿dna_mex_miguel_miramon01 = {
 	portrait_info = {
 		genes = {
 			hair_color = {

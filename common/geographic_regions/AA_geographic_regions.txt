@@ -1,0 +1,21 @@
+﻿geographic_region_korean_peninsula = {
+	short_key = "korean_peninsula"
+	state_regions = {
+		STATE_YANGHO
+		STATE_SARIWON
+		STATE_PYONGYANG
+		STATE_BUSAN
+		STATE_SEOUL
+	}
+}
+
+geographic_region_manchuria = {
+	short_key = "manchuria"
+	state_regions = {
+		STATE_SOUTHERN_MANCHURIA
+		STATE_NORTHERN_MANCHURIA
+		STATE_OUTER_MANCHURIA
+		STATE_SHENGJING
+		STATE_AMUR
+	}
+}

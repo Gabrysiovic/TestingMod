@@ -1,0 +1,27 @@
+﻿Mexico_maximilian_decision = {
+	is_shown = {
+		exists = c:MEX
+		this = c:MEX
+		NOT = {
+			has_variable = mex_mornarchy
+		}
+	}
+	possible = {
+		this = c:MEX
+		has_law = law_type:law_monarchy
+	}
+	when_taken = {
+		set_variable = mex_mornarchy
+		create_character = {
+			template = is_aus_maximilian_01
+			ruler = yes
+		}
+		create_character = {
+			template = is_aus_karl_ludwig_01
+			heir = yes
+		}
+	}
+	ai_chance = {
+		value = 1
+	}
+}

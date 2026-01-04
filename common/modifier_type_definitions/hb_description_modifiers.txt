@@ -1,9 +1,0 @@
-﻿#Place to put any future toolip modifiers
-country_hb_tech_spread_bool = {
-	decimals = 1
-	color = good
-	boolean = yes
-	game_data = {
-		ai_value = 0
-	}
-}

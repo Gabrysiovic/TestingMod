@@ -1,11 +1,11 @@
-﻿TRY_REPLACE:usa_joshua_norton_character_template = {
-    first_name = Joshua
+﻿REPLACE:usa_joshua_norton_character_template = {
+	first_name = Joshua
 	last_name = Norton
 	historical = yes
 	culture = cu:british
 	religion = rel:protestant
 	female = no
-    is_agitator = yes
+	is_agitator = yes
 	interest_group = ig_petty_bourgeoisie
 	ideology = ideology_royalist
 	birth_date = 1818.2.4

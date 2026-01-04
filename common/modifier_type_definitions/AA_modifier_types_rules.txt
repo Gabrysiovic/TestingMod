@@ -1,0 +1,11 @@
+﻿###Place to put any future toolip modifiers
+#Slipsream explanation -Akiko
+AA_slipstream_bool = {
+	script_only = yes
+	decimals = 1
+	color = good
+	boolean = yes
+	game_data = {
+		ai_value = 0
+	}
+}

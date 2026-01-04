@@ -1,0 +1,523 @@
+﻿#Created by Akiko, finished as of 2.01.26
+on_monthly_pulse_country = {
+	on_actions = {
+		AA_slipstream_pulse
+		AA_events
+	}
+}
+
+##########
+# events #
+##########
+AA_events = {
+	events = {
+		AA_slipstream_event.1		#enables slipstream -Akiko
+		bengal_fix.1
+		AA_apocalypse.1
+	}
+}
+
+#####################
+# slipstream system #
+#####################
+AA_slipstream_pulse = {
+	trigger = {
+		has_variable = AA_slipstream_active
+	}
+	#separate tracking of progress for variable modifiers
+	on_actions = {
+		AA_pro_slipstream_check
+		AA_mil_slipstream_check
+		AA_soc_slipstream_check
+	}
+}
+
+#production tech tier check
+AA_pro_slipstream_check = {
+	effect = {
+		#removes it first, as it can't be overwriten
+		remove_modifier = AA_pro_slipstream
+		#subjects are excluded from slipstream as they can be boosted by their overlord
+		if = {
+			limit = {
+				is_subject = yes
+			}
+		}
+		#Tier 1
+		else_if = {
+			limit = {
+				#these techs are used to gate modifiers by checking the first one of the next tier
+				NOR = {
+					has_technology_researched = intensive_agriculture
+					has_technology_researched = nitroglycerin
+					has_technology_researched = bessemer_process
+					has_technology_researched = atmospheric_engine
+					has_technology_researched = mechanical_tools
+					has_technology_researched = fractional_distillation
+					has_technology_researched = crystal_glass
+					has_technology_researched = canneries
+				}
+			}
+			#separate modifiers based on rank
+			if = {
+				limit = {
+					country_rank = rank_value:great_power
+				}
+				add_modifier = {
+					name = AA_pro_slipstream
+					multiplier = 0.5
+					is_decaying = no
+				}
+			}
+			else_if = {
+				limit = {
+					country_rank = rank_value:major_power
+				}
+				add_modifier = {
+					name = AA_pro_slipstream
+					multiplier = 0.75
+					is_decaying = no
+				}
+			}
+			else = {
+				add_modifier = {
+					name = AA_pro_slipstream
+					multiplier = 1
+					is_decaying = no
+				}
+			}
+		}
+		#Tier 2
+		else_if = {
+			limit = {
+				NOR = {
+					has_technology_researched = improved_fertilizer
+					has_technology_researched = steam_donkey
+					has_technology_researched = dynamite
+					has_technology_researched = open_hearth_process
+					has_technology_researched = reinforced_concrete
+					has_technology_researched = rotary_valve_engine
+					has_technology_researched = steel_railway_cars
+					has_technology_researched = shift_work
+					has_technology_researched = vacuum_canning
+					has_technology_researched = rubber_mastication
+				}
+			}
+			if = {
+				limit = {
+					country_rank = rank_value:great_power
+				}
+				add_modifier = {
+					name = AA_pro_slipstream
+					multiplier = 0.25
+					is_decaying = no
+				}
+			}
+			else_if = {
+				limit = {
+					country_rank = rank_value:major_power
+				}
+				add_modifier = {
+					name = AA_pro_slipstream
+					multiplier = 0.5
+					is_decaying = no
+				}
+			}
+			else = {
+				add_modifier = {
+					name = AA_pro_slipstream
+					multiplier = 0.75
+					is_decaying = no
+				}
+			}
+		}
+		#great powers are exluded as they no longer have the modifier
+		else_if = {
+			limit = {
+				country_rank = rank_value:great_power
+			}
+		}
+		#Tier 3
+		else_if = {
+			limit = {
+				NOR = {
+					has_technology_researched = nitrogen_fixation
+					has_technology_researched = mechanized_farming
+					has_technology_researched = electric_arc_process
+					has_technology_researched = plastics
+					has_technology_researched = pneumatic_tools
+					has_technology_researched = electrical_capacitors
+					has_technology_researched = steam_turbine
+					has_technology_researched = combustion_engine
+					has_technology_researched = telephone
+					has_technology_researched = conveyors
+					has_technology_researched = art_silk
+					has_technology_researched = automatic_bottle_blowers
+				}
+			}
+			if = {
+				limit = {
+					country_rank = rank_value:major_power
+				}
+				add_modifier = {
+					name = AA_pro_slipstream
+					multiplier = 0.25
+					is_decaying = no
+				}
+			}
+			else = {
+				add_modifier = {
+					name = AA_pro_slipstream
+					multiplier = 0.5
+					is_decaying = no
+				}
+			}
+		}
+		#same here for majors
+		else_if = {
+			limit = {
+				country_rank = rank_value:major_power
+			}
+		}
+		#Tier 4
+		else = {
+			limit = {
+				NOR = {
+					has_technology_researched = arc_welding
+					has_technology_researched = oil_turbine
+					has_technology_researched = compression_ignition
+					has_technology_researched = flash_freezing
+					has_technology_researched = dough_rollers
+				}
+			}
+			add_modifier = {
+				name = AA_pro_slipstream
+				multiplier = 0.25
+				is_decaying = no
+			}
+		}
+	}
+}
+
+#military tech tier check
+AA_mil_slipstream_check = {
+	effect = {
+		remove_modifier = AA_mil_slipstream
+		if = {
+			limit = {
+				is_subject = yes
+			}
+		}
+		#Tier 1
+		else_if = {
+			limit = {
+				NOR = {
+					has_technology_researched = hydraulic_cranes
+					has_technology_researched = screw_frigate
+					has_technology_researched = power_of_the_purse
+					has_technology_researched = general_staff
+					has_technology_researched = percussion_cap
+					has_technology_researched = logistics
+					has_technology_researched = field_works
+					has_technology_researched = shell_gun
+				}
+			}
+			if = {
+				limit = {
+					country_rank = rank_value:great_power
+				}
+				add_modifier = {
+					name = AA_mil_slipstream
+					multiplier = 0.5
+					is_decaying = no
+				}
+			}
+			else_if = {
+				limit = {
+					country_rank = rank_value:major_power
+				}
+				add_modifier = {
+					name = AA_mil_slipstream
+					multiplier = 0.75
+					is_decaying = no
+				}
+			}
+			else = {
+				add_modifier = {
+					name = AA_mil_slipstream
+					multiplier = 1
+					is_decaying = no
+				}
+			}
+		}
+		#Tier 2
+		else_if = {
+			limit = {
+				NOR = {
+					has_technology_researched = gantry_cranes
+					has_technology_researched = ironclad_tech
+					has_technology_researched = jeune_ecole
+					has_technology_researched = repeaters
+					has_technology_researched = modern_nursing
+					has_technology_researched = enlistment_offices
+					has_technology_researched = breech_loading_artillery
+					has_technology_researched = electric_telegraph
+				}
+			}
+			if = {
+				limit = {
+					country_rank = rank_value:great_power
+				}
+				add_modifier = {
+					name = AA_mil_slipstream
+					multiplier = 0.25
+					is_decaying = no
+				}
+			}
+			else_if = {
+				limit = {
+					country_rank = rank_value:major_power
+				}
+				add_modifier = {
+					name = AA_mil_slipstream
+					multiplier = 0.5
+					is_decaying = no
+				}
+			}
+			else = {
+				add_modifier = {
+					name = AA_mil_slipstream
+					multiplier = 0.75
+					is_decaying = no
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				country_rank = rank_value:great_power
+			}
+		}
+		#Tier 3
+		else_if = {
+			limit = {
+				NAND = {
+					has_technology_researched = concrete_dockyards
+					has_technology_researched = submarine
+					has_technology_researched = destroyer
+					has_technology_researched = landing_craft
+					has_technology_researched = bolt_action_rifles
+					has_technology_researched = wargaming
+					has_technology_researched = trench_works
+					has_technology_researched = war_propaganda
+				}
+			}
+			if = {
+				limit = {
+					country_rank = rank_value:major_power
+				}
+				add_modifier = {
+					name = AA_mil_slipstream
+					multiplier = 0.25
+					is_decaying = no
+				}
+			}
+			else = {
+				add_modifier = {
+					name = AA_mil_slipstream
+					multiplier = 0.5
+					is_decaying = no
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				country_rank = rank_value:major_power
+			}
+		}
+		#Tier 4
+		else = {
+			limit = {
+				NOR = {
+					has_technology_researched = carrier_tech
+					has_technology_researched = battleship_tech
+					has_technology_researched = stormtroopers
+					has_technology_researched = chemical_warfare
+					has_technology_researched = flamethrowers
+					has_technology_researched = nco_training
+					has_technology_researched = concrete_fortifications
+					has_technology_researched = military_aviation
+				}
+			}
+			add_modifier = {
+				name = AA_mil_slipstream
+				multiplier = 0.25
+				is_decaying = no
+			}
+		}
+	}
+}
+
+#society tech tier check
+AA_soc_slipstream_check = {
+	effect = {
+		remove_modifier = AA_soc_slipstream
+		if = {
+			limit = {
+				is_subject = yes
+			}
+		}
+		#Tier 1
+		else_if = {
+			limit = {
+				NOR = {
+					has_technology_researched = modern_sewerage
+					has_technology_researched = corporate_charters
+					has_technology_researched = postal_savings
+					has_technology_researched = central_banking
+					has_technology_researched = central_archives
+					has_technology_researched = nationalism
+					has_technology_researched = egalitarianism
+					has_technology_researched = pharmaceuticals
+					has_technology_researched = realism
+					has_technology_researched = dialectics
+					has_technology_researched = psychiatry
+				}
+			}
+			if = {
+				limit = {
+					country_rank = rank_value:great_power
+				}
+				add_modifier = {
+					name = AA_soc_slipstream
+					multiplier = 0.5
+					is_decaying = no
+				}
+			}
+			else_if = {
+				limit = {
+					country_rank = rank_value:major_power
+				}
+				add_modifier = {
+					name = AA_soc_slipstream
+					multiplier = 0.75
+					is_decaying = no
+				}
+			}
+			else = {
+				add_modifier = {
+					name = AA_soc_slipstream
+					multiplier = 1
+					is_decaying = no
+				}
+			}
+		}
+		#Tier 2
+		else_if = {
+			limit = {
+				NOR = {
+					has_technology_researched = steel_frame_buildings
+					has_technology_researched = investment_banks
+					has_technology_researched = identification_documents
+					has_technology_researched = pan-nationalism
+					has_technology_researched = civilizing_mission
+					has_technology_researched = anarchism
+					has_technology_researched = corporatism
+					has_technology_researched = camera
+					has_technology_researched = socialism
+					has_technology_researched = philosophical_pragmatism
+				}
+			}
+			if = {
+				limit = {
+					country_rank = rank_value:great_power
+				}
+				add_modifier = {
+					name = AA_soc_slipstream
+					multiplier = 0.25
+					is_decaying = no
+				}
+			}
+			else_if = {
+				limit = {
+					country_rank = rank_value:major_power
+				}
+				add_modifier = {
+					name = AA_soc_slipstream
+					multiplier = 0.5
+					is_decaying = no
+				}
+			}
+			else = {
+				add_modifier = {
+					name = AA_soc_slipstream
+					multiplier = 0.75
+					is_decaying = no
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				country_rank = rank_value:great_power
+			}
+		}
+		#Tier 3
+		else_if = {
+			limit = {
+				NOR = {
+					has_technology_researched = elevator
+					has_technology_researched = zeppelins
+					has_technology_researched = corporate_management
+					has_technology_researched = international_exchange_standards
+					has_technology_researched = central_planning
+					has_technology_researched = multilateral_alliances
+					has_technology_researched = malaria_prevention
+					has_technology_researched = political_agitation
+					has_technology_researched = film
+					has_technology_researched = psychoanalysis
+				}
+			}
+			if = {
+				limit = {
+					country_rank = rank_value:major_power
+				}
+				add_modifier = {
+					name = AA_soc_slipstream
+					multiplier = 0.25
+					is_decaying = no
+				}
+			}
+			else = {
+				add_modifier = {
+					name = AA_soc_slipstream
+					multiplier = 0.5
+					is_decaying = no
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				country_rank = rank_value:major_power
+			}
+		}
+		#Tier 4
+		else_if = {
+			limit = {
+				NOR = {
+					has_technology_researched = paved_roads
+					has_technology_researched = macroeconomics
+					has_technology_researched = modern_financial_instruments
+					has_technology_researched = mass_surveillance
+					has_technology_researched = antibiotics
+					has_technology_researched = mass_propaganda
+					has_technology_researched = behaviorism
+					has_technology_researched = analytical_philosophy
+				}
+			}
+			add_modifier = {
+				name = AA_soc_slipstream
+				multiplier = 0.25
+				is_decaying = no
+			}
+		}
+	}
+}

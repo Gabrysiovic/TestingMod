@@ -245,8 +245,8 @@ types topbar_components
 					spacing = 2
 					tooltip = "[Country.GetInfamyDesc]"
 					using = tooltip_below
-					onmousehierarchyenter = "[SelectMapModeByKey('mm_infamy')]"
-					onmousehierarchyleave = "[UnforceMapMode]"
+					onmousehierarchyenter = "[SetTempMapModeByKey('mm_infamy')]"
+					onmousehierarchyleave = "[RemoveTempMapMode]"
 					alwaystransparent = no
 
 					icon = {
@@ -266,17 +266,19 @@ types topbar_components
 				}
 
 				# Legitimacy
-				flowcontainer = {
-					button = {
-						using = glow_button	
-						name = "legitimacy"
+				button = {
+					name = "legitimacy"
+					using = glow_button	
+					size = { 90 28 }
+					onclick = "[InformationPanelBar.OpenPanelTab('politics', 'interest_groups')]"
+					
+					flowcontainer = {
 						minimumsize = { 90 28 }
 						maximumsize = { 90 28 }
 						spacing = 2
 						datacontext = "[Country.GetGovernmentLegitimacyLevel]"
 						tooltip = "SULIUS_LEGITIMACY_LEVEL_ACTIVE_TOOLTIP"
 						using = tooltip_below
-						onclick = "[InformationPanelBar.OpenPanelTab('politics', 'interest_groups')]"
 
 						icon = {
 							size = { @secondary_icon_size @secondary_icon_size }
@@ -297,16 +299,18 @@ types topbar_components
 				}	
 
 				# Innovation - moved to primary icons to make room for convoys
-				 flowcontainer = {
-					button = {
-						using = glow_button	
-						name = "innovation"
+				 button = {
+					name = "innovation"
+					using = glow_button	
+					size = { 90 28 }
+					onclick = "[InformationPanelBar.OpenPanelCycleTabs('tech_tree', 'production|military|society')]"
+
+					flowcontainer = {
 						minimumsize = { 90 28 }
 						maximumsize = { 90 28 }
 						spacing = 2
 						tooltip = "SULIUS_RESEARCH"
 						using = tooltip_below
-						onclick = "[InformationPanelBar.OpenPanelCycleTabs('tech_tree', 'production|military|society')]"
 
 						icon = {
 							size = { @secondary_icon_size @secondary_icon_size }
