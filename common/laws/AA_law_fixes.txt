@@ -36,6 +36,7 @@ INJECT:law_state_atheism = {
 INJECT:law_mass_conscription = {
 	modifier = {
 		building_training_rate_mult = -0.5
+		unit_morale_loss_mult = 0.05
 	}
 }
 

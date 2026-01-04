@@ -1,9 +1,5 @@
 ﻿REPLACE:MEX = {
-	color = {
-		56
-		143
-		53
-	}
+	color = { 56 143 53 }   # no touching my RGB /Gabriel
 	country_type = recognized
 	#173  242  175
 	tier = empire
