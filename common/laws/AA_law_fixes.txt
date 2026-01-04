@@ -1,0 +1,50 @@
+﻿## MY law changes. No touching /Gabriel
+#########################
+# Distribution of Power #
+#########################
+#Removes the free company slot
+INJECT:law_technocracy = {
+	modifier = {
+		country_max_companies_add = -1
+	}
+}
+
+###############
+# Citizenship #
+###############
+#Adds a small birthrate bonus
+INJECT:law_ethnostate = {
+	modifier = {
+		state_birth_rate_mult = 0.05
+	}
+}
+
+####################
+# Church and State #
+####################
+#Removes the massive acceptance malus from no shared traits -Gabriel
+INJECT:law_state_atheism = {
+	modifier = {
+		country_acceptance_no_shared_religious_trait_add = 10
+	}
+}
+
+##############
+# Army Model #
+##############
+#Training rate bonus nerfed to 50%
+INJECT:law_mass_conscription = {
+	modifier = {
+		building_training_rate_mult = -0.5
+	}
+}
+
+###################
+# Economic System #
+###################
+#Government dividend efficiency buffed from 40 to 70% (Inject is additive, it's not wrong) -Akiko
+INJECT:law_command_economy = {
+	modifier = {
+		country_government_dividends_efficiency_add = 0.3
+	}
+}

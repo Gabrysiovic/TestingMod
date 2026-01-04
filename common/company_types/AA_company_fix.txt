@@ -1,0 +1,250 @@
+﻿# Compagnie du Congo pour le Commerce et l'Industrie
+TRY_REPLACE:company_ccci = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/ccci.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+	flavored_company = yes
+	building_types = {
+		building_rubber_plantation
+		building_logging_camp
+		building_iron_mine
+	}
+	extension_building_types = {
+		building_railway
+		building_livestock_ranch
+	}
+	possible = {
+		OR = {
+			any_subject_or_below = {
+				any_scope_state = {
+					region = sr:region_congo
+					any_scope_building = {
+						is_building_type = building_rubber_plantation
+						level >= 5
+					}
+				}
+			}
+			any_scope_state = {
+				region = sr:region_congo
+				any_scope_building = {
+					is_building_type = building_rubber_plantation
+					level >= 5
+				}
+			}
+		}
+	}
+	prosperity_modifier = {
+		country_prestige_mult = 0.15
+		building_group_bg_rubber_mortality_mult = 0.2
+	}
+	ai_will_do = {
+		OR = {
+			any_subject_or_below = {
+				any_scope_state = {
+					region = sr:region_congo
+				}
+			}
+			any_scope_state = {
+				region = sr:region_congo
+			}
+		}
+	}
+	ai_construction_targets = {
+		building_rubber_plantation = {
+			level = 5
+			state_trigger = {
+				region = sr:region_congo
+			}
+		}
+	}
+	ai_weight = {
+		value = 3		# Higher base value for flavored companies
+	}
+}
+
+TRY_REPLACE:company_basic_food = {
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+	category = aristocrat_owned
+	flavored_company = no
+	uses_dynamic_naming = yes
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_corporation"
+		"dynamic_company_type_conglomerate"
+		"dynamic_company_type_syndicate"
+		"dynamic_company_type_combine"
+	}
+	building_types = {
+		building_food_industry
+	}
+	extension_building_types = {
+		building_livestock_ranch
+		building_wheat_farm
+		building_millet_farm
+		building_maize_farm
+	}
+	possible_prestige_goods = {
+		prestige_good_generic_groceries
+	}
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_groceries_complete_tt
+			has_variable = prestige_good_generic_groceries_var
+		}
+	}
+	possible = {
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+				level >= 5
+			}
+		}
+	}
+	prosperity_modifier = {
+		state_standard_of_living_add = 1
+	}
+	ai_will_do = {
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+				level >= 3
+			}
+		}
+	}
+}
+
+# Arthur Guinness Son & Co. Ltd
+TRY_REPLACE:company_guinness = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/arthur_guinness_son.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+	flavored_company = yes
+	preferred_headquarters = {
+		STATE_LEINSTER
+	}
+	building_types = {
+		building_food_industry
+		building_coffee_plantation
+	}
+	extension_building_types = {
+		building_wheat_farm
+		building_rye_farm
+	}
+	possible_prestige_goods = {
+		prestige_good_generic_groceries
+	}
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_groceries_complete_tt
+			has_variable = prestige_good_generic_groceries_var
+		}
+	}
+	potential = {
+		has_interest_marker_in_region = region_north_sea_coast
+	}
+	attainable = {
+		hidden_trigger = {
+			# Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_LEINSTER
+			}
+		}
+	}
+	possible = {
+		has_technology_researched = corporate_charters
+		any_scope_state = {
+			state_region = s:STATE_LEINSTER
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+				level >= 5
+			}
+		}
+	}
+	prosperity_modifier = {
+		state_radicals_from_political_movements_mult = -0.1
+		state_radicalism_increases_violent_hostility_mult = -0.05
+		state_radicalism_increases_cultural_erasure_mult = -0.05
+		state_radicalism_increases_open_prejudice_mult = -0.05
+	}
+	ai_will_do = {
+		has_technology_researched = corporate_charters
+		any_scope_state = {
+			state_region = s:STATE_LEINSTER
+			is_incorporated = yes
+		}
+	}
+	ai_construction_targets = {
+		building_food_industry = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_LEINSTER
+			}
+		}
+	}
+	ai_weight = {
+		value = 3		# Higher base value for flavored companies
+	}
+}
+
+# Confédération générale des vignerons
+TRY_REPLACE:company_cgv = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/france_cgv.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rice.dds"
+	category = shopkeeper_owned
+	flavored_company = yes
+	preferred_headquarters = {
+		STATE_CHAMPAGNE
+	}
+	building_types = {
+		building_vineyard
+		building_tobacco_plantation
+	}
+	extension_building_types = {
+		building_food_industry
+	}
+	possible_prestige_goods = {
+		prestige_good_champagne
+	}
+	potential = {
+		OR = {
+			country_has_primary_culture = cu:french
+			country_has_primary_culture = cu:occitan
+		}
+	}
+	possible = {
+		has_technology_researched = joint_stock_companies
+		any_scope_state = {
+			state_region = s:STATE_CHAMPAGNE
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_vineyard
+				level >= 5
+			}
+		}
+	}
+	prosperity_modifier = {
+		country_prestige_mult = 0.15
+		building_vineyard_throughput_add = 0.1
+	}
+	ai_will_do = {
+		has_technology_researched = central_planning
+		any_scope_state = {
+			state_region = s:STATE_CHAMPAGNE
+			is_incorporated = yes
+		}
+	}
+	ai_construction_targets = {
+		building_vineyard = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_CHAMPAGNE
+			}
+		}
+	}
+	ai_weight = {
+		value = 3		# Higher base value for flavored companies
+	}
+}

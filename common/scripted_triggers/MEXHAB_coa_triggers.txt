@@ -1,7 +1,7 @@
 ﻿coa_democracy_trigger = {
-    NOT = {
+	NOT = {
 		OR = {
-			has_law = law_type:law_autocracy 
+			has_law = law_type:law_autocracy
 			has_law = law_type:law_elder_council
 			has_law = law_type:law_oligarchy
 		}
@@ -9,15 +9,29 @@
 }
 
 coa_socialism_trigger = {
-    has_law = law_type:law_council_republic
-    coa_autocracy_trigger = no
+	OR = {
+		AND = {
+			has_law = law_type:law_council_republic
+			coa_autocracy_trigger = no
+		}
+		any_interest_group = {
+			is_in_government = yes
+			has_party = yes
+			party = {
+				is_party_type = social_democrat_party
+			}
+		}
+	}
 }
-
 
 coa_no_NET_overlord_trigger = {
 	exists = c:NET
-	c:NET = { save_temporary_scope_as = custom_overlord }
-	NOT = { has_game_rule = no_subject_flags }
+	c:NET = {
+		save_temporary_scope_as = custom_overlord
+	}
+	NOT = {
+		has_game_rule = no_subject_flags
+	}
 	exists = scope:overlord
 	NOT = {
 		scope:overlord = {
@@ -25,7 +39,7 @@ coa_no_NET_overlord_trigger = {
 				this = scope:custom_overlord
 				any_overlord_or_above = {
 					this = scope:custom_overlord
-				} 
+				}
 			}
 		}
 	}
@@ -82,43 +96,45 @@ coa_democratic_republic_trigger = {
 	coa_republic_trigger = yes
 }
 
-coa_socialist_dictatorship_trigger = {		
+coa_socialist_dictatorship_trigger = {
 	coa_communist_trigger = yes
 	coa_autocracy_trigger = yes
 }
 
-coa_peru_bolivia_trigger = {		
+coa_peru_bolivia_trigger = {
 	owns_entire_state_region = STATE_LA_PAZ
-	owns_entire_state_region = STATE_LIMA	
+	owns_entire_state_region = STATE_LIMA
 }
 
-coa_peru_bolivia_fascist_trigger = {		
+coa_peru_bolivia_fascist_trigger = {
 	coa_fascist_trigger = yes
 	coa_peru_bolivia_trigger = yes
 }
 
-coa_peru_bolivia_republic_democratic_trigger = {		
+coa_peru_bolivia_republic_democratic_trigger = {
 	coa_democratic_republic_trigger = yes
 	coa_peru_bolivia_trigger = yes
 }
 
-coa_peru_bolivia_socialist_trigger = {		
+coa_peru_bolivia_socialist_trigger = {
 	coa_socialism_trigger = yes
 	coa_peru_bolivia_trigger = yes
 }
 
-coa_peru_bolivia_monarchy_trigger = {		
+coa_peru_bolivia_monarchy_trigger = {
 	coa_monarchy_trigger = yes
 	coa_peru_bolivia_trigger = yes
 }
 
-coa_peru_bolivia_dictatorship_trigger = {		
+coa_peru_bolivia_dictatorship_trigger = {
 	coa_dictatorship_trigger = yes
 	coa_peru_bolivia_trigger = yes
 }
 
 coa_independent_trigger = {
-	NOT = {exists = scope:overlord}
+	NOT = {
+		exists = scope:overlord
+	}
 }
 
 coa_union_south_africa_trigger = {
@@ -137,17 +153,6 @@ coa_radical_trigger = {
 	}
 }
 
-coa_socialism_trigger = {
-	any_interest_group = {
-		is_in_government = yes
-		has_party = yes
-		party = {
-			is_party_type = social_democrat_party
-		}
-	}
-}
-
-
 coa_hnd_own_india_trigger = {
 	owns_entire_state_region = STATE_SOUTH_BENGAL
 	owns_entire_state_region = STATE_NORTH_BENGAL
@@ -159,26 +164,33 @@ coa_hnd_own_india_trigger = {
 }
 
 # Government
-
 coa_def_democracy_flag_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_democracy_trigger = yes }
+	scope:actor = {
+		coa_democracy_trigger = yes
+	}
 }
 
 coa_def_socialism_flag_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_socialism_trigger = yes }
+	scope:actor = {
+		coa_socialism_trigger = yes
+	}
 }
 
 coa_def_ukrainian_ensign_trigger = {
 	exists = c:UKR
-	c:UKR = { save_temporary_scope_as = custom_overlord }
+	c:UKR = {
+		save_temporary_scope_as = custom_overlord
+	}
 	coa_def_ensign_trigger = yes
 }
 
 coa_def_bolivia_ensign_trigger = {
 	exists = c:BOL
-	c:BOL = { save_temporary_scope_as = custom_overlord }
+	c:BOL = {
+		save_temporary_scope_as = custom_overlord
+	}
 	coa_def_ensign_trigger = yes
 }
 
@@ -199,87 +211,118 @@ coa_def_french_british_spanish_ensign_trigger = {
 
 coa_def_no_NET_overlord_flag_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_no_NET_overlord_trigger = yes }
+	scope:actor = {
+		coa_no_NET_overlord_trigger = yes
+	}
 }
 
 coa_def_time_tex_flag_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_time_tex_trigger = yes}
+	scope:actor = {
+		coa_time_tex_trigger = yes
+	}
 }
 
 coa_def_time_saf_flag_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_time_saf_trigger = yes}
+	scope:actor = {
+		coa_time_saf_trigger = yes
+	}
 }
 
-coa_def_democratic_monarchy_flag_trigger  = {
+coa_def_democratic_monarchy_flag_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_democratic_monarchy_trigger = yes}
+	scope:actor = {
+		coa_democratic_monarchy_trigger = yes
+	}
 }
 
-coa_def_socialist_dictatorship_flag_trigger  = {
+coa_def_socialist_dictatorship_flag_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_socialist_dictatorship_trigger = yes}
+	scope:actor = {
+		coa_socialist_dictatorship_trigger = yes
+	}
 }
 
-coa_def_council_republic_democratic_flag_trigger  = {
+coa_def_council_republic_democratic_flag_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_council_republic_democratic_trigger = yes}
+	scope:actor = {
+		coa_council_republic_democratic_trigger = yes
+	}
 }
 
-coa_def_peru_bolivia_republic_democratic_flag_trigger  = {
+coa_def_peru_bolivia_republic_democratic_flag_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_peru_bolivia_republic_democratic_trigger = yes}
+	scope:actor = {
+		coa_peru_bolivia_republic_democratic_trigger = yes
+	}
 }
 
-coa_def_peru_bolivia_fascist_flag_trigger  = {
+coa_def_peru_bolivia_fascist_flag_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_peru_bolivia_fascist_trigger = yes}
+	scope:actor = {
+		coa_peru_bolivia_fascist_trigger = yes
+	}
 }
 
-coa_def_peru_bolivia_monarchy_flag_trigger  = {
+coa_def_peru_bolivia_monarchy_flag_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_peru_bolivia_monarchy_trigger = yes}
+	scope:actor = {
+		coa_peru_bolivia_monarchy_trigger = yes
+	}
 }
 
-coa_def_peru_bolivia_socialist_flag_trigger  = {
+coa_def_peru_bolivia_socialist_flag_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_peru_bolivia_socialist_trigger = yes}
+	scope:actor = {
+		coa_peru_bolivia_socialist_trigger = yes
+	}
 }
 
-coa_def_peru_bolivia_dictatorship_flag_trigger  = {
+coa_def_peru_bolivia_dictatorship_flag_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_peru_bolivia_dictatorship_trigger = yes}
+	scope:actor = {
+		coa_peru_bolivia_dictatorship_trigger = yes
+	}
 }
 
-coa_def_independent_flag_trigger  = {
+coa_def_independent_flag_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_independent_trigger = yes}
+	scope:actor = {
+		coa_independent_trigger = yes
+	}
 }
 
 coa_def_union_south_africa_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_union_south_africa_trigger = yes}
+	scope:actor = {
+		coa_union_south_africa_trigger = yes
+	}
 }
 
 coa_def_swe_nor_time_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_time_swe_nor_trigger = yes }
+	scope:actor = {
+		coa_time_swe_nor_trigger = yes
+	}
 }
 
 coa_def_pru_time_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_time_pru_trigger = yes }
+	scope:actor = {
+		coa_time_pru_trigger = yes
+	}
 }
 
 coa_def_alex_ii_trigger = {
 	exists = scope:actor
-	scope:actor = { 
-		c:RUS = { # hacky way to check for the starting heir
+	scope:actor = {
+		c:RUS = {
+			# hacky way to check for the starting heir
 			any_scope_character = {
 				is_ruler = yes
-				has_trait = meticulous 
-				has_trait = romantic 
+				has_trait = meticulous
+				has_trait = romantic
 				is_historical = yes
 			}
 		}
@@ -288,40 +331,56 @@ coa_def_alex_ii_trigger = {
 
 coa_def_radical_party_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_radical_trigger = yes }
+	scope:actor = {
+		coa_radical_trigger = yes
+	}
 }
 
 coa_def_social_democrat_party_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_socialism_trigger = yes }
+	scope:actor = {
+		coa_socialism_trigger = yes
+	}
 }
 
 coa_def_time_cal_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_time_cal_trigger  = yes }
+	scope:actor = {
+		coa_time_cal_trigger = yes
+	}
 }
 
 coa_def_time_fra_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_time_fra_trigger  = yes }
+	scope:actor = {
+		coa_time_fra_trigger = yes
+	}
 }
 
 coa_def_time_hnd_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_time_hnd_trigger  = yes }
+	scope:actor = {
+		coa_time_hnd_trigger = yes
+	}
 }
 
 coa_def_hnd_own_india_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_hnd_own_india_trigger  = yes }
+	scope:actor = {
+		coa_hnd_own_india_trigger = yes
+	}
 }
 
 coa_def_time_isr_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_time_isr_trigger  = yes }
+	scope:actor = {
+		coa_time_isr_trigger = yes
+	}
 }
 
 coa_def_time_sul_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_time_sul_trigger  = yes }
+	scope:actor = {
+		coa_time_sul_trigger = yes
+	}
 }

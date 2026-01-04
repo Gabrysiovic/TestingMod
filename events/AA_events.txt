@@ -1,0 +1,94 @@
+﻿#Slipstream activation announcement -Akiko
+namespace = AA_slipstream_event
+AA_slipstream_event.1 = {
+	type = country_event
+	placement = root
+	title = AA_slipstream_event.1.t
+	desc = AA_slipstream_event.1.d
+	flavor = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					country_rank = rank_value:great_power
+				}
+				desc = AA_spread_great_reaction
+			}
+			triggered_desc = {
+				trigger = {
+					country_rank = rank_value:major_power
+				}
+				desc = AA_spread_major_reaction
+			}
+			triggered_desc = {
+				trigger = {
+					is_subject = no
+				}
+				desc = AA_spread_minor_reaction
+			}
+			triggered_desc = {
+				trigger = {
+					has_diplomatic_pact = {
+						who = overlord
+						type = da_knowledge_sharing
+						is_initiator = no
+					}
+				}
+				desc = AA_spread_dominion_reaction
+			}
+			triggered_desc = {
+				desc = AA_spread_subject_reaction
+			}
+		}
+	}
+	event_image = {
+		video = unspecific_ruler_speaking_to_people
+	}
+	icon = gfx/interface/icons/event_icons/event_newspaper.dds
+	on_opened_soundeffect = event:/SFX/UI/Alerts/event_appear
+	duration = 1
+	trigger = {
+		#delay to avoid overlap with reform je's
+		year > 1854
+		NOT = {
+			has_variable = AA_slipstream_active
+		}
+	}
+	immediate = {
+		overlord = {
+			save_scope_as = AA_overlord_scope
+		}
+	}
+	option = {
+		name = AA_slipstream_event.1.a
+		custom_tooltip = AA_slipstream_event.1.a.tt
+		default_option = yes
+	}
+	after = {
+		set_variable = AA_slipstream_active
+	}
+}
+
+#Apocalypse event[A dump/test event] -Akiko
+namespace = AA_apocalypse
+AA_apocalypse.1 = {
+	type = country_event
+	placement = root
+	title = AA_apocalypse.1.t
+	desc = AA_apocalypse.1.d
+	flavor = AA_apocalypse.1.f
+	event_image = {
+		video = unspecific_ruler_speaking_to_people
+	}
+	icon = gfx/interface/icons/event_icons/event_skull.dds
+	on_opened_soundeffect = event:/SFX/UI/Alerts/event_appear
+	duration = 1
+	trigger = {
+		year = 2000
+	}
+	immediate = {
+	}
+	option = {
+		name = AA_apocalypse.1.a
+		default_option = yes
+	}
+}

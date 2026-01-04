@@ -1,10 +1,9 @@
-﻿troop_name = {
+﻿REPLACE:troop_name = {
 	type = building
 	random_valid = no
-	
 	text = {
 		trigger = {
-			is_building_type = building_barracks
+			is_building_type = building_barrack
 		}
 		localization_key = troop_name_regular
 	}
@@ -14,7 +13,8 @@
 		}
 		localization_key = troop_name_conscript
 	}
-    text = { # GGGG - Fix for naval bases
+	text = {
+		# GGGG - Fix for naval bases
 		trigger = {
 			is_building_type = building_naval_base
 		}

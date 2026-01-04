@@ -1,6 +1,5 @@
-﻿arrange_accident = {
+﻿REPLACE:arrange_accident = {
 	clicksound = "event:/SFX/DLC/1.3_ip1/UI/exile_character"
-
 	potential = {
 		is_in_exile_pool = no
 		is_in_void = no
@@ -15,9 +14,7 @@
 		}
 		is_immortal = no
 	}
-
 	show_requirements = yes
-
 	possible = {
 		owner ?= {
 			has_law_or_variant = law_type:law_secret_police
@@ -26,7 +23,6 @@
 			is_marginal = no
 		}
 	}
-
 	effect = {
 		this.interest_group ?= {
 			save_scope_as = relevant_ig
@@ -158,7 +154,8 @@
 				}
 			}
 		}
-		else = { # Exists purely to generate a tooltip when inactive
+		else = {
+			# Exists purely to generate a tooltip when inactive
 			random_list = {
 				40 = {
 					kill_character = yes
@@ -210,10 +207,10 @@
 			}
 		}
 	}
-
-	cooldown = { days = normal_modifier_time }
+	cooldown = {
+		days = normal_modifier_time
+	}
 	show_confirmation_box = yes
-
 	ai_chance = {
 		value = -50
 		if = {

@@ -1,0 +1,62 @@
+﻿#Created by Merc(?), finished by Akiko as of 2.01.26
+AA_mukden_decision = {
+	is_shown = {
+		this = c:JAP
+		NOT = {
+			has_variable = mukden_taken
+		}
+	}
+	#checks if Japan owns all of Korea -Akiko
+	possible = {
+		any_state_in_korean_peninsula = {
+			count = all
+			owner = ROOT
+		}
+	}
+	when_taken = {
+		set_variable = mukden_taken
+		save_scope_as = japan_scope
+		#gives Japan claims on Manchurian states and Taiwan if not owned by them or Russia -Akiko
+		every_state_in_manchuria = {
+			limit = {
+				NOT = {
+					owner = c:JAP
+					owner = c:RUS
+				}
+			}
+			owner = {
+				save_scope_as = mukden_target_scope
+			}
+			state_region = {
+				add_claim = ROOT
+			}
+		}
+		s:STATE_FORMOSA = {
+			if = {
+				limit = {
+					any_scope_state = {
+						NOT = {
+							owner = ROOT
+						}
+					}
+				}
+				add_claim = ROOT
+			}
+		}
+		#creates a gazette pop up -Akiko
+		post_notification = headlines_mukden
+		#thought it was quite the fitting reuse(negative infamy decay mult) -Akiko
+		add_modifier = {
+			name = better_to_be_feared
+			years = 5
+			is_decaying = yes
+		}
+		#chance for target(probably China) to create a negative lobby towards Japan -Akiko
+		scope:mukden_target_scope = {
+			create_diplomatic_catalyst = {
+				type = catalyst_event_negative
+				target = c:JAP
+			}
+		}
+	}
+}

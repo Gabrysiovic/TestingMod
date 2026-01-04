@@ -1,0 +1,4 @@
+INJECT:any_state_in_geographic_region_all = {
+	third = TRIGGER_ANY_STATE_IN_GEOGRAPHIC_REGION_ALL_THIRD
+	third_not = TRIGGER_ANY_STATE_IN_GEOGRAPHIC_REGION_ALL_THIRD_NOT
+}

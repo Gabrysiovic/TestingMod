@@ -1,5 +1,4 @@
 ﻿### Austrian historic monarchs template file ###
-
 is_aus_maximilian_01 = {
 	heir = yes
 	culture = cu:south_german
@@ -11,7 +10,7 @@ is_aus_maximilian_01 = {
 	birth_date = 1832.7.6
 	dna = dna_aus_maximilian_01
 	interest_group = ig_intelligentsia
-	ideology = ideology_democrat
+	ideology = ideology_liberal_leader
 	traits = {
 		tactful
 		charismatic
@@ -48,16 +47,16 @@ is_aus_karl_ludwig_01 = {
 	}
 }
 
-is_mex_miguel_miramón01 = {
-	general	= yes
+is_mex_miguel_miramon01 = {
+	is_general = yes
 	culture = cu:mexican
 	first_name = miguel
-	last_name = miramón
+	last_name = miramon
 	historical = yes
 	ig_leader = no
 	noble = yes
 	birth_date = 1831.9.29
-	dna = dna_mex_Miguel_Miramón01
+	dna = dna_mex_miguel_miramon01
 	interest_group = ig_devout
 	ideology = ideology_traditionalist
 	traits = {

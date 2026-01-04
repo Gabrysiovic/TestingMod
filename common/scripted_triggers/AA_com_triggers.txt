@@ -1,0 +1,25 @@
+﻿###This is here to just supress errors from missing community triggers, do not remove -Akiko
+# Hail, Columbia! (USA Flavor)
+is_usfp_active = {
+	always = no
+}
+
+# Gates of the Bosphorus
+grefm_is_active = {
+	always = no
+}
+
+# Morgenröte: Dawn of Flavor
+morgenrote_is_active = {
+	always = no
+}
+
+# Australia & New Zealand Flavor Pack
+anzfp_is_active = {
+	always = no
+}
+
+# ???
+hga_is_active = {
+	always = no
+}

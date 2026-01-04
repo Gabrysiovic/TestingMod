@@ -387,3 +387,8 @@ notification_headlines_london_conference_luxembourg_desc:1 "The territorial disp
 notification_headlines_london_conference_failure_tooltip:0 "#header $notification_headlines_london_conference_failure_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_london_conference_failure_desc$"
 notification_headlines_london_conference_failure_name:0 "#b LONDON CONFERENCE COLLAPSES #!"
 notification_headlines_london_conference_failure_desc:1 "Mediation between [SCOPE.sCountry('belgium_scope').GetName] and the [SCOPE.sCountry('netherlands_scope').GetName] has fallen apart. #lore Diplomats around Europe have issued dire warnings about the future stability of the Low Countries, with several interested powers... #!"
+
+#mukden incident -Akiko
+notification_headlines_mukden_tooltip: "#header $notification_headlines_mukden_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_mukden_desc$"
+notification_headlines_mukden_name: "#b INCIDENT ON MANCHURIAN BORDER #!"
+notification_headlines_mukden_desc: "Dubbed the Mukden Incident, [SCOPE.sCountry('japan_scope').GetAdjective] troops claim to have been attacked by the [SCOPE.sCountry('mukden_target_scope').GetAdjective] though they deny so, claiming it as a false flag. #lore Regardless of the truth of the matter, [SCOPE.sCountry('japan_scope').GetName] wishes to take revenge upon [SCOPE.sCountry('mukden_target_scope').GetName] by posturing to take their land... #!"
