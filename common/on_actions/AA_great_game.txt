@@ -1,9 +1,5 @@
 ﻿###Created by Akiko, finished as of 5.01.26
 ##This is a bunch of shit to make Great Game work without having to touch the vanilla je's
-##DISCLAIMER: because AI is motivated by giving them JE's this will cause errors, but that's unavoidable and harmless
-#############
-# Geat Game #
-#############
 #Gives control and starting je's on start, don't touch
 on_game_started = {
 	on_actions = {
@@ -116,6 +112,10 @@ give_je_gg_AFG_unify = {
 				limit = {
 					is_afghan_nation = yes
 					has_journal_entry = je_great_game_control
+					#This and similar are here to prevent errors from AI getting duplicate JE's as they use them for guidance
+					NOT = {
+						has_journal_entry = je_unify_afghanistan_objective
+					}
 				}
 				add_journal_entry = {
 					type = je_unify_afghanistan_objective
@@ -133,6 +133,9 @@ give_je_gg_caucasus = {
 					c:GBR ?= THIS
 					exists = c:CIR
 					has_journal_entry = je_great_game_control
+					NOT = {
+						has_journal_entry = je_disrupt_russian_caucasus
+					}
 				}
 				add_journal_entry = {
 					type = je_disrupt_russian_caucasus
@@ -183,6 +186,9 @@ give_je_gg_BIC_annex = {
 						is_subject_of = c:GBR
 					}
 					has_journal_entry = je_great_game_control
+					NOT = {
+						has_journal_entry = je_consolidate_british_india
+					}
 				}
 				add_journal_entry = {
 					type = je_consolidate_british_india
@@ -229,6 +235,9 @@ give_je_gg_PER_border = {
 					c:RUS ?= THIS
 					exists = c:CIR
 					has_journal_entry = je_great_game_control
+					NOT = {
+						has_journal_entry = je_secure_persian_border
+					}
 				}
 				add_journal_entry = {
 					type = je_secure_persian_border
@@ -347,6 +356,7 @@ give_je_gg_PER_protect = {
 		has_journal_entry = je_great_game_control
 		NOT = {
 			has_variable = gg_PER_protect_given
+			has_journal_entry = je_secure_influence_over_persia
 		}
 	}
 	effect = {
@@ -363,6 +373,7 @@ give_je_gg_PER_unify = {
 		has_journal_entry = je_great_game_control
 		NOT = {
 			has_variable = gg_PER_unify_given
+			has_journal_entry = je_consolidate_persia
 		}
 	}
 	effect = {
@@ -384,6 +395,9 @@ give_je_gg_sovereignty = {
 					}
 					is_country_type = unrecognized
 					has_journal_entry = je_great_game_control
+					NOT = {
+						has_journal_entry = je_achieve_sovereignty
+					}
 				}
 				add_journal_entry = {
 					type = je_achieve_sovereignty
