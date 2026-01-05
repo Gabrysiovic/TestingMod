@@ -105,7 +105,7 @@
     AA_spread_dominion_reaction: "Our gracious overlord, [SCOPE.sCountry('AA_overlord_scope').GetName], has implemented censorship across their empire, but has decided to honour our #tooltippable;tooltip:da_knowledge_sharing_desc preexisting treaty#! and make a special exception for us to continue enjoying this freedom."
     AA_spread_subject_reaction: "Our overlord, [SCOPE.sCountry('AA_overlord_scope').GetName], has installed censorship in our nation in order to clamp down on the spread of their innovations. If we wish to modernise to their level, we have to ask them to #tooltippable;tooltip:da_knowledge_sharing_desc lift the ban#! for us."
     AA_slipstream_event.1.a: "[ROOT.GetCountry.GetCustom('AA_spread_action')]"
-    AA_slipstream_event.1.a.tt: "#italic #tooltippable;tooltip:AA_slipstream_bool_desc Slipstream#! is enabled#!"
+    AA_slipstream_event.1.a.tt: "#italic #tooltippable;tooltip:country_AA_slipstream_bool_desc Slipstream#! is enabled#!"
     AA_spread_great_action: "Crackdown on it immediately, we can't afford to let it get in the hands of other powers!"
     AA_spread_major_action: "Restrict the flow of information, but don't censor is completely."
     AA_spread_minor_action: "The wonders of this age!"
@@ -126,9 +126,6 @@
     #Geographic regions -Akiko
     geographic_region_korean_peninsula: "Korean Peninsula"
     geographic_region_manchuria: "Manchuria"
-    #Geographic region triger localisation -Akiko
-    TRIGGER_ANY_STATE_IN_GEOGRAPHIC_REGION_ALL_THIRD: "[COUNTRY.GetName] owns all [Concept('concept_state', '$concept_states$')] in [GeographicRegion.GetName]:"
-    TRIGGER_ANY_STATE_IN_GEOGRAPHIC_REGION_ALL_THIRD_NOT: "[COUNTRY.GetName] doesn't owns all [Concept('concept_state', '$concept_states$')] in [GeographicRegion.GetName]:"
 
     #Misc
     pm_monument_prestige_only_forbidden_city: "Forbidden City" #    -Akiko

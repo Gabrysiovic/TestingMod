@@ -1,4 +1,4 @@
-﻿#Created by Akiko, finished as of 2.01.26
+﻿###Created by Akiko, finished as of 5.01.26
 on_monthly_pulse_country = {
 	on_actions = {
 		AA_slipstream_pulse
@@ -12,8 +12,8 @@ on_monthly_pulse_country = {
 AA_events = {
 	events = {
 		AA_slipstream_event.1		#enables slipstream -Akiko
-		bengal_fix.1
-		AA_apocalypse.1
+		bengal_fix.1		#Orphaned event that had no place
+		AA_apocalypse.1		#Test event of sorts
 	}
 }
 
@@ -300,14 +300,15 @@ AA_mil_slipstream_check = {
 		#Tier 3
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_technology_researched = concrete_dockyards
-					has_technology_researched = submarine
 					has_technology_researched = destroyer
 					has_technology_researched = landing_craft
+					has_technology_researched = submarine
+					has_technology_researched = sea_lane_strategies
 					has_technology_researched = bolt_action_rifles
-					has_technology_researched = wargaming
 					has_technology_researched = trench_works
+					has_technology_researched = wargaming
 					has_technology_researched = war_propaganda
 				}
 			}
@@ -338,14 +339,14 @@ AA_mil_slipstream_check = {
 		else = {
 			limit = {
 				NOR = {
-					has_technology_researched = carrier_tech
 					has_technology_researched = battleship_tech
-					has_technology_researched = stormtroopers
+					has_technology_researched = carrier_tech
 					has_technology_researched = chemical_warfare
-					has_technology_researched = flamethrowers
-					has_technology_researched = nco_training
 					has_technology_researched = concrete_fortifications
 					has_technology_researched = military_aviation
+					has_technology_researched = flamethrowers
+					has_technology_researched = stormtroopers
+					has_technology_researched = nco_training
 				}
 			}
 			add_modifier = {

@@ -1,12 +1,16 @@
-﻿###This is a bunch of shit to make Great Game work without having to touch the vanilla je's -Akiko
-#Gives control and starting je's on start, don't touch -Akiko
+﻿###Created by Akiko, finished as of 5.01.26
+##This is a bunch of shit to make Great Game work without having to touch the vanilla je's
+##DISCLAIMER: because AI is motivated by giving them JE's this will cause errors, but that's unavoidable and harmless
+#############
+# Geat Game #
+#############
+#Gives control and starting je's on start, don't touch
 on_game_started = {
 	on_actions = {
 		give_je_gg_control
 		give_je_gg_BIC_annex
 		give_je_gg_caucasus
 		give_je_gg_PER_border
-		give_je_gg_PER_front
 		give_je_gg_AFG_unify
 		give_je_gg_sovereignty
 	}
@@ -330,22 +334,6 @@ give_je_gg_KOR_protect = {
 			type = je_acquire_korean_protectorate
 		}
 		set_variable = gg_KOR_protect_given
-	}
-}
-
-give_je_gg_PER_front = {
-	effect = {
-		every_country = {
-			if = {
-				limit = {
-					c:PER ?= this
-					has_journal_entry = je_great_game_control
-				}
-				add_journal_entry = {
-					type = je_eastern_frontier
-				}
-			}
-		}
 	}
 }
 

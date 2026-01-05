@@ -1,4 +1,4 @@
-﻿#Created by Merc(?), finished by Akiko as of 2.01.26
+﻿#Created by Merc(?), finished by Akiko as of 5.01.26
 AA_mukden_decision = {
 	is_shown = {
 		this = c:JAP
