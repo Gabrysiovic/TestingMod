@@ -43,7 +43,7 @@ REPLACE:company_suez_company = {
 			state_region = s:STATE_SINAI
 			any_scope_building = {
 				is_building_type = building_suez_canal
-				occupancy >= 0.5
+				occupancy >= 0.02
 			}
 		}
 		any_scope_state = {
@@ -133,7 +133,7 @@ REPLACE:company_panama_company = {
 			state_region = s:STATE_PANAMA
 			any_scope_building = {
 				is_building_type = building_panama_canal
-				occupancy >= 0.5
+				occupancy >= 0.02   # This is indended /Gabriel
 			}
 		}
 		any_scope_state = {

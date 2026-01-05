@@ -21,3 +21,14 @@ TRY_REPLACE:BYZ = {
 	cultures = { greek }
 	capital = STATE_EASTERN_THRACE
 }
+
+TRY_REPLACE:GER = {
+	color = { 101 103 105 }
+
+	country_type = recognized
+
+	tier = empire
+
+	cultures = { north_german south_german }
+	capital = STATE_BRANDENBURG
+}
