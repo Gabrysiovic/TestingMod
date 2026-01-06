@@ -1,0 +1,264 @@
+check_substation_state = {
+	if = {
+		limit = {
+			sg:electricity.state_goods_delta != 0
+		}
+
+		#debug_log = "----------START-----------"
+
+		debug_log_scopes = no
+
+		#Berechnet den Multiplier der die Größe der Transformation bestimmt
+		impl_calculate_substation_multiplier = yes
+
+		#Prüft, ob Substation gebaut oder abgerissen werden muss
+		impl_check_building = yes
+
+		if = {
+			limit = {
+				has_building = building_substation
+			}
+
+			#Setzt die Modifier auf die Substation
+			impl_check_building_modifier = yes
+
+			#Setzt die richtige PM der Substation
+			impl_check_pm = yes
+		}
+
+		#debug_log = "----------ENDE--------------"
+	}
+}
+
+impl_calculate_substation_multiplier = {
+	set_local_variable = {
+		#Anteil am verfügbaren Wechselstrom
+		name  = share_of_electricity_market_available
+		value = {
+			value = local_var:electricity_market_available
+			
+			if = {
+				limit = { has_variable = electricity_market_share }
+				multiply = var:electricity_market_share
+			}
+
+			floor = yes
+		}
+	}
+
+	set_local_variable = {
+		#verfügbaren Wechselstrom
+		name  = max_substation_multiplier
+		value = {
+			value = local_var:share_of_electricity_market_available
+			divide = substation_electricity_market_input_multiplier #Kosten Wechselstrom
+			floor = yes
+		}
+	}
+
+
+	#debug_print = {
+	#	text = "electricity_market_available"
+	#	variable = local_var:electricity_market_available
+	#}
+
+	#debug_print = {
+	#	text = "share_of_electricity_market_available"
+	#	variable = local_var:share_of_electricity_market_available
+	#}
+
+	#debug_print = {
+	#	text = "max_substation_multiplier"
+	#	variable = local_var:max_substation_multiplier
+	#}
+
+	if = {
+		limit = { has_variable = electricity_market_share }
+		set_local_variable = {
+			name = target_substation_multiplier
+			value = local_var:max_substation_multiplier
+		}
+		#debug_log ="MAXED OUT"
+	}
+	else = {
+		set_local_variable = {
+			name = target_substation_multiplier
+			
+			value = {
+				#Delta des Gleichstrom im State
+				value = target_state_electricity_delta 
+				divide = substation_electricity_multiplier #Erzeugung Gleichstrom
+				
+				if = {
+					limit = { target_state_electricity_delta < 0}
+					ceiling = yes
+				}
+				else_if = {
+					limit = { target_state_electricity_delta > 0}
+					floor = yes
+				}
+
+				abs = yes
+			}
+		}
+	}
+
+
+
+	set_variable = {
+		name = debug_target_multiplier
+		value = local_var:target_substation_multiplier
+	}
+
+	debug_print = {
+		text = "target_state_electricity_delta"
+		variable = target_state_electricity_delta
+	}
+
+	debug_print = {
+		text = "impl_target_buy_orders"
+		variable = impl_target_buy_orders
+	}
+
+	debug_print = {
+		text = "impl_target_sell_orders"
+		variable = impl_target_sell_orders
+	}
+
+	debug_print = {
+		text = "state_electricity_buy_orders"
+		variable = state_electricity_buy_orders
+	}
+
+	debug_print = {
+		text = "state_electricity_sell_orders"
+		variable = state_electricity_sell_orders
+	}
+	debug_log = "Pla"
+
+	#debug_print = {
+	#	text = "target_substation_multiplier"
+	#	variable = local_var:target_substation_multiplier
+	#}
+
+	remove_local_variable = share_of_electricity_market_available
+}
+
+impl_check_building = {
+	if = {
+		limit = {
+			local_var:target_substation_multiplier > 0
+			not = { has_building = building_substation }
+		}
+
+		if = {
+			limit = {
+				target_state_electricity_delta > 0
+			}
+
+			create_building = {
+				level = 1
+				subsidized = yes
+				building = building_substation
+				activate_production_methods = {
+					pm_substation_up
+				}
+			}
+
+			#debug_log = "CREATE BUILDING WITH UP"
+		}
+		else_if = {
+			limit = {
+				target_state_electricity_delta < 0
+			}
+
+			create_building = {
+				level = 1
+				subsidized = yes
+				building = building_substation
+				activate_production_methods = {
+					pm_substation_down
+				}
+			}
+
+			#debug_log = "CREATE BUILDING WITH DOWN"
+		}
+	}
+	else_if = {
+		limit = {
+			local_var:target_substation_multiplier = 0
+			has_building = building_substation
+		}
+
+		remove_building = building_substation
+
+		#debug_log = "REMOVE BUILDING"
+	}
+}
+
+impl_check_building_modifier = {
+	remove_variable = substation_multiplier
+
+	if = {
+		limit = {
+			local_var:target_substation_multiplier > 0
+		}
+
+		set_variable = {
+			name = substation_multiplier
+			value = local_var:target_substation_multiplier
+		}
+	}
+
+	b:building_substation = {
+		remove_modifier = substation_multiplier
+
+		if = {
+			limit = {
+				local_var:target_substation_multiplier > 0
+			}
+
+			add_modifier = {
+				name = substation_multiplier
+				multiplier = local_var:target_substation_multiplier
+			}
+		}
+	}
+}
+
+impl_check_pm = {
+	if = {
+		limit = {
+			has_building = building_substation
+			target_state_electricity_delta > 0
+			is_production_method_active = {
+				building_type = building_substation
+				production_method = pm_substation_down
+			}
+		}
+
+		activate_production_method = {
+			building_type = building_substation
+			production_method = pm_substation_up
+		}
+
+		#debug_log = "PM CHANGED TO UP"
+	}
+	else_if = {
+		limit = {
+			has_building = building_substation
+			target_state_electricity_delta < 0
+			is_production_method_active = {
+				building_type = building_substation
+				production_method = pm_substation_up
+			}
+		}
+		
+		activate_production_method = {
+			building_type = building_substation
+			production_method = pm_substation_down
+		}
+
+		#debug_log = "PM CHANGED TO DOWN"
+	}
+}

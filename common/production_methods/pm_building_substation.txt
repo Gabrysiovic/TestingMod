@@ -1,0 +1,25 @@
+pm_substation_up = {
+	texture = "gfx/interface/icons/production_method_icons/power_plant.dds"
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 100
+
+			goods_input_electricity_add = 1
+			goods_output_electricity_market_add = 0.8
+		}
+	}
+}
+
+pm_substation_down = {
+	texture = "gfx/interface/icons/production_method_icons/power_plant.dds"
+
+	building_modifiers = {
+		level_scaled = {
+			goods_input_electricity_market_add = 1.2
+			goods_output_electricity_add = 1
+
+			building_employment_laborers_add = 100
+		}
+	}
+}

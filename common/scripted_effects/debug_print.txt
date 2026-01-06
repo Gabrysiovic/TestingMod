@@ -1,0 +1,22 @@
+debug_print = {
+	if = {
+		limit = {
+			exists = $variable$
+		}
+
+		save_scope_value_as = {
+			name = debug_value
+			value = $variable$
+		}
+
+		scope:debug_value = {
+			if = {
+				debug_log = $text$
+				debug_log_scopes = no
+			}
+		}
+	}
+	else = {
+		debug_log = "NOT FOUND: $variable$ "
+	}
+}

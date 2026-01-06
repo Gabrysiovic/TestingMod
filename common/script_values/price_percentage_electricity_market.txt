@@ -1,0 +1,35 @@
+price_percentage_electricity_market = {
+	value = impl_delta
+	divide = impl_divisor
+	multiply = -0.7
+	multiply = 100
+}
+
+impl_delta = {
+	value = local_var:electricity_market_sell_orders
+	subtract = local_var:electricity_market_buy_orders
+}
+
+impl_divisor = {
+	value = local_var:electricity_market_buy_orders
+
+	if = {
+		limit = {
+			impl_delta <= 0
+		}
+
+		value = local_var:electricity_market_sell_orders
+	}
+}
+
+buy_order_limit_electricity_market = {
+	value = local_var:electricity_market_sell_orders
+	multiply = 2
+	subtract = 1
+}
+
+sell_order_limit_electricity_market = {
+	value = local_var:electricity_market_buy_orders
+	divide = 2
+	add = 1
+}

@@ -1,0 +1,6 @@
+
+substation_multiplier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	building_substation_throughput_add = 1
+	#todo gucken obs auch für input und export seperat gibt
+}

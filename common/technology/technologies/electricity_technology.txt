@@ -1,0 +1,63 @@
+
+
+
+electrical_generation = {
+	# Unlocks Power Plants
+	# Unlocks Electric Sewing Machines PM and Automatic Power Looms PM in Textile Mills
+	# Unlocks Brine Electrolysis PM in Chemical Plants
+	# Unlocks Electric Fencing PM and Refrigerated Storage PM in Livestock Ranches
+	# Unlocks Refrigerated Storage PM in Fishing Wharfs
+	# Unlocks Electric Saw Mills PM in Logging Camps
+	# Unlocks Electric Streetlights PM in Urban Centers
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/electricity.dds"
+	category = production
+
+	unlocking_technologies = {
+		rotary_valve_engine
+	}
+
+	ai_weight = {
+		value = 1
+
+		if = {
+			limit = {
+				OR = {
+					 has_strategy = ai_strategy_industrial_expansion
+					 has_strategy = ai_strategy_resource_expansion
+				}
+			}
+			add = 2
+		}
+	}
+}
+
+alternating_voltage = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/electrical_generation.dds"
+	category = production
+
+	unlocking_technologies = {
+		electrical_capacitors
+	}
+
+	modifier = {
+		can_share_electricity_in_market_bool = yes
+	}
+
+	ai_weight = {
+		value = 1
+
+		if = {
+			limit = {
+				OR = {
+					 has_strategy = ai_strategy_industrial_expansion
+					 has_strategy = ai_strategy_resource_expansion
+				}
+			}
+			add = 2
+		}
+	}
+}
+
+	

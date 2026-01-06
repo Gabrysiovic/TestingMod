@@ -1,0 +1,48 @@
+on_monthly_pulse_country = {
+	on_actions = {
+		em_on_monthly_pulse_country
+	}
+}
+
+
+em_on_monthly_pulse_country = {
+	effect = {
+		if = {
+			limit = {
+				or = {
+					not = { has_global_variable = date_of_last_event_execution }
+					days_since_last_weekly_country_impulse_execution >= 7
+				}
+			}
+
+			if = {
+				limit = { has_global_variable = date_of_last_event_execution }
+
+				#debug_log = "TICK"
+
+				every_country = {
+					limit = { 
+						has_technology_researched = alternating_voltage 
+						#is_player = yes
+					}
+					
+					check_substations = yes
+				}
+			}
+
+			set_global_variable = {
+				name = date_of_last_event_execution
+				value = {
+					value = game_date
+
+					if = {
+						limit = { not = { has_global_variable = date_of_last_event_execution } }
+						subtract = 3 # to match last monday
+					}
+				}
+			}
+		}
+	}
+}
+
+

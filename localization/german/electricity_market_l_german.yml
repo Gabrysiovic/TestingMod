@@ -38,5 +38,5 @@
  pm_coal-fired_plant_market: "$pm_coal-fired_plant$"
  pm_oil-fired_plant_market: "$pm_oil-fired_plant$"
 
- country_can_share_electricity_in_market_bool: "Elektrizität kann auf dem [concept_market] gehandelt werden"
- country_can_share_electricity_in_market_bool_desc: "Schaltet die neue Ware @electricity! $electricity_market$ frei, die marktweit verteilten Strom repräsentiert. $building_substation$ können $electricity_market$ in lokalen $electricity$ umwandeln und ermöglichen so eine zentrale Stromversorgung im gesamten [concept_market]."
+ can_share_electricity_in_market_bool: "Elektrizität kann auf dem [concept_market] gehandelt werden"
+ can_share_electricity_in_market_bool_desc: "Schaltet die neue Ware @electricity! $electricity_market$ frei, die marktweit verteilten Strom repräsentiert. $building_substation$ können $electricity_market$ in lokalen $electricity$ umwandeln und ermöglichen so eine zentrale Stromversorgung im gesamten [concept_market]."

@@ -1,0 +1,77 @@
+target_state_electricity_delta = {
+	value = state_electricity_delta
+
+	if = {
+		limit = { has_variable = target_state_electricity_delta_value }
+
+		
+		value = impl_target_sell_orders
+		subtract = state_electricity_sell_orders
+
+		multiply = -1
+	}
+}
+
+impl_target_buy_orders = {
+	if = {
+		limit = { var:target_state_electricity_delta_value > 0 }
+
+		value = state_electricity_sell_orders
+		multiply = {
+			value = 1
+			add = {
+				value = var:target_state_electricity_delta_value
+				abs = yes
+				divide = 0.75
+			}
+		}
+	}
+	else_if = {
+		limit = { var:target_state_electricity_delta_value < 0 }
+
+		value = state_electricity_sell_orders
+		divide = {
+			value = 1
+			add = {
+				value = var:target_state_electricity_delta_value
+				abs = yes
+				divide = 0.75
+			}
+		}
+	}
+	else = {
+		value = state_electricity_sell_orders
+	}
+}
+
+impl_target_sell_orders = {
+	if = {
+		limit = { var:target_state_electricity_delta_value < 0 }
+
+		value = state_electricity_buy_orders
+		multiply = {
+			value = 1
+			add = {
+				value = var:target_state_electricity_delta_value
+				abs = yes
+				divide = 0.75
+			}
+		}
+	}
+	else_if = {
+		limit = { var:target_state_electricity_delta_value > 0 }
+
+		value = state_electricity_buy_orders
+		divide = {
+			value = 1
+			add = {
+				value = var:target_state_electricity_delta_value
+				abs = yes
+				divide = 0.75
+			}
+		}
+	}
+	else = {
+		value = state_electricity_buy_orders
+	}
+}

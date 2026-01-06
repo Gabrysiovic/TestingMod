@@ -1,0 +1,20 @@
+
+texticon = {
+	icon = electricity
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/electricity.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = electricity_market
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/electricity_market.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}

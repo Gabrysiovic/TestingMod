@@ -1,0 +1,151 @@
+check_substations = {
+	debug_log = "----------START COUNTRY------------"
+	debug_log_scopes = no
+	
+	calculate_price_percentage_electricity_market = yes
+
+	set_local_variable = {
+		name = electricity_market_available 
+		value = buy_order_limit_electricity_market
+	}
+
+	impl_check_limit = yes
+
+
+	#Erst alle States mit Überschuss
+	ordered_scope_state = {
+		limit = {
+			state_electricity_delta > 0
+		}
+		max = 1000
+		check_range_bounds = no
+		order_by = state_electricity_order_weight
+
+		check_substation_state = yes
+	}
+
+	#Dann alle States mit Mangel
+	ordered_scope_state = {
+		limit = {
+			state_electricity_delta < 0
+		}
+		max = 1000
+		check_range_bounds = no
+
+		order_by = {
+			value = state_electricity_order_weight
+			multiply = -1
+		}
+
+		check_substation_state = yes
+	}
+
+	debug_log = "----------ENDE COUNTRY------------"
+}
+
+impl_check_limit = {
+	debug_log = "CHECK LIMIT"
+
+	set_local_variable = {
+		name = tmp_check_limit 
+		value = buy_order_limit_electricity_market
+	}
+
+	set_local_variable = {
+		name = total_electricity_demand 
+		value = 0
+	}
+
+	#Berechnet Multiplier vor und prüft, ob Limit erreicht wird
+	ordered_scope_state = {
+		max = 1000
+		check_range_bounds = no
+		order_by = state_electricity_order_weight
+
+		remove_variable = electricity_demand
+		remove_variable = electricity_market_share
+
+		impl_calc_multiplier = yes
+	}
+
+	if = {
+		limit = { local_var:tmp_check_limit <= 0 }
+		debug_log = "ZU WENIG STROM"
+
+		impl_calc_state_shares = yes
+	}
+}
+
+impl_calc_state_shares = {
+	every_scope_state = {
+		limit = { state_electricity_delta < 0 }
+
+		debug_log_scopes = no
+
+		set_variable = {
+			name = electricity_market_share
+			value = {
+				value = var:electricity_demand
+				divide = local_var:total_electricity_demand
+			}
+		}
+	}
+}
+
+impl_calc_multiplier = {
+	set_variable = {
+		name = target_substation_multiplier
+		value = {
+			value = state_electricity_delta
+			divide = substation_electricity_multiplier
+			
+			if = {
+				limit = { state_electricity_delta < 0}
+				ceiling = yes
+			}
+			else_if = {
+				limit = { state_electricity_delta > 0}
+				floor = yes
+			}
+
+			abs = yes
+		}
+	}
+
+
+	if = {
+		limit = { state_electricity_delta < 0} # Wechselstrom wird bezogen
+
+		change_local_variable = {
+			name = tmp_check_limit
+			subtract = {
+				value = substation_electricity_market_input_multiplier
+				multiply = var:target_substation_multiplier
+			} 
+		}
+
+		set_variable = {
+			name = electricity_demand
+			value = {
+				value = substation_electricity_market_input_multiplier
+				multiply = var:target_substation_multiplier
+			}
+		}
+
+		change_local_variable = {
+			name = total_electricity_demand
+			add = var:electricity_demand
+		}
+	}
+	else_if = {
+		limit = { state_electricity_delta > 0} # Wechselstrom wird produziert
+
+		change_local_variable = {
+			name = tmp_check_limit
+			add = {
+				value = substation_electricity_market_output_multiplier
+				multiply = var:target_substation_multiplier
+			} 
+		}
+	}
+}

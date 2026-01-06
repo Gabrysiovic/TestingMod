@@ -1,0 +1,23 @@
+
+set_electricity_target = {
+	scope = state 
+
+	saved_scopes = {
+        target_value
+    } 
+
+	is_valid = {
+        always = yes
+    } 
+
+	effect = {
+
+		debug_log = "asdassdasdsd"
+
+		set_variable = {
+			name = target_state_electricity_delta_value
+			value = scope:target_value
+		}
+	}
+
+}
