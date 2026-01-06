@@ -1,0 +1,27 @@
+﻿#### GVFH
+namespace = gvfh_elections_fix
+
+gvfh_elections_fix.1 = {
+	# GVFH: Remove all parties except ruler's ig one if single party state is enable
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		has_law_or_variant = law_type:law_single_party_state
+	}
+
+	immediate = {
+		every_active_party = {
+			limit = {
+				NOT = { THIS = root.ruler.interest_group.party }
+			}
+			disband_party = yes
+		}
+		every_active_party = {
+			limit = {
+				NOT = { THIS = root.ruler.interest_group.party }
+			}
+			disband_party = yes
+		}
+	}
+}

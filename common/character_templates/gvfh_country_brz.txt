@@ -1,0 +1,52 @@
+﻿#### GVFH
+### Brazil character template file ###
+
+# Brazil - BRZ
+# Piratini - PNI
+# Grao-Para - PRA
+# Catherinese Republic - CTR
+
+# Brazil
+
+REPLACE:BRZ_emperor_pedro_02 = {
+	# Pedro II
+	first_name = "Pedro"
+	last_name = "de_Braganca"
+	historical = yes
+	culture = primary_culture
+	ruler = yes # GVFH: Make him ruler so it trigger pedro_JE 
+	birth_date = 1825.12.2
+	dna = dna_emperor_pedro_02
+	interest_group = ig_intelligentsia
+	ideology = ideology_reformer
+	traits = {
+		meticulous
+		trait_child
+	}
+	on_created = {
+		set_variable = is_pedro
+		set_variable = house_braganca
+		set_character_immortal = yes
+	}
+	trait_generation = { }
+}
+### Interest Group Leaders
+
+# Game-start
+
+REPLACE:BRZ_diogo_antonio_feijo = {
+	# Diogo Antônio Feijó, regent of Brazil from 1835 to 1837
+	first_name = Diogo_AntO_nio
+	last_name = FeijO_
+	historical = yes
+	culture = primary_culture
+	birth_date = 1784.8.17
+	dna = dna_diogo_antonio_feijo
+	ig_leader = yes # GVFH: Make his ig leader by default
+	interest_group = ig_intelligentsia
+	ideology = ideology_moderate
+	traits = {
+		reserved
+	}
+	trait_generation = { }
+}
