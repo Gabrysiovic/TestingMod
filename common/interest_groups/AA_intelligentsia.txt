@@ -1,9 +1,5 @@
 ﻿REPLACE:ig_intelligentsia = {
-	color = {
-		0.13
-		0.64
-		0.99
-	}
+	color = hsv{ 0.13 0.64 0.99 }
 	texture = "gfx/interface/icons/ig_icons/intelligensia.dds"
 	layer = "revolution_dynamic_intelligentsia"
 	index = 3
