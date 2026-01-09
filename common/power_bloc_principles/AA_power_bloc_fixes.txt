@@ -154,19 +154,15 @@ INJECT:principle_aggressive_coordination_3 = {
 #Buff to +5% throughput, -1% mosrtality, and +0.5 SoL
 INJECT:principle_food_standardization_1 = {
 	member_modifier = {
-		building_group_bg_agriculture_throughput_add = 0.04
 		state_mortality_mult = -0.01
-		state_standard_of_living_add = 0.5
 	}
 }
 
 #Buff to +10% throughput, -2% mosrtality, and +1 SoL
 INJECT:principle_food_standardization_2 = {
 	member_modifier = {
-		# Modifiers from previous level(s)
-		building_group_bg_agriculture_throughput_add = 0.09
 		# Lower mortality
-		state_mortality_mult = -0.01
+		state_mortality_mult = 0.08
 		state_standard_of_living_add = 0.5
 	}
 }
@@ -175,8 +171,7 @@ INJECT:principle_food_standardization_2 = {
 INJECT:principle_food_standardization_3 = {
 	member_modifier = {
 		# Modifiers from previous level(s)
-		building_group_bg_agriculture_throughput_add = 0.09
-		state_mortality_mult = -0.02
+		state_mortality_mult = 0.07
 		state_food_security_add = 0.05
 		#Unlocks a PM for Food Industries
 	}
