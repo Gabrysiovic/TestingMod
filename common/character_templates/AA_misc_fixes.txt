@@ -1,0 +1,40 @@
+﻿REPLACE:usa_joshua_norton_character_template = {
+	first_name = Joshua
+	last_name = Norton
+	historical = yes
+	culture = cu:british
+	religion = rel:protestant
+	female = no
+	is_agitator = yes
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_royalist
+	birth_date = 1818.2.4
+	dna = dna_emperor_norton
+	traits = {
+		charismatic
+		honorable
+		ambitious
+	}
+}
+
+
+TRY_REPLACE:aus_maximilian_I_habsburg_template = {
+    # Maximilian I of Mexico
+    first_name = Maximillian
+    last_name = von_Habsburg_Lothringen
+    historical = yes
+    dna = dna_maximilian_i_of_mexico
+    culture = cu:south_german
+    religion = rel:catholic
+    heir = yes
+    noble = yes
+    is_admiral = yes
+    birth_date = 1832.7.6
+    interest_group = ig_landowners
+    ideology = ideology_liberal_leader
+    traits = {
+        tactful
+		charismatic
+        #experienced_naval_commander trait is added in austria_events.31
+    }
+}
