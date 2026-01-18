@@ -1,0 +1,165 @@
+﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
+### X historic monarchs template file ###
+
+
+is_den_frederik_06 = {
+	first_name = Frederik
+	last_name = von_Oldenburg
+	historical = yes
+	ruler = yes
+	birth_date = 1768.1.28
+	dna = dna_king_frederick_06
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+	traits = {
+		basic_political_operator
+		imperious
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_den_christian_08 = {
+	first_name = Christian
+	last_name = von_Oldenburg
+	historical = yes
+	heir = yes
+	birth_date = 1786.9.18
+	dna = dna_den_christian_08
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+	traits = {
+		basic_political_operator
+		cautious
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_den_frederik_07 = {
+	heir = yes
+    culture = cu:danish
+    first_name = Frederik
+    last_name = von_Oldenburg
+    historical = yes
+    ig_leader = no
+    noble = yes
+    dna = dna_den_frederik_07
+    interest_group = ig_intelligentsia
+    ideology = ideology_moderate
+    traits = {
+        charismatic
+        brave
+        firebrand
+        alcoholic
+    }
+    birth_date = 1808.10.6
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_den_christian_09 = {
+	heir = yes
+    culture = cu:danish
+    first_name = Christian
+    last_name = von_Glucksburg
+    historical = yes
+    ig_leader = no
+    noble = yes
+    dna = dna_den_christian_09
+    interest_group = ig_petty_bourgeoisie
+    ideology = ideology_royalist
+    traits = {
+        arrogant
+    }
+    birth_date = 1818.4.8
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_den_frederik_08 = {
+	heir = yes
+    culture = cu:danish
+    first_name = Frederik
+    last_name = von_Glucksburg
+    historical = yes
+    ig_leader = no
+    noble = yes
+    dna = dna_den_frederik_08
+    interest_group = ig_intelligentsia
+    ideology = ideology_reformer
+    traits = {
+        tactful
+    }
+    birth_date = 1843.6.3
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_den_christian_10 = {
+	heir = yes
+    culture = cu:danish
+    first_name = Christian
+    last_name = von_Glucksburg
+    historical = yes
+    ig_leader = no
+    noble = yes
+    dna = dna_den_christian_10
+    interest_group = ig_petty_bourgeoisie
+    ideology = ideology_authoritarian
+    traits = {
+        arrogant
+    }
+    birth_date = 1870.9.26
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_den_frederik_09 = {
+	heir = yes
+    culture = cu:danish
+    first_name = Frederik
+    last_name = von_Glucksburg
+    historical = yes
+    ig_leader = no
+    noble = yes
+    dna = dna_den_frederik_09
+    interest_group = ig_industrialists
+    ideology = ideology_feminist
+    traits = {
+        tactful
+        literary
+        romantic
+    }
+    birth_date = 1899.3.11
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}

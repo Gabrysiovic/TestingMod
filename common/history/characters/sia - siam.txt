@@ -1,0 +1,12 @@
+﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
+CHARACTERS = {
+	c:SIA ?= {
+		create_character = {
+			template = is_sia_nangklao
+		}	
+
+		create_character = {
+			template = is_sia_mongkut
+		}
+	}
+}

@@ -1,0 +1,150 @@
+﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
+### Portuguese historic monarchs template file ###
+
+
+is_por_maria_02 = {
+	first_name = Maria
+	last_name = de_Braganca
+	historical = yes
+	ruler = yes
+	female = yes
+	birth_date = 1819.4.4
+	dna = dna_queen_maria
+	interest_group = ig_intelligentsia # Maria II was a Constitutionalist
+	ideology = ideology_reformer
+	traits = {
+		persistent
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_por_pedro_05 = {
+	heir = yes
+    culture = cu:portuguese
+    first_name = Pedro
+    last_name = de_Braganca
+    historical = yes
+    ig_leader = no
+    noble = yes
+    dna = dna_por_pedro_05
+    interest_group = ig_industrialists
+    ideology = ideology_social_democrat
+    traits = {
+        honorable
+        charismatic
+        sickly
+    }
+    birth_date = 1837.9.16 
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_por_luis_01 = {
+	heir = yes
+    culture = cu:portuguese
+    first_name = Luis
+    last_name = de_Braganca
+    historical = yes
+    ig_leader = no
+    noble = yes
+    dna = dna_por_luis_01
+    interest_group = ig_landowners
+    ideology = ideology_moderate
+    traits = {
+        romantic
+        literary
+        expensive_tastes
+    }
+    birth_date = 1838.10.31
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_por_carlos_01 = {
+	heir = yes
+    culture = cu:portuguese
+    first_name = Carlos
+    last_name = de_Braganca
+    historical = yes
+    ig_leader = no
+    noble = yes
+    dna = dna_por_carlos_01
+    interest_group = ig_petty_bourgeoisie
+    ideology = ideology_royalist
+    traits = {
+        basic_diplomat
+        romantic
+        expensive_tastes
+    }
+    birth_date = 1863.9.28
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_por_luis_02 = {
+	heir = yes
+    culture = cu:portuguese
+    first_name = Luis
+    last_name = de_Braganca
+    historical = yes
+    ig_leader = no
+    noble = yes
+    dna = dna_por_luis_02
+    interest_group = ig_petty_bourgeoisie
+    ideology = ideology_royalist
+    traits = {
+        brave
+        basic_colonial_administrator
+        romantic
+        expensive_tastes
+    }
+    birth_date = 1887.3.21
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_por_manuel_02 = {
+	heir = yes
+    culture = cu:portuguese
+    first_name = Manuel
+    last_name = de_Braganca
+    historical = yes
+    ig_leader = no
+    noble = yes
+    dna = dna_por_manuel_02
+    interest_group = ig_petty_bourgeoisie
+    ideology = ideology_humanitarian
+    traits = {
+        literary
+        romantic
+        tactful
+    }
+    birth_date = 1889.11.15
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}

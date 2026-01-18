@@ -1,0 +1,12 @@
+﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
+CHARACTERS = {
+	c:HOH = {
+		create_character = {
+			template = is_hoh_karl_anton_01
+		}	
+
+		create_character = {
+			template = is_hoh_leopold_01	
+		}
+	}
+}

@@ -1,0 +1,577 @@
+﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
+### Russian historic monarchs template file ###
+
+#Historics
+
+is_rus_nikolai_01 = {
+	first_name = Nikolai
+	last_name = Romanov
+	historical = yes
+	interest_group = ig_armed_forces
+	ideology = ideology_traditionalist
+	ruler = yes
+	birth_date = 1796.7.6
+	dna = dna_rus_nikolai_01 
+	traits = {
+		arrogant 
+		pious
+		imposing
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_rus_aleksandr_02 = {
+	first_name = Aleksandr
+	last_name = Romanov
+	historical = yes
+	heir = yes
+	birth_date = 1818.4.26
+	dna = dna_rus_aleksandr_02
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_market_liberal
+	traits = {
+		meticulous 
+		romantic
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_rus_tsesarevich_nikolai = {
+	heir = yes
+	culture = cu:russian
+	first_name = Nikolai
+	last_name = Romanov
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_rus_tsesarevich_nikolai
+	interest_group = ig_intelligentsia
+	ideology = ideology_humanitarian_royalist
+	traits = {
+		innovative
+		charismatic
+		meticulous
+		erudite 
+		romantic
+	}
+	birth_date = 1843.9.20
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_rus_aleksandr_03 = {
+	heir = yes
+	culture = cu:russian
+	first_name = Aleksandr
+	last_name = Romanov
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_rus_aleksandr_03
+	interest_group = ig_landowners
+	ideology = ideology_authoritarian
+	traits = {
+		imposing
+		wrathful
+		charismatic
+		bigoted
+	}
+	birth_date = 1845.3.10
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_rus_nikolai_02 = {
+	heir = yes
+	culture = cu:russian
+	first_name = Nikolai
+	last_name = Romanov
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_rus_nikolai_02
+	interest_group = ig_devout
+	ideology = ideology_traditionalist
+	traits = {
+		reserved
+		arrogant
+		imperious 
+		pious
+	}
+	birth_date = 1868.7.17
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_rus_aleksei_02 = {
+	heir = yes
+	culture = cu:russian
+	first_name = Aleksei
+	last_name = Romanov
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_rus_aleksei_02
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+	traits = {
+		arrogant
+		charismatic
+		wounded
+		sickly
+	}
+	birth_date = 1904.11.12
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+
+
+
+
+#Konstantin's Line
+
+is_rus_konstantin_nikolaevich = {
+	heir = yes
+	culture = cu:russian
+	first_name = Konstantin
+	last_name = Romanov
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_rus_konstantin_nikolaevich
+	interest_group = ig_landowners
+	ideology = ideology_market_liberal
+	traits = {
+		persistent
+		dockyard_master
+	}
+	birth_date = 1827.9.21
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_rus_nikolai_nikolaevich = {
+	heir = yes
+	culture = cu:russian
+	first_name = Nikolai
+	last_name = Romanov
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_rus_nikolai_nikolaevich
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	traits = {
+		grifter
+		hedonist
+	}
+	birth_date = 1831.8.8
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_rus_konstantin_konstantinovich = {
+	heir = yes
+	culture = cu:russian
+	first_name = Konstantin
+	last_name = Romanov
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_rus_konstantin_konstantinovich
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_moderate
+	traits = {
+		romantic
+		meticulous
+		innovative
+	}
+	birth_date = 1858.8.22
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_rus_dmitry_konstantinovich = {
+	heir = yes
+	culture = cu:russian
+	first_name = Dmitry
+	last_name = Romanov
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_rus_dmitry_konstantinovich
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	traits = {
+		persistent
+		pious
+	}
+	birth_date = 1860.6.13
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_rus_ivan_konstantinovich = {
+	heir = yes
+	culture = cu:russian
+	first_name = Ivan
+	last_name = Romanov
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_rus_ivan_konstantinovich
+	interest_group = ig_devout
+	ideology = ideology_moderate
+	traits = {
+		pious
+		cautious
+	}
+	birth_date = 1866.7.5
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_rus_gavriil_konstantinovich = {
+	heir = yes
+	culture = cu:russian
+	first_name = Gavriil
+	last_name = Romanov
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_rus_gavriil_konstantinovich
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	traits = {
+		charismatic
+		firebrand
+	}
+	birth_date = 1887.7.15
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_rus_vsevolod_ivanovich = {
+	heir = yes
+	culture = cu:russian
+	first_name = Vsevolod
+	last_name = Romanov
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_rus_vsevolod_ivanovich
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_moderate
+	traits = {
+		hedonist
+	}
+	birth_date = 1914.1.20
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+
+
+
+
+#Vladimir's Line
+
+is_rus_vladimir_aleksandrovich = {
+	heir = yes
+	culture = cu:russian
+	first_name = Vladimir
+	last_name = Romanov
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_rus_vladimir_aleksandrovich
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	traits = {
+		ambitious
+		charismatic
+	}
+	birth_date = 1847.4.22
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_rus_aleksei_aleksandrovich = {
+	heir = yes
+	culture = cu:russian
+	first_name = Aleksei
+	last_name = Romanov
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_rus_aleksei_aleksandrovich
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	traits = {
+		explorer
+	}
+	birth_date = 1850.1.14
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_rus_kirill_vladimirovich = {
+	heir = yes
+	culture = cu:russian
+	first_name = Kirill
+	last_name = Romanov
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_rus_kirill_vladimirovich
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_fascist
+	traits = {
+		innovative
+		explorer
+	}
+	birth_date = 1876.10.12
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_rus_boris_vladimirovich = {
+	heir = yes
+	culture = cu:russian
+	first_name = Boris
+	last_name = Romanov
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_rus_boris_vladimirovich
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	traits = {
+		explorer
+		hedonist
+		charismatic
+		romantic
+	}
+	birth_date = 1877.11.24
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_rus_andrei_vladimirovich = {
+	heir = yes
+	culture = cu:russian
+	first_name = Andrei
+	last_name = Romanov
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_rus_andrei_vladimirovich
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	traits = {
+		hedonist
+	}
+	birth_date = 1879.5.14 
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_rus_vladimir_andreievich = {
+	heir = yes
+	culture = cu:russian
+	first_name = Vladimir
+	last_name = Romanov
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_rus_vladimir_andreievich
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_moderate
+	traits = {
+		charismatic
+	}
+	birth_date = 1902.6.30
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_rus_vladimir_kirillovich = {
+	heir = yes
+	culture = cu:russian
+	first_name = Vladimir
+	last_name = Romanov
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_rus_vladimir_kirillovich
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_moderate
+	traits = {
+		persistent
+	}
+	birth_date = 1917.8.30
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+
+
+
+
+#Brothers of Nikolai
+
+is_rus_georgy_aleksandrovich = {
+	heir = yes
+	culture = cu:russian
+	first_name = Georgy
+	last_name = Romanov
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_rus_georgy_aleksandrovich
+	interest_group = ig_industrialists
+	ideology = ideology_humanitarian_royalist
+	traits = {
+		erudite
+		brave
+		explorer
+	}
+	birth_date = 1871.5.9
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_rus_mikhail_aleksandrovich = {
+	heir = yes
+	culture = cu:russian
+	first_name = Mikhail
+	last_name = Romanov
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_rus_mikhail_aleksandrovich
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	traits = {
+		basic_artillery_commander 
+		tactful 
+		cautious
+	}
+	birth_date = 1878.12.4
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_rus_georgy_mikhailovich = {
+	heir = yes
+	culture = cu:russian
+	first_name = Georgy
+	last_name = Romanov
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_rus_georgy_mikhailovich
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	traits = {
+		hedonist
+	}
+	birth_date = 1918.8.6
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}

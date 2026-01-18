@@ -1,0 +1,128 @@
+﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
+namespace = swe_monarch_birth
+
+# Gustaf 05 is born
+swe_monarch_birth.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_swe_oskar_02 }
+		NOT = { heir =  { has_template = is_swe_gustaf_05 } }
+		game_date >= 1858.6.16
+		game_date < 1859.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = swe_monarch_birth.1.a
+		default_option = yes
+
+		create_character = {
+			template = is_swe_gustaf_05
+		}
+	}
+}
+
+# Gustaf 06 is born
+swe_monarch_birth.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_swe_gustaf_05 }
+		NOT = { heir =  { has_template = is_swe_gustaf_06 } }
+		game_date >= 1882.11.11
+		game_date < 1883.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = swe_monarch_birth.2.a
+		default_option = yes
+
+		create_character = {
+			template = is_swe_gustaf_06
+		}
+	}
+}
+
+# Gustaf 07 is born
+swe_monarch_birth.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_swe_gustaf_06 }
+		NOT = { heir =  { has_template = is_swe_gustaf_07 } }
+		game_date >= 1906.1.26
+		game_date < 1907.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = swe_monarch_birth.3.a
+		default_option = yes
+
+		create_character = {
+			template = is_swe_gustaf_06
+		}
+	}
+}

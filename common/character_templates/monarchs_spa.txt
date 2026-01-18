@@ -1,0 +1,143 @@
+﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
+### Spanish historic monarchs template file ###
+
+
+is_spa_isabel_02 = {
+	first_name = Isabel
+    last_name = de_Borbon
+    historical = yes
+    ruler = yes
+    female = yes
+    birth_date = 1830.10.10
+    dna = dna_queen_isabella_02
+    interest_group = ig_intelligentsia
+    ideology = ideology_moderate
+    traits = {
+        trait_child
+    }
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_spa_alfonso_12 = {
+	heir = yes
+	culture = cu:spanish
+	first_name = Alfonso
+	last_name = de_Borbon
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_spa_alfonso_12
+	interest_group = ig_intelligentsia
+	ideology = ideology_moderate
+	traits = {
+		honorable
+		wounded
+		sickly	
+	}
+	birth_date = 1857.1.14
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_spa_alfonso_13 = {
+	heir = yes
+	culture = cu:spanish
+	first_name = Alfonso
+	last_name = de_Borbon
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_spa_alfonso_13
+	interest_group = ig_armed_forces
+	ideology = ideology_authoritarian
+	traits = {
+		ambitious
+		hedonist
+		reckless	
+	}
+	birth_date = 1886.5.17
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_spa_alfonso_14  = {
+	heir = yes
+	culture = cu:spanish
+	first_name = Alfonso
+	last_name = de_Borbon
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_spa_alfonso_14
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_moderate
+	traits = {
+		sickly
+	}
+	birth_date = 1907.5.10
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_spa_jaime_03 = {
+	heir = yes
+	culture = cu:spanish
+	first_name = Jaime
+	last_name = de_Borbon
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_spa_jaime_03
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_moderate
+	traits = {
+		beetle_ear	
+	}
+	birth_date = 1908.6.23
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_spa_juan_03 = {
+	heir = yes
+	culture = cu:spanish
+	first_name = Juan
+	last_name = de_Borbon
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_spa_juan_03
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_liberal_leader
+	traits = {
+		cautious
+	}
+	birth_date = 1913.6.20
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}

@@ -1,0 +1,14 @@
+﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
+namespace = sweden_monarchy
+
+ sweden_monarchy.1 = {
+
+ }
+
+sweden_monarchy.2 = {
+	
+}
+
+sweden_monarchy.3 = {
+	
+}

@@ -1,0 +1,286 @@
+﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
+### Austrian historic monarchs template file ###
+
+is_aus_ferdinand_01 = {
+	first_name = Ferdinand
+	last_name = von_Habsburg
+	historical = yes
+	ruler = yes
+	birth_date = 1793.4.19
+	dna = dna_aus_ferdinand_01
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	traits = {
+		arrogant
+		psychological_affliction
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_aus_franz_josef_01 = {
+	first_name = Franz_Josef
+	last_name = von_Habsburg
+	historical = yes
+	heir = yes
+	noble = yes
+	birth_date = 1830.8.18
+	dna = dna_aus_franz_josef_01
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	traits = {
+		cautious
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+TRY_REPLACE:is_aus_maximilian_01 = {
+	heir = yes
+	culture = cu:south_german
+	first_name = Maximilian
+	last_name = von_Habsburg
+	historical = yes
+	ig_leader = no
+	noble = yes
+	birth_date = 1832.7.6
+	dna = dna_aus_maximilian_01
+	interest_group = ig_intelligentsia
+	ideology = ideology_humanitarian_royalist
+	traits = {
+		dockyard_master
+		charismatic
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+TRY_REPLACE:is_aus_karl_ludwig_01 = {
+	heir = yes
+	culture = cu:south_german
+	first_name = Karl_Ludwig
+	last_name = von_Habsburg
+	historical = yes
+	ig_leader = no
+	noble = yes
+	birth_date = 1833.7.30
+	dna = dna_aus_karl_ludwig_01
+	interest_group = ig_devout
+	ideology = ideology_traditionalist
+	traits = {
+		bigoted
+		pious
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_aus_ludwig_viktor_01 = {
+	heir = yes
+	culture = cu:south_german
+	first_name = Ludwig_Viktor
+	last_name = von_Habsburg
+	historical = yes
+	ig_leader = no
+	noble = yes
+	birth_date = 1842.5.15
+	dna = dna_aus_ludwig_viktor_01
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_moderate
+	traits = {
+		romantic
+		hedonist
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_aus_rudolf_01 = {
+	heir = yes
+	culture = cu:south_german
+	first_name = Rudolf
+	last_name = von_Habsburg
+	historical = yes
+	ig_leader = no
+	noble = yes
+	birth_date = 1858.8.21
+	dna = dna_aus_rudolf_01
+	interest_group = ig_intelligentsia
+	ideology = ideology_reformer
+	traits = {
+		reckless
+		alcoholic
+		psychological_affliction
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_aus_franz_ferdinand_01 = {
+	heir = yes
+	culture = cu:south_german
+	first_name = Franz_Ferdinand
+	last_name = von_Habsburg
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_aus_franz_ferdinand_01
+	interest_group = ig_armed_forces
+	ideology = ideology_reformer
+	traits = {
+		explorer
+		romantic
+		direct
+		persistent
+	}
+	birth_date = 1863.12.18
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_aus_otto_franz_01 = {
+	heir = yes
+	culture = cu:south_german
+	first_name = Otto_Franz
+	last_name = von_Habsburg
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_aus_otto_franz_01
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	traits = {
+		charismatic
+		hedonist
+		expensive_tastes
+	}
+	birth_date = 1865.4.21
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_aus_karl_01 = {
+	heir = yes
+	culture = cu:south_german
+	first_name = Karl
+	last_name = von_Habsburg
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_aus_karl_01
+	interest_group = ig_devout
+	ideology = ideology_reformer
+	traits = {
+		pious
+		charismatic
+	}
+	birth_date = 1887.8.17
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_aus_otto_01 = {
+	heir = yes
+	culture = cu:south_german
+	first_name = Otto
+	last_name = von_Habsburg
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_aus_karl_01
+	interest_group = ig_devout
+	ideology = ideology_reformer
+	traits = {
+		pious
+		charismatic
+	}
+	birth_date = 1912.11.20
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_aus_maximilian_eugen_01 = {
+	heir = yes
+	culture = cu:south_german
+	first_name = Maximilian_Eugen
+	last_name = von_Habsburg
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_aus_maximilian_eugen_01
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	traits = {
+		innovative
+	}
+	birth_date = 1895.4.13
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_aus_ferdinand_02 = {
+	heir = yes
+	culture = cu:south_german
+	first_name = Ferdinand
+	last_name = von_Habsburg
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_aus_ferdinand_02
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_moderate
+	traits = {
+		innovative
+	}
+	birth_date = 1918.12.6
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
