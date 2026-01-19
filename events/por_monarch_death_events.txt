@@ -1,0 +1,201 @@
+﻿namespace = por_monarch_death
+
+# Maria 02 dies [ New Heir: (B) Luis 01 (P5>38) Nobody (P5<38) ]
+por_monarch_death.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Pedro 05 becomes ruler, Luis 01 becomes heir
+		name = por_monarch_death.1.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_por_pedro_05 }
+			game_date >= 1838.10.31
+		}
+
+		create_character = {
+            template = is_por_luis_01
+        }
+	}
+	option = { # Pedro 05 becomes ruler, Nobody becomes heir
+		name = por_monarch_death.1.b
+
+		trigger = {	
+			ruler = { has_template = is_por_pedro_05 }
+			game_date < 1838.10.31
+		}
+	}
+}
+
+# Pedro 05 dies [ New Heir: (B) Carlos 01 (L1>63) Nobody (L1<63) ]
+por_monarch_death.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Luis 01 becomes ruler, Carlos 01 becomes heir
+		name = por_monarch_death.2.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_por_luis_01 }
+			game_date >= 1863.9.28
+		}
+
+		create_character = {
+            template = is_por_carlos_01
+        }
+	}
+	option = { # Luis 01 becomes ruler, Nobody becomes heir
+		name = por_monarch_death.2.b
+
+		trigger = {	
+			ruler = { has_template = is_por_luis_01 }
+			game_date < 1863.9.28
+		}
+	}
+}
+
+# Luis 01 dies [ New Heir: (B) Luis 02 (C1>87) Nobody (C1<87) ]
+por_monarch_death.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Carlos 01 becomes ruler, Luis 02 becomes heir
+		name = por_monarch_death.3.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_por_carlos_01 }
+			game_date >= 1887.3.21
+		}
+
+		create_character = {
+            template = is_por_luis_02
+        }
+	}
+	option = { # Carlos 01 becomes ruler, Nobody becomes heir
+		name = por_monarch_death.3.b
+
+		trigger = {	
+			ruler = { has_template = is_por_carlos_01 }
+			game_date < 1887.3.21
+		}
+	}
+}
+
+# Carlos 01 dies [ New Heir: (B) Manuel 02 (L2>89) Nobody (L2<89) ] 
+por_monarch_death.4 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Luis 02 becomes ruler, Manuel 02 becomes heir
+		name = por_monarch_death.4.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_por_luis_02 }
+			game_date >= 1889.11.15
+		}
+
+		create_character = {
+            template = is_por_manuel_02
+        }
+	}
+	option = { # Luis 02 becomes ruler, Nobody becomes heir
+		name = por_monarch_death.4.b
+
+		trigger = {	
+			ruler = { has_template = is_por_luis_02 }
+			game_date < 1889.11.15
+		}
+	}
+}

@@ -1,0 +1,85 @@
+﻿namespace = fra_bourbon_monarch_birth
+
+# Charles 11 is born
+fra_bourbon_monarch_birth.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = FRA_jean_de_bourbon }
+		NOT = { heir =  { has_template = FRA_carlos_de_bourbon } }
+		game_date >= 1848.3.30
+		game_date < 1849.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = fra_bourbon_monarch_birth.1.a
+		default_option = yes
+
+		create_character = {
+			template = SPC_carlos_vii_de_borbon_template
+		}
+	}
+}
+
+# Jacques 01 is born
+fra_bourbon_monarch_birth.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = FRA_carlos_de_bourbon }
+		NOT = { heir =  { has_template = FRA_jacques_de_bourbon } }
+		game_date >= 1870.6.27
+		game_date < 1871.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = fra_bourbon_monarch_birth.2.a
+		default_option = yes
+
+		create_character = {
+			template = SPC_jaime_iii_de_borbon_template
+		}
+	}
+}

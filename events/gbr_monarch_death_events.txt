@@ -1,0 +1,1504 @@
+﻿namespace = gbr_monarch_death
+
+# William 04 dies [ New Heir: (B) Edward 07 (V>41) Nobody (V<41)]
+gbr_monarch_death.1 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Victoria 01 becomes ruler, Edward 07 becomes heir
+		name = gbr_monarch_death.1.a
+		default_option = yes
+		
+		trigger = {	
+			ruler = { has_template = is_gbr_victoria_01 }
+			game_date >= 1841.11.9
+		}
+
+		create_character = {
+			template = is_gbr_edward_07
+		}
+	}
+	option = { # Victoria 01 becomes ruler, Nobody becomes heir
+		name = gbr_monarch_death.1.b
+
+		trigger = {	
+			ruler = { has_template = is_gbr_victoria_01 }
+			game_date < 1841.11.9
+		}
+	}
+}
+
+# Victoria 01 dies [ New Heir: (G) Albert 01 (E7>64,<92) George 05 (E7>92) Alfred 02 (G5<94,E7<65) Alfred 03 (Al2>74) Arthur 01 (Al2<74, Al3) Arthur 02 (Ar1>83) Leopold 01 (Ar1<83)]
+gbr_monarch_death.2 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Edwarwd 07 becomes ruler, Albert 01 becomes heir
+		name = gbr_monarch_death.2.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_gbr_edward_07 }
+			game_date >= 1864.1.8
+			game_date < 1892.1.14
+		}
+
+		create_character = {
+			template = is_gbr_albert_01
+		}
+	}	
+	option = { # Edward 07 becomes ruler, George 05 becomes heir
+		name = gbr_monarch_death.2.b
+
+		trigger = {	
+			ruler = { has_template = is_gbr_edward_07 }
+			game_date >= 1865.6.3
+		}
+
+		create_character = {
+			template = is_gbr_george_05
+		}
+	}
+	option = { # Albert 01/George 05 becomes ruler, Alfred 02 becomes heir
+		name = gbr_monarch_death.2.c
+
+		trigger = {	
+			OR = { 
+				AND = {
+					ruler = { has_template = is_gbr_albert_01 }
+					game_date < 1865.6.3
+				}
+				AND = {
+					ruler = { has_template = is_gbr_george_05 }
+					game_date < 1894.6.23
+				}
+			}
+		}
+
+		create_character = {
+			template = is_gbr_alfred_02
+		}
+	}
+	option = { # Alfred 02 becomes ruler, Alfred 03 becomes heir
+		name = gbr_monarch_death.2.d
+
+		trigger = {	
+			ruler = { has_template = is_gbr_alfred_02 }
+			game_date >= 1874.2.6
+		}
+
+		create_character = {
+			template = is_gbr_alfred_03
+		}
+	}
+	option = { # Alfred 02/Alfred 03 becomes ruler, Arthur 01 becomes heir
+		name = gbr_monarch_death.2.e
+
+		trigger = {	
+			OR = { 
+				AND = {
+					ruler = { has_template = is_gbr_alfred_02 }
+					game_date < 1874.2.6
+				}
+				AND = {
+					ruler = { has_template = is_gbr_alfred_03 }
+					game_date >= 1850.5.1
+				}
+			}
+		}
+
+		create_character = {
+			template = is_gbr_arthur_01
+		}
+	}
+	option = { # Arthur 01 becomes ruler, Arthur 02 becomes heir
+		name = gbr_monarch_death.2.f
+
+		trigger = {	
+			ruler = { has_template = is_gbr_arthur_01 }
+			game_date >= 1863.1.13
+		}
+
+		create_character = {
+			template = is_gbr_arthur_02
+		}
+	}
+	option = { # Arthur 01 becomes ruler, Leopold 01 becomes heir
+		name = gbr_monarch_death.2.g
+
+		trigger = {	
+			ruler = { has_template = is_gbr_arthur_01 }
+			game_date < 1883.1.13
+		}
+
+		create_character = {
+			template = is_gbr_leopold_01
+		}
+	}
+}
+
+# Edward 07 dies [ New Heir: (J) George 05 (A1>65) Edward 08 (G5>94) George 06 (E8) Alfred 02 (A1<65,G5<94) Alfred 03 (Al2>74) Arthur 01 (Al2<74, Al3) Arthur 02 (Ar1>83) Arthur 03 (Ar2>14)Leopold 01 (Ar1<83) Charles 03 (L1>84,Ar2<14,Ar3)]
+gbr_monarch_death.3 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Edward 07 becomes ruler, George 05 becomes heir
+		name = gbr_monarch_death.3.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_gbr_edward_07 }
+			game_date >= 1865.6.3
+		}
+
+		create_character = {
+			template = is_gbr_george_05
+		}
+	}
+	option = { # George 05 becomes ruler, Edward 08 becomes heir
+		name = gbr_monarch_death.3.b
+
+		trigger = {	
+			ruler = { has_template = is_gbr_george_05 }
+			game_date >= 1894.6.23
+		}
+
+		create_character = {
+			template = is_gbr_edward_08
+		}
+	}
+	option = { # Edward 08 becomes ruler, George 06 becomes heir
+		name = gbr_monarch_death.3.c
+
+		trigger = {	
+			ruler = { has_template = is_gbr_edward_08 }
+			game_date >= 1895.12.14
+		}
+
+		create_character = {
+			template = is_gbr_george_06
+		}
+	}
+	option = { # Albert 01/George 05 becomes ruler, Alfred 02 becomes heir
+		name = gbr_monarch_death.3.d
+
+		trigger = {	
+			OR = { 
+				AND = {
+					ruler = { has_template = is_gbr_albert_01 }
+					game_date < 1865.6.3
+				}
+				AND = {
+					ruler = { has_template = is_gbr_george_05 }
+					game_date < 1894.6.23
+				}
+			}
+		}
+
+		create_character = {
+			template = is_gbr_alfred_02
+		}
+	}
+	option = { # Alfred 02 becomes ruler, Alfred 03 becomes heir
+		name = gbr_monarch_death.3.e
+
+		trigger = {	
+			ruler = { has_template = is_gbr_alfred_02 }
+			game_date >= 1874.2.6
+		}
+
+		create_character = {
+			template = is_gbr_alfred_03
+		}
+	}
+	option = { # Alfred 02/Alfred 03 becomes ruler, Arthur 01 becomes heir
+		name = gbr_monarch_death.3.f
+
+		trigger = {	
+			OR = { 
+				AND = {
+					ruler = { has_template = is_gbr_alfred_02 }
+					game_date < 1874.2.6
+				}
+				AND = {
+					ruler = { has_template = is_gbr_alfred_03 }
+					game_date >= 1850.5.1
+				}
+			}
+		}
+
+		create_character = {
+			template = is_gbr_arthur_01
+		}
+	}
+	option = { # Arthur 01 becomes ruler, Arthur 02 becomes heir
+		name = gbr_monarch_death.3.g
+
+		trigger = {	
+			ruler = { has_template = is_gbr_arthur_01 }
+			game_date >= 1863.1.13
+		}
+
+		create_character = {
+			template = is_gbr_arthur_02
+		}
+	}
+	option = { # Arthur 02 becomes ruler, Arthur 03 becomes heir
+		name = gbr_monarch_death.3.h
+
+		trigger = {	
+			ruler = { has_template = is_gbr_arthur_02 }
+			game_date >= 1914.8.9
+		}
+
+		create_character = {
+			template = is_gbr_arthur_03
+		}
+	}
+	option = { # Arthur 01 becomes ruler, Leopold 01 becomes heir
+		name = gbr_monarch_death.3.i
+
+		trigger = {	
+			ruler = { has_template = is_gbr_arthur_01 }
+			game_date < 1883.1.13
+		}
+
+		create_character = {
+			template = is_gbr_leopold_01
+		}
+	}
+	option = { # Leopold 01/Arthur 02/Arthur 03 becomes ruler, Charles 03 becomes heir
+		name = gbr_monarch_death.3.j
+
+		trigger = {	
+			OR = { 
+				AND = {
+					ruler = { has_template = is_gbr_leopold_01 }
+					game_date >= 1884.7.19
+				}
+				AND = {
+					ruler = { has_template = is_gbr_arthur_02 }
+					game_date < 1914.8.9
+				}
+				AND = {
+					ruler = { has_template = is_gbr_arthur_03 }
+					game_date >= 1884.7.19
+				}
+			}
+		}
+
+		create_character = {
+			template = is_gbr_charles_03
+		}
+	}	
+}
+
+# Albert 01 dies [ New Heir: (K) Edward 08 (G5>94) George 06 (E8) Elizabeth 02 (G6>26) Henry 09 (G6<26) Alfred 02 (G5<94) Alfred 03 (Al2>74) Arthur 01 (Al2<74, Al3) Arthur 02 (Ar1>83) Arthur 03 (Ar2>14) Leopold 01 (Ar1<83) Charles 03 (L1>84,Ar2<14,Ar3)]
+gbr_monarch_death.4 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # George 05 becomes ruler, Edward 08 becomes heir
+		name = gbr_monarch_death.4.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_gbr_george_05 }
+			game_date >= 1894.6.23
+		}
+
+		create_character = {
+			template = is_gbr_edward_08
+		}
+	}
+	option = { # Edward 08 becomes ruler, George 06 becomes heir
+		name = gbr_monarch_death.4.b
+
+		trigger = {	
+			ruler = { has_template = is_gbr_edward_08 }
+			game_date = 1895.12.14
+		}
+
+		create_character = {
+			template = is_gbr_george_06
+		}
+	}
+	option = { # George 06 becomes ruler, Elizabeth 02 becomes heir
+		name = gbr_monarch_death.4.c
+
+		trigger = {	
+			ruler = { has_template = is_gbr_george_06 }
+			game_date >= 1926.4.21
+		}
+
+		create_character = {
+			template = is_gbr_elizabeth_02
+		}
+	}
+	option = { # George 06 becomes ruler, Henry 09 becomes heir
+		name = gbr_monarch_death.4.d
+
+		trigger = {	
+			ruler = { has_template = is_gbr_george_06 }
+			game_date < 1926.4.21
+		}
+
+		create_character = {
+			template = is_gbr_henry_09
+		}
+	}
+	option = { # Albert 01/George 05 becomes ruler, Alfred 02 becomes heir
+		name = gbr_monarch_death.4.e
+
+		trigger = {	
+			OR = { 
+				AND = {
+					ruler = { has_template = is_gbr_albert_01 }
+					game_date < 1865.6.3
+				}
+				AND = {
+					ruler = { has_template = is_gbr_george_05 }
+					game_date < 1894.6.23
+				}
+			}
+		}
+
+		create_character = {
+			template = is_gbr_alfred_02
+		}
+	}
+	option = { # Alfred 02 becomes ruler, Alfred 03 becomes heir
+		name = gbr_monarch_death.4.f
+
+		trigger = {	
+			ruler = { has_template = is_gbr_alfred_02 }
+			game_date >= 1874.2.6
+		}
+
+		create_character = {
+			template = is_gbr_alfred_03
+		}
+	}
+	option = { # Alfred 02/Alfred 03 becomes ruler, Arthur 01 becomes heir
+		name = gbr_monarch_death.4.g
+
+		trigger = {	
+			OR = { 
+				AND = {
+					ruler = { has_template = is_gbr_alfred_02 }
+					game_date < 1874.2.6
+				}
+				AND = {
+					ruler = { has_template = is_gbr_alfred_03 }
+					game_date >= 1850.5.1
+				}
+			}
+		}
+
+		create_character = {
+			template = is_gbr_arthur_01
+		}
+	}
+	option = { # Arthur 01 becomes ruler, Arthur 02 becomes heir
+		name = gbr_monarch_death.4.h
+
+		trigger = {	
+			ruler = { has_template = is_gbr_arthur_01 }
+			game_date >= 1863.1.13
+		}
+
+		create_character = {
+			template = is_gbr_arthur_02
+		}
+	}
+	option = { # Arthur 02 becomes ruler, Arthur 03 becomes heir
+		name = gbr_monarch_death.4.i
+
+		trigger = {	
+			ruler = { has_template = is_gbr_arthur_02 }
+			game_date >= 1914.8.9
+		}
+
+		create_character = {
+			template = is_gbr_arthur_03
+		}
+	}
+	option = { # Arthur 01 becomes ruler, Leopold 01 becomes heir
+		name = gbr_monarch_death.4.j
+
+		trigger = {	
+			ruler = { has_template = is_gbr_arthur_01 }
+			game_date < 1883.1.13
+		}
+
+		create_character = {
+			template = is_gbr_leopold_01
+		}
+	}
+	option = { # Leopold 01/Arthur 02/Arthur 03 becomes ruler, Charles 03 becomes heir
+		name = gbr_monarch_death.4.k
+
+		trigger = {	
+			OR = { 
+				AND = {
+					ruler = { has_template = is_gbr_leopold_01 }
+					game_date >= 1884.7.19
+				}
+				AND = {
+					ruler = { has_template = is_gbr_arthur_02 }
+					game_date < 1914.8.9
+				}
+				AND = {
+					ruler = { has_template = is_gbr_arthur_03 }
+					game_date >= 1884.7.19
+				}
+			}
+		}
+
+		create_character = {
+			template = is_gbr_charles_03
+		}
+	}	
+}
+
+# George 05 dies [ New Heir: (J) George 06 (E8) Elizabeth 02 (G6>26) Henry 09 (G6<26) George 07 (H9<41) Alfred 03 (Al2>74) Arthur 01 (Al2<74, Al3) Arthur 02 (Ar1>83) Arthur 03 (Ar2>14) Leopold 01 (Ar1<83) Charles 03 (L1>84,Ar2<14,Ar3)]
+gbr_monarch_death.5 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Edward 08 becomes ruler, George 06 becomes heir
+		name = gbr_monarch_death.5.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_gbr_edward_08 }
+			game_date = 1895.12.14
+		}
+
+		create_character = {
+			template = is_gbr_george_06
+		}
+	}
+	option = { # George 06 becomes ruler, Elizabeth 02 becomes heir
+		name = gbr_monarch_death.5.b
+
+		trigger = {	
+			ruler = { has_template = is_gbr_george_06 }
+			game_date >= 1926.4.21
+		}
+
+		create_character = {
+			template = is_gbr_elizabeth_02
+		}
+	}
+	option = { # George 06 becomes ruler, Henry 09 becomes heir
+		name = gbr_monarch_death.5.c
+
+		trigger = {	
+			ruler = { has_template = is_gbr_george_06 }
+			game_date < 1926.4.21
+		}
+
+		create_character = {
+			template = is_gbr_henry_09
+		}
+	}
+	option = { # Henry 09 becomes ruler, George 07 becomes heir
+		name = gbr_monarch_death.5.d
+
+		trigger = {	
+			ruler = { has_template = is_gbr_henry_09 }
+			game_date >= 1902.12.20
+		}
+
+		create_character = {
+			template = is_gbr_george_07
+		}
+	}
+	option = { # Alfred 02 becomes ruler, Alfred 03 becomes heir
+		name = gbr_monarch_death.5.e
+
+		trigger = {	
+			ruler = { has_template = is_gbr_alfred_02 }
+			game_date >= 1874.2.6
+		}
+
+		create_character = {
+			template = is_gbr_alfred_03
+		}
+	}
+	option = { # Alfred 02/Alfred 03 becomes ruler, Arthur 01 becomes heir
+		name = gbr_monarch_death.5.f
+
+		trigger = {	
+			OR = { 
+				AND = {
+					ruler = { has_template = is_gbr_alfred_02 }
+					game_date < 1874.2.6
+				}
+				AND = {
+					ruler = { has_template = is_gbr_alfred_03 }
+					game_date >= 1850.5.1
+				}
+			}
+		}
+
+		create_character = {
+			template = is_gbr_arthur_01
+		}
+	}
+	option = { # Arthur 01 becomes ruler, Arthur 02 becomes heir
+		name = gbr_monarch_death.5.g
+
+		trigger = {	
+			ruler = { has_template = is_gbr_arthur_01 }
+			game_date >= 1863.1.13
+		}
+
+		create_character = {
+			template = is_gbr_arthur_02
+		}
+	}
+	option = { # Arthur 02 becomes ruler, Arthur 03 becomes heir
+		name = gbr_monarch_death.5.h
+
+		trigger = {	
+			ruler = { has_template = is_gbr_arthur_02 }
+			game_date >= 1914.8.9
+		}
+
+		create_character = {
+			template = is_gbr_arthur_03
+		}
+	}
+	option = { # Arthur 01 becomes ruler, Leopold 01 becomes heir
+		name = gbr_monarch_death.5.i
+
+		trigger = {	
+			ruler = { has_template = is_gbr_arthur_01 }
+			game_date < 1883.1.13
+		}
+
+		create_character = {
+			template = is_gbr_leopold_01
+		}
+	}
+	option = { # Leopold 01/Arthur 02/Arthur 03 becomes ruler, Charles 03 becomes heir
+		name = gbr_monarch_death.5.j
+
+		trigger = {	
+			OR = { 
+				AND = {
+					ruler = { has_template = is_gbr_leopold_01 }
+					game_date >= 1884.7.19
+				}
+				AND = {
+					ruler = { has_template = is_gbr_arthur_02 }
+					game_date < 1914.8.9
+				}
+				AND = {
+					ruler = { has_template = is_gbr_arthur_03 }
+					game_date >= 1884.7.19
+				}
+			}
+		}
+
+		create_character = {
+			template = is_gbr_charles_03
+		}
+	}	
+}
+
+# Edward 08 dies [ New Heir: (D) Elizabeth 02 (G6>26) Henry 09 (G6<26) George 07 (H9<41) Nobody (G7)]
+gbr_monarch_death.6 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # George 06 becomes ruler, Elizabeth 02 becomes heir
+		name = gbr_monarch_death.6.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_gbr_george_06 }
+			game_date >= 1926.4.21
+		}
+
+		create_character = {
+			template = is_gbr_elizabeth_02
+		}
+	}
+	option = { # George 06 becomes ruler, Henry 09 becomes heir
+		name = gbr_monarch_death.6.b
+
+		trigger = {	
+			ruler = { has_template = is_gbr_george_06 }
+			game_date < 1926.4.21
+		}
+
+		create_character = {
+			template = is_gbr_henry_09
+		}
+	}
+	option = { # Henry 09 becomes ruler, George 07 becomes heir
+		name = gbr_monarch_death.6.c
+
+		trigger = {	
+			ruler = { has_template = is_gbr_henry_09 }
+			game_date >= 1902.12.20
+		}
+
+		create_character = {
+			template = is_gbr_george_07
+		}
+	}
+	option = { # George 07 becomes ruler, Nobody becomes heir
+		name = gbr_monarch_death.6.d
+
+		trigger = {	
+			ruler = { has_template = is_gbr_george_07}
+			game_date >= 1933.6.14
+		}
+	}	
+}
+
+# Alfred 02 dies [ New Heir: (H) Arthur 01 (Al3) Arthur 02 (Ar1>83) Arthur 03 (Ar2>14) Leopold 01 (Ar1<83) Charles 03 (L1>84,Ar2<14,Ar3) John 02 (C3>06) Ernest 01 (J2>35) Nobody (C3<06,J2<35,Er1)]
+gbr_monarch_death.7 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Alfred 02/Alfred 03 becomes ruler, Arthur 01 becomes heir
+		name = gbr_monarch_death.7.a
+		default_option = yes
+
+		trigger = {	
+			OR = { 
+				AND = {
+					ruler = { has_template = is_gbr_alfred_02 }
+					game_date < 1874.2.6
+				}
+				AND = {
+					ruler = { has_template = is_gbr_alfred_03 }
+					game_date >= 1850.5.1
+				}
+			}
+		}
+
+		create_character = {
+			template = is_gbr_arthur_01
+		}
+	}
+	option = { # Arthur 01 becomes ruler, Arthur 02 becomes heir
+		name = gbr_monarch_death.7.b
+
+		trigger = {	
+			ruler = { has_template = is_gbr_arthur_01 }
+			game_date >= 1863.1.13
+		}
+
+		create_character = {
+			template = is_gbr_arthur_02
+		}
+	}
+	option = { # Arthur 02 becomes ruler, Arthur 03 becomes heir
+		name = gbr_monarch_death.7.c
+
+		trigger = {	
+			ruler = { has_template = is_gbr_arthur_02 }
+			game_date >= 1914.8.9
+		}
+
+		create_character = {
+			template = is_gbr_arthur_03
+		}
+	}
+	option = { # Arthur 01 becomes ruler, Leopold 01 becomes heir
+		name = gbr_monarch_death.7.d
+
+		trigger = {	
+			ruler = { has_template = is_gbr_arthur_01 }
+			game_date < 1883.1.13
+		}
+
+		create_character = {
+			template = is_gbr_leopold_01
+		}
+	}
+	option = { # Leopold 01/Arthur 02/Arthur 03 becomes ruler, Charles 03 becomes heir
+		name = gbr_monarch_death.7.e
+
+		trigger = {	
+			OR = { 
+				AND = {
+					ruler = { has_template = is_gbr_leopold_01 }
+					game_date >= 1884.7.19
+				}
+				AND = {
+					ruler = { has_template = is_gbr_arthur_02 }
+					game_date < 1914.8.9
+				}
+				AND = {
+					ruler = { has_template = is_gbr_arthur_03 }
+					game_date >= 1884.7.19
+				}
+			}
+		}
+
+		create_character = {
+			template = is_gbr_charles_03
+		}
+	}
+	option = { # Charles 03 becomes ruler, John 02 becomes heir
+		name = gbr_monarch_death.7.f
+
+		trigger = {	
+			ruler = { has_template = is_gbr_charles_03 }
+			game_date >= 1906.8.2
+		}
+
+		create_character = {
+			template = is_gbr_john_02
+		}
+	}
+	option = { # John 02 becomes ruler, Ernest 01 becomes heir
+		name = gbr_monarch_death.7.g
+
+		trigger = {	
+			ruler = { has_template = is_gbr_john_02 }
+			game_date >= 1935.1.14
+		}
+
+		create_character = {
+			template = is_gbr_ernest_01
+		}
+	}
+	option = { # Charles 06/John 02/Ernest 01 becomes ruler, Nobody becomes heir
+		name = gbr_monarch_death.7.h
+
+		trigger = {	
+			OR = { 
+				AND = {
+					ruler = { has_template = is_gbr_charles_03 }
+					game_date < 1906.8.2
+				}
+				AND = {
+					ruler = { has_template = is_gbr_john_02 }
+					game_date < 1935.1.14
+				}
+				AND = {
+					ruler = { has_template = is_gbr_ernest_01 }
+					game_date >= 1935.1.14
+				}
+			}
+		}
+	}
+}
+
+# Alfred 03 dies [ New Heir: (G) Arthur 02 (Ar1>83) Arthur 03 (Ar2>14) Leopold 01 (Ar1<83) Charles 03 (L1>84,Ar2<14,Ar3) John 02 (C3>06) Ernest 01 (J2>35) Nobody (C3<06,J2<35,Er1)]
+gbr_monarch_death.8 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Arthur 01 becomes ruler, Arthur 02 becomes heir
+		name = gbr_monarch_death.8.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_gbr_arthur_01 }
+			game_date >= 1863.1.13
+		}
+
+		create_character = {
+			template = is_gbr_arthur_02
+		}
+	}
+	option = { # Arthur 02 becomes ruler, Arthur 03 becomes heir
+		name = gbr_monarch_death.8.b
+
+		trigger = {	
+			ruler = { has_template = is_gbr_arthur_02 }
+			game_date >= 1914.8.9
+		}
+
+		create_character = {
+			template = is_gbr_arthur_03
+		}
+	}
+	option = { # Arthur 01 becomes ruler, Leopold 01 becomes heir
+		name = gbr_monarch_death.8.c
+
+		trigger = {	
+			ruler = { has_template = is_gbr_arthur_01 }
+			game_date < 1883.1.13
+		}
+
+		create_character = {
+			template = is_gbr_leopold_01
+		}
+	}
+	option = { # Leopold 01/Arthur 02/Arthur 03 becomes ruler, Charles 03 becomes heir
+		name = gbr_monarch_death.8.d
+
+		trigger = {	
+			OR = { 
+				AND = {
+					ruler = { has_template = is_gbr_leopold_01 }
+					game_date >= 1884.7.19
+				}
+				AND = {
+					ruler = { has_template = is_gbr_arthur_02 }
+					game_date < 1914.8.9
+				}
+				AND = {
+					ruler = { has_template = is_gbr_arthur_03 }
+					game_date >= 1884.7.19
+				}
+			}
+		}
+
+		create_character = {
+			template = is_gbr_charles_03
+		}
+	}
+	option = { # Charles 03 becomes ruler, John 02 becomes heir
+		name = gbr_monarch_death.8.e
+
+		trigger = {	
+			ruler = { has_template = is_gbr_charles_03 }
+			game_date >= 1906.8.2
+		}
+
+		create_character = {
+			template = is_gbr_john_02
+		}
+	}
+	option = { # John 02 becomes ruler, Ernest 01 becomes heir
+		name = gbr_monarch_death.8.f
+
+		trigger = {	
+			ruler = { has_template = is_gbr_john_02 }
+			game_date >= 1935.1.14
+		}
+
+		create_character = {
+			template = is_gbr_ernest_01
+		}
+	}
+	option = { # Charles 06/John 02/Ernest 01 becomes ruler, Nobody becomes heir
+		name = gbr_monarch_death.8.g
+
+		trigger = {	
+			OR = { 
+				AND = {
+					ruler = { has_template = is_gbr_charles_03 }
+					game_date < 1906.8.2
+				}
+				AND = {
+					ruler = { has_template = is_gbr_john_02 }
+					game_date < 1935.1.14
+				}
+				AND = {
+					ruler = { has_template = is_gbr_ernest_01 }
+					game_date >= 1935.1.14
+				}
+			}
+		}
+	}	
+}
+
+# Arthur 01 dies [ New Heir: (E) Arthur 03 (Ar2>14) Charles 03 (L1>84,Ar2<14,Ar3) John 02 (C3>06) Ernest 01 (J2>35) Nobody (C3<06,J2<35,Er1)]
+gbr_monarch_death.9 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Arthur 02 becomes ruler, Arthur 03 becomes heir
+		name = gbr_monarch_death.9.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_gbr_arthur_02 }
+			game_date >= 1914.8.9
+		}
+
+		create_character = {
+			template = is_gbr_arthur_03
+		}
+	}
+	option = { # Leopold 01/Arthur 02/Arthur 03 becomes ruler, Charles 03 becomes heir
+		name = gbr_monarch_death.9.b
+
+		trigger = {	
+			OR = { 
+				AND = {
+					ruler = { has_template = is_gbr_leopold_01 }
+					game_date >= 1884.7.19
+				}
+				AND = {
+					ruler = { has_template = is_gbr_arthur_02 }
+					game_date < 1914.8.9
+				}
+				AND = {
+					ruler = { has_template = is_gbr_arthur_03 }
+					game_date >= 1884.7.19
+				}
+			}
+		}
+
+		create_character = {
+			template = is_gbr_charles_03
+		}
+	}
+	option = { # Charles 03 becomes ruler, John 02 becomes heir
+		name = gbr_monarch_death.9.c
+
+		trigger = {	
+			ruler = { has_template = is_gbr_charles_03 }
+			game_date >= 1906.8.2
+		}
+
+		create_character = {
+			template = is_gbr_john_02
+		}
+	}
+	option = { # John 02 becomes ruler, Ernest 01 becomes heir
+		name = gbr_monarch_death.9.d
+
+		trigger = {	
+			ruler = { has_template = is_gbr_john_02 }
+			game_date >= 1935.1.14
+		}
+
+		create_character = {
+			template = is_gbr_ernest_01
+		}
+	}
+	option = { # Charles 06/John 02/Ernest 01 becomes ruler, Nobody becomes heir
+		name = gbr_monarch_death.9.e
+
+		trigger = {	
+			OR = { 
+				AND = {
+					ruler = { has_template = is_gbr_charles_03 }
+					game_date < 1906.8.2
+				}
+				AND = {
+					ruler = { has_template = is_gbr_john_02 }
+					game_date < 1935.1.14
+				}
+				AND = {
+					ruler = { has_template = is_gbr_ernest_01 }
+					game_date >= 1935.1.14
+				}
+			}
+		}
+	}	
+}
+
+# Arthur 02 dies [ New Heir: (D) Charles 03 (L1>84,Ar3) John 02 (C3>06) Ernest 01 (J2>35) Nobody (C3<06,J2<35,Er1)]
+gbr_monarch_death.10 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Leopold 01/Arthur 03 becomes ruler, Charles 03 becomes heir
+		name = gbr_monarch_death.10.a
+		default_option = yes
+
+		trigger = {	
+			OR = { 
+				AND = {
+					ruler = { has_template = is_gbr_leopold_01 }
+					game_date >= 1884.7.19
+				}
+				AND = {
+					ruler = { has_template = is_gbr_arthur_03 }
+					game_date >= 1884.7.19
+				}
+			}
+		}
+
+		create_character = {
+			template = is_gbr_charles_03
+		}
+	}
+	option = { # Charles 03 becomes ruler, John 02 becomes heir
+		name = gbr_monarch_death.10.b
+
+		trigger = {	
+			ruler = { has_template = is_gbr_charles_03 }
+			game_date >= 1906.8.2
+		}
+
+		create_character = {
+			template = is_gbr_john_02
+		}
+	}
+	option = { # John 02 becomes ruler, Ernest 01 becomes heir
+		name = gbr_monarch_death.10.c
+
+		trigger = {	
+			ruler = { has_template = is_gbr_john_02 }
+			game_date >= 1935.1.14
+		}
+
+		create_character = {
+			template = is_gbr_ernest_01
+		}
+	}
+	option = { # Charles 06/John 02/Ernest 01 becomes ruler, Nobody becomes heir
+		name = gbr_monarch_death.10.d
+
+		trigger = {	
+			OR = { 
+				AND = {
+					ruler = { has_template = is_gbr_charles_03 }
+					game_date < 1906.8.2
+				}
+				AND = {
+					ruler = { has_template = is_gbr_john_02 }
+					game_date < 1935.1.14
+				}
+				AND = {
+					ruler = { has_template = is_gbr_ernest_01 }
+					game_date >= 1935.1.14
+				}
+			}
+		}
+	}	
+}
+
+# Arthur 03 dies [ New Heir: (D) Charles (L1) John 02 (C3>06) Ernest 01 (J2>35) Nobody (C3<06,J2<35,Er1)]
+gbr_monarch_death.11 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Leopold 01 becomes ruler, Charles 03 becomes heir
+		name = gbr_monarch_death.11.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_gbr_leopold_01 }
+			game_date >= 1884.7.19	
+		}
+
+		create_character = {
+			template = is_gbr_charles_03
+		}
+	}
+	option = { # Charles 03 becomes ruler, John 02 becomes heir
+		name = gbr_monarch_death.11.b
+
+		trigger = {	
+			ruler = { has_template = is_gbr_charles_03 }
+			game_date >= 1906.8.2
+		}
+
+		create_character = {
+			template = is_gbr_john_02
+		}
+	}
+	option = { # John 02 becomes ruler, Ernest 01 becomes heir
+		name = gbr_monarch_death.11.c
+
+		trigger = {	
+			ruler = { has_template = is_gbr_john_02 }
+			game_date >= 1935.1.14
+		}
+
+		create_character = {
+			template = is_gbr_ernest_01
+		}
+	}
+	option = { # Charles 06/John 02/Ernest 01 becomes ruler, Nobody becomes heir
+		name = gbr_monarch_death.11.d
+
+		trigger = {	
+			OR = { 
+				AND = {
+					ruler = { has_template = is_gbr_charles_03 }
+					game_date < 1906.8.2
+				}
+				AND = {
+					ruler = { has_template = is_gbr_john_02 }
+					game_date < 1935.1.14
+				}
+				AND = {
+					ruler = { has_template = is_gbr_ernest_01 }
+					game_date >= 1935.1.14
+				}
+			}
+		}
+	}		
+}
+
+# Leopold 01 dies [ New Heir: (C) John 02 (C3>06) Ernest 01 (J2>35) Nobody (C3<06,J2<35,Er1)]
+gbr_monarch_death.12 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Charles 03 becomes ruler, John 02 becomes heir
+		name = gbr_monarch_death.12.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_gbr_charles_03 }
+			game_date >= 1906.8.2
+		}
+
+		create_character = {
+			template = is_gbr_john_02
+		}
+	}
+	option = { # John 02 becomes ruler, Ernest 01 becomes heir
+		name = gbr_monarch_death.12.b
+
+		trigger = {	
+			ruler = { has_template = is_gbr_john_02 }
+			game_date >= 1935.1.14
+		}
+
+		create_character = {
+			template = is_gbr_ernest_01
+		}
+	}
+	option = { # Charles 06/John 02/Ernest 01 becomes ruler, Nobody becomes heir
+		name = gbr_monarch_death.12.c
+
+		trigger = {	
+			OR = { 
+				AND = {
+					ruler = { has_template = is_gbr_charles_03 }
+					game_date < 1906.8.2
+				}
+				AND = {
+					ruler = { has_template = is_gbr_john_02 }
+					game_date < 1935.1.14
+				}
+				AND = {
+					ruler = { has_template = is_gbr_ernest_01 }
+					game_date >= 1935.1.14
+				}
+			}
+		}
+	}
+}
+
+# Charles 03 dies [ New Heir: (B) Ernest 01 (J2>35) Nobody (J2<35,E1)]
+gbr_monarch_death.13 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # John 02 becomes ruler, Ernest 01 becomes heir
+		name = gbr_monarch_death.13.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_gbr_john_02 }
+			game_date >= 1935.1.14
+		}
+
+		create_character = {
+			template = is_gbr_ernest_01
+		}
+	}
+	option = { # Charles 06/John 02/Ernest 01 becomes ruler, Nobody becomes heir
+		name = gbr_monarch_death.13.b
+
+		trigger = {	
+			OR = { 
+				AND = {
+					ruler = { has_template = is_gbr_john_02 }
+					game_date < 1935.1.14
+				}
+				AND = {
+					ruler = { has_template = is_gbr_ernest_01 }
+					game_date >= 1935.1.14
+				}
+			}
+		}
+	}	
+}

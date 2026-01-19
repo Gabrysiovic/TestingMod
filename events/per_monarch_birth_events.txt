@@ -1,0 +1,169 @@
+﻿namespace = per_monarch_birth
+
+# Mozaffar is born
+per_monarch_birth.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_per_nasir_al-din }
+		NOT = { heir =  { has_template = is_per_mozaffar_ad-din } }
+		game_date >= 1853.3.25
+		game_date < 1854.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = per_monarch_birth.1.a
+		default_option = yes
+
+		create_character = {
+			template = is_per_mozaffar_ad-din
+		}
+	}
+}
+
+# Mohammad Ali is born
+per_monarch_birth.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_per_mozaffar_ad-din }
+		NOT = { heir =  { has_template = is_per_mohammad_ali } }
+		game_date >= 1872.6.21
+		game_date < 1873.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = per_monarch_birth.2.a
+		default_option = yes
+
+		create_character = {
+			template = is_per_mohammad_ali
+		}
+	}
+}
+
+# Ahmad is born
+per_monarch_birth.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_per_mohammad_ali }
+		NOT = { heir =  { has_template = is_per_ahmad } }
+		game_date >= 1897.1.21
+		game_date < 1898.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = per_monarch_birth.3.a
+		default_option = yes
+
+		create_character = {
+			template = is_per_ahmad
+		}
+	}
+}
+
+# Hamid is born
+per_monarch_birth.4 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_per_mohammad_hassan }
+		NOT = { heir =  { has_template = is_per_hamid } }
+		game_date >= 1918.4.23
+		game_date < 1919.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = per_monarch_birth.4.a
+		default_option = yes
+
+		create_character = {
+			template = is_per_hamid
+		}
+	}
+}

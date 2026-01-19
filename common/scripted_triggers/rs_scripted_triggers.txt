@@ -1,0 +1,225 @@
+#Japan=============================================================================#
+
+rs_st_country_is_japan = {
+	OR = {
+		c:JAP ?= THIS
+		was_formed_from = JAP
+	}
+}
+
+#Yamato Japan
+
+rs_st_has_yamato_dynasty = {
+	ruler ?= {
+		OR = {
+			rs_st_character_is_jap_ninko
+			rs_st_character_is_jap_komei
+			rs_st_character_is_jap_meiji
+			rs_st_character_is_jap_taisho
+			rs_st_character_is_jap_showa
+		}
+	}
+}
+
+#Character Triggers
+rs_st_character_is_jap_ninko = {
+	has_template = is_jap_ninko
+}
+
+rs_st_character_is_jap_komei = {
+	has_template = is_jap_komei
+}
+
+rs_st_character_is_jap_meiji = {
+	has_template = is_jap_meiji
+}
+
+rs_st_character_is_jap_taisho = {
+	has_template = is_jap_taisho
+}
+
+rs_st_character_is_jap_showa = {
+	has_template = is_jap_showa
+}
+
+#Egypt=============================================================================#
+
+rs_st_country_is_egypt = {
+	OR = {
+		c:EGY ?= THIS
+		was_formed_from = EGY
+	}
+}
+
+#Alawite Egypt
+
+rt_st_has_alawite_dynasty = {
+	ruler ?= {
+		rs_st_character_is_egy_muhammad_ali
+		rs_st_character_is_egy_ibrahim
+		rs_st_character_is_egy_ismail
+		rs_st_character_is_egy_muhammad_tewfik
+		rs_st_character_is_egy_abbas_hilmi
+		rs_st_character_is_egy_muhammad_abdel_moneim
+	}
+}
+
+#Character Triggers
+rs_st_character_is_egy_muhammad_ali = {
+	has_template = is_egy_muhammad_ali
+}
+
+rs_st_character_is_egy_ibrahim = {
+	has_template = is_egy_ibrahim
+}
+
+rs_st_character_is_egy_ismail = {
+	has_template = is_egy_ismail
+}
+
+rs_st_character_is_egy_muhammad_tewfik = {
+	has_template = is_egy_muhammad_tewfik
+}
+
+rs_st_character_is_egy_abbas_hilmi = {
+	has_template = is_egy_abbas_hilmi
+}
+
+rs_st_character_is_egy_muhammad_abdel_moneim = {
+	has_template = is_egy_muhammad_abdel_moneim
+}
+
+#Qing China=======================================================================#
+
+rs_st_country_is_china = {
+	OR = {
+		c:CHI ?= THIS
+		was_formed_from = CHI
+	}
+}
+
+rt_st_has_qing_dynasty = {
+	ruler ?= {
+		rs_st_character_is_chi_daoguang
+		rs_st_character_is_chi_xianfeng
+		rs_st_character_is_chi_tongzhi
+		rs_st_character_is_chi_guangxu
+		rs_st_character_is_chi_xuantong
+	}
+}
+
+#Character Triggers
+rs_st_character_is_chi_daoguang = {
+	has_template = is_chi_daoguang
+}
+
+rs_st_character_is_chi_xianfeng = {
+	has_template = is_chi_xianfeng
+}
+
+rs_st_character_is_chi_tongzhi = {
+	has_template = is_chi_tongzhi
+}
+
+rs_st_character_is_chi_guangxu = {
+	has_template = is_chi_guangxu
+}
+
+rs_st_character_is_chi_xuantong = {
+	has_template = is_chi_xuantong
+}
+
+#Saudi Nejd=======================================================================#
+
+rs_st_country_is_nejd = {
+	OR = {
+		c:NEJ ?= THIS
+		was_formed_from = NEJ
+	}
+}
+
+rt_st_has_saud_dynasty = {
+	ruler ?= {
+		rs_st_character_is_nej_faisal_01
+		rs_st_character_is_nej_saud_03
+		rs_st_character_is_nej_abdul_rahman_01
+		rs_st_character_is_nej_abdulaziz_02
+		rs_st_character_is_nej_saud_04
+		rs_st_character_is_nej_faisal_02
+	}
+}
+
+#Character Triggers
+rs_st_character_is_nej_faisal_01 = {
+	has_template = is_nej_faisal_01
+}
+
+rs_st_character_is_nej_saud_03 = {
+	has_template = is_nej_saud_03
+}
+
+rs_st_character_is_nej_abdul_rahman_01 = {
+	has_template = is_nej_abdul_rahman_01
+}
+
+rs_st_character_is_nej_abdulaziz_02 = {
+	has_template = is_nej_abdulaziz_02
+}
+
+rs_st_character_is_nej_saud_04 = {
+	has_template = is_nej_saud_04
+}
+
+rs_st_character_is_nej_ = {
+	has_template = is_nej_faisal_02
+}
+
+#Chakri Siam======================================================================#
+
+rs_st_country_is_siam = {
+	OR = {
+		c:sia ?= THIS
+		was_formed_from = sia
+	}
+}
+
+rt_st_has_chakri_dynasty = {
+	ruler ?= {
+		rs_st_character_is_sia_nangklao
+		rs_st_character_is_sia_mongkut
+		rs_st_character_is_sia_chulalongkorn
+		rs_st_character_is_sia_vajiravudh
+		rs_st_character_is_sia_prajadhipok
+		rs_st_character_is_sia_ananda_mahidol
+		rs_st_character_is_sia_bhumibol_adulyadej
+	}
+}
+
+#Character Triggers
+rs_st_character_is_sia_nangklao = {
+	has_template = is_sia_nangklao
+}
+
+rs_st_character_is_sia_mongkut = {
+	has_template = is_sia_mongkut
+}
+
+rs_st_character_is_sia_chulalongkorn = {
+	has_template = is_sia_chulalongkorn
+}
+
+rs_st_character_is_sia_vajiravudh = {
+	has_template = is_sia_vajiravudh
+}
+
+rs_st_character_is_sia_prajadhipok = {
+	has_template = is_sia_prajadhipok
+}
+
+rs_st_character_is_sia_ = {
+	has_template = is_sia_ananda_mahidol
+}
+
+rs_st_character_is_sia_ = {
+	has_template = is_sia_bhumibol_adulyadej
+}

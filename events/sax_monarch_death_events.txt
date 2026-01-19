@@ -1,0 +1,281 @@
+﻿namespace = sax_monarch_death
+
+# Anton 01 dies [ New Heir: (A) Johann 01 (FA2) ]
+sax_monarch_death.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Friedrich August 02 becomes ruler, Johann 01 becomes heir
+		name = sax_monarch_death.1.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_sax_friedrich_august_02 }
+		}
+
+		create_character = {
+			template = is_sax_johann_01
+		}
+	}
+}
+
+# Friedrich August 02 dies [ New Heir: (B) Albert 01 (J1) Georg 02 (A1) ]
+sax_monarch_death.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Johann 01 becomes ruler, Albert 01 becomes heir
+		name = sax_monarch_death.2.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_sax_johann_01 }
+		}
+
+		create_character = {
+			template = is_sax_albert_01
+		}
+	}
+	option = { # Albert 01 becomes ruler, Georg 01 becomes heir
+		name = sax_monarch_death.2.b
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_sax_albert_01 }
+		}
+
+		create_character = {
+			template = is_sax_georg_01
+		}
+	}
+}
+
+# Johann 01 dies [ New Heir: (C) Georg 01 (A1) Friedrich August 03 (G1>65) Nobody (G1<65) ]
+sax_monarch_death.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Albert 01 becomes ruler, Georg 01 becomes heir
+		name = sax_monarch_death.3.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_sax_albert_01 }
+		}
+
+		create_character = {
+			template = is_sax_georg_01
+		}
+	}
+	option = { # Georg 01 becomes ruler, Friedrich August 03 becomes heir
+		name = sax_monarch_death.3.b
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_sax_georg_01 }
+			game_date >= 1865.5.25
+		}
+
+		create_character = {
+			template = is_sax_friedrich_august_03
+		}
+	}
+	option = { # Georg 01 becomes ruler, Nobody becomes heir
+		name = sax_monarch_death.3.c
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_sax_georg_01 }
+			game_date < 1865.5.25
+		}
+	}
+}
+
+# Albert 01 dies [ New Heir: (C) Friedrich August 03 (G1>65) Georg 02 (FA3>93) Nobody (G1<65,FA3<93) ]
+sax_monarch_death.4 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Georg 01 becomes ruler, Friedrich August 03 becomes heir
+		name = sax_monarch_death.4.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_sax_georg_01 }
+			game_date >= 1865.5.25
+		}
+
+		create_character = {
+			template = is_sax_friedrich_august_03
+		}
+	}
+	option = { # Friedrich August 03 becomes ruler, Georg 02 becomes heir
+		name = sax_monarch_death.4.b
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_sax_friedrich_august_03 }
+			game_date >= 1893.1.15
+		}
+
+		create_character = {
+			template = is_sax_georg_02
+		}
+	}
+	option = { # Georg 01 becomes ruler, Nobody becomes heir
+		name = sax_monarch_death.4.c
+		default_option = yes
+
+		trigger = {	
+			OR = {
+				AND = {
+					ruler = { has_template = is_sax_georg_01 }
+					game_date < 1865.5.25
+				}
+				AND = {
+					ruler = { has_template = is_sax_friedrich_august_03 }
+					game_date < 1893.1.15
+				}
+			}
+		}
+	}
+}
+
+# Georg 01 dies [ New Heir: (B) Georg 02 (FA3>93) Nobody (FA<93) ]
+sax_monarch_death.5 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Friedrich August 03 becomes ruler, Georg 02 becomes heir
+		name = sax_monarch_death.5.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_sax_friedrich_august_03 }
+			game_date >= 1893.1.15
+		}
+
+		create_character = {
+			template = is_sax_georg_02
+		}
+	}
+	option = { # Georg 01 becomes ruler, Nobody becomes heir
+		name = sax_monarch_death.5.b
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_sax_friedrich_august_03 }
+			game_date < 1893.1.15
+		}
+	}
+}

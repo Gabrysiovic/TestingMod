@@ -1,0 +1,780 @@
+﻿namespace = gbr_heir_death
+
+# Victoria 01 dies as heir [ New Heir: (B) Edward 07 (V>41) Nobody (V<41)]
+gbr_heir_death.1 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Victoria 01 dies as heir, Edward 07 becomes heir
+		name = gbr_heir_death.1.a
+		default_option = yes
+		
+		trigger = {	
+			game_date >= 1841.11.9
+		}
+
+		create_character = {
+			template = is_gbr_edward_07
+		}
+	}
+	option = { # Victoria 01 dies as heir, Nobody becomes heir
+		name = gbr_heir_death.1.b
+
+		trigger = {	
+			game_date < 1841.11.9
+		}
+	}
+}
+
+# Edward 07 dies as heir [ New Heir: (C) Albert 01 (E7>64,<92) George 05 (E7>92) Alfred (E7<64)]
+gbr_heir_death.2 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Edward 07 dies as heir, Albert 01 becomes heir
+		name = gbr_heir_death.2.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1864.1.8
+			game_date < 1892.1.14
+		}
+
+		create_character = {
+			template = is_gbr_albert_01
+		}
+	}
+	option = { # Edward 07 dies as heir, George 05 becomes heir
+		name = gbr_heir_death.2.b
+
+		trigger = {	
+			game_date >= 1865.6.3
+		}
+
+		create_character = {
+			template = is_gbr_george_05
+		}
+	}
+	option = { # Edward 07 05 dies as heir, Alfred 02 becomes heir
+		name = gbr_heir_death.2.c
+
+		trigger = {	
+			game_date < 1865.6.3
+		}
+
+		create_character = {
+			template = is_gbr_alfred_02
+		}
+	}
+}
+
+
+# Albert 01 dies as heir [ New Heir: (A) George 05 (A1)]
+gbr_heir_death.3 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Edward 07 dies as heir, George 05 becomes heir
+		name = gbr_heir_death.3.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1865.6.3
+		}
+
+		create_character = {
+			template = is_gbr_george_05
+		}
+	}
+}
+
+# George 05 dies as heir [ New Heir: (B) Edward 08 (G5>94) Alfred 02 (G5<94)]
+gbr_heir_death.4 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # George 05 dies as heir, Edward 08 becomes heir
+		name = gbr_heir_death.4.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1894.6.23
+		}
+
+		create_character = {
+			template = is_gbr_edward_08
+		}
+	}
+	option = { # George 05 dies as heir, Alfred becomes heir
+		name = gbr_heir_death.4.b
+
+		trigger = {	
+			game_date < 1894.6.23
+		}
+
+		create_character = {
+			template = is_gbr_alfred_02
+		}
+	}
+}
+
+
+# Edward 08 dies as heir [ New Heir: (A) George 06 (E8)]
+gbr_heir_death.5 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Edward 08 dies as heir, George 06 becomes heir
+		name = gbr_heir_death.5.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1895.12.14
+		}
+
+		create_character = {
+			template = is_gbr_george_06
+		}
+	}
+}
+
+# George 06 dies as heir [ New Heir: (B) Elizabeth 02 (G6>26) Henry 09 (G6<26)]
+gbr_heir_death.6 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # George 06 dies as heir, Elizabeth 02 becomes heir
+		name = gbr_heir_death.6.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1926.4.21
+		}
+
+		create_character = {
+			template = is_gbr_elizabeth_02
+		}
+	}
+	option = { # George 06 dies as heir, Henry 09 becomes heir
+		name = gbr_heir_death.6.b
+
+		trigger = {	
+			game_date < 1926.4.21
+		}
+
+		create_character = {
+			template = is_gbr_henry_09
+		}
+	}
+}
+
+# Elizabeth 02 dies as heir [ New Heir: (A) Henry 09 (E2)]
+gbr_heir_death.7 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Elizabeth 02 dies as heir, Henry 09 becomes heir
+		name = gbr_heir_death.7.a
+		default_option = yes
+
+		trigger = {	
+
+		}
+
+		create_character = {
+			template = is_gbr_henry_09
+		}
+	}
+}
+
+
+# Alfred 02 dies as heir [ New Heir: (B) Alfred 03 (Al2>74) Arthur 01 (Al2<74)]
+gbr_heir_death.8 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Alfred 02 dies as heir, Alfred 03 becomes heir
+		name = gbr_heir_death.8.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1874.2.6
+		}
+
+		create_character = {
+			template = is_gbr_alfred_03
+		}
+	}
+	option = { # Alfred 03 dies as heir, Arthur becomes heir
+		name = gbr_heir_death.8.b
+
+		trigger = {	
+			game_date < 1874.2.6
+		}
+
+		create_character = {
+			template = is_gbr_arthur_01
+		}
+	}
+}
+
+
+# Alfred 03 dies as heir [ New Heir: (A) Arthur 01 (Al3)]
+gbr_heir_death.9 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Alfred 03 dies as heir, Arthur 01 becomes heir
+		name = gbr_heir_death.9.a
+		default_option = yes
+
+		trigger = {	
+
+		}
+
+		create_character = {
+			template = is_gbr_arthur_01
+		}
+	}
+}
+
+
+# Arthur 01 dies as heir [ New Heir: (B) Arthur 02 (Ar1>83) Leopold 01 (Ar<83)]
+gbr_heir_death.10 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Arthur 01 dies as heir, Arthur 02 becomes heir
+		name = gbr_heir_death.10.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1863.1.13
+		}
+
+		create_character = {
+			template = is_gbr_arthur_02
+		}
+	}
+	option = { # Arthur 01 dies as heir, Leopold 01 becomes heir
+		name = gbr_heir_death.10.b
+
+		trigger = {	
+			game_date < 1863.1.13
+		}
+
+		create_character = {
+			template = is_gbr_leopold_01
+		}
+	}
+}
+
+
+# Arthur 02 dies as heir [ New Heir: (C) Arthur 03 (Ar2>14) Leopold 01 (Ar2<14,<84) Charles 03 (Ar2<14,>84)]
+gbr_heir_death.11 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Arthur 02 dies as heir, Arthur 03 becomes heir
+		name = gbr_heir_death.11.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1914.8.9
+		}
+
+		create_character = {
+			template = is_gbr_arthur_03
+		}
+	}
+	option = { # Arthur 02 dies as heir, Leopold 01 becomes heir
+		name = gbr_heir_death.11.b
+
+		trigger = {	
+			game_date < 1914.8.9
+			game_date < 1884.7.19
+		}
+
+		create_character = {
+			template = is_gbr_leopold_01
+		}
+	}
+	option = { # Arthur 02 dies as heir, Charles 03 becomes heir
+		name = gbr_heir_death.11.c
+
+		trigger = {	
+			game_date < 1914.8.9
+			game_date >= 1884.7.19
+		}
+
+		create_character = {
+			template = is_gbr_charles_03
+		}
+	}
+}
+
+
+# Arthur 03 dies as heir [ New Heir: (A) Charles 03 (Ar3)]
+gbr_heir_death.12 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Arthur 03 dies as heir, Charles 03 becomes heir
+		name = gbr_heir_death.12.a
+		default_option = yes
+
+		trigger = {	
+
+		}
+
+		create_character = {
+			template = is_gbr_charles_03
+		}
+	}
+}
+
+
+# Leopold 01 dies as heir [ New Heir: (A) Charles 03 (Ar3)]
+gbr_heir_death.13 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Leopold 01 dies as heir, Charles 03 becomes heir
+		name = gbr_heir_death.13.a
+		default_option = yes
+
+		trigger = {	
+
+		}
+
+		create_character = {
+			template = is_gbr_charles_03
+		}
+	}
+}
+
+
+# Charles 03 dies as heir [ New Heir: (B) John 02 (C3>06) Nobody (C3<06)]
+gbr_heir_death.14 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Charles 03 dies as heir, John 02 becomes heir
+		name = gbr_heir_death.14.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1906.8.2
+		}
+
+		create_character = {
+			template = is_gbr_john_02
+		}
+	}
+	option = { # Charles 03 dies as heir, Nobody becomes heir
+		name = gbr_heir_death.14.b
+
+		trigger = {	
+			game_date < 1906.8.2
+		}
+	}	
+}
+
+
+# John 02 dies as heir [ New Heir: (B) Ernest 01 (J2>35) Nobody (J2<35)]
+gbr_heir_death.15 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # John 02 dies as heir, Ernest 01 becomes heir
+		name = gbr_heir_death.15.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1935.1.14
+		}
+
+		create_character = {
+			template = is_gbr_ernest_01
+		}
+	}
+	option = { # John 02 dies as heir, Nobody becomes heir
+		name = gbr_heir_death.15.b
+
+		trigger = {	
+			game_date < 1935.1.14
+		}
+	}
+}
+
+
+# Henry 09 dies as heir [ New Heir: (A) George 07 (H9)]
+gbr_heir_death.16 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Henry 09 dies as heir, George 07 becomes heir
+		name = gbr_heir_death.16.a
+		default_option = yes
+
+		trigger = {	
+			
+		}
+
+		create_character = {
+			template = is_gbr_george_07
+		}
+	}
+}

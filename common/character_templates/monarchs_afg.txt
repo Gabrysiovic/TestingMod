@@ -1,0 +1,99 @@
+﻿### Afghan historic monarchs template file ###
+
+
+is_afg_dost_mohammad = {
+	first_name = "Dost_Mohammad"
+	last_name = "Barakzai"
+	historical = yes
+	ruler = yes
+	culture = cu:pashtun
+	age = 56
+	dna = dna_afg_dost_mohammad
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+	traits = {
+		ambitious
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_afg_wazir_akbar = {
+	first_name = "Wazir_Akbar"
+	last_name = "Barakzai"
+	historical = yes
+	heir = yes
+	culture = cu:pashtun
+	age = 20
+	dna = dna_afg_wazir_akbar
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+	traits = {
+		ambitious
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_afg_mohammad_yahya = {
+	first_name = "Mohammad_Yahya"
+	last_name = "Barakzai"
+	historical = yes
+	heir = yes
+	culture = cu:pashtun
+	birth_date = 1822.6.1
+	dna = dna_afg_mohammad_yusuf
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+}
+
+is_afg_mohammad_yusuf = {
+	first_name = "Mohammad_Yusuf"
+	last_name = "Barakzai"
+	historical = yes
+	heir = yes
+	culture = cu:pashtun
+	birth_date = 1855.6.1
+	dna = dna_afg_mohammad_yusuf
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+}
+
+is_afg_mohammad_nadir = {
+	first_name = "Mohammad_Nadir"
+	last_name = "Barakzai"
+	historical = yes
+	heir = yes
+	culture = cu:pashtun
+	birth_date = 1883.4.9
+	dna = dna_afg_mohammad_nadir
+	interest_group = ig_landowners
+	ideology = ideology_royalist
+	traits = {
+		ambitious
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_afg_mohammad_zahir = {
+	first_name = "Mohammad_Zahir"
+	last_name = "Barakzai"
+	historical = yes
+	heir = yes
+	culture = cu:pashtun
+	birth_date = 1914.10.15
+	dna = dna_afg_mohammad_zahir
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_moderate
+	traits = {
+		literary
+		cautious
+	}
+	trait_generation = {
+		# nothing!
+	}
+}

@@ -1,0 +1,298 @@
+﻿namespace = canon_death
+
+# Ferdinand-Philippe Dies
+canon_death.1 = {
+	type = country_event
+
+	placement = ROOT
+	title = canon_death.1.t
+	desc = canon_death.1.d
+	flavor = canon_death.1.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:canonically_dead_1
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		heir =  { has_template = FRA_ferdinand_philippe }
+		game_date >= 1842.7.13
+		game_date < 1842.8.9
+	}
+
+	immediate = {
+		# if ruler or heir has the template ferdinand philippe, give them the canonically dead 1scope 
+		if = {
+			limit = {
+				ruler = { has_template = FRA_ferdinand_philippe }
+			}
+			ruler = { save_scope_as = canonically_dead_1 }
+		}
+		if = {
+			limit = {
+				heir = { has_template = FRA_ferdinand_philippe }
+			}
+			heir = { save_scope_as = canonically_dead_1 }
+		}
+	}
+
+	option = {
+		name = canon_death.1.a
+		scope:canonically_dead_1 = {
+			kill_character = yes
+		}
+	}
+}
+
+# Tsesarevich Nikolai Dies
+canon_death.2 = {
+	type = country_event
+
+	placement = ROOT
+	title = canon_death.2.t
+	desc = canon_death.2.d
+	flavor = canon_death.2.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:canonically_dead_2
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		heir =  { has_template = is_rus_tsesarevich_nikolai }
+		game_date >= 1865.4.24
+		game_date < 1865.5.20
+	}
+
+	immediate = {
+		# if ruler or heir has the template tsesarevich nikolai, give them the canonically dead 2scope 
+		if = {
+			limit = {
+				ruler = { has_template = is_rus_tsesarevich_nikolai }
+			}
+			ruler = { save_scope_as = canonically_dead_2 }
+		}
+		if = {
+			limit = {
+				heir = { has_template = is_rus_tsesarevich_nikolai }
+			}
+			heir = { save_scope_as = canonically_dead_2 }
+		}
+	}
+
+	option = {
+		name = canon_death.2.a
+		scope:canonically_dead_2 = {
+			kill_character = yes
+		}
+	}
+}
+
+# Rudolf von Habsburg Dies
+canon_death.3 = {
+	type = country_event
+
+	placement = ROOT
+	title = canon_death.3.t
+	desc = canon_death.3.d
+	flavor = canon_death.3.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:canonically_dead_3
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		heir =  { has_template = is_aus_rudolf_01 }
+		game_date >= 1889.1.30
+		game_date < 1889.3.5
+	}
+
+	immediate = {
+		# if ruler or heir has the template rudolf von habsburg, give them the canonically dead 3scope 
+		if = {
+			limit = {
+				ruler = { has_template = is_aus_rudolf_01 }
+			}
+			ruler = { save_scope_as = canonically_dead_3 }
+		}
+		if = {
+			limit = {
+				heir = { has_template = is_aus_rudolf_01 }
+			}
+			heir = { save_scope_as = canonically_dead_3 }
+		}
+	}
+
+	option = {
+		name = canon_death.3.a
+		scope:canonically_dead_3 = {
+			kill_character = yes
+		}
+	}
+}
+
+# Albert 01 Dies
+canon_death.4 = {
+	type = country_event
+
+	placement = ROOT
+	title = canon_death.4.t
+	desc = canon_death.4.d
+	flavor = canon_death.4.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:canonically_dead_4
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		heir =  { has_template = is_gbr_albert_01 }
+		game_date >= 1892.1.20
+		game_date < 1892.2.16
+	}
+
+	immediate = {
+		# if ruler or heir has the template albert_01, give them the canonically dead 3scope 
+		if = {
+			limit = {
+				ruler = { has_template = is_gbr_albert_01 }
+			}
+			ruler = { save_scope_as = canonically_dead_4 }
+		}
+		if = {
+			limit = {
+				heir = { has_template = is_gbr_albert_01 }
+			}
+			heir = { save_scope_as = canonically_dead_4 }
+		}
+	}
+
+	option = {
+		name = canon_death.4.a
+		scope:canonically_dead_4 = {
+			kill_character = yes
+		}
+	}
+}
+
+# Maria 02 Dies
+canon_death.5 = {
+	type = country_event
+
+	placement = ROOT
+	title = canon_death.5.t
+	desc = canon_death.5.d
+	flavor = canon_death.5.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:canonically_dead_5
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler =  { has_template = is_por_maria_02 }
+		game_date >= 1853.11.15
+		game_date < 1853.12.11
+	}
+
+	immediate = {
+		# if ruler or heir has the template maria_02, give them the canonically dead 3scope 
+		if = {
+			limit = {
+				ruler = { has_template = is_por_maria_02 }
+			}
+			ruler = { save_scope_as = canonically_dead_5 }
+		}
+		if = {
+			limit = {
+				heir = { has_template = is_por_maria_02 }
+			}
+			heir = { save_scope_as = canonically_dead_5 }
+		}
+	}
+
+	option = {
+		name = canon_death.5.a
+		scope:canonically_dead_5 = {
+			kill_character = yes
+		}
+	}
+}
+
+# Pedro 05 Dies
+canon_death.6 = {
+	type = country_event
+
+	placement = ROOT
+	title = canon_death.6.t
+	desc = canon_death.6.d
+	flavor = canon_death.6.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:canonically_dead_6
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		OR = {
+			heir =  { has_template = is_por_pedro_05 }
+			ruler =  { has_template = is_por_pedro_05 }
+		}
+		game_date >= 1861.11.11
+		game_date < 1861.12.7
+	}
+
+	immediate = {
+		# if ruler or heir has the template pedro_05, give them the canonically dead 3scope 
+		if = {
+			limit = {
+				ruler = { has_template = is_por_pedro_05 }
+			}
+			ruler = { save_scope_as = canonically_dead_6 }
+		}
+		if = {
+			limit = {
+				heir = { has_template = is_por_pedro_05 }
+			}
+			heir = { save_scope_as = canonically_dead_6 }
+		}
+	}
+
+	option = {
+		name = canon_death.6.a
+		scope:canonically_dead_6 = {
+			kill_character = yes
+		}
+	}
+}

@@ -1,0 +1,90 @@
+﻿namespace = bad_heir_death
+
+# Ludwig 02 dies [ New Heir: (A) Friedrich 01 (LW2) ]
+bad_heir_death.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Ludwig 02 dies as heir, Friedrich 01 becomes heir
+		name = bad_heir_death.1.a
+		default_option = yes
+
+		trigger = {	
+		}
+
+		create_character = {
+			template = is_bad_friedrich_01
+		}
+	}
+}
+
+# Friedrich 01 dies [ New Heir: (B) Friedrich 02 (F1>59), Nobody (F1<59) ]
+bad_heir_death.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Friedrich 01 dies as heir, Friedrich 02 becomes heir
+		name = bad_heir_death.2.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1859.7.9
+		}
+
+		create_character = {
+			template = is_bad_friedrich_02
+		}
+	}
+	option = { # Friedrich 01 dies as heir, Nobody becomes heir
+		name = bad_heir_death.2.b
+
+		trigger = {	
+			game_date < 1859.7.9
+		}
+	}
+}
+

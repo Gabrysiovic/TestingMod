@@ -1,0 +1,161 @@
+﻿### Bavarian historic monarchs template file ###
+
+
+is_bav_ludwig_01 = {
+	first_name = Ludwig
+	last_name = von_Wittelsbach
+	historical = yes
+	ruler = yes
+	age = 50
+	dna = dna_bav_ludwig_01
+	interest_group = ig_landowners
+	ideology = ideology_royalist
+	traits = {
+		romantic
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_bav_maximilian_02 = {
+	first_name = Maximilian
+	last_name = von_Wittelsbach
+	historical = yes
+	heir = yes
+	age = 25
+	dna = dna_bav_maximilian_02
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_royalist
+	traits = {
+		tactful
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_bav_ludwig_02 = {
+	heir = yes
+	culture = cu:south_german
+	first_name = Ludwig
+	last_name = von_Wittelsbach
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_bav_ludwig_02
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	traits = {
+		arrogant
+		reserved
+		romantic
+		psychological_affliction
+	}
+	birth_date = 1845.8.25
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_bav_otto_01 = {
+	heir = yes
+	culture = cu:south_german
+	first_name = Otto
+	last_name = von_Wittelsbach
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_bav_otto_01
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	traits = {
+		charismatic
+	}
+	birth_date = 1848.4.27
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_bav_luitpold_01 = {
+	heir = yes
+	culture = cu:south_german
+	first_name = Luitpold
+	last_name = von_Wittelsbach
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_bav_luitpold_01
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	traits = {
+		romantic
+		experienced_artillery_commander
+	}
+	birth_date = 1821.3.12
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_bav_ludwig_03 = {
+	heir = yes
+	culture = cu:south_german
+	first_name = Ludwig
+	last_name = von_Wittelsbach
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_bav_ludwig_03
+	interest_group = ig_rural_folk
+	ideology = ideology_royalist
+	traits = {
+		innovative
+	}
+	birth_date = 1845.1.7 
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_bav_rupprecht_01 = {
+	heir = yes
+	culture = cu:south_german
+	first_name = Rupprecht
+	last_name = von_Wittelsbach
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_bav_rupprecht_01
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_royalist
+	traits = {
+		persistent
+	}
+	birth_date = 1869.5.18
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}

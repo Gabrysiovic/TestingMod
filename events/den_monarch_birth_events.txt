@@ -1,0 +1,127 @@
+﻿namespace = den_monarch_birth
+
+# Frederik 08 is born
+den_monarch_birth.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_den_christian_09 }
+		NOT = { heir =  { has_template = is_den_frederik_08 } }
+		game_date >= 1843.6.3
+		game_date < 1844.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = den_monarch_birth.1.a
+		default_option = yes
+
+		create_character = {
+            template = is_den_frederik_08
+        }
+	}
+}
+
+# Christian 10 is born
+den_monarch_birth.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_den_frederik_08 }
+		NOT = { heir =  { has_template = is_den_christian_10 } }
+		game_date >= 1870.9.26
+		game_date < 1871.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = den_monarch_birth.2.a
+		default_option = yes
+
+		create_character = {
+            template = is_den_christian_10
+        }
+	}
+}
+
+# Frederik 09 is born
+den_monarch_birth.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_den_christian_10 }
+		NOT = { heir =  { has_template = is_den_frederik_09 } }
+		game_date >= 1899.3.11
+		game_date < 1900.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = den_monarch_birth.3.a
+		default_option = yes
+
+		create_character = {
+            template = is_den_frederik_09
+        }
+	}
+}

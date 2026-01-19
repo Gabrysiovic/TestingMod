@@ -1,0 +1,82 @@
+﻿### Chinese historic monarchs template file ###
+
+is_chi_daoguang = {
+    # The Daoguang Emperor
+    first_name = "Mianning"
+    last_name = "Aisin_Gioro" # Not used by the emperor himself but there's got to be something here
+    historical = yes
+    ruler = yes
+    birth_date = 1782.9.16
+    dna = dna_chi_daoguang
+    culture = cu:manchu
+    interest_group = ig_landowners
+    ideology = ideology_traditionalist
+    traits = {
+        cautious
+    }
+}
+is_chi_xianfeng = {
+    # Prince Yizhu, the future Xianfeng Emperor
+    first_name = "Yizhu"
+    last_name = "Aisin_Gioro"
+    historical = yes
+    heir = yes
+    birth_date = 1831.7.17
+    dna = dna_chi_xianfeng
+    culture = cu:manchu
+    interest_group = ig_landowners
+    ideology = ideology_traditionalist
+    traits = {
+        trait_child
+    }
+}
+# is_chi_tongzhi / zaichun
+is_chi_tongzhi = {
+    first_name = "Zaichun"
+    last_name = "Aisin_Gioro"
+    historical = yes
+    heir = yes
+    birth_date = 1856.4.27
+    dna = dna_chi_tongzhi
+    culture = cu:manchu
+    interest_group = ig_landowners
+    ideology = ideology_jingoist
+    traits = {
+        trait_child
+        arrogant
+        reckless
+    }
+}
+# is_chi_guangxu / zaitian
+is_chi_zaitian = {
+    first_name = "Zaitian"
+    last_name = "Aisin_Gioro"
+    historical = yes
+    heir = yes
+    birth_date = 1871.8.14
+    dna = dna_chi_guangxu
+    culture = cu:manchu
+    interest_group = ig_intelligentsia
+    ideology = ideology_market_liberal
+    traits = {
+        ambitious
+    }
+}
+# is_chi_xuantong / puyi
+is_chi_puyi = {
+    first_name = "Puyi"
+    last_name = "Aisin_Gioro"
+    historical = yes
+    heir = yes
+    birth_date = 1906.2.7
+    dna = dna_chi_xuantong
+    culture = cu:manchu
+    interest_group = ig_landowners
+    ideology = ideology_moderate
+    traits = {
+        trait_child
+        arrogant
+        wrathful
+        literary
+    }
+}

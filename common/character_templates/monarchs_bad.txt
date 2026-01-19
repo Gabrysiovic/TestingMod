@@ -1,0 +1,87 @@
+﻿### Badener historic monarchs template file ###
+
+
+is_bad_leopold_01 = {
+	first_name = Leopold
+	last_name = von_Hochberg
+	historical = yes
+	ruler = yes
+	culture = cu:south_german
+	religion = protestant
+	age = 46
+	dna = dna_bad_leopold_01
+	interest_group = ig_intelligentsia
+	ideology = ideology_reformer
+	traits = {
+		cautious
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_bad_ludwig_02 = {
+	first_name = Ludwig
+	last_name = von_Zahringen
+	historical = yes
+	heir = yes
+	culture = cu:south_german
+	religion = protestant
+	age = 12
+	dna = dna_bad_ludwig_02
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	traits = {
+		trait_child
+		#psychological_affliction # "Nicht heilbaren Geisteskrankheit"
+	}
+}
+
+is_bad_friedrich_01 = {
+	heir = yes
+	culture = cu:south_german
+	religion = protestant
+	first_name = Friedrich
+	last_name = von_Zahringen
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_bad_friedrich_01
+	interest_group = ig_intelligentsia
+	ideology = ideology_reformer
+	traits = {
+		tactful
+	}
+	birth_date = 1826.9.9
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_bad_friedrich_02 = {
+	heir = yes
+			culture = cu:south_german
+			religion = protestant
+			first_name = Friedrich
+			last_name = von_Zahringen
+			historical = yes
+			ig_leader = no
+			noble = yes
+			dna = dna_bad_friedrich_02
+			interest_group = ig_intelligentsia
+			ideology = ideology_moderate
+			traits = {
+				tactful
+			}
+			birth_date = 1859.7.9
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+

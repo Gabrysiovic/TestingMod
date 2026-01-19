@@ -18,9 +18,7 @@ is_aus_maximilian_01 = {
 	on_created = {
 		set_variable = is_married
 	}
-	trait_generation = {
-		# nothing!
-	}
+	 
 }
 
 is_aus_karl_ludwig_01 = {
@@ -42,9 +40,7 @@ is_aus_karl_ludwig_01 = {
 	on_created = {
 		set_variable = is_married
 	}
-	trait_generation = {
-		# nothing!
-	}
+	 
 }
 
 is_mex_miguel_miramon01 = {
@@ -63,7 +59,5 @@ is_mex_miguel_miramon01 = {
 		bigoted
 		pious
 	}
-	trait_generation = {
-		# nothing!
-	}
+	 
 }

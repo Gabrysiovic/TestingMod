@@ -1,0 +1,41 @@
+GLOBAL = {
+	c:JAP ?= {
+		set_variable = no_heirs
+		set_variable = {
+			name = rs_jap_yamato_dynasty
+			value = 1
+		}
+	}
+
+	c:EGY ?= {
+		set_variable = no_heirs
+		set_variable = {
+			name = rs_egy_alawite_dynasty
+			value = 1
+		}
+	}
+
+	c:CHI ?= {
+		set_variable = no_heirs
+		set_variable = {
+			name = rs_chi_qing_dynasty
+			value = 1
+		}
+	}
+
+	c:NEJ ?= {
+		set_variable = no_heirs
+		set_variable = {
+			name = rs_nej_saud_dynasty
+			value = 1
+		}
+	}
+
+	c:SIA ?= {
+		set_variable = no_heirs
+		set_variable = {
+			name = rs_sia_chakri_dynasty
+			value = 1
+		}
+	}
+}

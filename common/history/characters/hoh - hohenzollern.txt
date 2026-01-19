@@ -1,0 +1,11 @@
+﻿CHARACTERS = {
+	c:HOH = {
+		create_character = {
+			template = is_hoh_karl_anton_01
+		}	
+
+		create_character = {
+			template = is_hoh_leopold_01	
+		}
+	}
+}

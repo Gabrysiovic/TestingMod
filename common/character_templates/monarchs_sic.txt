@@ -1,0 +1,135 @@
+﻿### Sicilian historic monarchs template file ###
+
+
+is_sic_ferdinando_02 = {
+	first_name = Ferdinando
+	last_name = di_Borbone_delle_Due_Sicilie
+	historical = yes
+	ruler = yes
+	birth_date = 1810.1.12
+	dna = dna_sic_ferdinando_02
+	interest_group = ig_landowners
+	ideology = ideology_royalist
+	traits = {
+		imperious
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_sic_francesco_02 = {
+	first_name = Francesco
+	last_name = di_Borbone_delle_Due_Sicilie
+	historical = yes
+	heir = yes
+	interest_group = ig_devout
+	ideology = ideology_royalist
+	age = 0 # technically age -15 days on January 1, 1836, but let's ignore that
+	dna = dna_sic_francesco_02
+	traits = {
+		trait_child
+		pious
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_sic_alfonso_01 = {
+	heir = yes
+	culture = cu:south_italian
+	first_name = Alfonso
+	last_name = di_Borbone_delle_Due_Sicilie
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_sic_alfonso_01
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	traits = {
+		romantic
+	}
+	birth_date = 1841.3.28
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_sic_ferdinando_03 = {
+	heir = yes
+	culture = cu:south_italian
+	first_name = Ferdinando
+	last_name = di_Borbone_delle_Due_Sicilie
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_sic_ferdinando_03
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	traits = {
+		pious
+	}
+	birth_date = 1869.7.25
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_sic_carlo_01 = {
+	heir = yes
+	culture = cu:south_italian
+	first_name = Carlo
+	last_name = di_Borbone_delle_Due_Sicilie
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_sic_carlo_01
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	traits = {
+		
+	}
+	birth_date = 1870.11.10
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_sic_alfonso_02 = {
+	heir = yes
+	culture = cu:south_italian
+	first_name = Alfonso
+	last_name = di_Borbone_delle_Due_Sicilie
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_sic_alfonso_02
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	traits = {
+		
+	}
+	birth_date = 1901.11.30
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}

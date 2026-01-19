@@ -1,0 +1,700 @@
+﻿### France character template file ###
+
+## game start interest group leaders ##
+
+FRA_louis_philippe = {
+	first_name = Louis-Philippe
+	last_name = d_Orleans
+	historical = yes
+	ruler = yes
+	birth_date = 1773.10.6
+	dna = dna_fra_orleans_louis_philippe_01
+	interest_group = ig_industrialists
+	ideology = ideology_orleanist
+	traits = {
+		basic_political_operator
+		tactful
+	}
+	on_created = {
+		set_variable = {
+			name = is_married
+		}
+		set_variable = {
+			name = orleanist_leader
+		}
+	}
+	 
+}
+
+FRA_ferdinand_philippe = {
+	first_name = "Ferdinand_Philippe"
+	last_name = d_Orleans
+	historical = yes
+	heir = yes
+	birth_date = 1810.9.3
+	dna = dna_fra_orleans_ferdinand_philippe_01
+	interest_group = ig_armed_forces
+	ideology = ideology_orleanist
+	traits = {
+		popular_commander
+		wrathful
+	}
+	on_created = {
+		set_variable = {
+			name = is_married
+		}
+		set_variable = {
+			name = orleanist_leader
+		}
+	}
+	trait_generation = { }
+}
+
+FRA_victor_de_broglie = {
+	first_name = "Victor"
+	last_name = "de_Broglie"
+	historical = yes
+	birth_date = 1785.11.28
+	ig_leader = yes
+	interest_group = ig_landowners
+	ideology = ideology_orleanist
+	traits = {
+		experienced_political_operator
+		tactful
+	}
+}
+
+FRA_adolphe_thiers = {
+	first_name = "Adolphe"
+	last_name = "Thiers"
+	historical = yes
+	birth_date = 1797.4.15
+	ig_leader = yes
+	interest_group = ig_intelligentsia
+	ideology = ideology_reformer
+	traits = {
+		experienced_political_operator
+		charismatic
+	}
+}
+
+FRA_jacques_lafitte = {
+	first_name = "Jacques"
+	last_name = "Laffitte"
+	historical = yes
+	birth_date = 1767.10.24
+	ig_leader = yes
+	interest_group = ig_industrialists
+	ideology = ideology_reformer
+	traits = {
+		basic_political_operator
+		reckless
+	}
+}
+
+FRA_jean-francois_mocquard = {
+	first_name = "Jean-Francois"
+	last_name = "Mocquard"
+	historical = yes
+	birth_date = 1791.11.11
+	ig_leader = yes
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_bonapartist
+	traits = {
+		experienced_diplomat
+		meticulous
+	}
+}
+
+FRA_francois-rene_de_chateaubriand = {
+	first_name = "Fran_Cois-Ren_E"
+	last_name = "de_Chateaubriand"
+	historical = yes
+	birth_date = 1768.9.4
+	ig_leader = yes
+	interest_group = ig_devout
+	ideology = ideology_legitimist
+	traits = {
+		romantic
+		inspirational_orator
+		pious
+	}
+}
+
+FRA_jean-de-dieu_soult = {
+	first_name = "Jean-de-Dieu"
+	last_name = "Soult"
+	historical = yes
+	birth_date = 1769.3.29
+	ig_leader = yes
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	traits = {
+		experienced_defensive_strategist
+		reckless
+		pillager
+	}
+}
+
+FRA_mathieu_de_la_drome = {
+	first_name = "Mathieu"
+	last_name = "de_la_Dr_Ome"
+	historical = yes
+	birth_date = 1808.6.4
+	ig_leader = yes
+	interest_group = ig_rural_folk
+	ideology = ideology_radical
+	traits = {
+		basic_political_operator
+		innovative # He was an actual inventor
+	}
+}
+
+FRA_charles_fourier = {
+	first_name = "Charles"
+	last_name = "Fourier"
+	historical = yes
+	birth_date = 1772.4.7
+	ig_leader = yes
+	interest_group = ig_trade_unions
+	ideology = ideology_radical
+	traits = {
+		basic_political_operator
+		bigoted
+	}
+}
+
+
+## game start commanders ##
+
+FRA_thomas_bugeaud = {
+	is_general = yes
+	first_name = Thomas
+	last_name = Bugeaud
+	historical = yes
+	birth_date = 1784.10.15
+	interest_group = ig_rural_folk
+	ideology = ideology_orleanist
+	traits = {
+		resupply_commander
+		ambitious
+		cruel
+	}
+}
+
+FRA_bertrand_clauzel = {
+	is_general = yes
+	first_name = Bertrand
+	last_name = Clauzel
+	historical = yes
+	birth_date = 1772.12.12
+	interest_group = ig_armed_forces
+	ideology = ideology_traditionalist
+	traits = {
+		basic_offensive_planner
+		wrathful
+	}
+}
+
+FRA_guy-victor_duperre = {
+ 	is_admiral = yes
+	first_name = Guy-Victor
+	last_name = Duperre
+	historical = yes
+	birth_date = 1775.2.20
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	traits = {
+		experienced_naval_commander
+		dockyard_master
+	}
+}
+
+FRA_charles_baudin = {
+	is_admiral = yes
+	first_name = Charles
+	last_name = Baudin
+	historical = yes
+	birth_date = 1784.7.21
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	traits = {
+		experienced_naval_commander
+		basic_diplomat
+		tactful
+	}
+}
+
+FRA_honore-charles_reille = {
+	is_general = yes
+	first_name = Honore_Charles
+	last_name = Reille
+	historical = yes
+	birth_date = 1775.9.1
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	traits = {
+		brave
+		resupply_commander
+	}
+}
+
+FRA_guillaume_dode_de_la_brunerie = {
+	is_general = yes
+	first_name = Guillaume
+	last_name = Dode_de_la_Brunerie
+	historical = yes
+	birth_date = 1775.4.30
+	interest_group = ig_armed_forces
+	ideology = ideology_reformer
+	traits = {
+		innovative
+		trench_rat
+	}
+}
+
+### Monarchs
+
+# Orleanists
+FRA_philippe_de_orleans_of_paris = {
+	# Prince Philippe, Count of Paris
+	first_name = Louis-Philippe
+	last_name = "d_Orleans"
+	historical = yes
+	heir = yes
+	birth_date = 1838.8.24
+	dna = dna_fra_orleans_louis_philippe_02
+	culture = cu:french
+	interest_group = ig_intelligentsia
+	ideology = ideology_liberal_leader
+	traits = {
+		# historian & journalist
+		# "outspoken democrat"
+		basic_offensive_planner # served "with distinction" as a staff officer in the Peninsula Campaign
+	}
+	on_created = {
+		set_variable = {
+			name = orleanist_leader
+		}		
+	}
+}
+
+FRA_philippe_de_orleans_of_orleans = {
+	first_name = "Philippe"
+	last_name = "d_Orleans"
+	historical = yes
+	heir = yes
+	birth_date = 1869.2.6
+	dna = dna_fra_orleans_philippe_08
+	culture = cu:french
+	interest_group = ig_armed_forces
+	ideology = ideology_orleanist
+	traits = {
+		basic_political_operator
+		persistent
+		explorer
+	}
+	on_created = {
+		set_variable = {
+			name = orleanist_leader
+		}				
+	}
+}
+
+FRA_robert_de_orleans = {
+	heir = yes
+	culture = cu:french
+	first_name = "Robert"
+	last_name = d_Orleans
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_fra_orleans_robert_03
+	interest_group = ig_armed_forces
+	ideology = ideology_humanitarian_royalist
+	traits = {
+		brave
+		surveyor
+	}
+	on_created = {
+		set_variable = { name = orleanist_leader }
+	}
+	birth_date = 1840.11.9
+}
+
+FRA_jean_de_orleans = {
+	first_name = "Jean"
+	last_name = "d_Orleans"
+	historical = yes
+	heir = yes
+	birth_date = 1874.9.4
+	dna = dna_fra_orleans_jean_03
+	culture = cu:french
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_orleanist
+	traits = {
+		erudite
+	}
+	on_created = {
+		set_variable = {
+			name = orleanist_leader
+		}			
+	}
+}
+
+FRA_henri_de_orleans = {
+	first_name = "Henri"
+	last_name = "d_Orleans"
+	historical = yes
+	heir = yes
+	birth_date = 1908.7.5
+	dna = dna_fra_orleans_henri_05
+	culture = cu:french
+	interest_group = ig_rural_folk
+	ideology = ideology_orleanist
+	traits = {
+		ambitious
+		experienced_political_operator
+		arrogant
+	}
+	on_created = {
+		set_variable = { name = orleanist_leader }
+	}
+}
+
+FRA_henri_06_de_orleans = {
+	heir = yes
+	culture = cu:french
+	first_name = "Henri"
+	last_name = d_Orleans
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_fra_orleans_henri_06
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_orleanist
+	traits = {
+		romantic
+	}
+	on_created = {
+		set_variable = { name = orleanist_leader }
+	}
+	birth_date = 1933.6.14
+}
+
+# Legitimists
+
+FRA_louis_antoine_de_bourbon = {
+	# Louis Antoine, Duke of Angoulême
+	first_name = "Louis"
+	last_name = "de_Bourbon"
+	historical = yes
+	heir = yes
+	birth_date = 1775.8.6
+	dna = dna_fra_bourbon_louis_19
+	culture = cu:french
+	interest_group = ig_armed_forces
+	ideology = ideology_legitimist
+	traits = {
+		basic_offensive_planner # see the battle of Trocadero
+		bigoted
+	}
+	on_created = {
+		set_variable = {
+			name = legitimist_leader
+		}				
+	}
+}
+
+FRA_henri_de_bourbon = {
+	# Henri, Count of Chambord
+	first_name = "Henri"
+	last_name = "de_Bourbon"
+	historical = yes
+	heir = yes
+	birth_date = 1820.9.29
+	dna = dna_fra_bourbon_henri_05
+	culture = cu:french
+	interest_group = ig_landowners
+	ideology = ideology_legitimist
+	traits = {
+		arrogant
+		basic_political_operator
+	}
+	on_created = {
+		set_variable = {
+			name = legitimist_leader
+		}				
+	}
+}
+
+FRA_jean_de_bourbon = {
+	# Infante Juan, Count of Montizón - Carlist
+	first_name = "Jean"
+	last_name = "de_Bourbon"
+	historical = yes
+	heir = yes
+	birth_date = 1822.5.15
+	dna = dna_fra_bourbon_jean_03
+	culture = cu:spanish
+	interest_group = ig_landowners
+	ideology = ideology_legitimist
+	traits = {
+		# "liberal tendencies"
+		reserved
+	}
+	on_created = {
+		set_variable = {
+			name = legitimist_leader
+		}				
+	}
+}
+
+FRA_carlos_de_bourbon = {
+	# Infante Carlos, Duke of Madrid - Carlist
+	first_name = "Charles"
+	last_name = "de_Bourbon"
+	historical = yes
+	heir = yes
+	birth_date = 1848.3.30
+	dna = dna_fra_bourbon_charles_11
+	culture = cu:spanish
+	interest_group = ig_landowners
+	ideology = ideology_legitimist
+	traits = {
+		basic_offensive_planner
+		ambitious
+		pious
+	}
+	on_created = {
+		set_variable = {
+			name = legitimist_leader
+		}				
+	}
+}
+
+FRA_jacques_de_bourbon = {
+	# Infante Jaime, Duke of Madrid - Carlist
+	first_name = "Jacques"
+	last_name = "de_Bourbon"
+	historical = yes
+	heir = yes
+	birth_date = 1870.6.27
+	dna = dna_fra_bourbon_jacques_01
+	culture = cu:spanish
+	interest_group = ig_armed_forces
+	ideology = ideology_legitimist
+	traits = {
+		# suspected of liberal tendencies (gah!)
+		surveyor
+		pious
+	}
+	on_created = {
+		set_variable = {
+			name = legitimist_leader
+		}				
+	}
+}
+
+FRA_alfonso_carlos_de_bourbon = {
+	# Infante Alfonso Carlos, Duke of San Jaime - Carlist
+	first_name = "Charles"
+	last_name = "de_Bourbon"
+	historical = yes
+	heir = yes
+	birth_date = 1849.9.12
+	dna = dna_fra_bourbon_charles_12
+	culture = cu:spanish
+	interest_group = ig_armed_forces
+	ideology = ideology_legitimist
+	traits = {
+		stalwart_defender
+		pious
+		meticulous
+	}
+	on_created = {
+		set_variable = {
+			name = legitimist_leader
+		}				
+	}
+}
+
+FRA_alfonso_de_bourbon = {
+	# Alfonso XIII of Spain
+	first_name = "Alphonse"
+	last_name = "de_Bourbon"
+	historical = yes
+	heir = yes
+	birth_date = 1886.5.17
+	dna = dna_spa_alfonso_13
+	culture = cu:spanish
+	interest_group = ig_armed_forces
+	ideology = ideology_legitimist
+	traits = {
+		arrogant
+		expensive_tastes
+		basic_political_operator
+	}
+	on_created = {
+		set_variable = {
+			name = legitimist_leader
+		}				
+	}
+}
+
+#Royal Splendor Additions
+FRA_alfonso_02_de_bourbon  = {
+	# Alfonso XIV of Spain
+	heir = yes
+	culture = cu:spanish
+	first_name = "Alphonse"
+	last_name = "de_Bourbon"
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_spa_alfonso_14
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_moderate
+	traits = {
+		sickly
+	}
+	birth_date = 1907.5.10
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+FRA_henri_06_de_bourbon = {
+	# Jaime III of Spain
+	heir = yes
+	culture = cu:spanish
+	first_name = "Henri"
+	last_name = "de_Bourbon"
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_spa_jaime_03
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_moderate
+	traits = {
+		beetle_ear	
+	}
+	birth_date = 1908.6.23
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+FRA_jean_04_de_bourbon = {
+	heir = yes
+	culture = cu:spanish
+	first_name = "Jean"
+	last_name = "de_Bourbon"
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_spa_juan_03
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_liberal_leader
+	traits = {
+		cautious
+	}
+	birth_date = 1913.6.20
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+# Bonapartists
+
+FRA_napoleon_eugene_louis_bonaparte = {
+	# Napoléon Eugène Louis Jean Joseph Bonaparte
+	first_name = "Napoleon"
+	last_name = "Bonaparte"
+	historical = yes
+	heir = yes
+	birth_date = 1856.3.16
+	dna = dna_fra_bonaparte_louis_napoleon_04
+	culture = cu:french
+	interest_group = ig_armed_forces
+	ideology = ideology_bonapartist
+	traits = {
+		brave
+		surveyor
+	}
+	on_created = {
+		set_variable = {
+			name = bonapartist_leader
+		}				
+	}
+}
+
+FRA_jerome_bonaparte = {
+	# Jerome, Prince Napoléon
+	first_name = "Jerome"
+	last_name = "Bonaparte"
+	historical = yes
+	heir = yes
+	birth_date = 1822.9.9
+	dna = dna_fra_bonaparte_jerome_napoleon_05
+	culture = cu:french
+	interest_group = ig_intelligentsia
+	ideology = ideology_bonapartist
+	traits = {
+		expensive_tastes
+		arrogant
+	}
+	on_created = {
+		set_variable = {
+			name = bonapartist_leader
+		}				
+	}
+}
+
+FRA_victor_bonaparte = {
+	# Victor, Prince Napoléon
+	first_name = "Victor"
+	last_name = "Bonaparte"
+	historical = yes
+	heir = yes
+	birth_date = 1862.7.18
+	dna = dna_fra_bonaparte_victor_napoleon_06
+	culture = cu:french
+	interest_group = ig_landowners
+	ideology = ideology_bonapartist
+	traits = {
+		arrogant
+		basic_political_operator
+	}
+	on_created = {
+		set_variable = {
+			name = bonapartist_leader
+		}				
+	}
+}
+
+FRA_louis_bonaparte = {
+	# Louis, Prince Napoléon
+	first_name = "Louis"
+	last_name = "Bonaparte"
+	historical = yes
+	heir = yes
+	birth_date = 1914.1.23
+	dna = dna_fra_bonaparte_louis_napoleon_07
+	culture = cu:french
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_bonapartist
+	traits = {
+		brave
+		reckless
+		mountain_commander
+	}
+	on_created = {
+		set_variable = {
+			name = bonapartist_leader
+		}				
+	}
+}

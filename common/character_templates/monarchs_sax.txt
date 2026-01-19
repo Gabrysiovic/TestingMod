@@ -1,0 +1,165 @@
+﻿### Saxon historic monarchs template file ###
+
+
+is_sax_anton_01 = {
+	first_name = Anton
+	last_name = von_Wettin
+	historical = yes
+	ruler = yes
+	culture = cu:north_german
+	religion = catholic
+	age = 81 # died June 6th, 1836
+	dna = dna_sax_anton_01
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	traits = {
+		reserved # dude was old and did nothing
+	} 
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_sax_friedrich_august_02 = {
+	first_name = Friedrich_August
+	last_name = von_Wettin
+	historical = yes
+	heir = yes
+	culture = cu:north_german
+	religion = catholic
+	age = 29
+	dna = dna_sax_friedrich_august_02
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_moderate
+	traits = {
+		meticulous
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_sax_johann_01 = {
+	heir = yes
+	culture = cu:north_german
+	first_name = Johann
+	last_name = von_Wettin
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_sax_johann_01
+	interest_group = ig_industrialists
+	ideology = ideology_moderate
+	traits = {
+		literary
+		cautious
+	}
+	birth_date = 1801.12.12
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_sax_albert_01 = {
+	heir = yes
+	culture = cu:north_german
+	first_name = Albert
+	last_name = von_Wettin
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_sax_albert_01
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	traits = {
+		brave
+		surveyor
+	}
+	birth_date = 1828.4.23
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_sax_georg_01 = {
+	heir = yes
+	culture = cu:north_german
+	first_name = Georg
+	last_name = von_Wettin
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_sax_georg_01
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	traits = {
+		direct
+	}
+	birth_date = 1832.8.8
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_sax_friedrich_august_03 = {
+	heir = yes
+	culture = cu:north_german
+	first_name = Friedrich_August
+	last_name = von_Wettin
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_sax_friedrich_august_03
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	traits = {
+		charismatic
+		honorable
+	}
+	birth_date = 1865.5.25
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_sax_georg_02 = {
+	heir = yes
+	culture = cu:north_german
+	first_name = Georg
+	last_name = von_Wettin
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_sax_georg_02
+	interest_group = ig_devout
+	ideology = ideology_reformer
+	traits = {
+		pious
+		master_bureaucrat
+	}
+	birth_date = 1893.1.15
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}

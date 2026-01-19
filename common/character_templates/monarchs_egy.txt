@@ -1,0 +1,128 @@
+﻿### Egyptian historic monarchs template file ###
+
+
+is_egy_muhammad_ali = {
+	first_name = "Muhammad_Ali"
+    last_name = "al-_Alawi"
+    historical = yes
+    ruler = yes
+    culture = cu:albanian
+    birth_date = 1769.3.4
+    dna = dna_egy_muhammad_ali
+    interest_group = ig_armed_forces
+    ideology = ideology_jingoist_leader
+    traits = {
+        ambitious
+        persistent
+        innovative
+    }
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_egy_ibrahim = {
+	first_name = Ibrahim
+    last_name = "al-_Alawi"
+    historical = yes
+    heir = yes
+    culture = cu:albanian
+    is_general = yes
+    age = 47
+    dna = dna_egy_ibrahim
+    interest_group = ig_armed_forces
+    ideology = ideology_jingoist_leader
+    hq = region_nile_basin
+    commander_rank = commander_rank_3
+    traits = {
+        persistent
+        experienced_offensive_planner
+        pillager
+    }
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_egy_ismail = {
+    first_name = Ismail
+    last_name = "al-_Alawi"
+    historical = yes
+    heir = yes
+    culture = cu:albanian
+    is_general = no
+    birth_date = 1830.1.12
+    dna = dna_egy_ismail
+    interest_group = ig_industrialists
+    ideology = ideology_market_liberal
+    traits = {
+        ambitious
+        persistent
+    }
+    on_created = {
+        set_variable = is_married
+    }
+     
+}
+
+is_egy_muhammad_tewfik = {
+    first_name = "Muhammad_Tewfik"
+    last_name = "al-_Alawi"
+    historical = yes
+    heir = yes
+    culture = cu:albanian
+    is_general = no
+    birth_date = 1852.11.15
+    dna = dna_egy_muhammad_tewfik
+    interest_group = ig_landowners
+    ideology = ideology_moderate
+    traits = {
+        reserved
+        basic_diplomat
+    }
+    on_created = {
+        set_variable = is_married
+    }
+     
+}
+
+is_egy_abbas_hilmi = {
+    first_name = "Abbas_Hilmi"
+    last_name = "al-_Alawi"
+    historical = yes
+    heir = yes
+    culture = cu:albanian
+    is_general = no
+    birth_date = 1874.7.14
+    dna = dna_egy_abbas_hilmi
+    interest_group = ig_rural_folk
+    ideology = ideology_protectionist
+    traits = {
+        imperious
+    }
+    on_created = {
+        set_variable = is_married
+    }
+     
+}
+
+is_egy_muhammad_abdel_moneim = {
+    first_name = "Muhammad_Abdel_Moneim"
+    last_name = "al-_Alawi"
+    historical = yes
+    heir = yes
+    culture = cu:albanian
+    is_general = no
+    birth_date = 1899.2.2
+    dna = dna_egy_muhammad_abdel_moneim
+    interest_group = ig_petty_bourgeoisie
+    ideology = ideology_royalist
+    traits = {
+        expensive_tastes
+    }
+    on_created = {
+        set_variable = is_married
+    }
+}

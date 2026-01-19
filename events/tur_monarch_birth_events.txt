@@ -1,0 +1,170 @@
+﻿namespace = tur_monarch_birth
+
+# Murad 05 is born
+tur_monarch_birth.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_tur_abdulmecid_01 }
+		NOT = { heir =  { has_template = is_tur_murad_05 } }
+		game_date >= 1840.9.21
+		game_date < 1841.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = tur_monarch_birth.1.a
+		default_option = yes
+
+		create_character = {
+			template = is_tur_murad_05
+		}
+	}
+}
+
+# Mehmed is born
+tur_monarch_birth.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_tur_murad_05 }
+		NOT = { heir =  { has_template = is_tur_mehmed } }
+		game_date >= 1861.8.5
+		game_date < 1862.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = tur_monarch_birth.2.a
+		default_option = yes
+
+		create_character = {
+			template = is_tur_mehmed
+		}
+	}
+}
+
+# Ahmed 04 is born
+tur_monarch_birth.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_tur_mehmed }
+		NOT = { heir =  { has_template = is_tur_ahmed_04 } }
+		game_date >= 1883.7.5
+		game_date < 1884.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = tur_monarch_birth.3.a
+		default_option = yes
+
+		create_character = {
+			template = is_tur_ahmed_04
+		}
+	}
+}
+
+# Ali is born
+tur_monarch_birth.4 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		scope:character ?= {
+		ruler = { has_template = is_tur_ahmed_04 }
+		NOT = { heir =  { has_template = is_tur_ali } }
+		game_date >= 1903.10.13
+		game_date < 1904.10.13
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = tur_monarch_birth.4.a
+		default_option = yes
+
+		create_character = {
+			template = is_tur_ali
+		}
+	}
+}

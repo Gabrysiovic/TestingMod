@@ -1,0 +1,139 @@
+﻿namespace = net_heir_death
+
+# Willem 02 dies [ New Heir: (A) Willem 03 (W2) ]
+net_heir_death.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Willem 02 dies as heir, Willem 03 becomes heir
+		name = net_heir_death.1.a
+		default_option = yes
+
+		trigger = {	
+		}
+
+		create_character = {
+			template = is_net_willem_03
+		}
+	}
+}
+
+# Willem 03 dies [ New Heir: (B) Wilhelmina 01 (W3>80) Nobody (W3<80) ]
+net_heir_death.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Willem 03 dies as heir, Wilhelmina 01 becomes heir
+		name = net_heir_death.2.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1880.9.4
+		}
+
+		create_character = {
+			template = is_net_wilhelmina_01
+		}
+	}
+
+	option = { # Willem 03 dies as heir, Nobody becomes heir
+		name = net_heir_death.2.b
+
+		trigger = {	
+			game_date < 1880.9.4			
+		}
+	}
+}
+
+# Wilhelmina 01 dies [ New Heir: (B) Juliana (Wm1>09) Nobody (Wm<09) ]
+net_heir_death.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Wilhelmina 01 dies as heir, Juliana 01 becomes heir
+		name = net_heir_death.3.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1909.4.30
+		}
+
+		create_character = {
+			template = is_net_juliana_01
+		}
+	}
+
+	option = { # Wilhelmina 01 dies as heir, Nobody becomes heir
+		name = net_heir_death.3.b
+
+		trigger = {	
+			game_date < 1909.4.30		
+		}
+	}
+}

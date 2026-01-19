@@ -1,0 +1,186 @@
+﻿namespace = bel_heir_death
+
+# Leopold 02 dies [ New Heir: (A)  Philippe 01 (L2) ]
+bel_heir_death.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Leopold 02 dies as heir, Philippe 01 becomes heir
+		name = bel_heir_death.1.a
+		default_option = yes
+
+		trigger = {	
+		}
+
+		create_character = {
+			template = is_bel_philippe_01
+		}
+	}
+}
+
+# Philippe 01 dies [ New Heir: (B) Albert 01 (P1>75) Nobody (P1<75)]
+bel_heir_death.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Philippe 01 dies as heir, Albert 01 becomes heir
+		name = bel_heir_death.2.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1875.4.8
+		}
+
+		create_character = {
+			template = is_bel_albert_01
+		}
+	}
+	option = { # Philippe 01 dies as heir, Nobody becomes heir
+		name = bel_heir_death.2.b
+
+		trigger = {	
+			game_date < 1875.4.8
+		}
+	}
+}
+
+# Albert 01 dies [ New Heir: (B) Leopold 03 (A1>01) Nobody (A1<01)]
+bel_heir_death.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Albert 01 dies as heir, Leopold 03 becomes heir
+		name = bel_heir_death.3.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1901.7.16
+		}
+
+		create_character = {
+			template = is_bel_leopold_03
+		}
+	}
+	option = { # Albert 01 dies as heir, Nobody becomes heir
+		name = bel_heir_death.3.b
+
+		trigger = {	
+			ruler = { has_template = is_bel_albert_01 }
+			game_date < 1901.7.16
+		}
+	}
+}
+
+# Leopold 03 dies [ New Heir: (B) Baudouin 01 (L3>30) Nobody (L3<30)]
+bel_heir_death.4 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Leopold 03 dies as heir, Baudouin 01 becomes heir
+		name = bel_heir_death.4.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1930.9.7
+		}
+
+		create_character = {
+			template = is_bel_baudouin_01
+		}
+	}
+	option = { # Leopold 03 dies as heir, Nobody becomes heir
+		name = bel_heir_death.4.b
+
+		trigger = {	
+			game_date < 1930.9.7
+		}
+	}
+}

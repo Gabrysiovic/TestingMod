@@ -1,0 +1,379 @@
+﻿namespace = pru_monarch_birth
+
+# HISTORIC Wilhelm 02 is born
+pru_monarch_birth.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_pru_friedrich_03 }
+		NOT = { heir =  { has_template = is_pru_wilhelm_02 } }
+		game_date >= 1836.3.27
+		game_date < 1837.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = pru_monarch_birth.1.a
+		default_option = yes
+
+		create_character = {
+			template = is_pru_wilhelm_02
+		}
+	}
+}
+
+# HISTORIC Wilhelm 03 is born
+pru_monarch_birth.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_pru_wilhelm_02 }
+		NOT = { heir =  { has_template = is_pru_wilhelm_03 } }
+		game_date >= 1882.5.6
+		game_date < 1883.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = pru_monarch_birth.2.a
+		default_option = yes
+
+		create_character = {
+			template = is_pru_wilhelm_03
+		}
+	}
+}
+
+# HISTORIC Wilhelm 04 is born
+pru_monarch_birth.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_pru_wilhelm_03 }
+		NOT = { heir =  { has_template = is_pru_wilhelm_04 } }
+		game_date >= 1906.7.4
+		game_date < 1907.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = pru_monarch_birth.3.a
+		default_option = yes
+
+		create_character = {
+			template = is_pru_wilhelm_04
+		}
+	}
+}
+
+# ALTERNATE Friedrich Leopold 01 is born
+pru_monarch_birth.4 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	trigger = {
+		ruler = { has_template = is_pru_friedrich_karl_02 }
+		NOT = { heir =  { has_template = is_pru_friedrich_leopold_01 } }
+		game_date >= 1865.11.14
+		game_date < 1866.1.10
+	}
+
+	option = {
+		name = pru_monarch_birth.4.a
+		default_option = yes
+
+		create_character = {
+			template = is_pru_friedrich_leopold_01
+		}
+	}
+}
+
+# ALTERNATE Friedrich Sigismund 01 is born
+pru_monarch_birth.5 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	trigger = {
+		ruler = { has_template = is_pru_friedrich_leopold_01 }
+		NOT = { heir =  { has_template = is_pru_friedrich_sigismund_01 } }
+		game_date >= 1891.12.17
+		game_date < 1892.1.10
+	}
+
+	option = {
+		name = pru_monarch_birth.5.a
+		default_option = yes
+
+		create_character = {
+			template = is_pru_friedrich_sigismund
+		}
+	}
+}
+
+# ALTERNATE Waldemar 01 is born
+pru_monarch_birth.6 ={
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	trigger = {
+		ruler = { has_template = is_pru_heinrich_01 }
+		NOT = { heir =  { has_template = is_pru_waldemar_01 } }
+		game_date >= 1889.3.20
+		game_date < 1890.1.10
+	}
+
+	option = {
+		name = pru_monarch_birth.6.a
+		default_option = yes
+
+		create_character = {
+			template = is_pru_waldemar_01
+		}
+	}
+}
+
+# ALTERNATE Alfred 01 is born
+pru_monarch_birth.7 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	trigger = {
+		ruler = { has_template = is_pru_sigismund_01 }
+		NOT = { heir =  { has_template = is_pru_alfred_01 } }
+		game_date >= 1924.8.17
+		game_date < 1925.1.10
+	}
+
+	option = {
+		name = pru_monarch_birth.7.a
+		default_option = yes
+
+		create_character = {
+			template = is_pru_alfred_01
+		}
+	}
+}
+
+# ALTERNATE Alexander Ferdinand 01 is born
+pru_monarch_birth.8 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	trigger = {
+		ruler = { has_template = is_pru_august_wilhelm_01 }
+		NOT = { heir =  { has_template = is_pru_alexander_ferdinand_01 } }
+		game_date >= 1912.12.26
+		game_date < 1913.1.10
+	}
+
+	option = {
+		name = pru_monarch_birth.8.a
+		default_option = yes
+
+		create_character = {
+			template = is_pru_alexander_ferdinand_01
+		}
+	}
+}
+
+# ALTERNATE Wilhelm Viktor 01 is born
+pru_monarch_birth.9 = {
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	trigger = {
+		ruler = { has_template = is_pru_adalbert_01 }
+		NOT = { heir =  { has_template = is_pru_wilhelm_viktor_01 } }
+		game_date >= 1919.2.15
+		game_date < 1920.1.10
+	}
+
+	option = {
+		name = pru_monarch_birth.9.a
+		default_option = yes
+
+		create_character = {
+			template = is_pru_wilhelm_viktor_01
+		}
+	}
+}

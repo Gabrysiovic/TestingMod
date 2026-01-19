@@ -1,0 +1,127 @@
+﻿namespace = afg_monarch_birth
+
+# Mohammad Yusuf is born
+afg_monarch_birth.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_afg_mohammad_yahya }
+		NOT = { heir =  { has_template = is_afg_mohammad_yusuf } }
+		game_date >= 1855.6.1
+		game_date < 1856.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = historic_monarch_birth_reaction
+		default_option = yes
+
+		create_character = {
+			template = is_afg_mohammad_yusuf
+		}
+	}
+}
+
+# Mohammad Nadir is born
+afg_monarch_birth.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_afg_mohammad_yusuf }
+		NOT = { heir =  { has_template = is_afg_mohammad_nadir } }
+		game_date >= 1883.4.9
+		game_date < 1884.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = historic_monarch_birth_reaction
+		default_option = yes
+
+		create_character = {
+			template = is_afg_mohammad_nadir
+		}
+	}
+}
+
+# Mohammad Zahir is born
+afg_monarch_birth.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_afg_mohammad_nadir }
+		NOT = { heir =  { has_template = is_afg_mohammad_zahir } }
+		game_date >= 1914.10.15
+		game_date < 1915.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = historic_monarch_birth_reaction
+		default_option = yes
+
+		create_character = {
+			template = is_afg_mohammad_zahir
+		}
+	}
+}

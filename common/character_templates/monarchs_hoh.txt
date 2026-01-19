@@ -1,0 +1,39 @@
+﻿### Hohenzollern historic monarchs template file ###
+
+
+is_hoh_karl_anton_01 = {
+	first_name = Karl-Anton
+	last_name = "von_Hohenzollern"
+	historical = yes
+	ruler = yes
+	age = 24
+	dna = dna_hoh_karl_anton_01
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_hoh_leopold_01 = {
+	first_name = Leopold
+	last_name = "von_Hohenzollern"
+	historical = yes
+	heir = yes
+	age = 0
+	dna = dna_hoh_leopold_01
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	traits = {
+		trait_child
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}

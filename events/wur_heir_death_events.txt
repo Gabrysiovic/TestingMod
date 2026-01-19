@@ -1,0 +1,148 @@
+﻿namespace = wur_heir_death
+
+# Karl 01 dies [ New Heir: (B) Wilhelm 02 (K1>48) Nobody (K1<48) ]
+wur_heir_death.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Karl 01 dies as heir, Wilhelm 02 becomes heir
+		name = wur_heir_death.1.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1848.2.25
+		}
+
+		create_character = {
+			template = is_wur_wilhelm_02
+		}
+	}
+	option = { # Karl 01 dies as heir, Nobody becomes heir
+		name = wur_heir_death.1.b
+		default_option = yes
+
+		trigger = {	
+			game_date < 1848.2.25
+		}
+	}
+}
+
+# Wilhelm 02 dies [ New Heir: (B) Albrecht 01 (W2>65) Nobody (W2<65) ]
+wur_heir_death.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Wilhelm 02 dies as heir, Albrecht 01 becomes heir
+		name = wur_heir_death.2.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1865.12.23
+		}
+
+		create_character = {
+			template = is_wur_albrecht_01
+		}
+	}
+	option = { # Wilhelm 02 dies as heir, Nobody becomes heir
+		name = wur_heir_death.2.b
+		default_option = yes
+
+		trigger = {	
+			game_date < 1865.12.23
+		}
+	}
+}
+
+# Albrecht 01 dies [ New Heir: (B) Albrecht 02 (A1>93) Nobody (A1<93) ]
+wur_heir_death.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Albrecht 01 dies as heir, Albrecht 02 becomes heir
+		name = wur_heir_death.3.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1893.11.14
+		}
+
+		create_character = {
+			template = is_wur_albrech_02
+		}
+	}
+	option = { # Wilhelm 02 dies as heir, Nobody becomes heir
+		name = wur_heir_death.3.b
+		default_option = yes
+
+		trigger = {	
+			game_date < 1893.11.14
+		}
+	}
+}

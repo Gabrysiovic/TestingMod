@@ -1,0 +1,43 @@
+﻿namespace = wur_monarch_birth
+
+# Albrecht 02 is born
+wur_monarch_birth.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_wur_albrecht_01 }
+		NOT = { heir =  { has_template = is_wur_albrecht_02 } }
+		game_date >= 1893.11.14
+		game_date < 1894.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = wur_monarch_birth.1.a
+		default_option = yes
+
+		create_character = {
+			template = is_wur_albrecht_02
+		}
+	}
+}

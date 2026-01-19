@@ -1,0 +1,127 @@
+﻿namespace = sar_monarch_birth
+
+# Umberto 01 is born
+sar_monarch_birth.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_sar_vittorio_emanuele_02 }
+		NOT = { heir =  { has_template = is_sar_umberto_01 } }
+		game_date >= 1844.3.14
+		game_date < 1845.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = sar_monarch_birth.1.a
+		default_option = yes
+
+		create_character = {
+			template = is_sar_umberto_01
+		}
+	}
+}
+
+# Vittorio Emanuele 03 is born
+sar_monarch_birth.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_sar_umberto_01 }
+		NOT = { heir =  { has_template = is_sar_vittorio_emanuele_03 } }
+		game_date >= 1869.11.11
+		game_date < 1870.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = sar_monarch_birth.2.a
+			default_option = yes
+
+		create_character = {
+			template = is_sar_vittorio_emanuele_03
+		}
+	}
+}
+
+# Umberto 02 is born
+sar_monarch_birth.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_sar_vittorio_emanuele_03 }
+		NOT = { heir =  { has_template = is_sar_umberto_02 } }
+		game_date >= 1904.9.15
+		game_date < 1905.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = sar_monarch_birth.3.a
+			default_option = yes
+
+		create_character = {
+			template = is_sar_umberto_02
+		}
+	}
+}

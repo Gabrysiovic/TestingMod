@@ -1,0 +1,227 @@
+﻿namespace = sic_monarch_death
+
+# Ferdinando 02 dies [ New Heir: (C) Alfonso 01 (Fr2) Ferdinando 03 (Al1) Nobody ]
+sic_monarch_death.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Francesco 02 becomes ruler, Alfonso 01 becomes heir
+		name = sic_monarch_death.1.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_sic_francesco_02 }
+			game_date >= 1841.3.28
+		}
+
+		create_character = {
+			template = is_sic_alfonso_01
+		}
+	}
+
+	option = { # Alfonso 01 becomes ruler, Ferdinando 03 becomes heir
+		name = sic_monarch_death.1.b
+
+		trigger = {	
+			ruler = { has_template = is_sic_alfonso_01 }
+			game_date >= 1869.7.25
+		}
+
+		create_character = {
+			template = is_sic_ferdinando_03
+		}
+	}
+
+	option = { # Francesco 02/Alfonso 01 becomes ruler, Nobody becomes heir
+		name = sic_monarch_death.1.c
+
+		trigger = {	
+			OR = {
+				AND = {
+					ruler = { has_template = is_sic_francesco_02 }
+					game_date < 1841.3.28
+				}
+				AND = {
+					ruler = { has_template = is_sic_alfonso_01 }
+					game_date < 1869.7.25
+				}
+			} 		
+		}
+	}
+}
+
+# Francesco 02 dies [ New Heir: (C) Ferdinando 03 (Al1) Carlo 01 (Fd3) Nobody ]
+sic_monarch_death.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Alfonso 01 becomes ruler, Ferdinando 03 becomes heir
+		name = sic_monarch_death.2.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_sic_alfonso_01 }
+			game_date >= 1869.7.25
+		}
+
+		create_character = {
+			template = is_sic_ferdinando_03
+		}
+	}
+	option = { # Ferdinando 03 becomes ruler, Carlo 01 becomes heir
+		name = sic_monarch_death.2.b
+
+		trigger = {	
+			ruler = { has_template = is_sic_ferdinando_03 }
+			game_date >= 1870.11.10
+		}
+
+		create_character = {
+			template = is_sic_carlo_01
+		}
+	}
+	option = { # Alfonso 01 becomes ruler, Nobody becomes heir
+		name = sic_monarch_death.2.c
+
+		trigger = {	
+			OR = {
+				AND = {
+					ruler = { has_template = is_sic_alfonso_01 }
+					game_date < 1869.7.25
+				}
+				AND = {
+					ruler = { has_template = is_sic_ferdinando_03 }
+					game_date < 1870.11.10
+				}
+			}
+		}
+	}
+}
+
+# Alfonso 01 dies [ New Heir: (A) Carlo 01 (Fd3) ]
+sic_monarch_death.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Ferdinando 03 becomes ruler, Carlo 01 becomes heir
+		name = sic_monarch_death.3.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_sic_ferdinando_03 }
+			game_date >= 1870.11.10
+		}
+
+		create_character = {
+			template = is_sic_carlo_01
+		}
+	}
+}
+
+# Ferdinando 03 dies [ New Heir: (A) Alfonso 02 (C1) ]
+sic_monarch_death.4 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Carlo 01 becomes ruler, Alfonso 02 becomes heir
+		name = sic_monarch_death.4.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_sic_carlo_01 }
+			game_date >= 1901.11.30
+		}
+
+		create_character = {
+			template = is_sic_alfonso_02
+		}
+	}
+}

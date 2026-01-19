@@ -1,0 +1,115 @@
+﻿### X historic monarchs template file ###
+
+
+is_net_willem_01 = {
+	first_name = Willem
+	last_name = van_Oranje-Nassau
+	historical = yes
+	ruler = yes
+	age = 64
+	dna = dna_king_william_01
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_royalist
+	traits = {
+		romantic
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_net_willem_02 = {
+	first_name = Willem
+	last_name = van_Oranje-Nassau
+	historical = yes
+	heir = yes
+	age = 44
+	dna = dna_net_willem_02
+	interest_group = ig_intelligentsia
+	ideology = ideology_reformer
+	traits = {
+		persistent
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_net_willem_03 = {
+	heir = yes
+	culture = cu:dutch
+	first_name = Willem
+	last_name = van_Oranje-Nassau
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_net_willem_03
+	interest_group = ig_landowners
+	ideology = ideology_royalist
+	traits = {
+		imperious
+	}
+	birth_date = 1817.2.19
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_net_wilhelmina_01 = {
+	heir = yes
+	female = yes
+	culture = cu:dutch
+	first_name = Wilhelmina
+	last_name = van_Oranje-Nassau
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_net_wilhelmina_01
+	interest_group = ig_industrialists
+	ideology = ideology_market_liberal
+	traits = {
+		inspirational_orator
+		honorable
+	}
+	birth_date = 1880.9.4
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_net_juliana_01 = {
+	heir = yes
+	female = yes
+	culture = cu:dutch
+	first_name = Juliana
+	last_name = van_Oranje-Nassau
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_net_juliana_01
+	interest_group = ig_intelligentsia
+	ideology = ideology_moderate
+	traits = {
+		honorable
+		tactful
+	}
+	birth_date = 1909.4.30
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}

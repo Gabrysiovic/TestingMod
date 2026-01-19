@@ -1,0 +1,464 @@
+﻿namespace = rus_monarch_birth
+
+# HISTORIC Tsesarevich Nikolai is born
+rus_monarch_birth.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_rus_aleksandr_02 }
+		NOT = { heir =  { has_template = is_rus_tsesarevich_nikolai } }
+		game_date >= 1843.9.20
+		game_date < 1844.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = rus_monarch_birth.1.a
+		default_option = yes
+
+		create_character = {
+			template = is_rus_tsesarevich_nikolai
+		}
+	}
+}
+
+# HISTORIC Aleksandr 03 is born
+rus_monarch_birth.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_rus_aleksandr_02 }
+		NOT = { heir =  { has_template = is_rus_tsesarevich_nikolai } }
+		NOT = { heir =  { has_template = is_rus_aleksandr_03 } }
+		game_date >= 1845.3.10
+		game_date < 1846.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = rus_monarch_birth.2.a
+		default_option = yes
+
+		create_character = {
+			template = is_rus_aleksandr_03
+		}
+	}
+}
+
+# HISTORIC Nikolai 02 is born
+rus_monarch_birth.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_rus_aleksandr_03 }
+		NOT = { heir =  { has_template = is_rus_nikolai_02 } }
+		game_date >= 1868.7.17
+		game_date < 1869.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = rus_monarch_birth.3.a
+		default_option = yes
+
+		create_character = {
+			template = is_rus_nikolai_02
+		}
+	}
+}
+
+# HISTORIC Aleksei 02 is born
+rus_monarch_birth.4 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_rus_nikolai_02 }
+		NOT = { heir =  { has_template = is_rus_aleksei_02 } }
+		game_date >= 1904.11.12
+		game_date < 1905.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = rus_monarch_birth.4.a
+		default_option = yes
+
+		create_character = {
+			template = is_rus_aleksei_02
+		}
+	}
+}
+
+# ALTERNATE Konstantin Konstantinovich is born
+rus_monarch_birth.5 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_rus_konstantin_nikolaevich }
+		NOT = { heir =  { has_template = is_rus_konstantin_konstantinovich } }
+		game_date >= 1858.8.22
+		game_date < 1859.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = rus_monarch_birth.5.a
+		default_option = yes
+
+		create_character = {
+			template = is_rus_konstantin_konstantinovich
+		}
+	}
+}
+
+# ALTERNATE Ivan Konstantinovich is born
+rus_monarch_birth.6 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_rus_konstantin_konstantinovich }
+		NOT = { heir =  { has_template = is_rus_ivan_konstantinovich } }
+		game_date >= 1866.7.5
+		game_date < 1867.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = rus_monarch_birth.6.a
+		default_option = yes
+
+		create_character = {
+			template = is_rus_ivan_konstantinovich
+		}
+	}
+}
+
+# ALTERNATE Vsevolod Ivanovich is born
+rus_monarch_birth.7 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_rus_ivan_konstantinovich }
+		NOT = { heir =  { has_template = is_rus_vsevolod_ivanovich } }
+		game_date >= 1914.1.20
+		game_date < 1915.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = rus_monarch_birth.7.a
+		default_option = yes
+
+		create_character = {
+			template = is_rus_vsevolod_ivanovich
+		}
+	}
+}
+
+# ALTERNATE Kirill Vladimirovich is born
+rus_monarch_birth.8 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_rus_vladimir_aleksandrovich }
+		NOT = { heir =  { has_template = is_rus_kirill_vladimirovich } }
+		game_date >= 1876.10.12
+		game_date < 1877.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = rus_monarch_birth.8.a
+		default_option = yes
+
+		create_character = {
+			template = is_rus_kirill_vladimirovich
+		}
+	}
+}
+
+# ALTERNATE Vladimir Kirillovich is born
+rus_monarch_birth.9 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_rus_kirill_vladimirovich }
+		NOT = { heir =  { has_template = is_rus_vladimir_kirillovich } }
+		game_date >= 1917.8.30
+		game_date < 1918.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = rus_monarch_birth.9.a
+		default_option = yes
+
+		create_character = {
+			template = is_rus_vladimir_kirillovich
+		}
+	}
+}
+
+# ALTERNATE Vladimir Andreievich is born
+rus_monarch_birth.10 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_rus_andrei_vladimirovich }
+		NOT = { heir =  { has_template = is_rus_vladimir_andreievich } }
+		game_date >= 1902.6.30
+		game_date < 1903.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = rus_monarch_birth.10.a
+		default_option = yes
+
+		create_character = {
+			template = is_rus_vladimir_andreievich
+		}
+	}
+}
+
+# ALTERNATE Georgy Mikhailovich is born
+rus_monarch_birth.11 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_rus_mikhail_aleksandrovich }
+		NOT = { heir =  { has_template = is_rus_georgy_mikhailovich } }
+		game_date >= 1918.8.6
+		game_date < 1919.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = rus_monarch_birth.11.a
+		default_option = yes
+
+		create_character = {
+			template = is_rus_georgy_mikhailovich
+		}
+	}
+}

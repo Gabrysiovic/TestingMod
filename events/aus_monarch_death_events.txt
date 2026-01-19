@@ -1,0 +1,716 @@
+﻿namespace = aus_monarch_death
+
+# Ferdinand 01 dies [ New Heir: Rudolf 01 (FJ>58), Maximilian 01 (FJ<58), Karl Ludwig 01 (M), Franz Ferdinand 01 (KL), Ludwig Viktor]
+aus_monarch_death.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+
+	option = { # Franz Josef 01 becomes ruler, Rudolf 01 becomes heir
+		name = aus_monarch_death.1.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_aus_franz_josef_01 }
+			game_date >= 1858.8.21
+		}
+
+		create_character = {
+			template = is_aus_rudolf_01
+		}
+	}
+	option = { # Franz Josef 01 becomes ruler, Maximilian 01 becomes heir
+		name = aus_monarch_death.1.b
+
+		trigger = {	
+			ruler = { has_template = is_aus_franz_josef_01 }
+			game_date < 1858.8.21
+		}
+
+		create_character = {
+			template = is_aus_maximilian_01
+		}
+	}
+	option = { # Maximilian 01 becomes ruler, Karl Ludwig 01 becomes heir
+		name = aus_monarch_death.1.c
+
+		trigger = {	
+			ruler = { has_template = is_aus_maximilian_01 }
+		}
+
+		create_character = {
+			template = is_aus_karl_ludwig_01
+		}
+	}
+	option = { # Karl Ludwig 01 becomes ruler, Franz Ferdinand 01 becomes heir
+		name = aus_monarch_death.1.d
+
+		trigger = {	
+			ruler = { has_template = is_aus_karl_ludwig_01 }
+			game_date >= 1863.12.18
+		}
+
+		create_character = {
+			template = is_aus_franz_ferdinand_01
+		}
+	}
+	option = { # Karl Ludwig 01 becomes ruler, Ludwig Viktor 01 becomes heir
+		name = aus_monarch_death.1.e
+
+		trigger = {	
+			ruler = { has_template = is_aus_karl_ludwig_01 }
+			game_date < 1863.12.18
+		}
+
+		create_character = {
+			template = is_aus_ludwig_viktor_01
+		}
+	}
+}
+
+# Franz Josef 01 dies [ New Heir: Karl Ludwig 01, Ludwig Viktor 01, Franz Ferdinand 01, Otto Franz 01, Karl 01, Otto 01, Maximilian Eugen_01 ]
+aus_monarch_death.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+
+	option = { # Rudolf 01 becomes ruler, Karl Ludwig 01 becomes heir
+		name = aus_monarch_death.2.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_aus_rudolf_01 }
+		}
+
+		create_character = {
+			template = is_aus_karl_ludwig_01
+		}
+	}
+	option = { # Maximilian 01 becomes ruler, Karl Ludwig 01 becomes heir
+		name = aus_monarch_death.2.b
+
+		trigger = {	
+			ruler = { has_template = is_aus_maximilian_01 }
+		}
+
+		create_character = {
+			template = is_aus_karl_ludwig_01
+		}
+	}
+	option = { # Karl Ludwig 01 becomes ruler, Ludwig Viktor 01 becomes heir
+		name = aus_monarch_death.2.c
+
+		trigger = {	
+			ruler = { has_template = is_aus_karl_ludwig_01 }
+			game_date < 1863.12.18
+		}
+
+		create_character = {
+			template = is_aus_ludwig_viktor_01
+		}
+	}
+	option = { # Karl Ludwig 01 becomes ruler, Franz Ferdinand 01 becomes heir
+		name = aus_monarch_death.2.d
+
+		trigger = {	
+			ruler = { has_template = is_aus_karl_ludwig_01 }
+			game_date >= 1863.12.18
+		}
+
+		create_character = {
+			template = is_aus_franz_ferdinand_01
+		}
+	}
+	option = { # Franz Ferdinand 01 becomes ruler, Otto Franz 01 becomes heir
+		name = aus_monarch_death.2.e
+
+		trigger = {	
+			ruler = { has_template = is_aus_franz_ferdinand_01 }
+		}
+
+		create_character = {
+			template = is_aus_otto_franz_01
+		}
+	}
+	option = { # Otto Franz 01 becomes ruler, Karl 01 becomes heir
+		name = aus_monarch_death.2.f
+
+		trigger = {	
+			ruler = { has_template = is_aus_otto_franz_01 }
+		}
+
+		create_character = {
+			template = is_aus_karl_01
+		}
+	}
+	option = { # Karl 01 becomes ruler, Otto 01 becomes heir
+		name = aus_monarch_death.2.g
+
+		trigger = {	
+			ruler = { has_template = is_aus_karl_01 }
+			game_date >= 1912.11.20
+		}
+
+		create_character = {
+			template = is_aus_otto_01
+		}
+	}
+	option = { # Karl 01 becomes ruler, Maximilian Eugen 01 becomes heir
+		name = aus_monarch_death.2.h
+
+		trigger = {	
+			ruler = { has_template = is_aus_karl_01 }
+			game_date < 1912.11.20
+		}
+
+		create_character = {
+			template = is_aus_maximilian_eugen_01
+		}
+	}
+}
+
+# Rudolf 01 dies [ New Heir: Ludwig Viktor 01, Franz Ferdinand 01, Otto Franz 01, Karl 01, Otto 01, Maximilian Eugen_01 ]
+aus_monarch_death.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Karl Ludwig 01 becomes ruler, Ludwig Viktor 01 becomes heir
+		name = aus_monarch_death.3.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_aus_karl_ludwig_01 }
+			game_date < 1863.12.18
+		}
+
+		create_character = {
+			template = is_aus_ludwig_viktor_01
+		}
+	}
+	option = { # Karl Ludwig 01 becomes ruler, Franz Ferdinand 01 becomes heir
+		name = aus_monarch_death.3.b
+
+		trigger = {	
+			ruler = { has_template = is_aus_karl_ludwig_01 }
+			game_date >= 1863.12.18
+		}
+
+		create_character = {
+			template = is_aus_franz_ferdinand_01
+		}
+	}
+	option = { # Franz Ferdinand 01 becomes ruler, Otto Franz 01 becomes heir
+		name = aus_monarch_death.3.c
+
+		trigger = {	
+			ruler = { has_template = is_aus_franz_ferdinand_01 }
+		}
+
+		create_character = {
+			template = is_aus_otto_franz_01
+		}
+	}
+	option = { # Otto Franz 01 becomes ruler, Karl 01 becomes heir
+		name = aus_monarch_death.3.d
+
+		trigger = {	
+			ruler = { has_template = is_aus_otto_franz_01 }
+		}
+
+		create_character = {
+			template = is_aus_karl_01
+		}
+	}
+	option = { # Karl 01 becomes ruler, Otto 01 becomes heir
+		name = aus_monarch_death.3.e
+
+		trigger = {	
+			ruler = { has_template = is_aus_karl_01 }
+			game_date >= 1912.11.20
+		}
+
+		create_character = {
+			template = is_aus_otto_01
+		}
+	}
+	option = { # Karl 01 becomes ruler, Maximilian Eugen 01 becomes heir
+		name = aus_monarch_death.3.f
+
+		trigger = {	
+			ruler = { has_template = is_aus_karl_01 }
+			game_date < 1912.11.20
+		}
+
+		create_character = {
+			template = is_aus_maximilian_eugen_01
+		}
+	}
+}
+
+# Maximilian 01 dies  New Heir: Ludwig Viktor 01, Franz Ferdinand 01, Otto Franz 01, Karl 01, Otto 01, Maximilian Eugen_01 ]
+aus_monarch_death.4 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Karl Ludwig 01 becomes ruler, Ludwig Viktor 01 becomes heir
+		name = aus_monarch_death.4.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_aus_karl_ludwig_01 }
+			game_date < 1863.12.18
+		}
+
+		create_character = {
+			template = is_aus_ludwig_viktor_01
+		}
+	}
+	option = { # Karl Ludwig 01 becomes ruler, Franz Ferdinand 01 becomes heir
+		name = aus_monarch_death.4.b
+
+		trigger = {	
+			ruler = { has_template = is_aus_karl_ludwig_01 }
+			game_date >= 1863.12.18
+		}
+
+		create_character = {
+			template = is_aus_franz_ferdinand_01
+		}
+	}
+	option = { # Franz Ferdinand 01 becomes ruler, Otto Franz 01 becomes heir
+		name = aus_monarch_death.4.c
+
+		trigger = {	
+			ruler = { has_template = is_aus_franz_ferdinand_01 }
+		}
+
+		create_character = {
+			template = is_aus_otto_franz_01
+		}
+	}
+	option = { # Otto Franz 01 becomes ruler, Karl 01 becomes heir
+		name = aus_monarch_death.4.d
+
+		trigger = {	
+			ruler = { has_template = is_aus_otto_franz_01 }
+		}
+
+		create_character = {
+			template = is_aus_karl_01
+		}
+	}
+	option = { # Karl 01 becomes ruler, Otto 01 becomes heir
+		name = aus_monarch_death.4.e
+
+		trigger = {	
+			ruler = { has_template = is_aus_karl_01 }
+			game_date >= 1912.11.20
+		}
+
+		create_character = {
+			template = is_aus_otto_01
+		}
+	}
+	option = { # Karl 01 becomes ruler, Maximilian Eugen 01 becomes heir
+		name = aus_monarch_death.4.f
+
+		trigger = {	
+			ruler = { has_template = is_aus_karl_01 }
+			game_date < 1912.11.20
+		}
+
+		create_character = {
+			template = is_aus_maximilian_eugen_01
+		}
+	}
+}
+
+# Karl Ludwig 01 dies [ New Heir: Otto Franz 01, Karl 01, Otto 01, Maximilian Eugen_01, The Tuscan Habsburgs if Ludwig Viktor somehow becomes Emperor ]
+aus_monarch_death.5 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Franz Ferdinand 01 becomes ruler, Otto Franz 01 becomes heir
+		name = aus_monarch_death.5.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_aus_franz_ferdinand_01 }
+		}
+
+		create_character = {
+			template = is_aus_otto_franz_01
+		}
+	}
+	option = { # Otto Franz 01 becomes ruler, Karl 01 becomes heir
+		name = aus_monarch_death.5.b
+
+		trigger = {	
+			ruler = { has_template = is_aus_otto_franz_01 }
+		}
+
+		create_character = {
+			template = is_aus_karl_01
+		}
+	}
+	option = { # Karl 01 becomes ruler, Otto 01 becomes heir
+		name = aus_monarch_death.5.c
+
+		trigger = {	
+			ruler = { has_template = is_aus_karl_01 }
+			game_date >= 1912.11.20
+		}
+
+		create_character = {
+			template = is_aus_otto_01
+		}
+	}
+	option = { # Karl 01 becomes ruler, Maximilian Eugen 01 becomes heir
+		name = aus_monarch_death.5.d
+
+		trigger = {	
+			ruler = { has_template = is_aus_karl_01 }
+			game_date < 1912.11.20
+		}
+
+		create_character = {
+			template = is_aus_maximilian_eugen_01
+		}
+	}
+	option = { # Ludwig Viktor 01 becomes ruler, Tuscan Habsburgs becomes heir (WIP)
+		name = aus_monarch_death.5.e
+
+		trigger = {	
+			ruler = { has_template = is_aus_ludwig_viktor_01 }
+		}
+
+		create_character = {
+			heir = yes
+			culture = cu:south_german
+			first_name = Ferdinand
+			last_name = von_Habsburg
+			historical = yes
+			ig_leader = no
+			noble = yes
+			interest_group = ig_landowners
+			ideology = ideology_moderate
+			traits = {
+			}
+			birth_date = 1835.6.10
+		}
+	}
+}
+
+# Ludwig Viktor 01 dies [ New Heir: The Tuscan Habsburgs Continued, or Dissolution of the Habsburg Monarchy]
+aus_monarch_death.6 = {
+}
+
+# Franz Ferdinand 01 dies [ New Heir: Karl 01, Otto 01, Maximilian Eugen 01, Ferdinand 02 ]
+aus_monarch_death.7 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Otto Franz 01 becomes ruler, Karl 01 becomes heir
+		name = aus_monarch_death.7.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_aus_otto_franz_01 }
+		}
+
+		create_character = {
+			template = is_aus_karl_01
+		}
+	}
+	option = { # Karl 01 becomes ruler, Otto 01 becomes heir
+		name = aus_monarch_death.7.b
+
+		trigger = {	
+			ruler = { has_template = is_aus_karl_01 }
+			game_date >= 1912.11.20
+		}
+
+		create_character = {
+			template = is_aus_otto_01
+		}
+	}
+	option = { # Karl 01 becomes ruler, Maximilian Eugen 01 becomes heir
+		name = aus_monarch_death.7.c
+
+		trigger = {	
+			ruler = { has_template = is_aus_karl_01 }
+			game_date < 1912.11.20
+		}
+
+		create_character = {
+			template = is_aus_maximilian_eugen_01
+		}
+	}
+	option = { # Maximilian Eugen 01 becomes ruler, Ferdinand 02 becomes heir
+		name = aus_monarch_death.7.d
+
+		trigger = {	
+			ruler = { has_template = is_aus_maximilian_eugen_01 }
+			game_date >= 1918.12.6
+		}
+
+		create_character = {
+			template = is_aus_ferdinand_02
+		}
+	}
+	option = { # Maximilian Eugen 01 becomes ruler, A Tuscan Habsburg becomes heir
+		name = aus_monarch_death.5.e
+
+		trigger = {	
+			ruler = { has_template = is_aus_maximilian_eugen_01 }
+			game_date < 1918.12.6
+		}
+
+		create_character = {
+			heir = yes
+			culture = cu:south_german
+			first_name = Leopold_Ferdinand
+			last_name = von_Habsburg
+			historical = yes
+			ig_leader = no
+			noble = yes
+			interest_group = ig_landowners
+			ideology = ideology_moderate
+			traits = {
+			}
+			birth_date = 1868.12.2
+		}
+	}
+}
+
+# Otto Franz 01 dies [ New Heir: Otto 01, Maximilian Eugen 01, Ferdinand 02, Tuscan Habsburg ]
+aus_monarch_death.8 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Karl 01 becomes ruler, Otto 01 becomes heir
+		name = aus_monarch_death.8.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_aus_karl_01 }
+			game_date >= 1912.11.20
+		}
+
+		create_character = {
+			template = is_aus_otto_01
+		}
+	}
+	option = { # Karl 01 becomes ruler, Maximilian Eugen 01 becomes heir
+		name = aus_monarch_death.8.b
+
+		trigger = {	
+			ruler = { has_template = is_aus_karl_01 }
+			game_date < 1912.11.20
+		}
+
+		create_character = {
+			template = is_aus_maximilian_eugen_01
+		}
+	}
+	option = { # Maximilian Eugen 01 becomes ruler, Ferdinand 02 becomes heir
+		name = aus_monarch_death.8.c
+
+		trigger = {	
+			ruler = { has_template = is_aus_maximilian_eugen_01 }
+			game_date >= 1918.12.6
+		}
+
+		create_character = {
+			template = is_aus_ferdinand_02
+		}
+	}
+	option = { # Maximilian Eugen 01 becomes ruler, A Tuscan Habsburg becomes heir
+		name = aus_monarch_death.8.d
+
+		trigger = {	
+			ruler = { has_template = is_aus_maximilian_eugen_01 }
+			game_date < 1918.12.6
+		}
+
+		create_character = {
+			heir = yes
+			culture = cu:south_german
+			first_name = Leopold_Ferdinand
+			last_name = von_Habsburg
+			historical = yes
+			ig_leader = no
+			noble = yes
+			interest_group = ig_landowners
+			ideology = ideology_moderate
+			traits = {
+			}
+			birth_date = 1868.12.2
+		}
+	}
+}
+
+# Karl 01 dies [ nothing for now ]
+
+
+# Otto 01 dies [ nothing for now ]
+
+
+# Maximilian Eugen 01 dies [ nothing for now ]
+
+
+# Ferdinand 02 dies [ nothing for now ]

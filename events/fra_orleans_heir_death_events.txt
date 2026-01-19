@@ -1,0 +1,314 @@
+﻿namespace = fra_orleans_heir_death
+
+# Ferdinand Philippe 01 dies [ New Heir: (B) Louis Philippe 02 (FP1>38) Nobody (FP1<38) ]
+fra_orleans_heir_death.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+		NOR = {
+			has_variable = bonapartist_restoration_var
+			has_variable = legitimist_restoration_var
+		}
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Ferdinand Philippe 01 dies as heir, Louis Philippe 02 becomes heir
+		name = fra_orleans_heir_death.1.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1838.8.24
+		}
+
+		create_character = {
+			template = FRA_philippe_de_orleans_of_paris
+		}
+	}
+
+	option = { # Ferdinand Philippe 01 dies as heir, Nobody becomes heir
+		name = fra_orleans_heir_death.1.b
+
+		trigger = {	
+				game_date < 1838.8.24	
+		}
+	}
+}
+
+# Louis Philippe 02 dies [ New Heir: (B) Philippe 08 (LP2>69) Robert 03 (LP2<69) ]
+fra_orleans_heir_death.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+		NOR = {
+			has_variable = bonapartist_restoration_var
+			has_variable = legitimist_restoration_var
+		}
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Louis Philippe 02 dies as heir, Philippe 08 becomes heir
+		name = fra_orleans_heir_death.2.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1869.2.6
+		}
+
+		create_character = {
+			template = FRA_philippe_de_orleans_of_orleans
+		}
+	}
+
+	option = { # Louis Philippe 02 dies as heir, Robert 03 becomes heir
+		name = fra_orleans_heir_death.2.b
+
+		trigger = {	
+			game_date < 1869.2.6
+		}
+
+		create_character = {
+			template = FRA_robert_de_orleans
+		}
+	}
+}
+
+# Philippe 08 dies [ New Heir: (A) Robert 03 (P8) ]
+fra_orleans_heir_death.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+		NOR = {
+			has_variable = bonapartist_restoration_var
+			has_variable = legitimist_restoration_var
+		}
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Philippe 08 dies as heir, Robert 03 becomes heir
+		name = fra_orleans_heir_death.3.a
+		default_option = yes
+
+		trigger = {	
+		}
+
+		create_character = {
+			template = FRA_robert_de_orleans
+		}
+	}
+}
+
+# Robert 03 dies [ New Heir: (B) Jean 03 (R3>74) Nobody (R3<74) ]
+fra_orleans_heir_death.4 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+		NOR = {
+			has_variable = bonapartist_restoration_var
+			has_variable = legitimist_restoration_var
+		}
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Robert 03 dies as heir, Jean 03 becomes heir
+		name = fra_orleans_heir_death.4.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1878.9.4
+		}
+
+		create_character = {
+			template = FRA_jean_de_orleans
+		}
+	}
+
+	option = { # Robert 03 dies as heir, Nobody becomes heir
+		name = fra_orleans_heir_death.4.b
+
+		trigger = {	
+			game_date < 1878.9.4
+		}
+	}
+}
+
+# Jean 03 dies [ New Heir: (B) Henri 05 (J3>08) Nobody (J3<08) ]
+fra_orleans_heir_death.5 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+		NOR = {
+			has_variable = bonapartist_restoration_var
+			has_variable = legitimist_restoration_var
+		}
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Jean 03 dies as heir, Henri 05 becomes heir
+		name = fra_orleans_heir_death.5.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1908.7.5
+		}
+
+		create_character = {
+			template = FRA_henri_de_orleans
+		}
+	}
+
+	option = { # Jean 03 dies as heir, Nobody becomes heir
+		name = fra_orleans_heir_death.5.b
+
+		trigger = {	
+			game_date < 1908.7.5		
+		}
+	}
+}
+
+# Henri 05 dies [ New Heir: (B) Henri 06 (H5>33) Nobody (H5<33) ]
+fra_orleans_heir_death.6 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+		NOR = {
+			has_variable = bonapartist_restoration_var
+			has_variable = legitimist_restoration_var
+		}
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Henri 05 dies as heir, Henri 06 becomes heir
+		name = fra_orleans_heir_death.6.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1933.6.14
+		}
+
+		create_character = {
+			template = FRA_henri_06_de_orleans
+		}
+	}
+
+	option = { # Henri 05 dies as heir, Nobody becomes heir
+		name = fra_orleans_heir_death.6.b
+
+		trigger = {	
+			game_date < 1933.6.14				
+		}
+	}
+}

@@ -1,0 +1,266 @@
+#Fixing Vanilla Stuff
+
+RS_removing_sweden_and_gbr_monthly_pulse_country = {
+	effect = {
+		trigger_event = { id = unable_to_enact.1 }
+
+		# British Monarchy
+		if = {
+			limit = {
+				c:GBR ?= this
+				game_date >= 1841.11.09
+				ruler ?= {
+					has_template = gbr_queen_victoria_template
+				}
+				NOT = {
+					has_variable = edward_vii_heir_var
+				}
+			}
+		}
+		if = {
+			limit = {
+				c:GBR ?= this
+				game_date >= 1865.06.03
+				ruler ?= {
+					has_template = gbr_albert_edward_template
+				}
+				NOT = {
+					exists = heir
+				}
+				NOT = {
+					has_variable = george_v_heir_var
+				}
+			}
+		}
+		if = {
+			limit = {
+				c:GBR ?= this
+				game_date >= 1910.5.06
+				ruler ?= {
+					has_template = gbr_albert_edward_template
+				}
+				heir = {
+					has_template = gbr_george_v_template
+				}
+			}
+		}
+
+		# Sweden Monarchy event
+		if = {
+			limit = {
+				c:SWE ?= this
+				game_date >= 1859.6.29
+				ruler ?= {
+					has_template = swe_oscar_bernadotte_template
+				}
+				heir = {
+					has_template = swe_charles_bernadotte_template
+				}
+			}
+		}
+		if = {
+			limit = {
+				c:SWE ?= this
+				game_date >= 1859.6.29
+				NOT = {
+					ruler ?= {
+						has_template = swe_oscar_bernadotte_template
+					}
+					has_variable = charles_xv_ruler_var
+				}
+			}
+		}
+
+		if = {
+			limit = {
+		    	c:SWE ?= this
+		    	game_date >= 1872.9.29
+		    	any_scope_character = {
+		    		is_ruler = yes
+		    		has_template = swe_charles_bernadotte_template
+		    	}
+		    	any_scope_character = {
+		    		is_heir = yes
+		    		has_template = swe_oscar_ii_bernadotte_template
+		    	}
+		    }
+		}
+
+    	if = {
+    		limit = {
+		    	c:SWE ?= this
+		    	game_date >= 1872.9.29
+		    	any_scope_character = {
+		       		is_ruler = yes
+		       		has_template = swe_oscar_ii_bernadotte_template
+		    	}
+		    	NOT = {
+		       		has_variable = oscar_ii_ruler_var
+		    	}
+		    }
+    	}
+
+    	# Japan Restoration Event
+    	if = {
+			limit = {
+				c:JAP ?= this
+				has_variable = meiji_restoration_complete
+				has_law = law_type:law_monarchy
+			}
+			if = {
+				limit = {
+					heir = {
+						OR = {
+							has_template = is_jap_tokugawa_ienari
+							has_template = is_jap_tokugawa_ieyoshi
+							has_template = is_jap_tokugawa_iesada
+							has_template = is_jap_tokugawa_iemochi
+							has_template = is_jap_tokugawa_yoshinobu
+							has_template = is_jap_tokugawa_iesato
+							has_template = is_jap_tokugawa_iemasa	
+						}
+					}
+					heir = { save_scope_as = ousted_shogun }
+				}
+				scope:ousted_shogun = {
+					kill_character = yes
+				}
+			}
+			if = {
+				limit = {
+					year >= 1852
+					NOT = { has_variable = heir_meiji_spawned }
+					ruler ?= {
+						has_template = is_jap_komei
+					}
+				}
+				create_character = {
+					template = is_jap_meiji
+				}
+				set_variable = heir_meiji_spawned
+			}
+			else_if = {
+				limit = {
+					year >= 1879
+					NOT = { has_variable = heir_taisho_spawned }
+					ruler ?= {
+						has_template = is_jap_meiji
+					}
+				}
+				create_character = {
+					template = is_jap_taisho
+				}
+				set_variable = heir_taisho_spawned
+			}
+			else_if = {
+				limit = {
+					year >= 1901
+					NOT = { has_variable = heir_showa_spawned }
+					ruler ?= {
+						has_template = is_jap_taisho
+					}
+				}
+				create_character = {
+					template = is_jap_showa
+				}
+				set_variable = heir_showa_spawned
+			}
+		}
+	}
+}
+
+RS_removing_sweden_and_fixing_russia_on_new_ruler = {
+	effect = {
+		if = {
+			limit = {
+				owner = {
+					NOT = {
+						has_variable = hide_ruler_change_notification
+					}
+				}
+			}
+			post_notification = new_ruler
+		}
+
+		if = {
+			limit = {
+				owner = {
+					c:SWE ?= this
+					has_law = law_type:law_monarchy
+				}
+				is_ruler = yes
+			}
+			if = {
+				limit = {
+					has_template = swe_oscar_bernadotte_template
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					c:RUS ?= this
+					has_law = law_type:law_monarchy
+				}
+				is_ruler = yes
+			}
+			if = {
+				limit = {
+					has_template = is_rus_aleksandr_02
+				}
+				owner = {
+					trigger_event = { id = russia_monarchy.1 popup = yes }
+				}
+			}
+			else_if = {
+				limit = {
+					has_template = is_rus_tsesarevich_nikolai
+				}
+				owner = {
+					trigger_event = { id = russia_monarchy.3 popup = yes }
+				}
+			}
+			else_if = {
+				limit = {
+					has_template = is_rus_aleksandr_03
+				}
+				owner = {
+					trigger_event = { id = russia_monarchy.4 popup = yes }
+				}
+			}
+			else_if = {
+				limit = {
+					has_template = is_rus_nikolai_02
+				}
+				owner = {
+					trigger_event = { id = russia_monarchy.5 popup = yes }
+				}
+			}
+			else_if = {
+				limit = {
+					has_template = is_rus_aleksei_02
+				}
+				owner = {
+					trigger_event = { id = russia_monarchy.9 popup = yes }
+				}
+			}
+			else_if = {
+				limit = {
+					has_template = RUS_michael_ii
+				}
+				owner = {
+					trigger_event = { id = russia_monarchy.10 popup = yes }
+				}
+			}
+			else_if = {
+				limit = {
+					has_template = RUS_george_i
+				}
+				owner = {
+					trigger_event = { id = russia_monarchy.11 popup = yes }
+				}
+			}
+		}
+	}
+}

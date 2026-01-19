@@ -1,0 +1,84 @@
+﻿namespace = jap_tokugawa_monarch_birth
+# Iesato is born
+jap_tokugawa_monarch_birth.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_jap_tokugawa_yoshinobu }
+		NOT = { heir =  { has_template = is_jap_tokugawa_iesato } }
+		game_date >= 1863.8.24
+		game_date < 1864.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = jap_tokugawa_monarch_birth.1.a
+		default_option = yes
+
+		create_character = {
+			template = is_jap_tokugawa_iesato
+		}
+	}
+}
+
+# Iemasa is born
+jap_tokugawa_monarch_birth.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_jap_tokugawa_iesato }
+		NOT = { heir =  { has_template = is_jap_tokugawa_iemasa } }
+		game_date >= 1884.3.23
+		game_date < 1885.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = jap_tokugawa_monarch_birth.2.a
+		default_option = yes
+
+		create_character = {
+			template = is_jap_tokugawa_iemasa
+		}
+	}
+}

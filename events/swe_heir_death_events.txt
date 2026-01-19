@@ -1,0 +1,225 @@
+﻿namespace = swe_heir_death
+
+# Oskar 01 dies [ New Heir: (A) Karl 15 (O1) ]
+swe_heir_death.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Oskar 01 dies as heir, Karl 15 becomes heir
+		name = swe_heir_death.1.a
+		default_option = yes
+
+		trigger = {	
+		}
+
+		create_character = {
+			template = is_swe_karl_15
+		}
+	}
+}
+
+# Karl 15 dies [ New Heir: (A) Oskar 02 (K15) ]
+swe_heir_death.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Karl 15 dies as heir, Oskar 02 becomes heir
+		name = swe_heir_death.2.a
+		default_option = yes
+
+		trigger = {	
+		}
+
+		create_character = {
+			template = is_swe_oskar_02
+		}
+	}
+}
+
+# Oskar 02 dies [ New Heir: (B) Gustaf 05 (O2>58), Nobody (02<58) ]
+swe_heir_death.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Oskar 02 dies as heir, Gustaf 05 becomes heir
+		name = swe_heir_death.3.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1858.6.16
+		}
+
+		create_character = {
+			template = is_swe_gustaf_05
+		}
+	}
+	option = { # Oskar 02 dies as heir, Nobody becomes heir
+		name = swe_heir_death.3.b
+
+		trigger = {	
+			game_date < 1858.6.16
+		}
+	}
+}
+
+# Gustaf 05 dies [ New Heir: (B) Gustaf 06 (G5>82), Nobody (G5<82) ]
+swe_heir_death.4 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Gustaf 05 dies as heir, Gustaf 06 becomes heir
+		name = swe_heir_death.4.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1882.11.11
+		}
+
+		create_character = {
+			template = is_swe_gustaf_06
+		}
+	}
+	option = { # Oskar 02 dies as heir, Nobody becomes heir
+		name = swe_heir_death.4.b
+
+		trigger = {	
+			game_date < 1882.11.11
+		}
+	}
+}
+
+# Gustaf 06 dies [ New Heir: (B) Gustaf 07 (G6>06), Nobody (G6<06) ]
+swe_heir_death.5 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Gustaf 06 dies as heir, Gustaf 07 becomes heir
+		name = swe_heir_death.5.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1906.1.26
+		}
+
+		create_character = {
+			template = is_swe_gustaf_07
+		}
+	}
+	option = { # Oskar 02 dies as heir, Nobody becomes heir
+		name = swe_heir_death.5.b
+
+		trigger = {	
+			game_date < 1906.1.26
+		}
+	}
+}

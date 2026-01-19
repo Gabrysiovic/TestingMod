@@ -1,0 +1,434 @@
+﻿namespace = aus_heir_death
+
+# Franz Josef 01 Dies (B)
+aus_heir_death.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+
+	option = { # Franz Josef 01 dies as heir, Rudolf 01 becomes heir
+		name = aus_heir_death.1.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1858.8.21
+		}
+
+		create_character = {
+			template = is_aus_rudolf_01
+		}
+	}
+	option = { # Franz Josef 01 dies as heir, Maximilian 01 becomes heir
+		name = aus_heir_death.1.b
+
+		trigger = {	
+			game_date < 1858.8.21
+		}
+
+		create_character = {
+			template = is_aus_maximilian_01
+		}
+	}
+}
+
+# Rudolf 01 Dies (B)
+aus_heir_death.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Rudolf 01 dies as heir, Maximilian 01 becomes heir
+		name = aus_heir_death.2.a
+		default_option = yes
+
+		trigger = {	
+			game_date < 1867.6.19
+		}
+
+		create_character = {
+			template = is_aus_maximilian_01
+		}
+	}
+	option = { # Rudolf 01 dies as heir, Karl Ludwig 01 becomes heir
+		name = aus_heir_death.2.b
+
+		trigger = {	
+			game_date >= 1867.6.19
+		}
+
+		create_character = {
+			template = is_aus_karl_ludwig_01
+		}
+	}
+}
+
+# Maximilian 01 Dies (A)
+aus_heir_death.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Maximilian 01 dies as heir, Karl Ludwig 01 becomes heir
+		name = aus_heir_death.3.a
+		default_option = yes
+
+		trigger = {	
+		}
+
+		create_character = {
+			template = is_aus_karl_ludwig_01
+		}
+	}
+}
+
+# Karl Ludwig 01 Dies (B)
+aus_heir_death.4 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+
+	option = { # Karl Ludwig 01 dies as heir, Ludwig Viktor 01 becomes heir
+		name = aus_heir_death.4.a
+		default_option = yes
+
+		trigger = {	
+			game_date < 1863.12.18
+		}
+
+		create_character = {
+			template = is_aus_ludwig_viktor_01
+		}
+	}
+	option = { # Karl Ludwig 01 dies as heir, Franz Ferdinand 01 becomes heir
+		name = aus_heir_death.4.b
+
+		trigger = {	
+			game_date >= 1863.12.18
+		}
+
+		create_character = {
+			template = is_aus_franz_ferdinand_01
+		}
+	}
+}
+
+# Ludwig Viktor 01 Dies (A)
+aus_heir_death.5 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Maximilian 01 dies as heir, Tuscan Habsburgs becomes heir
+		name = aus_heir_death.5.a
+		default_option = yes
+
+		trigger = {	
+		}
+
+		create_character = {
+			heir = yes
+			culture = cu:south_german
+			first_name = Ferdinand
+			last_name = von_Habsburg
+			historical = yes
+			ig_leader = no
+			noble = yes
+			interest_group = ig_landowners
+			ideology = ideology_moderate
+			traits = {
+			}
+			birth_date = 1835.6.10
+		}
+	}
+}
+
+# Franz Ferdinand 01 Dies (B)
+aus_heir_death.6 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Franz Ferdinand 01 dies as heir, Otto Franz 01 becomes heir
+		name = aus_heir_death.6.a
+		default_option = yes
+
+		trigger = {	
+			game_date < 1906.11.1
+		}
+
+		create_character = {
+			template = is_aus_otto_franz_01
+		}
+	}
+	option = { # Franz Ferdinand 01 dies as heir, Karl 01 becomes heir
+		name = aus_heir_death.6.b
+
+		trigger = {	
+			game_date >= 1906.11.1
+		}
+
+		create_character = {
+			template = is_aus_karl_01
+		}
+	}
+}
+
+# Otto Franz 01 Dies (A)
+aus_heir_death.7 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Otto Franz 01 dies as heir, Karl 01 becomes heir
+		name = aus_heir_death.7.a
+		default_option = yes
+
+		trigger = {	
+		}
+
+		create_character = {
+			template = is_aus_karl_01
+		}
+	}
+}
+
+# Karl 01 Dies (B)
+aus_heir_death.8 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Karl 01 dies as heir, Maximilian Eugen 01 becomes heir
+		name = aus_heir_death.8.a
+		default_option = yes
+
+		trigger = {	
+			game_date < 1912.11.20
+		}
+
+		create_character = {
+			template = is_aus_maximilian_eugen_01
+		}
+	}
+	option = { # Karl 01 dies as heir, Otto 01 becomes heir
+		name = aus_heir_death.8.b
+
+		trigger = {	
+			game_date >= 1912.11.20
+		}
+
+		create_character = {
+			template = is_aus_otto_01
+		}
+	}
+}
+
+# Otto 01 Dies (A)
+aus_heir_death.9 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Otto 01 dies as heir, Maximilian Eugen 01 becomes heir
+		name = aus_heir_death.9.a
+		default_option = yes
+
+		trigger = {	
+		}
+
+		create_character = {
+			template = is_aus_maximilian_eugen_01
+		}
+	}
+}

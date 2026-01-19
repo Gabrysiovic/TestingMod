@@ -1,0 +1,211 @@
+﻿namespace = aus_monarch_birth
+
+# HISTORIC Rudolf 01 is born
+aus_monarch_birth.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_aus_franz_josef_01 }
+		NOT = { heir =  { has_template = is_aus_rudolf_01 } }
+		game_date >= 1858.8.21
+		game_date < 1859.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = aus_monarch_birth.1.a
+		default_option = yes
+
+		create_character = {
+			template = is_aus_rudolf_01
+		}
+	}
+}
+
+# HISTORIC Franz Ferdinand 01 is born
+aus_monarch_birth.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_aus_karl_ludwig_01 }
+		NOT = { heir =  { has_template = is_aus_franz_ferdinand_01 } }
+		game_date >= 1863.12.18
+		game_date < 1864.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = aus_monarch_birth.2.a
+		default_option = yes
+
+		create_character = {
+			template = is_aus_franz_ferdinand_01
+		}
+	}
+}
+
+# HISTORIC Karl 01 is born
+aus_monarch_birth.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_aus_otto_franz_01 }
+		NOT = { heir =  { has_template = is_aus_karl_01 } }
+		game_date >= 1887.8.17
+		game_date < 1888.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = aus_monarch_birth.3.a
+		default_option = yes
+
+		create_character = {
+			template = is_aus_karl_01
+		}
+	}
+}
+
+# HISTORIC Otto 01 is born
+aus_monarch_birth.4 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_aus_karl_01 }
+		NOT = { heir =  { has_template = is_aus_otto_01 } }
+		game_date >= 1912.11.20
+		game_date < 1913.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = aus_monarch_birth.4.a
+		default_option = yes
+
+		create_character = {
+			template = is_aus_otto_01
+		}
+	}
+}
+
+# ALTERNATE Ferdinand 02 is born
+aus_monarch_birth.5 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_aus_maximilian_eugen_01 }
+		NOT = { heir =  { has_template = is_aus_ferdinand_01 } }
+		game_date >= 1918.12.6
+		game_date < 1919.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = aus_monarch_birth.5.a
+		default_option = yes
+
+		create_character = {
+			template = is_aus_ferdinand_02
+		}
+	}
+}

@@ -1,0 +1,466 @@
+﻿namespace = gbr_monarch_birth
+
+# Edward 07 is born
+gbr_monarch_birth.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_gbr_victoria_01 }
+		NOT = { heir =  { has_template = is_gbr_edward_07 } }
+		game_date >= 1841.11.9
+		game_date < 1842.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = gbr_monarch_birth.1.a
+		default_option = yes
+
+		create_character = {
+			template = is_gbr_edward_07
+		}
+	}
+}
+
+# Albert 01 is born
+gbr_monarch_birth.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_gbr_edward_07 }
+		NOT = { heir =  { has_template = is_gbr_albert_01 } }
+		game_date >= 1864.1.8
+		game_date < 1865.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = gbr_monarch_birth.2.a
+		default_option = yes
+
+		create_character = {
+			template = is_gbr_albert_01
+		}
+	}
+}
+
+# George 05 is born
+gbr_monarch_birth.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_gbr_edward_07 }
+		OR = {
+			NOT = { heir =  { has_template = is_gbr_george_05 } }
+			NOT = { heir =  { has_template = is_gbr_albert_01} }
+		}
+		game_date >= 1865.6.3
+		game_date < 1866.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = gbr_monarch_birth.3.a
+		default_option = yes
+
+		create_character = {
+			template = is_gbr_george_05
+		}
+	}
+}
+
+# Edward 08 is born
+gbr_monarch_birth.4 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_gbr_george_05 }
+		NOT = { heir =  { has_template = is_gbr_edward_08 } }
+		game_date >= 1894.6.23
+		game_date < 1895.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = gbr_monarch_birth.4.a
+		default_option = yes
+
+		create_character = {
+				template = is_gbr_edward_08
+		}
+	}
+}
+
+# Elizabeth 02 is born
+gbr_monarch_birth.5 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_gbr_george_06 }
+		NOT = { heir =  { has_template = is_gbr_elizabeth_02 } }
+		game_date >= 1926.4.21
+		game_date < 1927.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = gbr_monarch_birth.5.a
+		default_option = yes
+
+		create_character = {
+			template = is_gbr_elizabeth_02
+		}
+	}
+}
+
+# Alfred 03 is born
+gbr_monarch_birth.6 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_gbr_alfred_02 }
+		NOT = { heir =  { has_template = is_gbr_alfred_03 } }
+		game_date >= 1874.2.6
+		game_date < 1875.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = gbr_monarch_birth.6.a
+		default_option = yes
+
+		create_character = {
+			template = is_gbr_alfred_03
+		}
+	}
+}
+
+# Arthur 02 is born
+gbr_monarch_birth.7 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_gbr_arthur_01 }
+		NOT = { heir =  { has_template = is_gbr_arthur_02 } }
+		game_date >= 1863.1.13
+		game_date < 1864.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = gbr_monarch_birth.7.a
+		default_option = yes
+
+		create_character = {
+			template = is_gbr_arthur_02
+		}
+	}
+}
+
+# Arthur 03 is born
+gbr_monarch_birth.8 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_gbr_arthur_02 }
+		NOT = { heir =  { has_template = is_gbr_arthur_03 } }
+		game_date >= 1914.8.9
+		game_date < 1915.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = gbr_monarch_birth.8.a
+		default_option = yes
+
+		create_character = {
+			template = is_gbr_arthur_03
+		}
+	}
+}
+
+# Charles 03 is born
+gbr_monarch_birth.9 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_gbr_leopold_01 }
+		NOT = { heir =  { has_template = is_gbr_charles_03 } }
+		game_date >= 1884.7.19
+		game_date < 1885.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = gbr_monarch_birth.9.a
+		default_option = yes
+
+		create_character = {
+			template = is_gbr_charles_03
+		}
+	}
+}
+
+# John 02 is born
+gbr_monarch_birth.10 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_gbr_charles_03 }
+		NOT = { heir =  { has_template = is_gbr_john_02 } }
+		game_date >= 1906.8.2
+		game_date < 1907.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = gbr_monarch_birth.10.a
+		default_option = yes
+
+		create_character = {
+			template = is_gbr_john_02
+		}
+	}
+}
+
+# Ernest 01 is born
+gbr_monarch_birth.11 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_gbr_john_02 }
+		NOT = { heir =  { has_template = is_gbr_ernest_01 } }
+		game_date >= 1935.1.14
+		game_date < 1936.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = gbr_monarch_birth.11.a
+		default_option = yes
+
+		create_character = {
+			template = is_gbr_ernest_01
+		}
+	}
+}

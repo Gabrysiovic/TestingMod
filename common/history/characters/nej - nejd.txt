@@ -1,0 +1,13 @@
+﻿CHARACTERS = {
+	c:NEJ = {
+		create_character = {
+			# Faisal bin Turki bin Abdullah Al Saud
+			template = is_nej_faisal_01
+		}	
+
+		create_character = {
+			# Saud bin Faisal bin Turki
+			template = is_nej_saud_03
+		}
+	}
+}

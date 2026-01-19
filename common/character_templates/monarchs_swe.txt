@@ -1,0 +1,155 @@
+﻿### Swedish historic monarchs template file ###
+
+
+is_swe_karl_14_johan = {
+	first_name = Karl_Johan
+	last_name = Bernadotte
+	historical = yes
+	ruler = yes
+	birth_date = 1763.1.26
+	dna = dna_king_karl_14
+	culture=cu:french
+	religion = rel:protestant
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	traits = {
+		ambitious 
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_swe_oskar_01 = {
+	first_name = Oskar
+	last_name = Bernadotte
+	historical = yes
+	heir = yes
+	birth_date=1799.7.4
+	dna = dna_swe_oskar_01
+	culture=cu:french # moved to Stockholm when he was 12
+	religion = rel:protestant
+	interest_group = ig_intelligentsia
+	ideology = ideology_moderate
+	traits = {
+		romantic
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_swe_karl_15 = {
+	heir = yes
+	culture = cu:swedish
+	first_name = Karl
+	last_name = Bernadotte
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_swe_karl_15
+	interest_group = ig_intelligentsia
+	ideology = ideology_humanitarian
+	traits = {
+		direct
+		basic_diplomat	
+	}
+	birth_date = 1826.5.3
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_swe_oskar_02 = {
+	heir = yes
+	culture = cu:swedish
+	first_name = Oskar
+	last_name = Bernadotte
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_swe_oskar_02
+	interest_group = ig_armed_forces
+	ideology = ideology_reformer
+	traits = {
+		romantic
+		masterful_diplomat	
+		literary
+	}
+	birth_date = 1829.1.21 
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_swe_gustaf_05 = {
+	heir = yes
+	culture = cu:swedish
+	first_name = Gustaf
+	last_name = Bernadotte
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_swe_gustaf_05
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_moderate
+	traits = {
+		tactful
+		persistent
+		arrogant	
+	}
+	birth_date = 1858.6.16
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_swe_gustaf_06 = {
+	heir = yes
+	culture = cu:swedish
+	first_name = Gustaf
+	last_name = Bernadotte
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_swe_gustaf_06
+	interest_group = ig_intelligentsia
+	ideology = ideology_moderate
+	traits = {
+		engineer
+		literary
+		inspirational_orator	
+	}
+	birth_date = 1882.11.11
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_swe_gustaf_07 = {
+	heir = yes
+	culture = cu:swedish
+	first_name = Gustaf
+	last_name = Bernadotte
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_swe_gustaf_07
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	traits = {
+		explorer
+		brave
+	}
+	birth_date = 1906.1.26
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}

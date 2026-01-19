@@ -1,0 +1,139 @@
+﻿### X historic monarchs template file ###
+
+
+is_bel_leopold_01 = {
+	first_name = Leopold
+    last_name = of_Saxe-Coburg-Gotha
+    historical = yes
+    culture = cu:south_german
+    religion = rel:protestant
+    ruler = yes
+    birth_date = 1790.12.16
+    dna = dna_bel_leopold_01
+    interest_group = ig_intelligentsia
+    ideology = ideology_moderate
+    traits = {
+        tactful
+    }
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_bel_leopold_02 = {
+	first_name = Leopold
+    last_name = of_Saxe-Coburg-Gotha
+    culture = cu:south_german
+    historical = yes
+    heir = yes
+    birth_date = 1835.4.9
+    dna = dna_bel_leopold_02
+    interest_group = ig_petty_bourgeoisie
+    ideology = ideology_royalist
+    traits = {
+        trait_child
+        cruel
+    }
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_bel_philippe_01 = {
+	heir = yes
+	culture = cu:flemish
+	first_name = Philippe
+	last_name = of_Saxe-Coburg-Gotha
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_bel_philippe_01
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_pacifist
+	traits = {
+		hedonist
+		romantic
+	}
+	birth_date = 1837.3.24
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_bel_albert_01 = {
+	heir = yes
+	culture = cu:flemish
+	first_name = Albert
+	last_name = of_Saxe-Coburg-Gotha
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_bel_albert_01
+	interest_group = ig_devout
+	ideology = ideology_reformer
+	traits = {
+		brave
+		pious
+		explorer	
+	}
+	birth_date = 1875.4.8 
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_bel_leopold_03 = {
+	heir = yes
+	culture = cu:flemish
+	first_name = Leopold
+	last_name = of_Saxe-Coburg-Gotha
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_bel_leopold_03
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_moderate
+	traits = {
+		reckless
+		imperious	
+	}
+	birth_date = 1901.7.16
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_bel_baudouin_01 = {
+	heir = yes
+	culture = cu:flemish
+	first_name = Baudouin
+	last_name = of_Saxe-Coburg-Gotha
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_bel_baudouin_01
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_moderate
+	traits = {
+		pious	
+	} 
+	birth_date = 1930.9.7
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}

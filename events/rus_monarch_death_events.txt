@@ -1,0 +1,759 @@
+﻿namespace = rus_monarch_death
+
+# [] means who becomes heir of heir
+
+# HISTORIC Nikolai 01 dies [ Tsesarevich Nikolai (A2>43), Aleksandr 03 (A2>65), Konstantin N (A2<43, TN<45, A3<47), Konstantin K (KN>58) Nikolai N (KN<58), Nikolai 02 (A3>68), Vladimir A (A3<68) ]
+rus_monarch_death.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # A2 becomes ruler, TN becomes heir
+		name = rus_monarch_death.1.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_rus_aleksandr_02 }
+			game_date >= 1843.9.20
+			game_date < 1865.4.24
+		}
+
+		create_character = {
+			template = is_rus_tsesarevich_nikolai
+		}
+	}
+	option = { # A2 becomes ruler, A3 becomes heir
+		name = rus_monarch_death.1.b
+
+		trigger = {	
+			ruler = { has_template = is_rus_aleksandr_02 }
+			game_date >= 1865.4.24
+		}
+
+		create_character = {
+			template = is_rus_aleksandr_03
+		}
+	}
+	option = { # A2/TN/A3 becomes ruler, KN becomes heir
+		name = rus_monarch_death.1.c
+
+		trigger = {	
+			OR = {
+				AND = {
+					ruler = { has_template = is_rus_aleksandr_02 }
+					game_date < 1843.9.20
+				}
+				AND = {
+					ruler = { has_template = is_rus_tsesarevich_nikolai }
+					game_date < 1845.3.10
+				}
+				AND = {
+					ruler = { has_template = is_rus_aleksandr_03 }
+					game_date < 1847.4.22
+				}
+			}
+		}
+
+		create_character = {
+			template = is_rus_konstantin_nikolaevich
+		}
+	}
+	option = { # KN becomes ruler, KK becomes heir
+		name = rus_monarch_death.1.d
+
+		trigger = {	
+			ruler = { has_template = is_rus_konstantin_nikolaevich }
+			game_date >= 1858.8.22
+		}
+
+		create_character = {
+			template = is_rus_konstantin_konstantinovich
+		}
+	}
+	option = { # KN becomes ruler, NN becomes heir
+		name = rus_monarch_death.1.e
+
+		trigger = {	
+			ruler = { has_template = is_rus_konstantin_nikolaevich }
+			game_date < 1858.8.22
+		}
+
+		create_character = {
+			template = is_rus_nikolai_nikolaevich
+		}
+	}
+	option = { # A3 becomes ruler, N2 becomes heir
+		name = rus_monarch_death.1.f
+
+		trigger = {	
+			ruler = { has_template = is_rus_aleksandr_03 }
+			game_date >= 1868.7.17
+		}
+
+		create_character = {
+			template = is_rus_nikolai_02
+		}
+	}
+	option = { # A3 becomes ruler, VA becomes heir
+		name = rus_monarch_death.1.g
+
+		trigger = {	
+			ruler = { has_template = is_rus_aleksandr_03 }
+			game_date < 1868.7.17
+		}
+
+		create_character = {
+			template = is_rus_vladimir_aleksandrovich
+		}
+	}
+}
+
+# HISTORIC Aleksandr 02 dies [ Aleksandr 03 (TN>43), Konstsantin N (TN<45), Nikolai 02 (A3>68), Vladimir A (A3<68), Konstantin K (KN>58), Nikolai N (KN<58) ]
+rus_monarch_death.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # TN becomes ruler, A3 becomes heir
+		name = rus_monarch_death.2.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_rus_tsesarevich_nikolai }
+			game_date >= 1845.3.10
+		}
+
+		create_character = {
+			template = is_rus_aleksandr_03
+		}
+	}
+	option = { # TN becomes ruler, KN becomes heir
+		name = rus_monarch_death.2.b
+
+		trigger = {	
+			ruler = { has_template = is_rus_tsesarevich_nikolai }
+			game_date < 1845.3.10
+		}
+
+		create_character = {
+			template = is_rus_konstantin_nikolaevich
+		}
+	}
+	option = { # A3 becomes ruler, N2 becomes heir
+		name = rus_monarch_death.2.c
+
+		trigger = {	
+			ruler = { has_template = is_rus_aleksandr_03 }
+			game_date >= 1868.7.17
+		}
+
+		create_character = {
+			template = is_rus_nikolai_02
+		}
+	}
+	option = { # A3 becomes ruler, VA becomes heir
+		name = rus_monarch_death.2.d
+
+		trigger = {	
+			ruler = { has_template = is_rus_aleksandr_03 }
+			game_date < 1868.7.17
+		}
+
+		create_character = {
+			template = is_rus_vladimir_aleksandrovich
+		}
+	}
+	option = { # KN becomes ruler, KK becomes heir
+		name = rus_monarch_death.2.e
+
+		trigger = {	
+			ruler = { has_template = is_rus_konstantin_nikolaevich }
+			game_date >= 1858.8.22
+		}
+
+		create_character = {
+			template = is_rus_konstantin_konstantinovich
+		}
+	}
+	option = { # KN becomes ruler, NN becomes heir
+		name = rus_monarch_death.2.f
+
+		trigger = {	
+			ruler = { has_template = is_rus_konstantin_nikolaevich }
+			game_date < 1858.8.22
+		}
+
+		create_character = {
+			template = is_rus_nikolai_nikolaevich
+		}
+	}
+}
+
+# HISTORIC Tsesarevich Nikolai dies [ Nikolai 02 [A3>68] , Vladimir A [A3<68], Konstantin K [KN>58], Nikolai N [KN<58], Kirill V (VA>76), Aleksei A (VA<76) ]
+rus_monarch_death.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # A3 becomes ruler, N2 becomes heir
+		name = rus_monarch_death.3.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_rus_aleksandr_03 }
+			game_date >= 1868.7.17
+		}
+
+		create_character = {
+			template = is_rus_nikolai_02
+		}
+	}
+	option = { # A3 becomes ruler, VA becomes heir
+		name = rus_monarch_death.3.b
+
+		trigger = {	
+			ruler = { has_template = is_rus_aleksandr_03 }
+			game_date < 1868.7.17
+		}
+
+		create_character = {
+			template = is_rus_vladimir_aleksandrovich
+		}
+	}
+	option = { # KN becomes ruler, KK becomes heir
+		name = rus_monarch_death.3.c
+
+		trigger = {	
+			ruler = { has_template = is_rus_konstantin_nikolaevich }
+			game_date >= 1858.8.22
+		}
+
+		create_character = {
+			template = is_rus_konstantin_konstantinovich
+		}
+	}
+	option = { # KN becomes ruler, NN becomes heir
+		name = rus_monarch_death.3.d
+
+		trigger = {	
+			ruler = { has_template = is_rus_konstantin_nikolaevich }
+			game_date < 1858.8.22
+		}
+
+		create_character = {
+			template = is_rus_nikolai_nikolaevich
+		}
+	}
+	option = { # VA becomes ruler, KV becomes heir
+		name = rus_monarch_death.3.e
+
+		trigger = {	
+			ruler = { has_template = is_rus_vladimir_aleksandrovich }
+			game_date >= 1876.10.12
+		}
+
+		create_character = {
+			template = is_rus_kirill_vladimirovich
+		}
+	}
+	option = { # VA becomes ruler, AYA becomes heir
+		name = rus_monarch_death.3.f
+
+		trigger = {	
+			ruler = { has_template = is_rus_vladimir_aleksandrovich }
+			game_date < 1876.10.12
+		}
+
+		create_character = {
+			template = is_rus_aleksei_aleksandrovich
+		}
+	}
+}
+
+
+# HISTORIC Aleksandr 03 dies [ Aleksei 02 (N2>04), Georgy A (N2<04/AY2), Kirill V (VA>76), Aleksei A (VA<76), Mikhail A (GA) ]
+rus_monarch_death.4 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # N2 becomes ruler, AY2 becomes heir
+		name = rus_monarch_death.4.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_rus_nikolai_02 }
+			game_date >= 1904.11.12
+		}
+
+		create_character = {
+			template = is_rus_aleksei_02
+		}
+	}
+	option = { # N2/AY2 becomes ruler, GA becomes heir
+		name = rus_monarch_death.4.b
+
+		trigger = {	
+			OR = {
+				AND = {
+					ruler = { has_template = is_rus_nikolai_02 }
+					game_date < 1904.11.12
+				}
+				ruler = { has_template = is_rus_aleksei_02 }
+			}
+		}
+
+		create_character = {
+			template = is_rus_georgy_aleksandrovich
+		}
+	}
+	option = { # VA becomes ruler, KV becomes heir
+		name = rus_monarch_death.4.c
+
+		trigger = {	
+			ruler = { has_template = is_rus_vladimir_aleksandrovich }
+			game_date >= 1876.10.12
+		}
+
+		create_character = {
+			template = is_rus_kirill_vladimirovich
+		}
+	}
+	option = { # VA becomes ruler, AYA becomes heir
+		name = rus_monarch_death.4.d
+
+		trigger = {	
+			ruler = { has_template = is_rus_vladimir_aleksandrovich }
+			game_date < 1876.10.12
+		}
+
+		create_character = {
+			template = is_rus_aleksei_aleksandrovich
+		}
+	}
+	option = { # GA becomes ruler, MA becomes heir
+		name = rus_monarch_death.4.e
+
+		trigger = {	
+			ruler = { has_template = is_rus_georgy_aleksandrovich }
+		}
+
+		create_character = {
+			template = is_rus_mikhail_aleksandrovich
+		}
+	}
+}
+
+# HISTORIC Nikolai 02 dies [ Georgy A (AY2), Mikhail A (GA), an empty option for MA ]
+rus_monarch_death.5 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # AY2 becomes ruler, GA becomes heir
+		name = rus_monarch_death.5.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_rus_aleksei_02 }
+		}
+
+		create_character = {
+			template = is_rus_georgy_aleksandrovich
+		}
+	}
+	option = { # GA becomes ruler, MA becomes heir
+		name = rus_monarch_death.5.b
+
+		trigger = {	
+			ruler = { has_template = is_rus_georgy_aleksandrovich }
+		}
+
+		create_character = {
+			template = is_rus_mikhail_aleksandrovich
+		}
+	}
+	option = { # MA becomes ruler, empty option
+		name = rus_monarch_death.5.c
+
+		trigger = {	
+			ruler = { has_template = is_rus_mikhail_aleksandrovich }
+		}
+	}
+}
+
+# ALTERNATE Konstantin Nikolaevich dies [ Ivan K (KK>86), Dmitry K (KK<86), an empty option for NN ]
+rus_monarch_death.7 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # KK becomes ruler, IK becomes heir
+		name = rus_monarch_death.7.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_rus_konstantin_konstantinovich }
+			game_date >= 1866.7.5
+		}
+
+		create_character = {
+			template = is_rus_ivan_konstantinovich
+		}
+	}
+	option = { # KK becomes ruler, DK becomes heir
+		name = rus_monarch_death.7.b
+
+		trigger = {	
+			ruler = { has_template = is_rus_ivan_konstantinovich }
+			game_date < 1866.7.5
+		}
+
+		create_character = {
+			template = is_rus_dmitry_konstantinovich
+		}
+	}
+	option = { # NN becomes ruler, empty option
+		name = rus_monarch_death.7.c
+
+		trigger = {	
+			ruler = { has_template = is_rus_nikolai_nikolaevich }
+		}
+	}
+}
+
+# ALTERNATE Konstantin Konstantinovich dies [ Vsevolod I (IK>14), Gavriil (IK<14), an empty option for GK ]
+rus_monarch_death.8 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # IK becomes ruler, V becomes heir
+		name = rus_monarch_death.8.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_rus_ivan_konstantinovich }
+			game_date >= 1914.1.20
+		}
+
+		create_character = {
+			template = is_rus_vsevolod_ivanovich
+		}
+	}
+	option = { # IKL becomes ruler, GK becomes heir
+		name = rus_monarch_death.8.b
+
+		trigger = {	
+			ruler = { has_template = is_rus_ivan_konstantinovich }
+			game_date < 1914.1.20
+		}
+
+		create_character = {
+			template = is_rus_gavriil_konstantinovich
+		}
+	}
+	option = { # GK becomes ruler, empty option
+		name = rus_monarch_death.8.c
+
+		trigger = {	
+			ruler = { has_template = is_rus_gavriil_konstantinovich }
+		}
+	}
+}
+
+
+# ALTERNATE Vladimir Aleksandrovich dies [ Vladimir K (KL>17), Boris V (KL<17), Andrei V (BV), an empty option for AYA ]
+rus_monarch_death.13 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # KL becomes ruler, VK becomes heir
+		name = rus_monarch_death.13.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_rus_kirill_vladimirovich }
+			game_date >= 1917.8.30
+		}
+
+		create_character = {
+			template = is_rus_vladimir_kirillovich
+		}
+	}
+	option = { # KL becomes ruler, BV becomes heir
+		name = rus_monarch_death.13.b
+
+		trigger = {	
+			ruler = { has_template = is_rus_kirill_vladimirovich }
+			game_date < 1917.8.30
+		}
+
+		create_character = {
+			template = is_rus_boris_vladimirovich
+		}
+	}
+	option = { # BV becomes ruler, AnV becomes heir
+		name = rus_monarch_death.13.c
+
+		trigger = {	
+			ruler = { has_template = is_rus_boris_vladimirovich }
+		}
+
+		create_character = {
+			template = is_rus_andrei_vladimirovich
+		}
+	}
+}
+
+# ALTERNATE Boris Vladimirovich dies [ Vladimir An (ANV) ]
+rus_monarch_death.17 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # AnV becomes ruler, VAn becomes heir
+		name = rus_monarch_death.17.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_rus_andrei_vladimirovich }
+		}
+
+		create_character = {
+			template = is_rus_vladimir_andreievich
+		}
+	}
+}
+
+# ALTERNATE Georgy Aleksandrovich dies [ Georgy M (MA)]
+rus_monarch_death.20 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # MA becomes ruler, GM becomes heir
+		name = rus_monarch_death.20.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_rus_mikhail_aleksandrovich }
+		}
+
+		create_character = {
+			template = is_rus_georgy_mikhailovich
+		}
+	}
+}
+

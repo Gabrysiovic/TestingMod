@@ -1,0 +1,117 @@
+﻿### Siam historic monarchs template file ###
+
+# Siam - SIA
+
+is_sia_nangklao = {
+	first_name = "Nangklao"
+	last_name = "Chakri"
+	historical = yes
+	culture = cu:thai
+	ruler = yes
+	age = 48
+	dna = dna_sia_nangklao
+	interest_group = ig_landowners
+	ideology = ideology_modernizer_leader
+	traits = {
+		charismatic
+	}
+}
+
+is_sia_mongkut = {
+	first_name = "Mongkut"
+	last_name = "Chakri"
+	historical = yes
+	culture = cu:thai
+	heir = yes
+	age = 32
+	dna = dna_sia_mongkut
+	interest_group = ig_devout
+	ideology = ideology_modernizer_leader
+	traits = {
+		pious
+		tactful
+		innovative
+	}
+}
+
+is_sia_chulalongkorn = {
+	first_name = "Chulalongkorn"
+	last_name = "Chakri"
+	historical = yes
+	culture = cu:thai
+	heir = yes
+	birth_date = 1853.9.20
+	dna = dna_sia_chulalongkorn
+	interest_group = ig_intelligentsia
+	ideology = ideology_modernizer_leader
+	traits = {
+		literary
+		erudite
+		innovative
+	}
+}
+
+is_sia_vajiravudh = {
+	first_name = "Vajiravudh"
+	last_name = "Chakri"
+	historical = yes
+	culture = cu:thai
+	heir = yes
+	birth_date = 1880.1.1
+	dna = dna_sia_vajiravudh
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_modernizer_leader
+	traits = {
+		literary
+	}
+}
+
+is_sia_prajadhipok = {
+	first_name = "Prajadhipok"
+	last_name = "Chakri"
+	historical = yes
+	culture = cu:thai
+	heir = yes
+	birth_date = 1893.11.8
+	dna = dna_sia_prajadhipok
+	interest_group = ig_armed_forces
+	ideology = ideology_royalist
+	traits = {
+		basic_artillery_commander
+		meticulous
+		cautious
+	}
+}
+
+is_sia_ananda_mahidol = {
+	first_name = "Ananda_Mahidol"
+	last_name = "Chakri"
+	historical = yes
+	culture = cu:thai
+	heir = yes
+	birth_date = 1925.9.20
+	dna = dna_sia_ananda_mahidol
+	interest_group = ig_intelligentsia
+	ideology = ideology_moderate
+	traits = {
+		charismatic
+		reserved
+		cautious
+	}
+}
+
+is_sia_bhumibol_adulyadej = {
+	first_name = "Bhumibol_Adulyadej"
+	last_name = "Chakri"
+	historical = yes
+	culture = cu:thai
+	heir = yes
+	birth_date = 1927.12.5
+	dna = dna_sia_bhumibol_adulyadej
+	interest_group = ig_industrialists
+	ideology = ideology_moderate
+	traits = {
+		literary
+		compliant
+	}
+}

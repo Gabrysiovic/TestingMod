@@ -1,0 +1,127 @@
+﻿namespace = han_monarch_birth
+
+# Ernst August 02 is born
+han_monarch_birth.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_han_georg_05 }
+		NOT = { heir =  { has_template = is_han_ernst_august_02 } }
+		game_date >= 1845.9.21
+		game_date < 1846.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = han_monarch_birth.1.a
+		default_option = yes
+
+		create_character = {
+			template = is_han_ernst_august_02
+		}
+	}
+}
+
+# Ernst August 03 is born
+han_monarch_birth.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_han_ernst_august_02 }
+		NOT = { heir =  { has_template = is_han_ernst_august_03 } }
+		game_date >= 1887.11.17
+		game_date < 1888.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = han_monarch_birth.2.a
+		default_option = yes
+
+		create_character = {
+			template = is_han_ernst_august_03
+		}
+	}
+}
+
+# Ernst August 04 is born
+han_monarch_birth.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_han_ernst_august_03 }
+		NOT = { heir =  { has_template = is_han_ernst_august_04 } }
+		game_date >= 1914.3.18
+		game_date < 1915.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = han_monarch_birth.3.a
+		default_option = yes
+
+		create_character = {
+			template = is_han_ernst_august_04
+		}
+	}
+}

@@ -1,0 +1,127 @@
+﻿namespace = por_monarch_birth
+
+# Pedro 05 is born
+por_monarch_birth.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_por_maria_02 }
+		NOT = { heir =  { has_template = is_por_pedro_05 } }
+		game_date >= 1837.9.16
+		game_date < 1838.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = por_monarch_birth.1.a
+		default_option = yes
+
+		create_character = {
+            template = is_por_pedro_05
+        }
+	}
+}
+
+# Carlos 01 is born
+por_monarch_birth.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_por_luis_01 }
+		NOT = { heir =  { has_template = is_por_carlos_01} }
+		game_date >= 1863.9.28
+		game_date < 1864.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = por_monarch_birth.2.a
+		default_option = yes
+
+		create_character = {
+            template = is_por_carlos_01
+        }
+	}
+}
+
+# Luis 02 is born
+por_monarch_birth.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_por_carlos_01 }
+		NOT = { heir =  { has_template = is_por_luis_02} }
+		game_date >= 1887.3.21
+		game_date < 1888.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = por_monarch_birth.3.a
+		default_option = yes
+
+		create_character = {
+            template = is_por_luis_02
+        }
+	}
+}

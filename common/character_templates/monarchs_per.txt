@@ -1,0 +1,155 @@
+﻿### Persian historic monarchs template file ###
+
+
+is_per_mohammad = {
+	is_general = yes
+    first_name = "Mohammad_Shah"
+    last_name = "Qajar"
+    historical = yes
+    ruler = yes
+    culture = cu:persian
+    birth_date = 1808.1.5
+    dna = dna_king_mohammad_shah_qajar
+    interest_group = ig_landowners
+    ideology = ideology_traditionalist
+    traits = {
+        imperious
+    }
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_per_nasir_al-din = {
+	first_name = "Nasir_al-Din"
+    last_name = "Qajar"
+    historical = yes
+    heir = yes
+    culture = cu:persian
+    birth_date = 1831.7.16
+    dna = dna_per_nasir_al-din
+    interest_group = ig_petty_bourgeoisie
+    ideology = ideology_authoritarian
+    traits = {
+        trait_child
+        meticulous
+        wrathful
+
+    }
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_per_mozaffar_ad-din = {
+    first_name = "Mozaffar_ad-Din"
+    last_name = "Qajar"
+    historical = yes
+    heir = yes
+    culture = cu:persian
+    birth_date = 1853.3.25
+    dna = dna_per_mozaffar_ad-din
+    interest_group = ig_petty_bourgeoisie
+    ideology = ideology_moderate
+    traits = {
+        expensive_tastes
+        cautious
+        reserved
+    }
+    on_created = {
+        set_variable = is_married
+    }
+    trait_generation = {
+        # nothing!
+    }
+}
+
+is_per_mohammad_ali = {
+    first_name = "Mohammad_Ali"
+    last_name = "Qajar"
+    historical = yes
+    heir = yes
+    culture = cu:persian
+    birth_date = 1872.6.21
+    dna = dna_per_mohammad_ali
+    interest_group = ig_landowners
+    ideology = ideology_authoritarian
+    traits = {
+        expensive_tastes
+        wrathful
+        cruel
+    }
+    on_created = {
+        set_variable = is_married
+    }
+    trait_generation = {
+        # nothing!
+    }
+}
+
+is_per_ahmad = {
+    first_name = "Ahmad"
+    last_name = "Qajar"
+    historical = yes
+    heir = yes
+    culture = cu:persian
+    birth_date = 1898.1.21
+    dna = dna_per_ahmad
+    interest_group = ig_petty_bourgeoisie
+    ideology = ideology_moderate
+    traits = {
+        expensive_tastes
+        reserved
+    }
+    on_created = {
+        set_variable = is_married
+    }
+    trait_generation = {
+        # nothing!
+    }
+}
+
+is_per_mohammad_hassan = {
+    first_name = "Mohammad_Hassan"
+    last_name = "Qajar"
+    historical = yes
+    heir = yes
+    culture = cu:persian
+    birth_date = 1899.11.20
+    dna = dna_per_mohammad_hassan
+    interest_group = ig_armed_forces
+    ideology = ideology_moderate
+    traits = {
+        ambitious
+    }
+    on_created = {
+        set_variable = is_married
+    }
+    trait_generation = {
+        # nothing!
+    }
+}
+
+is_per_hamid = {
+    first_name = "Hamid"
+    last_name = "Qajar"
+    historical = yes
+    heir = yes
+    culture = cu:persian
+    birth_date = 1918.4.23
+    dna = dna_per_hamid
+    interest_group = ig_armed_forces
+    ideology = ideology_moderate
+    traits = {
+        meticulous
+        dockyard_master
+    }
+    on_created = {
+        set_variable = is_married
+    }
+    trait_generation = {
+        # nothing!
+    }
+}

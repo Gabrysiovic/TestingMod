@@ -1,0 +1,113 @@
+﻿### Hanoverian historic monarchs template file ###
+
+
+is_han_ernst_august_01 = {
+	first_name = Ernst_August
+	last_name = von_Hannover
+	historical = yes
+	ruler = yes
+	noble = yes
+	birth_date = 1771.6.5
+	culture = cu:north_german
+	dna = dna_han_ernst_august_01
+	interest_group = ig_landowners
+	ideology = ideology_royalist
+	traits = {
+		basic_political_operator
+		arrogant
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_han_georg_05 = {
+	first_name = Georg
+	last_name = von_Hannover
+	historical = yes
+	heir = yes
+	noble = yes
+	birth_date = 1819.5.27
+	culture = cu:north_german
+	dna = dna_han_georg_05
+	interest_group = ig_landowners
+	ideology = ideology_royalist
+	traits = {
+		arrogant
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_han_ernst_august_02 = {
+	first_name = Ernst_August
+	last_name = von_Hannover
+	historical = yes
+	heir = yes
+	noble = yes
+	birth_date = 1845.9.21
+	culture = cu:north_german
+	dna = dna_han_ernst_august_02
+	interest_group = ig_landowners
+	ideology = ideology_royalist
+	traits = {
+		arrogant
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_han_ernst_august_03 = {
+	first_name = Ernst_August
+	last_name = von_Hannover
+	historical = yes
+	heir = yes
+	noble = yes
+	birth_date = 1887.11.17
+	culture = cu:north_german
+	dna = dna_han_ernst_august_03
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_royalist
+	traits = {
+		tactful
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_han_ernst_august_04 = {
+	first_name = Ernst_August
+	last_name = von_Hannover
+	historical = yes
+	heir = yes
+	noble = yes
+	birth_date = 1914.3.18
+	culture = cu:north_german
+	dna = dna_han_ernst_august_04
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_authoritarian
+	traits = {
+		tactful
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}

@@ -1,0 +1,210 @@
+﻿namespace = tur_heir_death
+
+# Abdulmecid 01 dies [ New Heir: (B) Murad 05 (Am1>40) Abdulaziz 01 (Am1<40) ]
+tur_heir_death.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Abdulmecid 01 dies as heir, Murad 05 becomes heir
+		name = tur_heir_death.1.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1840.9.21
+		}
+
+		create_character = {
+			template = is_tur_murad_05
+		}
+	}
+	option = { # Abdulmecid 01 dies as heir, Abdulaziz 01 becomes heir
+		name = tur_heir_death.1.b
+
+		trigger = {	
+			game_date < 1840.9.21
+		}
+
+		create_character = {
+			template = is_tur_abdulaziz_01
+		}
+	}
+}
+
+# Murad 05 dies [ New Heir: (B) Mehmed (M5>61) Abdulhamid 02 (M5<61) ]
+tur_heir_death.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Murad 05 dies as heir, Mehmed becomes heir
+		name = tur_heir_death.2.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1861.8.5
+		}
+
+		create_character = {
+			template = is_tur_mehmed
+		}
+	}
+	option = { # Murad 05 dies as heir, Abdulhamid 02 becomes heir
+		name = tur_heir_death.2.b
+
+		trigger = {	
+			game_date < 1861.8.5
+		}
+
+		create_character = {
+			template = is_tur_abdulhamid_02
+		}
+	}
+}
+
+# Mehmed dies [ New Heir: (B) Ahmed 04 (M>83) Mehmed 05 (M<83) ]
+tur_heir_death.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Mehmed dies as heir, Ahmed 04 becomes heir
+		name = tur_heir_death.3.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_tur_mehmed }
+			game_date >= 1883.7.5
+		}
+
+		create_character = {
+			template = is_tur_ahmed_04
+		}
+	}
+	option = { # Mehmed dies as heir, Mehmed 05 becomes heir
+		name = tur_heir_death.3.b
+
+		trigger = {	
+			game_date < 1883.7.5
+		}
+
+		create_character = {
+			template = is_tur_mehmed_05
+		}
+	}
+}
+
+# Ahmed 04 dies [ New Heir: (B) Ali (A4>03) Osman Fuad (A4<03) ]
+tur_heir_death.4 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Ahmed 04 dies as heir, Ali becomes heir
+		name = tur_heir_death.4.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1903.10.13
+		}
+
+		create_character = {
+			template = is_tur_ali
+		}
+	}
+	option = { # Ahmed 04 dies as heir, Osman Fuad becomes heir
+		name = tur_heir_death.4.b
+
+		trigger = {	
+			game_date < 1903.10.13
+		}
+
+		create_character = {
+			template = is_tur_osman_fuad
+		}
+	}
+}

@@ -1,0 +1,241 @@
+﻿namespace = per_heir_death
+
+# Nasir dies [ New Heir: (B) Mozaffar (N>53) Nobody (N<53) ]
+per_heir_death.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Nasir becomes ruler, Mozaffar becomes heir
+		name = per_heir_death.1.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1853.3.25
+		}
+
+		create_character = {
+			template = is_per_mozaffar_ad-din
+		}
+	}
+	option = { # Nasir becomes ruler, Nobody becomes heir
+		name = per_heir_death.1.b
+
+		trigger = {	
+			game_date < 1853.3.25
+		}
+	}
+}
+
+# Mozaffar dies [ New Heir: (B) Mohammad Ali (Mz>72) Nobody (Mz<72) ]
+per_heir_death.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Mozaffar becomes ruler, Mohammad Ali becomes heir
+		name = per_heir_death.2.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1872.6.21
+		}
+
+		create_character = {
+			template = is_per_mohammad_ali
+		}
+	}
+	option = { # Mozaffar becomes ruler, Nobody becomes heir
+		name = per_heir_death.2.b
+
+		trigger = {	
+			game_date < 1872.6.21
+		}
+	}
+}
+
+# Mohammad Ali dies [ New Heir: (B) Ahmad (MA>98) Nobody (MA<98) ]
+per_heir_death.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Mohammad Ali becomes ruler, Ahmad becomes heir
+		name = per_heir_death.3.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1898.1.21
+		}
+
+		create_character = {
+			template = is_per_ahmad
+		}
+	}
+	option = { # Mohammad Ali becomes ruler, Nobody becomes heir
+		name = per_heir_death.3.b
+
+		trigger = {	
+			game_date < 1898.1.21
+		}
+	}
+}
+
+# Ahmad dies [ New Heir: (B) Mohammad Hassan (A>99) Nobody (A<99) ]
+per_heir_death.4 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Ahmad becomes ruler, Mohammad Hassan becomes heir
+		name = per_heir_death.4.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1899.11.20
+		}
+
+		create_character = {
+			template = is_per_mohammad_hassan
+		}
+	}
+	option = { # Ahmad becomes ruler, Nobody becomes heir
+		name = per_heir_death.4.b
+
+		trigger = {	
+			game_date < 1899.11.20
+		}
+	}
+}
+
+# Mohammad Hassan dies [ New Heir: (B) Hamid (MH>18) Nobody (MH<18) ]
+per_heir_death.5 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Mohammad Hassan becomes ruler, Hamid becomes heir
+		name = per_heir_death.5.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1918.4.23
+		}
+
+		create_character = {
+			template = is_per_hamid
+		}
+	}
+	option = { # Mohammad Hassan becomes ruler, Nobody becomes heir
+		name = per_heir_death.5.b
+
+		trigger = {	
+			game_date < 1918.4.23
+		}
+	}
+}

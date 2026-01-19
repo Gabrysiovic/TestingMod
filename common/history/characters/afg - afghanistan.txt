@@ -1,0 +1,23 @@
+﻿CHARACTERS = {
+	c:AFG = {
+		create_character = {
+			template = is_afg_dost_mohammad
+		}	
+
+		create_character = {
+			template = is_afg_wazir_akbar
+		}
+
+		create_character = {
+			is_general = yes
+			first_name = Dost
+			last_name = Mohammed
+			historical = yes
+			age = 43
+			traits = {
+		#		stalwart
+		#		debutante
+			}
+		}
+	}
+}

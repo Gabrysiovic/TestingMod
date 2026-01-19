@@ -1,0 +1,221 @@
+﻿### Turkish historic monarchs template file ###
+
+
+is_tur_mahmut_02 = {
+    # Mahmud II of the Ottoman Empire
+    first_name = Mahmut
+    last_name = Osmanoglu
+    historical = yes
+    ruler = yes
+    birth_date = 1785.7.20
+    dna = dna_mahmud_02
+    interest_group = ig_intelligentsia
+    ideology = ideology_moderate
+    traits = {
+        ambitious
+    }
+    on_created = {
+		set_variable = is_married
+	}
+     
+}
+
+is_tur_abdulmecid_01 = {
+	first_name = Abdulmecid
+    last_name = Osmanoglu
+    historical = yes
+    heir = yes
+    culture = cu:turkish
+    birth_date = 1823.4.25
+    dna = dna_tur_abdulmecid_01
+    interest_group = ig_intelligentsia
+    ideology = ideology_moderate
+    traits = {
+        trait_child
+        honorable
+        basic_diplomat
+    }
+	on_created = {
+		set_variable = is_married
+	}
+    trait_generation = {
+        # nothing!
+    }
+}
+
+is_tur_murad_05 = {
+    first_name = Murad
+    last_name = Osmanoglu
+    historical = yes
+    heir = yes
+    culture = cu:turkish
+    birth_date = 1840.9.21
+    dna = dna_tur_murad_05
+    interest_group = ig_intelligentsia
+    ideology = ideology_liberal_leader
+    traits = {
+        psychological_affliction
+        basic_diplomat
+    }
+    on_created = {
+        set_variable = is_married
+    }
+    trait_generation = {
+        # nothing!
+    }
+}
+
+is_tur_mehmed = {
+    first_name = Mehmed
+    last_name = Osmanoglu
+    historical = yes
+    heir = yes
+    culture = cu:turkish
+    birth_date = 1861.8.5
+    dna = dna_tur_mehmed
+    interest_group = ig_intelligentsia
+    ideology = ideology_moderate
+    traits = {
+        literary
+    }
+    on_created = {
+        set_variable = is_married
+    }
+    trait_generation = {
+        # nothing!
+    }
+}
+
+is_tur_ahmed_04 = {
+    first_name = Ahmed
+    last_name = Osmanoglu
+    historical = yes
+    heir = yes
+    culture = cu:turkish
+    birth_date = 1883.7.5
+    dna = dna_tur_ahmed_04
+    interest_group = ig_intelligentsia
+    ideology = ideology_moderate
+    traits = {
+        literary
+    }
+    on_created = {
+        set_variable = is_married
+    }
+    trait_generation = {
+        # nothing!
+    }
+}
+
+is_tur_ali = {
+    first_name = Ali
+    last_name = Osmanoglu
+    historical = yes
+    heir = yes
+    culture = cu:turkish
+    birth_date = 1903.10.13
+    dna = dna_tur_ali
+    interest_group = ig_armed_forces
+    ideology = ideology_moderate
+    traits = {
+        charismatic
+    }
+    on_created = {
+        set_variable = is_married
+    }
+    trait_generation = {
+        # nothing!
+    }
+}
+
+# ALTERNATES
+
+is_tur_abdulaziz_01 = {
+    first_name = Abdulaziz
+    last_name = Osmanoglu
+    historical = yes
+    heir = yes
+    culture = cu:turkish
+    birth_date = 1830.2.8
+    dna = dna_tur_abdulaziz_01
+    interest_group = ig_landowners
+    ideology = ideology_authoritarian
+    traits = {
+        cruel
+        wrathful
+        expensive_tastes
+    }
+    on_created = {
+        set_variable = is_married
+    }
+    trait_generation = {
+        # nothing!
+    }
+}
+
+is_tur_abdulhamid_02 = {
+    first_name = Abdulhamid
+    last_name = Osmanoglu
+    historical = yes
+    heir = yes
+    culture = cu:turkish
+    birth_date = 1842.9.21
+    dna = dna_tur_abdulhamid_02
+    interest_group = ig_devout
+    ideology = ideology_authoritarian
+    traits = {
+        pious
+        cruel
+    }
+    on_created = {
+        set_variable = is_married
+    }
+    trait_generation = {
+        # nothing!
+    }
+}
+
+is_tur_mehmed_05 = {
+    first_name = Mehmed
+    last_name = Osmanoglu
+    historical = yes
+    heir = yes
+    culture = cu:turkish
+    birth_date = 1844.11.2
+    dna = dna_tur_mehmed_05
+    interest_group = ig_landowners
+    ideology = ideology_moderate
+    traits = {
+        reserved
+    }
+    on_created = {
+        set_variable = is_married
+    }
+    trait_generation = {
+        # nothing!
+    }
+}
+
+is_tur_osman_fuad = {
+    first_name = Osman
+    last_name = Osmanoglu
+    historical = yes
+    heir = yes
+    culture = cu:turkish
+    birth_date = 1895.2.25
+    dna = dna_tur_osman_fuad
+    interest_group = ig_armed_forces
+    ideology = ideology_humanitarian_royalist
+    traits = {
+        charismatic
+        brave
+        literary
+        experienced_offensive_planner
+    }
+    on_created = {
+        set_variable = is_married
+    }
+    trait_generation = {
+        # nothing!
+    }
+}

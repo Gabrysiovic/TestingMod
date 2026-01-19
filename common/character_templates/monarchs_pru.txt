@@ -1,0 +1,470 @@
+﻿### Prussian historic monarchs template file ###
+
+
+is_pru_friedrich_wilhelm_03 = {
+	first_name = Friedrich_Wilhelm
+	last_name = von_Hohenzollern
+	historical = yes
+	ruler = yes # both ruler and general
+	is_general = yes # both ruler and general
+	age = 66
+	dna = dna_king_frederik_william_03
+	hq = region_north_germany
+	interest_group = ig_armed_forces
+	ideology= ideology_royalist
+	traits = {
+		direct
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_pru_friedrich_wilhelm_04 = {
+	first_name = Friedrich_Wilhelm
+	last_name = von_Hohenzollern
+	historical = yes
+	heir = yes
+	age = 41
+	dna = dna_pru_friedrich_wilhelm_04
+	interest_group = ig_armed_forces
+	ideology = ideology_royalist
+	traits = {
+		reserved
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_pru_wilhelm_01 = {
+	heir = yes
+	culture = cu:north_german
+	first_name = Wilhelm
+	last_name = von_Hohenzollern
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_pru_wilhelm_01
+	birth_date = 1797.3.22
+	interest_group = ig_landowners
+	ideology = ideology_royalist
+	traits = {
+		romantic
+		popular_commander
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_pru_friedrich_03 = {
+	heir = yes
+	culture = cu:north_german
+	first_name = Friedrich
+	last_name = von_Hohenzollern
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_pru_friedrich_03
+	birth_date = 1831.10.18
+	interest_group = ig_intelligentsia
+	ideology = ideology_liberal_leader
+	traits = {
+		cancer
+		popular_commander
+		sickly
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_pru_wilhelm_02 = {
+	heir = yes
+	culture = cu:north_german
+	first_name = Wilhelm
+	last_name = von_Hohenzollern
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_pru_wilhelm_02
+	interest_group = ig_armed_forces
+	ideology = ideology_jingoist_leader
+	traits = {
+		wrathful
+		experienced_colonial_administrator
+		imperious
+		direct
+	}
+	birth_date = 1859.1.27
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_pru_wilhelm_03 = {
+	heir = yes
+	culture = cu:north_german
+	first_name = Wilhelm
+	last_name = von_Hohenzollern
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_pru_wilhelm_03
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	traits = {
+		reserved
+	}
+	birth_date = 1882.5.6
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_pru_wilhelm_04 = {
+	heir = yes
+	culture = cu:north_german
+	first_name = Wilhelm
+	last_name = von_Hohenzollern
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_pru_wilhelm_04
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	traits = {
+		persistent
+	}
+	birth_date = 1906.7.4
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_pru_friedrich_karl_01 = {
+	heir = yes
+	culture = cu:north_german
+	first_name = Friedrich_Karl
+	last_name = von_Hohenzollern
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_pru_friedrich_karl_01
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	traits = {
+		romantic
+	}
+	birth_date = 1801.6.29
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_pru_friedrich_karl_02 = {
+	heir = yes
+	culture = cu:north_german
+	first_name = Friedrich_Karl
+	last_name = von_Hohenzollern
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_pru_friedrich_karl_02
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	traits = {
+		experienced_offensive_planner
+		innovative
+
+	}
+	birth_date = 1828.3.20
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_pru_friedrich_leopold_01 = {
+	heir = yes
+	culture = cu:north_german
+	first_name = Friedrich_Leopold
+	last_name = von_Hohenzollern
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_pru_friedrich_leopold_01
+	interest_group = ig_armed_forces
+	ideology = ideology_vanguardist
+	traits = {
+	}
+	birth_date = 1865.11.14
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_pru_friedrich_sigismund_01 = {
+	heir = yes
+	culture = cu:north_german
+	first_name = Friedrich_Sigismund
+	last_name = von_Hohenzollern
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_pru_friedrich_sigismund_01
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	traits = {
+		brave
+	}
+	birth_date = 1891.12.17
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_pru_louise_01 = {
+	heir = yes
+	culture = cu:north_german
+	female = yes
+	first_name = Louise
+	last_name = von_Hohenzollern
+	historical = yes
+	ig_leader = no
+	noble = yes
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	traits = {
+		expensive_tastes
+	}
+	birth_date = 1829.3.1 
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_pru_viktoria_margarete_01 = {
+	heir = yes
+	culture = cu:north_german
+	first_name = Viktoria_Margarete
+	last_name = von_Hohenzollern
+	historical = yes
+	ig_leader = no
+	female = yes
+	noble = yes
+	dna = dna_pru_friedrich_leopold_01
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	traits = {
+		expensive_tastes
+	}
+	birth_date = 1890.4.17 
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_pru_heinrich_01 = {
+	heir = yes
+	culture = cu:north_german
+	first_name = Heinrich
+	last_name = von_Hohenzollern
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_pru_heinrich_01
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	traits = {
+		innovative
+		experienced_naval_commander
+	}
+	birth_date = 1862.8.14
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_pru_waldemar_01 = {
+	heir = yes
+	culture = cu:north_german
+	first_name = Waldemar
+	last_name = von_Hohenzollern
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_pru_waldemar_01
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_moderate
+	traits = {
+		sickly	
+		reserved
+	}
+	birth_date = 1889.3.20
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_pru_sigismund_01 = {
+	heir = yes
+	culture = cu:north_german
+	first_name = Sigismund
+	last_name = von_Hohenzollern
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_pru_sigismund_01
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_moderate
+	traits = {
+		ambitious	
+	}
+	birth_date = 1896.11.27
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_pru_alfred_01 = {
+	heir = yes
+	culture = cu:north_german
+	first_name = Alfred
+	last_name = von_Hohenzollern
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_pru_alfred_01
+	interest_group = ig_rural_folk
+	ideology = ideology_moderate
+	traits = {
+	}
+	birth_date = 1924.8.17
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_pru_eitel_friedrich_01 = {
+	heir = yes
+	culture = cu:north_german
+	first_name = Eitel_Friedrich
+	last_name = von_Hohenzollern
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_pru_eitel_friedrich_01
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_royalist
+	traits = {
+		expensive_tastes
+		basic_offensive_planner
+	}
+	birth_date = 1883.7.7 
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_pru_adalbert_01 = {
+	heir = yes
+	culture = cu:north_german
+	first_name = Adalbert
+	last_name = von_Hohenzollern
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_pru_adalbert_01
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	traits = {
+		cautious
+	}
+	birth_date = 1884.7.14
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_pru_wilhelm_viktor_01 = {
+	heir = yes
+	culture = cu:north_german
+	first_name = Wilhelm_Viktor
+	last_name = von_Hohenzollern
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_pru_wilhelm_viktor_01
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	traits = {
+		experienced_diplomat
+	}
+	birth_date = 1919.2.15
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_pru_august_wilhelm_01 = {
+	heir = yes
+	culture = cu:north_german
+	first_name = August_Wilhelm
+	last_name = von_Hohenzollern
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_pru_august_wilhelm_01
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_ethno_nationalist
+	traits = {
+		bigoted
+		tactful
+	}
+	birth_date = 1887.1.29
+	on_created = {
+		set_variable = is_married
+	}
+	 
+}
+
+is_pru_alexander_ferdinand_01 = {
+	heir = yes
+	culture = cu:north_german
+	first_name = Alexander_Ferdinand
+	last_name = von_Hohenzollern
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_pru_alexander_ferdinand_01
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_ethno_nationalist
+	traits = {
+
+	}
+	birth_date = 1912.12.26
+	on_created = {
+		set_variable = is_married
+	}
+}

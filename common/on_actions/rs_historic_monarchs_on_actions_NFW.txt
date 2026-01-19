@@ -1,0 +1,468 @@
+#Japan============================================================================#
+
+rs_yamato_historic_monarch_heir_handler = {
+	trigger = {
+		rs_st_country_is_japan = yes
+		ruler ?= {
+			OR = {
+				rs_st_character_is_jap_ninko	= yes
+				rs_st_character_is_jap_komei	= yes
+				rs_st_character_is_jap_meiji	= yes
+				rs_st_character_is_jap_taisho	= yes
+				rs_st_character_is_jap_showa	= yes
+			}
+		}
+		NOT = {
+			exists = heir
+		}
+		has_variable = rs_jap_yamato_dynasty
+		var:rs_jap_yamato_dynasty < 4
+		government_transfer_of_power = hereditary
+	}
+
+	effect = {
+		if = {
+			limit = {
+				rs_jap_yamato_dynasty = yes
+			}
+
+			# Meiji - 1852.11.3
+			if = {
+				limit = {
+					var:rs_jap_yamato_dynasty = 1
+					game_date >= 1852.11.3
+				}
+				rs_se_generate_jap_yamato_heir = yes
+			}
+
+			# Taisho - 1879.8.31
+			if = {
+				limit = {
+					var:rs_jap_yamato_dynasty = 2
+					game_date >= 1879.8.31
+				}
+				rs_se_generate_jap_yamato_heir = yes
+			}
+
+			# Showa - 1901.4.29
+			if = {
+				limit = {
+					var:rs_jap_yamato_dynasty = 3
+					game_date >= 1901.4.29
+				}
+				rs_se_generate_jap_yamato_heir = yes
+			}
+		}
+	}
+}
+
+rs_yamato_no_heirs_failsafe = {
+	trigger = {
+		rs_st_country_is_japan = yes
+		has_variable = no_heirs
+		OR = {
+			NOT = {
+				government_transfer_of_power = hereditary
+			}
+			ruler ?= {
+				NOR = {
+					rs_st_character_is_jap_ninko	= yes
+					rs_st_character_is_jap_komei	= yes
+					rs_st_character_is_jap_meiji	= yes
+					rs_st_character_is_jap_taisho	= yes
+					rs_st_character_is_jap_showa	= yes
+				}
+			}
+			trigger_if = {
+				limit = {
+					has_variable = rs_jap_yamato_dynasty
+				}
+				var:rs_jap_yamato_dynasty >= 4
+			}
+		}
+	}
+}
+
+#Egypt============================================================================#
+
+rs_alawite_historic_monarch_heir_handler = {
+	trigger = {
+		rs_st_country_is_egypt = yes
+		ruler ?= {
+			OR = {
+				rs_st_character_is_egy_muhammad_ali				= yes
+				rs_st_character_is_egy_ibrahim					= yes
+				rs_st_character_is_egy_ismail					= yes
+				rs_st_character_is_egy_muhammad_tewfik			= yes
+				rs_st_character_is_egy_abbas_hilmi				= yes
+				rs_st_character_is_egy_muhammad_abdel_moneim	= yes
+			}
+		}
+		NOT = {
+			exists = heir
+		}
+		has_variable = rs_egy_alawite_dynasty
+		var:rs_egy_alawite_dynasty < 4
+		government_transfer_of_power = hereditary
+	}
+
+	effect = {
+		if = {
+			limit = {
+				rs_egy_alawite_dynasty = yes
+			}
+
+			# Ismail - 1830.1.12
+			if = {
+				limit = {
+					var:rs_egy_alawite_dynasty = 1
+					game_date >= 1830.1.12
+				}
+				rs_se_generate_egy_alawite_heir = yes
+			}
+
+			# Muhammad Tewfik - 1852.11.15
+			if = {
+				limit = {
+					var:rs_egy_alawite_dynasty = 2
+					game_date >= 1852.11.15
+				}
+				rs_se_generate_egy_alawite_heir = yes
+			}
+
+			# Abbas Hilmi - 1874.7.14
+			if = {
+				limit = {
+					var:rs_egy_alawite_dynasty = 3
+					game_date >= 1874.7.14
+				}
+				rs_se_generate_egy_alawite_heir = yes
+			}
+
+			# Abdel Moneim - 1899.2.2
+			if = {
+				limit = {
+					var:rs_egy_alawite_dynasty = 3
+					game_date >= 1899.2.2
+				}
+				rs_se_generate_egy_alawite_heir = yes
+			}
+		}
+	}
+}
+
+rs_alawite_no_heirs_failsafe = {
+	trigger = {
+		rs_st_country_is_egypt = yes
+		has_variable = no_heirs
+		OR = {
+			NOT = {
+				government_transfer_of_power = hereditary
+			}
+			ruler ?= {
+				NOR = {
+					rs_st_character_is_egy_muhammad_ali				= yes
+					rs_st_character_is_egy_ibrahim					= yes
+					rs_st_character_is_egy_ismail					= yes
+					rs_st_character_is_egy_muhammad_tewfik			= yes
+					rs_st_character_is_egy_abbas_hilmi				= yes
+					rs_st_character_is_egy_muhammad_abdel_moneim	= yes
+				}
+			}
+			trigger_if = {
+				limit = {
+					has_variable = rs_egy_alawite_dynasty
+				}
+				var:rs_egy_alawite_dynasty >= 6
+			}
+		}
+	}
+}
+
+#China============================================================================#
+
+rs_qing_historic_monarch_heir_handler = {
+	trigger = {
+		rs_st_country_is_china = yes
+		ruler ?= {
+			OR = {
+				rs_st_character_is_chi_daoguang	= yes
+				rs_st_character_is_chi_xianfeng	= yes
+				rs_st_character_is_chi_tongzhi	= yes
+				rs_st_character_is_chi_guangxu	= yes
+				rs_st_character_is_chi_xuantong	= yes
+			}
+		}
+		NOT = {
+			exists = heir
+		}
+		has_variable = rs_chi_qing_dynasty
+		var:rs_chi_qing_dynasty < 4
+		government_transfer_of_power = hereditary
+	}
+
+	effect = {
+		if = {
+			limit = {
+				rs_chi_qing_dynasty = yes
+			}
+
+			# tongzhi - 1856.4.27
+			if = {
+				limit = {
+					var:rs_chi_qing_dynasty = 1
+					game_date >= 1856.4.27
+				}
+				rs_se_generate_chi_qing_heir = yes
+			}
+
+			# guangxu - 1871.8.14
+			if = {
+				limit = {
+					var:rs_chi_qing_dynasty = 2
+					game_date >= 1871.8.14
+				}
+				rs_se_generate_chi_qing_heir = yes
+			}
+
+			# xuantong - 1906.2.7
+			if = {
+				limit = {
+					var:rs_chi_qing_dynasty = 3
+					game_date >= 1906.2.7
+				}
+				rs_se_generate_chi_qing_heir = yes
+			}
+		}
+	}
+}
+
+rs_qing_no_heirs_failsafe = {
+	trigger = {
+		rs_st_country_is_china = yes
+		has_variable = no_heirs
+		OR = {
+			NOT = {
+				government_transfer_of_power = hereditary
+			}
+			ruler ?= {
+				NOR = {
+					rs_st_character_is_chi_daoguang	= yes
+					rs_st_character_is_chi_xianfeng	= yes
+					rs_st_character_is_chi_tongzhi	= yes
+					rs_st_character_is_chi_guangxu	= yes
+					rs_st_character_is_chi_xuantong	= yes
+				}
+			}
+			trigger_if = {
+				limit = {
+					has_variable = rs_chi_qing_dynasty
+				}
+				var:rs_chi_qing_dynasty >= 4
+			}
+		}
+	}
+}
+
+#Nejd=============================================================================#
+
+rs_saud_historic_monarch_heir_handler = {
+	trigger = {
+		rs_st_country_is_nejd = yes
+		ruler ?= {
+			OR = {
+				rs_st_character_is_nej_faisal_01		= yes
+				rs_st_character_is_nej_saud_03			= yes
+				rs_st_character_is_nej_abdul_rahman_01	= yes
+				rs_st_character_is_nej_abdulaziz_02		= yes
+				rs_st_character_is_nej_saud_04			= yes
+				rs_st_character_is_nej_faisal_02		= yes
+			}
+		}
+		NOT = {
+			exists = heir
+		}
+		has_variable = rs_nej_saud_dynasty
+		var:rs_nej_saud_dynasty < 4
+		government_transfer_of_power = hereditary
+	}
+
+	effect = {
+		if = {
+			limit = {
+				rs_nej_saud_dynasty = yes
+			}
+
+			# abdul_rahman_01 - 1850.6.1
+			if = {
+				limit = {
+					var:rs_nej_saud_dynasty = 1
+					game_date >= 1850.6.1
+				}
+				rs_se_generate_nej_saud_heir = yes
+			}
+
+			# abdulaziz_02 - 1875.1.15
+			if = {
+				limit = {
+					var:rs_nej_saud_dynasty = 2
+					game_date >= 1875.1.15
+				}
+				rs_se_generate_nej_saud_heir = yes
+			}
+
+			# saud_04 - 1902.1.12
+			if = {
+				limit = {
+					var:rs_nej_saud_dynasty = 3
+					game_date >= 1902.1.12
+				}
+				rs_se_generate_nej_saud_heir = yes
+			}
+
+			# faisal_02 - 1906.4.14
+			if = {
+				limit = {
+					var:rs_nej_saud_dynasty = 4
+					game_date >= 1906.4.14
+				}
+				rs_se_generate_nej_saud_heir = yes
+			}
+		}
+	}
+}
+
+rs_saud_no_heirs_failsafe = {
+	trigger = {
+		rs_st_country_is_nejd = yes
+		has_variable = no_heirs
+		OR = {
+			NOT = {
+				government_transfer_of_power = hereditary
+			}
+			ruler ?= {
+				NOR = {
+					rs_st_character_is_nej_faisal_01		= yes
+					rs_st_character_is_nej_saud_03			= yes
+					rs_st_character_is_nej_abdul_rahman_01	= yes
+					rs_st_character_is_nej_abdulaziz_02		= yes
+					rs_st_character_is_nej_saud_04			= yes
+					rs_st_character_is_nej_faisal_02		= yes
+				}
+			}
+			trigger_if = {
+				limit = {
+					has_variable = rs_nej_saud_dynasty
+				}
+				var:rs_nej_saud_dynasty >= 5
+			}
+		}
+	}
+}
+
+#Siam=============================================================================#
+
+rs_chakri_historic_monarch_heir_handler = {
+	trigger = {
+		rs_st_country_is_siam = yes
+		ruler ?= {
+			OR = {
+				rs_st_character_is_sia_nangklao				= yes
+				rs_st_character_is_sia_mongkut				= yes
+				rs_st_character_is_sia_chulalongkorn		= yes
+				rs_st_character_is_sia_vajiravudh			= yes
+				rs_st_character_is_sia_prajadhipok			= yes
+				rs_st_character_is_sia_ananda_mahidol		= yes
+				rs_st_character_is_sia_bhumibol_adulyadej	= yes
+			}
+		}
+		NOT = {
+			exists = heir
+		}
+		has_variable = rs_sia_chakri_dynasty
+		var:rs_sia_chakri_dynasty < 6
+		government_transfer_of_power = hereditary
+	}
+
+	effect = {
+		if = {
+			limit = {
+				rs_sia_chakri_dynasty = yes
+			}
+
+			# chulalongkorn - 1853.9.20
+			if = {
+				limit = {
+					var:rs_sia_chakri_dynasty = 1
+					game_date >= 1853.9.20
+				}
+				rs_se_generate_sia_chakri_heir = yes
+			}
+
+			# vajiravudh - 1880.1.1
+			if = {
+				limit = {
+					var:rs_sia_chakri_dynasty = 2
+					game_date >= 1880.1.1
+				}
+				rs_se_generate_sia_chakri_heir = yes
+			}
+
+			# prajadhipok - 1893.11.8
+			if = {
+				limit = {
+					var:rs_sia_chakri_dynasty = 3
+					game_date >= 1893.11.8
+				}
+				rs_se_generate_sia_chakri_heir = yes
+			}
+
+			# ananda_mahidol - 1925.9.20
+			if = {
+				limit = {
+					var:rs_sia_chakri_dynasty = 4
+					game_date >= 1925.9.20
+				}
+				rs_se_generate_sia_chakri_heir = yes
+			}
+
+			# bhumibol_adulyadej - 1927.12.5
+			if = {
+				limit = {
+					var:rs_sia_chakri_dynasty = 5
+					game_date >= 1927.12.5
+				}
+				rs_se_generate_sia_chakri_heir = yes
+			}
+		}
+	}
+}
+
+rs_chakri_no_heirs_failsafe = {
+	trigger = {
+		rs_st_country_is_siam = yes
+		has_variable = no_heirs
+		OR = {
+			NOT = {
+				government_transfer_of_power = hereditary
+			}
+			ruler ?= {
+				NOR = {
+					rs_st_character_is_sia_nangklao				= yes
+					rs_st_character_is_sia_mongkut				= yes
+					rs_st_character_is_sia_chulalongkorn		= yes
+					rs_st_character_is_sia_vajiravudh			= yes
+					rs_st_character_is_sia_prajadhipok			= yes
+					rs_st_character_is_sia_ananda_mahidol		= yes
+					rs_st_character_is_sia_bhumibol_adulyadej	= yes
+				}
+			}
+			trigger_if = {
+				limit = {
+					has_variable = rs_sia_chakri_dynasty
+				}
+				var:rs_sia_chakri_dynasty >= 5
+			}
+		}
+	}
+}

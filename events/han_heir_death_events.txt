@@ -1,0 +1,145 @@
+﻿namespace = han_heir_death
+
+# Georg 05 dies [ New Heir: (B) Ernst August 02 (G5>45) Nobody (G5<45) ]
+han_heir_death.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Georg 05 dies as heir, Ernst August 02 becomes heir
+		name = han_heir_death.1.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1845.9.21
+		}
+
+		create_character = {
+			template = is_han_ernst_august_02
+		}
+	}
+	option = { # Georg 05 dies as heir, Nobody becomes heir
+		name = han_heir_death.1.b
+
+		trigger = {	
+			game_date < 1845.9.21
+		}
+	}
+}
+
+# Ernst August 02 dies [ New Heir: (B) Ernst August 03 (EA2>87) Nobody (EA2<87) ]
+han_heir_death.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Ernst August 02 dies as heir, Ernst August 03 becomes heir
+		name = han_heir_death.2.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1887.11.17
+		}
+
+		create_character = {
+			template = is_han_ernst_august_03
+		}
+	}
+	option = { # Ernst August 02 dies as heir, Nobody becomes heir
+		name = han_heir_death.2.b
+
+		trigger = {	
+			game_date < 1887.11.17
+		}
+	}
+}
+
+# Ernst August 03 dies [ New Heir: (B) Ernst August 04 (EA3>14) Nobody (EA3<14) ]
+han_heir_death.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Ernst August 03 dies as heir, Ernst August 04 becomes heir
+		name = han_heir_death.3.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1914.3.18
+		}
+
+		create_character = {
+			template = is_han_ernst_august_04
+		}
+	}
+	option = { # Ernst August 03 dies as heir, Nobody becomes heir
+		name = han_heir_death.3.b
+
+		trigger = {	
+			game_date < 1914.3.18
+		}
+	}
+}

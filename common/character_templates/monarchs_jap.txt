@@ -1,0 +1,176 @@
+﻿### Japanese historic monarchs template file ###
+
+# Japan - JAP
+is_jap_tokugawa_ienari = {
+    ruler = yes
+    first_name = Ienari
+    last_name = Tokugawa
+    historical = yes
+    birth_date = 1773.11.18
+    dna = dna_jap_tokugawa_ienari
+    culture = cu:japanese
+    interest_group = ig_landowners
+    ideology = ideology_traditionalist
+    traits = {
+        arrogant
+        expensive_tastes # bit of corruption
+    }
+}
+is_jap_tokugawa_ieyoshi = {
+    heir = yes
+	first_name = Ieyoshi
+	last_name = Tokugawa
+	historical = yes
+	birth_date = 1793.6.22
+	dna = dna_jap_tokugawa_ieyoshi
+	culture = cu:japanese
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+	traits = {
+		meticulous
+		pious
+	}
+}
+is_jap_tokugawa_iesada = {
+    heir = yes
+	first_name = "Iesada"
+	last_name = "Tokugawa"
+	historical = yes
+	birth_date = 1824.5.6
+	dna = dna_jap_tokugawa_iesada
+	culture = cu:japanese
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	traits = {
+		sickly
+		wounded
+		psychological_affliction
+	}
+}
+is_jap_tokugawa_iemochi = {
+    heir = yes
+	first_name = "Iemochi"
+	last_name = "Tokugawa"
+	historical = yes
+	birth_date = 1846.7.17
+	dna = dna_jap_tokugawa_iemochi
+	culture = cu:japanese
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+	traits = {
+		sickly
+	}
+}
+is_jap_tokugawa_yoshinobu = {
+    heir = yes
+	first_name = "Yoshinobu"
+	last_name = "Tokugawa"
+	historical = yes
+	birth_date = 1837.10.28
+	dna = dna_jap_tokugawa_yoshinobu
+	culture = cu:japanese
+	interest_group = ig_landowners
+	ideology = ideology_authoritarian
+	traits = {
+		sickly
+		basic_political_operator
+		tactful
+	}
+}
+is_jap_tokugawa_iesato = {
+    heir = yes
+	first_name = "Iesato"
+	last_name = "Tokugawa"
+	historical = yes
+	birth_date = 1863.8.24
+	dna = dna_jap_tokugawa_iesato
+	culture = cu:japanese
+	interest_group = ig_landowners
+	ideology = ideology_humanitarian
+	traits = {
+		basic_political_operator
+		basic_diplomat
+		erudite
+		honorable
+	}
+}
+is_jap_tokugawa_iemasa = {
+    heir = yes
+	first_name = "Iemasa"
+	last_name = "Tokugawa"
+	historical = yes
+	birth_date = 1884.3.23
+	dna = dna_jap_tokugawa_iemasa
+	culture = cu:japanese
+	interest_group = ig_landowners
+	ideology = ideology_humanitarian
+	traits = {
+		basic_political_operator
+		basic_diplomat
+		literary
+		honorable
+	}
+}
+
+
+is_jap_ninko = {
+    first_name = "Ayahito" #Ninko
+	last_name = "Yamato"
+	historical = yes
+	birth_date = 1800.1.1
+	dna = dna_jap_ninko
+	culture = cu:japanese
+	interest_group = ig_landowners # beholden to the Shogun
+	ideology = ideology_traditionalist
+	traits = {
+		reserved # not very active in affairs of state
+	}
+}
+is_jap_komei = {
+    first_name = "Osahito" #Komei
+    last_name = "Yamato"
+    historical = yes
+    birth_date = 1831.1.1
+    dna = dna_jap_komei
+    culture = cu:japanese
+    interest_group = ig_armed_forces
+    traits = {
+        reserved # ditto
+    }
+}
+is_jap_meiji = {
+    first_name = "Mutsuhito" #Meiji
+    last_name = "Yamato"
+    historical = yes
+    birth_date = 1852.1.1
+    dna = dna_jap_meiji
+    culture = cu:japanese
+    interest_group = ig_industrialists
+    traits = {
+        innovative
+        charismatic
+    }
+}
+is_jap_taisho = {
+    first_name = "Yoshihito" #Taisho
+    last_name = "Yamato"
+    historical = yes
+    dna = dna_jap_taisho
+    birth_date = 1879.1.1
+    dna = dna_jap_taisho
+    culture = cu:japanese
+	interest_group = ig_industrialists
+	traits = {
+	}
+}
+is_jap_showa = {
+    first_name = "Hirohito" #Showa
+	last_name = "Yamato"
+	historical = yes
+	birth_date = 1901.1.1
+	dna = dna_jap_showa
+	culture = cu:japanese
+	interest_group = ig_armed_forces
+	traits = {
+	}
+}

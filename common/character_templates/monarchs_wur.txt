@@ -1,0 +1,117 @@
+﻿### Wurttemberger historic monarchs template file ###
+
+
+is_wur_wilhelm_01 = {
+	first_name = Wilhelm
+	last_name = von_Wurttemberg
+	historical = yes
+	ruler = yes
+	culture = cu:south_german
+	religion = protestant
+	age = 57
+	dna = dna_wur_wilhelm_01
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	traits = {
+		meticulous
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_wur_karl_01 = {
+	first_name = Karl
+	last_name = von_Wurttemberg
+	historical = yes
+	heir = yes
+	culture = cu:south_german
+	religion = protestant
+	age = 13
+	dna = dna_wur_karl_01
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	traits = {
+		trait_child
+		persistent
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_wur_wilhelm_02 = {
+	heir = yes
+	culture = cu:north_german
+	first_name = Wilhelm
+	last_name = von_Wurttemberg
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_wur_wilhelm_02
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	traits = {
+		charismatic
+		honorable
+	}
+	birth_date = 1848.2.25
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_wur_albrecht_01 = {
+	heir = yes
+	culture = cu:north_german
+	first_name = Albrecht
+	last_name = von_Wurttemberg
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_wur_albrecht_01
+	interest_group = ig_armed_forces
+	ideology = ideology_authoritarian
+	traits = {
+		brave
+	}
+	birth_date = 1865.12.23
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_wur_albrecht_02 = {
+	heir = yes
+	culture = cu:north_german
+	first_name = Albrecht
+	last_name = von_Wurttemberg
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_wur_albrecht_02
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_moderate
+	traits = {
+		expensive_tastes
+	}
+	birth_date = 1893.11.14
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}

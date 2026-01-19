@@ -1,0 +1,225 @@
+﻿namespace = den_heir_death
+
+# Christian 08 dies [ New Heir: (A) Frederik 07 (C8) ]
+den_heir_death.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Christian 08 dies as heir, Frederik 07 becomes heir
+		name = den_heir_death.1.a
+		default_option = yes
+
+		trigger = {	
+		}
+
+		 create_character = {
+            template = is_den_frederik_07
+        }
+	}
+}
+
+# Frederik 07 dies [ New Heir: (A) Christian 09+Schlesweig Diplo Play (F7) ]
+den_heir_death.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Frederik 07 dies as heir, Christian 09 becomes heir
+		name = den_heir_death.2.a
+		default_option = yes
+
+		trigger = {	
+		}
+
+		 create_character = {
+            template = is_den_christian_09
+        }
+	}
+}
+
+# Christian 09 dies [ New Heir: (B) Frederik 08+Schlesweig Diplo Play (C9>43) Nobody (C9<43) ]
+den_heir_death.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Christian 09 dies as heir, Frederik 08 becomes heir
+		name = den_heir_death.3.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1843.6.3
+		}
+
+		create_character = {
+            template = is_den_frederik_08
+        }
+	}
+	option = { # Christian 09 dies as heir, Nobody becomes heir
+		name = den_heir_death.3.b
+
+		trigger = {	
+			game_date < 1843.6.3
+		}
+	}
+}
+
+# Frederik 08 dies [ New Heir: (B) Christian 10 (F8>70) Nobody (F8<70) ]
+den_heir_death.4 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Frederik 08 dies as heir, Christian 10 becomes heir
+		name = den_heir_death.4.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1870.9.26
+		}
+
+		create_character = {
+            template = is_den_christian_10
+        }
+	}
+	option = { # Frederik 08 dies as heir, Nobody becomes heir
+		name = den_heir_death.4.b
+
+		trigger = {	
+			game_date < 1870.9.26
+		}
+	}
+}
+
+# Christian 10 dies [ New Heir: (B) Frederik 09 (C10>99) Nobody (C10<99) ]
+den_heir_death.5 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Christian 10 dies as heir, Frederik 09 becomes heir
+		name = den_heir_death.5.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1899.3.11
+		}
+
+		create_character = {
+            template = is_den_frederik_09
+        }
+	}
+	option = { # Christian 10 dies as heir, Nobody becomes heir
+		name = den_heir_death.5.b
+
+		trigger = {	
+			game_date < 1899.3.11
+		}
+	}
+}

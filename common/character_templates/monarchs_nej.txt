@@ -1,0 +1,131 @@
+﻿### Saudi (Nejd) historic monarchs template file ###		
+
+is_nej_faisal_01 = {
+	# Faisal bin Turki bin Abdullah Al Saud
+	first_name = "Faisal"
+	last_name = "al_Saud"
+	historical = yes
+	ruler = yes
+	culture = cu:bedouin
+	age = 51
+	dna = dna_nej_faisal_01
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+	traits = {
+		ambitious
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_nej_saud_03 = {
+	# Saud bin Faisal bin Turki
+	first_name = "Saud"
+	last_name = "al_Saud"
+	historical = yes
+	heir = yes
+	age = 5 # (paradox devnote) I acutally don't know when he was born, but he died in 1875 and he was older than a brother who was born in 1845.
+	dna = dna_nej_saud_03
+	interest_group = ig_devout
+	ideology = ideology_traditionalist
+	traits = {
+		trait_child
+	}
+	on_created = {
+		set_variable = is_married
+	}
+}
+
+is_nej_abdul_rahman_01 = {
+	first_name = "Abdul_Rahman"
+	last_name = "al_Saud"
+	historical = yes
+	heir = yes
+	culture = cu:bedouin
+	birth_date = 1850.6.1
+	dna = dna_nej_abdul_rahman_01
+	interest_group = ig_devout
+	ideology = ideology_traditionalist
+	traits = {
+		pious
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_nej_abdulaziz_02 = {
+	first_name = "Abdulaziz"
+	last_name = "al_Saud"
+	historical = yes
+	heir = yes
+	culture = cu:bedouin
+	birth_date = 1875.1.15
+	dna = dna_nej_abdulaziz_02
+	interest_group = ig_devout
+	ideology = ideology_traditionalist
+	traits = {
+		imposing
+		ambitious
+		charismatic
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_nej_saud_04 = {
+	first_name = "Saud"
+	last_name = "al_Saud"
+	historical = yes
+	heir = yes
+	culture = cu:bedouin
+	birth_date = 1902.1.12
+	dna = dna_nej_saud_04
+	interest_group = ig_devout
+	ideology = ideology_royalist
+	traits = {
+		imposing
+		charismatic
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_nej_faisal_02 = {
+	first_name = "Faisal"
+	last_name = "al_Saud"
+	historical = yes
+	heir = yes
+	culture = cu:bedouin
+	birth_date = 1906.4.14
+	dna = dna_nej_faisal_02
+	interest_group = ig_landowners
+	ideology = ideology_humanitarian_royalist
+	traits = {
+		imposing
+		tactful
+		meticulous
+		pious
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}

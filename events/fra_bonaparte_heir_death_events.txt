@@ -1,0 +1,107 @@
+﻿namespace = fra_bonaparte_heir_death
+
+# Louis Napoleon 04 dies [ New Heir: (B) Victor Napoleon 06 (>62) Nobody (<62) ]
+fra_bonaparte_heir_death.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+		NOR = {
+			has_variable = orleanist_restoration_var
+			has_variable = legitimist_restoration_var
+		}
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Louis Napoleon 04 dies as heir, Victor Napoleon 06 becomes heir
+		name = fra_bonaparte_heir_death.1.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1862.7.18
+		}
+
+		create_character = {
+			template = FRA_victor_bonaparte
+		}
+	}
+
+	option = { # Louis Napoleon 04 dies as heir, Nobody becomes heir
+		name = fra_bonaparte_heir_death.1.b
+
+		trigger = {	
+				game_date < 1862.7.18	
+		}
+	}
+}
+
+# Victor Napoleon 06 dies [ New Heir: (B) Louis Napoleon 07 (>14) Nobody (<14) ]
+fra_bonaparte_heir_death.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+		NOR = {
+			has_variable = orleanist_restoration_var
+			has_variable = legitimist_restoration_var
+		}
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Victor Napoleon 06 dies as heir, Louis Napoleon 07 becomes heir
+		name = fra_bonaparte_heir_death.2.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1914.1.23
+		}
+
+		create_character = {
+			template = FRA_louis_bonaparte
+		}
+	}
+
+	option = { # Victor Napoleon 06 dies as heir, Nobody becomes heir
+		name = fra_bonaparte_heir_death.2.b
+
+		trigger = {	
+				game_date < 1914.1.23
+		}
+	}
+}

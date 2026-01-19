@@ -1,0 +1,953 @@
+﻿namespace = pru_monarch_death
+
+# HISTORIC Friedrich Wilhelm 03 dies
+pru_monarch_death.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+
+	option = { # Friedrich Wilhelm 04 becomes ruler, Wilhelm 01 becomes heir
+		name = pru_monarch_death.1.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_pru_friedrich_wilhelm_04 }
+		}
+
+		create_character = {
+			template = is_pru_wilhelm_01
+		}
+	}
+	option = { # Wilhelm 01 becomes ruler, Friedrich 03 becomes heir
+		name = pru_monarch_death.1.b
+
+		trigger = {	
+			ruler = { has_template = is_pru_wilhelm_01 }
+		}
+
+		create_character = {
+			template = is_pru_friedrich_03
+		}
+	}
+	option = { # Friedrich 03 becomes ruler, Friedrich Karl 01 becomes heir
+		name = pru_monarch_death.1.c
+
+		trigger = {	
+			ruler = { has_template = is_pru_friedrich_03 }
+			game_date < 1859.1.27
+		}
+
+		create_character = {
+			template = is_pru_friedrich_karl_01
+		}
+	}
+	option = { # Friedrich 03 becomes ruler, Wilhelm 02 becomes heir
+		name = pru_monarch_death.1.d
+
+		trigger = {	
+			ruler = { has_template = is_pru_friedrich_03 }
+			game_date >= 1859.1.27
+		}
+
+		create_character = {
+			template = is_pru_wilhelm_02
+		}
+	}
+	option = { # Friedrich Karl 01 becomes ruler, Friedrich Karl 02 becomes heir
+		name = pru_monarch_death.1.e
+
+		trigger = {	
+			ruler = { has_template = is_pru_friedrich_karl_01 }
+		}
+
+		create_character = {
+			template = is_pru_friedrich_karl_02
+		}
+	}
+}
+
+# HISTORIC Friedrich Wilhelm 04 dies
+pru_monarch_death.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Wilhelm 01 becomes ruler, Friedrich 03 becomes heir
+		name = pru_monarch_death.2.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_pru_wilhelm_01 }
+		}
+
+		create_character = {
+			template = is_pru_friedrich_03
+		}
+	}
+	option = { # Friedrich 03 becomes ruler, Friedrich Karl 01 becomes heir
+		name = pru_monarch_death.2.b
+
+		trigger = {	
+			ruler = { has_template = is_pru_friedrich_03 }
+			game_date < 1859.1.27
+		}
+
+		create_character = {
+			template = is_pru_friedrich_karl_01
+		}
+	}
+	option = { # Friedrich 03 becomes ruler, Wilhelm 02 becomes heir
+		name = pru_monarch_death.2.c
+
+		trigger = {	
+			ruler = { has_template = is_pru_friedrich_03 }
+			game_date >= 1859.1.27
+		}
+
+		create_character = {
+			template = is_pru_wilhelm_02
+		}
+	}
+	option = { #Friedrich Karl 01 becomes ruler, Friedrich Karl 02 becomes heir
+		name = pru_monarch_death.2.d
+
+		trigger = {
+			ruler = { has_template = is_pru_friedrich_karl_01 } #previously heir
+		}
+
+		create_character = {
+			template = is_pru_friedrich_karl_02
+		}
+	}
+}
+
+# HISTORIC Wilhelm 01 dies [ Wilhelm 02, Friedrich Karl 01, Wilhelm 03, Heinrich 01, Friedrich Karl 02, Louise 01, Friedrich Leopold 01 ]
+pru_monarch_death.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { #Friedrich 03 becomes ruler, Wilhelm 02 becomes heir 
+		name = pru_monarch_death.3.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_pru_friedrich_03 } #previously heir (>1859)
+			game_date >= 1859.1.27
+		}
+
+		create_character = {
+			template = is_pru_wilhelm_02
+		}
+	}
+	option = { #Friedrich 03 becomes ruler, Friedrich Karl 01 becomes heir (<1859), or Wilhelm 02 becomes ruler, Friedrich Karl 01 becomes heir (<1862)
+		name = pru_monarch_death.3.b
+
+		trigger = {
+			OR = {
+				AND = {
+					ruler = { has_template = is_pru_friedrich_03 } #previously heir
+					game_date < 1859.1.27
+				}
+				AND = {
+					ruler = { has_template = is_pru_wilhelm_02 } #previously heir
+					game_date < 1862.8.14
+				}
+			}		
+		}
+
+		create_character = {
+			template = is_pru_friedrich_karl_01
+		}
+	}
+	option = { #Wilhelm 02 becomes ruler, Wilhelm 03 becomes heir
+		name = pru_monarch_death.3.c
+
+		trigger = {
+			ruler = { has_template = is_pru_wilhelm_02 } #previously heir
+			game_date >= 1882.5.6
+		}
+
+		create_character = {
+			template = is_pru_wilhelm_03
+		}
+	}
+	option = { #Wilhelm 02 becomes ruler, Heinrich 01 becomes heir
+		name = pru_monarch_death.3.d
+
+		trigger = {
+			ruler = { has_template = is_pru_wilhelm_02 } #previously heir
+			game_date < 1882.5.6
+		}
+
+		create_character = {
+			template = is_pru_heinrich_01
+		}
+	}
+	option = { #Friedrich Karl 01 becomes ruler, Friedrich Karl 02 becomes heir
+		name = pru_monarch_death.3.e
+
+		trigger = {
+			ruler = { has_template = is_pru_friedrich_karl_01 } #previously heir
+		}
+
+		create_character = {
+			template = is_pru_friedrich_karl_02
+		}
+	}
+	option = { #Friedrich Karl 02 becomes ruler, Louise 01 becomes heir
+		name = pru_monarch_death.3.f
+
+		trigger = {
+			ruler = { has_template = is_pru_friedrich_karl_02 } #previously heir
+			game_date < 1865.11.14
+		}
+
+		create_character = {
+			template = is_pru_louise_01
+		}
+	}
+	option = { #Friedrich Karl 02 becomes ruler, Friedrich Leopold 01 becomes heir
+		name = pru_monarch_death.3.g
+
+		trigger = {
+			ruler = { has_template = is_pru_friedrich_karl_02 } #previously heir
+			game_date >= 1865.11.14
+		}
+
+		create_character = {
+			template = is_pru_friedrich_leopold_01
+		}
+	}
+}
+
+# HISTORIC Friedrich 03 dies [ Wilhelm 03, Heinrich 01, Friedrich Karl 01, Friedrich Karl 02, Louise 01, Friedrich Leopold 01, Eitel Friedrich 01 ]
+pru_monarch_death.4 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { #Wilhelm 02 becomes ruler, Wilhelm 03 becomes heir
+		name = pru_monarch_death.4.a
+		default_option = yes
+
+		trigger = {
+			ruler = { has_template = is_pru_wilhelm_02 } #previously heir (>1882)
+			game_date >= 1882.5.6
+		}
+
+		create_character = {
+			template = is_pru_wilhelm_03
+		}
+	}
+	option = { #Wilhelm 02 becomes ruler, Heinrich 01 becomes heir
+		name = pru_monarch_death.4.b
+
+		trigger = {
+			ruler = { has_template = is_pru_wilhelm_02 } #previously heir (>1882)
+			game_date < 1882.5.6
+			game_date >= 1862.8.14
+		}
+
+		create_character = {
+			template = is_pru_heinrich_01
+		}
+	}
+	option = { #Wilhelm 02 becomes ruler, Friedrich Karl 01 becomes heir (<1862)
+		name = pru_monarch_death.4.c
+
+		trigger = {
+			ruler = { has_template = is_pru_wilhelm_02 } #previously heir
+			game_date < 1862.8.14	
+		}
+
+		create_character = {
+			template = is_pru_friedrich_karl_01
+		}
+	}
+	option = { #Friedrich Karl 01 becomes ruler, Friedrich Karl 02 becomes heir
+		name = pru_monarch_death.4.d
+
+		trigger = {
+			ruler = { has_template = is_pru_friedrich_karl_01 } #previously heir
+		}
+
+		create_character = {
+			template = is_pru_friedrich_karl_02
+		}
+	}
+	option = { #Friedrich Karl 02 becomes ruler, Louise 01 becomes heir
+		name = pru_monarch_death.4.e
+
+		trigger = {
+			ruler = { has_template = is_pru_friedrich_karl_02 } #previously heir
+			game_date < 1865.11.14
+		}
+
+		create_character = {
+			template = is_pru_louise_01
+		}
+	}
+	option = { #Friedrich Karl 02 becomes ruler, Friedrich Leopold 01 becomes heir
+		name = pru_monarch_death.4.f
+
+		trigger = {
+			ruler = { has_template = is_pru_friedrich_karl_02 } #previously heir
+			game_date >= 1865.11.14
+		}
+
+		create_character = {
+			template = is_pru_friedrich_leopold_01
+		}
+	}
+	option = { #Wilhelm 03 becomes ruler, Eitel Friedrich 01 becomes heir
+		name = pru_monarch_death.4.g
+
+		trigger = {
+			ruler = { has_template = is_pru_wilhelm_03 } #previously heir
+			game_date >= 1883.7.7
+		}
+
+		create_character = {
+			template = is_pru_eitel_friedrich_01
+		}
+	}
+}
+
+# HISTORIC Wilhelm 02 dies [ Wilhelm 04, Eitel Friedrich 01, Heinrich 01, Waldemar 01, Sigismund 01, Friedrich Karl 02 ]
+pru_monarch_death.5 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { #Wilhelm 03 becomes ruler, Wilhelm 04 becomes heir
+		name = pru_monarch_death.5.a
+		default_option = yes
+
+		trigger = {
+			ruler = { has_template = is_pru_wilhelm_03 } #previously heir
+			game_date >= 1906.7.4
+		}
+
+		create_character = {
+			template = is_pru_wilhelm_04
+		}
+	}
+	option = { #Wilhelm 03 becomes ruler, Eitel Friedrich 01 becomes heir
+		name = pru_monarch_death.5.b
+
+		trigger = {
+			ruler = { has_template = is_pru_wilhelm_03 } #previously heir
+			game_date < 1906.7.4
+			game_date >= 1883.7.7
+		}
+
+		create_character = {
+			template = is_pru_eitel_friedrich_01
+		}
+	}
+	option = { #Wilhelm 03 becomes ruler, Heinrich 01 becomes heir
+		name = pru_monarch_death.5.c
+
+		trigger = {
+			ruler = { has_template = is_pru_wilhelm_03 } #previously heir
+			game_date < 1883.7.7
+		}
+
+		create_character = {
+			template = is_pru_heinrich_01
+		}
+	}
+	option = { #Heinrich 01 becomes ruler, Waldemar 01 becomes heir
+		name = pru_monarch_death.5.d
+
+		trigger = {
+			ruler = { has_template = is_pru_heinrich_01 } #previously heir
+			game_date >= 1889.3.20
+		}
+
+		create_character = {
+			template = is_pru_waldemar_01
+		}
+	}
+	option = { #Waldemar 01 becomes ruler, Sigismund 01 becomes heir
+		name = pru_monarch_death.5.e
+
+		trigger = {
+			ruler = { has_template = is_pru_waldemar_01 } #previously heir
+			game_date >= 1896.11.27
+		}
+
+		create_character = {
+			template = is_pru_sigismund_01
+		}
+	}
+	option = { #Heinrich 01/ Waldemar 01 becomes ruler, Friedrich Karl 02 becomes heir
+		name = pru_monarch_death.5.f
+
+		trigger = {
+			OR = {
+				AND = {
+					ruler = { has_template = is_pru_heinrich_01 } #previously heir
+					game_date < 1889.3.20
+				}
+				AND = {
+					ruler = { has_template = is_pru_waldemar_01 } #previously heir
+					game_date < 1896.11.27
+				}
+			}
+		}
+
+		create_character = {
+			template = is_pru_friedrich_karl_02
+		}
+	}
+	option = { #Eitel Friedrich becomes ruler, Adalbert 01 becomes heir
+		name = pru_monarch_death.5.g
+
+		trigger = {
+			ruler = { has_template = is_pru_eitel_friedrich_01 } #previously heir
+		}
+
+		create_character = {
+			template = is_pru_adalbert_01
+		}
+	}
+}
+
+# HISTORIC Wilhelm 03 dies [ Eitel Friedrich 01, Adalbert 01, Wilhelm Viktor 01, August Wilhelm 01 ]
+pru_monarch_death.6 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { #Wilhelm 04 becomes ruler, Eitel Friedrich becomes heir
+		name = pru_monarch_death.6.a
+		default_option = yes
+
+		trigger = {
+			ruler = { has_template = is_pru_wilhelm_04 } #previously heir
+		}
+
+		create_character = {
+			template = is_pru_eitel_friedrich_01
+		}
+	}
+	option = { #Eitel Friedrich becomes ruler, Adalbert 01 becomes heir
+		name = pru_monarch_death.6.b
+
+		trigger = {
+			ruler = { has_template = is_pru_eitel_friedrich_01 } #previously heir
+		}
+
+		create_character = {
+			template = is_pru_adalbert_01
+		}
+	}
+	option = { #Adalbert 01 becomes ruler, August Wilhelm 01 becomes heir
+		name = pru_monarch_death.6.c
+
+		trigger = {
+			ruler = { has_template = is_pru_adalbert_01 } #previously heir
+			game_date < 1919.2.15
+		}
+
+		create_character = {
+			template = is_pru_august_wilhelm_01
+		}
+	}
+	option = { #Adalbert 01 becomes ruler, Wilhelm Viktor 01 becomes heir
+		name = pru_monarch_death.6.d
+
+		trigger = {
+			ruler = { has_template = is_pru_adalbert_01 } #previously heir
+			game_date >= 1919.2.15
+		}
+
+		create_character = {
+			template = is_pru_wilhelm_viktor_01
+		}
+	}
+}
+
+# ALTERNATE FRIEDRICH KARL PATH AFTER FRIEDRICH 03
+
+# ALTERNATE Friedrich Karl 01 dies [ Louise 01, Friedrich Leopold 01 ]
+pru_monarch_death.7 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { #Friedrich Karl 02 becomes ruler, Louise 01 becomes heir
+		name = pru_monarch_death.7.a
+		default_option = yes
+
+		trigger = {
+			ruler = { has_template = is_pru_friedrich_karl_02 } #previously heir
+			game_date < 1865.11.14
+		}
+
+		create_character = {
+			template = is_pru_louise_01
+		}
+	}
+	option = { #Friedrich Karl 02 becomes ruler, Friedrich Leopold 01 becomes heir
+		name = pru_monarch_death.7.b
+
+		trigger = {
+			ruler = { has_template = is_pru_friedrich_karl_02 } #previously heir
+			game_date >= 1865.11.14
+		}
+
+		create_character = {
+			template = is_pru_friedrich_leopold_01
+		}
+	}
+}
+
+# ALTERNATE Friedrich Karl 02 dies [ Friedrich Sigismund 01, Viktoria Margarete 01 ]
+pru_monarch_death.8 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { #Friedrich Leopold 01 becomes ruler, Viktoria Margarete 01 becomes heir
+		name = pru_monarch_death.8.a
+		default_option = yes
+
+		trigger = {
+			ruler = { has_template = is_pru_friedrich_leopold_01 } #previously heir
+			game_date < 1891.12.17
+		}
+
+		create_character = {
+			template = is_pru_viktoria_margarete_01
+		}
+	}
+	option = { #Friedrich Leopold 01 becomes ruler, Friedrich Sigismund 01 becomes heir
+		name = pru_monarch_death.8.b
+
+		trigger = {
+			ruler = { has_template = is_pru_friedrich_leopold_01 } #previously heir
+			game_date >= 1891.12.17
+		}
+
+		create_character = {
+			template = is_pru_friedrich_sigismund_01
+		}
+	}	
+}
+
+# ALTERNATE HEINRICH PATH AFTER WILHELM 02
+
+# ALTERNATE Heinrich 01 dies [ Sigismund 01, Alfred 01, Friedrich Leopold 01 ]
+pru_monarch_death.9 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { #Waldemar 01 becomes ruler, Sigismund 01 becomes heir
+		name = pru_monarch_death.9.a
+		default_option = yes
+
+		trigger = {
+			ruler = { has_template = is_pru_waldemar_01 } #previously heir
+			game_date >= 1896.11.27
+		}
+
+		create_character = {
+			template = is_pru_sigismund_01
+		}
+	}
+	option = { #Waldemar 01/Sigismund 01 becomes ruler, Friedrich Leopold 01 becomes heir
+		name = pru_monarch_death.9.b
+
+		trigger = {
+			OR = {	
+				AND = {
+					ruler = { has_template = is_pru_waldemar_01 } #previously heir
+					game_date < 1896.11.27
+				}
+				AND = {
+					ruler = { has_template = is_pru_sigismund_01 } #previously heir
+					game_date < 1924.8.17
+				}
+			}	
+		}
+
+		create_character = {
+			template = is_pru_friedrich_leopold_01
+		}
+	}
+	option = { #Sigismund 01 becomes ruler, Alfred 01 becomes heir
+		name = pru_monarch_death.9.c
+
+		trigger = {
+			ruler = { has_template = is_pru_sigismund_01 } #previously heir
+			game_date >= 1924.8.17
+		}
+
+		create_character = {
+			template = is_pru_alfred_01
+		}
+	}	
+}
+
+# ALTERNATE Waldemar 01 dies [ Alfred 01, Friedrich Leopold 01 ]
+pru_monarch_death.10 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { #Sigismund 01 becomes ruler, Friedrich Leopold 01 becomes heir
+		name = pru_monarch_death.10.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_pru_sigismund_01 } #previously heir
+			game_date < 1924.8.17
+		}
+
+		create_character = {
+			template = is_pru_friedrich_leopold_01
+		}
+	}
+	option = { #Sigismund 01 becomes ruler, Alfred 01 becomes heir
+		name = pru_monarch_death.10.b
+
+		trigger = {
+			ruler = { has_template = is_pru_sigismund_01 } #previously heir
+			game_date >= 1924.8.17
+		}
+
+		create_character = {
+			template = is_pru_alfred_01
+		}
+	}	
+}
+
+# ALTERNATE EITEL FRIEDRICH 01 PATH WILHELM 03 
+
+# ALTERNATE Eitel Friedrich 01 dies [ Wilhelm Viktor 01, August Wilhelm 01 ]
+pru_monarch_death.11 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { #Adalbert 01 becomes ruler, Wilhelm Viktor 01 becomes heir
+		name = pru_monarch_death.11.a
+		default_option = yes
+
+		trigger = {
+			ruler = { has_template = is_pru_adalbert_01 } #previously heir
+			game_date >= 1919.2.15
+		}
+
+		create_character = {
+			template = is_pru_wilhelm_viktor_01
+		}
+	}
+	option = { #Adalbert 01 becomes ruler, August Wilhelm 01 becomes heir
+		name = pru_monarch_death.11.b
+
+		trigger = {
+			ruler = { has_template = is_pru_adalbert_01 } #previously heir
+			game_date < 1919.2.15
+		}
+
+		create_character = {
+			template = is_pru_august_wilhelm_01
+		}
+	}
+}
+
+# ALTERNATE Adalbert 01 dies [ August Wilhelm 01, Alexander Ferdinand 01 ]
+pru_monarch_death.12 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { #Wilhelm Viktor 01 becomes ruler, August Wilhelm 01 becomes heir
+		name = pru_monarch_death.12.a
+		default_option = yes
+
+		trigger = {
+			ruler = { has_template = is_pru_wilhelm_viktor_01 } #previously heir
+			game_date >= 1919.2.15
+		}
+
+		create_character = {
+			template = is_pru_august_wilhelm_01
+		}
+	}
+	option = { #August Wilhelm 01 becomes ruler, Alexander Ferdinand 01 becomes heir
+		name = pru_monarch_death.12.b
+
+		trigger = {
+			ruler = { has_template = is_pru_august_wilhelm_01 } #previously heir
+			game_date < 1919.2.15
+			game_date >= 1912.12.26
+		}
+
+		create_character = {
+			template = is_pru_alexander_ferdinand_01
+		}
+	}
+}
+
+# ALTERNATE August Wilhelm 01 dies [ No events for now ]
+
+

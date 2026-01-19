@@ -1,0 +1,277 @@
+﻿namespace = tur_monarch_death
+
+# Mahmut 02 dies [ New Heir: (C) Murad 05 (Am1>40) Mehmed (M5>61) Abdulaziz 01 (Am1<40/M5<61) ]
+tur_monarch_death.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Abdulmecid 01 becomes ruler, Murad 05 becomes heir
+		name = tur_monarch_death.1.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_tur_abdulmecid_01 }
+			game_date >= 1840.9.21
+		}
+
+		create_character = {
+			template = is_tur_murad_05
+		}
+	}
+	option = { # Murad 05 becomes ruler, Mehmed becomes heir
+		name = tur_monarch_death.1.b
+
+		trigger = {	
+			ruler = { has_template = is_tur_murad_05 }
+			game_date >= 1861.8.5
+		}
+
+		create_character = {
+			template = is_tur_mehmed
+		}
+	}
+	option = { # Abdulmecid 01/Murad 05 becomes ruler, Abdulaziz 01 becomes heir
+		name = tur_monarch_death.1.c
+
+		trigger = {	
+			OR = {
+				AND = {
+					ruler = { has_template = is_tur_abdulmecid_01 }
+					game_date < 1840.9.21
+				}
+				AND = {
+					ruler = { has_template = is_tur_murad_05 }
+					game_date < 1861.8.5
+				}
+			}
+		}
+
+		create_character = {
+			template = is_tur_abdulaziz_01
+		}
+	}
+}
+
+# Abdulmecid 01 dies [ New Heir: (C) Mehmed (M5>61) Ahmed 04 (M>83) Abdulhamid 02 (M5<61/M<83) ]
+tur_monarch_death.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Murad 05 becomes ruler, Mehmed becomes heir
+		name = tur_monarch_death.2.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_tur_murad_05 }
+			game_date >= 1861.8.5
+		}
+
+		create_character = {
+			template = is_tur_mehmed
+		}
+	}
+	option = { # Mehmed becomes ruler, Ahmed 04 becomes heir
+		name = tur_monarch_death.2.b
+
+		trigger = {	
+			ruler = { has_template = is_tur_mehmed }
+			game_date >= 1883.7.5
+		}
+
+		create_character = {
+			template = is_tur_ahmed_04
+		}
+	}
+	option = { # Murad 05/Mehmed becomes ruler, Abdulhamid 02 becomes heir
+		name = tur_monarch_death.2.c
+
+		trigger = {	
+			OR = {
+				AND = {
+					ruler = { has_template = is_tur_murad_05 }
+					game_date < 1861.8.5
+				}
+				AND = {
+					ruler = { has_template = is_tur_mehmed }
+					game_date < 1883.7.5
+				}
+			}
+		}
+
+		create_character = {
+			template = is_tur_abdulhamid_02
+		}
+	}
+}
+
+# Murad 05 dies [ New Heir: (C) Ahmed 04 (M>83) Ali (A4>03) Mehmed 05 (M<83/A4<03) ]
+tur_monarch_death.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Mehmed becomes ruler, Ahmed 04 becomes heir
+		name = tur_monarch_death.3.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_tur_mehmed }
+			game_date >= 1883.7.5
+		}
+
+		create_character = {
+			template = is_tur_ahmed_04
+		}
+	}
+	option = { # Ahmed 04 becomes ruler, Ali becomes heir
+		name = tur_monarch_death.3.b
+
+		trigger = {	
+			ruler = { has_template = is_tur_ahmed_04 }
+			game_date >= 1903.10.13
+		}
+
+		create_character = {
+			template = is_tur_ali
+		}
+	}
+	option = { # Mehmed/Ahmed 04 becomes ruler, Mehmed 05 becomes heir
+		name = tur_monarch_death.3.c
+
+		trigger = {	
+			OR = {
+				AND = {
+					ruler = { has_template = is_tur_mehmed }
+					game_date < 1883.7.5
+				}
+				AND = {
+					ruler = { has_template = is_tur_ahmed_04 }
+					game_date < 1903.10.13
+				}
+			}
+		}
+
+		create_character = {
+			template = is_tur_mehmed_05
+		}
+	}
+}
+
+# Mehmed dies [ New Heir: (B) Ali (A4>03) Osman Fuad (A4<03) ]
+tur_monarch_death.4 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Ahmed 04 becomes ruler, Ali becomes heir
+		name = tur_monarch_death.4.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_tur_ahmed_04 }
+			game_date >= 1903.10.13
+		}
+
+		create_character = {
+			template = is_tur_ali
+		}
+	}
+	option = { # Ahmed 04 becomes ruler, Osman Fuad becomes heir
+		name = tur_monarch_death.4.b
+
+		trigger = {	
+			ruler = { has_template = is_tur_ahmed_04 }
+			game_date < 1903.10.13
+		}
+
+		create_character = {
+			template = is_tur_osman_fuad
+		}
+	}
+}

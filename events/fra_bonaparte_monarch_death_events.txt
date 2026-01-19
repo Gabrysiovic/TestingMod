@@ -1,0 +1,132 @@
+﻿namespace = fra_bonaparte_monarch_death
+
+# Louis Napoleon 03 dies [ New Heir: (C) Victor Napoleon 06 (LN4>62) Louis Napoleon 07 (VN6>14) Nobody (LN4<62/VN6<14) ]
+fra_bonaparte_monarch_death.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+		NOR = {
+			has_variable = orleanist_restoration_var
+			has_variable = legitimist_restoration_var
+		}
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Louis Napoleon 04 becomes ruler, Victor Napoleon 06 becomes heir
+		name = fra_bonaparte_monarch_death.1.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = FRA_napoleon_eugene_louis_bonaparte }
+			game_date >= 1862.7.18
+		}
+
+		create_character = {
+			template = FRA_victor_bonaparte
+		}
+	}
+
+	option = { # Victor Napoleon 06 becomes ruler, Louis Napoleon 07 becomes heir
+		name = fra_bonaparte_monarch_death.1.b
+
+		trigger = {	
+			ruler = { has_template = FRA_victor_bonaparte }
+			game_date >= 1914.1.23
+		}
+
+		create_character = {
+			template = FRA_louis_bonaparte
+		}
+	}
+
+	option = { # Louis Napoleon 04/Victor Napoleon 06 becomes ruler, nobody becomes heir
+		name = fra_bonaparte_monarch_death.1.c
+
+		trigger = {	
+			OR = {
+				AND = {
+					ruler = { has_template = FRA_napoleon_eugene_louis_bonaparte }
+					game_date < 1862.7.18
+				}
+				AND = {
+					ruler = { has_template = FRA_victor_bonaparte }
+					game_date < 1914.1.23
+				}
+			}
+		}
+	}
+}
+
+# Louis Napoleon 04 dies [ New Heir: (B) Louis Napoleon 07 (VN6>14) Nobody (VN6<14)]
+fra_bonaparte_monarch_death.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+		NOR = {
+			has_variable = orleanist_restoration_var
+			has_variable = legitimist_restoration_var
+		}
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Victor Napoleon 06 becomes ruler, Louis Napoleon 07 becomes heir
+		name = fra_bonaparte_monarch_death.2.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = FRA_victor_bonaparte }
+			game_date >= 1914.1.23
+		}
+
+		create_character = {
+			template = FRA_louis_bonaparte
+		}
+	}
+
+	option = { # Victor Napoleon 06 becomes ruler, nobody becomes heir
+		name = fra_bonaparte_monarch_death.2.b
+
+		trigger = {
+			ruler = { has_template = FRA_victor_bonaparte }
+			game_date < 1914.1.23
+		}
+	}
+}

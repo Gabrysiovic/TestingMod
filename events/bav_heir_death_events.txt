@@ -1,0 +1,229 @@
+﻿namespace = bav_heir_death
+
+# Maximilian 02 dies [ New Heir: (B)  Ludwig 02 (M2>45) Luitpold_01 (M2<45) ]
+bav_heir_death.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Maximilian 02 dies as heir, Ludwig 02 becomes heir
+		name = bav_heir_death.1.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1845.8.25
+		}
+
+		create_character = {
+			template = is_bav_ludwig_02
+		}
+	}
+	option = { # Maximilian 02 dies as heir, Luitpold 01 becomes heir
+		name = bav_heir_death.1.b
+
+		trigger = {	
+			game_date < 1845.8.25
+		}
+
+		create_character = {
+			template = is_bav_luitpold_01
+		}
+	}
+}
+
+# Ludwig 02 dies [ New Heir: (A) Otto 01 (L2) ]
+bav_heir_death.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Ludwig 02 dies as heir, Otto 01 becomes heir
+		name = bav_heir_death.2.a
+		default_option = yes
+
+		trigger = {	
+		}
+
+		create_character = {
+			template = is_bav_otto_01
+		}
+	}
+}
+
+# Otto 01 dies [ New Heir: (A)  Luitpold_01 (01) ]
+bav_heir_death.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Otto 01 dies as heir, Luitpold 01 becomes heir
+		name = bav_heir_death.3.a
+		default_option = yes
+
+		trigger = {	
+		}
+
+		create_character = {
+			template = is_bav_luitpold_01
+		}
+	}
+}
+
+# Luitpold 01 dies [ New Heir: (B)  Ludwig 03 (LT1>45) Nobody (LT1<45) ]
+bav_heir_death.4 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Luitpold 01 dies as heir, Ludwig 03 becomes heir
+		name = bav_heir_death.4.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1845.1.7
+		}
+
+		create_character = {
+			template = is_bav_ludwig_03
+		}
+	}
+	option = { # Luitpold 01 dies as heir, Nobody becomes heir
+		name = bav_heir_death.4.b
+
+		trigger = {	
+			game_date < 1845.1.7
+		}
+	}
+}
+
+# Ludwig 03 dies [ New Heir: (B) Rupprecht 01 (L3>69) Nobody (L3<69) ]
+bav_heir_death.5 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Ludwig 03 dies as heir, Rupprecht 01 becomes heir
+		name = bav_heir_death.5.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1869.5.18
+		}
+
+		create_character = {
+			template = is_bav_rupprecht_01
+		}
+	}
+	option = { # Ludwig 03 dies as heir, nobody becomes heir
+		name = bav_heir_death.5.b
+
+		trigger = {	
+			game_date < 1869.5.18
+		}
+	}
+}

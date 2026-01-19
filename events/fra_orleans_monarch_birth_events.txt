@@ -1,0 +1,211 @@
+﻿namespace = fra_orleans_monarch_birth
+
+# Louis Philippe 02 is born
+fra_orleans_monarch_birth.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = FRA_ferdinand_philippe }
+		NOT = { heir =  { has_template = FRA_philippe_de_orleans_of_paris } }
+		game_date >= 1838.8.24
+		game_date < 1839.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = fra_orleans_monarch_birth.1.a
+		default_option = yes
+
+		create_character = {
+			template = FRA_philippe_de_orleans_of_paris
+		}
+	}
+}
+
+# Philippe 08 is born
+fra_orleans_monarch_birth.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = FRA_philippe_de_orleans_of_paris }
+		NOT = { heir =  { has_template = FRA_philippe_de_orleans_of_orleans } }
+		game_date >= 1869.2.6
+		game_date < 1870.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = fra_orleans_monarch_birth.2.a
+		default_option = yes
+
+		create_character = {
+			template = FRA_philippe_de_orleans_of_orleans
+		}
+	}
+}
+
+# Jean 03 is born
+fra_orleans_monarch_birth.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = FRA_robert_de_orleans }
+		NOT = { heir =  { has_template = FRA_jean_de_orleans } }
+		game_date >= 1878.9.4
+		game_date < 1879.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = fra_orleans_monarch_birth.3.a
+		default_option = yes
+
+		create_character = {
+			template = FRA_jean_de_orleans
+		}
+	}
+}
+
+# Henri 05 is born
+fra_orleans_monarch_birth.4 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = FRA_jean_de_orleans }
+		NOT = { heir =  { has_template = FRA_henri_de_orleans } }
+		game_date >= 1908.7.5
+		game_date < 1909.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = fra_orleans_monarch_birth.4.a
+		default_option = yes
+
+		create_character = {
+			template = FRA_henri_de_orleans
+		}
+	}
+}
+
+# Henri 06 is born
+fra_orleans_monarch_birth.5 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = FRA_henri_de_orleans }
+		NOT = { heir =  { has_template = FRA_henri_06_de_orleans } }
+		game_date >= 1933.6.14
+		game_date < 1934.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = fra_orleans_monarch_birth.5.a
+		default_option = yes
+
+		create_character = {
+			template = FRA_henri_06_de_orleans
+		}
+	}
+}

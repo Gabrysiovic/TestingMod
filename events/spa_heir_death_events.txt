@@ -1,0 +1,184 @@
+﻿namespace = spa_heir_death
+
+# Alfonso 12 dies [ New Heir: (B) Alfonso 13 (A12>86), Nobody (Al2<86) ]
+spa_heir_death.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Alfonso 12 dies as heir, Alfonso 13 becomes heir
+		name = spa_heir_death.1.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1886.5.17
+		}
+
+		create_character = {
+			template = is_spa_alfonso_13
+		}
+	}
+	option = { # Alfonso 12 dies as heir, Nobody becomes heir
+		name = spa_heir_death.1.b
+
+		trigger = {	
+			game_date < 1886.5.17
+		}
+	}
+}
+
+# Alfonso 13 dies [ New Heir: (B) Alfonso 14 (Al3>07), Nobody (Al3<07) ]
+spa_heir_death.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Alfonso 13 dies as heir, Alfonso 14 becomes heir
+		name = spa_heir_death.2.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1907.5.10
+		}
+
+		create_character = {
+			template = is_spa_alfonso_14
+		}
+	}
+	option = { # Alfonso 13 dies as heir, Nobody becomes heir
+		name = spa_heir_death.2.b
+
+		trigger = {	
+			game_date < 1907.5.10
+		}
+	}
+}
+
+# Alfonso 14 dies [ New Heir: (B) Jaime 03 (Al4>08), Nobody (Al4<08) ]
+spa_heir_death.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Alfonso 14 dies as heir, Jaime 03 becomes heir
+		name = spa_heir_death.3.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1908.6.23
+		}
+
+		create_character = {
+			template = is_spa_jaime_03
+		}
+	}
+	option = { # Alfonso 14 dies as heir, Nobody becomes heir
+		name = spa_heir_death.3.b
+
+		trigger = {	
+			game_date < 1908.6.23
+		}
+	}
+}
+
+# Jaime 03 dies [ New Heir: (A) Juan 03 (Jm3) ]
+spa_heir_death.4 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Jaime 03 dies as heir, Juan 03 becomes heir
+		name = spa_heir_death.4.a
+		default_option = yes
+
+		trigger = {	
+		}
+
+		create_character = {
+			template = is_spa_juan_03
+	}
+}

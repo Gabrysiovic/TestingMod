@@ -1,0 +1,154 @@
+﻿namespace = sar_monarch_death
+
+# Carlo Alberto 01 dies [ New Heir: (B) Umberto 01 (VE2>44) Nobody (VE2<44) ]
+sar_monarch_death.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Vittorio Emanuele 02 becomes ruler, Umberto 01 becomes heir
+		name = sar_monarch_death.1.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_sar_vittorio_emanuele_02 }
+			game_date >= 1844.3.14
+		}
+
+		create_character = {
+			template = is_sar_umberto_01
+		}
+	}
+	option = { # Vittorio Emanuele 02 becomes ruler, Nobody becomes heir
+		name = sar_monarch_death.1.b
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_sar_vittorio_emanuele_02 }
+			game_date < 1844.3.14
+		}
+	}
+}
+
+# Vittorio Emanuele 02 dies [ New Heir: (B) Vittorio Emanuele 03 (U1>69) Nobody (U1<69) ]
+sar_monarch_death.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Umberto 01 becomes ruler, Vittorio Emanuele 03 becomes heir
+		name = sar_monarch_death.2.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_sar_umberto_01 }
+			game_date >= 1869.11.11
+		}
+
+		create_character = {
+			template = is_sar_vittorio_emanuele_03
+		}
+	}
+	option = { # Umberto 01 becomes ruler, Nobody becomes heir
+		name = sar_monarch_death.2.b
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_sar_umberto_01 }
+			game_date < 1869.11.11
+		}
+	}
+}
+
+# Umberto 01 dies [ New Heir: (B) Umberto 02 (VE3>04) Nobody (VE3<04) ]
+sar_monarch_death.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Vittorio Emanuele 03 becomes ruler, Umberto 02 becomes heir
+		name = sar_monarch_death.3.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_sar_vittorio_emanuele_03 }
+			game_date >= 1904.9.15
+		}
+
+		create_character = {
+			template = is_sar_umberto_02
+		}
+	}
+	option = { # Vittorio Emanuele 02 becomes ruler, Nobody becomes heir
+		name = sar_monarch_death.3.b
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_sar_vittorio_emanuele_03 }
+			game_date < 1904.9.15
+		}
+	}
+}

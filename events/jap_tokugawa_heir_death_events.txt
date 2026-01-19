@@ -1,0 +1,232 @@
+﻿namespace = jap_tokugawa_heir_death
+# Ieyoshi dies [ New Heir: (A) Iesada (Iey) ]
+jap_tokugawa_heir_death.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Ieyoshi dies as heir, Iesada becomes heir
+		name = jap_tokugawa_heir_death.1.a
+		default_option = yes
+
+		trigger = {	
+		}
+
+		create_character = {
+			template = is_jap_tokugawa_iesada
+		}
+	}
+}
+
+# Iesada dies [ New Heir: (B) Iemochi (Iesd>46) Yoshinobu (Iesd<46/>1866.8.29) ]
+jap_tokugawa_heir_death.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Iesada dies as heir, Iemochi becomes heir
+		name = jap_tokugawa_heir_death.2.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1846.7.17
+		}
+
+		create_character = {
+			template = is_jap_tokugawa_iemochi
+		}
+	}
+	option = { # Iesada dies as heir, Yoshinobu becomes heir
+		name = jap_tokugawa_heir_death.2.b
+
+		trigger = {	
+			OR = {
+				game_date < 1846.7.17
+				game_date >= 1866.8.29 # Iemochi dies
+			}
+		}
+
+		create_character = {
+			template = is_jap_tokugawa_yoshinobu
+		}
+	}
+}
+
+# Iemochi dies [ New Heir: (A) Yoshinobu (Iem>37) ]
+jap_tokugawa_heir_death.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Iemochi dies as heir, Yoshinobu becomes heir
+		name = jap_tokugawa_heir_death.3.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1837.10.28
+		}
+
+		create_character = {
+			template = is_jap_tokugawa_yoshinobu
+		}
+	}
+}
+
+# Yoshinobu dies [ New Heir: (B) Iesato (Yosh>63) Nobody (Yosh<63) ]
+jap_tokugawa_heir_death.4 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Yoshinobu dies as heir, Iesato becomes heir
+		name = jap_tokugawa_heir_death.4.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1863.8.24
+		}
+
+		create_character = {
+			template = is_jap_tokugawa_iesato
+		}
+	}
+	option = { # Yoshinobu dies as heir, Nobody becomes heir
+		name = jap_tokugawa_heir_death.4.b
+
+		trigger = {	
+			game_date < 1863.8.24
+		}
+	}
+}
+
+# Iesato dies [ New Heir: (B) Iemasa (Iest>84) Nobody (Iest<84) ]
+jap_tokugawa_heir_death.5 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Iesato dies as heir, Iemasa becomes heir
+		name = jap_tokugawa_heir_death.5.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1884.3.23
+		}
+
+		create_character = {
+			template = is_jap_tokugawa_iemasa
+		}
+	}
+	option = { # Iesato dies as heir, Nobody becomes heir
+		name = jap_tokugawa_heir_death.5.b
+
+		trigger = {	
+			game_date < 1884.3.23
+		}
+	}
+}

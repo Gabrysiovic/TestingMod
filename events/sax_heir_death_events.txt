@@ -1,0 +1,222 @@
+﻿namespace = sax_heir_death
+
+# Friedrich August 02 dies [ New Heir: (A) Johann 01 (FA2) ]
+sax_heir_death.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Friedrich August 02 dies as heir, Johann 01 becomes heir
+		name = sax_heir_death.1.a
+		default_option = yes
+
+		trigger = {	
+
+		}
+
+		create_character = {
+			template = is_sax_johann_01
+		}
+	}
+}
+
+# Johann 01 dies [ New Heir: (A) Albert 01 (J1) ]
+sax_heir_death.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Johann 01 dies as heir, Albert 01 becomes heir
+		name = sax_heir_death.2.a
+		default_option = yes
+
+		trigger = {	
+
+		}
+
+		create_character = {
+			template = is_sax_albert_01
+		}
+	}
+}
+
+# Albert 01 dies [ New Heir: (A) Georg 01 (A1) ]
+sax_heir_death.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Albert 01 dies as heir, Georg 01 becomes heir
+		name = sax_heir_death.3.a
+		default_option = yes
+
+		trigger = {	
+
+		}
+
+		create_character = {
+			template = is_sax_georg_01
+		}
+	}
+}
+
+# Georg 01 dies [ New Heir: (B) Friedrich August 03 (G1>65) Nobody (G1<65) ]
+sax_heir_death.4 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Georg 01 dies as heir, Friedrich August 03 becomes heir
+		name = sax_heir_death.4.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1865.5.25
+		}
+
+		create_character = {
+			template = is_sax_friedrich_august_03
+		}
+	}
+	option = { # Georg 01 dies as heir, Nobody becomes heir
+		name = sax_heir_death.4.b
+		default_option = yes
+
+		trigger = {	
+			game_date < 1865.5.25
+		}
+	}
+}
+
+# Friedrich August 03 dies [ New Heir: (B) Georg 02 (FA3>93) Nobody (FA<93) ]
+sax_heir_death.5 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_heir_death.t
+	desc = historic_heir_death.d
+	flavor = historic_heir_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+	
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Friedrich August 03 dies as heir, Georg 02 becomes heir
+		name = sax_heir_death.5.a
+		default_option = yes
+
+		trigger = {	
+			game_date >= 1893.1.15
+		}
+
+		create_character = {
+			template = is_sax_georg_02
+		}
+	}
+	option = { # Friedrich August 03 dies as heir, Nobody becomes heir
+		name = sax_heir_death.5.b
+		default_option = yes
+
+		trigger = {	
+			game_date < 1893.1.15
+		}
+	}
+}

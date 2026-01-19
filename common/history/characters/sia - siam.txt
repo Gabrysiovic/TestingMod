@@ -1,0 +1,11 @@
+﻿CHARACTERS = {
+	c:SIA ?= {
+		create_character = {
+			template = is_sia_nangklao
+		}	
+
+		create_character = {
+			template = is_sia_mongkut
+		}
+	}
+}

@@ -1,0 +1,127 @@
+﻿namespace = sic_monarch_birth
+
+# Alfonso 01 is born
+sic_monarch_birth.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_sic_francesco_02 }
+		NOT = { heir =  { has_template = is_sic_alfonso_01 } }
+		game_date >= 1841.3.28
+		game_date < 1842.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = sic_monarch_birth.1.a
+		default_option = yes
+
+		create_character = {
+			template = is_sic_alfonso_01
+		}
+	}
+}
+
+# Ferdinando 03 is born
+sic_monarch_birth.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_sic_alfonso_01 }
+		NOT = { heir =  { has_template = is_sic_ferdinando_03 } }
+		game_date >= 1869.7.25
+		game_date < 1870.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = sic_monarch_birth.2.a
+		default_option = yes
+
+		create_character = {
+			template = is_sic_ferdinando_03
+		}
+	}
+}
+
+# Alfonso 02 is born
+sic_monarch_birth.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_birth.t
+	desc = historic_monarch_birth.d
+	flavor = historic_monarch_birth.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:father_of_heir
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		ruler = { has_template = is_sic_carlo_01 }
+		NOT = { heir =  { has_template = is_sic_alfonso_02 } }
+		game_date >= 1901.11.30
+		game_date < 1902.1.10
+	}
+
+	immediate = {
+		ruler = { 
+			save_scope_as = father_of_heir
+		}
+	}
+
+	option = {
+		name = sic_monarch_birth.3.a
+		default_option = yes
+
+		create_character = {
+			template = is_sic_alfonso_02
+		}
+	}
+}

@@ -1,0 +1,212 @@
+﻿namespace = afg_monarch_death
+# Dost Mohammad dies [ New Heir: (C) Mohammad Yahya (WA) Mohammad Yusuf (MYah>55) Nobody (MYah<55) ]
+afg_monarch_death.1 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Wazir Akbar becomes ruler, Mohammad Yahya becomes heir
+		name = afg_monarch_death.1.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_afg_wazir_akbar }
+		}
+
+		create_character = {
+			template = is_afg_mohammad_yahya
+		}
+	}
+	option = { # Mohammad Yahya becomes ruler, Mohammad Yusuf becomes heir
+		name = afg_monarch_death.1.b
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_afg_mohammad_yahya }
+			game_date >= 1855.6.1
+		}
+
+		create_character = {
+			template = is_afg_mohammad_yusuf
+		}
+	}
+	option = { # Mohammad Yahya becomes ruler, Nobody becomes heir
+		name = afg_monarch_death.1.c
+
+		trigger = {	
+			ruler = { has_template = is_afg_mohammad_yahya }
+			game_date < 1855.6.1
+		}
+	}
+}
+
+# Wazir Akbar dies [ New Heir: (B) Mohammad Yusuf (MYah>55) Nobody (MYah<55) ]
+afg_monarch_death.2 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Mohammad Yahya becomes ruler, Mohammad Yusuf becomes heir
+		name = afg_monarch_death.2.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_afg_mohammad_yahya }
+			game_date >= 1855.6.1
+		}
+
+		create_character = {
+			template = is_afg_mohammad_yusuf
+		}
+	}
+	option = { # Mohammad Yahya becomes ruler, Nobody becomes heir
+		name = afg_monarch_death.2.b
+
+		trigger = {	
+			ruler = { has_template = is_afg_mohammad_yahya }
+			game_date < 1855.6.1
+		}
+	}
+}
+
+# Mohammad Yahya dies [ New Heir: (B) Mohammad Nadir (MYus>83) Nobody (MYus<83) ]
+afg_monarch_death.3 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Mohammad Yusuf becomes ruler, Mohammad Nadir becomes heir
+		name = afg_monarch_death.3.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_afg_mohammad_yusuf }
+			game_date >= 1883.4.9
+		}
+
+		create_character = {
+			template = is_afg_mohammad_nadir
+		}
+	}
+	option = { # Mohammad Yusuf becomes ruler, Nobody becomes heir
+		name = afg_monarch_death.3.b
+
+		trigger = {	
+			ruler = { has_template = is_afg_mohammad_yusuf }
+			game_date < 1883.4.9
+		}
+	}
+}
+
+# Mohammad Yusuf dies [ New Heir: (B) Mohammad Zahir (MN>14) Nobody (MN<14) ]
+afg_monarch_death.4 = { 
+	type = country_event
+
+	placement = ROOT
+	title = historic_monarch_death.t
+	desc = historic_monarch_death.d
+	flavor = historic_monarch_death.f
+
+	duration = 1
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:dead_character
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		# spawn a new heir
+	}
+
+	option = { # Mohammad Nadir becomes ruler, Mohammad Zahir becomes heir
+		name = afg_monarch_death.4.a
+		default_option = yes
+
+		trigger = {	
+			ruler = { has_template = is_afg_mohammad_nadir }
+			game_date >= 1914.10.15
+		}
+
+		create_character = {
+			template = is_afg_mohammad_zahir
+		}
+	}
+	option = { # Mohammad Nadir becomes ruler, Nobody becomes heir
+		name = afg_monarch_death.4.b
+
+		trigger = {	
+			ruler = { has_template = is_afg_mohammad_nadir }
+			game_date < 1914.10.15
+		}
+	}
+}
