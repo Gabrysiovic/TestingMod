@@ -2,13 +2,13 @@
 namespace = sweden_monarchy
 
  sweden_monarchy.1 = {
-
+    always=no
  }
 
 sweden_monarchy.2 = {
-	
+    always=no
 }
 
 sweden_monarchy.3 = {
-	
+    always=no
 }

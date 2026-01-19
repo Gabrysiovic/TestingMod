@@ -217,10 +217,10 @@ rs_st_character_is_sia_prajadhipok = {
 	has_template = is_sia_prajadhipok
 }
 
-rs_st_character_is_sia_ = {
+rs_st_character_is_sia_ananda_mahidol = {
 	has_template = is_sia_ananda_mahidol
 }
 
-rs_st_character_is_sia_ = {
+rs_st_character_is_sia_bhumibol_adulyadej = {
 	has_template = is_sia_bhumibol_adulyadej
 }
