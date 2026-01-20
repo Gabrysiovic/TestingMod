@@ -60,3 +60,8 @@ AA_soc_slipstream = {
 	country_AA_slipstream_bool = yes
 	country_society_tech_spread_mult = 0.2
 }
+
+RP_restoration =
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	add_prestige = 0.05
+}
