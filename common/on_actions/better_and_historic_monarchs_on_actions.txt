@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 20/1/2026
-#RS = royal splendor
+﻿#RS = royal splendor
 
 RS_character_death_counter = {
 	effect = {

@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 20/1/2026
-namespace = swe_monarch_birth
+﻿namespace = swe_monarch_birth
 
 # Gustaf 05 is born
 swe_monarch_birth.1 = { 

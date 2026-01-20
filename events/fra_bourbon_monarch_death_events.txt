@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 20/1/2026
-namespace = fra_bourbon_monarch_death
+﻿namespace = fra_bourbon_monarch_death
 
 # Charles 10 dies [ New Heir: (A) Henri 05 (L19) ]
 fra_bourbon_monarch_death.1 = { 

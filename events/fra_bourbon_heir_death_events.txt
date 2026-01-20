@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 20/1/2026
-namespace = fra_bourbon_heir_death
+﻿namespace = fra_bourbon_heir_death
 
 # Henri 05 dies [ New Heir: (A) Jean 03 (H5) ]
 fra_bourbon_heir_death.1 = { 

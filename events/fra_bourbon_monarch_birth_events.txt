@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 20/1/2026
-namespace = fra_bourbon_monarch_birth
+﻿namespace = fra_bourbon_monarch_birth
 
 # Charles 11 is born
 fra_bourbon_monarch_birth.1 = { 
