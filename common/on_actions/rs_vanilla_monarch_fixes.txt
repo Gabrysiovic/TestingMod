@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-#Fixing Vanilla Stuff
+﻿#Fixing Vanilla Stuff
 
 RS_removing_sweden_and_gbr_monthly_pulse_country = {
 	effect = {

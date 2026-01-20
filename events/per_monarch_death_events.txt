@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-namespace = per_monarch_death
+﻿namespace = per_monarch_death
 
 # Mohammad dies [ New Heir: (B) Mozaffar (N>53) Nobody (N<53) ]
 per_monarch_death.1 = { 

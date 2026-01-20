@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-namespace = spa_monarch_death
+﻿namespace = spa_monarch_death
 
 # Isabel 02 dies [ New Heir: (B) Alfonso 13 (A12>86), Nobody (Al2<86) ]
 spa_monarch_death.1 = { 

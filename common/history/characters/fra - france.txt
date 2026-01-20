@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-CHARACTERS = {
+﻿CHARACTERS = {
 	c:FRA = {
 		create_character = { # King Louis-Philippe d'Orléans
 			template = FRA_louis_philippe

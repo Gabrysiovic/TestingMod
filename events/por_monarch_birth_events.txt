@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-namespace = por_monarch_birth
+﻿namespace = por_monarch_birth
 
 # Pedro 05 is born
 por_monarch_birth.1 = { 

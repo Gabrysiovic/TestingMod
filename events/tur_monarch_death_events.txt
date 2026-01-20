@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-namespace = tur_monarch_death
+﻿namespace = tur_monarch_death
 
 # Mahmut 02 dies [ New Heir: (C) Murad 05 (Am1>40) Mehmed (M5>61) Abdulaziz 01 (Am1<40/M5<61) ]
 tur_monarch_death.1 = { 

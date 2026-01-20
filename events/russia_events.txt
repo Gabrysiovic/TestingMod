@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
- namespace = russia_monarchy
+﻿ namespace = russia_monarchy
 
  russia_monarchy.1 = { #Accession of Alexander II
 	type = country_event

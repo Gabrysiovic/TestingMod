@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-dna_sic_alfonso_01 = {
+﻿dna_sic_alfonso_01 = {
     portrait_info = {
     genes={         
         hair_color={ 240 178 0 0 }

@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-### Hanoverian historic monarchs template file ###
+﻿### Hanoverian historic monarchs template file ###
 
 
 is_han_ernst_august_01 = {

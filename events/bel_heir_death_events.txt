@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-namespace = bel_heir_death
+﻿namespace = bel_heir_death
 
 # Leopold 02 dies [ New Heir: (A)  Philippe 01 (L2) ]
 bel_heir_death.1 = { 

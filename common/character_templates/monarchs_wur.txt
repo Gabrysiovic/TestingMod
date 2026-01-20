@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-### Wurttemberger historic monarchs template file ###
+﻿### Wurttemberger historic monarchs template file ###
 
 
 is_wur_wilhelm_01 = {

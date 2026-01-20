@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-namespace = tur_heir_death
+﻿namespace = tur_heir_death
 
 # Abdulmecid 01 dies [ New Heir: (B) Murad 05 (Am1>40) Abdulaziz 01 (Am1<40) ]
 tur_heir_death.1 = { 

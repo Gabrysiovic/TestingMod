@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-namespace = aus_monarch_birth
+﻿namespace = aus_monarch_birth
 
 # HISTORIC Rudolf 01 is born
 aus_monarch_birth.1 = { 

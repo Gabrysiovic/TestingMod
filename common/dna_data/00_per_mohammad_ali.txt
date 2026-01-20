@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-dna_per_mohammad_ali = {
+﻿dna_per_mohammad_ali = {
     portrait_info = {
     genes={         
         hair_color={ 15 255 0 0 }

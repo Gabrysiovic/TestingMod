@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-dna_pru_friedrich_sigismund_01 = {
+﻿dna_pru_friedrich_sigismund_01 = {
     portrait_info = {
     genes={         
         hair_color={ 0 244 0 0 }

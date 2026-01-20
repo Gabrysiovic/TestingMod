@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-CHARACTERS = {
+﻿CHARACTERS = {
 	c:SWE = {
 		create_character = {
 			# Charles XIV John of Sweden, born Jean Bernadotte, one of Napoleon's former marshals

@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-namespace = gbr_monarch_death
+﻿namespace = gbr_monarch_death
 
 # William 04 dies [ New Heir: (B) Edward 07 (V>41) Nobody (V<41)]
 gbr_monarch_death.1 = {

@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-namespace = wur_heir_death
+﻿namespace = wur_heir_death
 
 # Karl 01 dies [ New Heir: (B) Wilhelm 02 (K1>48) Nobody (K1<48) ]
 wur_heir_death.1 = { 

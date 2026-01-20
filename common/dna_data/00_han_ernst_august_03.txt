@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-dna_han_ernst_august_03 = {
+﻿dna_han_ernst_august_03 = {
     portrait_info = {
     genes={         
        hair_color={ 151 186 0 0 }

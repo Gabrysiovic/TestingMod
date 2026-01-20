@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-dna_sax_friedrich_august_02 = {
+﻿dna_sax_friedrich_august_02 = {
     portrait_info = {
     genes={         
         hair_color={ 164 114 0 0 }

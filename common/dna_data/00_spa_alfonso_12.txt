@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-dna_spa_alfonso_12 = {
+﻿dna_spa_alfonso_12 = {
     portrait_info = {
     genes={         
         hair_color={ 214 181 0 0 }

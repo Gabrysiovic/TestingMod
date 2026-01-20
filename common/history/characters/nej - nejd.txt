@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-CHARACTERS = {
+﻿CHARACTERS = {
 	c:NEJ = {
 		create_character = {
 			# Faisal bin Turki bin Abdullah Al Saud

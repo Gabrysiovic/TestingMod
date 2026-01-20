@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-namespace = spa_heir_death
+﻿namespace = spa_heir_death
 
 # Alfonso 12 dies [ New Heir: (B) Alfonso 13 (A12>86), Nobody (Al2<86) ]
 spa_heir_death.1 = { 

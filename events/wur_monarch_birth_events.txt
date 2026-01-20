@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-namespace = wur_monarch_birth
+﻿namespace = wur_monarch_birth
 
 # Albrecht 02 is born
 wur_monarch_birth.1 = { 

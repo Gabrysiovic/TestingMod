@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-namespace = sic_monarch_death
+﻿namespace = sic_monarch_death
 
 # Ferdinando 02 dies [ New Heir: (C) Alfonso 01 (Fr2) Ferdinando 03 (Al1) Nobody ]
 sic_monarch_death.1 = { 

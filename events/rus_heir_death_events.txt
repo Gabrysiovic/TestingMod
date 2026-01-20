@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-namespace = rus_heir_death
+﻿namespace = rus_heir_death
 
 # HISTORIC Aleksandr 02 dies (C) [ Tsesarevich Nikolai, Aleksandr 03, Konstantin N ]
 rus_heir_death.1 = { 

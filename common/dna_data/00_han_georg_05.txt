@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-dna_han_georg_05 = {
+﻿dna_han_georg_05 = {
     portrait_info = {
     genes={         
         hair_color={ 71 172 0 0 }

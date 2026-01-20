@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-dna_fra_orleans_louis_philippe_02 = {
+﻿dna_fra_orleans_louis_philippe_02 = {
     portrait_info = {
     genes={         
         hair_color={ 158 248 179 174 }

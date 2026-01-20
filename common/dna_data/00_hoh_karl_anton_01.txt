@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-dna_hoh_karl_anton_01 = {
+﻿dna_hoh_karl_anton_01 = {
     portrait_info = {
     genes={         
         hair_color={ 187 191 0 0 }

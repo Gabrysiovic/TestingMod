@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-dna_sax_anton_01 = {
+﻿dna_sax_anton_01 = {
     portrait_info = {
     genes={         
         hair_color={ 62 158 0 0 }

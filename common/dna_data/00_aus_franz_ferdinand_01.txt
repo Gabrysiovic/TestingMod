@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-dna_aus_franz_ferdinand_01 = {
+﻿dna_aus_franz_ferdinand_01 = {
     portrait_info = {
     genes={         
         hair_color={ 248 184 0 0 }

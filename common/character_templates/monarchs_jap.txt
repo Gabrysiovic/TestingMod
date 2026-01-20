@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-### Japanese historic monarchs template file ###
+﻿### Japanese historic monarchs template file ###
 
 # Japan - JAP
 is_jap_tokugawa_ienari = {

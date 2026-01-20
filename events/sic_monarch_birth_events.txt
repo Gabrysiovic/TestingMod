@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-namespace = sic_monarch_birth
+﻿namespace = sic_monarch_birth
 
 # Alfonso 01 is born
 sic_monarch_birth.1 = { 

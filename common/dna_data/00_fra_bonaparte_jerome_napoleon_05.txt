@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-dna_fra_bonaparte_jerome_napoleon_05 = {
+﻿dna_fra_bonaparte_jerome_napoleon_05 = {
     portrait_info = {
     genes={         
         hair_color={ 194 204 194 204 }

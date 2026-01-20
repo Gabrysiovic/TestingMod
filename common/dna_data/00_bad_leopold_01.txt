@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-dna_bad_leopold_01 = {
+﻿dna_bad_leopold_01 = {
     portrait_info = {
     genes={         
         hair_color={ 192 175 0 0 }

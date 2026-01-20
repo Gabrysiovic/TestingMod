@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-dna_den_frederik_09 = {
+﻿dna_den_frederik_09 = {
     portrait_info = {
     genes={         
         hair_color={ 207 182 194 144 }

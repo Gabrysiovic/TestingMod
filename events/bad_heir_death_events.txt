@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-namespace = bad_heir_death
+﻿namespace = bad_heir_death
 
 # Ludwig 02 dies [ New Heir: (A) Friedrich 01 (LW2) ]
 bad_heir_death.1 = { 

@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-namespace = net_heir_death
+﻿namespace = net_heir_death
 
 # Willem 02 dies [ New Heir: (A) Willem 03 (W2) ]
 net_heir_death.1 = { 

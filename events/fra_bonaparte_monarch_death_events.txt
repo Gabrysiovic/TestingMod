@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-namespace = fra_bonaparte_monarch_death
+﻿namespace = fra_bonaparte_monarch_death
 
 # Louis Napoleon 03 dies [ New Heir: (C) Victor Napoleon 06 (LN4>62) Louis Napoleon 07 (VN6>14) Nobody (LN4<62/VN6<14) ]
 fra_bonaparte_monarch_death.1 = { 

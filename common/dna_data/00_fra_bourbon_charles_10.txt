@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-dna_fra_bourbon_charles_10 = {
+﻿dna_fra_bourbon_charles_10 = {
     portrait_info = {
     genes={         
         hair_color={ 0 0 0 0 }

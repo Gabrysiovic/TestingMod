@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-namespace = tur_monarch_birth
+﻿namespace = tur_monarch_birth
 
 # Murad 05 is born
 tur_monarch_birth.1 = { 

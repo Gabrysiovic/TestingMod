@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-dna_jap_taisho = {
+﻿dna_jap_taisho = {
     portrait_info = {
     genes={         
         hair_color={ 107 229 107 229 }

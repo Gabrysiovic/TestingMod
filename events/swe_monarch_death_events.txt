@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-namespace = swe_monarch_death
+﻿namespace = swe_monarch_death
 
 # Karl 14 Johan dies [ New Heir: (A) Karl 15 (O1) ]
 swe_monarch_death.1 = { 

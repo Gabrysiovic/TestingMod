@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-namespace = bel_monarch_birth
+﻿namespace = bel_monarch_birth
 
 # Albert 01 is born
 bel_monarch_birth.1 = { 

@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-namespace = fra_orleans_monarch_death
+﻿namespace = fra_orleans_monarch_death
 
 # Louis Philippe 01 dies [ New Heir: (D) Louis Philippe 02 (FP1>38) Philippe 08 (LP2>69) Robert 03 (LP2<69) Nobody (FP1<38)]
 fra_orleans_monarch_death.1 = { 

@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-namespace = aus_monarch_death
+﻿namespace = aus_monarch_death
 
 # Ferdinand 01 dies [ New Heir: Rudolf 01 (FJ>58), Maximilian 01 (FJ<58), Karl Ludwig 01 (M), Franz Ferdinand 01 (KL), Ludwig Viktor]
 aus_monarch_death.1 = { 

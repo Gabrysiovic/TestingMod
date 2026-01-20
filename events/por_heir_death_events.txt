@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-namespace = por_heir_death
+﻿namespace = por_heir_death
 
 # Pedro 05 dies [ New Heir: (B) Luis 01 (P5>38) Nobody (P5<38) ]
 por_heir_death.1 = { 

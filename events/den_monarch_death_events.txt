@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-namespace = den_monarch_death
+﻿namespace = den_monarch_death
 
 # Frederik 06 dies [ New Heir: (A) Frederik 07 (C8) ]
 den_monarch_death.1 = { 

@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-### Portuguese historic monarchs template file ###
+﻿### Portuguese historic monarchs template file ###
 
 
 is_por_maria_02 = {

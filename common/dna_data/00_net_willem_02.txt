@@ -1,5 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
-dna_net_willem_02 = {
+﻿dna_net_willem_02 = {
     portrait_info = {
     genes={         
         hair_color={ 215 150 0 0 }
