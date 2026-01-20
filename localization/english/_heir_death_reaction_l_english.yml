@@ -80,6 +80,15 @@
  fra_orleans_heir_death.6.a:0 "A regretful tragedy."
  fra_orleans_heir_death.6.b:0 "A regretful tragedy."
 
+#France Bourbon (Edited by Oaken)
+ fra_bourbon_heir_death.1.a:0 "A regretful tragedy."
+ fra_bourbon_heir_death.2.a:0 "A regretful tragedy."
+ fra_bourbon_heir_death.2.b:0 "A regretful tragedy."
+ fra_bourbon_heir_death.3.a:0 "A regretful tragedy."
+ fra_bourbon_heir_death.3.b:0 "A regretful tragedy."
+ fra_bourbon_heir_death.4.a:0 "A regretful tragedy."
+ fra_bourbon_heir_death.5.a:0 "A regretful tragedy."
+
 #Great Britain
  gbr_heir_death.1.a:0 "A regretful tragedy."
  gbr_heir_death.1.b:0 "A regretful tragedy."
@@ -116,6 +125,17 @@
  han_heir_death.2.b:0 "A regretful tragedy."
  han_heir_death.3.a:0 "A regretful tragedy."
  han_heir_death.3.b:0 "A regretful tragedy."
+
+#Japanese Tokugawa (Edited by Oaken)
+ jap_tokugawa_heir_death.1.a:0 "A regretful tragedy."
+ jap_tokugawa_heir_death.2.a:0 "A regretful tragedy."
+ jap_tokugawa_heir_death.2.b:0 "A regretful tragedy."
+ jap_tokugawa_heir_death.3.a:0 "A regretful tragedy."
+ jap_tokugawa_heir_death.4.a:0 "A regretful tragedy."
+ jap_tokugawa_heir_death.4.b:0 "A regretful tragedy."
+ jap_tokugawa_heir_death.5.a:0 "A regretful tragedy."
+ jap_tokugawa_heir_death.5.b:0 "A regretful tragedy."
+
 
 #Netherlands
  net_heir_death.1.a:0 "A regretful tragedy."

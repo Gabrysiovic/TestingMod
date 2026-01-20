@@ -41,6 +41,10 @@ fra_orleans_monarch_birth.3.a:0 "A momentous occasion."
 fra_orleans_monarch_birth.4.a:0 "A momentous occasion."
 fra_orleans_monarch_birth.5.a:0 "A momentous occasion."
 
+#France Bourbon (Edited by Oaken)
+fra_bourbon_monarch_birth.1.a:0 "A momentous occasion."
+fra_bourbon_monarch_birth.2.a:0 "A momentous occasion."
+
 #Great Britain
  gbr_monarch_birth.1.a:0 "A momentous occasion."
  gbr_monarch_birth.2.a:0 "A momentous occasion."
@@ -58,6 +62,10 @@ fra_orleans_monarch_birth.5.a:0 "A momentous occasion."
  han_monarch_birth.1.a:0 "A momentous occasion."
  han_monarch_birth.2.a:0 "A momentous occasion."
  han_monarch_birth.3.a:0 "A momentous occasion."
+
+#Japan Tokugawa (Edited by Oaken)
+ jap_tokugawa_monarch_birth.1.a:0 "A momentous occasion."
+ jap_tokugawa_monarch_death.2.a:0 "A momentous occasion."
 
 #Netherlands
  net_monarch_birth.1.a:0 "A momentous occasion."

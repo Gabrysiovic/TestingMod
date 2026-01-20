@@ -1,4 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
+﻿# From Royal Splendor (added by Oaken). Last updated: 20/1/2026
 namespace = fra_bourbon_monarch_birth
 
 # Charles 11 is born
@@ -38,7 +38,7 @@ fra_bourbon_monarch_birth.1 = {
 		default_option = yes
 
 		create_character = {
-			template = FRA_carlos_de_bourbon
+			template = SPC_carlos_vii_de_borbon_template
 		}
 	}
 }
@@ -80,7 +80,7 @@ fra_bourbon_monarch_birth.2 = {
 		default_option = yes
 
 		create_character = {
-			template = FRA_jacques_de_bourbon
+			template = SPC_jaime_iii_de_borbon_template
 		}
 	}
 }

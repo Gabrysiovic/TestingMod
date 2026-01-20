@@ -1,4 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
+﻿# From Royal Splendor (added by Oaken). Last updated: 20/1/2026
 namespace = fra_bourbon_heir_death
 
 # Henri 05 dies [ New Heir: (A) Jean 03 (H5) ]
@@ -40,7 +40,7 @@ fra_bourbon_heir_death.1 = {
 		}
 
 		create_character = {
-			template = FRA_jean_de_bourbon
+			template = SPC_juan_iii_de_borbon_template
 		}
 	}
 }
@@ -86,10 +86,10 @@ fra_bourbon_heir_death.2 = {
 		}
 
 		create_character = {
-			template = FRA_carlos_de_bourbon
+			template = SPC_carlos_vii_de_borbon_template
 		}
 	}
-	option = { # Henri 05 dies as heir, Jean 03 becomes heir
+	option = { # Henri 05 dies as heir, Nobody becomes heir
 		name = fra_bourbon_heir_death.2.b
 		default_option = yes
 
@@ -139,7 +139,7 @@ fra_bourbon_heir_death.3 = {
 		}
 
 		create_character = {
-			template = FRA_carlos_de_bourbon
+			template = SPC_jaime_iii_de_borbon_template
 		}
 	}
 	option = { # Charles 11/Jacques 01 dies as heir, Charles 12 becomes heir
@@ -151,7 +151,7 @@ fra_bourbon_heir_death.3 = {
 		}
 
 		create_character = {
-			template = FRA_alfonso_carlos_de_bourbon
+			template = SPC_alfonso_i_de_borbon_template
 		}
 	}
 }
@@ -195,7 +195,7 @@ fra_bourbon_heir_death.4 = {
 		}
 
 		create_character = {
-			template = FRA_alfonso_carlos_de_bourbon
+			template = SPC_alfonso_i_de_borbon_template
 		}
 	}
 }

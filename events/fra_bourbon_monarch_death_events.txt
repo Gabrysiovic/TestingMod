@@ -1,4 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
+﻿# From Royal Splendor (added by Oaken). Last updated: 20/1/2026
 namespace = fra_bourbon_monarch_death
 
 # Charles 10 dies [ New Heir: (A) Henri 05 (L19) ]
@@ -86,7 +86,7 @@ fra_bourbon_monarch_death.2 = {
 		}
 
 		create_character = {
-			template = FRA_jean_de_bourbon
+			template = SPC_juan_iii_de_borbon_template
 		}
 	}
 }
@@ -127,19 +127,19 @@ fra_bourbon_monarch_death.3 = {
 		default_option = yes
 
 		trigger = {	
-			ruler = { has_template = FRA_jean_de_bourbon }
+			ruler = { has_template = SPC_juan_iii_de_borbon_template }
 			game_date >= 1848.3.30
 		}
 
 		create_character = {
-			template = FRA_carlos_de_bourbon
+			template = SPC_carlos_vii_de_borbon_template
 		}
 	}
 	option = { # Henri 05 becomes ruler, Jean 03 becomes heir
 		name = fra_bourbon_monarch_death.3.b
 
 		trigger = {	
-			ruler = { has_template = FRA_jean_de_bourbon }
+			ruler = { has_template = SPC_juan_iii_de_borbon_template }
 			game_date < 1848.3.30
 		}
 	}
@@ -182,12 +182,12 @@ fra_bourbon_monarch_death.4 = {
 		default_option = yes
 
 		trigger = {	
-			ruler = { has_template = FRA_carlos_de_bourbon }
+			ruler = { has_template = SPC_carlos_vii_de_borbon_template }
 			game_date >= 1870.6.27
 		}
 
 		create_character = {
-			template = FRA_carlos_de_bourbon
+			template = SPC_carlos_vii_de_borbon_template
 		}
 	}
 	option = { # Charles 11/Jacques 01 becomes ruler, Charles 12 becomes heir
@@ -196,17 +196,17 @@ fra_bourbon_monarch_death.4 = {
 		trigger = {	
 			OR = {
 				AND = {
-					ruler = { has_template = FRA_carlos_de_bourbon }
+					ruler = { has_template = SPC_carlos_vii_de_borbon_template }
 					game_date > 1870.6.27
 				}
 				AND = {
-					ruler = { has_template = FRA_jacques_de_bourbon }
+					ruler = { has_template = SPC_jaime_iii_de_borbon_template }
 				}
 			}		
 		}
 
 		create_character = {
-			template = FRA_alfonso_carlos_de_bourbon
+			template = SPC_alfonso_i_de_borbon_template
 		}
 	}
 }
@@ -247,18 +247,18 @@ fra_bourbon_monarch_death.5 = {
 		default_option = yes
 
 		trigger = {	
-			ruler = { has_template = FRA_jacques_de_bourbon }
+			ruler = { has_template = SPC_jaime_iii_de_borbon_template }
 		}
 
 		create_character = {
-			template = FRA_alfonso_carlos_de_bourbon
+			template = SPC_alfonso_i_de_borbon_template
 		}
 	}
 	option = { # Jacques 01 becomes ruler, Nobody becomes heir
 		name = fra_bourbon_monarch_death.5.b
 
 		trigger = {	
-			ruler = { has_template = FRA_jacques_de_bourbon }
+			ruler = { has_template = SPC_jaime_iii_de_borbon_template }
 		}
 	}
 }
@@ -299,7 +299,7 @@ fra_bourbon_monarch_death.6 = {
 		default_option = yes
 
 		trigger = {	
-			ruler = { has_template = FRA_alfonso_carlos_de_bourbon }
+			ruler = { has_template = SPC_alfonso_i_de_borbon_template }
 		}
 	}
 	option = { # Ahistoric becomes ruler, Trigger Franco-Spanish Union Event

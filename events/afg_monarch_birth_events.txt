@@ -1,4 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
+﻿# From Royal Splendor (added by Oaken). Last updated: 20/1/2026
 namespace = afg_monarch_birth
 
 # Mohammad Yusuf is born
@@ -34,7 +34,7 @@ afg_monarch_birth.1 = {
 	}
 
 	option = {
-		name = afg_monarch_birth.1.a
+		name = historic_monarch_birth_reaction
 		default_option = yes
 
 		create_character = {
@@ -76,7 +76,7 @@ afg_monarch_birth.2 = {
 	}
 
 	option = {
-		name = afg_monarch_birth.2.a
+		name = historic_monarch_birth_reaction
 		default_option = yes
 
 		create_character = {
@@ -118,7 +118,7 @@ afg_monarch_birth.3 = {
 	}
 
 	option = {
-		name = afg_monarch_birth.3.a
+		name = historic_monarch_birth_reaction
 		default_option = yes
 
 		create_character = {

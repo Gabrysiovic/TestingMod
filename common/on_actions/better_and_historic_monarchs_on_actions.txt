@@ -1,4 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
+﻿# From Royal Splendor (added by Oaken). Last updated: 20/1/2026
 #RS = royal splendor
 
 RS_character_death_counter = {
@@ -1045,7 +1045,7 @@ RS_character_death_counter = {
 			limit = {
 				AND = { 
 					is_ruler = yes
-					has_template = FRA_jean_de_bourbon
+					has_template = SPC_juan_iii_de_borbon_template
 					owner = {
 						any_scope_character = { is_heir = yes is_historical = yes }
 					}
@@ -1063,7 +1063,7 @@ RS_character_death_counter = {
 			limit = {
 				AND = { 
 					is_heir = yes
-					has_template = FRA_jean_de_bourbon
+					has_template = SPC_juan_iii_de_borbon_template
 				}
 			}
 			owner = {
@@ -1078,7 +1078,7 @@ RS_character_death_counter = {
 			limit = {
 				AND = { 
 					is_ruler = yes
-					has_template = FRA_carlos_de_bourbon
+					has_template = SPC_carlos_vii_de_borbon_template
 					owner = {
 						any_scope_character = { is_heir = yes is_historical = yes }
 					}
@@ -1096,7 +1096,7 @@ RS_character_death_counter = {
 			limit = {
 				AND = { 
 					is_heir = yes
-					has_template = FRA_carlos_de_bourbon
+					has_template = SPC_carlos_vii_de_borbon_template
 				}
 			}
 			owner = {
@@ -1111,7 +1111,7 @@ RS_character_death_counter = {
 			limit = {
 				AND = { 
 					is_ruler = yes
-					has_template = FRA_jacques_de_bourbon
+					has_template = SPC_jaime_iii_de_borbon_template
 					owner = {
 						any_scope_character = { is_heir = yes is_historical = yes }
 					}
@@ -1129,7 +1129,7 @@ RS_character_death_counter = {
 			limit = {
 				AND = { 
 					is_heir = yes
-					has_template = FRA_jacques_de_bourbon
+					has_template = SPC_jaime_iii_de_borbon_template
 				}
 			}
 			owner = {
@@ -1144,7 +1144,7 @@ RS_character_death_counter = {
 			limit = {
 				AND = { 
 					is_ruler = yes
-					has_template = FRA_alfonso_carlos_de_bourbon
+					has_template = SPC_alfonso_i_de_borbon_template
 					owner = {
 						any_scope_character = { is_heir = yes is_historical = yes }
 					}
@@ -1162,7 +1162,7 @@ RS_character_death_counter = {
 			limit = {
 				AND = { 
 					is_heir = yes
-					has_template = FRA_alfonso_carlos_de_bourbon
+					has_template = SPC_alfonso_i_de_borbon_template
 				}
 			}
 			owner = {

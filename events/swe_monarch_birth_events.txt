@@ -1,4 +1,4 @@
-﻿# From Royal Splendor (added by Oaken). Last updated: 18/1/2026
+﻿# From Royal Splendor (added by Oaken). Last updated: 20/1/2026
 namespace = swe_monarch_birth
 
 # Gustaf 05 is born
@@ -63,7 +63,12 @@ swe_monarch_birth.2 = {
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 
 	trigger = {
-		ruler = { has_template = is_swe_gustaf_05 }
+		ruler = { 
+			OR = {
+				has_template = is_swe_gustaf_05 
+				has_template = swe_gustaf_v_bernadotte_template
+			}
+		}
 		NOT = { heir =  { has_template = is_swe_gustaf_06 } }
 		game_date >= 1882.11.11
 		game_date < 1883.1.10
