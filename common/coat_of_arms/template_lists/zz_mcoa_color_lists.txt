@@ -1,4 +1,4 @@
-color_lists = {
+﻿color_lists = {
 	power_bloc_europe_FRA_monarchy_shield_colors = {
 		50 = "blue"
 		50 = "red"

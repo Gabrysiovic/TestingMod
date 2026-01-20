@@ -1,4 +1,4 @@
-concept_direct_current = {
+﻿concept_direct_current = {
 	texture = "gfx/interface/icons/goods_icons/electricity.dds"
 	is_loading_tip = yes
 }

@@ -1,4 +1,4 @@
-pm_substation_up = {
+﻿pm_substation_up = {
 	texture = "gfx/interface/icons/production_method_icons/power_plant.dds"
 
 	building_modifiers = {

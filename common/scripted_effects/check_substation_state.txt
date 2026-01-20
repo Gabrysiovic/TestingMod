@@ -1,4 +1,4 @@
-check_substation_state = {
+ï»¿check_substation_state = {
 	if = {
 		limit = {
 			sg:electricity.state_goods_delta != 0
@@ -8,10 +8,10 @@ check_substation_state = {
 
 		debug_log_scopes = no
 
-		#Berechnet den Multiplier der die Größe der Transformation bestimmt
+		#Berechnet den Multiplier der die GrÃ¶ÃŸe der Transformation bestimmt
 		impl_calculate_substation_multiplier = yes
 
-		#Prüft, ob Substation gebaut oder abgerissen werden muss
+		#PrÃ¼ft, ob Substation gebaut oder abgerissen werden muss
 		impl_check_building = yes
 
 		if = {
@@ -32,7 +32,7 @@ check_substation_state = {
 
 impl_calculate_substation_multiplier = {
 	set_local_variable = {
-		#Anteil am verfügbaren Wechselstrom
+		#Anteil am verfÃ¼gbaren Wechselstrom
 		name  = share_of_electricity_market_available
 		value = {
 			value = local_var:electricity_market_available
@@ -47,7 +47,7 @@ impl_calculate_substation_multiplier = {
 	}
 
 	set_local_variable = {
-		#verfügbaren Wechselstrom
+		#verfÃ¼gbaren Wechselstrom
 		name  = max_substation_multiplier
 		value = {
 			value = local_var:share_of_electricity_market_available

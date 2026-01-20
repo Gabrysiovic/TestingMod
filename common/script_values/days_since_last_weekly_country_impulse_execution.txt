@@ -1,4 +1,4 @@
-days_since_last_weekly_country_impulse_execution = {
+﻿days_since_last_weekly_country_impulse_execution = {
     if = {
         limit = {
             NOT = {

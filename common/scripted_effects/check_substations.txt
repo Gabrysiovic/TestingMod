@@ -1,4 +1,4 @@
-check_substations = {
+ï»¿check_substations = {
 	debug_log = "----------START COUNTRY------------"
 	debug_log_scopes = no
 	
@@ -12,7 +12,7 @@ check_substations = {
 	impl_check_limit = yes
 
 
-	#Erst alle States mit Überschuss
+	#Erst alle States mit Ãœberschuss
 	ordered_scope_state = {
 		limit = {
 			state_electricity_delta > 0
@@ -56,7 +56,7 @@ impl_check_limit = {
 		value = 0
 	}
 
-	#Berechnet Multiplier vor und prüft, ob Limit erreicht wird
+	#Berechnet Multiplier vor und prÃ¼ft, ob Limit erreicht wird
 	ordered_scope_state = {
 		max = 1000
 		check_range_bounds = no

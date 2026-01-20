@@ -1,4 +1,4 @@
-colors = {	
+﻿colors = {	
 	red_british = rgb { 120 0 0 }
 	feldgrau2 	= rgb { 30 30 31 }
 	usa_commie  = rgb { 161 62 62 }

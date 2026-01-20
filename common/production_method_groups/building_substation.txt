@@ -1,4 +1,4 @@
-pmg_base_building_substation = {
+﻿pmg_base_building_substation = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_substation_up

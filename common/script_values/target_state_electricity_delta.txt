@@ -1,4 +1,4 @@
-target_state_electricity_delta = {
+﻿target_state_electricity_delta = {
 	value = state_electricity_delta
 
 	if = {

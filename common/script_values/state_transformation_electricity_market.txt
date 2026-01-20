@@ -1,4 +1,4 @@
-#Erzeugte Buy-Order von Wechselstrom am Markt
+﻿#Erzeugte Buy-Order von Wechselstrom am Markt
 state_electricity_market_sell_orders = {
 	value = sg:electricity_market.state_goods_production
 }
