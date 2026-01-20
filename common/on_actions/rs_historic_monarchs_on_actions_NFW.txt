@@ -24,7 +24,7 @@ rs_yamato_historic_monarch_heir_handler = {
 	effect = {
 		if = {
 			limit = {
-				rs_jap_yamato_dynasty = yes
+				rs_st_has_yamato_dynasty = yes
 			}
 
 			# Meiji - 1852.11.3
@@ -110,7 +110,7 @@ rs_alawite_historic_monarch_heir_handler = {
 	effect = {
 		if = {
 			limit = {
-				rs_egy_alawite_dynasty = yes
+				rs_st_has_alawite_dynasty = yes
 			}
 
 			# Ismail - 1830.1.12
@@ -205,7 +205,7 @@ rs_qing_historic_monarch_heir_handler = {
 	effect = {
 		if = {
 			limit = {
-				rs_chi_qing_dynasty = yes
+				rs_st_has_qing_dynasty = yes
 			}
 
 			# tongzhi - 1856.4.27
@@ -291,7 +291,7 @@ rs_saud_historic_monarch_heir_handler = {
 	effect = {
 		if = {
 			limit = {
-				rs_nej_saud_dynasty = yes
+				rs_st_has_saud_dynasty = yes
 			}
 
 			# abdul_rahman_01 - 1850.6.1
@@ -388,7 +388,7 @@ rs_chakri_historic_monarch_heir_handler = {
 	effect = {
 		if = {
 			limit = {
-				rs_sia_chakri_dynasty = yes
+				rs_st_has_chakri_dynasty = yes
 			}
 
 			# chulalongkorn - 1853.9.20
