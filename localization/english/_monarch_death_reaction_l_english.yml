@@ -125,6 +125,19 @@
  fra_orleans_monarch_death.6.a:0 "Long live the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
  fra_orleans_monarch_death.6.b:0 "Long live the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
 
+# France Bourbon (Edited by Oaken)
+ fra_bourbon_monarch_death.1.a:0 "Long live the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
+ fra_bourbon_monarch_death.2.a:0 "Long live the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
+ fra_bourbon_monarch_death.3.a:0 "Long live the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
+ fra_bourbon_monarch_death.3.b:0 "Long live the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
+ fra_bourbon_monarch_death.4.a:0 "Long live the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
+ fra_bourbon_monarch_death.4.b:0 "Long live the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
+ fra_bourbon_monarch_death.5.a:0 "Long live the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
+ fra_bourbon_monarch_death.5.b:0 "Long live the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
+ fra_bourbon_monarch_death.6.a:0 "Long live the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
+ fra_bourbon_monarch_death.6.b:0 "Long live the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
+ fra_bourbon_monarch_death.7.a:0 "Long live the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
+
 #Great Britain
  gbr_monarch_death.1.a:0 "Long live the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
  gbr_monarch_death.1.b:0 "Long live the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
@@ -211,6 +224,20 @@
  han_monarch_death.2.b:0 "Long live the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
  han_monarch_death.3.a:0 "Long live the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
  han_monarch_death.3.b:0 "Long live the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
+
+# Japan Tokugawa (Edited by Oaken)
+ jap_tokugawa_monarch_death.1.a:0 "Long live the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
+ jap_tokugawa_monarch_death.2.a:0 "Long live the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
+ jap_tokugawa_monarch_death.2.b:0 "Long live the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
+ jap_tokugawa_monarch_death.3.a:0 "Long live the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
+ jap_tokugawa_monarch_death.3.b:0 "Long live the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
+ jap_tokugawa_monarch_death.3.c:0 "Long live the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
+ jap_tokugawa_monarch_death.4.a:0 "Long live the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
+ jap_tokugawa_monarch_death.4.b:0 "Long live the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
+ jap_tokugawa_monarch_death.4.c:0 "Long live the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
+ jap_tokugawa_monarch_death.5.a:0 "Long live the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
+ jap_tokugawa_monarch_death.5.b:0 "Long live the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
+ 
 
 #Netherlands
  net_monarch_death.1.a:0 "Long live the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"

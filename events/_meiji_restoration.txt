@@ -213,7 +213,7 @@ meiji.1 = {
 				has_technology_researched = napoleonic_warfare
 				NOT = {
 					any_scope_building = {
-						is_building_type = building_barracks
+						is_building_type = building_barrack
 						OR = {
 							has_active_production_method = pm_no_organization
 							# has_active_production_method = pm_no_artillery
@@ -332,7 +332,7 @@ meiji.1 = {
 				has_technology_researched = napoleonic_warfare
 				NOT = {
 					any_scope_building = {
-						is_building_type = building_barracks
+						is_building_type = building_barrack
 						OR = {
 							has_active_production_method = pm_no_organization
 							# has_active_production_method = pm_no_artillery
@@ -1096,7 +1096,7 @@ meiji.8 = {
 	trigger = {
 		has_technology_researched = railways
 		any_scope_state = {
-			has_building = building_barracks
+			has_building = building_barrack
 			NOT = { has_building = building_railway }
 		}
 		NOT = { has_modifier = retained_railway_control }
@@ -1105,7 +1105,7 @@ meiji.8 = {
 	immediate = {
 		random_scope_state = {
 			limit = {
-				has_building = building_barracks
+				has_building = building_barrack
 				NOT = { has_building = building_railway }
 			}
 			save_scope_as = military_railway_state
@@ -1248,7 +1248,7 @@ meiji.10 = {
 		NOT = { has_variable = shi_gakko_event }
 		exists = s:STATE_KYUSHU.region_state:JAP
 		s:STATE_KYUSHU.region_state:JAP = {
-			has_building = building_barracks
+			has_building = building_barrack
 		}
 		ig:ig_armed_forces = {
 			ig_approval <= unhappy
@@ -1460,10 +1460,9 @@ meiji.12 = {
 				value = 30
 			}
 		}
-		every_country = {
+		every_country_in_europe = {
 			limit = {
 				country_rank = rank_value:great_power
-				country_is_in_europe = yes
 				has_interest_marker_in_region = root.capital.region
 			}
 			change_relations = {

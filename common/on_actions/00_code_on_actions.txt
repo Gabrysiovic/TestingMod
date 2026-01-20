@@ -535,10 +535,6 @@ on_monthly_pulse_country = {
 
 		# Iberia
 		iberia.1
-
-		# Sweden
-		sweden_monarchy.2
-		sweden_monarchy.3
 	}
 
 	effect = {
