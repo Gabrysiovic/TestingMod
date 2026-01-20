@@ -24,12 +24,23 @@ TRY_REPLACE:unpleasant_germany = {
 }
 
 
-TRY_REPLACE:usa_commie = {
+REPLACE_OR_CREATE:usa_commie = {
 	color = "usa_commie"
 
 	possible = {
 		exists = c:USA
 		c:USA ?= THIS
 		has_law_or_variant = law_type:law_council_republic
+	}
+}
+
+REPLACE_OR_CREATE:Indochina = {
+	color = "blue_indochina"
+
+	possible = {
+		custom_tooltip = {
+			text = is_indochina
+			has_variable = AA_indochina_var
+		}
 	}
 }

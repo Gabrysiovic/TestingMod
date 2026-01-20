@@ -1,0 +1,52 @@
+AA_Indochina_form =
+{
+	is_shown = {
+		OR = 
+		{
+			AND =
+			{
+			exists = c:DAI
+			c:DAI ?= THIS
+			}
+			AND =
+			{
+			exists = c:SIA
+			c:SIA ?= THIS
+			}
+		}
+		hidden_trigger = {
+			NOT = { has_variable = AA_indochina }
+		}
+	}
+
+	possible = {
+		OR = 
+		{
+			c:DAI ?= THIS
+			c:SIA ?= THIS
+		}
+		has_technology_researched = nationalism
+##		any_state_in_indochina = {
+##			count = 8
+##			owner = ROOT
+##		}
+		hidden_trigger = {
+			NOT = { has_variable = AA_indochina }
+		}
+	}
+
+	when_taken = {
+		set_variable = {
+			name = AA_indochina_var
+			value = yes
+		}
+		add_modifier = {
+			name = RP_restoration
+			days = long_modifier_time
+		}
+	}
+
+	ai_chance = {
+		value = 0
+	}
+}

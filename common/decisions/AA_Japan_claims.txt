@@ -8,10 +8,17 @@ AA_mukden_decision = {
 	}
 	#checks if Japan owns all of Korea -Akiko
 	possible = {
+	AND = 
+	{
 		any_state_in_korean_peninsula = {
 			count = all
 			owner = ROOT
 		}
+		custom_tooltip = {
+			text = is_meiji_japan
+			has_variable = meiji_restoration_complete
+		}
+	}	
 	}
 	when_taken = {
 		set_variable = mukden_taken
@@ -48,8 +55,8 @@ AA_mukden_decision = {
 		#thought it was quite the fitting reuse(negative infamy decay mult) -Akiko
 		add_modifier = {
 			name = better_to_be_feared
-			years = 5
-			is_decaying = yes
+			years = 10
+			is_decaying = no
 		}
 		#chance for target(probably China) to create a negative lobby towards Japan -Akiko
 		scope:mukden_target_scope = {

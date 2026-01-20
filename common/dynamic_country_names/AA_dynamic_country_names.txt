@@ -1,0 +1,17 @@
+﻿DAI = { #Indochina
+	dynamic_country_name = {
+	name = AA_indochina
+	adjective = AA_indochina_adj
+	
+	is_main_tag_only = no
+	
+	trigger =
+		{
+			exists = scope:actor
+			scope:actor ?= {
+				has_variable = AA_indochina_var
+			}
+			
+		}
+	}
+}
