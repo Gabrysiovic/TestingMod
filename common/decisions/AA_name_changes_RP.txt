@@ -1,8 +1,28 @@
-AA_Indochina_form =
+AA_restore_name =
+{
+	is_shown = {	
+		OR = {
+			has_variable = AA_indochina_var
+			has_variable = AA_federation_var
+		}
+	}	
+	possible = {
+		OR = {
+			has_variable = AA_indochina_var
+			has_variable = AA_federation_var
+		}
+	}
+	when_taken = {
+		remove_variable = AA_indochina_var
+		remove_variable = AA_federation_var
+		}
+}
+
+AA_indochina_form =
 {
 	is_shown = {
-		OR = 
-		{
+	AND = {	
+		OR = {
 			AND =
 			{
 			exists = c:DAI
@@ -15,10 +35,14 @@ AA_Indochina_form =
 			}
 		}
 		hidden_trigger = {
-			NOT = { has_variable = AA_indochina }
+			NOT = { has_variable = AA_indochina_var }
 		}
+		hidden_trigger = {
+			NOT = { has_variable = RP_restoration }
+		}
+	}	
 	}
-
+	
 	possible = {
 		OR = 
 		{
@@ -26,12 +50,18 @@ AA_Indochina_form =
 			c:SIA ?= THIS
 		}
 		has_technology_researched = nationalism
-##		any_state_in_indochina = {
+##		any_state_in_indochina_region = {
 ##			count = 8
 ##			owner = ROOT
 ##		}
+		any_scope_state_in_strategic_region	=
+			{
+					owner = ROOT
+					count = 8
+					region = sr:region_indochina
+			}
 		hidden_trigger = {
-			NOT = { has_variable = AA_indochina }
+			NOT = { has_variable = AA_indochina_var }
 		}
 	}
 
@@ -49,4 +79,44 @@ AA_Indochina_form =
 	ai_chance = {
 		value = 0
 	}
+}
+
+AA_imperial_federation_form =
+{
+	is_shown = {
+		c:GBR ?= THIS
+		hidden_trigger = {
+			NOT = { has_variable = AA_federation_var }
+		}
+		NOT = { has_variable = RP_restoration }
+
+		
+	}
+	
+	possible = {
+		c:GBR ?= THIS
+		has_technology_researched = pan-nationalism
+		has_technology_researched = electric_telegraph
+		not = { exists = c:EIC }
+		hidden_trigger = {
+			NOT = { has_variable = AA_federation_var }
+		}
+	}
+
+	when_taken = {
+		set_variable = {
+			name = AA_federation_var
+			value = yes
+		}
+		add_modifier = {
+			name = RP_restoration
+			days = long_modifier_time
+		}
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+
 }

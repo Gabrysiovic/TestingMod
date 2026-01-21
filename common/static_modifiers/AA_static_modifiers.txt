@@ -61,7 +61,8 @@ AA_soc_slipstream = {
 	country_society_tech_spread_mult = 0.2
 }
 
-RP_restoration =
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	add_prestige = 0.05
+RP_restoration = { 
+	##By Gabriel, this is purely RP
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_democracy_positive.dds
+	country_prestige_mult = 0
 }

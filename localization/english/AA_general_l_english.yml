@@ -145,3 +145,16 @@
     join_war_article_short_desc: "[SOURCE_COUNTRY.GetNameNoFormatting] will join all wars where [TARGET_COUNTRY.GetNameNoFormatting] is the $concept_war_leader$"
     DIPLO_ACTION_RELATIONS_POOR_OR_GREATER: "$DIPLO_ACTION_RELATIONS$ are at least $relations_poor$"
     
+    ## Custom Nations
+    AA_indochina: "Indochina"
+    AA_indochina_adj: "Indochinese"
+    AA_indochina_form: "Form the nation of Indochina!"
+    AA_indochina_form_desc: "From Bangkok to the Gulf of Tonkin, the various peoples of the peninsula are brought under one banner to resist the encroaching shadows of the Great Powers"
+    RP_restoration: "National name change"
+    AA_restore_name: "Restore original name"
+    AA_restore_name_desc: "We do not like our new name"
+    
+    AA_federation: "Imperial Federation"
+    AA_federation_adj: "British"
+    AA_imperial_federation_form: "Announce the Imperial Federation"
+    AA_imperial_federation_form_desc: "The Imperial Federation was a series of proposals in the late 19th and early 20th centuries to create a federal union for the British Empire. The time has come."

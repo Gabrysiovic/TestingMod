@@ -1,4 +1,4 @@
-﻿DAI = { #Indochina
+﻿INJECT_OR_CREATE:DAI = { #Indochina
 	dynamic_country_name = {
 	name = AA_indochina
 	adjective = AA_indochina_adj
@@ -13,5 +13,24 @@
 			}
 			
 		}
+	priority = 10	
+	}
+}
+
+INJECT_OR_CREATE:GBR = { #Imperial Federation
+	dynamic_country_name = {
+	name = AA_federation
+	adjective = AA_federation_adj
+	
+	is_main_tag_only = no
+	
+	trigger = 
+	{
+		exists = scope:actor
+		scope:actor ?= {
+			has_variable = AA_federation_var
+		}
+	}
+	priority = 10000
 	}
 }

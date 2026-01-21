@@ -1,0 +1,96 @@
+﻿INJECT_OR_CREATE:BYZ = {
+	# Byzantium
+	flag_definition = {
+		coa = SPQ_republic
+		allow_overlord_canton = yes
+		subject_canton = SPQ_republic
+		priority = 10
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+			NOT = {
+				coa_def_communist_flag_trigger = yes
+			}
+		}
+	}
+	flag_definition = {
+		coa = SPQ_socialism_republic
+		allow_overlord_canton = yes
+		subject_canton = SPQ_socialism_republic
+		priority = 1500
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}
+
+INJECT_OR_CREATE:DAI = {
+	#DAINAM
+	flag_definition = {
+		coa = INO_republic
+		priority = 10000
+		trigger = {
+			scope:actor ?= {
+				has_variable = AA_indochina_var
+			}
+		}
+	}
+}
+
+INJECT_OR_CREATE:SIA = {
+	#SIAM
+	flag_definition = {
+		coa = INO_republic
+		priority = 10000
+		trigger = {
+			scope:actor ?= {
+				has_variable = AA_indochina_var
+			}
+		}
+	}
+}
+
+INJECT_OR_CREATE:GBR = { # Imperial Federation
+	flag_definition = {	
+		coa = IMF
+		subject_canton = IMF
+		priority = 5000
+		trigger = {
+			scope:actor ?= {
+				has_variable = AA_federation_var
+			}
+		}
+	}
+	flag_definition = {
+		coa = IMF_absolute_monarchy
+		subject_canton = IMF_absolute_monarchy
+		priority = 10000
+		trigger = {
+			scope:actor ?= {
+				has_variable = AA_federation_var
+				coa_def_absolute_monarchy_flag_trigger = yes
+			}
+		}
+	}
+	flag_definition = {
+		coa = IMF_republic
+		priority = 10000
+		trigger = {
+			scope:actor ?= {
+				coa_def_republic_flag_trigger = yes
+				has_variable = AA_federation_var
+			}
+		}
+	}
+	flag_definition = {
+		coa = IMF_communist
+		priority = 200000
+		trigger = {
+			scope:actor ?= {
+				coa_def_communist_flag_trigger = yes
+				has_variable = AA_federation_var
+			}
+		}
+	}
+}
+
+

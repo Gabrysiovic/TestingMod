@@ -4,6 +4,8 @@
 	country_prestige_from_army_power_projection_mult = -0.11
 	country_soldiers_pol_str_mult = 0.11
 	interest_group_ig_armed_forces_pop_attraction_mult = -0.11
+	country_infamy_decay_mult = 0.20
+	
 }
 warispolitics_won_war = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_mobilization_positive.dds

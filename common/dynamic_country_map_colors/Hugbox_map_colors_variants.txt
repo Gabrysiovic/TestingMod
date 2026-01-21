@@ -5,8 +5,10 @@ TRY_REPLACE:feminist_britain = {
 		exists = c:GBR
 		c:GBR ?= THIS
 		ruler = {
+			OR = {
 			has_ideology = ideology:ideology_feminist
 			is_female = yes
+			}
 		}
 		has_law_or_variant = law_type:law_womens_suffrage
 	}
@@ -34,7 +36,7 @@ REPLACE_OR_CREATE:usa_commie = {
 	}
 }
 
-REPLACE_OR_CREATE:Indochina = {
+REPLACE_OR_CREATE:indochina = {
 	color = "blue_indochina"
 
 	possible = {
