@@ -1,4 +1,4 @@
-textured_emblem_texture_lists = {
+﻿textured_emblem_texture_lists = {
     power_bloc_top = {
         20 = "pb_top_06.dds"
     }

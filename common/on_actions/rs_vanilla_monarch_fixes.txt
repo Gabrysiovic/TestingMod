@@ -1,4 +1,4 @@
-#Fixing Vanilla Stuff
+﻿#Fixing Vanilla Stuff
 
 RS_removing_sweden_and_gbr_monthly_pulse_country = {
 	effect = {

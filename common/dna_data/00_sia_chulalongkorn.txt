@@ -28,9 +28,7 @@
         gene_eye_fold_droop={ "eye_fold_droop" 150 "eye_fold_droop" 127 }
         gene_eye_fold_shape={ "eye_fold_shape" 152 "eye_fold_shape" 127 }
         gene_eye_size={ "eye_size" 187 "eye_size" 127 }
-        gene_eye_size_min={ "eye_size_min" 127 "eye_size_min" 127 }
         gene_eye_upper_lid_size={ "eye_upper_lid_size" 124 "eye_upper_lid_size" 127 }
-        gene_eye_upper_lid_size_min={ "eye_upper_lid_size_min" 127 "eye_upper_lid_size_min" 127 }
         gene_forehead_angle={ "forehead_angle" 105 "forehead_angle" 127 }
         gene_forehead_brow_curve={ "forehead_brow_curve" 124 "forehead_brow_curve" 127 }
         gene_forehead_brow_forward={ "forehead_brow_forward" 45 "forehead_brow_forward" 127 }

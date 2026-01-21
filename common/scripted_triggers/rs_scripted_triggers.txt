@@ -1,4 +1,4 @@
-#Japan=============================================================================#
+﻿#Japan=============================================================================#
 
 rs_st_country_is_japan = {
 	OR = {
@@ -53,7 +53,7 @@ rs_st_country_is_egypt = {
 
 #Alawite Egypt
 
-rt_st_has_alawite_dynasty = {
+rs_st_has_alawite_dynasty = {
 	ruler ?= {
 		rs_st_character_is_egy_muhammad_ali
 		rs_st_character_is_egy_ibrahim
@@ -98,7 +98,7 @@ rs_st_country_is_china = {
 	}
 }
 
-rt_st_has_qing_dynasty = {
+rs_st_has_qing_dynasty = {
 	ruler ?= {
 		rs_st_character_is_chi_daoguang
 		rs_st_character_is_chi_xianfeng
@@ -138,7 +138,7 @@ rs_st_country_is_nejd = {
 	}
 }
 
-rt_st_has_saud_dynasty = {
+rs_st_has_saud_dynasty = {
 	ruler ?= {
 		rs_st_character_is_nej_faisal_01
 		rs_st_character_is_nej_saud_03
@@ -170,7 +170,7 @@ rs_st_character_is_nej_saud_04 = {
 	has_template = is_nej_saud_04
 }
 
-rs_st_character_is_nej_ = {
+rs_st_character_is_nej_faisal_02 = {
 	has_template = is_nej_faisal_02
 }
 
@@ -178,12 +178,12 @@ rs_st_character_is_nej_ = {
 
 rs_st_country_is_siam = {
 	OR = {
-		c:sia ?= THIS
-		was_formed_from = sia
+		c:SIA ?= THIS
+		was_formed_from = SIA
 	}
 }
 
-rt_st_has_chakri_dynasty = {
+rs_st_has_chakri_dynasty = {
 	ruler ?= {
 		rs_st_character_is_sia_nangklao
 		rs_st_character_is_sia_mongkut
@@ -216,10 +216,10 @@ rs_st_character_is_sia_prajadhipok = {
 	has_template = is_sia_prajadhipok
 }
 
-rs_st_character_is_sia_ = {
+rs_st_character_is_sia_ananda_mahidol = {
 	has_template = is_sia_ananda_mahidol
 }
 
-rs_st_character_is_sia_ = {
+rs_st_character_is_sia_bhumibol_adulyadej = {
 	has_template = is_sia_bhumibol_adulyadej
 }

@@ -1,4 +1,4 @@
-colored_emblem_texture_lists = {
+﻿colored_emblem_texture_lists = {
 	power_bloc_shields_absolute_monarchy_close_colors = {
 		50 = "shield_mcoa_cross_throughout.png"
 		50 = "shield_mcoa_fess.png"

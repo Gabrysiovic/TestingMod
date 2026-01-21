@@ -1,4 +1,4 @@
-
+﻿
 building_substation = {
 	building_group = bg_substation
 	icon = "gfx/interface/icons/building_icons/substation.dds"

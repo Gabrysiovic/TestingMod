@@ -1,4 +1,4 @@
-#root = country
+﻿#root = country
 electricity_market_production = {
 	market = {
 		value = g:electricity_market.market_goods_production

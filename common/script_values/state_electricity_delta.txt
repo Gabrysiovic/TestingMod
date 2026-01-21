@@ -1,4 +1,4 @@
-
+﻿
 #root = state
 state_electricity_delta = {
 	value = sg:electricity.state_goods_delta

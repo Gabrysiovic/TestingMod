@@ -1,4 +1,4 @@
-on_monthly_pulse_country = {
+﻿on_monthly_pulse_country = {
 	on_actions = {
 		em_on_monthly_pulse_country
 	}

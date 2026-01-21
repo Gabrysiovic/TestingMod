@@ -1,4 +1,4 @@
-price_percentage_electricity_market = {
+﻿price_percentage_electricity_market = {
 	value = impl_delta
 	divide = impl_divisor
 	multiply = -0.7

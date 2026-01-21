@@ -1,4 +1,4 @@
-pm_early_power_plant = {
+﻿pm_early_power_plant = {
 	texture = "gfx/interface/icons/production_method_icons/power_plant.dds"
 	replacement_if_valid = pm_coal-pm_early_power_plant_market
 
@@ -111,7 +111,7 @@ pm_coal-fired_plant_market = {
 	}
 }
 
-#�berschreibt default
+#Überschreibt default
 pm_oil-fired_plant = {
 	texture = "gfx/interface/icons/production_method_icons/oil_fired_plant.dds"
 
