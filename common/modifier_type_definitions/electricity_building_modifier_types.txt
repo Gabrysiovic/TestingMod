@@ -1,43 +1,43 @@
-﻿goods_input_electricity_market_add={
-	decimals=1
-	color=bad
-	game_data={
-		ai_value=0
+﻿goods_input_electricity_market_add = {
+	decimals = 1
+	color = bad
+	game_data = {
+		ai_value = 0
 	}
 }
 
-goods_output_electricity_market_add={
-	decimals=1
-	color=good
-	game_data={
-		ai_value=0
+goods_output_electricity_market_add = {
+	decimals = 1
+	color = good
+	game_data = {
+		ai_value = 0
 	}
 }
 
-goods_output_electricity_market_mult={
-	decimals=1
-	color=good
-	percent=yes
-	game_data={
-		ai_value=0
+goods_output_electricity_market_mult = {
+	decimals = 1
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
 	}
 }
 
-building_substation_throughput_add={
-	decimals=0
-	color=good
-	percent=yes
-	game_data={
-		ai_value=0
+building_substation_throughput_add = {
+	decimals = 0
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
 	}
 }
 
-
-can_share_electricity_in_market_bool = {
-	decimals=1
-	color=neutral
-	boolean=yes
-	game_data={
-		ai_value=0
+country_can_share_electricity_in_market_bool = {
+	script_only = yes
+	decimals = 1
+	color = neutral
+	boolean = yes
+	game_data = {
+		ai_value = 0
 	}
 }

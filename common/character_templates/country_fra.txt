@@ -1,7 +1,5 @@
 ﻿### France character template file ###
-
 ## game start interest group leaders ##
-
 FRA_louis_philippe = {
 	first_name = Louis-Philippe
 	last_name = d_Orleans
@@ -20,10 +18,9 @@ FRA_louis_philippe = {
 			name = is_married
 		}
 		set_variable = {
-			name = orleanist_leader
+			name = house_orleans
 		}
 	}
-	 
 }
 
 FRA_ferdinand_philippe = {
@@ -44,10 +41,11 @@ FRA_ferdinand_philippe = {
 			name = is_married
 		}
 		set_variable = {
-			name = orleanist_leader
+			name = house_orleans
 		}
 	}
-	trait_generation = { }
+	trait_generation = {
+	}
 }
 
 FRA_victor_de_broglie = {
@@ -146,7 +144,7 @@ FRA_mathieu_de_la_drome = {
 	ideology = ideology_radical
 	traits = {
 		basic_political_operator
-		innovative # He was an actual inventor
+		innovative		# He was an actual inventor
 	}
 }
 
@@ -164,9 +162,7 @@ FRA_charles_fourier = {
 	}
 }
 
-
 ## game start commanders ##
-
 FRA_thomas_bugeaud = {
 	is_general = yes
 	first_name = Thomas
@@ -197,7 +193,7 @@ FRA_bertrand_clauzel = {
 }
 
 FRA_guy-victor_duperre = {
- 	is_admiral = yes
+	is_admiral = yes
 	first_name = Guy-Victor
 	last_name = Duperre
 	historical = yes
@@ -254,7 +250,6 @@ FRA_guillaume_dode_de_la_brunerie = {
 }
 
 ### Monarchs
-
 # Orleanists
 FRA_philippe_de_orleans_of_paris = {
 	# Prince Philippe, Count of Paris
@@ -270,12 +265,12 @@ FRA_philippe_de_orleans_of_paris = {
 	traits = {
 		# historian & journalist
 		# "outspoken democrat"
-		basic_offensive_planner # served "with distinction" as a staff officer in the Peninsula Campaign
+		basic_offensive_planner		# served "with distinction" as a staff officer in the Peninsula Campaign
 	}
 	on_created = {
 		set_variable = {
-			name = orleanist_leader
-		}		
+			name = house_orleans
+		}
 	}
 }
 
@@ -296,8 +291,8 @@ FRA_philippe_de_orleans_of_orleans = {
 	}
 	on_created = {
 		set_variable = {
-			name = orleanist_leader
-		}				
+			name = house_orleans
+		}
 	}
 }
 
@@ -317,7 +312,9 @@ FRA_robert_de_orleans = {
 		surveyor
 	}
 	on_created = {
-		set_variable = { name = orleanist_leader }
+		set_variable = {
+			name = house_orleans
+		}
 	}
 	birth_date = 1840.11.9
 }
@@ -337,8 +334,8 @@ FRA_jean_de_orleans = {
 	}
 	on_created = {
 		set_variable = {
-			name = orleanist_leader
-		}			
+			name = house_orleans
+		}
 	}
 }
 
@@ -358,7 +355,9 @@ FRA_henri_de_orleans = {
 		arrogant
 	}
 	on_created = {
-		set_variable = { name = orleanist_leader }
+		set_variable = {
+			name = house_orleans
+		}
 	}
 }
 
@@ -377,13 +376,14 @@ FRA_henri_06_de_orleans = {
 		romantic
 	}
 	on_created = {
-		set_variable = { name = orleanist_leader }
+		set_variable = {
+			name = house_orleans
+		}
 	}
 	birth_date = 1933.6.14
 }
 
 # Legitimists
-
 FRA_louis_antoine_de_bourbon = {
 	# Louis Antoine, Duke of Angoulême
 	first_name = "Louis"
@@ -396,13 +396,13 @@ FRA_louis_antoine_de_bourbon = {
 	interest_group = ig_armed_forces
 	ideology = ideology_legitimist
 	traits = {
-		basic_offensive_planner # see the battle of Trocadero
+		basic_offensive_planner		# see the battle of Trocadero
 		bigoted
 	}
 	on_created = {
 		set_variable = {
 			name = legitimist_leader
-		}				
+		}
 	}
 }
 
@@ -424,7 +424,7 @@ FRA_henri_de_bourbon = {
 	on_created = {
 		set_variable = {
 			name = legitimist_leader
-		}				
+		}
 	}
 }
 
@@ -446,7 +446,7 @@ FRA_jean_de_bourbon = {
 	on_created = {
 		set_variable = {
 			name = legitimist_leader
-		}				
+		}
 	}
 }
 
@@ -469,7 +469,7 @@ FRA_carlos_de_bourbon = {
 	on_created = {
 		set_variable = {
 			name = legitimist_leader
-		}				
+		}
 	}
 }
 
@@ -492,7 +492,7 @@ FRA_jacques_de_bourbon = {
 	on_created = {
 		set_variable = {
 			name = legitimist_leader
-		}				
+		}
 	}
 }
 
@@ -515,7 +515,7 @@ FRA_alfonso_carlos_de_bourbon = {
 	on_created = {
 		set_variable = {
 			name = legitimist_leader
-		}				
+		}
 	}
 }
 
@@ -538,12 +538,12 @@ FRA_alfonso_de_bourbon = {
 	on_created = {
 		set_variable = {
 			name = legitimist_leader
-		}				
+		}
 	}
 }
 
 #Royal Splendor Additions
-FRA_alfonso_02_de_bourbon  = {
+FRA_alfonso_02_de_bourbon = {
 	# Alfonso XIV of Spain
 	heir = yes
 	culture = cu:spanish
@@ -562,7 +562,6 @@ FRA_alfonso_02_de_bourbon  = {
 	on_created = {
 		set_variable = is_married
 	}
-	 
 }
 
 FRA_henri_06_de_bourbon = {
@@ -578,13 +577,12 @@ FRA_henri_06_de_bourbon = {
 	interest_group = ig_petty_bourgeoisie
 	ideology = ideology_moderate
 	traits = {
-		beetle_ear	
+		beetle_ear
 	}
 	birth_date = 1908.6.23
 	on_created = {
 		set_variable = is_married
 	}
-	 
 }
 
 FRA_jean_04_de_bourbon = {
@@ -605,11 +603,9 @@ FRA_jean_04_de_bourbon = {
 	on_created = {
 		set_variable = is_married
 	}
-	 
 }
 
 # Bonapartists
-
 FRA_napoleon_eugene_louis_bonaparte = {
 	# Napoléon Eugène Louis Jean Joseph Bonaparte
 	first_name = "Napoleon"
@@ -627,8 +623,8 @@ FRA_napoleon_eugene_louis_bonaparte = {
 	}
 	on_created = {
 		set_variable = {
-			name = bonapartist_leader
-		}				
+			name = house_bonaparte
+		}
 	}
 }
 
@@ -649,8 +645,8 @@ FRA_jerome_bonaparte = {
 	}
 	on_created = {
 		set_variable = {
-			name = bonapartist_leader
-		}				
+			name = house_bonaparte
+		}
 	}
 }
 
@@ -671,8 +667,8 @@ FRA_victor_bonaparte = {
 	}
 	on_created = {
 		set_variable = {
-			name = bonapartist_leader
-		}				
+			name = house_bonaparte
+		}
 	}
 }
 
@@ -694,7 +690,7 @@ FRA_louis_bonaparte = {
 	}
 	on_created = {
 		set_variable = {
-			name = bonapartist_leader
-		}				
+			name = house_bonaparte
+		}
 	}
 }

@@ -1,9 +1,9 @@
 ﻿#Fixing Vanilla Stuff
-
 RS_removing_sweden_and_gbr_monthly_pulse_country = {
 	effect = {
-		trigger_event = { id = unable_to_enact.1 }
-
+		trigger_event = {
+			id = unable_to_enact.1
+		}
 		# British Monarchy
 		if = {
 			limit = {
@@ -44,7 +44,6 @@ RS_removing_sweden_and_gbr_monthly_pulse_country = {
 				}
 			}
 		}
-
 		# Sweden Monarchy event
 		if = {
 			limit = {
@@ -70,38 +69,35 @@ RS_removing_sweden_and_gbr_monthly_pulse_country = {
 				}
 			}
 		}
-
 		if = {
 			limit = {
-		    	c:SWE ?= this
-		    	game_date >= 1872.9.29
-		    	any_scope_character = {
-		    		is_ruler = yes
-		    		has_template = swe_charles_bernadotte_template
-		    	}
-		    	any_scope_character = {
-		    		is_heir = yes
-		    		has_template = swe_oscar_ii_bernadotte_template
-		    	}
-		    }
+				c:SWE ?= this
+				game_date >= 1872.9.29
+				any_scope_character = {
+					is_ruler = yes
+					has_template = swe_charles_bernadotte_template
+				}
+				any_scope_character = {
+					is_heir = yes
+					has_template = swe_oscar_ii_bernadotte_template
+				}
+			}
 		}
-
-    	if = {
-    		limit = {
-		    	c:SWE ?= this
-		    	game_date >= 1872.9.29
-		    	any_scope_character = {
-		       		is_ruler = yes
-		       		has_template = swe_oscar_ii_bernadotte_template
-		    	}
-		    	NOT = {
-		       		has_variable = oscar_ii_ruler_var
-		    	}
-		    }
-    	}
-
-    	# Japan Restoration Event
-    	if = {
+		if = {
+			limit = {
+				c:SWE ?= this
+				game_date >= 1872.9.29
+				any_scope_character = {
+					is_ruler = yes
+					has_template = swe_oscar_ii_bernadotte_template
+				}
+				NOT = {
+					has_variable = oscar_ii_ruler_var
+				}
+			}
+		}
+		# Japan Restoration Event
+		if = {
 			limit = {
 				c:JAP ?= this
 				has_variable = meiji_restoration_complete
@@ -117,10 +113,12 @@ RS_removing_sweden_and_gbr_monthly_pulse_country = {
 							has_template = is_jap_tokugawa_iemochi
 							has_template = is_jap_tokugawa_yoshinobu
 							has_template = is_jap_tokugawa_iesato
-							has_template = is_jap_tokugawa_iemasa	
+							has_template = is_jap_tokugawa_iemasa
 						}
 					}
-					heir = { save_scope_as = ousted_shogun }
+				}
+				heir = {
+					save_scope_as = ousted_shogun
 				}
 				scope:ousted_shogun = {
 					kill_character = yes
@@ -129,7 +127,9 @@ RS_removing_sweden_and_gbr_monthly_pulse_country = {
 			if = {
 				limit = {
 					year >= 1852
-					NOT = { has_variable = heir_meiji_spawned }
+					NOT = {
+						has_variable = heir_meiji_spawned
+					}
 					ruler ?= {
 						has_template = is_jap_komei
 					}
@@ -142,7 +142,9 @@ RS_removing_sweden_and_gbr_monthly_pulse_country = {
 			else_if = {
 				limit = {
 					year >= 1879
-					NOT = { has_variable = heir_taisho_spawned }
+					NOT = {
+						has_variable = heir_taisho_spawned
+					}
 					ruler ?= {
 						has_template = is_jap_meiji
 					}
@@ -155,7 +157,9 @@ RS_removing_sweden_and_gbr_monthly_pulse_country = {
 			else_if = {
 				limit = {
 					year >= 1901
-					NOT = { has_variable = heir_showa_spawned }
+					NOT = {
+						has_variable = heir_showa_spawned
+					}
 					ruler ?= {
 						has_template = is_jap_taisho
 					}
@@ -181,7 +185,6 @@ RS_removing_sweden_and_fixing_russia_on_new_ruler = {
 			}
 			post_notification = new_ruler
 		}
-
 		if = {
 			limit = {
 				owner = {
@@ -196,7 +199,6 @@ RS_removing_sweden_and_fixing_russia_on_new_ruler = {
 				}
 			}
 		}
-
 		if = {
 			limit = {
 				owner = {
@@ -210,7 +212,10 @@ RS_removing_sweden_and_fixing_russia_on_new_ruler = {
 					has_template = is_rus_aleksandr_02
 				}
 				owner = {
-					trigger_event = { id = russia_monarchy.1 popup = yes }
+					trigger_event = {
+						id = russia_monarchy.1
+						popup = yes
+					}
 				}
 			}
 			else_if = {
@@ -218,7 +223,10 @@ RS_removing_sweden_and_fixing_russia_on_new_ruler = {
 					has_template = is_rus_tsesarevich_nikolai
 				}
 				owner = {
-					trigger_event = { id = russia_monarchy.3 popup = yes }
+					trigger_event = {
+						id = russia_monarchy.3
+						popup = yes
+					}
 				}
 			}
 			else_if = {
@@ -226,7 +234,10 @@ RS_removing_sweden_and_fixing_russia_on_new_ruler = {
 					has_template = is_rus_aleksandr_03
 				}
 				owner = {
-					trigger_event = { id = russia_monarchy.4 popup = yes }
+					trigger_event = {
+						id = russia_monarchy.4
+						popup = yes
+					}
 				}
 			}
 			else_if = {
@@ -234,7 +245,10 @@ RS_removing_sweden_and_fixing_russia_on_new_ruler = {
 					has_template = is_rus_nikolai_02
 				}
 				owner = {
-					trigger_event = { id = russia_monarchy.5 popup = yes }
+					trigger_event = {
+						id = russia_monarchy.5
+						popup = yes
+					}
 				}
 			}
 			else_if = {
@@ -242,7 +256,10 @@ RS_removing_sweden_and_fixing_russia_on_new_ruler = {
 					has_template = is_rus_aleksei_02
 				}
 				owner = {
-					trigger_event = { id = russia_monarchy.9 popup = yes }
+					trigger_event = {
+						id = russia_monarchy.9
+						popup = yes
+					}
 				}
 			}
 			else_if = {
@@ -250,7 +267,10 @@ RS_removing_sweden_and_fixing_russia_on_new_ruler = {
 					has_template = RUS_michael_ii
 				}
 				owner = {
-					trigger_event = { id = russia_monarchy.10 popup = yes }
+					trigger_event = {
+						id = russia_monarchy.10
+						popup = yes
+					}
 				}
 			}
 			else_if = {
@@ -258,7 +278,10 @@ RS_removing_sweden_and_fixing_russia_on_new_ruler = {
 					has_template = RUS_george_i
 				}
 				owner = {
-					trigger_event = { id = russia_monarchy.11 popup = yes }
+					trigger_event = {
+						id = russia_monarchy.11
+						popup = yes
+					}
 				}
 			}
 		}

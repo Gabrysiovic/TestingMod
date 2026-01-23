@@ -34,6 +34,16 @@ INJECT_OR_CREATE:DAI = {
 			}
 		}
 	}
+	flag_definition = {
+		coa = INO_communist
+		priority = 20000
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+			scope:actor ?= {
+				has_variable = AA_indochina_var
+			}
+		}
+	}
 }
 
 INJECT_OR_CREATE:SIA = {
@@ -47,10 +57,21 @@ INJECT_OR_CREATE:SIA = {
 			}
 		}
 	}
+	flag_definition = {
+		coa = INO_communist
+		priority = 20000
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+			scope:actor ?= {
+				has_variable = AA_indochina_var
+			}
+		}
+	}
 }
 
-INJECT_OR_CREATE:GBR = { # Imperial Federation
-	flag_definition = {	
+INJECT_OR_CREATE:GBR = {
+	# Imperial Federation
+	flag_definition = {
 		coa = IMF
 		subject_canton = IMF
 		priority = 5000
@@ -65,9 +86,9 @@ INJECT_OR_CREATE:GBR = { # Imperial Federation
 		subject_canton = IMF_absolute_monarchy
 		priority = 10000
 		trigger = {
+			coa_def_absolute_monarchy_flag_trigger = yes
 			scope:actor ?= {
 				has_variable = AA_federation_var
-				coa_def_absolute_monarchy_flag_trigger = yes
 			}
 		}
 	}
@@ -75,8 +96,8 @@ INJECT_OR_CREATE:GBR = { # Imperial Federation
 		coa = IMF_republic
 		priority = 10000
 		trigger = {
+			coa_def_republic_flag_trigger = yes
 			scope:actor ?= {
-				coa_def_republic_flag_trigger = yes
 				has_variable = AA_federation_var
 			}
 		}
@@ -85,12 +106,10 @@ INJECT_OR_CREATE:GBR = { # Imperial Federation
 		coa = IMF_communist
 		priority = 200000
 		trigger = {
+			coa_def_communist_flag_trigger = yes
 			scope:actor ?= {
-				coa_def_communist_flag_trigger = yes
 				has_variable = AA_federation_var
 			}
 		}
 	}
 }
-
-

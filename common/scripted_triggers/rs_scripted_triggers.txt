@@ -1,5 +1,4 @@
 ﻿#Japan=============================================================================#
-
 rs_st_country_is_japan = {
 	OR = {
 		c:JAP ?= THIS
@@ -8,7 +7,6 @@ rs_st_country_is_japan = {
 }
 
 #Yamato Japan
-
 rs_st_has_yamato_dynasty = {
 	ruler ?= {
 		OR = {
@@ -43,7 +41,6 @@ rs_st_character_is_jap_showa = {
 }
 
 #Egypt=============================================================================#
-
 rs_st_country_is_egypt = {
 	OR = {
 		c:EGY ?= THIS
@@ -52,7 +49,6 @@ rs_st_country_is_egypt = {
 }
 
 #Alawite Egypt
-
 rs_st_has_alawite_dynasty = {
 	ruler ?= {
 		rs_st_character_is_egy_muhammad_ali
@@ -90,7 +86,6 @@ rs_st_character_is_egy_muhammad_abdel_moneim = {
 }
 
 #Qing China=======================================================================#
-
 rs_st_country_is_china = {
 	OR = {
 		c:CHI ?= THIS
@@ -122,15 +117,14 @@ rs_st_character_is_chi_tongzhi = {
 }
 
 rs_st_character_is_chi_guangxu = {
-	has_template = is_chi_guangxu
+	has_template = is_chi_zaitian
 }
 
 rs_st_character_is_chi_xuantong = {
-	has_template = is_chi_xuantong
+	has_template = is_chi_puyi
 }
 
 #Saudi Nejd=======================================================================#
-
 rs_st_country_is_nejd = {
 	OR = {
 		c:NEJ ?= THIS
@@ -175,7 +169,6 @@ rs_st_character_is_nej_faisal_02 = {
 }
 
 #Chakri Siam======================================================================#
-
 rs_st_country_is_siam = {
 	OR = {
 		c:SIA ?= THIS

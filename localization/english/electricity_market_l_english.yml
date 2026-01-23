@@ -1,11 +1,7 @@
 ﻿l_english:
- electrical_generation: "Direct Current Generation"
- electrical_generation_desc: "The generation and use of direct current allows for reliable and decentralized power supply, ideal for local industrial centers and isolated networks, but limited in range and efficiency."
-
  alternating_voltage: "Alternating Current Generation"
  alternating_voltage_desc: "The introduction of alternating current technology revolutionizes electricity distribution by enabling centralized generation and long-distance transmission. This paves the way for nationwide industrialization and energy supply."
 
- electricity: "Direct Current"
  electricity_market: "Alternating Current"
 
  concept_direct_current: "$electricity$"
@@ -35,5 +31,5 @@
  pm_coal-fired_plant_market: "$pm_coal-fired_plant$ ($electricity_market$)"
  pm_oil-fired_plant_market: "$pm_oil-fired_plant$ ($electricity_market$)"
 
- can_share_electricity_in_market_bool: "Electricity can be traded on the [concept_market]"
- can_share_electricity_in_market_bool_desc: "Unlocks the new good @electricity! $electricity_market$, which represents market-distributed electricity. $building_substation$ buildings can convert $electricity_market$ into local $electricity$, enabling a centralized power supply across the entire [concept_market]."
+ country_can_share_electricity_in_market_bool: "Electricity can be traded on the [concept_market]"
+ country_can_share_electricity_in_market_bool_desc: "Unlocks the new good @electricity! $electricity_market$, which represents market-distributed electricity. $building_substation$ buildings can convert $electricity_market$ into local $electricity$, enabling a centralized power supply across the entire [concept_market]."

@@ -1,60 +1,161 @@
 INO_republic = {
 	pattern = "pattern_solid.tga"
-	color1 = "blue"
-	color2 = "white"
-	color3 = "black"
-
-	textured_emblem = {
-		texture = "flag_ino_2.dds"
-		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	color1 = {
+		185
+		100
+		80
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = {
+			30
+			70
+			80
+		}
+		color2 = {
+			30
+			70
+			80
+		}
+		instance = {
+			position = {
+				0.5
+				0.5
+			}
+			scale = {
+				1
+				0.5
+			}
+		}
+	}
+	colored_emblem = {
+		texture = "indochina.dds"
+		color1 = "white"
+		color2 = "red"
+		instance = {
+			scale = {
+				0.33
+				0.33
+			}
+			position = {
+				0.5
+				0.5
+			}
+		}
 	}
 }
 
+INO_communist = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "blue"
+		color2 = "blue"
+		instance = {
+			position = {
+				0.5
+				0.5
+			}
+			scale = {
+				1
+				0.5
+			}
+		}
+	}
+	colored_emblem = {
+		texture = "indochina.dds"
+		color1 = "red"
+		color2 = "yellow"
+		instance = {
+			scale = {
+				0.33
+				0.33
+			}
+			position = {
+				0.5
+				0.5
+			}
+		}
+	}
+}
 
-
-IMF = { 
-    pattern = "pattern_solid.tga"
+IMF = {
+	pattern = "pattern_solid.tga"
 	color1 = "blue"
 	color2 = "white"
 	color3 = "black"
-
 	textured_emblem = {
 		texture = "flag_imf_1.dds"
-		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+		instance = {
+			scale = {
+				1
+				1
+			}
+			position = {
+				0.5
+				0.5
+			}
+		}
 	}
 }
 
-IMF_absolute_monarchy = { 
-    pattern = "pattern_solid.tga"
+IMF_absolute_monarchy = {
+	pattern = "pattern_solid.tga"
 	color1 = "blue"
 	color2 = "white"
 	color3 = "black"
-
 	textured_emblem = {
 		texture = "flag_imf_2.dds"
-		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+		instance = {
+			scale = {
+				1
+				1
+			}
+			position = {
+				0.5
+				0.5
+			}
+		}
 	}
 }
 
-IMF_republic = { 
-    pattern = "pattern_solid.tga"
+IMF_republic = {
+	pattern = "pattern_solid.tga"
 	color1 = "blue"
 	color2 = "white"
 	color3 = "black"
-
 	textured_emblem = {
 		texture = "flag_imf_3.dds"
-		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+		instance = {
+			scale = {
+				1
+				1
+			}
+			position = {
+				0.5
+				0.5
+			}
+		}
 	}
 }
 
-IMF_communist = { 
-    pattern = "pattern_solid.tga"
+IMF_communist = {
+	pattern = "pattern_solid.tga"
 	color1 = "blue"
 	color2 = "white"
 	color3 = "black"
-
 	textured_emblem = {
 		texture = "flag_imf_4.dds"
-		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+		instance = {
+			scale = {
+				1
+				1
+			}
+			position = {
+				0.5
+				0.5
+			}
+		}
 	}
+}

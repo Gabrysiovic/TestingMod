@@ -1,24 +1,29 @@
 ﻿#Yamato Japan====================================================================#
-
 rs_se_generate_jap_yamato_heir = {
 	switch = {
 		trigger = var:rs_jap_yamato_dynasty
 		1 = {
-			rs_se_generate_is_jap_meiji = { ROLE = heir }
+			rs_se_generate_is_jap_meiji = {
+				ROLE = heir
+			}
 			set_variable = {
 				name = rs_jap_yamato_dynasty
 				value = 2
 			}
 		}
 		2 = {
-			rs_se_generate_is_jap_taisho = { ROLE = heir }
+			rs_se_generate_is_jap_taisho = {
+				ROLE = heir
+			}
 			set_variable = {
 				name = rs_jap_yamato_dynasty
 				value = 3
 			}
 		}
 		3 = {
-			rs_se_generate_is_jap_showa = { ROLE = heir }
+			rs_se_generate_is_jap_showa = {
+				ROLE = heir
+			}
 			set_variable = {
 				name = rs_jap_yamato_dynasty
 				value = 4
@@ -58,33 +63,40 @@ rs_se_generate_is_jap_showa = {
 }
 
 #Alawite Egypt====================================================================#
-
 rs_se_generate_egy_alawite_heir = {
 	switch = {
 		trigger = var:rs_egy_alawite_dynasty
 		1 = {
-			rs_se_generate_is_egy_ismail = { ROLE = heir }
+			rs_se_generate_is_egy_ismail = {
+				ROLE = heir
+			}
 			set_variable = {
 				name = rs_egy_alawite_dynasty
 				value = 2
 			}
 		}
 		2 = {
-			rs_se_generate_is_egy_muhammad_tewfik = { ROLE = heir }
+			rs_se_generate_is_egy_muhammad_tewfik = {
+				ROLE = heir
+			}
 			set_variable = {
 				name = rs_egy_alawite_dynasty
 				value = 3
 			}
 		}
 		3 = {
-			rs_se_generate_is_egy_abbas_hilmi = { ROLE = heir }
+			rs_se_generate_is_egy_abbas_hilmi = {
+				ROLE = heir
+			}
 			set_variable = {
 				name = rs_egy_alawite_dynasty
 				value = 4
 			}
 		}
 		4 = {
-			rs_se_generate_is_egy_muhammad_abdel_moneim = { ROLE = heir }
+			rs_se_generate_is_egy_muhammad_abdel_moneim = {
+				ROLE = heir
+			}
 			set_variable = {
 				name = rs_egy_alawite_dynasty
 				value = 5
@@ -134,26 +146,31 @@ rs_se_generate_is_egy_muhammad_abdel_moneim = {
 }
 
 #Qing China=======================================================================#
-
 rs_se_generate_chi_qing_heir = {
 	switch = {
 		trigger = var:rs_chi_qing_dynasty
 		1 = {
-			rs_se_generate_is_chi_tongzhi = { ROLE = heir }
+			rs_se_generate_is_chi_tongzhi = {
+				ROLE = heir
+			}
 			set_variable = {
 				name = rs_chi_qing_dynasty
 				value = 2
 			}
 		}
 		2 = {
-			rs_se_generate_is_chi_guangxu = { ROLE = heir }
+			rs_se_generate_is_chi_guangxu = {
+				ROLE = heir
+			}
 			set_variable = {
 				name = rs_chi_qing_dynasty
 				value = 3
 			}
 		}
 		3 = {
-			rs_se_generate_is_chi_xuantong = { ROLE = heir }
+			rs_se_generate_is_chi_xuantong = {
+				ROLE = heir
+			}
 			set_variable = {
 				name = rs_chi_qing_dynasty
 				value = 4
@@ -193,33 +210,40 @@ rs_se_generate_is_chi_xuantong = {
 }
 
 #Saud Nejd========================================================================#
-
 rs_se_generate_nej_saud_heir = {
 	switch = {
 		trigger = var:rs_nej_saud_dynasty
 		1 = {
-			rs_se_generate_is_nej_abdul_rahman_01 = { ROLE = heir }
+			rs_se_generate_is_nej_abdul_rahman_01 = {
+				ROLE = heir
+			}
 			set_variable = {
 				name = rs_nej_saud_dynasty
 				value = 2
 			}
 		}
 		2 = {
-			rs_se_generate_is_nej_abdulaziz_02 = { ROLE = heir }
+			rs_se_generate_is_nej_abdulaziz_02 = {
+				ROLE = heir
+			}
 			set_variable = {
 				name = rs_nej_saud_dynasty
 				value = 3
 			}
 		}
 		3 = {
-			rs_se_generate_is_nej_saud_04 = { ROLE = heir }
+			rs_se_generate_is_nej_saud_04 = {
+				ROLE = heir
+			}
 			set_variable = {
 				name = rs_nej_saud_dynasty
 				value = 4
 			}
 		}
 		4 = {
-			rs_se_generate_is_nej_faisal_02 = { ROLE = heir }
+			rs_se_generate_is_nej_faisal_02 = {
+				ROLE = heir
+			}
 			set_variable = {
 				name = rs_nej_saud_dynasty
 				value = 5
@@ -269,44 +293,51 @@ rs_se_generate_is_nej_faisal_02 = {
 }
 
 #Chakri Siam=====================================================================#
-
-SCRIPTED EFFECTS
-
+#SCRIPTED EFFECTS
 #chakri siam
-
 rs_se_generate_sia_chakri_heir = {
 	switch = {
 		trigger = var:rs_sia_chakri_dynasty
 		1 = {
-			rs_se_generate_is_sia_chulalongkorn = { ROLE = heir }
+			rs_se_generate_is_sia_chulalongkorn = {
+				ROLE = heir
+			}
 			set_variable = {
 				name = rs_sia_chakri_dynasty
 				value = 2
 			}
 		}
 		2 = {
-			rs_se_generate_is_sia_vajiravudh = { ROLE = heir }
+			rs_se_generate_is_sia_vajiravudh = {
+				ROLE = heir
+			}
 			set_variable = {
 				name = rs_sia_chakri_dynasty
 				value = 3
 			}
 		}
 		3 = {
-			rs_se_generate_is_sia_prajadhipok = { ROLE = heir }
+			rs_se_generate_is_sia_prajadhipok = {
+				ROLE = heir
+			}
 			set_variable = {
 				name = rs_sia_chakri_dynasty
 				value = 4
 			}
 		}
 		4 = {
-			rs_se_generate_is_sia_ananda_mahidol = { ROLE = heir }
+			rs_se_generate_is_sia_ananda_mahidol = {
+				ROLE = heir
+			}
 			set_variable = {
 				name = rs_sia_chakri_dynasty
 				value = 5
 			}
 		}
 		5 = {
-			rs_se_generate_is_sia_bhumibol_adulyadej = { ROLE = heir }
+			rs_se_generate_is_sia_bhumibol_adulyadej = {
+				ROLE = heir
+			}
 			set_variable = {
 				name = rs_sia_chakri_dynasty
 				value = 6

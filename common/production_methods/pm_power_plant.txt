@@ -1,21 +1,18 @@
-﻿pm_early_power_plant = {
+﻿REPLACE:pm_early_power_plant = {
 	texture = "gfx/interface/icons/production_method_icons/power_plant.dds"
-	replacement_if_valid = pm_coal-pm_early_power_plant_market
-
+	replacement_if_valid = pm_early_power_plant_market
 	state_modifiers = {
 		workforce_scaled = {
 			state_pollution_generation_add = 25
 		}
 	}
-
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_engines_add = 4 # 240
-			goods_input_coal_add = 5 # 150
-			goods_input_wood_add = 5 # 100
-			goods_output_electricity_add = 25 # 750
+			goods_input_engines_add = 4			# 240
+			goods_input_coal_add = 5			# 150
+			goods_input_wood_add = 5			# 100
+			goods_output_electricity_add = 25			# 750
 		}
-
 		level_scaled = {
 			building_employment_laborers_add = 500
 			building_employment_machinists_add = 400
@@ -24,28 +21,23 @@
 	}
 }
 
-pm_coal-fired_plant = {
+REPLACE:pm_coal-fired_plant = {
 	texture = "gfx/interface/icons/production_method_icons/coal_fired_plant.dds"
 	replacement_if_valid = pm_coal-fired_plant_market
-
-
 	unlocking_technologies = {
 		steam_turbine
 	}
-
 	state_modifiers = {
 		workforce_scaled = {
 			state_pollution_generation_add = 50
 		}
 	}
-
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_engines_add = 6 # 360
-			goods_input_coal_add = 20 # 600
-			goods_output_electricity_add = 50 # 1500
+			goods_input_engines_add = 6			# 360
+			goods_input_coal_add = 20			# 600
+			goods_output_electricity_add = 50			# 1500
 		}
-
 		level_scaled = {
 			building_employment_laborers_add = 350
 			building_employment_machinists_add = 500
@@ -54,27 +46,48 @@ pm_coal-fired_plant = {
 	}
 }
 
+#Überschreibt default
+REPLACE:pm_oil-fired_plant = {
+	texture = "gfx/interface/icons/production_method_icons/oil_fired_plant.dds"
+	unlocking_technologies = {
+		oil_turbine
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 40
+		}
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_engines_add = 10			# 600
+			goods_input_oil_add = 25			# 1000
+			goods_output_electricity_add = 80			# 2400
+		}
+		level_scaled = {
+			building_employment_laborers_add = 200
+			building_employment_machinists_add = 600
+			building_employment_engineers_add = 200
+		}
+	}
+}
+
 pm_early_power_plant_market = {
 	texture = "gfx/interface/icons/production_method_icons/power_plant.dds"
-
 	unlocking_technologies = {
 		alternating_voltage
 	}
-
 	state_modifiers = {
 		workforce_scaled = {
 			state_pollution_generation_add = 25
 		}
 	}
-
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_engines_add = 4 # 240
-			goods_input_coal_add = 5 # 150
-			goods_input_wood_add = 5 # 100
-			goods_output_electricity_market_add = 25 # 750
+			goods_input_engines_add = 4			# 240
+			goods_input_coal_add = 5			# 150
+			goods_input_wood_add = 5			# 100
+			goods_output_electricity_market_add = 25			# 750
 		}
-
 		level_scaled = {
 			building_employment_laborers_add = 500
 			building_employment_machinists_add = 400
@@ -85,24 +98,20 @@ pm_early_power_plant_market = {
 
 pm_coal-fired_plant_market = {
 	texture = "gfx/interface/icons/production_method_icons/coal_fired_plant.dds"
-
 	unlocking_technologies = {
 		alternating_voltage
 	}
-
 	state_modifiers = {
 		workforce_scaled = {
 			state_pollution_generation_add = 50
 		}
 	}
-
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_engines_add = 6 # 360
-			goods_input_coal_add = 20 # 600
-			goods_output_electricity_market_add = 50 # 1500
+			goods_input_engines_add = 6			# 360
+			goods_input_coal_add = 20			# 600
+			goods_output_electricity_market_add = 50			# 1500
 		}
-
 		level_scaled = {
 			building_employment_laborers_add = 350
 			building_employment_machinists_add = 500
@@ -111,27 +120,22 @@ pm_coal-fired_plant_market = {
 	}
 }
 
-#Überschreibt default
-pm_oil-fired_plant = {
+pm_oil-fired_plant_market = {
 	texture = "gfx/interface/icons/production_method_icons/oil_fired_plant.dds"
-
 	unlocking_technologies = {
-		oil_turbine
+		alternating_voltage
 	}
-
 	state_modifiers = {
 		workforce_scaled = {
 			state_pollution_generation_add = 40
 		}
 	}
-
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_engines_add = 10 # 600
-			goods_input_oil_add = 25 # 1000
-			goods_output_electricity_market_add = 80 # 2400
+			goods_input_engines_add = 10			# 600
+			goods_input_oil_add = 25			# 1000
+			goods_output_electricity_market_add = 80			# 2400
 		}
-
 		level_scaled = {
 			building_employment_laborers_add = 200
 			building_employment_machinists_add = 600

@@ -1,19 +1,24 @@
 ﻿#inputs
 #local_var:
-
 #root = country
 calculate_price_percentage_electricity_market = {
-	set_local_variable = { name = electricity_market_sell_orders value = 0 }
-	set_local_variable = { name = electricity_market_buy_orders  value = 0 }
-
+	set_local_variable = {
+		name = electricity_market_sell_orders
+		value = 0
+	}
+	set_local_variable = {
+		name = electricity_market_buy_orders
+		value = 0
+	}
 	impl_calculate_sell_orders = yes
 	impl_calculate_buy_orders = yes
 }
 
 impl_calculate_sell_orders = {
 	every_scope_state = {
-		limit = { state_electricity_market_sell_orders > 0}
-
+		limit = {
+			state_electricity_market_sell_orders > 0
+		}
 		change_local_variable = {
 			name = electricity_market_sell_orders
 			add = state_electricity_market_sell_orders
@@ -22,10 +27,11 @@ impl_calculate_sell_orders = {
 }
 
 impl_calculate_buy_orders = {
-	every_scope_state = {
-		limit = { state_electricity_market_buy_orders > 0}
+	ordered_scope_state = {
+		limit = {
+			state_electricity_market_buy_orders > 0
+		}
 		order_by = state_electricity_market_buy_orders
-
 		change_local_variable = {
 			name = electricity_market_buy_orders
 			add = state_electricity_market_buy_orders
