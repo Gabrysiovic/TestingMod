@@ -52,7 +52,7 @@
 		ruler = {
 			add_modifier = {
 				name = modifier_alexander_ii
-				months = very_long_modifier_time
+				days = very_long_modifier_time
 			}
 		}
 	}
@@ -157,7 +157,7 @@ russia_monarchy.3 = { #Accession of Nicholas Tsaraevich
 		ruler = {
 			add_modifier = {
 				name = modifier_nicholas_tsesarevich
-				months = very_long_modifier_time
+				days = very_long_modifier_time
 			}
 		}
 	}
@@ -267,7 +267,7 @@ russia_monarchy.5 = { #Accession of Nicholas II
 		ruler = {
 			add_modifier = {
 				name = modifier_nicholas_ii
-				months = very_long_modifier_time
+				days = very_long_modifier_time
 			}
 		}
 		hidden_effect = {
@@ -543,7 +543,7 @@ russia_monarchy.9 = { #Accession of Alexei
 		ruler = {
 			add_modifier = {
 				name = modifier_alexei_ii
-				months = very_long_modifier_time
+				days = very_long_modifier_time
 			}
 		}
 	}
@@ -590,7 +590,7 @@ russia_monarchy.10 = { #Accession of Michael
 		ruler = {
 			add_modifier = {
 				name = modifier_michael_ii
-				months = very_long_modifier_time
+				days = very_long_modifier_time
 			}
 		}
 	}
@@ -637,7 +637,7 @@ russia_monarchy.11 = { #Accession of George
 		ruler = {
 			add_modifier = {
 				name = modifier_george_i
-				months = very_long_modifier_time
+				days = very_long_modifier_time
 			}
 		}
 	}

@@ -38,7 +38,7 @@ AA_indochina_form =
 			NOT = { has_variable = AA_indochina_var }
 		}
 		hidden_trigger = {
-			NOT = { has_variable = RP_restoration }
+			NOT = { has_modifier = RP_restoration }
 		}
 	}	
 	}
@@ -88,8 +88,9 @@ AA_imperial_federation_form =
 		hidden_trigger = {
 			NOT = { has_variable = AA_federation_var }
 		}
-		NOT = { has_variable = RP_restoration }
-
+		NOT = {
+			has_modifier = RP_restoration
+		}
 		
 	}
 	
@@ -97,17 +98,14 @@ AA_imperial_federation_form =
 		c:GBR ?= THIS
 		has_technology_researched = pan-nationalism
 		has_technology_researched = electric_telegraph
-		not = { exists = c:EIC }
+##		not = { exists = c:BIC }
 		hidden_trigger = {
 			NOT = { has_variable = AA_federation_var }
 		}
 	}
 
 	when_taken = {
-		set_variable = {
-			name = AA_federation_var
-			value = yes
-		}
+		set_variable = AA_federation_var
 		add_modifier = {
 			name = RP_restoration
 			days = long_modifier_time

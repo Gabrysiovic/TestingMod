@@ -18,9 +18,7 @@ is_bel_leopold_01 = {
 	on_created = {
 		set_variable = is_married
 	}
-	trait_generation = {
-		# nothing!
-	}
+	 
 }
 
 is_bel_leopold_02 = {
@@ -35,11 +33,10 @@ is_bel_leopold_02 = {
     ideology = ideology_royalist
     traits = {
         trait_child
-        cruel
+        ruthless
+		masterful_diplomat
     }
-	trait_generation = {
-		# nothing!
-	}
+	 
 }
 
 is_bel_philippe_01 = {
@@ -61,9 +58,7 @@ is_bel_philippe_01 = {
 	on_created = {
 		set_variable = is_married
 	}
-	trait_generation = {
-		# nothing!
-	}
+	 
 }
 
 is_bel_albert_01 = {
@@ -86,9 +81,7 @@ is_bel_albert_01 = {
 	on_created = {
 		set_variable = is_married
 	}
-	trait_generation = {
-		# nothing!
-	}
+	 
 }
 
 is_bel_leopold_03 = {
@@ -110,9 +103,7 @@ is_bel_leopold_03 = {
 	on_created = {
 		set_variable = is_married
 	}
-	trait_generation = {
-		# nothing!
-	}
+	 
 }
 
 is_bel_baudouin_01 = {
@@ -133,7 +124,5 @@ is_bel_baudouin_01 = {
 	on_created = {
 		set_variable = is_married
 	}
-	trait_generation = {
-		# nothing!
-	}
+	 
 }

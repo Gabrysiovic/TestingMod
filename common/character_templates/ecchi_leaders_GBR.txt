@@ -1618,7 +1618,7 @@ ecchi_gbr_conolly_arthur_character_template = {
     }
     commander_usage = {
         country_trigger = {
-            OR = {
+            AND = {
                 has_state_in_state_region = STATE_HOME_COUNTIES
                 NOT = {
                     country_average_cultural_acceptance = { target = cu:british value < acceptance_status_4 }
