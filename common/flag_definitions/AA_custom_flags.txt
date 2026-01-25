@@ -113,3 +113,27 @@ INJECT_OR_CREATE:GBR = {
 		}
 	}
 }
+
+
+INJECT_OR_CREATE:PER = { # Greater Persia
+	flag_definition = {	
+		coa = IRN
+		subject_canton = IRN
+		priority = 5000
+		trigger = {
+			scope:actor ?= {
+				has_variable = AA_persia_var
+			}
+		}
+	}
+	flag_definition = {
+		coa = IRN_republic
+		priority = 10000
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+			scope:actor ?= {
+				has_variable = AA_persia_var
+			}
+		}
+	}
+}

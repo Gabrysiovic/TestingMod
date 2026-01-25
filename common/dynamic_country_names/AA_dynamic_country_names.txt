@@ -34,3 +34,22 @@ INJECT_OR_CREATE:GBR = { #Imperial Federation
 	priority = 10000
 	}
 }
+
+INJECT_OR_CREATE:PER = { #Eranshahr
+	dynamic_country_name = {
+	name = AA_persia
+	adjective = AA_persia_adj
+	
+	is_main_tag_only = yes
+	
+	trigger =
+	{
+		exists = scope:actor
+		scope:actor ?= {
+			has_variable = AA_persia_var
+		}
+			
+	}
+	priority = 10
+	}
+}	

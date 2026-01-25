@@ -3,4 +3,5 @@
 	feldgrau2 	= rgb { 30 30 31 }
 	usa_commie  = rgb { 161 62 62 }
 	blue_indochina = rgb { 78 171 97 }
+	purple_persia = rgb { 85 53 97 }
 } 
