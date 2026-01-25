@@ -1,4 +1,4 @@
-﻿template = {
+template = {
 	template_power_bloc_1 = {
         pattern = "pattern_solid.tga"
         color1 = { 0.0 0.0 0.0 0.0 }
@@ -385,48 +385,15 @@
             instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
         }
     }
-	
-############	France		#################
+###########################################################################
 
-	fra_power_bloc_absolute_monarchy_patterned = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
+### USA ###
 
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+# Grau hsv360 { 288 3 61 }
 
-        colored_emblem = {
-            texture = "shield_mcoa_lis_pattern.png"
-            color1 = list "power_bloc_europe_FRA_monarchy_shield_colors"
-            color2 = hsv360 { 44 100 90 }
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
+## Absolute ##
 
-        textured_emblem = {
-            texture = "pb_top_06.dds"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "Frame_Leaves_Crown.png"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = "pb_center_11.dds"
-            color1 = hsv360 { 44 100 90 }
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_05.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }
-	
-	fra_power_bloc_absolute_monarchy_non_patterned = {
+    usa_power_bloc_absolute = {
         pattern = "pattern_solid.tga"
         color1 = { 0.0 0.0 0.0 0.0 }
 
@@ -435,473 +402,13 @@
 
         colored_emblem = {
             texture = "pb_shield_pattern_00.dds"
-            color1 = list "power_bloc_europe_FRA_monarchy_shield_colors"
-            color2 = hsv360 { 44 100 90 }
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_top_06.dds"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "Frame_Leaves_Crown.png"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = list "power_bloc_europe_FRA_monarchy_charges"
-            color1 = hsv360 { 44 100 90 }
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_05.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }
-	
-	fra_power_bloc_absolute_monarchy_patterned_colored_emblem = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
-
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
-
-        colored_emblem = {
-            texture = "shield_mcoa_lis_pattern.png"
-            color1 = "white"
-            color2 = hsv360 { 44 100 90 }
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
-
-        textured_emblem = {
-            texture = "mcoa_colored_charge_france.png"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "Frame_Leaves_Crown.png"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = "pb_center_11.dds"
-            color1 = hsv360 { 44 100 90 }
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_05.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }
-	
-	fra_power_bloc_dictatorship = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
-
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
-
-        colored_emblem = {
-            texture = "shield_mcoa_tricolore_vert_xwx.png"
-            color1 = "blue"
-            color2 = "red"
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_top_06.dds"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "Frame_Sword_Eagle.png"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = list "power_bloc_europe_FRA_dictatorship_charges"
-            color1 = hsv360 { 44 100 90 }
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_03.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }
-	
-	fra_power_bloc_constitutional_monarchy = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
-
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
-
-        colored_emblem = {
-            texture = "shield_mcoa_tricolore_vert_xwx.png"
-            color1 = "blue"
-            color2 = "red"
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_top_06.dds"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "Frame_Leaves_Fortress.png"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = list "power_bloc_europe_FRA_constitutional_charges"
-            color1 = hsv360 { 44 100 90 }
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_05.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }
-	
-	fra_power_bloc_constitutional_monarchy_dark = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
-
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
-
-        colored_emblem = {
-            texture = "shield_mcoa_tricolore_vert_xwx.png"
-            color1 = "blue"
-            color2 = "red"
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_top_06.dds"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "Frame_Leaves_Fortress.png"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = list "power_bloc_europe_FRA_constitutional_charges_dark"
-            color1 = hsv360 { 0 0 16 }
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_05.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }
-	
-	fra_power_bloc_republic = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
-
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
-
-        colored_emblem = {
-            texture = "shield_mcoa_tricolore_vert_xwx.png"
-            color1 = "blue"
-            color2 = "red"
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_top_06.dds"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "Frame_Leaves_Fortress.png"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = list "power_bloc_europe_FRA_republic"
-            color1 = hsv360 { 0 0 16 }
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_06.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }
-	
-	fra_power_bloc_theocracy = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
-
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
-
-        colored_emblem = {
-            texture = "shield_mcoa_tricolore_vert_xwx.png"
-            color1 = "blue"
-            color2 = "red"
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_top_06.dds"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_frame_00.dds"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = list "power_bloc_christian_theocracy_big"
-            color1 = hsv360 { 0 0 16 }
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_05.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }
-	
-#############	USA		#####################
-
-	usa_power_bloc_absolute_monarchy = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
-
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
-
-        colored_emblem = {
-            texture = list "power_bloc_usa_monarchy_shield"
-            color1 = hsv360 { 0 100 44 }
-            color2 = hsv360 { 229 98 22 }
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_top_06.dds"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "Frame_Sword_Crown.png"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = "pb_center_11.dds"
-            color1 = hsv360 { 44 100 90 }
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_05.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }
-	
-	usa_power_bloc_dictatorship_1 = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
-
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
-
-        colored_emblem = {
-            texture = list "power_bloc_usa_dictatorship_shield"
-            color1 = hsv360 { 229 98 22 }
-            color2 = hsv360 { 0 100 44 }
+            color1 = hsv360 { 221 87 31 } 
+            color2 = hsv360 { 221 87 31 }
             instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
         }
 
         textured_emblem = {
             texture = "mcoa_colored_charge_usa.png"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "Frame_Sword_Eagle.png"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = "pb_center_11.dds"
-            color1 = hsv360 { 44 100 90 }
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_04.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }
-	
-	usa_power_bloc_dictatorship_2 = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
-
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
-
-        colored_emblem = {
-            texture = list "power_bloc_usa_dictatorship_shield"
-            color1 = hsv360 { 229 98 22 }
-            color2 = hsv360 { 0 100 44 }
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_top_06.dds"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "Frame_Sword_Eagle.png"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = list "power_bloc_usa_dictatorship_charges"
-            color1 = "white"
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_04.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }
-	
-	usa_power_bloc_constitutional_monarchy = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
-
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
-
-        colored_emblem = {
-            texture = list "power_bloc_usa_constitutional_shield"
-            color1 = hsv360 { 229 98 22 }
-            color2 = hsv360 { 0 100 44 }
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
-
-        textured_emblem = {
-            texture = "mcoa_colored_charge_usa.png"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "Frame_Leaves_Fortress.png"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = "pb_center_11.dds"
-            color1 = hsv360 { 44 100 90 }
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_05.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }
-	
-	usa_power_bloc_theocracy = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
-
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
-
-        colored_emblem = {
-            texture = list "power_bloc_christian_theocracy_standard"
-            color1 = hsv360 { 229 98 22 }
-            color2 = hsv360 { 0 100 44 }
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_top_06.dds"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_frame_00.dds"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = list "power_bloc_christian_theocracy_big"
-            color1 = "white"
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_05.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }
-	
-############	Spain	########################
-		
-	spa_power_bloc_absolute_monarchy = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
-
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
-
-        colored_emblem = {
-            texture = "shield_mcoa_st_andrews_burgundy.png"
-            color1 = "red"
-            color2 = "white"
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
-
-        textured_emblem = {
-            texture = "mcoa_colored_charge_spain_royal_eagle.png"
             instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
         }
 
@@ -912,8 +419,8 @@
 		
 		colored_emblem = {
             texture = "pb_center_11.dds"
-            color1 = "red"
-            color2 = "black"
+            color1 = hsv360 { 0 99 37 } 
+            color2 = hsv360 { 221 87 31 }
             instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
         }
 
@@ -923,8 +430,2420 @@
             instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
         }
     }
+	
+## M-Oligarchie ##
+
+    usa_power_bloc_m_oligarchie = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_wave.png"
+            color1 = hsv360 { 221 87 31 }
+            color2 = hsv360 { 0 99 37 } 
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "mcoa_colored_charge_usa.png"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Sword_Crown_2.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
 		
-	spa_power_bloc_dictatorship = {
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = hsv360 { 0 99 37 } 
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_04.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Constitutional ##
+
+    usa_power_bloc_constitutional = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_paly_pale.png"
+            color1 = hsv360 { 0 99 37 } 
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Leaves_Crown_2.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = hsv360 { 0 99 37 } 
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_04.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+
+## P-Oligarchie ##
+
+    usa_power_bloc_p_oligarchie = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_wavy.png"
+            color1 = hsv360 { 221 87 31 }
+            color2 = hsv360 { 0 99 37 } 
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "mcoa_colored_charge_usa_small.png"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Ornaments_Fortress.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = hsv360 { 0 99 37 } 
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_03.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Diktatur ##
+
+    usa_power_bloc_dictatorship = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "pb_shield_pattern_00.dds"
+            color1 = hsv360 { 221 87 31 } 
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "mcoa_colored_charge_usa.png"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Sword_Eagle.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = hsv360 { 0 99 37 } 
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_03.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Republik ##
+
+	usa_power_bloc_republic = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_paly_pale_stars_smaller.png"
+            color1 = hsv360 { 0 99 37 } 
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Ornaments_Eagle.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = hsv360 { 0 99 37 } 
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_03.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Technokratie ##
+
+	usa_power_bloc_technocracy = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_circle_big.png"
+            color1 = hsv360 { 288 3 61 }
+            color2 = hsv360 { 221 87 31 } 
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "mcoa_colored_charge_usa.png"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_frame_04.dds"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = hsv360 { 0 99 37 } 
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_06.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+
+## Theokratie
+
+	usa_power_bloc_theocracy = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_circle_stars.png"
+            color1 = "blue"
+            color2 = "white"
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Ornaments_Christian.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_cross_patty.dds"
+            color1 = "red"
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_05.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Kommunistisch ##
+
+	usa_power_bloc_communism = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_circle_stars.png"
+            color1 = "red" 
+            color2 = "yellow"
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_frame_04.dds"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_hammer_sickle_cogwheel_usa.dds"
+            color1 = "yellow"
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_06.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Faschismus ##
+
+    usa_power_bloc_fascist = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_paly_pale.png"
+            color1 = hsv360 { 0 99 37 } 
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Sword_Eagle.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "charge_animals_mcoa_eagle_fascist_header.png"
+            color1 = "white"
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_06.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+
+## Anarchie ##
+
+    usa_power_bloc_anarchy = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_circle_stars.png"
+            color1 = "black"
+            color2 = "white"
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_frame_04.dds"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "charge_symbols_mcoa_fist_1_medium.png"
+            color1 = "red"
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_06.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+### Frankreich ###
+
+## Absolute Bourbon ##
+
+    fra_power_bloc_absolute_monarchy_bourbon = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_lis_pattern.png"
+            color1 = "white" 
+            color2 = hsv360 { 44 83 100 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "mcoa_colored_charge_france.png"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Ornaments_Crown.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = hsv360 { 0 99 37 } 
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_05.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+
+## Absolute Bonaparte ##
+
+    fra_power_bloc_absolute_monarchy_bonaparte = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_tricolore_vert_xwx.png"
+            color1 = hsv360 { 217 87 33 }
+            color2 = hsv360 { 0 100 49 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "mcoa_colored_charge_france_napoleon.png"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Ornaments_Crown.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "charge_multiples_bees_pattern.png"
+            color1 = hsv360 { 44 83 100 }
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_05.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+
+## Absolute ##
+	
+    fra_power_bloc_absolute = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_lis_pattern.png"
+            color1 = hsv360 { 217 87 33 } 
+            color2 = hsv360 { 44 83 100 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Ornaments_Crown.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = hsv360 { 0 99 37 } 
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_05.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+
+## M-Oligarchie Bonaparte##
+
+    fra_power_bloc_m_oligarchie_bonaparte = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_tricolore_vert_xwx.png"
+            color1 = hsv360 { 217 87 33 }
+            color2 = hsv360 { 0 100 49 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Sword_Crown_2.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "charge_multiples_bees_pattern.png"
+            color1 = hsv360 { 44 83 100 }
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_04.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+
+## M-Oligarchie Bourbon ##
+	
+    fra_power_bloc_m_oligarchie_bourbon = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_lis_pattern.png"
+            color1 = "white" 
+            color2 = hsv360 { 44 83 100 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Sword_Crown_2.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = hsv360 { 44 83 100 }
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_04.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## M-Oligarchie ##
+
+    fra_power_bloc_m_oligarchie = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_lis_pattern.png"
+            color1 = hsv360 { 217 87 33 }
+            color2 = hsv360 { 44 83 100 } 
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Sword_Crown_2.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = hsv360 { 0 99 37 } 
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_04.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+
+## Constitutional Bonaparte ##
+
+    fra_power_bloc_constitutional_bonaparte = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_tricolore_vert_xwx.png"
+            color1 = hsv360 { 217 87 33 }
+            color2 = hsv360 { 0 100 49 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Leaves_Crown_2.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "charge_animals_mcoa_eagle_napoleon_small.png"
+            color1 = hsv360 { 44 83 100 }
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_04.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+
+## Constitutional Bourbon ##
+
+    fra_power_bloc_constitutional_bourbon = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_tricolore_vert_xwx.png"
+            color1 = hsv360 { 217 87 33 }
+            color2 = hsv360 { 0 100 49 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Leaves_Crown_2.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "charge_symbols_mcoa_fleur_de_lis_triple.png"
+            color1 = hsv360 { 44 83 100 } 
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_04.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Constitutional ##
+
+    fra_power_bloc_constitutional = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_tricolore_vert_xwx.png"
+            color1 = hsv360 { 217 87 33 }
+            color2 = hsv360 { 0 100 49 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Leaves_Crown_2.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = hsv360 { 0 99 37 } 
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_04.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+
+## P-Oligarchie ##
+
+    fra_power_bloc_p_oligarchie = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_tricolore_vert_xwx.png"
+            color1 = hsv360 { 217 87 33 }
+            color2 = hsv360 { 0 100 49 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Ornaments_Fortress.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "charge_symbols_mcoa_fasces_french_republic.png"
+            color1 = hsv360 { 44 83 100 }  
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_03.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Diktatur ##
+
+    fra_power_bloc_dictatorship = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_tricolore_vert_xwx.png"
+            color1 = hsv360 { 217 87 33 }
+            color2 = hsv360 { 0 100 49 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Sword_Eagle.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "charge_animals_mcoa_eagle_napoleon.png"
+            color1 = hsv360 { 44 83 100 } 
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_03.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Republik ##
+
+	fra_power_bloc_republic = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_tricolore_vert_xwx.png"
+            color1 = hsv360 { 217 87 33 }
+            color2 = hsv360 { 0 100 49 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Ornaments_Fortress.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = hsv360 { 0 99 37 } 
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_04.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Technokratie ##
+
+	fra_power_bloc_technocracy = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_tricolore_vert_xwx.png"
+            color1 = hsv360 { 217 87 33 }
+            color2 = hsv360 { 0 100 49 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_frame_04.dds"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = hsv360 { 44 83 100 } 
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "charge_symbols_mcoa_letters_epsilon_small.png"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+
+## Theokratie
+
+	fra_power_bloc_theocracy = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_tricolore_vert_xwx.png"
+            color1 = hsv360 { 217 87 33 }
+            color2 = hsv360 { 0 100 49 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Ornaments_Christian.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "charge_symbols_religion_christogramm.png"
+            color1 = hsv360 { 44 83 100 }
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_05.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Kommunistisch ##
+
+	fra_power_bloc_communism = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_wave.png"
+            color1 = hsv360 { 0 100 49 } 
+            color2 = hsv360 { 217 87 33 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_frame_04.dds"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "charge_symbols_mcoa_hammer_sickle_4.png"
+            color1 = hsv360 { 44 83 100 }
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_06.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Faschismus ##
+
+    fra_power_bloc_fascist = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_circle_big.png"
+            color1 = hsv360 { 217 87 33 } 
+            color2 = "white"
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Sword_Eagle.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "charge_symbols_mcoa_runes_triskel.png"
+            color1 = hsv360 { 0 100 49 }
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_06.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+
+## Anarchie ##
+
+    fra_power_bloc_anarchy = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_tricolore_vert_xwx.png"
+            color1 = hsv360 { 217 87 33 }
+            color2 = hsv360 { 0 100 49 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_frame_04.dds"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "charge_symbols_mcoa_fist_2_medium.png"
+            color1 = "black"
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_06.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+
+### Niederlande ###
+
+## Absolute ##
+
+    net_power_bloc_absolute = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_tricolore_hori_xwx.png"
+            color1 = hsv360 { 23 100 70 } 
+            color2 = hsv360 { 230 80 30 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Ornaments_Crown.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "charge_animals_mcoa_lion_rampant_sword_crown.png"
+            color1 = hsv360 { 44 83 100 }
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_04.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## M-Oligarchie ##
+
+    net_power_bloc_m_oligarchie = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_st_andrews_2.png"
+            color1 = hsv360 { 23 100 70 } 
+            color2 = hsv360 { 230 80 30 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Sword_Crown_2.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "charge_animals_mcoa_lion_rampant_sword_crown.png"
+            color1 = hsv360 { 44 83 100 }
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_04.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Constitutional ##
+
+    net_power_bloc_constitutional = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_tricolore_hori_xwx.png"
+            color1 = hsv360 { 1 95 55 } 
+            color2 = hsv360 { 230 80 30 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Leaves_Crown_2.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "charge_animals_mcoa_lion_rampant_sword_crown_small.png"
+            color1 = hsv360 { 44 83 100 }
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_04.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+
+## P-Oligarchie ##
+
+    net_power_bloc_p_oligarchie = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_tricolore_hori_xwx_broad.png"
+            color1 = hsv360 { 1 95 55 } 
+            color2 = hsv360 { 230 80 30 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Ornaments_Fortress.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "charge_animals_mcoa_lion_rampant_sword_crown.png"
+            color1 = hsv360 { 44 83 100 }
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_03.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Diktatur ##
+
+    net_power_bloc_dictatorship = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_emanating_tricolore.png"
+            color1 = hsv360 { 23 100 70 } 
+            color2 = hsv360 { 230 80 30 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Sword_Eagle.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "charge_animals_mcoa_lion_rampant_sword_crown.png"
+            color1 = hsv360 { 44 83 100 }
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_03.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Republik ##
+
+	net_power_bloc_republic = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_wave.png"
+            color1 = hsv360 { 1 95 55 } 
+            color2 = hsv360 { 230 80 30 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Ornaments_Eagle.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "charge_animals_mcoa_lion_rampant_sword_crown.png"
+            color1 = hsv360 { 44 83 100 }
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_05.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Technokratie ##
+
+	net_power_bloc_technocracy = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_circle_big.png"
+            color1 = hsv360 { 23 100 70 } 
+            color2 = hsv360 { 230 80 30 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_frame_04.dds"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_lightning_bolt_nacista.dds"
+            color1 = "white"
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_06.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+
+## Theokratie
+
+	net_power_bloc_theocracy = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_cross_throughout.png"
+            color1 = "white"
+            color2 = hsv360 { 230 80 30 } 
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Ornaments_Christian.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "charge_symbols_religion_christogramm_small.png"
+            color1 = hsv360 { 23 100 70 }
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_05.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Kommunistisch ##
+
+	net_power_bloc_communism = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_tricolor_broad_right.png"
+            color1 = hsv360 { 1 95 55 }
+            color2 = hsv360 { 230 80 30 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_frame_04.dds"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_spartakist_star.dds"
+            color1 = "yellow"
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_06.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Faschismus ##
+
+    net_power_bloc_fascist = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_circle_big.png"
+            color1 = hsv360 { 23 100 70 }  
+            color2 = "white"
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Sword_Eagle.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "charge_symbols_mcoa_runes_walknut.png"
+            color1 = hsv360 { 230 80 30 }
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_06.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+
+## Anarchie ##
+
+    net_power_bloc_anarchy = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "pb_shield_pattern_01.dds"
+            color1 = "black"
+            color2 = hsv360 { 230 80 30 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_frame_04.dds"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "charge_symbols_mcoa_anarchy_2.png"
+            color1 = hsv360 { 23 100 70 } 
+            color2 = hsv360 { 23 100 70 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_06.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+
+### Brasilien ###
+
+## Absolute ##
+
+    brz_power_bloc_absolute = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_diamond.png"
+            color1 = hsv360 { 154 91 35 } 
+            color2 = hsv360 { 44 83 85 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "mcoa_colored_charge_brazil_medium.png"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Ornaments_Crown.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = hsv360 { 44 83 100 }
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_05.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## M-Oligarchie ##
+
+    brz_power_bloc_m_oligarchie = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_diamond.png"
+            color1 = hsv360 { 154 91 35 } 
+            color2 = hsv360 { 44 83 85 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "mcoa_colored_charge_brazil_medium.png"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Sword_Crown_2.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = hsv360 { 44 83 100 }
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_03.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Constitutional ##
+
+    brz_power_bloc_constitutional = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_diamond.png"
+            color1 = hsv360 { 154 91 35 } 
+            color2 = hsv360 { 44 83 85 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "mcoa_colored_charge_brazil_medium.png"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Leaves_Crown_2.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = hsv360 { 154 91 35 } 
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_04.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+
+## P-Oligarchie ##
+
+    brz_power_bloc_p_oligarchie = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_diamond.png"
+            color1 = hsv360 { 215 100 31 } 
+            color2 = hsv360 { 44 83 85 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "mcoa_colored_charge_brazil_republic_small.png"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Ornaments_Fortress.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_laurel.dds"
+            color1 = hsv360 { 154 91 35 } 
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_03.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Diktatur ##
+
+    brz_power_bloc_dictatorship = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_fess_broad.png"
+            color1 = hsv360 { 154 91 35 } 
+            color2 = hsv360 { 44 83 85 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "mcoa_colored_charge_brazil_republic_small.png"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Sword_Eagle.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_laurel_circled.dds"
+            color1 = hsv360 { 154 91 35 } 
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_03.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Republik ##
+
+	brz_power_bloc_republic = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_diamond.png"
+            color1 = hsv360 { 154 91 35 } 
+            color2 = hsv360 { 44 83 85 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "mcoa_colored_charge_brazil_republic_medium.png"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Simple_Fortress.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = hsv360 { 44 83 100 }
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_05.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Technokratie ##
+
+	brz_power_bloc_technocracy = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_paly_pale_stars_smaller_two_colors.png"
+            color1 = hsv360 { 154 91 35 } 
+            color2 = hsv360 { 44 83 85 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_frame_04.dds"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = "white"
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_06.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+
+## Theokratie
+
+	brz_power_bloc_theocracy = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_emanating.png"
+            color1 = hsv360 { 154 91 35 } 
+            color2 = hsv360 { 215 100 31 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Ornaments_Christian.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_cross_patty.dds"
+            color1 = hsv360 { 44 83 85 }
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_05.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Kommunistisch ##
+
+	brz_power_bloc_communism = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_paly_pale_stars_smaller_two_colors.png"
+            color1 = hsv360 { 0 100 41 } 
+            color2 = hsv360 { 44 83 85 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_frame_04.dds"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = "yellow"
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_06.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Faschismus ##
+
+    brz_power_bloc_fascist = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_circle_small.png"
+            color1 = hsv360 { 215 100 31 } 
+            color2 = "white"
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Sword_Eagle.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "charge_symbols_mcoa_letters_epsilon_small.png"
+            color1 = "black"
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_06.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+
+## Anarchie ##
+
+    brz_power_bloc_anarchy = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_emanating.png"
+            color1 = "black"
+            color2 = hsv360 { 0 100 41 } 
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_frame_04.dds"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "charge_symbols_mcoa_fist_1.png"
+            color1 = "white"
+            color2 = hsv360 { 23 100 70 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_06.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+
+### Italien ###
+
+## Absolute ##
+
+    ita_power_bloc_absolute = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_tricolore_vert_xwx.png"
+            color1 = hsv360 { 118 100 30 }
+            color2 = hsv360 { 1 96 54 } 
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "mcoa_colored_charge_kingdom_italy_2.png"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Ornaments_Crown.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = hsv360 { 44 83 100 }
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_05.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## M-Oligarchie ##
+
+    ita_power_bloc_m_oligarchie = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_tricolore_vert_xwx.png"
+            color1 = hsv360 { 118 100 30 }
+            color2 = hsv360 { 1 96 54 } 
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "mcoa_colored_charge_kingdom_italy.png"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Sword_Crown_2.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = hsv360 { 44 83 100 }
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_04.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Constitutional ##
+
+    ita_power_bloc_constitutional = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_tricolore_vert_xwx.png"
+            color1 = hsv360 { 118 100 30 }
+            color2 = hsv360 { 1 96 54 } 
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "mcoa_colored_charge_flag_italy_small.png"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Leaves_Crown_2.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = hsv360 { 44 83 100 }
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_04.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+
+## P-Oligarchie ##
+
+    ita_power_bloc_p_oligarchie = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_tricolore_vert_xwx.png"
+            color1 = hsv360 { 118 100 30 }
+            color2 = hsv360 { 1 96 54 } 
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "mcoa_colored_charge_flag_italy_small.png"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Ornaments_Fortress.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = hsv360 { 44 83 100 }
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_03.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Diktatur ##
+
+    ita_power_bloc_dictatorship = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_tricolor_border.png"
+            color1 = hsv360 { 118 100 30 }
+            color2 = hsv360 { 1 96 54 } 
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Sword_Eagle.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "charge_animals_mcoa_eagle_napoleon.png"
+            color1 = "yellow"
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_03.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Republik ##
+
+	ita_power_bloc_republic = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_tricolore_vert_xwx.png"
+            color1 = hsv360 { 118 100 30 }
+            color2 = hsv360 { 1 96 54 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Simple_Fortress.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = hsv360 { 44 83 100 }
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_06.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Technokratie ##
+
+	ita_power_bloc_technocracy = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_tricolor_broad_right.png"
+            color1 = hsv360 { 118 100 30 }
+            color2 = hsv360 { 1 96 54 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_frame_04.dds"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "charge_symbols_mcoa_liberty_bolt_2.png"
+            color1 = "white"
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_06.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+
+## Theokratie
+
+	ita_power_bloc_theocracy = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_tricolore_vert_xwx.png"
+            color1 = hsv360 { 118 100 30 }
+            color2 = hsv360 { 1 96 54 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "mcoa_colored_charge_papal_states.png"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Ornaments_Christian.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = hsv360 { 23 100 70 }
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_05.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Kommunistisch ##
+
+	ita_power_bloc_communism = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_tricolor_broad_right.png"
+            color1 = hsv360 { 1 96 54 }
+            color2 = hsv360 { 118 100 30 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_frame_04.dds"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "charge_symbols_mcoa_hammer_sickle_6.png"
+            color1 = "yellow"
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_06.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Faschismus ##
+
+    ita_power_bloc_fascist = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_tricolore_vert_xwx.png"
+            color1 = hsv360 { 118 100 30 }
+            color2 = hsv360 { 1 96 54 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "mcoa_colored_charge_italy_fascist_eagle.png"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Sword_Eagle.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = hsv360 { 230 80 30 }
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_06.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+
+## Anarchie ##
+
+    ita_power_bloc_anarchy = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_tricolor_broad_left.png"
+            color1 = hsv360 { 118 100 30 }
+            color2 = hsv360 { 1 96 54 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_frame_04.dds"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "charge_symbols_stars_star_five_small.png"
+            color1 = "white"
+            color2 = hsv360 { 23 100 70 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_06.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+
+### Spanien ###
+
+## Absolute ##
+
+    spa_power_bloc_absolute = {
         pattern = "pattern_solid.tga"
         color1 = { 0.0 0.0 0.0 0.0 }
 
@@ -933,7 +2852,167 @@
 
         colored_emblem = {
             texture = "shield_mcoa_st_andrews_burgundy.png"
-            color1 = "red"
+            color1 = hsv360 { 1 96 54 }
+            color2 = "white"
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Ornaments_Crown.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = hsv360 { 44 83 100 }
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_05.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## M-Oligarchie ##
+
+    spa_power_bloc_m_oligarchie = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_pale_broad.png"
+            color1 = hsv360 { 44 83 85 }
+            color2 = hsv360 { 1 96 54 }  
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "mcoa_colored_charge_spain_royal_eagle.png"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Sword_Crown_2.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = hsv360 { 44 83 100 }
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_04.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Constitutional ##
+
+    spa_power_bloc_constitutional = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_pale_broad.png"
+            color1 = hsv360 { 44 83 85 }
+            color2 = hsv360 { 1 96 54 }  
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "mcoa_colored_charge_spain_republic_medium.png"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Leaves_Crown_2.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = hsv360 { 44 83 100 }
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_04.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+
+## P-Oligarchie ##
+
+    spa_power_bloc_p_oligarchie = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_pale_broad.png"
+            color1 = hsv360 { 44 83 85 }
+            color2 = hsv360 { 1 96 54 }  
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "mcoa_colored_charge_spain_dict_eagle.png"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Ornaments_Fortress.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = hsv360 { 44 83 100 }
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_03.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Diktatur ##
+
+    spa_power_bloc_dictatorship = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_st_andrews_burgundy.png"
+            color1 = hsv360 { 1 96 54 }
             color2 = "white"
             instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
         }
@@ -950,94 +3029,20 @@
 		
 		colored_emblem = {
             texture = "pb_center_11.dds"
-            color1 = "yellow"
-            color2 = "black"
+            color1 = hsv360 { 44 83 100 }
+            color2 = hsv360 { 221 87 31 }
             instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
         }
 
         textured_emblem = {
-            texture = "pb_side_04.dds"
+            texture = "pb_side_03.dds"
             instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
             instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
         }
     }
 	
-	spa_power_bloc_oligarchy = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
+## Republik ##
 
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
-
-        colored_emblem = {
-            texture = list "power_bloc_shields_absolute_monarchy_close_colors"
-            color1 = "red"
-            color2 = "yellow"
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
-
-        textured_emblem = {
-            texture = "mcoa_colored_charge_spain_dict_eagle.png"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "Frame_Sword_Eagle.png"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = "pb_center_11.dds"
-            color1 = "yellow"
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_04.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }
-			
-	spa_power_bloc_constitutional_monarchy = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
-
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
-
-        colored_emblem = {
-            texture = list "power_bloc_shields_two_color_nation"
-            color1 = "red"
-            color2 = "yellow"
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
-
-        textured_emblem = {
-            texture = "mcoa_colored_charge_spain_royal_eagle.png"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "Frame_Leaves_Fortress.png"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = "pb_center_11.dds"
-            color1 = "yellow"
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_05.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }
-	
 	spa_power_bloc_republic = {
         pattern = "pattern_solid.tga"
         color1 = { 0.0 0.0 0.0 0.0 }
@@ -1046,9 +3051,9 @@
         # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
 
         colored_emblem = {
-            texture = list "power_bloc_shields_two_color_nation"
-            color1 = "red"
-            color2 = "yellow"
+            texture = "shield_mcoa_tricolor_broad_left.png"
+            color1 = hsv360 { 308 90 38 }
+            color2 = hsv360 { 1 96 54 }
             instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
         }
 
@@ -1058,24 +3063,66 @@
         }
 
         textured_emblem = {
-            texture = "Frame_Leaves_Fortress.png"
+            texture = "Frame_Simple_Fortress.png"
             instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
         }
 		
 		colored_emblem = {
             texture = "pb_center_11.dds"
-            color1 = "yellow"
-            color2 = "black"
+            color1 = hsv360 { 44 83 100 }
+            color2 = hsv360 { 221 87 31 }
             instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
         }
 
         textured_emblem = {
-            texture = "pb_side_02.dds"
+            texture = "pb_side_06.dds"
             instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
             instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
         }
     }
 	
+## Technokratie ##
+
+	spa_power_bloc_technocracy = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_tricolor_broad_both.png"
+            color1 = hsv360 { 308 90 38 }
+            color2 = hsv360 { 1 96 54 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "mcoa_colored_charge_spain_republic_small.png"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_frame_04.dds"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "pb_center_11.dds"
+            color1 = "white"
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_06.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+
+## Theokratie
+
 	spa_power_bloc_theocracy = {
         pattern = "pattern_solid.tga"
         color1 = { 0.0 0.0 0.0 0.0 }
@@ -1084,9 +3131,9 @@
         # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
 
         colored_emblem = {
-            texture = "pb_shield_pattern_00.dds"
-            color1 = "white"
-            color2 = "red"
+            texture = "shield_mcoa_fess_broad.png"
+            color1 = hsv360 { 1 96 54 } 
+            color2 = "white"
             instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
         }
 
@@ -1096,14 +3143,14 @@
         }
 
         textured_emblem = {
-            texture = "pb_frame_03.dds"
+            texture = "Frame_Ornaments_Christian.png"
             instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
         }
 		
 		colored_emblem = {
             texture = "charge_symbols_mcoa_cross_santiago.png"
-            color1 = "red"
-            color2 = "black"
+            color1 = hsv360 { 1 96 54 } 
+            color2 = hsv360 { 221 87 31 }
             instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
         }
 
@@ -1114,7 +3161,9 @@
         }
     }
 	
-	spa_power_bloc_fascist = {
+## Kommunistisch ##
+
+	spa_power_bloc_communism = {
         pattern = "pattern_solid.tga"
         color1 = { 0.0 0.0 0.0 0.0 }
 
@@ -1122,9 +3171,49 @@
         # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
 
         colored_emblem = {
-            texture = "shield_mcoa_tricolore_hori_xbx_broad.png"
-            color1 = "red"
-            color2 = "red"
+            texture = "shield_mcoa_tricolor_broad_both.png"
+            color1 = hsv360 { 1 96 54 } 
+            color2 = hsv360 { 308 90 38 }
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_top_06.dds"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_frame_04.dds"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+		
+		colored_emblem = {
+            texture = "charge_symbols_mcoa_hammer_sickle_1_small.png"
+            color1 = "yellow"
+            color2 = hsv360 { 221 87 31 }
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_06.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
+	
+## Faschismus ##
+
+    spa_power_bloc_fascist = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
+
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "shield_mcoa_fess_broad.png"
+            color1 = hsv360 { 1 96 54 } 
+            color2 = "black"
             instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
         }
 
@@ -1140,21 +3229,21 @@
 		
 		colored_emblem = {
             texture = "charge_symbols_mcoa_falange.png"
-            color1 = "red"
-            color2 = "black"
+            color1 = hsv360 { 1 96 54 } 
+            color2 = hsv360 { 221 87 31 }
             instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
         }
 
         textured_emblem = {
-            texture = "pb_side_04.dds"
+            texture = "pb_side_06.dds"
             instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
             instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
         }
     }
 
-#######################	BRAZIL	######################################
+## Anarchie ##
 
-	brz_power_bloc_absolute_monarchy = {
+    spa_power_bloc_anarchy = {
         pattern = "pattern_solid.tga"
         color1 = { 0.0 0.0 0.0 0.0 }
 
@@ -1162,658 +3251,26 @@
         # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
 
         colored_emblem = {
-            texture = "shield_mcoa_diamond.png"
-            color1 = "green"
-            color2 = "yellow"
+            texture = "pb_shield_pattern_01.dds"
+            color1 = hsv360 { 1 96 54 } 
+            color2 = "black"
             instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
         }
 
         textured_emblem = {
-            texture = "mcoa_colored_charge_brazil_small.png"
+            texture = "pb_top_06.dds"
             instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
         }
 
         textured_emblem = {
-            texture = "Frame_Leaves_Lion.png"
+            texture = "pb_frame_04.dds"
             instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
         }
 		
 		colored_emblem = {
             texture = "pb_center_11.dds"
-            color1 = "red"
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_05.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }
-	
-	brz_power_bloc_oligarchy = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
-
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
-
-        colored_emblem = {
-            texture = list "power_bloc_usa_monarchy_shield"
-            color1 = "yellow"
-            color2 = "green"
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_top_06.dds"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "Frame_Leaves_Lion.png"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = "pb_center_11.dds"
-            color1 = "red"
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_04.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }
-	
-	brz_power_bloc_republic = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
-
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
-
-        colored_emblem = {
-            texture = "shield_mcoa_diamond.png"
-            color1 = "green"
-            color2 = "yellow"
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
-
-        textured_emblem = {
-            texture = "mcoa_colored_charge_brazil_republic_small.png"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "Frame_Ornaments_Fortress.png"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = "pb_center_11.dds"
-            color1 = "red"
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_05.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }
-	
-	brz_power_bloc_theocracy = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
-
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
-
-        colored_emblem = {
-            texture = list "power_bloc_christian_theocracy_standard"
-            color1 = "green"
-            color2 = "blue"
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_top_06.dds"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_frame_00.dds"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = list "power_bloc_christian_theocracy_big"
-            color1 = "yellow"
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_05.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }
-		
-		
-########################		GENERICS		######################
-	
-#########	Anarchy		##############################################
-	
-	power_bloc_anarchy_dark_perpale = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
-
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
-
-        colored_emblem = {
-            texture = list "power_bloc_anarchy_shields_dark"
-            color1 = hsv360 { 0 0 4 }
-            color2 = hsv360 { 0 97 42 }
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_top_06.dds"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_frame_04.dds"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = list "power_bloc_anarchy_charges"
-            color1 = hsv360 { 0 0 88 }
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_06.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }
-	power_bloc_anarchy_dark_round = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
-
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
-
-        colored_emblem = {
-            texture = "shield_mcoa_circle_big.png"
-            color1 = hsv360 { 0 0 4 }
-            color2 = hsv360 { 0 97 42 }
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_top_06.dds"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_frame_04.dds"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = list "power_bloc_anarchy_charges_for_cirlce"
-            color1 = hsv360 { 0 0 88 }
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_06.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }
-	
-	power_bloc_anarchy_simple = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
-
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
-
-        colored_emblem = {
-            texture = "pb_shield_pattern_00.dds"
-            color1 = hsv360 { 0 0 11 }
-            color2 = "white"
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_top_06.dds"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_frame_04.dds"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = "charge_symbols_stars_star_five.png"
-            color1 = hsv360 { 0 97 42 }
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_06.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }
-	
-################	Muslim Countries	##########
-
-	power_bloc_muslim_simple = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
-
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
-
-        colored_emblem = {
-            texture = "pb_shield_pattern_00.dds"
-            color1 = hsv360 { 0 0 11 }
-            color2 = "white"
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_top_06.dds"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_frame_04.dds"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = "charge_symbols_stars_star_five.png"
-            color1 = hsv360 { 0 97 42 }
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_06.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }	
-
-################	Communism	##################
-
-################	STANDARD	##################
-
-	power_bloc_communism_standard = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
-
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
-
-        colored_emblem = {
-            texture = "pb_shield_pattern_00.dds"
-            color1 = hsv360 { 0 95 36 }
-            color2 = "yellow"
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_top_06.dds"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_frame_04.dds"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = list "power_bloc_communism_charges_for_circle"
-            color1 = "yellow"
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_06.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }
-
-########	Red-White-Blue
-	
-	power_bloc_communism_blue_outer_white_circle_red_charge = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
-
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
-
-        colored_emblem = {
-            texture = "shield_mcoa_circle_big.png"
-            color1 = "blue"
-            color2 = "white"
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_top_06.dds"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_frame_04.dds"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = list "power_bloc_communism_charges_for_circle"
-            color1 = hsv360 { 0 95 36 }
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_06.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }
-	
-	power_bloc_communism_red_outer_white_circle_blue_charge = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
-
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
-
-        colored_emblem = {
-            texture = "shield_mcoa_circle_big.png"
-            color1 = hsv360 { 0 95 36 }
-            color2 = "white"
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_top_06.dds"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_frame_04.dds"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = list "power_bloc_communism_charges_for_circle"
-            color1 = "blue"
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_06.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }
-	
-	power_bloc_communism_red_blue_golden_or_white_charge = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
-
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
-
-        colored_emblem = {
-            texture = list "power_bloc_communism_red_blue_golden_charge"
-            color1 = hsv360 { 0 95 36 }
-            color2 = "blue"
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_top_06.dds"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_frame_04.dds"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = list "power_bloc_communism_charges_for_circle"
-            color1 = list "power_bloc_white_or_golden"
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_06.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }
-
-######## Tricolore - Red-White-Blue
-	
-	power_bloc_communism_trico_vert_blue_red_golden_charge = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
-
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
-
-        colored_emblem = {
-            texture = "shield_mcoa_tricolore_vert_xwx.png"
-            color1 = "blue"
-            color2 = "red"
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_top_06.dds"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_frame_04.dds"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = list "power_bloc_communism_charges_for_circle"
-            color1 = "yellow"
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_06.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }
-	
-############	Fascist		#################
-
-####Green - Blue #######
-
-	power_bloc_fascist_round_outer_green_blue_charge = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
-
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
-
-        colored_emblem = {
-            texture = "shield_mcoa_circle_big.png"
-            color1 = "green"
-            color2 = "white"
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_top_06.dds"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "Frame_Simple_Eagle.png"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = list "power_bloc_fascist_standard"
-            color1 = "blue"
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_06.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }
-
-####Green - Yellow - Blue
-	
-	power_bloc_fascist_round_outer_blue_inner_yellow_blue_charge = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
-
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
-
-        colored_emblem = {
-            texture = "shield_mcoa_circle_big.png"
-            color1 = "green"
-            color2 = "yellow"
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_top_06.dds"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "Frame_Simple_Eagle.png"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = list "power_bloc_fascist_standard"
-            color1 = "blue"
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_06.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }
-
-######### Red-Blue
-
-	power_bloc_fascist_round_outer_red_blue_charge = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
-
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
-
-        colored_emblem = {
-            texture = "shield_mcoa_circle_big.png"
-            color1 = hsv360 { 0 85 40 }
-            color2 = "white"
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_top_06.dds"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "Frame_Simple_Eagle.png"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = list "power_bloc_fascist_standard"
-            color1 = "blue"
-            color2 = "black"
-            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_side_06.dds"
-            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
-            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
-        }
-    }
-
-######### Blue- Red
-	
-	power_bloc_fascist_round_outer_blue_red_charge = {
-        pattern = "pattern_solid.tga"
-        color1 = { 0.0 0.0 0.0 0.0 }
-
-        # If we ever change the order of layers here, remember to also update them
-        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
-
-        colored_emblem = {
-            texture = "shield_mcoa_circle_big.png"
-            color1 = hsv360 { 217 100 23 }
-            color2 = "white"
-            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
-        }
-
-        textured_emblem = {
-            texture = "pb_top_06.dds"
-            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
-        }
-
-        textured_emblem = {
-            texture = "Frame_Simple_Eagle.png"
-            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
-        }
-		
-		colored_emblem = {
-            texture = list "power_bloc_fascist_standard"
-            color1 = hsv360 { 0 100 40 }
-            color2 = "black"
+            color1 = "white"
+            color2 = hsv360 { 23 100 70 }
             instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
         }
 
@@ -1982,6 +3439,46 @@
             instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
         }
     }
+	
+    por_power_bloc_1 = {
+        pattern = "pattern_solid.tga"
+        color1 = { 0.0 0.0 0.0 0.0 }
 
-#############	
+        # If we ever change the order of layers here, remember to also update them
+        # in NGraphics::NPowerBlocCoa::PIECE_LAYERS_ORDER.
+
+        colored_emblem = {
+            texture = "pb_shield_pattern_01.dds"
+            color1 = "blue"
+            color2 = "white"
+            instance = { scale = { 0.72 0.72 } position = { 0.49 0.6 } }
+        }
+
+        textured_emblem = {
+            texture = "mcoa_colored_charge_portugal_big.png"
+            instance = { scale = { 0.7 0.7 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "Frame_Leaves_Crown.png"
+            instance = { scale = { 0.9 0.9 } position = { 0.5 0.48 } }
+        }
+
+        colored_emblem = {
+            texture = "pb_center_11.dds""
+            color1 = "red"
+            color2 = "yellow"
+            instance = { scale = { 0.45 0.45 } position = { 0.49 0.54 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_05.dds"
+            instance = { scale = { 0.65 0.65 } position = { 0.155 0.55 } }
+        }
+
+        textured_emblem = {
+            texture = "pb_side_05.dds"
+            instance = { scale = { -0.65 0.65 } position = { 0.82 0.55 } }
+        }
+    }
 }
