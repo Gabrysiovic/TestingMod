@@ -8,17 +8,16 @@ AA_mukden_decision = {
 	}
 	#checks if Japan owns all of Korea -Akiko
 	possible = {
-	AND = 
-	{
-		any_state_in_korean_peninsula = {
-			count = all
-			owner = ROOT
+		AND = {
+			any_state_in_korean_peninsula = {
+				count = all
+				owner = ROOT
+			}
+			custom_tooltip = {
+				text = is_meiji_japan
+				has_variable = meiji_restoration_complete
+			}
 		}
-		custom_tooltip = {
-			text = is_meiji_japan
-			has_variable = meiji_restoration_complete
-		}
-	}	
 	}
 	when_taken = {
 		set_variable = mukden_taken

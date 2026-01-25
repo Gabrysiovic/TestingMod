@@ -1,152 +1,180 @@
 ﻿# Austria
-
 ecchi_aus_lueger_character_template = {
-    first_name = Karl
-    last_name = ecchi_Lueger
-    historical = yes
-    culture = cu:south_german
-
-    religion = rel:catholic
-    ideology = ideology_ethno_nationalist
-    interest_group = ig_petty_bourgeoisie
+	first_name = Karl
+	last_name = ecchi_Lueger
+	historical = yes
+	culture = cu:south_german
+	religion = rel:catholic
+	ideology = ideology_ethno_nationalist
+	interest_group = ig_petty_bourgeoisie
 	dna = ecchi_dna_karl_lueger
-    birth_date = 1844.10.24
-    traits = { bigoted demagogue }
-    interest_group_leader_usage = {
-        country_trigger = {
-            OR = {
-                AND = {
-                    exists = c:SGF
-					this = c:SGF
-					c:SGF = { owns_entire_state_region = STATE_AUSTRIA }
-                    NOT = { exists = c:AUS }
-                }
-                AND = {
-                    exists = c:AUS
-                    this = c:AUS
-                }
+	birth_date = 1844.10.24
+	traits = {
+		bigoted
+		demagogue
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			OR = {
 				AND = {
-                    exists = c:KUK
-					this = c:KUK
-                    NOT = { exists = c:AUS }
+					exists = c:SGF
+					this = c:SGF
+					c:SGF = {
+						owns_entire_state_region = STATE_AUSTRIA
+					}
+					NOT = {
+						exists = c:AUS
+					}
 				}
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            OR = {
-                is_interest_group_type = ig_petty_bourgeoisie
-                is_interest_group_type = ig_devout
-            }
-        }
-        earliest_usage_date = 1875.1.1
-        latest_usage_date = 1910.3.10
-        chance = 65
-    }
+				AND = {
+					exists = c:AUS
+					this = c:AUS
+				}
+				AND = {
+					exists = c:KUK
+					this = c:KUK
+					NOT = {
+						exists = c:AUS
+					}
+				}
+			}
+		}
+		interest_group_trigger = {
+			ig_counts_as_marginal = no
+			OR = {
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_devout
+			}
+		}
+		earliest_usage_date = 1875.1.1
+		latest_usage_date = 1910.3.10
+		chance = 65
+	}
 }
 
 ecchi_aus_bauer_character_template = {
-    first_name = Otto
-    last_name = ecchi_Bauer
-    historical = yes
-    culture = cu:south_german
-
-    religion = rel:jewish
-    ideology = ideology_social_democrat
-    interest_group = ig_trade_unions
+	first_name = Otto
+	last_name = ecchi_Bauer
+	historical = yes
+	culture = cu:south_german
+	religion = rel:jewish
+	ideology = ideology_social_democrat
+	interest_group = ig_trade_unions
 	dna = ecchi_dna_otto_bauer
-    birth_date = 1881.9.5
-    traits = { persistent ambitious }
-    interest_group_leader_usage = {
-        country_trigger = {
-            OR = {
-                AND = {
-                    exists = c:SGF
-					this = c:SGF
-					c:SGF = { owns_entire_state_region = STATE_AUSTRIA }
-                    NOT = { exists = c:AUS }
-                }
-                AND = {
-                    exists = c:AUS
-                    this = c:AUS
-                }
+	birth_date = 1881.9.5
+	traits = {
+		persistent
+		ambitious
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			OR = {
 				AND = {
-                    exists = c:KUK
-					this = c:KUK
-                    NOT = { exists = c:AUS }
+					exists = c:SGF
+					this = c:SGF
+					c:SGF = {
+						owns_entire_state_region = STATE_AUSTRIA
+					}
+					NOT = {
+						exists = c:AUS
+					}
 				}
-            }
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            OR = {
-                is_interest_group_type = ig_rural_folk
-                is_interest_group_type = ig_trade_unions
-            }
-        }
-        earliest_usage_date = 1905.1.1
-        latest_usage_date = 1938.7.4
-        chance = 65
-    }
+				AND = {
+					exists = c:AUS
+					this = c:AUS
+				}
+				AND = {
+					exists = c:KUK
+					this = c:KUK
+					NOT = {
+						exists = c:AUS
+					}
+				}
+			}
+		}
+		interest_group_trigger = {
+			ig_counts_as_marginal = no
+			OR = {
+				is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_trade_unions
+			}
+		}
+		earliest_usage_date = 1905.1.1
+		latest_usage_date = 1938.7.4
+		chance = 65
+	}
 }
 
 ecchi_aus_von_suttner_character_template = {
-    first_name = Bertha
-    last_name = ecchi_von_Suttner
-    historical = yes
-    culture = cu:south_german
-    female = yes
-    religion = rel:catholic
-    ideology = ideology_pacifist
-    interest_group = ig_intelligentsia
+	first_name = Bertha
+	last_name = ecchi_von_Suttner
+	historical = yes
+	culture = cu:south_german
+	female = yes
+	religion = rel:catholic
+	ideology = ideology_pacifist
+	interest_group = ig_intelligentsia
 	dna = ecchi_dna_bertha_von_suttner
-    birth_date = 1843.6.9
-    traits = { romantic persistent inspirational_orator }
-    interest_group_leader_usage = {
-        country_trigger = {
-            OR = {
-                AND = {
-                    exists = c:SGF
-					this = c:SGF
-					c:SGF = { owns_entire_state_region = STATE_AUSTRIA }
-                    NOT = { exists = c:AUS }
-                }
-                AND = {
-                    exists = c:AUS
-                    this = c:AUS
-                }
+	birth_date = 1843.6.9
+	traits = {
+		romantic
+		persistent
+		inspirational_orator
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			OR = {
 				AND = {
-                    exists = c:KUK
-					this = c:KUK
-                    NOT = { exists = c:AUS }
+					exists = c:SGF
+					this = c:SGF
+					c:SGF = {
+						owns_entire_state_region = STATE_AUSTRIA
+					}
+					NOT = {
+						exists = c:AUS
+					}
 				}
-            }
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            OR = {
-                is_interest_group_type = ig_intelligentsia
-                is_interest_group_type = ig_landowners
-            }
-        }
-        earliest_usage_date = 1885.1.1
-        latest_usage_date = 1914.6.21
-        chance = 65
-    }
+				AND = {
+					exists = c:AUS
+					this = c:AUS
+				}
+				AND = {
+					exists = c:KUK
+					this = c:KUK
+					NOT = {
+						exists = c:AUS
+					}
+				}
+			}
+		}
+		interest_group_trigger = {
+			ig_counts_as_marginal = no
+			OR = {
+				is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_landowners
+			}
+		}
+		earliest_usage_date = 1885.1.1
+		latest_usage_date = 1914.6.21
+		chance = 65
+	}
 }
 
 ecchi_aus_porsche_character_template = {
-    first_name = Ferdinand
-    last_name = ecchi_Porsche
-    historical = yes
-    culture = cu:south_german
-
-    religion = rel:protestant
-    ideology = ideology_traditionalist
-    interest_group = ig_industrialists
+	first_name = Ferdinand
+	last_name = ecchi_Porsche
+	historical = yes
+	culture = cu:south_german
+	religion = rel:protestant
+	ideology = ideology_traditionalist
+	interest_group = ig_industrialists
 	dna = ecchi_dna_ferdinand_porsche
-    birth_date = 1875.9.3
-    traits = { meticulous imperious }
-    interest_group_leader_usage = {
+	birth_date = 1875.9.3
+	traits = {
+		meticulous
+		imperious
+	}
+	interest_group_leader_usage = {
 		country_trigger = {
 			OR = {
 				AND = {
@@ -157,17 +185,19 @@ ecchi_aus_porsche_character_template = {
 						exists = c:NGF
 					}
 				}
-				 AND = {
+				AND = {
 					exists = c:NGF
 					this = c:NGF
-					NOT = { exists = c:GER }
+					NOT = {
+						exists = c:GER
+					}
 				}
 				AND = {
 					exists = c:GER
 					this = c:GER
 				}
 				AND = {
-                    exists = c:KUK
+					exists = c:KUK
 					this = c:KUK
 					NOT = {
 						exists = c:GER
@@ -176,133 +206,149 @@ ecchi_aus_porsche_character_template = {
 				}
 			}
 		}
-        interest_group_trigger = {
-            is_interest_group_type = ig_industrialists
-        }
-        earliest_usage_date = 1920.1.1
-        latest_usage_date = 1951.1.30
-        chance = 65
-    }
+		interest_group_trigger = {
+			is_interest_group_type = ig_industrialists
+		}
+		earliest_usage_date = 1920.1.1
+		latest_usage_date = 1951.1.30
+		chance = 65
+	}
 }
 
 ## Engelbert Dollfuss
-
 ecchi_aus_dollfuss_character_template = {
-    first_name = Engelbert
-    last_name = ecchi_Dollfuss
-    historical = yes
-    culture = cu:south_german
-
-    religion = rel:catholic
-    ideology = ideology_fascist
-    interest_group = ig_petty_bourgeoisie
-    dna = ecchi_dna_engelbert_dollfuss
-    birth_date = 1892.10.4
-    traits = { imperious persistent }
-    interest_group_leader_usage = {
-        country_trigger = {
-            OR = {
-                AND = {
-                    exists = c:AUS
-                    this = c:AUS
-                }
+	first_name = Engelbert
+	last_name = ecchi_Dollfuss
+	historical = yes
+	culture = cu:south_german
+	religion = rel:catholic
+	ideology = ideology_fascist
+	interest_group = ig_petty_bourgeoisie
+	dna = ecchi_dna_engelbert_dollfuss
+	birth_date = 1892.10.4
+	traits = {
+		imperious
+		persistent
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			OR = {
 				AND = {
-                    exists = c:KUK
-					this = c:KUK
-                    NOT = { exists = c:AUS }
+					exists = c:AUS
+					this = c:AUS
 				}
-            }
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_petty_bourgeoisie
-        }
-        earliest_usage_date = 1929.1.1
-        latest_usage_date = 1934.7.25
-        chance = 65
-    }
+				AND = {
+					exists = c:KUK
+					this = c:KUK
+					NOT = {
+						exists = c:AUS
+					}
+				}
+			}
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_petty_bourgeoisie
+		}
+		earliest_usage_date = 1929.1.1
+		latest_usage_date = 1934.7.25
+		chance = 65
+	}
 }
 
 ## Georg von Trapp
-
 ecchi_aus_von_trapp_character_template = {
-    first_name = Georg
-    last_name = ecchi_von_Trapp
-    historical = yes
-    culture = cu:south_german
-
-    religion = rel:catholic
-    ideology = ideology_humanitarian
-    interest_group = ig_armed_forces
-    dna = ecchi_dna_georg_von_trapp
-    birth_date = 1880.4.4
-    traits = { romantic brave honorable experienced_naval_commander charismatic }
-    commander_rank = default
-    commander_usage = {
-        country_trigger = {
-            OR = {
-                AND = {
-                    exists = c:AUS
-                    this = c:AUS
-                }
+	first_name = Georg
+	last_name = ecchi_von_Trapp
+	historical = yes
+	culture = cu:south_german
+	religion = rel:catholic
+	ideology = ideology_humanitarian
+	interest_group = ig_armed_forces
+	dna = ecchi_dna_georg_von_trapp
+	birth_date = 1880.4.4
+	traits = {
+		romantic
+		brave
+		honorable
+		experienced_naval_commander
+		charismatic
+	}
+	commander_rank = default
+	commander_usage = {
+		country_trigger = {
+			OR = {
 				AND = {
-                    exists = c:KUK
-					this = c:KUK
-                    NOT = { exists = c:AUS }
+					exists = c:AUS
+					this = c:AUS
 				}
-            }
-        }
-        role = admiral
-        earliest_usage_date = 1900.1.1
-        latest_usage_date = 1918.11.11
-        chance = 65
-    }
+				AND = {
+					exists = c:KUK
+					this = c:KUK
+					NOT = {
+						exists = c:AUS
+					}
+				}
+			}
+		}
+		role = admiral
+		earliest_usage_date = 1900.1.1
+		latest_usage_date = 1918.11.11
+		chance = 65
+	}
 }
 
 ## Hans Kudlich
-
 ecchi_aus_kudlich_character_template = {
-    first_name = Hans
-    last_name = ecchi_Kudlich
-    historical = yes
-    culture = cu:south_german
-
-    religion = rel:catholic
-    ideology = ideology_abolitionist
-    interest_group = ig_rural_folk
-    dna = ecchi_dna_hans_kudlich
-    birth_date = 1823.10.23
-    traits = { charismatic literary persistent }
-    agitator_usage = {
-        country_trigger = {
-            OR = {
-                AND = {
-                    exists = c:SGF
-                    this = c:SGF
-                    c:SGF = { owns_entire_state_region = STATE_AUSTRIA }
-                    NOT = { exists = c:AUS }
-                }
-                AND = {
-                    exists = c:AUS
-                    this = c:AUS
-                }
+	first_name = Hans
+	last_name = ecchi_Kudlich
+	historical = yes
+	culture = cu:south_german
+	religion = rel:catholic
+	ideology = ideology_abolitionist
+	interest_group = ig_rural_folk
+	dna = ecchi_dna_hans_kudlich
+	birth_date = 1823.10.23
+	traits = {
+		charismatic
+		literary
+		persistent
+	}
+	agitator_usage = {
+		country_trigger = {
+			OR = {
 				AND = {
-                    exists = c:KUK
-					this = c:KUK
-                    NOT = { exists = c:AUS }
+					exists = c:SGF
+					this = c:SGF
+					c:SGF = {
+						owns_entire_state_region = STATE_AUSTRIA
+					}
+					NOT = {
+						exists = c:AUS
+					}
 				}
-            }
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_rural_folk
-        }
-        earliest_usage_date = 1848.1.1
-        latest_usage_date = 1917.11.10
-        chance = 70
-    }
+				AND = {
+					exists = c:AUS
+					this = c:AUS
+				}
+				AND = {
+					exists = c:KUK
+					this = c:KUK
+					NOT = {
+						exists = c:AUS
+					}
+				}
+			}
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_rural_folk
+		}
+		earliest_usage_date = 1848.1.1
+		latest_usage_date = 1917.11.10
+		chance = 70
+	}
 }
 
 ## Klemens von Metternich
-
 # ecchi_aus_metternich_character_template = {
 #     first_name = ecchi_Klemens
 #     last_name = ecchi_von_Metternich
@@ -332,205 +378,235 @@ ecchi_aus_kudlich_character_template = {
 #         chance = 65
 #     }
 # }
-
 ## Leopold Berchtold
-
 ecchi_aus_berchtold_character_template = {
-    first_name = Leopold
-    last_name = ecchi_Berchtold
-    historical = yes
-    culture = cu:south_german
-
-    religion = rel:catholic
-    ideology = ideology_jingoist_leader
-    interest_group = ig_landowners
-    dna = ecchi_dna_leopold_berchtold
-    birth_date = 1863.4.18
-    traits = { charismatic bigoted }
-    interest_group_leader_usage = {
-        country_trigger = {
-            OR = {
-                AND = {
-                    exists = c:AUS
-                    this = c:AUS
-                }
+	first_name = Leopold
+	last_name = ecchi_Berchtold
+	historical = yes
+	culture = cu:south_german
+	religion = rel:catholic
+	ideology = ideology_jingoist_leader
+	interest_group = ig_landowners
+	dna = ecchi_dna_leopold_berchtold
+	birth_date = 1863.4.18
+	traits = {
+		charismatic
+		bigoted
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			OR = {
 				AND = {
-                    exists = c:KUK
-					this = c:KUK
-                    NOT = { exists = c:AUS }
+					exists = c:AUS
+					this = c:AUS
 				}
-            }
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_landowners
-        }
-        earliest_usage_date = 1912.2.1
-        latest_usage_date = 1942.11.21
-        chance = 70
-    }
+				AND = {
+					exists = c:KUK
+					this = c:KUK
+					NOT = {
+						exists = c:AUS
+					}
+				}
+			}
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_landowners
+		}
+		earliest_usage_date = 1912.2.1
+		latest_usage_date = 1942.11.21
+		chance = 70
+	}
 }
 
 ## Theodor Herzel
-
 ecchi_aus_herzel_character_template = {
-    first_name = Theodor
-    last_name = ecchi_Herzel
-    historical = yes
-    culture = cu:south_german
-
-    religion = rel:jewish
-    ideology = ideology_ethno_nationalist
-    interest_group = ig_intelligentsia
-    dna = ecchi_dna_theodor_herzel
-    birth_date = 1860.5.2
-    traits = { charismatic ambitious literary }
-    agitator_usage = {
-        country_trigger = {
-            OR = {
-                AND = {
-                    exists = c:AUS
-                    this = c:AUS
-                    NOT = { exists = c:ISR }
-                }
-                AND = {
-                    exists = c:ISR
-                    this = c:ISR
-                }
+	first_name = Theodor
+	last_name = ecchi_Herzel
+	historical = yes
+	culture = cu:south_german
+	religion = rel:jewish
+	ideology = ideology_ethno_nationalist
+	interest_group = ig_intelligentsia
+	dna = ecchi_dna_theodor_herzel
+	birth_date = 1860.5.2
+	traits = {
+		charismatic
+		ambitious
+		literary
+	}
+	agitator_usage = {
+		country_trigger = {
+			OR = {
 				AND = {
-                    exists = c:KUK
-					this = c:KUK
-                    NOT = { exists = c:AUS }
+					exists = c:AUS
+					this = c:AUS
+					NOT = {
+						exists = c:ISR
+					}
 				}
-            }
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_intelligentsia
-        }
-        earliest_usage_date = 1897.1.1
-        latest_usage_date = 1904.7.3
-        chance = 60
-    }
+				AND = {
+					exists = c:ISR
+					this = c:ISR
+				}
+				AND = {
+					exists = c:KUK
+					this = c:KUK
+					NOT = {
+						exists = c:AUS
+					}
+				}
+			}
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_intelligentsia
+		}
+		earliest_usage_date = 1897.1.1
+		latest_usage_date = 1904.7.3
+		chance = 60
+	}
 }
 
 ## Ivan Franko (Ukraine)
-
 ecchi_aus_franko_character_template = {
-    first_name = Ivan
-    last_name = ecchi_Franko
-    historical = yes
-    culture = cu:ukrainian
-
-    religion = rel:orthodox
-    ideology = ideology_social_democrat
-    interest_group = ig_rural_folk
-    dna = ecchi_dna_ivan_franko
-    birth_date = 1856.8.27
-    traits = { literary inspirational_orator }
-    agitator_usage = {
-        country_trigger = {
-            OR = {
-                AND = {
-                    c:AUS ?= this
-                    NOT = { exists = c:UKR }
-                }
-                AND = {
-                    c:UKR ?= this
-                }
+	first_name = Ivan
+	last_name = ecchi_Franko
+	historical = yes
+	culture = cu:ukrainian
+	religion = rel:orthodox
+	ideology = ideology_social_democrat
+	interest_group = ig_rural_folk
+	dna = ecchi_dna_ivan_franko
+	birth_date = 1856.8.27
+	traits = {
+		literary
+		inspirational_orator
+	}
+	agitator_usage = {
+		country_trigger = {
+			OR = {
 				AND = {
-                    exists = c:KUK
-					this = c:KUK
-                    NOT = { exists = c:AUS }
-					NOT = { exists = c:UKR }
+					c:AUS ?= this
+					NOT = {
+						exists = c:UKR
+					}
 				}
-            }
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_rural_folk
-        }
-        earliest_usage_date = 1880.1.1
-        latest_usage_date = 1916.5.28
-        chance = 65
-    }
+				AND = {
+					c:UKR ?= this
+				}
+				AND = {
+					exists = c:KUK
+					this = c:KUK
+					NOT = {
+						exists = c:AUS
+					}
+					NOT = {
+						exists = c:UKR
+					}
+				}
+			}
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_rural_folk
+		}
+		earliest_usage_date = 1880.1.1
+		latest_usage_date = 1916.5.28
+		chance = 65
+	}
 }
 
 ## Josip Broz Tito (Yugoslavia) 
-
 ecchi_aus_tito_character_template = {
-    first_name = Josip
-    last_name = ecchi_Tito
-    historical = yes
-    culture = cu:slovene
-
-    religion = rel:orthodox
-    ideology = ideology_communist
-    interest_group = ig_armed_forces
-    dna = ecchi_dna_josip_tito
-    birth_date = 1892.5.7
-    traits = { cruel brave mountain_commander }
-    interest_group_leader_usage = {
-        country_trigger = {
-            OR = {
-                AND = {
-                    c:AUS ?= this
-                    NOT = { exists = c:YUG }
-                    NOT = { exists = c:SLO }
-                }
-                AND = {
-                    c:YUG ?= this
-                    NOT = { exists = c:SLO }
-                }
-                AND = {
-                    c:SLO ?= this
-                }
-                AND = {
-                    c:KUK ?= this
-                    NOT = { exists = c:YUG }
-                    NOT = { exists = c:SLO }
-                }
-            }
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_armed_forces
-        }
-        earliest_usage_date = 1918.1.1
-        latest_usage_date = 1980.5.4
-        chance = 70
-    }
+	first_name = Josip
+	last_name = ecchi_Tito
+	historical = yes
+	culture = cu:slovene
+	religion = rel:orthodox
+	ideology = ideology_communist
+	interest_group = ig_armed_forces
+	dna = ecchi_dna_josip_tito
+	birth_date = 1892.5.7
+	traits = {
+		cruel
+		brave
+		mountain_commander
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			OR = {
+				AND = {
+					c:AUS ?= this
+					NOT = {
+						exists = c:YUG
+					}
+					NOT = {
+						exists = c:SLO
+					}
+				}
+				AND = {
+					c:YUG ?= this
+					NOT = {
+						exists = c:SLO
+					}
+				}
+				AND = {
+					c:SLO ?= this
+				}
+				AND = {
+					c:KUK ?= this
+					NOT = {
+						exists = c:YUG
+					}
+					NOT = {
+						exists = c:SLO
+					}
+				}
+			}
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_armed_forces
+		}
+		earliest_usage_date = 1918.1.1
+		latest_usage_date = 1980.5.4
+		chance = 70
+	}
 }
 
 ## Karl Johann Kautsky
-
 ecchi_aus_kautsky_character_template = {
-    first_name = ecchi_Karl_Johann
-    last_name = ecchi_Kautsky
-    historical = yes
-    culture = cu:south_german
-
-    religion = rel:jewish
-    ideology = ideology_social_democrat
-    interest_group = ig_intelligentsia
-    dna = ecchi_dna_karl_johann_kautsky
-    birth_date = 1854.10.16
-    traits = { literary persistent }
-    interest_group_leader_usage = {
-        country_trigger = {
+	first_name = ecchi_Karl_Johann
+	last_name = ecchi_Kautsky
+	historical = yes
+	culture = cu:south_german
+	religion = rel:jewish
+	ideology = ideology_social_democrat
+	interest_group = ig_intelligentsia
+	dna = ecchi_dna_karl_johann_kautsky
+	birth_date = 1854.10.16
+	traits = {
+		literary
+		persistent
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
 			has_state_in_state_region = STATE_BRANDENBURG
 			NOT = {
-				country_average_cultural_acceptance = { target = cu:south_german value < acceptance_status_4 }
+				country_average_cultural_acceptance = {
+					target = cu:south_german
+					value < acceptance_status_4
+				}
 			}
 			has_technology_researched = socialism
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_intelligentsia
-        }
-        earliest_usage_date = 1875.1.1
-        latest_usage_date = 1938.10.17
-        chance = 65
-    }
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_intelligentsia
+		}
+		earliest_usage_date = 1875.1.1
+		latest_usage_date = 1938.10.17
+		chance = 65
+	}
 }
 
 ## Wilhelm Alexander Schoeller
-
 #aus_schoeller_character_template = {
 #    first_name = ecchi_Wilhelm_Alexander
 #    last_name = ecchi_Schoeller

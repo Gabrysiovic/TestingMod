@@ -7,7 +7,7 @@
 	female = no
 	is_agitator = yes
 	interest_group = ig_petty_bourgeoisie
-	ideology = ideology_royalist
+	ideology = ideology_liberal_leader
 	birth_date = 1818.2.4
 	dna = dna_emperor_norton
 	traits = {

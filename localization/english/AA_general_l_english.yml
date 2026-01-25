@@ -150,6 +150,7 @@
     AA_indochina_adj: "Indochinese"
     AA_indochina_form: "Form the nation of Indochina!"
     AA_indochina_form_desc: "From Bangkok to the Gulf of Tonkin, the various peoples of the peninsula are brought under one banner to resist the encroaching shadows of the Great Powers"
+
     RP_restoration: "National name change"
     AA_restore_name: "Restore original name"
     AA_restore_name_desc: "We do not like our new name"
@@ -158,3 +159,7 @@
     AA_federation_adj: "British"
     AA_imperial_federation_form: "Announce the Imperial Federation"
     AA_imperial_federation_form_desc: "The Imperial Federation was a series of proposals in the late 19th and early 20th centuries to create a federal union for the British Empire. The time has come."
+    AA_persia: "Eranshahr"
+    AA_persia_adj: "Persian"
+    AA_greater_persia_form: "Restore ancient Persian name"
+    AA_greater_persia_form_desc: "The Eternal flame in Baku Ateshgah must be restored. This time, the flame will burn until the end of times!"

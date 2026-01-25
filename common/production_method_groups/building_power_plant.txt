@@ -1,0 +1,12 @@
+﻿REPLACE:pmg_base_building_power_plant = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_early_power_plant
+		pm_coal-fired_plant
+		pm_oil-fired_plant
+		#new
+		pm_early_power_plant_market
+		pm_coal-fired_plant_market
+		pm_oil-fired_plant_market
+	}
+}

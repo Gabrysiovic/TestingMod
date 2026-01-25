@@ -1,31 +1,25 @@
-﻿je_austrian_neo_absolutism = {
+﻿REPLACE:je_austrian_neo_absolutism = {
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
-
 	group = je_group_historical_content
-
 	scripted_button = austrian_neo_absolutism_papal_concordat_button
 	scripted_button = austrian_neo_absolutism_abolish_feudal_obligations_button
 	scripted_button = austrian_neo_absolutism_abolish_crown_land_autonomy_button
-
 	scripted_progress_bar = austrian_neo_absolutism_constitutional_pressure_progress_bar
-
 	is_shown_in_lobby = {
-		has_dlc_feature = ip3_content #National Awakening
+		has_dlc_feature = ip3_content		#National Awakening
 		OR = {
-		c:AUS ?= this
-		c:KUK ?= this
+			c:AUS ?= this
+			c:KUK ?= this
 		}
 	}
-
 	is_shown_when_inactive = {
-		has_dlc_feature = ip3_content #National Awakening
+		has_dlc_feature = ip3_content		#National Awakening
 		OR = {
-		c:AUS ?= this
-		c:KUK ?= this
+			c:AUS ?= this
+			c:KUK ?= this
 		}
 		has_law = law_type:law_monarchy
 	}
-
 	possible = {
 		has_law_or_variant = law_type:law_autocracy
 		has_law_or_variant = law_type:law_secret_police
@@ -51,18 +45,15 @@
 			}
 		}
 	}
-
 	immediate = {
 		set_variable = {
 			name = austrian_gdp_var
 			value = root.gdp
 		}
 	}
-
 	modifiers_while_active = {
 		modifier_austrian_state_police
 	}
-
 	complete = {
 		calc_true_if = {
 			amount >= 4
@@ -136,14 +127,15 @@
 			}
 		}
 	}
-
 	on_complete = {
 		show_as_tooltip = {
 			activate_law = law_type:law_neo_absolutism
 		}
-		trigger_event = { id = austria_events.1 popup = yes }
+		trigger_event = {
+			id = austria_events.1
+			popup = yes
+		}
 	}
-
 	event_outcome_completed_desc = {
 		first_valid = {
 			triggered_desc = {
@@ -151,7 +143,6 @@
 			}
 		}
 	}
-
 	fail = {
 		OR = {
 			custom_tooltip = {
@@ -176,7 +167,6 @@
 			}
 		}
 	}
-
 	event_outcome_failed_desc = {
 		first_valid = {
 			triggered_desc = {
@@ -195,7 +185,6 @@
 			}
 		}
 	}
-
 	status_desc = {
 		first_valid = {
 			triggered_desc = {
@@ -249,7 +238,6 @@
 			}
 		}
 	}
-
 	on_fail = {
 		if = {
 			limit = {
@@ -257,14 +245,19 @@
 					"scripted_bar_progress(austrian_neo_absolutism_constitutional_pressure_progress_bar)" >= 100
 				}
 			}
-			trigger_event = { id = austria_events.2 popup = yes }
+			trigger_event = {
+				id = austria_events.2
+				popup = yes
+			}
 		}
 		else = {
-			trigger_event = { id = austria_events.5 popup = yes }
+			trigger_event = {
+				id = austria_events.5
+				popup = yes
+			}
 		}
 		set_variable = je_austrian_neo_absolutism_failed_var
 	}
-
 	invalid = {
 		OR = {
 			NOT = {
@@ -275,11 +268,9 @@
 			}
 		}
 	}
-
 	on_invalid = {
 		set_variable = je_austrian_neo_absolutism_failed_var
 	}
-
 	weight = 100
 	should_be_pinned_by_default = yes
 }

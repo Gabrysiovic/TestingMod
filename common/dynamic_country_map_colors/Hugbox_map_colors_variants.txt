@@ -1,23 +1,20 @@
-﻿
-TRY_REPLACE:feminist_britain = {
+﻿REPLACE:feminist_britain = {
 	color = "plc_pink"
 	possible = {
 		exists = c:GBR
 		c:GBR ?= THIS
 		ruler = {
 			OR = {
-			has_ideology = ideology:ideology_feminist
-			is_female = yes
+				has_ideology = ideology:ideology_feminist
+				is_female = yes
 			}
 		}
 		has_law_or_variant = law_type:law_womens_suffrage
 	}
 }
 
-
-TRY_REPLACE:unpleasant_germany = {
+REPLACE:unpleasant_germany = {
 	color = "feldgrau2"
-
 	possible = {
 		exists = c:GER
 		c:GER ?= THIS
@@ -25,10 +22,8 @@ TRY_REPLACE:unpleasant_germany = {
 	}
 }
 
-
 REPLACE_OR_CREATE:usa_commie = {
 	color = "usa_commie"
-
 	possible = {
 		exists = c:USA
 		c:USA ?= THIS
@@ -38,11 +33,15 @@ REPLACE_OR_CREATE:usa_commie = {
 
 REPLACE_OR_CREATE:indochina = {
 	color = "blue_indochina"
-
 	possible = {
-		custom_tooltip = {
-			text = is_indochina
-			has_variable = AA_indochina_var
-		}
+		has_variable = AA_indochina_var
 	}
 }
+
+REPLACE_OR_CREATE:greater_persia = {
+	color = "purple_persia"
+	possible = {
+		has_variable = AA_persia_var
+	}
+}
+

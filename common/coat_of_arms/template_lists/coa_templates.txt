@@ -4,23 +4,30 @@
 		25 = template_charge_metal
 		20 = template_charge_offset
 		10 = template_charge_offset_metal
+
 		25 = template_charge_in_circle
 		25 = template_charge_in_circle_metal
 		25 = template_charge_in_ring
 		25 = template_charge_in_ring_metal
+
 		50 = template_tricolor
 		20 = template_tricolor_vertical_charge
 		20 = template_tricolor_horizontal_charge
+
 		40 = template_bicolor
+
 		50 = template_ordinary
 		25 = template_ordinary_metal
+
 		# stripes and pales
 		100 = template_stripes
 		10 = template_stripes_rotated
+
 		10 = template_per_saltire
 		10 = template_per_saltire_metal
 		10 = template_saltire
 		5 = template_saltire_metal
+
 		10 = template_chile
 		10 = template_texas
 		10 = template_uruguay
@@ -29,10 +36,12 @@
 		10 = template_dominican
 		10 = template_spain
 		10 = template_canada
+
 		10 = template_canton_ordinary
 		5 = template_canton_ordinary_metal
 		10 = template_canton_charge
 		5 = template_canton_charge_metal
+
 		2 = template_quarter
 		2 = template_quarter_metal
 		2 = template_quarter_counterchanged
@@ -41,9 +50,11 @@
 		1 = template_quarter_counterchanged_charges_metal
 		2 = template_quarter_counterchanged_canton_charge
 		1 = template_quarter_counterchanged_canton_charge_metal
+
 		1 = template_semy
 		1 = template_semy_metal
 		# extremely rare
+
 		# borders (toned down for christian nations)
 		5 = template_border_charge
 		5 = template_border_charge_metal
@@ -51,6 +62,7 @@
 		5 = template_border_charge_offset_metal
 		5 = template_border_of_three_charge_offset
 		5 = template_border_of_three_charge_offset_metal
+
 		special_selection = {
 			trigger = {
 				exists = scope:target
@@ -65,13 +77,14 @@
 			20 = template_border_of_three_charge_offset
 			20 = template_border_of_three_charge_offset_metal
 		}
+
 		special_selection = {
 			trigger = {
 				exists = scope:target
 				scope:target ?= {
 					OR = {
-						coa_def_crescent_trigger = yes
-						coa_def_buddhist_trigger = yes
+					 	coa_def_crescent_trigger = yes
+					 	coa_def_buddhist_trigger = yes
 						# for now just those two, but more designs/nations groups should be included
 					}
 				}
@@ -79,25 +92,28 @@
 			50 = template_plain_flag
 			50 = template_plain_flag_metal
 		}
+
 		special_selection = {
 			trigger = {
 				exists = scope:target
 				scope:target ?= {
-					coa_def_african_trigger = yes
+					 coa_def_african_trigger = yes
 				}
 			}
 			25 = template_tricolor_fimbriated
 		}
+
 		special_selection = {
 			trigger = {
 				exists = scope:target
 				scope:target ?= {
-					coa_def_west_african_trigger = yes
+					 coa_def_west_african_trigger = yes
 				}
 			}
 			300 = template_african_border_of_3
 			300 = template_african_border_of_3_inverted
 		}
+
 		special_selection = {
 			trigger = {
 				exists = scope:target
@@ -112,7 +128,9 @@
 			10 = template_cross_charges_in_quadrants
 			10 = template_cross_charges_in_quadrants_metal
 		}
+
 		# European States
+
 		special_selection = {
 			trigger = {
 				exists = scope:target
@@ -130,6 +148,7 @@
 			200 = template_tricolor
 			100 = template_cross
 			100 = template_cross_metal
+
 			special_selection = {
 				trigger = {
 					exists = scope:target
@@ -150,6 +169,7 @@
 				1000 = template_tricolor
 			}
 		}
+
 		special_selection = {
 			trigger = {
 				exists = scope:target
@@ -158,8 +178,8 @@
 						has_discrimination_trait = heritage_christian
 					}
 					OR = {
-						coa_def_italian_trigger = yes
-						coa_def_iberian_trigger = yes
+					 	coa_def_italian_trigger = yes
+					 	coa_def_iberian_trigger = yes
 					}
 				}
 			}
@@ -174,6 +194,7 @@
 			500 = template_stripes
 			400 = template_ordinary
 		}
+
 		special_selection = {
 			trigger = {
 				exists = scope:target
@@ -185,6 +206,7 @@
 			50 = template_charge_in_circle_metal
 			50 = template_charge_in_ring
 			50 = template_charge_in_ring_metal
+
 		}
 		# random commies
 		special_selection = {
@@ -203,6 +225,7 @@
 					}
 				}
 			}
+
 			500 = template_communist_1
 			250 = template_communist_2
 			500 = template_communist_3
@@ -227,6 +250,7 @@
 			100 = template_communist_red_star_center
 			100 = template_communist_red_star_canton
 		}
+
 		# russian commies!
 		special_selection = {
 			trigger = {
@@ -249,8 +273,10 @@
 					}
 				}
 			}
+
 			100000 = template_communist_russia
 		}
+
 		special_selection = {
 			trigger = {
 				exists = scope:target
@@ -261,8 +287,10 @@
 					}
 				}
 			}
+
 			100000 = template_revolution_armed_forces
 		}
+
 		special_selection = {
 			trigger = {
 				exists = scope:target
@@ -270,11 +298,14 @@
 					is_revolutionary = yes
 				}
 			}
+
 			500 = template_revolution_1
 			500 = template_revolution_2
 			500 = template_revolution_3
 		}
+
 		### Fascist templates
+
 		special_selection = {
 			trigger = {
 				exists = scope:target
@@ -282,6 +313,7 @@
 					coa_def_fascist_flag_trigger = yes
 				}
 			}
+
 			10000 = template_fascist_white_roundel
 			5000 = template_fascist_white_roundel_02
 			2500 = template_fascist_cross_roundel
@@ -314,6 +346,7 @@
 		25 = template_communist_red_star_tricolor
 		10 = template_communist_red_star_center
 		10 = template_communist_red_star_canton
+
 		special_selection = {
 			trigger = {
 				any_primary_culture = {
@@ -329,6 +362,7 @@
 			100 = template_communist_right_stripe
 			100 = template_communist_vert_center_stripe
 		}
+
 		special_selection = {
 			trigger = {
 				any_primary_culture = {
@@ -346,6 +380,7 @@
 			300 = template_communist_roundel_canton
 			100 = template_communist_canton
 		}
+
 		special_selection = {
 			trigger = {
 				coa_def_hispanic_american_trigger = yes
@@ -357,11 +392,13 @@
 			300 = template_communist_triangle
 			300 = template_communist_red_star_tricolor
 		}
+
 		special_selection = {
 			trigger = {
 				coa_def_native_american_trigger = yes
 			}
 			300 = template_communist_charge_star
+
 		}
 	}
 	anarchy = {
@@ -370,10 +407,1517 @@
 		1500 = template_anarchy_3
 		1500 = template_anarchy_4
 	}
+
+#############	POWER BLOCS AND SPECIAL TRIGGERS	#############
+
 	power_bloc = {
-		3000 = template_power_bloc_1
-		#############	SPECIAL TRIGGERS	#############
-		#############	Great Britain	#################
+		0 = template_power_bloc_1
+
+### USA ###
+
+## Absolute ##
+
+		special_selection = {
+			trigger = {
+				exists = c:USA
+				ROOT.power_bloc_leader = c:USA
+				c:USA = {
+					OR = {
+						has_law = law_type:law_chiefdom
+						has_law = law_type:law_monarchy
+					}
+					OR = {
+						has_law = law_type:law_autocracy
+						has_law = law_type:law_single_party_state
+					}
+				}
+			}
+			90000 = usa_power_bloc_absolute
+		}
+
+## M-Oligarchie ##
+
+		special_selection = {
+			trigger = {
+				exists = c:USA
+				ROOT.power_bloc_leader = c:USA
+				c:USA = {
+					NOT = { has_law = law_type:law_corporate_state }
+					OR = {
+						has_law = law_type:law_chiefdom
+						has_law = law_type:law_monarchy
+					}
+					
+					OR = {
+						has_law = law_type:law_elder_council
+						has_law = law_type:law_oligarchy
+					}
+				}
+			}
+			90000 = usa_power_bloc_m_oligarchie
+		}
+	
+## Constitutional ##
+
+		special_selection = {
+			trigger = {
+				exists = c:USA
+				ROOT.power_bloc_leader = c:USA
+				c:USA = {
+					OR = {
+						has_law = law_type:law_chiefdom
+						has_law = law_type:law_monarchy
+					}
+					OR = {
+						has_law = law_type:law_landed_voting
+						has_law = law_type:law_wealth_voting
+						has_law = law_type:law_census_voting
+						has_law = law_type:law_universal_suffrage
+					}
+				}
+			}
+			90000 = usa_power_bloc_constitutional
+		}
+
+## P-Oligarchie ##
+
+		special_selection = {
+			trigger = {
+				exists = c:USA
+				ROOT.power_bloc_leader = c:USA
+				c:USA = {
+					NOT = { has_law = law_type:law_corporate_state }
+					OR = {
+						has_law = law_type:law_presidential_republic
+						has_law = law_type:law_parliamentary_republic
+					}
+					OR = {
+						has_law = law_type:law_elder_council
+						has_law = law_type:law_oligarchy
+					}
+				}
+			}
+			90000 = usa_power_bloc_p_oligarchie
+		}		
+
+## Diktatur ##
+
+		special_selection = {
+			trigger = {
+				exists = c:USA
+				ROOT.power_bloc_leader = c:USA
+				c:USA = {
+					OR = {
+						has_law = law_type:law_presidential_republic
+						has_law = law_type:law_parliamentary_republic
+					}
+				
+					OR = {
+						has_law = law_type:law_autocracy
+						has_law = law_type:law_single_party_state
+					}
+				}
+			}
+			90000 = usa_power_bloc_dictatorship
+		}
+
+## Republik ##
+
+		special_selection = {
+			trigger = {
+				exists = c:USA
+				ROOT.power_bloc_leader = c:USA
+				c:USA = {
+					OR = {
+						has_law = law_type:law_presidential_republic
+						has_law = law_type:law_parliamentary_republic
+						has_law = law_type:law_corporate_state
+					}					
+					OR = {
+						has_law = law_type:law_landed_voting
+						has_law = law_type:law_wealth_voting
+						has_law = law_type:law_census_voting
+						has_law = law_type:law_universal_suffrage
+					}
+				}
+			}
+			90000 = usa_power_bloc_republic
+		}
+		
+## Technokratie ##
+
+		special_selection = {
+			trigger = {
+				exists = c:USA
+				ROOT.power_bloc_leader = c:USA
+				c:USA = {
+					has_law = law_type:law_technocracy
+					NOT = {
+						has_law = law_type:law_corporate_state
+						has_law = law_type:law_council_republic
+						has_law = law_type:law_theocracy
+					}
+				}
+			}
+			90000 = usa_power_bloc_technocracy
+		}
+
+## Theokratie ##
+		
+		special_selection = {
+			trigger = {
+				exists = c:USA
+				ROOT.power_bloc_leader = c:USA
+				c:USA = {
+					has_law = law_type:law_theocracy
+					NOT = {
+						has_law_or_variant = law_type:law_anarchy
+					}
+				}
+			}
+			90000 = usa_power_bloc_theocracy
+		}
+
+## Kommunistisch ##
+		
+		special_selection = {
+			trigger = {
+				exists = c:USA
+				ROOT.power_bloc_leader = c:USA
+				c:USA = {
+					has_law = law_type:law_council_republic
+					NOT = {
+						has_law_or_variant = law_type:law_anarchy
+					}
+				}
+			}
+			90000 = usa_power_bloc_communism
+		}
+
+## Faschistisch ##
+		
+		special_selection = {
+			trigger = {
+				exists = c:USA
+				ROOT.power_bloc_leader = c:USA
+				c:USA = {
+					has_law = law_type:law_corporate_state
+					OR = {
+						has_law = law_type:law_elder_council
+						has_law = law_type:law_oligarchy
+						has_law = law_type:law_technocracy
+						has_law = law_type:law_autocracy
+						has_law = law_type:law_single_party_state						
+						ruler ?= {
+							OR = {
+								has_ideology = ideology:ideology_fascist
+								has_ideology = ideology:ideology_integralist
+								has_ideology = ideology:ideology_corporatist_leader
+							}
+						}
+					}
+				}
+			}
+			90000 = usa_power_bloc_fascist
+		}
+		
+## Anarchie ##
+
+		special_selection = {
+			trigger = {
+				exists = c:USA
+				ROOT.power_bloc_leader = c:USA
+				c:USA = {
+					has_law_or_variant = law_type:law_anarchy
+				}
+			}
+			90000 = usa_power_bloc_anarchy
+		}
+
+### FRANCE ###
+
+## Absolute Bourbon##
+
+		special_selection = {
+			trigger = {
+				exists = c:FRA
+				ROOT.power_bloc_leader = c:FRA
+				c:FRA = {
+					OR = {
+						has_law = law_type:law_chiefdom
+						has_law = law_type:law_monarchy
+					}
+					OR = {
+						has_law = law_type:law_autocracy
+						has_law = law_type:law_single_party_state
+					}
+					has_variable = legitimist_restoration_var
+				}
+			}
+			90000 = fra_power_bloc_absolute_monarchy_bourbon
+		}
+		
+## Absolute Bonaparte ##
+
+		special_selection = {
+			trigger = {
+				exists = c:FRA
+				ROOT.power_bloc_leader = c:FRA
+				c:FRA = {
+					OR = {
+						has_law = law_type:law_chiefdom
+						has_law = law_type:law_monarchy
+					}
+					OR = {
+						has_law = law_type:law_autocracy
+						has_law = law_type:law_single_party_state
+					}
+					has_variable = bonapartist_restoration_var
+				}
+			}
+			90000 = fra_power_bloc_absolute_monarchy_bonaparte
+		}
+		
+## Absolute ##
+
+		special_selection = {
+			trigger = {
+				exists = c:FRA
+				ROOT.power_bloc_leader = c:FRA
+				c:FRA = {
+					OR = {
+						has_law = law_type:law_chiefdom
+						has_law = law_type:law_monarchy
+					}
+					OR = {
+						has_law = law_type:law_autocracy
+						has_law = law_type:law_single_party_state
+					}
+					NOT = {
+						has_variable = legitimist_restoration_var
+						has_variable = bonapartist_restoration_var
+					}
+				}
+			}
+			90000 = fra_power_bloc_absolute
+		}
+
+## M-Oligarchie Bonaparte ##
+
+		special_selection = {
+			trigger = {
+				exists = c:FRA
+				ROOT.power_bloc_leader = c:FRA
+				c:FRA = {
+					NOT = { has_law = law_type:law_corporate_state }
+					OR = {
+						has_law = law_type:law_chiefdom
+						has_law = law_type:law_monarchy
+					}
+					
+					OR = {
+						has_law = law_type:law_elder_council
+						has_law = law_type:law_oligarchy
+					}
+					NOT = { has_variable = legitimist_restoration_var }
+					has_variable = bonapartist_restoration_var
+				}
+			}
+			90000 = fra_power_bloc_m_oligarchie_bonaparte
+		}
+		
+## M-Oligarchie Bourbon ##
+
+		special_selection = {
+			trigger = {
+				exists = c:FRA
+				ROOT.power_bloc_leader = c:FRA
+				c:FRA = {
+					NOT = { has_law = law_type:law_corporate_state }
+					OR = {
+						has_law = law_type:law_chiefdom
+						has_law = law_type:law_monarchy
+					}
+					OR = {
+						has_law = law_type:law_elder_council
+						has_law = law_type:law_oligarchy
+					}
+					has_variable = legitimist_restoration_var 
+					NOT = { has_variable = bonapartist_restoration_var }
+				}
+				90000 = fra_power_bloc_m_oligarchie_bourbon
+			}
+		}
+
+## M-Oligarchie  ##
+
+		special_selection = {
+			trigger = {
+				exists = c:FRA
+				ROOT.power_bloc_leader = c:FRA
+				c:FRA = {
+					NOT = { has_law = law_type:law_corporate_state }
+					OR = {
+						has_law = law_type:law_chiefdom
+						has_law = law_type:law_monarchy
+					}
+					
+					OR = {
+						has_law = law_type:law_elder_council
+						has_law = law_type:law_oligarchy
+					}
+					NOT = {
+						has_variable = legitimist_restoration_var
+						has_variable = bonapartist_restoration_var
+					}
+				}
+			}
+			90000 = fra_power_bloc_m_oligarchie
+		}
+
+## Constitutional Bonaparte ##
+
+		special_selection = {
+			trigger = {
+				exists = c:FRA
+				ROOT.power_bloc_leader = c:FRA
+				c:FRA = {
+					OR = {
+						has_law = law_type:law_chiefdom
+						has_law = law_type:law_monarchy
+					}
+					OR = {
+						has_law = law_type:law_landed_voting
+						has_law = law_type:law_wealth_voting
+						has_law = law_type:law_census_voting
+						has_law = law_type:law_universal_suffrage
+					}
+					has_variable = bonapartist_restoration_var
+					
+					NOT = { has_variable = legitimist_restoration_var }
+				}
+			}
+			90000 = fra_power_bloc_constitutional_bonaparte
+		}
+
+## Constitutional Bourbon ##
+
+		special_selection = {
+			trigger = {
+				exists = c:FRA
+				ROOT.power_bloc_leader = c:FRA
+				c:FRA = {
+					OR = {
+						has_law = law_type:law_chiefdom
+						has_law = law_type:law_monarchy
+					}
+					OR = {
+						has_law = law_type:law_landed_voting
+						has_law = law_type:law_wealth_voting
+						has_law = law_type:law_census_voting
+						has_law = law_type:law_universal_suffrage
+					}
+					has_variable = legitimist_restoration_var
+					NOT = { has_variable = bonapartist_restoration_var }
+				}
+			}
+			90000 = fra_power_bloc_constitutional_bourbon
+		}
+	
+## Constitutional ##
+
+		special_selection = {
+			trigger = {
+				exists = c:FRA
+				ROOT.power_bloc_leader = c:FRA
+				c:FRA = {
+					OR = {
+						has_law = law_type:law_chiefdom
+						has_law = law_type:law_monarchy
+					}
+					OR = {
+						has_law = law_type:law_landed_voting
+						has_law = law_type:law_wealth_voting
+						has_law = law_type:law_census_voting
+						has_law = law_type:law_universal_suffrage
+					}
+					NOT = {
+						has_variable = legitimist_restoration_var
+						has_variable = bonapartist_restoration_var
+					}
+				}
+			}
+			90000 = fra_power_bloc_constitutional
+		}
+
+## P-Oligarchie ##
+
+		special_selection = {
+			trigger = {
+				exists = c:FRA
+				ROOT.power_bloc_leader = c:FRA
+				c:FRA = {
+					NOT = { has_law = law_type:law_corporate_state }
+					OR = {
+						has_law = law_type:law_presidential_republic
+						has_law = law_type:law_parliamentary_republic
+					}
+					OR = {
+						has_law = law_type:law_elder_council
+						has_law = law_type:law_oligarchy
+					}
+					NOT = {
+						has_variable = legitimist_restoration_var
+						has_variable = bonapartist_restoration_var
+					}
+				}
+			}
+			90000 = fra_power_bloc_p_oligarchie
+		}		
+
+## Diktatur ##
+
+		special_selection = {
+			trigger = {
+				exists = c:FRA
+				ROOT.power_bloc_leader = c:FRA
+				c:FRA = {
+					OR = {
+						has_law = law_type:law_presidential_republic
+						has_law = law_type:law_parliamentary_republic
+					}
+				
+					OR = {
+						has_law = law_type:law_autocracy
+						has_law = law_type:law_single_party_state
+					}
+					NOT = { has_variable = bonapartist_restoration_var }
+				}
+			}
+			90000 = fra_power_bloc_p_oligarchie
+		}
+
+## Diktatur Bonaparte ##
+
+		special_selection = {
+			trigger = {
+				exists = c:FRA
+				ROOT.power_bloc_leader = c:FRA
+				c:FRA = {
+					OR = {
+						has_law = law_type:law_presidential_republic
+						has_law = law_type:law_parliamentary_republic
+					}
+				
+					OR = {
+						has_law = law_type:law_autocracy
+						has_law = law_type:law_single_party_state
+					}
+					has_variable = bonapartist_restoration_var
+				}
+			}
+			90000 = fra_power_bloc_dictatorship
+		}
+
+## Republik ##
+
+		special_selection = {
+			trigger = {
+				exists = c:FRA
+				ROOT.power_bloc_leader = c:FRA
+				c:FRA = {
+					OR = {
+						has_law = law_type:law_presidential_republic
+						has_law = law_type:law_parliamentary_republic
+						has_law = law_type:law_corporate_state
+					}					
+					OR = {
+						has_law = law_type:law_landed_voting
+						has_law = law_type:law_wealth_voting
+						has_law = law_type:law_census_voting
+						has_law = law_type:law_universal_suffrage
+					}
+				}
+			}
+			90000 = fra_power_bloc_republic
+		}
+		
+## Technokratie ##
+
+		special_selection = {
+			trigger = {
+				exists = c:FRA
+				ROOT.power_bloc_leader = c:FRA
+				c:FRA = {
+					has_law = law_type:law_technocracy
+					NOT = {
+						has_law = law_type:law_corporate_state
+						has_law = law_type:law_council_republic
+						has_law = law_type:law_theocracy
+					}
+				}
+			}
+			90000 = fra_power_bloc_technocracy
+		}
+
+## Theokratie ##
+		
+		special_selection = {
+			trigger = {
+				exists = c:FRA
+				ROOT.power_bloc_leader = c:FRA
+				c:FRA = {
+					has_law = law_type:law_theocracy
+					NOT = {
+						has_law_or_variant = law_type:law_anarchy
+					}
+				}
+			}
+			90000 = fra_power_bloc_theocracy
+		}
+
+## Kommunistisch ##
+		
+		special_selection = {
+			trigger = {
+				exists = c:FRA
+				ROOT.power_bloc_leader = c:FRA
+				c:FRA = {
+					has_law = law_type:law_council_republic
+					NOT = {
+						has_law_or_variant = law_type:law_anarchy
+					}
+				}
+			}
+			90000 = fra_power_bloc_communism
+		}
+
+## Faschistisch ##
+		
+		special_selection = {
+			trigger = {
+				exists = c:FRA
+				ROOT.power_bloc_leader = c:FRA
+				c:FRA = {
+					has_law = law_type:law_corporate_state
+					OR = {
+						has_law = law_type:law_elder_council
+						has_law = law_type:law_oligarchy
+						has_law = law_type:law_technocracy
+						has_law = law_type:law_autocracy
+						has_law = law_type:law_single_party_state						
+						ruler ?= {
+							OR = {
+								has_ideology = ideology:ideology_fascist
+								has_ideology = ideology:ideology_integralist
+								has_ideology = ideology:ideology_corporatist_leader
+							}
+						}
+					}
+				}
+			}
+			90000 = fra_power_bloc_fascist
+		}
+		
+## Anarchie ##
+
+		special_selection = {
+			trigger = {
+				exists = c:FRA
+				ROOT.power_bloc_leader = c:FRA
+				c:FRA = {
+					has_law_or_variant = law_type:law_anarchy
+				}
+			}
+			90000 = fra_power_bloc_anarchy
+		}
+		
+### Niederlande ###
+
+## Absolute ##
+
+		special_selection = {
+			trigger = {
+				exists = c:NET
+				ROOT.power_bloc_leader = c:NET
+				c:NET = {
+					OR = {
+						has_law = law_type:law_chiefdom
+						has_law = law_type:law_monarchy
+					}
+					OR = {
+						has_law = law_type:law_autocracy
+						has_law = law_type:law_single_party_state
+					}
+				}
+			}
+			90000 = net_power_bloc_absolute
+		}
+
+## M-Oligarchie ##
+
+		special_selection = {
+			trigger = {
+				exists = c:NET
+				ROOT.power_bloc_leader = c:NET
+				c:NET = {
+					NOT = { has_law = law_type:law_corporate_state }
+					OR = {
+						has_law = law_type:law_chiefdom
+						has_law = law_type:law_monarchy
+					}
+					
+					OR = {
+						has_law = law_type:law_elder_council
+						has_law = law_type:law_oligarchy
+					}
+				}
+			}
+			90000 = net_power_bloc_m_oligarchie
+		}
+	
+## Constitutional ##
+
+		special_selection = {
+			trigger = {
+				exists = c:NET
+				ROOT.power_bloc_leader = c:NET
+				c:NET = {
+					OR = {
+						has_law = law_type:law_chiefdom
+						has_law = law_type:law_monarchy
+					}
+					OR = {
+						has_law = law_type:law_landed_voting
+						has_law = law_type:law_wealth_voting
+						has_law = law_type:law_census_voting
+						has_law = law_type:law_universal_suffrage
+					}
+				}
+			}
+			90000 = net_power_bloc_constitutional
+		}
+
+## P-Oligarchie ##
+
+		special_selection = {
+			trigger = {
+				exists = c:NET
+				ROOT.power_bloc_leader = c:NET
+				c:NET = {
+					NOT = { has_law = law_type:law_corporate_state }
+					OR = {
+						has_law = law_type:law_presidential_republic
+						has_law = law_type:law_parliamentary_republic
+					}
+					OR = {
+						has_law = law_type:law_elder_council
+						has_law = law_type:law_oligarchy
+					}
+				}
+			}
+			90000 = net_power_bloc_p_oligarchie
+		}		
+
+## Diktatur ##
+
+		special_selection = {
+			trigger = {
+				exists = c:NET
+				ROOT.power_bloc_leader = c:NET
+				c:NET = {
+					OR = {
+						has_law = law_type:law_presidential_republic
+						has_law = law_type:law_parliamentary_republic
+					}
+				
+					OR = {
+						has_law = law_type:law_autocracy
+						has_law = law_type:law_single_party_state
+					}
+				}
+			}
+			90000 = net_power_bloc_dictatorship
+		}
+
+## Republik ##
+
+		special_selection = {
+			trigger = {
+				exists = c:NET
+				ROOT.power_bloc_leader = c:NET
+				c:NET = {
+					OR = {
+						has_law = law_type:law_presidential_republic
+						has_law = law_type:law_parliamentary_republic
+						has_law = law_type:law_corporate_state
+					}					
+					OR = {
+						has_law = law_type:law_landed_voting
+						has_law = law_type:law_wealth_voting
+						has_law = law_type:law_census_voting
+						has_law = law_type:law_universal_suffrage
+					}
+				}
+			}
+			90000 = net_power_bloc_republic
+		}
+		
+## Technokratie ##
+
+		special_selection = {
+			trigger = {
+				exists = c:NET
+				ROOT.power_bloc_leader = c:NET
+				c:NET = {
+					has_law = law_type:law_technocracy
+					NOT = {
+						has_law = law_type:law_corporate_state
+						has_law = law_type:law_council_republic
+						has_law = law_type:law_theocracy
+					}
+				}
+			}
+			90000 = net_power_bloc_technocracy
+		}
+
+## Theokratie ##
+		
+		special_selection = {
+			trigger = {
+				exists = c:NET
+				ROOT.power_bloc_leader = c:NET
+				c:NET = {
+					has_law = law_type:law_theocracy
+					NOT = {
+						has_law_or_variant = law_type:law_anarchy
+					}						
+				}
+			}
+			90000 = net_power_bloc_theocracy
+		}
+
+## Kommunistisch ##
+		
+		special_selection = {
+			trigger = {
+				exists = c:NET
+				ROOT.power_bloc_leader = c:NET
+				c:NET = {
+					has_law = law_type:law_council_republic
+					NOT = {
+						has_law_or_variant = law_type:law_anarchy
+					}
+				}
+			}
+			90000 = net_power_bloc_communism
+		}
+
+## Faschistisch ##
+		
+		special_selection = {
+			trigger = {
+				exists = c:NET
+				ROOT.power_bloc_leader = c:NET
+				c:NET = {
+					has_law = law_type:law_corporate_state
+					OR = {
+						has_law = law_type:law_elder_council
+						has_law = law_type:law_oligarchy
+						has_law = law_type:law_technocracy
+						has_law = law_type:law_autocracy
+						has_law = law_type:law_single_party_state						
+						ruler ?= {
+							OR = {
+								has_ideology = ideology:ideology_fascist
+								has_ideology = ideology:ideology_integralist
+								has_ideology = ideology:ideology_corporatist_leader
+							}
+						}
+					}
+				}
+			}
+			90000 = net_power_bloc_fascist
+		}
+		
+## Anarchie ##
+
+		special_selection = {
+			trigger = {
+				exists = c:NET
+				ROOT.power_bloc_leader = c:NET
+				c:NET = {
+					has_law_or_variant = law_type:law_anarchy
+				}
+			}
+			90000 = net_power_bloc_anarchy
+		}
+
+### Brasilien ###
+
+## Absolute ##
+
+		special_selection = {
+			trigger = {
+				exists = c:BRZ
+				ROOT.power_bloc_leader = c:BRZ
+				c:BRZ = {
+					OR = {
+						has_law = law_type:law_chiefdom
+						has_law = law_type:law_monarchy
+					}
+					OR = {
+						has_law = law_type:law_autocracy
+						has_law = law_type:law_single_party_state
+					}
+				}
+			}
+			90000 = brz_power_bloc_absolute
+		}
+
+## M-Oligarchie ##
+
+		special_selection = {
+			trigger = {
+				exists = c:BRZ
+				ROOT.power_bloc_leader = c:BRZ
+				c:BRZ = {
+					NOT = { has_law = law_type:law_corporate_state }
+					OR = {
+						has_law = law_type:law_chiefdom
+						has_law = law_type:law_monarchy
+					}
+					
+					OR = {
+						has_law = law_type:law_elder_council
+						has_law = law_type:law_oligarchy
+					}
+				}
+			}
+			90000 = brz_power_bloc_m_oligarchie
+		}
+	
+## Constitutional ##
+
+		special_selection = {
+			trigger = {
+				exists = c:BRZ
+				ROOT.power_bloc_leader = c:BRZ
+				c:BRZ = {
+					OR = {
+						has_law = law_type:law_chiefdom
+						has_law = law_type:law_monarchy
+					}
+					OR = {
+						has_law = law_type:law_landed_voting
+						has_law = law_type:law_wealth_voting
+						has_law = law_type:law_census_voting
+						has_law = law_type:law_universal_suffrage
+					}
+				}
+			}
+			90000 = brz_power_bloc_constitutional
+		}
+
+## P-Oligarchie ##
+
+		special_selection = {
+			trigger = {
+				exists = c:BRZ
+				ROOT.power_bloc_leader = c:BRZ
+				c:BRZ = {
+					NOT = { has_law = law_type:law_corporate_state }
+					OR = {
+						has_law = law_type:law_presidential_republic
+						has_law = law_type:law_parliamentary_republic
+					}
+					OR = {
+						has_law = law_type:law_elder_council
+						has_law = law_type:law_oligarchy
+					}
+				}
+			}
+			90000 = brz_power_bloc_p_oligarchie
+		}		
+
+## Diktatur ##
+
+		special_selection = {
+			trigger = {
+				exists = c:BRZ
+				ROOT.power_bloc_leader = c:BRZ
+				c:BRZ = {
+					OR = {
+						has_law = law_type:law_presidential_republic
+						has_law = law_type:law_parliamentary_republic
+					}
+				
+					OR = {
+						has_law = law_type:law_autocracy
+						has_law = law_type:law_single_party_state
+					}
+				}
+			}
+			90000 = brz_power_bloc_dictatorship
+		}
+
+## Republik ##
+
+		special_selection = {
+			trigger = {
+				exists = c:BRZ
+				ROOT.power_bloc_leader = c:BRZ
+				c:BRZ = {
+					OR = {
+						has_law = law_type:law_presidential_republic
+						has_law = law_type:law_parliamentary_republic
+						has_law = law_type:law_corporate_state
+					}					
+					OR = {
+						has_law = law_type:law_landed_voting
+						has_law = law_type:law_wealth_voting
+						has_law = law_type:law_census_voting
+						has_law = law_type:law_universal_suffrage
+					}
+				}
+			}
+			90000 = brz_power_bloc_republic
+		}
+		
+## Technokratie ##
+
+		special_selection = {
+			trigger = {
+				exists = c:BRZ
+				ROOT.power_bloc_leader = c:BRZ
+				c:BRZ = {
+					has_law = law_type:law_technocracy
+					NOT = {
+						has_law = law_type:law_corporate_state
+						has_law = law_type:law_council_republic
+						has_law = law_type:law_theocracy
+					}
+				}
+			}
+			90000 = brz_power_bloc_technocracy
+		}
+
+## Theokratie ##
+		
+		special_selection = {
+			trigger = {
+				exists = c:BRZ
+				ROOT.power_bloc_leader = c:BRZ
+				c:BRZ = {
+					has_law = law_type:law_theocracy
+					NOT = {
+						has_law_or_variant = law_type:law_anarchy
+					}						
+				}
+			}
+			90000 = brz_power_bloc_theocracy
+		}
+
+## Kommunistisch ##
+		
+		special_selection = {
+			trigger = {
+				exists = c:BRZ
+				ROOT.power_bloc_leader = c:BRZ
+				c:BRZ = {
+					has_law = law_type:law_council_republic
+					NOT = {
+						has_law_or_variant = law_type:law_anarchy
+					}
+				}
+			}
+			90000 = brz_power_bloc_communism
+		}
+
+## Faschistisch ##
+		
+		special_selection = {
+			trigger = {
+				exists = c:BRZ
+				ROOT.power_bloc_leader = c:BRZ
+				c:BRZ = {
+					has_law = law_type:law_corporate_state
+					OR = {
+						has_law = law_type:law_elder_council
+						has_law = law_type:law_oligarchy
+						has_law = law_type:law_technocracy
+						has_law = law_type:law_autocracy
+						has_law = law_type:law_single_party_state						
+						ruler ?= {
+							OR = {
+								has_ideology = ideology:ideology_fascist
+								has_ideology = ideology:ideology_integralist
+								has_ideology = ideology:ideology_corporatist_leader
+							}
+						}
+					}
+				}
+			}
+			90000 = brz_power_bloc_fascist
+		}
+		
+## Anarchie ##
+
+		special_selection = {
+			trigger = {
+				exists = c:BRZ
+				ROOT.power_bloc_leader = c:BRZ
+				c:BRZ = {
+					has_law_or_variant = law_type:law_anarchy
+				}
+			}
+			90000 = brz_power_bloc_anarchy
+		}
+
+### Italien ###
+
+## Absolute ##
+
+		special_selection = {
+			trigger = {
+				exists = c:ITA
+				ROOT.power_bloc_leader = c:ITA
+				c:ITA = {
+					OR = {
+						has_law = law_type:law_chiefdom
+						has_law = law_type:law_monarchy
+					}
+					OR = {
+						has_law = law_type:law_autocracy
+						has_law = law_type:law_single_party_state
+					}
+				}
+			}
+			90000 = ita_power_bloc_absolute
+		}
+
+## M-Oligarchie ##
+
+		special_selection = {
+			trigger = {
+				exists = c:ITA
+				ROOT.power_bloc_leader = c:ITA
+				c:ITA = {
+					NOT = { has_law = law_type:law_corporate_state }
+					OR = {
+						has_law = law_type:law_chiefdom
+						has_law = law_type:law_monarchy
+					}
+					
+					OR = {
+						has_law = law_type:law_elder_council
+						has_law = law_type:law_oligarchy
+					}
+				}
+			}
+			90000 = ita_power_bloc_m_oligarchie
+		}
+	
+## Constitutional ##
+
+		special_selection = {
+			trigger = {
+				exists = c:ITA
+				ROOT.power_bloc_leader = c:ITA
+				c:ITA = {
+					OR = {
+						has_law = law_type:law_chiefdom
+						has_law = law_type:law_monarchy
+					}
+					OR = {
+						has_law = law_type:law_landed_voting
+						has_law = law_type:law_wealth_voting
+						has_law = law_type:law_census_voting
+						has_law = law_type:law_universal_suffrage
+					}
+				}
+			}
+			90000 = ita_power_bloc_constitutional
+		}
+
+## P-Oligarchie ##
+
+		special_selection = {
+			trigger = {
+				exists = c:ITA
+				ROOT.power_bloc_leader = c:ITA
+				c:ITA = {
+					NOT = { has_law = law_type:law_corporate_state }
+					OR = {
+						has_law = law_type:law_presidential_republic
+						has_law = law_type:law_parliamentary_republic
+					}
+					OR = {
+						has_law = law_type:law_elder_council
+						has_law = law_type:law_oligarchy
+					}
+				}
+			}
+			90000 = ita_power_bloc_p_oligarchie
+		}		
+
+## Diktatur ##
+
+		special_selection = {
+			trigger = {
+				exists = c:ITA
+				ROOT.power_bloc_leader = c:ITA
+				c:ITA = {
+					OR = {
+						has_law = law_type:law_presidential_republic
+						has_law = law_type:law_parliamentary_republic
+					}
+				
+					OR = {
+						has_law = law_type:law_autocracy
+						has_law = law_type:law_single_party_state
+					}
+				}
+			}
+			90000 = ita_power_bloc_dictatorship
+		}
+
+## Republik ##
+
+		special_selection = {
+			trigger = {
+				exists = c:ITA
+				ROOT.power_bloc_leader = c:ITA
+				c:ITA = {
+					OR = {
+						has_law = law_type:law_presidential_republic
+						has_law = law_type:law_parliamentary_republic
+						has_law = law_type:law_corporate_state
+					}					
+					OR = {
+						has_law = law_type:law_landed_voting
+						has_law = law_type:law_wealth_voting
+						has_law = law_type:law_census_voting
+						has_law = law_type:law_universal_suffrage
+					}
+				}
+			}
+			90000 = ita_power_bloc_republic
+		}
+		
+## Technokratie ##
+
+		special_selection = {
+			trigger = {
+				exists = c:ITA
+				ROOT.power_bloc_leader = c:ITA
+				c:ITA = {
+					has_law = law_type:law_technocracy
+					NOT = {
+						has_law = law_type:law_corporate_state
+						has_law = law_type:law_council_republic
+						has_law = law_type:law_theocracy
+					}
+				}
+			}
+			90000 = ita_power_bloc_technocracy
+		}
+
+## Theokratie ##
+		
+		special_selection = {
+			trigger = {
+				exists = c:ITA
+				ROOT.power_bloc_leader = c:ITA
+				c:ITA = {
+					has_law = law_type:law_theocracy
+					NOT = {
+						has_law_or_variant = law_type:law_anarchy
+					}						
+				}
+			}
+			90000 = ita_power_bloc_theocracy
+		}
+
+## Kommunistisch ##
+		
+		special_selection = {
+			trigger = {
+				exists = c:ITA
+				ROOT.power_bloc_leader = c:ITA
+				c:ITA = {
+					has_law = law_type:law_council_republic
+					NOT = {
+						has_law_or_variant = law_type:law_anarchy
+					}
+				}
+			}
+			90000 = ita_power_bloc_communism
+		}
+
+## Faschistisch ##
+		
+		special_selection = {
+			trigger = {
+				exists = c:ITA
+				ROOT.power_bloc_leader = c:ITA
+				c:ITA = {
+					has_law = law_type:law_corporate_state
+					OR = {
+						has_law = law_type:law_elder_council
+						has_law = law_type:law_oligarchy
+						has_law = law_type:law_technocracy
+						has_law = law_type:law_autocracy
+						has_law = law_type:law_single_party_state						
+						ruler ?= {
+							OR = {
+								has_ideology = ideology:ideology_fascist
+								has_ideology = ideology:ideology_integralist
+								has_ideology = ideology:ideology_corporatist_leader
+							}
+						}
+					}
+				}
+			}
+			90000 = ita_power_bloc_fascist
+		}
+		
+## Anarchie ##
+
+		special_selection = {
+			trigger = {
+				exists = c:ITA
+				ROOT.power_bloc_leader = c:ITA
+				c:ITA = {
+					has_law_or_variant = law_type:law_anarchy
+				}
+			}
+			90000 = ita_power_bloc_anarchy
+		}
+
+### Spanien ###
+
+## Absolute ##
+
+		special_selection = {
+			trigger = {
+				exists = c:SPA
+				ROOT.power_bloc_leader = c:SPA
+				c:SPA = {
+					OR = {
+						has_law = law_type:law_chiefdom
+						has_law = law_type:law_monarchy
+					}
+					OR = {
+						has_law = law_type:law_autocracy
+						has_law = law_type:law_single_party_state
+					}
+				}
+			}
+			90000 = spa_power_bloc_absolute
+		}
+
+## M-Oligarchie ##
+
+		special_selection = {
+			trigger = {
+				exists = c:SPA
+				ROOT.power_bloc_leader = c:SPA
+				c:SPA = {
+					NOT = { has_law = law_type:law_corporate_state }
+					OR = {
+						has_law = law_type:law_chiefdom
+						has_law = law_type:law_monarchy
+					}
+					
+					OR = {
+						has_law = law_type:law_elder_council
+						has_law = law_type:law_oligarchy
+					}
+				}
+			}
+			90000 = spa_power_bloc_m_oligarchie
+		}
+	
+## Constitutional ##
+
+		special_selection = {
+			trigger = {
+				exists = c:SPA
+				ROOT.power_bloc_leader = c:SPA
+				c:SPA = {
+					OR = {
+						has_law = law_type:law_chiefdom
+						has_law = law_type:law_monarchy
+					}
+					OR = {
+						has_law = law_type:law_landed_voting
+						has_law = law_type:law_wealth_voting
+						has_law = law_type:law_census_voting
+						has_law = law_type:law_universal_suffrage
+					}
+				}
+			}
+			90000 = spa_power_bloc_constitutional
+		}
+
+## P-Oligarchie ##
+
+		special_selection = {
+			trigger = {
+				exists = c:SPA
+				ROOT.power_bloc_leader = c:SPA
+				c:SPA = {
+					NOT = { has_law = law_type:law_corporate_state }
+					OR = {
+						has_law = law_type:law_presidential_republic
+						has_law = law_type:law_parliamentary_republic
+					}
+					OR = {
+						has_law = law_type:law_elder_council
+						has_law = law_type:law_oligarchy
+					}
+				}
+			}
+			90000 = spa_power_bloc_p_oligarchie
+		}		
+
+## Diktatur ##
+
+		special_selection = {
+			trigger = {
+				exists = c:SPA
+				ROOT.power_bloc_leader = c:SPA
+				c:SPA = {
+					OR = {
+						has_law = law_type:law_presidential_republic
+						has_law = law_type:law_parliamentary_republic
+					}
+				
+					OR = {
+						has_law = law_type:law_autocracy
+						has_law = law_type:law_single_party_state
+					}
+				}
+			}
+			90000 = spa_power_bloc_dictatorship
+		}
+
+## Republik ##
+
+		special_selection = {
+			trigger = {
+				exists = c:SPA
+				ROOT.power_bloc_leader = c:SPA
+				c:SPA = {
+					OR = {
+						has_law = law_type:law_presidential_republic
+						has_law = law_type:law_parliamentary_republic
+						has_law = law_type:law_corporate_state
+					}					
+					OR = {
+						has_law = law_type:law_landed_voting
+						has_law = law_type:law_wealth_voting
+						has_law = law_type:law_census_voting
+						has_law = law_type:law_universal_suffrage
+					}
+				}
+			}
+			90000 = spa_power_bloc_republic
+		}
+		
+## Technokratie ##
+
+		special_selection = {
+			trigger = {
+				exists = c:SPA
+				ROOT.power_bloc_leader = c:SPA
+				c:SPA = {
+					has_law = law_type:law_technocracy
+					NOT = {
+						has_law = law_type:law_corporate_state
+						has_law = law_type:law_council_republic
+						has_law = law_type:law_theocracy
+					}
+				}
+			}
+			90000 = spa_power_bloc_technocracy
+		}
+
+## Theokratie ##
+		
+		special_selection = {
+			trigger = {
+				exists = c:SPA
+				ROOT.power_bloc_leader = c:SPA
+				c:SPA = {
+					has_law = law_type:law_theocracy
+					NOT = {
+						has_law_or_variant = law_type:law_anarchy
+					}						
+				}
+			}
+			90000 = spa_power_bloc_theocracy
+		}
+
+## Kommunistisch ##
+		
+		special_selection = {
+			trigger = {
+				exists = c:SPA
+				ROOT.power_bloc_leader = c:SPA
+				c:SPA = {
+					has_law = law_type:law_council_republic
+					NOT = {
+						has_law_or_variant = law_type:law_anarchy
+					}
+				}
+			}
+			90000 = spa_power_bloc_communism
+		}
+
+## Faschistisch ##
+		
+		special_selection = {
+			trigger = {
+				exists = c:SPA
+				ROOT.power_bloc_leader = c:SPA
+				c:SPA = {
+					has_law = law_type:law_corporate_state
+					OR = {
+						has_law = law_type:law_elder_council
+						has_law = law_type:law_oligarchy
+						has_law = law_type:law_technocracy
+						has_law = law_type:law_autocracy
+						has_law = law_type:law_single_party_state						
+						ruler ?= {
+							OR = {
+								has_ideology = ideology:ideology_fascist
+								has_ideology = ideology:ideology_integralist
+								has_ideology = ideology:ideology_corporatist_leader
+							}
+						}
+					}
+				}
+			}
+			90000 = spa_power_bloc_fascist
+		}
+		
+## Anarchie ##
+
+		special_selection = {
+			trigger = {
+				exists = c:SPA
+				ROOT.power_bloc_leader = c:SPA
+				c:SPA = {
+					has_law_or_variant = law_type:law_anarchy
+				}
+			}
+			90000 = spa_power_bloc_anarchy
+		}
+
+############# Great Britain #################
+
 		special_selection = {
 			trigger = {
 				exists = c:GBR
@@ -391,6 +1935,7 @@
 			}
 			90000 = gbr_power_bloc_absolute_monarchy
 		}
+
 		special_selection = {
 			trigger = {
 				exists = c:GBR
@@ -400,6 +1945,7 @@
 						has_law = law_type:law_presidential_republic
 						has_law = law_type:law_parliamentary_republic
 					}
+				
 					OR = {
 						has_law = law_type:law_autocracy
 						has_law = law_type:law_single_party_state
@@ -408,6 +1954,7 @@
 			}
 			90000 = gbr_power_bloc_dictatorship
 		}
+		
 		special_selection = {
 			trigger = {
 				exists = c:GBR
@@ -417,6 +1964,7 @@
 						has_law = law_type:law_chiefdom
 						has_law = law_type:law_monarchy
 					}
+					
 					OR = {
 						has_law = law_type:law_elder_council
 						has_law = law_type:law_oligarchy
@@ -426,6 +1974,7 @@
 			}
 			90000 = gbr_power_bloc_mon_oligarchy
 		}
+		
 		special_selection = {
 			trigger = {
 				exists = c:GBR
@@ -444,6 +1993,7 @@
 			}
 			90000 = gbr_power_bloc_non_mon_oligarchy
 		}
+		
 		special_selection = {
 			trigger = {
 				exists = c:GBR
@@ -463,6 +2013,7 @@
 			}
 			90000 = gbr_power_bloc_constitutional_monarchy
 		}
+		
 		special_selection = {
 			trigger = {
 				exists = c:GBR
@@ -472,7 +2023,7 @@
 						has_law = law_type:law_presidential_republic
 						has_law = law_type:law_parliamentary_republic
 						has_law = law_type:law_corporate_state
-					}
+					}					
 					OR = {
 						has_law = law_type:law_landed_voting
 						has_law = law_type:law_wealth_voting
@@ -483,6 +2034,7 @@
 			}
 			90000 = gbr_power_bloc_republic
 		}
+		
 		special_selection = {
 			trigger = {
 				exists = c:GBR
@@ -493,6 +2045,7 @@
 			}
 			90000 = gbr_power_bloc_theocracy
 		}
+		
 		special_selection = {
 			trigger = {
 				exists = c:GBR
@@ -503,6 +2056,7 @@
 			}
 			90000 = gbr_power_bloc_communism
 		}
+		
 		special_selection = {
 			trigger = {
 				exists = c:GBR
@@ -514,7 +2068,7 @@
 						has_law = law_type:law_oligarchy
 						has_law = law_type:law_technocracy
 						has_law = law_type:law_autocracy
-						has_law = law_type:law_single_party_state
+						has_law = law_type:law_single_party_state						
 						ruler ?= {
 							OR = {
 								has_ideology = ideology:ideology_fascist
@@ -527,615 +2081,11 @@
 			}
 			90000 = gbr_power_bloc_fascist
 		}
-		################	France		##################
-		special_selection = {
-			trigger = {
-				exists = c:FRA
-				ROOT.power_bloc_leader = c:FRA
-				c:FRA = {
-					OR = {
-						has_law = law_type:law_chiefdom
-						has_law = law_type:law_monarchy
-					}
-					OR = {
-						has_law = law_type:law_autocracy
-						has_law = law_type:law_single_party_state
-					}
-				}
-			}
-			900000 = fra_power_bloc_absolute_monarchy_patterned
-			900000 = fra_power_bloc_absolute_monarchy_non_patterned
-			900000 = fra_power_bloc_absolute_monarchy_patterned_colored_emblem
-		}
-		special_selection = {
-			trigger = {
-				exists = c:FRA
-				ROOT.power_bloc_leader = c:FRA
-				c:FRA = {
-					OR = {
-						has_law = law_type:law_presidential_republic
-						has_law = law_type:law_parliamentary_republic
-					}
-					OR = {
-						has_law = law_type:law_autocracy
-						has_law = law_type:law_single_party_state
-					}
-				}
-			}
-			900000 = fra_power_bloc_dictatorship
-		}
-		####	Monarchal Oligarchy		
-		special_selection = {
-			trigger = {
-				exists = c:FRA
-				ROOT.power_bloc_leader = c:FRA
-				c:FRA = {
-					OR = {
-						has_law = law_type:law_chiefdom
-						has_law = law_type:law_monarchy
-					}
-					OR = {
-						has_law = law_type:law_elder_council
-						has_law = law_type:law_oligarchy
-						has_law = law_type:law_technocracy
-					}
-				}
-			}
-			900000 = fra_power_bloc_absolute_monarchy_non_patterned
-		}
-		####	Non-Monarchal Oligarchy				
-		special_selection = {
-			trigger = {
-				exists = c:FRA
-				ROOT.power_bloc_leader = c:FRA
-				c:FRA = {
-					OR = {
-						has_law = law_type:law_presidential_republic
-						has_law = law_type:law_parliamentary_republic
-					}
-					OR = {
-						has_law = law_type:law_elder_council
-						has_law = law_type:law_oligarchy
-						has_law = law_type:law_technocracy
-					}
-				}
-			}
-			900000 = fra_power_bloc_dictatorship
-		}
-		####	Constitutional Monarchy
-		special_selection = {
-			trigger = {
-				exists = c:FRA
-				ROOT.power_bloc_leader = c:FRA
-				c:FRA = {
-					OR = {
-						has_law = law_type:law_chiefdom
-						has_law = law_type:law_monarchy
-					}
-					OR = {
-						has_law = law_type:law_landed_voting
-						has_law = law_type:law_wealth_voting
-						has_law = law_type:law_census_voting
-						has_law = law_type:law_universal_suffrage
-					}
-				}
-			}
-			900000 = fra_power_bloc_constitutional_monarchy
-			900000 = fra_power_bloc_constitutional_monarchy_dark
-		}
-		####	Republic
-		special_selection = {
-			trigger = {
-				exists = c:FRA
-				ROOT.power_bloc_leader = c:FRA
-				c:FRA = {
-					OR = {
-						has_law = law_type:law_presidential_republic
-						has_law = law_type:law_parliamentary_republic
-						has_law = law_type:law_corporate_state
-					}
-					OR = {
-						has_law = law_type:law_landed_voting
-						has_law = law_type:law_wealth_voting
-						has_law = law_type:law_census_voting
-						has_law = law_type:law_universal_suffrage
-					}
-				}
-			}
-			900000 = fra_power_bloc_republic
-		}
-		special_selection = {
-			trigger = {
-				exists = c:FRA
-				ROOT.power_bloc_leader = c:FRA
-			}
-			90000 = fra_power_bloc_republic
-		}
-		special_selection = {
-			trigger = {
-				exists = c:FRA
-				ROOT.power_bloc_leader = c:FRA
-				c:FRA = {
-					has_law = law_type:law_theocracy
-				}
-			}
-			90000 = fra_power_bloc_theocracy
-		}
-		special_selection = {
-			trigger = {
-				exists = c:FRA
-				ROOT.power_bloc_leader = c:FRA
-				c:FRA = {
-					has_law = law_type:law_council_republic
-				}
-			}
-			90000 = power_bloc_communism_blue_outer_white_circle_red_charge
-			90000 = power_bloc_communism_red_outer_white_circle_blue_charge
-			90000 = power_bloc_communism_red_blue_golden_or_white_charge
-			90000 = power_bloc_communism_trico_vert_blue_red_golden_charge
-		}
-		special_selection = {
-			trigger = {
-				exists = c:FRA
-				ROOT.power_bloc_leader = c:FRA
-				c:FRA = {
-					has_law = law_type:law_corporate_state
-					OR = {
-						has_law = law_type:law_elder_council
-						has_law = law_type:law_oligarchy
-						has_law = law_type:law_technocracy
-						has_law = law_type:law_autocracy
-						has_law = law_type:law_single_party_state
-						ruler ?= {
-							OR = {
-								has_ideology = ideology:ideology_fascist
-								has_ideology = ideology:ideology_integralist
-								has_ideology = ideology:ideology_corporatist_leader
-							}
-						}
-					}
-				}
-			}
-			90000 = power_bloc_fascist_round_outer_red_blue_charge
-			90000 = power_bloc_fascist_round_outer_blue_red_charge
-		}
-		################	USA		#######################
-		special_selection = {
-			trigger = {
-				exists = c:USA
-				ROOT.power_bloc_leader = c:USA
-				c:USA = {
-					OR = {
-						has_law = law_type:law_chiefdom
-						has_law = law_type:law_monarchy
-					}
-					OR = {
-						has_law = law_type:law_autocracy
-						has_law = law_type:law_single_party_state
-					}
-				}
-			}
-			90000 = usa_power_bloc_absolute_monarchy
-		}
-		special_selection = {
-			trigger = {
-				exists = c:USA
-				ROOT.power_bloc_leader = c:USA
-				c:USA = {
-					OR = {
-						has_law = law_type:law_presidential_republic
-						has_law = law_type:law_parliamentary_republic
-					}
-					OR = {
-						has_law = law_type:law_autocracy
-						has_law = law_type:law_single_party_state
-					}
-				}
-			}
-			90000 = usa_power_bloc_dictatorship_1
-			90000 = usa_power_bloc_dictatorship_2
-		}
-		special_selection = {
-			trigger = {
-				exists = c:USA
-				ROOT.power_bloc_leader = c:USA
-				c:USA = {
-					OR = {
-						has_law = law_type:law_chiefdom
-						has_law = law_type:law_monarchy
-					}
-					OR = {
-						has_law = law_type:law_elder_council
-						has_law = law_type:law_oligarchy
-						has_law = law_type:law_technocracy
-					}
-				}
-			}
-			90000 = usa_power_bloc_dictatorship_1
-			90000 = usa_power_bloc_absolute_monarchy
-		}
-		special_selection = {
-			trigger = {
-				exists = c:USA
-				ROOT.power_bloc_leader = c:USA
-				c:USA = {
-					OR = {
-						has_law = law_type:law_presidential_republic
-						has_law = law_type:law_parliamentary_republic
-					}
-					OR = {
-						has_law = law_type:law_elder_council
-						has_law = law_type:law_oligarchy
-						has_law = law_type:law_technocracy
-					}
-				}
-			}
-			90000 = usa_power_bloc_dictatorship_1
-			90000 = usa_power_bloc_dictatorship_2
-		}
-		special_selection = {
-			trigger = {
-				exists = c:USA
-				ROOT.power_bloc_leader = c:USA
-				c:USA = {
-					OR = {
-						has_law = law_type:law_chiefdom
-						has_law = law_type:law_monarchy
-					}
-					OR = {
-						has_law = law_type:law_landed_voting
-						has_law = law_type:law_wealth_voting
-						has_law = law_type:law_census_voting
-						has_law = law_type:law_universal_suffrage
-					}
-				}
-			}
-			90000 = usa_power_bloc_constitutional_monarchy
-		}
-		special_selection = {
-			trigger = {
-				exists = c:USA
-				ROOT.power_bloc_leader = c:USA
-				c:USA = {
-					OR = {
-						has_law = law_type:law_presidential_republic
-						has_law = law_type:law_parliamentary_republic
-						has_law = law_type:law_corporate_state
-					}
-					OR = {
-						has_law = law_type:law_landed_voting
-						has_law = law_type:law_wealth_voting
-						has_law = law_type:law_census_voting
-						has_law = law_type:law_universal_suffrage
-					}
-				}
-			}
-			90000 = usa_power_bloc_constitutional_monarchy
-			90000 = usa_power_bloc_dictatorship_1
-			90000 = usa_power_bloc_absolute_monarchy
-		}
-		special_selection = {
-			trigger = {
-				exists = c:USA
-				ROOT.power_bloc_leader = c:USA
-				c:USA = {
-					has_law = law_type:law_theocracy
-				}
-			}
-			90000 = usa_power_bloc_theocracy
-		}
-		special_selection = {
-			trigger = {
-				exists = c:USA
-				ROOT.power_bloc_leader = c:USA
-				c:USA = {
-					has_law = law_type:law_council_republic
-				}
-			}
-			90000 = power_bloc_communism_blue_outer_white_circle_red_charge
-			90000 = power_bloc_communism_red_outer_white_circle_blue_charge
-			90000 = power_bloc_communism_red_blue_golden_or_white_charge
-			90000 = power_bloc_communism_trico_vert_blue_red_golden_charge
-		}
-		special_selection = {
-			trigger = {
-				exists = c:USA
-				ROOT.power_bloc_leader = c:USA
-				c:USA = {
-					has_law = law_type:law_corporate_state
-					OR = {
-						has_law = law_type:law_elder_council
-						has_law = law_type:law_oligarchy
-						has_law = law_type:law_technocracy
-						has_law = law_type:law_autocracy
-						has_law = law_type:law_single_party_state
-						ruler ?= {
-							OR = {
-								has_ideology = ideology:ideology_fascist
-								has_ideology = ideology:ideology_integralist
-								has_ideology = ideology:ideology_corporatist_leader
-							}
-						}
-					}
-				}
-			}
-			90000 = power_bloc_fascist_round_outer_red_blue_charge
-			90000 = power_bloc_fascist_round_outer_blue_red_charge
-		}
-		################	Spain	########################
-		special_selection = {
-			trigger = {
-				exists = c:SPA
-				ROOT.power_bloc_leader = c:SPA
-				c:SPA = {
-					OR = {
-						has_law = law_type:law_chiefdom
-						has_law = law_type:law_monarchy
-					}
-					OR = {
-						has_law = law_type:law_autocracy
-						has_law = law_type:law_single_party_state
-					}
-				}
-			}
-			90000 = spa_power_bloc_absolute_monarchy
-		}
-		special_selection = {
-			trigger = {
-				exists = c:SPA
-				ROOT.power_bloc_leader = c:SPA
-				c:SPA = {
-					OR = {
-						has_law = law_type:law_chiefdom
-						has_law = law_type:law_monarchy
-					}
-					OR = {
-						has_law = law_type:law_landed_voting
-						has_law = law_type:law_wealth_voting
-						has_law = law_type:law_census_voting
-						has_law = law_type:law_universal_suffrage
-					}
-				}
-			}
-			90000 = spa_power_bloc_constitutional_monarchy
-		}
-		special_selection = {
-			trigger = {
-				exists = c:SPA
-				ROOT.power_bloc_leader = c:SPA
-				c:SPA = {
-					OR = {
-						has_law = law_type:law_presidential_republic
-						has_law = law_type:law_parliamentary_republic
-					}
-					OR = {
-						has_law = law_type:law_autocracy
-						has_law = law_type:law_single_party_state
-					}
-				}
-			}
-			90000 = spa_power_bloc_dictatorship
-		}
-		special_selection = {
-			trigger = {
-				exists = c:SPA
-				ROOT.power_bloc_leader = c:SPA
-				c:SPA = {
-					OR = {
-						has_law = law_type:law_elder_council
-						has_law = law_type:law_oligarchy
-						has_law = law_type:law_technocracy
-					}
-				}
-			}
-			90000 = spa_power_bloc_oligarchy
-		}
-		special_selection = {
-			trigger = {
-				exists = c:SPA
-				ROOT.power_bloc_leader = c:SPA
-				c:SPA = {
-					OR = {
-						has_law = law_type:law_presidential_republic
-						has_law = law_type:law_parliamentary_republic
-						has_law = law_type:law_corporate_state
-					}
-					OR = {
-						has_law = law_type:law_landed_voting
-						has_law = law_type:law_wealth_voting
-						has_law = law_type:law_census_voting
-						has_law = law_type:law_universal_suffrage
-					}
-				}
-			}
-			90000 = spa_power_bloc_republic
-		}
-		special_selection = {
-			trigger = {
-				exists = c:SPA
-				ROOT.power_bloc_leader = c:SPA
-				c:SPA = {
-					has_law = law_type:law_theocracy
-				}
-			}
-			90000 = spa_power_bloc_theocracy
-		}
-		special_selection = {
-			trigger = {
-				exists = c:SPA
-				ROOT.power_bloc_leader = c:SPA
-				c:SPA = {
-					has_law = law_type:law_corporate_state
-					OR = {
-						has_law = law_type:law_elder_council
-						has_law = law_type:law_oligarchy
-						has_law = law_type:law_technocracy
-						has_law = law_type:law_autocracy
-						has_law = law_type:law_single_party_state
-						ruler ?= {
-							OR = {
-								has_ideology = ideology:ideology_fascist
-								has_ideology = ideology:ideology_integralist
-								has_ideology = ideology:ideology_corporatist_leader
-							}
-						}
-					}
-				}
-			}
-			90000 = spa_power_bloc_fascist
-		}
-		################	Brazil	########################		
-		special_selection = {
-			trigger = {
-				exists = c:BRZ
-				ROOT.power_bloc_leader = c:BRZ
-				c:BRZ = {
-					OR = {
-						has_law = law_type:law_chiefdom
-						has_law = law_type:law_monarchy
-					}
-					OR = {
-						has_law = law_type:law_autocracy
-						has_law = law_type:law_single_party_state
-					}
-				}
-			}
-			90000 = brz_power_bloc_absolute_monarchy
-		}
-		special_selection = {
-			trigger = {
-				exists = c:BRZ
-				ROOT.power_bloc_leader = c:BRZ
-				c:BRZ = {
-					OR = {
-						has_law = law_type:law_chiefdom
-						has_law = law_type:law_monarchy
-					}
-					OR = {
-						has_law = law_type:law_landed_voting
-						has_law = law_type:law_wealth_voting
-						has_law = law_type:law_census_voting
-						has_law = law_type:law_universal_suffrage
-					}
-				}
-			}
-			90000 = brz_power_bloc_absolute_monarchy
-			90000 = brz_power_bloc_oligarchy
-		}
-		special_selection = {
-			trigger = {
-				exists = c:BRZ
-				ROOT.power_bloc_leader = c:BRZ
-				c:BRZ = {
-					OR = {
-						has_law = law_type:law_presidential_republic
-						has_law = law_type:law_parliamentary_republic
-					}
-					OR = {
-						has_law = law_type:law_autocracy
-						has_law = law_type:law_single_party_state
-					}
-				}
-			}
-			90000 = brz_power_bloc_oligarchy
-		}
-		special_selection = {
-			trigger = {
-				exists = c:BRZ
-				ROOT.power_bloc_leader = c:BRZ
-				c:BRZ = {
-					OR = {
-						has_law = law_type:law_elder_council
-						has_law = law_type:law_oligarchy
-						has_law = law_type:law_technocracy
-					}
-				}
-			}
-			90000 = brz_power_bloc_oligarchy
-		}
-		special_selection = {
-			trigger = {
-				exists = c:BRZ
-				ROOT.power_bloc_leader = c:BRZ
-				c:BRZ = {
-					OR = {
-						has_law = law_type:law_presidential_republic
-						has_law = law_type:law_parliamentary_republic
-						has_law = law_type:law_corporate_state
-					}
-					OR = {
-						has_law = law_type:law_landed_voting
-						has_law = law_type:law_wealth_voting
-						has_law = law_type:law_census_voting
-						has_law = law_type:law_universal_suffrage
-					}
-				}
-			}
-			90000 = brz_power_bloc_republic
-		}
-		special_selection = {
-			trigger = {
-				exists = c:BRZ
-				ROOT.power_bloc_leader = c:BRZ
-				c:BRZ = {
-					has_law = law_type:law_theocracy
-				}
-			}
-			90000 = brz_power_bloc_theocracy
-		}
-		special_selection = {
-			trigger = {
-				exists = c:BRZ
-				ROOT.power_bloc_leader = c:BRZ
-				c:BRZ = {
-					has_law = law_type:law_corporate_state
-					OR = {
-						has_law = law_type:law_elder_council
-						has_law = law_type:law_oligarchy
-						has_law = law_type:law_technocracy
-						has_law = law_type:law_autocracy
-						has_law = law_type:law_single_party_state
-						ruler ?= {
-							OR = {
-								has_ideology = ideology:ideology_fascist
-								has_ideology = ideology:ideology_integralist
-								has_ideology = ideology:ideology_corporatist_leader
-							}
-						}
-					}
-				}
-			}
-			90000 = power_bloc_fascist_round_outer_green_blue_charge
-			90000 = power_bloc_fascist_round_outer_blue_inner_yellow_blue_charge
-		}
-		#############################################################################################################################
-		########Standard Anarchy (NO Exzeptions)
-		special_selection = {
-			trigger = {
-				ROOT.power_bloc_leader = {
-					has_law = law_type:law_anarchy
-				}
-			}
-			90000 = power_bloc_anarchy_dark_perpale
-			90000 = power_bloc_anarchy_dark_round
-			45000 = power_bloc_anarchy_simple
-		}
-		########Standard Communism (Exceptions!)
-		special_selection = {
-			trigger = {
-				NOR = {
-					ROOT.power_bloc_leader = c:GBR
-					ROOT.power_bloc_leader = c:USA
-					ROOT.power_bloc_leader = c:FRA
-				}
-				ROOT.power_bloc_leader = {
-					has_law = law_type:law_council_republic
-				}
-			}
-			90000 = power_bloc_communism_standard
-		}
-		###############################################################################################################################
-		########	Start COAs			
+									
+###############################################################################################################################
+
+########	Start COAs			
+		
 		special_selection = {
 			trigger = {
 				exists = c:AUS
@@ -1143,6 +2093,7 @@
 			}
 			90000 = aus_power_bloc_1
 		}
+		
 		special_selection = {
 			trigger = {
 				exists = c:PRU
@@ -1150,6 +2101,7 @@
 			}
 			90000 = pru_power_bloc_1
 		}
+		
 		special_selection = {
 			trigger = {
 				exists = c:RUS
@@ -1157,6 +2109,7 @@
 			}
 			90000 = rus_power_bloc_1
 		}
+		
 		special_selection = {
 			trigger = {
 				exists = c:TUR
@@ -1173,9 +2126,12 @@
 				}
 			}
 			90000 = por_power_bloc_1
-		}
-		########	END		######################
+		}					   
+		
+########	END		######################
+
 	}
+	
 	chartered_company = {
 		3000 = template_chartered_company_1
 		500 = template_chartered_company_2

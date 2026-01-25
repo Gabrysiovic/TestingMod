@@ -1,11 +1,10 @@
-AA_restore_name =
-{
-	is_shown = {	
+﻿AA_restore_name = {
+	is_shown = {
 		OR = {
 			has_variable = AA_indochina_var
 			has_variable = AA_federation_var
 		}
-	}	
+	}
 	possible = {
 		OR = {
 			has_variable = AA_indochina_var
@@ -15,56 +14,37 @@ AA_restore_name =
 	when_taken = {
 		remove_variable = AA_indochina_var
 		remove_variable = AA_federation_var
-		}
+	}
 }
 
-AA_indochina_form =
-{
+AA_indochina_form = {
 	is_shown = {
-	AND = {	
-		OR = {
-			AND =
-			{
-			exists = c:DAI
-			c:DAI ?= THIS
+		AND = {
+			OR = {
+				c:DAI ?= THIS
+				c:SIA ?= THIS
 			}
-			AND =
-			{
-			exists = c:SIA
-			c:SIA ?= THIS
+			hidden_trigger = {
+				NOT = {
+					has_variable = AA_indochina_var
+				}
+			}
+			hidden_trigger = {
+				NOT = {
+					has_modifier = RP_restoration
+				}
 			}
 		}
-		hidden_trigger = {
-			NOT = { has_variable = AA_indochina_var }
-		}
-		hidden_trigger = {
-			NOT = { has_variable = RP_restoration }
-		}
-	}	
 	}
-	
 	possible = {
-		OR = 
-		{
-			c:DAI ?= THIS
-			c:SIA ?= THIS
-		}
 		has_technology_researched = nationalism
-##		any_state_in_indochina_region = {
-##			count = 8
-##			owner = ROOT
-##		}
-		any_scope_state_in_strategic_region	=
-			{
-					owner = ROOT
-					count = 8
-					region = sr:region_indochina
+		sr:region_indochina = {
+			any_scope_state = {
+				owner = ROOT
+				count >= 8
 			}
-		hidden_trigger = {
-			NOT = { has_variable = AA_indochina_var }
 		}
 	}
-
 	when_taken = {
 		set_variable = {
 			name = AA_indochina_var
@@ -75,48 +55,68 @@ AA_indochina_form =
 			days = long_modifier_time
 		}
 	}
-
 	ai_chance = {
 		value = 0
 	}
 }
 
-AA_imperial_federation_form =
-{
+AA_imperial_federation_form = {
 	is_shown = {
 		c:GBR ?= THIS
 		hidden_trigger = {
-			NOT = { has_variable = AA_federation_var }
+			NOT = {
+				has_variable = AA_federation_var
+			}
 		}
-		NOT = { has_variable = RP_restoration }
-
-		
+		NOT = {
+			has_modifier = RP_restoration
+		}
 	}
-	
 	possible = {
-		c:GBR ?= THIS
 		has_technology_researched = pan-nationalism
 		has_technology_researched = electric_telegraph
-		not = { exists = c:EIC }
-		hidden_trigger = {
-			NOT = { has_variable = AA_federation_var }
-		}
+##		not = {
+##			exists = c:BIC
+##		}
 	}
-
 	when_taken = {
-		set_variable = {
-			name = AA_federation_var
-			value = yes
-		}
+		set_variable = AA_federation_var
 		add_modifier = {
 			name = RP_restoration
 			days = long_modifier_time
 		}
 	}
-
 	ai_chance = {
 		value = 0
 	}
-
-
 }
+
+AA_greater_persia_form = {
+	is_shown = {
+		c:PER ?= THIS
+		hidden_trigger = {
+			NOT = {
+				has_variable = AA_persia_var
+			}
+		}
+		NOT = {
+			has_modifier = RP_restoration
+		}
+	}
+	possible = {
+	has_technology_researched = nationalism
+	is_country_type = recognized
+	## Own Baku
+	owns_entire_state_region = STATE_AZERBAIJAN
+	}
+	when_taken = {
+		set_variable = AA_persia_var
+		add_modifier = {
+			name = RP_restoration
+			days = long_modifier_time
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}	

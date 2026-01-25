@@ -4,15 +4,5 @@
 	category = staple
 	local = no
 	tradeable = no
-
-	consumption_tax_cost = 200
-}
-
-electricity = {
-	texture = "gfx/interface/icons/goods_icons/electricity.dds"
-	cost = 30
-	category = staple
-	local = yes
-
 	consumption_tax_cost = 200
 }
