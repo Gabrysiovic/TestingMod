@@ -1,0 +1,53 @@
+﻿political_head_of_navy = {
+	type = country
+	random_valid = no
+
+	text = {
+		localization_key = custom_secretary_of_the_navy
+		trigger = {
+			OR = {
+				c:USA ?= this
+				c:CSA ?= this
+			}
+		}
+	}
+
+	text = {
+		localization_key = custom_first_lord_of_the_admiralty
+		trigger = {
+			c:GBR ?= this
+			has_law = law_type:law_monarchy
+		}
+	}
+
+
+
+	# Fallback / most other countries
+
+	text = {
+		localization_key = custom_minister_of_the_navy
+	}
+}
+
+voting_on_treaty_loc = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			has_variable = is_naval_conference_host
+		}
+		localization_key = voting_on_treaty_is_host
+	}
+
+	text = {
+		trigger = {
+			has_variable = is_voting_on_treaty
+		}
+		localization_key = voting_on_treaty_yes
+	}
+
+	text = {
+		localization_key = voting_on_treaty_no
+	}
+}
