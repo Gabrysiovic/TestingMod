@@ -1,0 +1,36 @@
+﻿# goods types, organized by category
+# goods types, organized by category
+# goods types, organized by category
+
+# prestige_factor							Base prestige for occupying the rank MIN_PRESTIGE_AWARD spot on the goods production leaderboard. x2 awarded for every rank above the minimum.
+
+######
+# TTS GOODS
+######
+
+REPLACE_OR_CREATE:manowars = {
+	texture = "gfx/interface/icons/goods_icons/man_o_wars.dds"
+	cost = 70
+	category = military
+	
+	prestige_factor = 3
+	tradeable = yes
+}
+
+REPLACE_OR_CREATE:ironclads = {
+	texture = "gfx/interface/icons/goods_icons/ironclads.dds"
+	cost = 80
+	category = military
+	
+	prestige_factor = 7
+	tradeable = yes
+}
+
+REPLACE_OR_CREATE:tts_capital_ships = { # Used for dreadnoughts and above
+	texture = "gfx/interface/icons/goods_icons/capital_ships.dds"
+	cost = 100
+	category = military
+	
+	prestige_factor = 10
+	tradeable = no
+}

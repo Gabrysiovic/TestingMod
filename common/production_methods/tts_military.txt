@@ -1,0 +1,553 @@
+﻿#####
+# Primary PMs
+#####
+
+# pm_tts_ships_of_the_line = {
+# 	texture = "gfx/interface/icons/production_method_icons/man_o_wars.dds"
+
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			goods_input_manowars_add = 2
+# 		}
+
+# 		level_scaled = {
+# 			building_employment_soldiers_add = 900
+# 			building_employment_officers_add = 100
+# 		}
+
+# 		throughput_scaled = {
+# 			# for debugging
+# 			unit_offense_add = 10
+# 			unit_defense_add = 10
+# 		}
+
+# 		unscaled = {
+# 			unit_morale_loss_add = 25
+# 		}
+# 	}
+
+# 	country_modifiers = {
+# 		workforce_scaled = {
+# 			country_max_declared_interests_add = 0.1
+# 			country_navy_power_projection_add = 10
+# 		}
+# 	}
+
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment
+# 	}
+# }
+
+# pm_tts_steam_ships_of_the_line = {
+# 	texture = "gfx/interface/icons/production_method_icons/man_o_wars2.dds"
+# 	unlocking_technologies = {
+# 		screw_frigate
+# 	}
+
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			goods_input_manowars_add = 4
+# 			goods_input_ammunition_add = 1
+# 		}
+
+# 		level_scaled = {
+# 			building_employment_soldiers_add = 900
+# 			building_employment_officers_add = 100
+# 		}
+
+# 		throughput_scaled = {
+# 			unit_offense_add = 25
+# 			unit_defense_add = 25
+# 		}
+
+# 		unscaled = {
+# 			unit_morale_loss_add = 15
+# 		}
+# 	}
+
+# 	country_modifiers = {
+# 		workforce_scaled = {
+# 			country_max_declared_interests_add = 0.125
+# 			country_navy_power_projection_add = 15
+# 		}
+# 	}
+
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment
+# 	}
+# }
+
+# pm_tts_ironclads = {
+# 	texture = "gfx/interface/icons/production_method_icons/ironclads.dds"
+
+# 	pollution_generation = 2
+
+# 	unlocking_technologies = {
+# 		ironclad_tech
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			# input goods
+# 			goods_input_ironclads_add = 4
+# 			goods_input_ammunition_add = 2
+# 		}
+
+# 		level_scaled = {
+# 			building_employment_soldiers_add = 900
+# 			building_employment_officers_add = 100
+# 		}
+
+# 		throughput_scaled = {
+# 			unit_offense_add = 35
+# 			unit_defense_add = 35
+# 		}
+
+# 		unscaled = {
+# 			unit_morale_loss_add = 12
+# 		}
+# 	}
+
+# 	country_modifiers = {
+# 		workforce_scaled = {
+# 			country_max_declared_interests_add = 0.15
+# 			country_navy_power_projection_add = 25
+# 		}
+# 	}
+
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment
+# 	}
+# }
+
+# pm_tts_predreadnoughts = {
+# 	texture = "gfx/interface/icons/production_method_icons/predreadnoughts.dds"
+
+# 	pollution_generation = 3
+
+# 	unlocking_technologies = {
+# 		predreadnought_tech
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			# input goods
+#             goods_input_ironclads_add = 8
+# 			goods_input_ammunition_add = 3
+# 		}
+
+# 		level_scaled = {
+# 			building_employment_soldiers_add = 900
+# 			building_employment_officers_add = 100
+# 		}
+
+# 		throughput_scaled = {
+# 			unit_offense_add = 70
+# 			unit_defense_add = 70
+# 		}
+
+# 		unscaled = {
+# 			unit_morale_loss_add = 10
+# 		}
+# 	}
+
+# 	country_modifiers = {
+# 		workforce_scaled = {
+# 			country_max_declared_interests_add = 0.175
+# 			country_navy_power_projection_add = 30
+# 		}
+# 	}
+
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment
+# 	}
+# }
+
+# pm_tts_dreadnoughts = {
+# 	texture = "gfx/interface/icons/production_method_icons/dreadnoughts.dds"
+
+# 	pollution_generation = 3
+
+# 	unlocking_technologies = {
+# 		dreadnought
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			# input goods
+# 			goods_input_ironclads_add = 4
+# 			goods_input_tts_capital_ships_add = 4
+# 			goods_input_ammunition_add = 3
+# 			goods_input_radios_add = 1
+# 		}
+
+# 		level_scaled = {
+# 			building_employment_soldiers_add = 900
+# 			building_employment_officers_add = 100
+# 		}
+
+# 		throughput_scaled = {
+# 			unit_offense_add = 100
+# 			unit_defense_add = 100
+# 		}
+
+# 		unscaled = {
+# 			unit_morale_loss_add = 8
+# 		}
+# 	}
+
+# 	country_modifiers = {
+# 		workforce_scaled = {
+# 			country_max_declared_interests_add = 0.2
+# 			country_navy_power_projection_add = 40
+# 		}
+# 	}
+
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment
+# 	}
+# }
+
+# pm_tts_battleships = {
+# 	texture = "gfx/interface/icons/production_method_icons/battleships.dds"
+
+# 	pollution_generation = 3
+
+# 	unlocking_technologies = {
+# 		battleship_tech
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			# input goods
+# 			goods_input_tts_capital_ships_add = 8
+# 			goods_input_ammunition_add = 4
+# 			goods_input_radios_add = 2
+# 			goods_input_oil_add = 3
+# 		}
+
+# 		level_scaled = {
+# 			building_employment_soldiers_add = 900
+# 			building_employment_officers_add = 100
+# 		}
+
+# 		throughput_scaled = {
+# 			unit_offense_add = 150
+# 			unit_defense_add = 150
+# 		}
+
+# 		unscaled = {
+# 			unit_morale_loss_add = 5
+# 		}
+# 	}
+
+# 	country_modifiers = {
+# 		workforce_scaled = {
+# 			country_max_declared_interests_add = 0.2
+# 			country_navy_power_projection_add = 50
+# 		}
+# 	}
+
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment
+# 	}
+# }
+
+# #####
+# # Raiding
+# #####
+
+# pm_tts_commerce_raider = {
+# 	texture = "gfx/interface/icons/production_method_icons/commerce_raiders.dds"
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			# input goods
+# 		}
+
+# 		level_scaled = {
+# 		}
+
+# 		unscaled = {
+# 		}
+# 	}
+
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment_minor
+# 	}
+# }
+
+# pm_tts_torpedo_boat = {
+# 	texture = "gfx/interface/icons/production_method_icons/torpedo_boats.dds"
+# 	unlocking_technologies = {
+# 		self_propelled_torpedoes
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			# input goods
+# 			goods_input_ammunition_add = 2
+# 		}
+
+# 		level_scaled = {
+# 		}
+
+# 		throughput_scaled = {
+# 			unit_offense_add = 10
+# 			unit_defense_add = 10
+# 		}
+
+# 		unscaled = {
+# 			unit_convoy_raiding_mult = 0.25
+# 		}
+# 	}
+
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment_minor
+# 	}
+# }
+
+# pm_tts_submarine = {
+# 	texture = "gfx/interface/icons/production_method_icons/submarine.dds"
+# 	unlocking_technologies = {
+# 		submarine
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			# input goods
+# 			goods_input_ironclads_add = 2
+# 			goods_input_ammunition_add = 2
+# 		}
+
+# 		level_scaled = {
+# 		}
+
+# 		throughput_scaled = {
+# 			unit_offense_add = 20
+# 			unit_defense_add = 20
+# 		}
+		
+# 		unscaled = {
+# 			unit_convoy_raiding_mult = 0.5
+# 		}
+# 	}
+
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment_minor
+# 	}
+# }
+
+# #####
+# # Escorts
+# #####
+
+# pm_tts_frigates = {
+# 	texture = "gfx/interface/icons/production_method_icons/frigates.dds"
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			# input goods
+# 		}
+
+# 		level_scaled = {
+# 		}
+
+# 		unscaled = {
+# 		}
+# 	}
+
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment_minor
+# 	}
+# }
+
+# pm_tts_destroyers = {
+# 	texture = "gfx/interface/icons/production_method_icons/destroyers.dds"
+# 	unlocking_technologies = {
+# 		destroyer
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			# input goods
+# 			goods_input_ironclads_add = 1
+# 			goods_input_ammunition_add = 1
+# 		}
+
+# 		level_scaled = {
+# 		}
+
+# 		throughput_scaled = {
+# 			unit_offense_add = 10
+# 			unit_defense_add = 10
+# 		}
+
+# 		unscaled = {
+# 			unit_convoy_raiding_interception_mult = 0.25
+# 			unit_convoy_defense_mult = 0.5
+# 		}
+# 	}
+
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment_minor
+# 	}
+# }
+
+# pm_tts_carriers = {
+# 	texture = "gfx/interface/icons/production_method_icons/carriers.dds"
+
+# 	pollution_generation = 3
+
+# 	unlocking_technologies = {
+# 		carrier_tech
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			# input goods
+# 			goods_input_ironclads_add = 1
+# 			goods_input_tts_capital_ships_add = 1
+# 			goods_input_radios_add = 1
+# 			goods_input_oil_add = 1
+# 			goods_input_aeroplanes_add = 1
+# 		}
+
+# 		level_scaled = {
+# 		}
+
+# 		throughput_scaled = {
+# 			unit_offense_add = 20
+# 			unit_defense_add = 20
+# 		}
+
+# 		unscaled = {
+# 			unit_convoy_raiding_interception_mult = 0.25
+# 			unit_convoy_defense_mult = 0.5
+# 		}
+# 	}
+
+# 	country_modifiers = {
+# 		workforce_scaled = {
+# 			country_max_declared_interests_add = 0.05
+# 			country_navy_power_projection_add = 15
+# 		}
+# 	}
+
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment_minor
+# 	}
+# }
+
+# pm_tts_no_carriers = {
+# 	texture = "gfx/interface/icons/production_method_icons/no_aeroplanes_military.dds"
+
+# 	unlocking_production_methods = {
+# 		pm_tts_frigates
+# 		pm_tts_destroyers
+# 	}
+# }
+
+# pm_tts_experimental_carriers = {
+# 	texture = "gfx/interface/icons/production_method_icons/aerial_recon.dds"
+
+# 	unlocking_technologies = {
+# 		carrier_tech
+# 	}
+
+# 	unlocking_production_methods = {
+# 		pm_tts_carriers
+# 	}
+
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 		}
+
+# 		level_scaled = {
+# 		}
+
+# 		throughput_scaled = {
+			
+# 		}
+# 	}
+
+# 	country_modifiers = {
+# 		workforce_scaled = {
+# 		}
+# 	}
+
+# 	timed_modifiers = {
+# 	}
+# }
+
+# pm_tts_strike_carriers = {
+# 	texture = "gfx/interface/icons/production_method_icons/strike_carriers.dds"
+
+# 	unlocking_technologies = {
+# 		fleet_carrier_tech
+# 	}
+
+# 	unlocking_production_methods = {
+# 		pm_tts_carriers
+# 	}
+
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			goods_input_radios_add = 1
+# 			goods_input_oil_add = 1
+# 			goods_input_aeroplanes_add = 1
+# 		}
+
+# 		level_scaled = {
+# 		}
+
+# 		throughput_scaled = {
+# 			unit_offense_add = 20
+# 			unit_defense_add = 20
+# 		}
+
+# 		unscaled = {
+# 			unit_morale_loss_mult = -0.1
+# 		}
+# 	}
+
+# 	country_modifiers = {
+# 		workforce_scaled = {
+# 			country_navy_power_projection_add = 15
+# 		}
+# 	}
+
+# 	timed_modifiers = {
+# 	}
+# }
+
+# pm_tts_armored_carriers = {
+# 	texture = "gfx/interface/icons/production_method_icons/armored_carriers.dds"
+
+# 	unlocking_technologies = {
+# 		armored_carrier_tech
+# 	}
+
+# 	unlocking_production_methods = {
+# 		pm_tts_carriers
+# 	}
+
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			goods_input_radios_add = 1
+# 			goods_input_oil_add = 1
+# 			goods_input_aeroplanes_add = 1
+# 		}
+
+# 		level_scaled = {
+# 		}
+
+# 		throughput_scaled = {
+# 			unit_offense_add = 15
+# 			unit_defense_add = 15
+# 		}
+
+# 		unscaled = {
+# 			unit_morale_loss_mult = -0.25
+# 		}
+# 	}
+
+# 	country_modifiers = {
+# 		workforce_scaled = {
+# 			country_navy_power_projection_add = 15
+# 		}
+# 	}
+
+# 	timed_modifiers = {
+# 	}
+# }

@@ -1,0 +1,550 @@
+﻿custom_flagship_name = {
+	type = country
+	random_valid = yes
+
+## Great Britain
+	text = {
+		localization_key = custom_hms_victoria
+		trigger = {
+			exists = c:GBR
+			this = c:GBR
+			navy_tech_level = 1
+		}
+	}
+
+	text = {
+		localization_key = custom_duke_of_wellington
+		trigger = {
+			exists = c:GBR
+			this = c:GBR
+			navy_tech_level = 2
+		}
+	}
+
+	text = {
+		localization_key = custom_warrior
+		trigger = {
+			exists = c:GBR
+			this = c:GBR
+			navy_tech_level = 3
+		}
+	}
+
+	text = {
+		localization_key = custom_devastation
+		trigger = {
+			exists = c:GBR
+			this = c:GBR
+			navy_tech_level = 3
+		}
+	}
+
+	text = {
+		localization_key = custom_royal_sovereign
+		trigger = {
+			exists = c:GBR
+			this = c:GBR
+			navy_tech_level = 4
+		}
+	}
+
+	text = {
+		localization_key = custom_hms_colossus
+		trigger = {
+			exists = c:GBR
+			this = c:GBR
+			navy_tech_level = 5
+		}
+	}
+
+	text = {
+		localization_key = custom_hms_neptune
+		trigger = {
+			exists = c:GBR
+			this = c:GBR
+			navy_tech_level = 5
+		}
+	}
+
+	text = {
+		localization_key = custom_hms_hood
+		trigger = {
+			exists = c:GBR
+			this = c:GBR
+			navy_tech_level = 6
+		}
+	}
+
+	text = {
+		localization_key = custom_warspite
+		trigger = {
+			c:GBR ?= this
+			navy_tech_level = 6
+		}
+	}
+
+	text = {
+		localization_key = custom_orion
+		trigger = {
+			c:GBR ?= this
+			navy_tech_level = 6
+		}
+	}
+
+## USA
+
+	text = {
+		localization_key = custom_uss_constitution
+		trigger = {
+			exists = c:USA
+			this = c:USA
+			navy_tech_level = 1
+		}
+	}
+
+	text = {
+		localization_key = custom_uss_washington
+		trigger = {
+			exists = c:USA
+			this = c:USA
+			navy_tech_level = 1
+		}
+	}
+
+	text = {
+		localization_key = custom_monitor
+		trigger = {
+			exists = c:USA
+			this = c:USA
+			navy_tech_level = 3
+		}
+	}
+
+	text = {
+		localization_key = custom_indiana
+		trigger = {
+			c:USA ?= this
+			has_state_in_state_region = STATE_INDIANA
+			navy_tech_level = 4
+		}
+	}
+
+	text = {
+		localization_key = custom_connecticut
+		trigger = {
+			c:USA ?= this
+			has_state_in_state_region = STATE_CONNECTICUT
+			navy_tech_level = 4
+		}
+	}
+
+	text = {
+		localization_key = custom_wyoming
+		trigger = {
+			c:USA ?= this
+			has_state_in_state_region = STATE_WYOMING
+			navy_tech_level = 5
+		}
+	}
+
+	text = {
+		localization_key = custom_pennsylvania
+		trigger = {
+			c:USA ?= this
+			has_state_in_state_region = STATE_PENNSYLVANIA
+			navy_tech_level = 6
+		}
+	}
+
+	text = {
+		localization_key = custom_colorado
+		trigger = {
+			c:USA = this
+			has_state_in_state_region = STATE_COLORADO
+			navy_tech_level = 6
+		}
+	}
+
+## France
+	text = {
+		localization_key = custom_valmy
+		trigger = {
+			exists = c:FRA
+			this = c:FRA
+			navy_tech_level = 1
+		}
+	}
+
+	text = {
+		localization_key = custom_ship_napoleon
+		trigger = {
+			exists = c:FRA
+			this = c:FRA
+			navy_tech_level = 2
+		}
+	}
+
+	text = {
+		localization_key = custom_gloire
+		trigger = {
+			exists = c:FRA
+			this = c:FRA
+			navy_tech_level = 3
+		}
+	}
+
+	text = {
+		localization_key = custom_charles_martel
+		trigger = {
+			exists = c:FRA
+			this = c:FRA
+			navy_tech_level = 4
+		}
+	}
+
+	text = {
+		localization_key = custom_review_courbet
+		trigger = {
+			exists = c:FRA
+			this = c:FRA
+			navy_tech_level = 5
+		}
+	}
+
+	text = {
+		localization_key = custom_review_paris
+		trigger = {
+			exists = c:FRA
+			this = c:FRA
+			has_state_in_state_region = STATE_ILE_DE_FRANCE #Should I even need to check this?
+			navy_tech_level = 5
+		}
+	}
+
+	text = {
+		localization_key = custom_bretagne
+		trigger = {
+			c:FRA ?= this
+			has_state_in_state_region = STATE_BRITTANY
+			navy_tech_level = 6
+		}
+	}
+
+	text = {
+		localization_key = custom_lorraine
+		trigger = {
+			c:FRA ?= this
+			has_state_in_state_region = STATE_LORRAINE
+			navy_tech_level = 6
+		}
+	}
+
+	text = {
+		localization_key = custom_lyon
+		trigger = {
+			exists = c:FRA
+			this = c:FRA
+			navy_tech_level = 6
+		}
+	}
+
+## GER/PRU
+
+	text = {
+		localization_key = custom_deutschland
+		trigger = {
+			OR = {
+				AND = {
+					exists = c:GER
+					this = c:GER
+				}
+				AND = {
+					exists = c:NGF
+					this = c:NGF
+				}
+			}
+			navy_tech_level = 3
+		}
+	}
+
+	text = {
+		localization_key = custom_brandenburg
+		trigger = {
+			OR = {
+				c:GER ?= this
+				c:PRU ?= this
+				c:NGF ?= this
+			}
+			has_state_in_state_region = STATE_BRANDENBURG
+			navy_tech_level = 4
+		}
+	}
+
+	text = {
+		localization_key = custom_fdg
+		trigger = {
+			OR = {
+				c:GER ?= this
+				c:PRU ?= this
+				c:NGF ?= this
+			}
+			navy_tech_level = 5
+		}
+	}
+
+	text = {
+		localization_key = custom_bayern
+		trigger = {
+			has_state_in_state_region = STATE_BAVARIA
+			navy_tech_level = 6
+		}
+	}
+
+## RUS
+
+	text = {
+		localization_key = custom_imperatritsa_maria
+		trigger = {
+			exists = c:RUS
+			this = c:RUS
+			navy_tech_level = 1
+		}
+	}
+
+	text = {
+		localization_key = custom_imperator_nikolai_i
+		trigger = {
+			exists = c:RUS
+			this = c:RUS
+			navy_tech_level = 2
+		}
+	}
+
+	text = {
+		localization_key = custom_general-admiral
+		trigger = {
+			exists = c:RUS
+			this = c:RUS
+			navy_tech_level = 3
+		}
+	}
+
+	text = {
+		localization_key = custom_potemkin
+		trigger = {
+			exists = c:RUS
+			this = c:RUS
+			navy_tech_level = 4
+		}
+	}
+	
+	text = {
+		localization_key = custom_review_gangut
+		trigger = {
+			exists = c:RUS
+			this = c:RUS
+			NOT = {
+				has_variable = renamed_battleships
+			}
+			navy_tech_level = 5
+		}
+	}
+
+	text = {
+		localization_key = custom_oktyabrskaya_revolyutsiya
+		trigger = {
+			exists = c:RUS
+			this = c:RUS
+			has_variable = renamed_battleships
+			navy_tech_level = 5
+		}
+	}
+
+	text = {
+		localization_key = custom_sovetsky_soyuz
+		trigger = {
+			exists = c:RUS
+			this = c:RUS
+			has_variable = renamed_battleships
+			navy_tech_level = 6
+		}
+	}
+
+## JAP
+
+	text = {
+		localization_key = custom_katsuragi
+		trigger = {
+			exists = c:JAP
+			this = c:JAP
+			navy_tech_level = 3
+		}
+	}
+
+	text = {
+		localization_key = custom_kongo
+		trigger = {
+			exists = c:JAP
+			this = c:JAP
+			navy_tech_level = 3
+		}
+	}
+	
+	text = {
+		localization_key = custom_azuma
+		trigger = {
+			exists = c:JAP
+			this = c:JAP
+			navy_tech_level = 3
+		}
+	}
+
+	text = {
+		localization_key = custom_fuji
+		trigger = {
+			exists = c:JAP
+			this = c:JAP
+			navy_tech_level = 4
+		}
+	}
+
+	text = {
+		localization_key = custom_mikasa
+		trigger = {
+			exists = c:JAP
+			this = c:JAP
+			navy_tech_level = 4
+		}
+	}
+
+	text = {
+		localization_key = custom_review_kawachi
+		trigger = {
+			exists = c:JAP
+			this = c:JAP
+			navy_tech_level = 5
+		}
+	}
+
+	text = {
+		localization_key = custom_nagato
+		trigger = {
+			exists = c:JAP
+			this = c:JAP
+			navy_tech_level = 6
+		}
+	}
+
+	text = {
+		localization_key = custom_fuso
+		trigger = {
+			exists = c:JAP
+			this = c:JAP
+			navy_tech_level = 6
+		}
+	}
+
+## ITA/SAR/SIC
+
+	text = {
+		trigger = {
+			OR = {
+				c:SIC ?= this
+				c:ITA ?= this
+			}
+			navy_tech_level = 1
+		}
+		localization_key = custom_vesuvio
+	}
+
+	text = {
+		trigger = {
+			c:SAR ?= this
+			navy_tech_level = 1
+		}
+		localization_key = custom_san_michele
+	}
+
+	text = {
+		trigger = {
+			c:SAR ?= this
+			navy_tech_level = 2
+		}
+		localization_key = custom_carlo_alberto
+	}
+
+	text = {
+		trigger = {
+			c:SIC ?= this
+			navy_tech_level = 2
+		}
+		localization_key = custom_monarca
+	}
+
+	text = {
+		trigger = {
+			c:ITA ?= this
+			navy_tech_level = 2
+		}
+		# Actually a renamed Monarca
+		localization_key = custom_re_galantuomo
+	}
+
+	text = {
+		trigger = {
+			c:ITA ?= this
+			navy_tech_level = 3
+		}
+		localization_key = custom_affondatore
+	}
+
+	text = {
+		trigger = {
+			c:ITA ?= this
+			navy_tech_level = 4
+		}
+		localization_key = custom_ammiraglio_di_saint_bon
+	}
+
+	text = {
+		trigger = {
+			c:ITA ?= this
+			navy_tech_level = 5
+		}
+		localization_key = custom_review_leonardo_da_vinci
+	}
+
+	text = {
+		trigger = {
+			c:ITA ?= this
+			navy_tech_level = 6
+			ruler = {
+				has_ideology = ideology:ideology_fascist
+			}
+		}
+		localization_key = custom_littorio
+	}
+
+	text = {
+		trigger = {
+			c:ITA ?= this
+			navy_tech_level = 6
+			NOT = {
+				ruler = {
+					has_ideology = ideology:ideology_fascist
+				}
+			}
+		}
+		localization_key = custom_review_italia
+	}
+	
+
+## Default
+	text = {
+		trigger = {
+			always = no
+		}
+		fallback = yes
+		localization_key = ""
+	}
+}
