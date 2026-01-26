@@ -32,9 +32,23 @@
 				is_subject_of = ROOT
 			}
 			is_at_war = yes
-			any_scope_war = {
-				is_warleader = scope:other_country
-				NOT = { is_war_participant = ROOT }
+			custom_tooltip = {
+				text = intervene_in_war_no_truce
+				any_scope_war = {
+					attacker_warleader = {
+						OR = {
+							this = scope:other_country
+							NOT = {has_truce_with = ROOT}
+						}
+					}
+					defender_warleader = {
+						OR = {
+							this = scope:other_country
+							NOT = {has_truce_with = ROOT}
+						}
+					}
+					NOT = { is_war_participant = ROOT }
+				}
 			}
 		}
 		
@@ -159,7 +173,7 @@
 							initiator_is = scope:target
 						}
 					}
-					change_infamy = 5
+					change_infamy = 10
 				}
 				
 				#THIS joins TARGET's wars

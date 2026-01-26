@@ -1,4 +1,4 @@
-intervene_in_war = {
+﻿intervene_in_war = {
 	groups = { general }
 	should_notify_third_parties = yes
 
@@ -22,10 +22,25 @@ intervene_in_war = {
 			}
 			is_at_war = yes
 			NOT = { has_war_with = scope:actor }
-			any_scope_war = {
-				is_warleader = scope:target_country
-				NOT = { is_war_participant = scope:actor }
+			custom_tooltip = {
+				text = intervene_in_war_no_truce
+				any_scope_war = {			
+					attacker_warleader = {
+						OR = {
+							this = scope:target_country
+							NOT = {has_truce_with = ROOT}
+						}
+					}
+					defender_warleader = {
+						OR = {
+							this = scope:target_country
+							NOT = {has_truce_with = ROOT}
+						}
+					}
+					NOT = { is_war_participant = ROOT }
+				}
 			}
+
 		}
 		
 		#THIS can reach the TARGET
