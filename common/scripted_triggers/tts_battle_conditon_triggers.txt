@@ -1,0 +1,132 @@
+﻿our_side_is_using_carriers = {
+	battle = {
+		any_combat_unit = {
+			filter = {
+				owner = scope:character.owner
+			}
+			has_unit_type = unit_type:combat_unit_type_experimental_carrier
+			percent >= 0.1
+		}
+	}
+}
+
+enemy_side_is_using_carriers = {
+	battle = {
+		any_combat_unit = {
+			filter = {
+				owner = scope:character.opposing_commander.owner
+			}
+			has_unit_type = unit_type:combat_unit_type_experimental_carrier
+			percent >= 0.1
+		}
+	}
+}
+
+enemy_side_is_using_dreadnoughts = {
+	battle = {
+		any_combat_unit = {
+			filter = {
+				owner = scope:character.opposing_commander.owner
+			}
+			OR = {
+				has_unit_type = unit_type:combat_unit_type_dreadnought
+				has_unit_type = unit_type:combat_unit_type_battleship
+			}
+			percent >= 0.1
+		}
+	}
+}
+
+our_side_ramming_trigger = {
+	battle = {
+		any_combat_unit = {
+			filter = {
+				owner = scope:character.owner
+			}
+			OR = {
+				has_unit_type = unit_type:combat_unit_type_carrack
+				has_unit_type = unit_type:combat_unit_type_man_o_war
+				has_unit_type = unit_type:combat_unit_type_ironclad
+				has_unit_type = unit_type:combat_unit_type_predreadnought
+			}
+			percent >= 0.2
+		}
+		any_combat_unit = {
+			owner = scope:character.owner
+			OR = {
+				has_unit_type = unit_type:combat_unit_type_dreadnought
+				has_unit_type = unit_type:combat_unit_type_battleship
+			}
+			count = 0
+		}
+	}
+}
+
+enemy_side_has_insufficient_support = {
+	battle = {
+		any_combat_unit = {
+			filter = {
+				owner = scope:character.opposing_commander.owner
+			}
+			OR = {
+				has_unit_type = unit_type:combat_unit_type_caravel
+				has_unit_type = unit_type:combat_unit_type_frigate
+				has_unit_type = unit_type:combat_unit_type_screw_frigate
+				has_unit_type = unit_type:combat_unit_type_destroyer
+				has_unit_type = unit_type:combat_unit_type_scout_cruiser
+			}
+			percent < 0.5
+		}
+	}
+}
+
+our_side_has_torpedoes = {
+	battle = {
+		any_combat_unit = {
+			filter = {
+				owner = scope:character.owner
+			}
+			OR = {
+				has_unit_type = unit_type:combat_unit_type_torpedo_boat
+				has_unit_type = unit_type:combat_unit_type_scout_cruiser
+				has_unit_type = unit_type:combat_unit_type_destroyer
+				has_unit_type = unit_type:combat_unit_type_submarine
+			}
+			percent >= 0.1
+		}
+	}
+}
+
+our_side_depends_on_wind = {
+	battle = {
+		any_combat_unit = {
+			filter = {
+				owner = scope:character.owner
+			}
+			OR = {
+				has_unit_type = unit_type:combat_unit_type_caravel
+				has_unit_type = unit_type:combat_unit_type_carrack
+				has_unit_type = unit_type:combat_unit_type_frigate
+				has_unit_type = unit_type:combat_unit_type_man_o_war
+			}
+			percent >= 0.5
+		}
+	}
+}
+
+enemy_side_doesnt_depend_on_wind = {
+	battle = {
+		any_combat_unit = {
+			filter = {
+				owner = scope:character.opposing_commander.owner
+			}
+			NOR = {
+				has_unit_type = unit_type:combat_unit_type_caravel
+				has_unit_type = unit_type:combat_unit_type_carrack
+				has_unit_type = unit_type:combat_unit_type_frigate
+				has_unit_type = unit_type:combat_unit_type_man_o_war
+			}
+			percent >= 0.5
+		}
+	}
+}

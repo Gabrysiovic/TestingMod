@@ -1,4 +1,4 @@
-﻿REPLACE_OR_CREATE:pm_no_naval_theory = {
+﻿REPLACE:pm_no_naval_theory = {
 	texture = "gfx/interface/icons/production_method_icons/no_naval_theory.dds"
 	building_modifiers = {
 		level_scaled = {
@@ -11,7 +11,7 @@
 	}
 }
 
-REPLACE_OR_CREATE:pm_power_of_the_purse = {
+REPLACE:pm_power_of_the_purse = {
 	texture = "gfx/interface/icons/production_method_icons/power_of_the_purse.dds"
 	unlocking_technologies = {
 		power_of_the_purse
@@ -20,7 +20,6 @@ REPLACE_OR_CREATE:pm_power_of_the_purse = {
 		level_scaled = {
 			building_training_rate_add = 5.5
 		}
-
 		unscaled = {
 			unit_morale_loss_mult = -0.1
 			unit_morale_damage_mult = 0.1
@@ -32,7 +31,7 @@ REPLACE_OR_CREATE:pm_power_of_the_purse = {
 	}
 }
 
-REPLACE_OR_CREATE:pm_jeune_ecole = {
+REPLACE:pm_jeune_ecole = {
 	texture = "gfx/interface/icons/production_method_icons/jeune_ecole.dds"
 	unlocking_technologies = {
 		jeune_ecole
@@ -41,7 +40,6 @@ REPLACE_OR_CREATE:pm_jeune_ecole = {
 		level_scaled = {
 			building_training_rate_add = 6
 		}
-
 		unscaled = {
 			unit_morale_loss_mult = -0.2
 			unit_morale_damage_mult = 0.2
@@ -53,7 +51,7 @@ REPLACE_OR_CREATE:pm_jeune_ecole = {
 	}
 }
 
-REPLACE_OR_CREATE:pm_sea_lane_strategies = {
+REPLACE:pm_sea_lane_strategies = {
 	texture = "gfx/interface/icons/production_method_icons/mahanian_thought.dds"
 	unlocking_technologies = {
 		sea_lane_strategies
@@ -62,7 +60,6 @@ REPLACE_OR_CREATE:pm_sea_lane_strategies = {
 		level_scaled = {
 			building_training_rate_add = 6.5
 		}
-
 		unscaled = {
 			unit_morale_loss_mult = -0.3
 			unit_morale_damage_mult = 0.3
@@ -74,7 +71,7 @@ REPLACE_OR_CREATE:pm_sea_lane_strategies = {
 	}
 }
 
-REPLACE_OR_CREATE:pm_battlefleet_tactics = {
+REPLACE:pm_battlefleet_tactics = {
 	texture = "gfx/interface/icons/production_method_icons/battlefleet_tactics.dds"
 	unlocking_technologies = {
 		battlefleet_tactics
@@ -83,7 +80,6 @@ REPLACE_OR_CREATE:pm_battlefleet_tactics = {
 		level_scaled = {
 			building_training_rate_add = 7
 		}
-
 		unscaled = {
 			unit_morale_loss_mult = -0.4
 			unit_morale_damage_mult = 0.4

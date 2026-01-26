@@ -1,0 +1,10 @@
+﻿combat_unit_group_raiding_ship = {
+	type = navy
+	default_group = yes
+	color = {
+		200
+		170
+		20
+	}
+	icon = "gfx/interface/icons/generic_icons/flotillas.dds"
+}
