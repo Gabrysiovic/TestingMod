@@ -1,0 +1,176 @@
+﻿battle_condition_cant_penetrate_ship = {
+	icon = "gfx/interface/icons/battle_conditions/battle_condition_cant_penetrate.dds"
+
+	possible = {
+		scope:character ?= {
+			has_role = admiral
+		}
+		our_side_penetration < enemy_side_armor
+	}
+
+	modifier = {
+		unit_navy_offense_mult = -0.5
+		unit_navy_defense_mult = -0.5
+		unit_kill_rate_add = -0.5
+	}
+
+	weight = {
+		value = 4
+	}
+}
+
+battle_condition_scouting_advantage = {
+	icon = "gfx/interface/icons/battle_conditions/battle_condition_scouting_advantage.dds"
+
+	possible = {
+		scope:character ?= {
+			has_role = admiral
+		}
+		AND = {
+			side_is_using_carriers = yes
+			enemy_side_is_using_carriers = no
+		}
+	}
+
+	modifier = {
+		unit_navy_offense_mult = 0.2
+		unit_navy_defense_mult = 0.2
+		unit_morale_loss_mult = -0.75
+	}
+
+	weight = {
+		value = 3
+	}
+}
+
+battle_condition_deck_bombed = {
+	icon = "gfx/interface/icons/battle_conditions/battle_condition_deck_bombed.dds"
+
+	possible = {
+		scope:character ?= {
+			has_role = admiral
+		}
+		enemy_side_is_using_fleet_carriers = yes
+		NOT = {
+			has_battle_condition = battle_condition_scouting_advantage
+		}
+		side_is_using_unarmored_carriers = yes
+	}
+
+	modifier = {
+		unit_navy_offense_mult = -0.15
+		unit_navy_defense_mult = -0.15
+		unit_morale_loss_mult = 0.1
+	}
+
+	weight = 2
+}
+
+battle_condition_deck_shelled = {
+	icon = "gfx/interface/icons/battle_conditions/battle_condition_deck_bombed.dds"
+
+	possible = {
+		scope:character ?= {
+			has_role = admiral
+		}
+		enemy_side_is_using_dreadnoughts = yes
+		NOT = {
+			has_battle_condition = battle_condition_scouting_advantage
+		}
+		side_is_using_unarmored_carriers = yes
+	}
+
+	modifier = {
+		unit_navy_offense_mult = -0.15
+		unit_navy_defense_mult = -0.15
+		unit_morale_loss_mult = 0.1
+	}
+
+	weight = 2
+}
+
+battle_condition_exploding_ships = {
+	icon = "gfx/interface/icons/battle_conditions/battle_condition_deck_bombed.dds" # Placeholder
+
+	instant_switch = {
+		scope:character ?= {
+			has_role = admiral
+			owner = {
+				has_modifier = exploding_ships
+			}
+		}
+	} 
+
+	modifier = {
+		unit_navy_offense_mult = -0.5
+		unit_navy_defense_mult = -0.5
+		unit_morale_loss_mult = 2
+	}
+}
+
+battle_condition_torpedo_run = {
+	icon = "gfx/interface/icons/battle_conditions/battle_condition_death_from_below.dds" # TODO create proper icon
+
+	possible = {
+		our_side_has_torpedoes = yes
+		enemy_side_has_insufficient_support = yes
+	}
+
+	modifier = {
+		unit_combat_unit_type_destroyer_offense_mult = 1.5
+		unit_combat_unit_type_destroyer_defense_mult = 1.5
+
+		unit_combat_unit_type_scout_cruiser_offense_mult = 0.5
+		unit_combat_unit_type_scout_cruiser_defense_mult = 0.5
+
+		unit_combat_unit_type_torpedo_boat_offense_mult = 2
+		unit_combat_unit_type_torpedo_boat_defense_mult = 2
+
+		unit_combat_unit_type_submarine_offense_mult = 1
+		unit_combat_unit_type_submarine_defense_mult = 1
+
+		unit_kill_rate_add = 0.2
+	}
+
+	weight = 4
+}
+
+battle_condition_unfavorable_wind = {
+	icon = "gfx/interface/icons/battle_conditions/battle_condition_strong_winds.dds" # TODO create proper icon
+
+	possible = {
+		our_side_depends_on_wind = yes
+		enemy_side_doesnt_depend_on_wind = yes
+		NOT = {
+			has_battle_condition = battle_condition_strong_winds
+		}
+	}
+
+	modifier = {
+		unit_navy_offense_mult = -0.2
+		unit_navy_defense_mult = -0.2
+		unit_morale_loss_mult = 0.1
+	}
+
+	weight = 3
+}
+
+battle_condition_no_wind = {
+	icon = "gfx/interface/icons/battle_conditions/battle_condition_strong_winds.dds" # TODO create proper icon
+
+	possible = {
+		our_side_depends_on_wind = yes
+		enemy_side_doesnt_depend_on_wind = yes
+		NOT = {
+			has_battle_condition = battle_condition_strong_winds
+		}
+	}
+
+	modifier = {
+		unit_navy_offense_mult = -0.4
+		unit_navy_defense_mult = -0.4
+		unit_morale_loss_mult = 0.2
+	}
+
+	weight = 1
+}

@@ -156,15 +156,17 @@ REPLACE:combat_unit_type_ironclad = {
 	}
 }
 
+
 REPLACE:combat_unit_type_dreadnought = {
 	group = combat_unit_group_capital_ship
 	max_manpower = 1000
 	upkeep_modifier = {
-		goods_input_ironclads_add = 6
+		goods_input_ironclads_add = 3
 		goods_input_artillery_add = 6
 		goods_input_ammunition_add = 6
 		goods_input_radios_add = 2
 		goods_input_coal_add = 4		# GGGG
+	    goods_input_tts_capital_ships_add = 3
 	}
 	battle_modifier = {
 		unit_offense_add = 80
@@ -191,11 +193,12 @@ REPLACE:combat_unit_type_battleship = {
 	group = combat_unit_group_capital_ship
 	max_manpower = 1000
 	upkeep_modifier = {
-		goods_input_ironclads_add = 8
+		goods_input_tts_capital_ships_add = 8
 		goods_input_artillery_add = 8
 		goods_input_ammunition_add = 8
 		goods_input_radios_add = 3
 		goods_input_oil_add = 2		# GGGG
+	
 	}
 	battle_modifier = {
 		unit_offense_add = 100
@@ -248,7 +251,7 @@ REPLACE:combat_unit_type_carrier = {
 	group = combat_unit_group_support_ship
 	max_manpower = 1000
 	upkeep_modifier = {
-		goods_input_ironclads_add = 8
+		goods_input_tts_capital_ships_add = 8
 		goods_input_ammunition_add = 8
 		goods_input_radios_add = 4
 		goods_input_aeroplanes_add = 8

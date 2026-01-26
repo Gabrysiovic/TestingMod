@@ -1,0 +1,73 @@
+﻿REPLACE:battle_condition_ramming_maneuver = {
+	icon = "gfx/interface/icons/battle_conditions/battle_condition_ramming_maneuver.dds"
+
+	modifier = {
+		unit_morale_loss_mult = 0.25
+		battle_casualties_mult = 0.3
+		unit_kill_rate_add = 0.4
+	}
+	possible = {
+		scope:character ?= { 
+			has_role = admiral 
+		}
+		our_side_ramming_trigger = yes # using pre-dreadnought units only
+	}
+
+	weight = {
+		value = 0.5
+		multiply = {
+			value = 1
+			scope:character = {
+				add = modifier:character_battle_condition_ramming_maneuver_mult
+			}
+			min = 0
+		}
+		if = {
+			limit = {
+				has_battle_condition = battle_condition_strong_winds
+			}
+			add = 2
+		}
+	}
+}
+
+# battle_condition_death_from_below = {
+# 	icon = "gfx/interface/icons/battle_conditions/battle_condition_death_from_below.dds"
+
+# 	modifier = {
+# 		unit_kill_rate_add = 0.2
+# 	}
+
+# 	possible = {
+# 		exists = scope:character
+# 		scope:character = { 
+# 			has_role = admiral 
+# 		}
+# 		battle = {
+# 		 	battle_side_pm_usage = {
+# 		 		target = scope:character.owner
+# 		 		production_method = pm_tts_submarine
+# 		 		value > 0.5
+# 		 	}
+# 		}
+# 		battle = {
+# 			battle_side_pm_usage = {
+# 				target = scope:character.opposing_commander.owner
+# 				production_method = pm_tts_submarine
+# 				value < 0.5
+# 			}
+# 		}
+# 		NOT = { has_battle_condition = battle_condition_rough_waters }
+# 	}
+		
+# 	weight = {
+# 		value = 2
+# 		multiply = {
+# 			value = 1
+# 			scope:character = {
+# 				add = modifier:character_battle_condition_death_from_below_mult
+# 			}
+# 			min = 0
+# 		}
+# 	}
+# }

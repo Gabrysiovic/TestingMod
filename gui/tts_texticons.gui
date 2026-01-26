@@ -1,0 +1,26 @@
+﻿texticon = {
+	icon = navyprof
+	iconsize = {
+	  offset = { 0 20 }
+	  texture = "gfx/interface/icons/generic_icons/navyprof.dds"
+	  fontsize = 91
+	}
+}
+
+texticon = {
+	icon = armor
+	iconsize = {
+	  offset = { 0 20 }
+	  texture = "gfx/interface/icons/military_icons/armor.dds"
+	  fontsize = 60
+	}
+}
+
+texticon = {
+	icon = penetration
+	iconsize = {
+	  offset = { 0 20 }
+	  texture = "gfx/interface/icons/military_icons/penetration.dds"
+	  fontsize = 60
+	}
+}

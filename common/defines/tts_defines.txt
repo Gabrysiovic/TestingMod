@@ -1,0 +1,28 @@
+﻿NMilitary = {
+	# Those appear to have been removed
+	# CONVOY_RAIDING_NUM_POSSIBLE_ATTACK_NODES = 5			# How many sea zones will be shown as possible attack sites for convoy raided player
+	# CONVOY_RAIDING_DELAY_BASE_DAYS = 5						# atleast this many days between each admiral raiding attempt
+	# CONVOY_RAIDING_DELAY_MAX_RANDOM_DAYS_FACTOR = 5			# up to this many extra days between each admiral raiding attempt
+
+
+
+	CONVOY_RAIDING_STRENGTH_MULT = 0.3 #0.3					# How strong each Convoy raiding point is ( num flotillas * ce offense )
+	CONVOY_RAIDING_COOLDOWN_DAYS_MIN = 10					# Min days until the next convoy raiding in the sea node
+	CONVOY_RAIDING_COOLDOWN_DAYS_MAX = 20 # 30					# Max days until the next convoy raiding in the sea node
+	CONVOY_RAIDING_DAMAGE_MIN_RANDOM_FACTOR = 0.5			# Actual convoy raiding damage is scaled between CONVOY_RAIDING_DAMAGE_MIN_RANDOM_FACTOR and CONVOY_RAIDING_DAMAGE_MAX_RANDOM_FACTOR to provide some random variability
+	CONVOY_RAIDING_DAMAGE_MAX_RANDOM_FACTOR = 1.0			# Actual convoy raiding damage is scaled between CONVOY_RAIDING_DAMAGE_MIN_RANDOM_FACTOR and CONVOY_RAIDING_DAMAGE_MAX_RANDOM_FACTOR to provide some random variability
+	CONVOY_RAIDING_DEFENSE_MULT = 0.3 #0.15					# How much is Convoy raiding strength reduced by patrolling flotillas  ( num flotillas * ce defense )
+	CONVOY_RAIDING_MAX_DEFENSE = 0.95 #0.90					# Example: the defender can never block more than 90% of the convoy damage they're currently taking
+		
+	# Convoy recovery rate after being raided is based on a global and a local rate, using whichever is lower
+	CONVOY_RAIDING_GLOBAL_RECOVERY_RATE = 0.003 #0.001				# The rate at which damaged convoys are replaced each day, relative to total number of produced convoys in the raided country
+	CONVOY_RAIDING_LOCAL_RECOVERY_RATE = 0.015 #0.01				# The rate at which damaged convoys are replaced each day, relative to total number of convoys passing through the sea node
+
+	# Added in 1.5.11
+	CONVOY_RAIDING_RECOVERY_RATE_PEACETIME_FACTOR = 1.5 #4			# While a country is at peace, convoys will be restored this much faster
+
+	# I wish it was possible to upgrade fractions of a flotilla
+	MILITARY_FORMATION_WEEKLY_MAX_UNIT_UPGRADES_FLEET = 0.03 #0.05		# Each week a mobilized fleet can upgrade this (0.0-1.0) fraction of its total number of units.
+
+	MANPOWER_RATIO_REQUIRED_TO_CLEAR_DEFEATED_ADMIRALS = 0.75 #0.5		# A Defeated fleet without at least this ratio of current/max manpower will remain Defeated
+}	

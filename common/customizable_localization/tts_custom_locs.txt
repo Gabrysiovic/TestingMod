@@ -1,0 +1,1230 @@
+﻿name_of_navy = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			exists = c:GBR
+			this = c:GBR
+			has_law = law_type:law_monarchy						
+		}
+		localization_key = royal_navy
+	}
+
+	text = {
+		trigger = {
+			exists = c:USA
+			this = c:USA
+			has_law = law_type:law_presidential_republic
+		}
+		localization_key = united_states_navy
+	}
+
+	text = {
+		trigger = {
+			exists = c:CSA
+			this = c:CSA
+			has_law = law_type:law_presidential_republic
+		}
+		localization_key = confederate_states_navy
+	}
+
+	text = {
+		trigger = {
+			exists = c:JAP
+			this = c:JAP
+			NOT = { has_variable = meiji_var }
+		}
+		localization_key = japanese_navy
+	}
+
+	text = {
+		trigger = {
+			exists = c:RUS
+			this = c:RUS
+			has_law = law_type:law_council_republic
+		}
+		localization_key = soviet_navy
+	}
+
+	text = {
+		trigger = {
+			exists = c:CHI
+			this = c:CHI
+			has_law = law_type:law_monarchy
+		}
+		localization_key = imperial_chinese_navy
+	}
+
+	text = {
+		trigger = {
+			exists = c:CHI
+			this = c:CHI
+			OR = {
+				has_law = law_type:law_parliamentary_republic
+				has_law = law_type:law_presidential_republic
+			}
+		}
+		localization_key = republic_of_china_navy
+	}
+
+		text = {
+		trigger = {
+			exists = c:CHI
+			this = c:CHI
+			has_law = law_type:law_council_republic
+		}
+		localization_key = peoples_liberation_army_navy
+	}
+
+	### Generic navy names:
+
+	text = {
+		trigger = {
+			has_law = law_type:law_monarchy
+			country_tier = empire
+		}
+		localization_key = generic_imperial_navy
+	}
+
+	text = {
+		trigger = {
+			has_law = law_type:law_monarchy
+		}
+		localization_key = generic_royal_navy
+	}
+
+	text = {
+		localization_key = generic_navy_name
+	}
+}
+
+powder_name = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			exists = c:GBR
+			this = c:GBR					
+		}
+		localization_key = cordite
+	}
+
+	text = {
+		trigger = {
+			exists = c:FRA
+			this = c:FRA					
+		}
+		localization_key = poudre_b
+	}
+
+	text = {
+		trigger = {
+			exists = c:JAP
+			this = c:JAP					
+		}
+		localization_key = cordite
+	}
+
+	text = {
+		localization_key = smokeless_powder
+	}
+}
+
+name_of_new_battleship = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			exists = c:BRZ
+			this = c:BRZ					
+		}
+		localization_key = riachuelo
+	}
+
+	text = {
+		trigger = {
+			exists = c:ARG
+			this = c:ARG					
+		}
+		localization_key = libertad
+	}
+
+	text = {
+		trigger = {
+			exists = c:CHL
+			this = c:CHL					
+		}
+		localization_key = capitan_prat
+	}
+
+	text = {
+		trigger = {
+			exists = c:PER
+			this = c:PER					
+		}
+		localization_key = almirante_grau
+	}
+
+	text = {
+		localization_key = generic_new_battleship
+	}
+}
+
+use_the = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			exists = c:USA
+			this = c:USA
+		}
+		localization_key = the
+	}
+
+	text = {
+		trigger = {
+			exists = c:CSA
+			this = c:CSA
+		}
+		localization_key = the
+	}
+
+	text = {
+		trigger = {
+			exists = c:USA
+			this = c:USA
+		}
+		localization_key = the
+	}
+
+	text = {
+		trigger = {
+			exists = c:JAP
+			this = c:JAP
+			NOT = { has_variable = meiji_var }
+			has_law = law_type:law_monarchy
+		}
+		localization_key = the
+	}
+
+	text = {
+		trigger = {
+			exists = c:RUS
+			this = c:RUS
+			has_law = law_type:law_council_republic
+		}
+		localization_key = the
+	}
+
+	text = {
+		trigger = {
+			exists = c:CHI
+			this = c:CHI
+		}
+		localization_key = the
+	}
+
+	text = {
+		trigger = {
+			exists = c:TUR
+			this = c:TUR
+			has_law = law_type:law_monarchy					
+		}
+		localization_key = the
+	}
+
+	text = {
+		trigger = {
+			exists = c:GER
+			this = c:GER
+			has_law = law_type:law_monarchy
+			country_rank >= rank_value:major_power
+		}
+		localization_key = the
+	}
+
+	text = {
+		localization_key = no_the
+	}
+}
+
+name_of_new_dreadnought = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			exists = c:BRZ
+			this = c:BRZ			
+			s:STATE_MINAS_GERAIS = {
+				any_scope_state = {
+					owner = root
+				}
+			}			
+		}
+		localization_key = bb_minas_geraes
+	}
+
+	text = {
+		trigger = {
+			exists = c:ARG
+			this = c:ARG					
+		}
+		localization_key = bb_rivadavia
+	}
+
+	text = {
+		trigger = {
+			exists = c:CHL
+			this = c:CHL					
+		}
+		localization_key = bb_almirante_latorre
+	}
+
+	text = {
+		trigger = {
+			exists = c:TUR
+			this = c:TUR
+			has_law = law_type:law_monarchy					
+		}
+		localization_key = bb_osman_i
+	}
+
+
+	text = {
+		localization_key = generic_new_dreadnought
+	}	
+}
+
+navy_professionalism_desc = {
+	type = country
+	random_valid = no
+	
+	text = {
+		trigger = {
+			var:navy_professionalism >= HIGH_PROFESSIONALISM_THRESHOLD					
+		}
+		localization_key = high_professionalism
+	}
+	
+	text = {
+		trigger = {
+			var:navy_professionalism >= MEDIUM_PROFESSIONALISM_THRESHOLD					
+		}
+		localization_key = medium_professionalism
+	}
+
+	text = {
+		trigger = {
+			var:navy_professionalism >= LOW_PROFESSIONALISM_THRESHOLD					
+		}
+		localization_key = low_professionalism
+	}
+
+	text = {
+		localization_key = very_low_professionalism
+	}
+}
+
+
+navy_professionalism_effects_desc = {
+	type = country
+	random_valid = no
+	
+	text = {
+		trigger = {
+			var:navy_professionalism >= HIGH_PROFESSIONALISM_THRESHOLD					
+		}
+		localization_key = high_navyprof_effects
+	}
+	
+	text = {
+		trigger = {
+			var:navy_professionalism >= MEDIUM_PROFESSIONALISM_THRESHOLD					
+		}
+		localization_key = medium_navyprof_effects
+	}
+
+	text = {
+		trigger = {
+			var:navy_professionalism >= LOW_PROFESSIONALISM_THRESHOLD					
+		}
+		localization_key = low_navyprof_effects
+	}
+
+	text = {
+		localization_key = very_low_navyprof_effects
+	}
+}
+
+
+reason_for_taking_funds = {
+	type = character
+	random_valid = yes
+
+	text = {
+		trigger = {
+			has_trait = alcoholic
+		}
+		localization_key = fund_alcohol_addiction
+	}
+
+	text = {
+		trigger = {
+			has_trait = opium_addiction
+		}
+		localization_key = fund_opium_addiction
+	}
+
+	text = {
+		trigger = {
+			has_trait = hedonist
+			is_ruler = yes
+		}
+		localization_key = fund_questionable_parties
+	}
+
+	text = {
+		trigger = {
+			has_trait = cocaine_addiction
+		}
+		localization_key = fund_cocaine_addiction
+	}
+
+	text = {
+		trigger = {
+			has_trait = romantic
+			is_ruler = yes
+		}
+		localization_key = build_fairytale_castle
+	}
+
+	text = {
+		trigger = {
+			has_trait = expensive_tastes
+		}
+		localization_key = fund_banquets
+	}
+
+	text = {
+		trigger = {
+			is_ruler = yes
+		}
+		localization_key = build_new_summer_palace
+	}
+}
+
+first_dreadnought_name = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			c:GBR ?= this
+		}
+		localization_key = custom_dreadnought
+	}
+
+	text = {
+		trigger = {
+			OR = {
+				c:GER ?= this
+				c:PRU ?= this
+			}
+			has_state_in_state_region = STATE_HESSE
+		}
+		localization_key = custom_nassau
+	}
+
+	text = {
+		trigger = {
+			OR = {
+				c:GER ?= this
+				c:PRU ?= this
+			}
+			has_state_in_state_region = STATE_WESTPHALIA
+		}
+		localization_key = custom_westfalen
+	}
+
+	text = {
+		trigger = {
+			c:JAP ?= this
+		}
+		localization_key = custom_kawachi
+	}
+
+	text = {
+		trigger = {
+			c:ITA ?= this
+		}
+		localization_key = custom_dante_alighieri
+	}
+
+	text = {
+		trigger = {
+			c:AUS ?= this
+		}
+		localization_key = custom_tegetthoff
+	}
+
+	text = {
+		trigger = {
+			c:FRA ?= this
+		}
+		localization_key = custom_courbet
+	}
+
+	text = {
+		trigger = {
+			c:RUS ?= this
+		}
+		localization_key = custom_gangut
+	}
+
+	text = {
+		trigger = {
+			c:USA ?= this
+		}
+		localization_key = custom_delaware
+	}
+
+	text = {
+		localization_key = generic_first_dreadnought
+	}
+}
+
+superdreadnought_caliber = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			c:GBR ?= this
+		}
+		localization_key = 13p5_inch
+	}
+
+	text = {
+		trigger = {
+			c:USA ?= this
+		}
+		localization_key = 14_inch
+	}
+
+	text = {
+		trigger = {
+			c:FRA ?= this
+		}
+		localization_key = 340_mm
+	}
+
+	text = {
+		trigger = {
+			c:JAP ?= this
+		}
+		localization_key = 36_cm
+	}
+
+	text = {
+		trigger = {
+			OR = {
+				c:GER ?= this
+				c:PRU ?= this
+			}
+		}
+		localization_key = 38_cm
+	}
+
+	text = {
+		trigger = {
+			c:RUS ?= this
+			has_law = law_type:law_council_republic
+		}
+		localization_key = 356_mm
+	}
+
+	text = {
+		trigger = {
+			c:RUS ?= this
+			NOT = {
+				has_law = law_type:law_council_republic
+			}
+		}
+		localization_key = 14_inch
+	}
+
+	text = {
+		trigger = {
+			c:AUS ?= this
+		}
+		localization_key = 35_cm
+	}
+
+	text = {
+		trigger = {
+			c:ITA ?= this
+		}
+		localization_key = 381_mm
+	}
+
+	text = {
+		localization_key = 14_inch
+	}
+	
+}
+
+review_flagship_type = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			navy_tech_level = 1
+		}
+		localization_key = custom_ship_of_the_line_review
+	}
+	text = {
+		trigger = {
+			navy_tech_level = 2
+		}
+		localization_key = custom_steam_ship_of_the_line_review
+	}
+	text = {
+		trigger = {
+			navy_tech_level = 3
+		}
+		localization_key = custom_ironclad_review
+	}
+	text = {
+		trigger = {
+			navy_tech_level = 4
+		}
+		localization_key = custom_steel_battleship_review
+	}
+	text = {
+		trigger = {
+			navy_tech_level = 5
+		}
+		localization_key = custom_dreadnought_battleship_review
+	}
+	text = {
+		trigger = {
+			navy_tech_level = 6
+		}
+		localization_key = custom_super_dreadnought_battleship_review
+	}
+}
+
+converted_carrier_name = {
+	type = country
+	random_valid = yes
+
+	text = {
+		localization_key = custom_conversion_lexington
+		trigger = {
+			c:USA ?= this
+		}
+	}
+
+	text = {
+		localization_key = custom_conversion_saratoga
+		trigger = {
+			c:USA ?= this
+		}
+	}
+
+	text = {
+		localization_key = custom_conversion_courageous
+		trigger = {
+			c:GBR ?= this
+		}
+	}
+
+	text = {
+		localization_key = custom_conversion_glorious
+		trigger = {
+			c:GBR ?= this
+		}
+	}
+
+	text = {
+		localization_key = custom_conversion_furious
+		trigger = {
+			c:GBR ?= this
+		}
+	}
+
+	text = {
+		localization_key = custom_conversion_eagle
+		trigger = {
+			c:GBR ?= this
+		}
+	}
+
+	text = {
+		localization_key = custom_conversion_akagi
+		trigger = {
+			c:JAP ?= this
+		}
+	}
+
+	text = {
+		localization_key = custom_conversion_kaga
+		trigger = {
+			c:JAP ?= this
+		}
+	}
+
+	text = {
+		localization_key = custom_conversion_amagi
+		trigger = {
+			c:JAP ?= this
+		}
+	}
+
+	text = {
+		localization_key = custom_conversion_bearn
+		trigger = {
+			c:FRA ?= this
+		}
+	}
+
+	text = {
+		localization_key = custom_conversion_generic_battleship
+		trigger = {
+			always = no
+		}
+		fallback = yes
+	}
+}
+
+converted_liner_name = {
+	type = country
+	random_valid = yes
+
+	text = {
+		localization_key = custom_conte_rosso_to_argus
+		trigger = {
+			c:GBR ?= this
+		}
+	}
+
+	text = {
+		localization_key = custom_izumo_maru_to_hiyo
+		trigger = {
+			c:JAP ?= this
+		}
+	}
+
+	text = {
+		localization_key = custom_kashiwara_maru_to_junyo
+		trigger = {
+			c:JAP ?= this
+		}
+	}
+
+	text = {
+		localization_key = custom_ss_roma_to_aquila
+		trigger = {
+			OR = {
+				c:ITA ?= this
+				AND = {
+					has_state_in_state_region = STATE_LAZIO
+					OR = {
+						country_has_primary_culture = cu:north_italian
+						country_has_primary_culture = cu:south_italian
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = custom_ms_augustus_to_sparviero
+		trigger = {
+			OR = {
+				c:ITA ?= this
+				AND = {
+					has_state_in_state_region = STATE_LAZIO
+					OR = {
+						country_has_primary_culture = cu:north_italian
+						country_has_primary_culture = cu:south_italian
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = custom_ss_gneisenau_to_jade
+		trigger = {
+			OR = {
+				c:GER ?= this
+				c:NGF ?= this
+				c:PRU ?= this
+			}
+		}
+	}
+
+	text = {
+		localization_key = custom_ss_potsdam_to_elbe
+		trigger = {
+			OR = {
+				c:GER ?= this
+				c:NGF ?= this
+				c:PRU ?= this
+			}
+		}
+	}
+
+	text = {
+		localization_key = custom_generic_converted_liner
+		trigger = {
+			always = no
+		}
+		fallback = yes
+	}
+}
+
+carrier_name = {
+	type = country
+	random_valid = yes
+
+# British Carriers:
+
+	text = {
+		localization_key = custom_hms_eagle
+		trigger = {
+			c:GBR ?= this
+			has_variable = converted_battleship_to_carrier
+		}
+	}
+
+	text = {
+		localization_key = custom_courageous
+		trigger = {
+			c:GBR ?= this
+			has_variable = converted_battleship_to_carrier
+		}
+	}
+
+	text = {
+		localization_key = custom_glorious
+		trigger = {
+			c:GBR ?= this
+			has_variable = converted_battleship_to_carrier
+		}
+	}
+
+	text = {
+		localization_key = custom_furious
+		trigger = {
+			c:GBR ?= this
+			has_variable = converted_battleship_to_carrier
+		}
+	}
+
+	text = {
+		localization_key = custom_hms_hermes
+		trigger = {
+			c:GBR ?= this
+		}
+	}
+
+	text = {
+		localization_key = custom_ark_royal
+		trigger = {
+			c:GBR ?= this
+			has_technology_researched = fleet_carrier_tech
+		}
+	}
+
+	text = {
+		localization_key = custom_illustrious
+		trigger = {
+			c:GBR ?= this
+			has_technology_researched = armored_carrier_tech			
+		}
+	}
+
+	text = {
+		localization_key = custom_formidable
+		trigger = {
+			c:GBR ?= this
+			has_technology_researched = armored_carrier_tech
+		}
+	}
+
+	text = {
+		localization_key = custom_victorious
+		trigger = {
+			c:GBR ?= this
+			has_technology_researched = armored_carrier_tech
+		}
+	}
+
+# American Carriers
+
+	text = {
+		localization_key = custom_lexington
+		trigger = {
+			c:USA ?= this
+			has_variable = converted_battleship_to_carrier
+		}
+	}
+
+	text = {
+		localization_key = custom_saratoga
+		trigger = {
+			c:USA ?= this
+			has_variable = converted_battleship_to_carrier
+		}
+	}
+
+	text = {
+		localization_key = custom_ranger
+		trigger = {
+			c:USA ?= this
+		}
+	}
+
+	text = {
+		localization_key = custom_yorktown
+		trigger = {
+			c:USA ?= this
+			has_technology_researched = fleet_carrier_tech
+		}
+	}
+
+	text = {
+		localization_key = custom_enterprise # She's here!
+		trigger = {
+			c:USA ?= this
+			has_technology_researched = fleet_carrier_tech
+		}
+	}
+
+	text = {
+		localization_key = custom_hornet
+		trigger = {
+			c:USA ?= this
+			has_technology_researched = fleet_carrier_tech
+		}
+	}
+
+# Japanese Carriers
+
+	text = {
+		localization_key = custom_akagi
+		trigger = {
+			c:JAP ?= this
+			has_variable = converted_battleship_to_carrier
+		}
+	}
+
+	text = {
+		localization_key = custom_kaga
+		trigger = {
+			c:JAP ?= this
+			has_variable = converted_battleship_to_carrier
+		}
+	}
+
+	text = {
+		localization_key = custom_amagi
+		trigger = {
+			c:JAP ?= this
+			has_variable = converted_battleship_to_carrier
+		}
+	}
+
+	text = {
+		localization_key = custom_hiryu
+		trigger = {
+			c:JAP ?= this
+		}
+	}
+
+	text = {
+		localization_key = custom_soryu
+		trigger = {
+			c:JAP ?= this
+		}
+	}
+
+	text = {
+		localization_key = custom_shokaku
+		trigger = {
+			c:JAP ?= this
+			has_technology_researched = fleet_carrier_tech
+		}
+	}
+
+	text = {
+		localization_key = custom_zuikaku
+		trigger = {
+			c:JAP ?= this
+			has_technology_researched = fleet_carrier_tech
+		}
+	}
+
+	text = {
+		localization_key = custom_taiho
+		trigger = {
+			c:JAP ?= this
+			has_technology_researched = armored_carrier_tech
+		}
+	}
+
+# Italian Carriers
+
+	text = {
+		localization_key = custom_aquila
+		trigger = {
+			OR = {
+				c:ITA ?= this
+				AND = {
+					has_state_in_state_region = STATE_LAZIO
+					OR = {
+						country_has_primary_culture = cu:north_italian
+						country_has_primary_culture = cu:south_italian
+					}
+				}
+			}
+			has_variable = converted_ocean_liner_to_carrier
+		}
+	}
+
+	text = {
+		localization_key = custom_sparviero
+		trigger = {
+			OR = {
+				c:ITA ?= this
+				AND = {
+					has_state_in_state_region = STATE_LAZIO
+					OR = {
+						country_has_primary_culture = cu:north_italian
+						country_has_primary_culture = cu:south_italian
+					}
+				}
+			}
+			has_variable = converted_ocean_liner_to_carrier
+		}
+	}
+
+
+# French Carriers
+
+	text = {
+		localization_key = custom_bearn
+		trigger = {
+			c:FRA ?= this
+			has_variable = converted_battleship_to_carrier
+		}
+	}
+
+	text = {
+		localization_key = custom_joffre
+		trigger = {
+			c:FRA ?= this
+			has_technology_researched = fleet_carrier_tech
+		}
+	}
+
+	text = {
+		localization_key = custom_painleve
+		trigger = {
+			c:FRA ?= this
+			has_technology_researched = fleet_carrier_tech
+		}
+	}
+
+# German Carriers
+
+	text = {
+		localization_key = custom_elbe
+		trigger = {
+			OR = {
+				c:GER ?= this
+				c:NGF ?= this
+				c:PRU ?= this
+			}
+			has_variable = converted_ocean_liner_to_carrier 
+		}
+	}
+
+	text = {
+		localization_key = custom_jade
+		trigger = {
+			OR = {
+				c:GER ?= this
+				c:NGF ?= this
+				c:PRU ?= this
+			}
+			has_variable = converted_ocean_liner_to_carrier 
+		}
+	}
+
+	text = {
+		localization_key = custom_graf_zeppelin
+		trigger = {
+			OR = {
+				c:GER ?= this
+				c:NGF ?= this
+				c:PRU ?= this
+			}
+			has_technology_researched = fleet_carrier_tech
+		}
+	}
+
+	text = {
+		localization_key = custom_peter_strasser
+		trigger = {
+			OR = {
+				c:GER ?= this
+				c:NGF ?= this
+				c:PRU ?= this
+			}
+			has_technology_researched = fleet_carrier_tech
+		}
+	}
+
+# Fallback
+
+	text = {
+		localization_key = custom_carrier_fallback
+		trigger = {
+			always = no
+		}
+		fallback = yes
+	}
+}
+
+first_monoplane_fighter = {
+	type = country
+	random_valid = yes
+
+	text = {
+		localization_key = custom_f2a_buffalo
+		trigger = {
+			c:USA ?= this
+		}
+	}
+
+	text = {
+		localization_key = custom_a5m
+		trigger = {
+			c:JAP ?= this
+		}
+	}
+
+	text = {
+		localization_key = custom_re2001_falco_ii
+		trigger = {
+			OR = {
+				c:ITA ?= this
+				AND = {
+					has_state_in_state_region = STATE_LAZIO
+					OR = {
+						country_has_primary_culture = cu:north_italian
+						country_has_primary_culture = cu:south_italian
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = custom_g50_freccia
+		trigger = {
+			OR = {
+				c:ITA ?= this
+				AND = {
+					has_state_in_state_region = STATE_LAZIO
+					OR = {
+						country_has_primary_culture = cu:north_italian
+						country_has_primary_culture = cu:south_italian
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = custom_sea_hurricane
+		trigger = {
+			c:GBR ?= this
+		}
+	}
+
+	text = {
+		localization_key = custom_d373
+		trigger = {
+			c:FRA ?= this
+		}
+	}
+
+	text = {
+		localization_key = custom_fighter
+		trigger = {
+			always = no
+		}
+		fallback = yes
+	}
+}
+
+treaty_acceptance_chance = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			has_variable = is_naval_conference_host
+		}
+		localization_key = treaty_acceptance_host
+	}
+
+	text = {
+		trigger = {
+			has_variable = is_voting_on_treaty
+		}
+		localization_key = treaty_acceptance_already_voting
+	}
+
+	text = {
+		trigger = {
+			cryptography_ability > global_var:naval_conference_host.cryptography_ability			
+		}
+		localization_key = treaty_acceptance_low_intel
+	}
+
+	text = {
+		trigger = {
+			treaty_acceptance_value >= 4
+		}
+		localization_key = treaty_acceptance_high
+	}
+
+	text = {
+		trigger = {
+			treaty_acceptance_value >= 2
+		}
+		localization_key = treaty_acceptance_medium
+	}
+
+	text = {
+		trigger = {
+			treaty_acceptance_value >= 1
+		}
+		localization_key = treaty_acceptance_low
+	}
+
+	text = {
+		localization_key = treaty_acceptance_very_low
+	}
+}
