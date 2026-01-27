@@ -56,6 +56,33 @@ REPLACE:power_of_the_purse = {
 ### ERA 3 1862-1886
 # Vanilla has Monitor in this era, which we remove
 # It also has Ironclad, which we keep
+REPLACE:jeune_ecole = {
+	# Unlocks Jeune Ecole PM in Naval Base
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/jeune_ecole.dds"
+	category = military
+	modifier = {
+		state_building_naval_base_max_level_add = 10
+	}
+	unlocking_technologies = {
+		power_of_the_purse
+	}
+	ai_weight = {
+		value = 1
+	}
+}
+
+REPLACE:monitor_tech = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/monitor_tech.dds"
+	category = military
+	can_research = no
+	ai_weight = {
+		value = 0
+	}
+}
+
+### ERA 4 1887-1911
 REPLACE:landing_craft = {
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/landing_craft.dds"
@@ -78,32 +105,6 @@ REPLACE:landing_craft = {
 	}
 }
 
-REPLACE:jeune_ecole = {
-	# Unlocks Jeune Ecole PM in Naval Base
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/jeune_ecole.dds"
-	category = military
-	modifier = {
-		state_building_naval_base_max_level_add = 10
-	}
-	unlocking_technologies = {
-		power_of_the_purse
-	}
-	ai_weight = {
-		value = 1
-	}
-}
-
-REPLACE:monitor_tech = {
-	texture = "gfx/interface/icons/invention_icons/monitor_tech.dds"
-	category = military
-	can_research = no
-	ai_weight = {
-		value = 0
-	}
-}
-
-### ERA 4 1887-1911
 REPLACE:destroyer = {
 	# Unlocks Destroyer PM on Naval Bases
 	era = era_4
