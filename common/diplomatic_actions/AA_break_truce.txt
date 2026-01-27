@@ -1,5 +1,6 @@
-﻿AA_break_truce = {
-	### By Oaken: Last Updated 21/12/2025
+﻿### By Oaken: Last Updated 21/12/2025
+# Edited by Akiko as of 27/01/26
+AA_break_truce = {
 	groups = {
 		general
 	}
@@ -14,8 +15,6 @@
 			scope:target_country = {
 				c:CIR ?= this
 			}
-		}
-		NOT = {
 			scope:target_country = {
 				c:CHC ?= this
 			}
@@ -48,12 +47,10 @@
 					text = broken_truce_in_10_years_great_power_custom_tooltip
 					infamy <= 25
 				}
-				AND = {
-					custom_tooltip = {
-						text = broken_truce_in_10_years_not_great_power_custom_tooltip
-						infamy <= 50
-						country_rank < rank_value:great_power
-					}
+				custom_tooltip = {
+					text = broken_truce_in_10_years_not_great_power_custom_tooltip
+					infamy <= 50
+					country_rank < rank_value:great_power
 				}
 			}
 		}

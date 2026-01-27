@@ -1,16 +1,18 @@
 ﻿#RS = royal splendor
-
 RS_character_death_counter = {
 	effect = {
 		save_scope_as = dead_character
 		# AFGHANISTAN Dost Mohammad Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_afg_dost_mohammad
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -18,17 +20,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = afg_monarch_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# AFGHANISTAN Wazir Akbar Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_afg_wazir_akbar
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -36,13 +41,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = afg_monarch_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# AFGHANISTAN Wazir Akbar Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_afg_wazir_akbar
 				}
@@ -51,17 +56,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = afg_heir_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# AFGHANISTAN Mohammad Yahya Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_afg_mohammad_yahya
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -69,13 +77,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = afg_monarch_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# AFGHANISTAN Mohammad Yahya Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_afg_mohammad_yahya
 				}
@@ -84,17 +92,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = afg_heir_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# AFGHANISTAN Mohammad Yusuf Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_afg_mohammad_yusuf
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -102,13 +113,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = afg_monarch_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# AFGHANISTAN Mohammad Yusuf Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_afg_mohammad_yusuf
 				}
@@ -117,13 +128,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = afg_heir_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# AFGHANISTAN Mohammad Nadir Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_afg_mohammad_nadir
 				}
@@ -132,17 +143,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = afg_heir_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# AUSTRIA Ferdinand 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_aus_ferdinand_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -150,17 +164,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = aus_monarch_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# AUSTRIA Franz Josef 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_aus_franz_josef_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -168,13 +185,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = aus_monarch_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# AUSTRIA Franz Josef 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_aus_franz_josef_01
 				}
@@ -183,17 +200,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = aus_heir_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# AUSTRIA Rudolf 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_aus_rudolf_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -201,13 +221,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = aus_monarch_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# AUSTRIA Rudolf 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_aus_rudolf_01
 				}
@@ -216,17 +236,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = aus_heir_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# AUSTRIA Maximilian 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_aus_maximilian_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -234,13 +257,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = aus_monarch_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# AUSTRIA Maximilian 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_aus_maximilian_01
 				}
@@ -249,17 +272,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = aus_heir_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# AUSTRIA Karl Ludwig 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_aus_karl_ludwig_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -267,13 +293,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = aus_monarch_death.5
 					days = 1
-				}	
+				}
 			}
 		}
 		# AUSTRIA Karl Ludwig 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_aus_karl_ludwig_01
 				}
@@ -282,22 +308,24 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = aus_heir_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# AUSTRIA Ludwig Viktor 01 Dies as Ruler [WIP, nothing yet]
 		# aus_monarch_death.6
 		# aus_heir_death.5
 		# AUSTRIA Ludwig Viktor 01 Dies as Ruler [WIP, nothing yet]
-
 		# AUSTRIA Franz Ferdinand 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_aus_franz_ferdinand_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -305,13 +333,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = aus_monarch_death.7
 					days = 1
-				}	
+				}
 			}
 		}
 		# AUSTRIA Franz Ferdinand 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_aus_franz_ferdinand_01
 				}
@@ -320,17 +348,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = aus_heir_death.6
 					days = 1
-				}	
+				}
 			}
 		}
 		# AUSTRIA Otto Franz 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_aus_otto_franz_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -338,13 +369,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = aus_monarch_death.8
 					days = 1
-				}	
+				}
 			}
 		}
 		# AUSTRIA Otto Franz 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_aus_otto_franz_01
 				}
@@ -353,13 +384,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = aus_heir_death.7
 					days = 1
-				}	
+				}
 			}
 		}
 		# AUSTRIA Karl 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_aus_karl_01
 				}
@@ -368,13 +399,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = aus_heir_death.8
 					days = 1
-				}	
+				}
 			}
 		}
 		# AUSTRIA Otto 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_aus_otto_01
 					game_date > 1936.1.1
@@ -384,18 +415,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = aus_heir_death.9
 					days = 1
-				}	
+				}
 			}
 		}
-
 		# BADEN Leopold 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_bad_leopold_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -403,17 +436,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = bad_monarch_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# BADEN Ludwig 02 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_bad_ludwig_02
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -421,13 +457,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = bad_monarch_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# BADEN Ludwig 02 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_bad_ludwig_02
 				}
@@ -436,13 +472,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = bad_heir_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# BADEN Friedrich 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_bad_friedrich_01
 				}
@@ -451,18 +487,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = bad_heir_death.2
 					days = 1
-				}	
+				}
 			}
 		}
-
 		# BAVARIA Ludwig 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_bav_ludwig_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -470,17 +508,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = bav_monarch_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# BAVARIA Maximilian 02 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_bav_maximilian_02
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -488,13 +529,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = bav_monarch_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# BAVARIA Maximilian 02 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_bav_maximilian_02
 				}
@@ -503,17 +544,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = bav_heir_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# BAVARIA Ludwig 02 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_bav_ludwig_02
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -521,13 +565,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = bav_monarch_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# BAVARIA Ludwig 02 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_bav_ludwig_02
 				}
@@ -536,17 +580,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = bav_heir_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# BAVARIA Otto 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_bav_otto_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -554,13 +601,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = bav_monarch_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# BAVARIA Otto 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_bav_otto_01
 				}
@@ -569,17 +616,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = bav_heir_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# BAVARIA Luitpold 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_bav_luitpold_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -587,13 +637,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = bav_monarch_death.5
 					days = 1
-				}	
+				}
 			}
 		}
 		# BAVARIA Luitpold 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_bav_luitpold_01
 				}
@@ -602,13 +652,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = bav_heir_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# BAVARIA Ludwig 03 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_bav_ludwig_03
 				}
@@ -617,19 +667,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = bav_heir_death.5
 					days = 1
-				}	
+				}
 			}
 		}
-
-
 		# BELGIUM Leopold 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_bel_leopold_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -637,17 +688,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = bel_monarch_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# BELGIUM Leopold 02 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_bel_leopold_02
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -655,13 +709,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = bel_monarch_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# BELGIUM Leopold 02 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_bel_leopold_02
 				}
@@ -670,17 +724,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = bel_heir_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# BELGIUM Philippe 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_bel_philippe_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -688,13 +745,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = bel_monarch_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# BELGIUM Philippe 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_bel_philippe_01
 				}
@@ -703,17 +760,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = bel_heir_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# BELGIUM Albert 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_bel_albert_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -721,13 +781,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = bel_monarch_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# BELGIUM Albert 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_bel_albert_01
 				}
@@ -736,13 +796,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = bel_heir_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# BELGIUM Leopold 03 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_bel_leopold_03
 				}
@@ -751,18 +811,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = bel_heir_death.4
 					days = 1
-				}	
+				}
 			}
 		}
-
 		# DENMARK Frederik 06 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_den_frederik_06
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -770,17 +832,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = den_monarch_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# DENMARK Christian 08 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_den_christian_08
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -788,13 +853,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = den_monarch_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# DENMARK Christian_08 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_den_christian_08
 				}
@@ -803,17 +868,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = den_heir_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# DENMARK Frederik 07 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_den_frederik_07
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -821,13 +889,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = den_monarch_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# DENMARK Frederik 07 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_den_frederik_07
 				}
@@ -836,17 +904,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = den_heir_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# DENMARK Christian 09 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_den_christian_09
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -854,13 +925,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = den_monarch_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# DENMARK Christian 09 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_den_christian_09
 				}
@@ -869,17 +940,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = den_heir_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# DENMARK Frederik 08 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_den_frederik_08
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -887,13 +961,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = den_monarch_death.5
 					days = 1
-				}	
+				}
 			}
 		}
 		# DENMARK Frederik 08 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_den_frederik_08
 				}
@@ -902,13 +976,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = den_heir_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# DENMARK Christian 10 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_den_christian_10
 				}
@@ -917,18 +991,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = den_heir_death.5
 					days = 1
-				}	
+				}
 			}
 		}
-
 		# FRANCE BONAPARTE Louis Napoleon 03 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = fra_napoleon_iii_character_template
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -936,17 +1012,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = fra_bonaparte_monarch_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# FRANCE BONAPARTE Louis Napoleon 04 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = FRA_napoleon_eugene_louis_bonaparte
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -954,13 +1033,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = fra_bonaparte_monarch_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# FRANCE BONAPARTE Louis Napoleon 04 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = FRA_napoleon_eugene_louis_bonaparte
 				}
@@ -969,13 +1048,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = fra_bonaparte_heir_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# FRANCE BONAPARTE Victor Napoleon 06 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = FRA_victor_bonaparte
 				}
@@ -984,18 +1063,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = fra_bonaparte_heir_death.2
 					days = 1
-				}	
+				}
 			}
 		}
-
 		# FRANCE BOURBON Louis 19 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = FRA_louis_antoine_de_bourbon
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -1003,17 +1084,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = fra_bourbon_monarch_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# FRANCE BOURBON Henri 05 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = FRA_henri_de_bourbon
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -1021,13 +1105,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = fra_bourbon_monarch_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# FRANCE BOURBON Henri 05 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = FRA_henri_de_bourbon
 				}
@@ -1036,17 +1120,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = fra_bourbon_heir_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# FRANCE BOURBON Jean 03 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = SPC_juan_iii_de_borbon_template
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -1054,13 +1141,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = fra_bourbon_monarch_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# FRANCE BOURBON Jean 03 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = SPC_juan_iii_de_borbon_template
 				}
@@ -1069,17 +1156,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = fra_bourbon_heir_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# FRANCE BOURBON Charles 11 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = SPC_carlos_vii_de_borbon_template
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -1087,13 +1177,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = fra_bourbon_monarch_death.5
 					days = 1
-				}	
+				}
 			}
 		}
 		# FRANCE BOURBON Charles 11 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = SPC_carlos_vii_de_borbon_template
 				}
@@ -1102,17 +1192,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = fra_bourbon_heir_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# FRANCE BOURBON Jacques 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = SPC_jaime_iii_de_borbon_template
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -1120,13 +1213,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = fra_bourbon_monarch_death.6
 					days = 1
-				}	
+				}
 			}
 		}
 		# FRANCE BOURBON Jacques 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = SPC_jaime_iii_de_borbon_template
 				}
@@ -1135,17 +1228,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = fra_bourbon_heir_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# FRANCE BOURBON Charles 12 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = SPC_alfonso_i_de_borbon_template
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -1153,13 +1249,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = fra_bourbon_monarch_death.7
 					days = 1
-				}	
+				}
 			}
 		}
 		# FRANCE BOURBON Charles 12 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = SPC_alfonso_i_de_borbon_template
 				}
@@ -1168,18 +1264,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = fra_bourbon_heir_death.5
 					days = 1
-				}	
+				}
 			}
 		}
-
 		# FRANCE ORLEANS Louis Philippe 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = FRA_louis_philippe
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -1187,17 +1285,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = fra_orleans_monarch_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# FRANCE ORLEANS Ferdinand Philippe 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = FRA_ferdinand_philippe
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -1205,13 +1306,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = fra_orleans_monarch_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# FRANCE ORLEANS Ferdinand Philippe 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = FRA_ferdinand_philippe
 				}
@@ -1220,17 +1321,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = fra_orleans_heir_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# FRANCE ORLEANS Louis Philippe 02 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = FRA_philippe_de_orleans_of_paris
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -1238,13 +1342,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = fra_orleans_monarch_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# FRANCE ORLEANS Louis Philippe 02 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = FRA_philippe_de_orleans_of_paris
 				}
@@ -1253,17 +1357,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = fra_orleans_heir_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# FRANCE ORLEANS Philippe 08 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = FRA_philippe_de_orleans_of_orleans
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -1271,13 +1378,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = fra_orleans_monarch_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# FRANCE ORLEANS Philippe 08 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = FRA_philippe_de_orleans_of_orleans
 				}
@@ -1286,17 +1393,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = fra_orleans_heir_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# FRANCE ORLEANS Robert 03 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = FRA_robert_de_orleans
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -1304,13 +1414,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = fra_orleans_monarch_death.5
 					days = 1
-				}	
+				}
 			}
 		}
 		# FRANCE ORLEANS Robert 03 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = FRA_robert_de_orleans
 				}
@@ -1319,17 +1429,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = fra_orleans_heir_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# FRANCE ORLEANS Jean 03 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = FRA_jean_de_orleans
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -1337,13 +1450,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = fra_orleans_monarch_death.6
 					days = 1
-				}	
+				}
 			}
 		}
 		# FRANCE ORLEANS Jean 03 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = FRA_jean_de_orleans
 				}
@@ -1352,13 +1465,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = fra_orleans_heir_death.5
 					days = 1
-				}	
+				}
 			}
 		}
 		# FRANCE ORLEANS Henri 05 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = FRA_henri_de_orleans
 				}
@@ -1367,18 +1480,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = fra_orleans_heir_death.6
 					days = 1
-				}	
+				}
 			}
 		}
-
 		# BRITAIN William 04 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_gbr_william_04
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -1386,17 +1501,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = gbr_monarch_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# BRITAIN Victoria 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_gbr_victoria_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -1404,13 +1522,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = gbr_monarch_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# BRITAIN Victoria 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_gbr_victoria_01
 				}
@@ -1419,17 +1537,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = gbr_heir_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# BRITAIN Edward 07 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_gbr_edward_07
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -1437,13 +1558,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = gbr_monarch_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# BRITAIN Edward 07 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_gbr_edward_07
 				}
@@ -1452,17 +1573,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = gbr_heir_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# BRITAIN Albert 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_gbr_albert_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -1470,13 +1594,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = gbr_monarch_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# BRITAIN Albert 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_gbr_albert_01
 				}
@@ -1485,17 +1609,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = gbr_heir_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# BRITAIN George 05 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_gbr_george_05
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -1503,13 +1630,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = gbr_monarch_death.5
 					days = 1
-				}	
+				}
 			}
 		}
 		# BRITAIN George 05 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_gbr_george_05
 				}
@@ -1518,17 +1645,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = gbr_heir_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# BRITAIN Edward 08 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_gbr_edward_08
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -1536,13 +1666,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = gbr_monarch_death.6
 					days = 1
-				}	
+				}
 			}
 		}
 		# BRITAIN Edward_08 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_gbr_edward_08
 				}
@@ -1551,13 +1681,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = gbr_heir_death.5
 					days = 1
-				}	
+				}
 			}
 		}
 		# BRITAIN George 06 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_gbr_george_06
 				}
@@ -1566,13 +1696,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = gbr_heir_death.6
 					days = 1
-				}	
+				}
 			}
 		}
 		# BRITAIN Elizabeth_02 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_gbr_elizabeth_02
 				}
@@ -1581,17 +1711,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = gbr_heir_death.7
 					days = 1
-				}	
+				}
 			}
 		}
 		# BRITAIN Alfred 02 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_gbr_alfred_02
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -1599,13 +1732,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = gbr_monarch_death.7
 					days = 1
-				}	
+				}
 			}
 		}
 		# BRITAIN Alfred_02 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_gbr_alfred_02
 				}
@@ -1614,17 +1747,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = gbr_heir_death.8
 					days = 1
-				}	
+				}
 			}
 		}
 		# BRITAIN Alfred 03 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_gbr_alfred_03
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -1632,13 +1768,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = gbr_monarch_death.8
 					days = 1
-				}	
+				}
 			}
 		}
 		# BRITAIN Alfred_03 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_gbr_alfred_03
 				}
@@ -1647,17 +1783,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = gbr_heir_death.9
 					days = 1
-				}	
+				}
 			}
 		}
 		# BRITAIN Arthur 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_gbr_arthur_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -1665,13 +1804,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = gbr_monarch_death.9
 					days = 1
-				}	
+				}
 			}
 		}
 		# BRITAIN Arthur_01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_gbr_arthur_01
 				}
@@ -1680,17 +1819,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = gbr_heir_death.10
 					days = 1
-				}	
+				}
 			}
 		}
 		# BRITAIN Arthur 02 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_gbr_arthur_02
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -1698,13 +1840,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = gbr_monarch_death.10
 					days = 1
-				}	
+				}
 			}
 		}
 		# BRITAIN Arthur 02 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_gbr_arthur_02
 				}
@@ -1713,17 +1855,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = gbr_heir_death.11
 					days = 1
-				}	
+				}
 			}
 		}
 		# BRITAIN Arthur 03 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_gbr_arthur_03
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -1731,13 +1876,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = gbr_monarch_death.11
 					days = 1
-				}	
+				}
 			}
 		}
 		# BRITAIN Arthur 03 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_gbr_arthur_03
 				}
@@ -1746,17 +1891,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = gbr_heir_death.12
 					days = 1
-				}	
+				}
 			}
 		}
 		# BRITAIN Leopold 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_gbr_leopold_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -1764,13 +1912,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = gbr_monarch_death.12
 					days = 1
-				}	
+				}
 			}
 		}
 		# BRITAIN Leopold 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_gbr_leopold_01
 				}
@@ -1779,17 +1927,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = gbr_heir_death.13
 					days = 1
-				}	
+				}
 			}
 		}
 		# BRITAIN Charles 03 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_gbr_charles_03
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -1797,13 +1948,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = gbr_monarch_death.13
 					days = 1
-				}	
+				}
 			}
 		}
 		# BRITAIN Charles 03 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_gbr_charles_03
 				}
@@ -1812,13 +1963,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = gbr_heir_death.14
 					days = 1
-				}	
+				}
 			}
 		}
 		# BRITAIN John 02 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_gbr_john_02
 				}
@@ -1827,13 +1978,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = gbr_heir_death.15
 					days = 1
-				}	
+				}
 			}
 		}
 		# BRITAIN Henry 09 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_gbr_henry_09
 				}
@@ -1842,19 +1993,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = gbr_heir_death.16
 					days = 1
-				}	
+				}
 			}
 		}
-
-
 		# HANNOVER Ernst August 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_han_ernst_august_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -1862,17 +2014,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = han_monarch_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# HANNOVER Georg 05 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_han_georg_05
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -1880,13 +2035,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = han_monarch_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# HANNOVER Georg 05 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_han_georg_05
 				}
@@ -1895,17 +2050,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = han_heir_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# HANNOVER Ernst August 02 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_han_ernst_august_02
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -1913,13 +2071,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = han_monarch_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# HANNOVER Ernst August 02 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_han_ernst_august_02
 				}
@@ -1928,13 +2086,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = han_heir_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# HANNOVER Ernst August 03 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_han_ernst_august_03
 				}
@@ -1943,19 +2101,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = han_heir_death.3
 					days = 1
-				}	
+				}
 			}
 		}
-
-
 		# JAPAN TOKUGAWA Ienari Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_jap_tokugawa_ienari
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -1963,17 +2122,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = jap_tokugawa_monarch_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# JAPAN TOKUGAWA Ieyoshi Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_jap_tokugawa_ieyoshi
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -1981,13 +2143,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = jap_tokugawa_monarch_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# JAPAN TOKUGAWA Ieyoshi Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_jap_tokugawa_ieyoshi
 				}
@@ -1996,17 +2158,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = jap_tokugawa_heir_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# JAPAN TOKUGAWA Iesada Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_jap_tokugawa_iesada
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -2014,13 +2179,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = jap_tokugawa_monarch_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# JAPAN TOKUGAWA Iesada Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_jap_tokugawa_iesada
 				}
@@ -2029,17 +2194,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = jap_tokugawa_heir_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# JAPAN TOKUGAWA Iemochi Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_jap_tokugawa_iemochi
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -2047,13 +2215,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = jap_tokugawa_monarch_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# JAPAN TOKUGAWA Iemochi Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_jap_tokugawa_iemochi
 				}
@@ -2062,17 +2230,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = jap_tokugawa_heir_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# JAPAN TOKUGAWA Yoshinobu Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_jap_tokugawa_yoshinobu
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -2080,13 +2251,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = jap_tokugawa_monarch_death.5
 					days = 1
-				}	
+				}
 			}
 		}
 		# JAPAN TOKUGAWA Yoshinobu Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_jap_tokugawa_yoshinobu
 				}
@@ -2095,13 +2266,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = jap_tokugawa_heir_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# JAPAN TOKUGAWA Iesato Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_jap_tokugawa_iesato
 				}
@@ -2110,18 +2281,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = jap_tokugawa_heir_death.5
 					days = 1
-				}	
+				}
 			}
 		}
-
 		# NETHERLANDS Willem 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_net_willem_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -2129,17 +2302,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = net_monarch_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# NETHERLANDS Willem 02 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_net_willem_02
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -2147,13 +2323,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = net_monarch_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# NETHERLANDS Willem 02 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_net_willem_02
 				}
@@ -2162,17 +2338,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = net_heir_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# NETHERLANDS Willem 03 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_net_willem_03
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -2180,13 +2359,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = net_monarch_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# NETHERLANDS Willem 03 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_net_willem_03
 				}
@@ -2195,13 +2374,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = net_heir_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# NETHERLANDS Wilhelmina 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_net_wilhelmina_01
 				}
@@ -2210,18 +2389,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = net_heir_death.3
 					days = 1
-				}	
+				}
 			}
 		}
-
 		# PERSIA Mohammad Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_per_mohammad
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -2229,17 +2410,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = per_monarch_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# PERSIA Nasir Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_per_nasir_al-din
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -2247,13 +2431,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = per_monarch_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# PERSIA Nasir Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_per_nasir_al-din
 				}
@@ -2262,17 +2446,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = per_heir_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# PERSIA Mozaffar Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_per_mozaffar_ad-din
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -2280,13 +2467,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = per_monarch_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# PERSIA Mozaffar Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_per_mozaffar_ad-din
 				}
@@ -2295,17 +2482,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = per_heir_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# PERSIA Mohammad Ali Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_per_mohammad_ali
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -2313,13 +2503,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = per_monarch_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# PERSIA Mohammad Ali Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_per_mohammad_ali
 				}
@@ -2328,17 +2518,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = per_heir_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# PERSIA Ahmad Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_per_ahmad
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -2346,13 +2539,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = per_monarch_death.5
 					days = 1
-				}	
+				}
 			}
 		}
 		# PERSIA Ahmad Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_per_ahmad
 				}
@@ -2361,13 +2554,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = per_heir_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# PERSIA Mohammad Hassan Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_per_mohammad_hassan
 				}
@@ -2376,18 +2569,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = per_heir_death.5
 					days = 1
-				}	
+				}
 			}
 		}
-
 		# PORTUGAL Maria 02 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_por_maria_02
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -2395,17 +2590,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = por_monarch_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# PORTUGAL Pedro 05 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_por_pedro_05
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -2413,13 +2611,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = por_monarch_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# PORTUGAL Pedro 05 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_por_pedro_05
 				}
@@ -2428,17 +2626,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = por_heir_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# PORTUGAL Luis 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_por_luis_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -2446,13 +2647,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = por_monarch_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# PORTUGAL Luis 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_por_luis_01
 				}
@@ -2461,17 +2662,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = por_heir_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# PORTUGAL Carlos 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_por_carlos_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -2479,13 +2683,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = por_monarch_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# PORTUGAL Carlos 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_por_carlos_01
 				}
@@ -2494,13 +2698,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = por_heir_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# PORTUGAL Luis 02 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_por_luis_02
 				}
@@ -2509,18 +2713,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = por_heir_death.4
 					days = 1
-				}	
+				}
 			}
 		}
-
 		# PRUSSIA Friedrich Wilhelm 03 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_pru_friedrich_wilhelm_03
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -2528,17 +2734,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = pru_monarch_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# PRUSSIA Friedrich Wilhelm 04 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_pru_friedrich_wilhelm_04
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -2546,32 +2755,35 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = pru_monarch_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# PRUSSIA Friedrich Wilhelm 04 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_pru_friedrich_wilhelm_04
 				}
 			}
 			owner = {
 				trigger_event = {
-					id = pru_heir_death.1
+					id = pru_heir_death.6
 					days = 1
-				}	
+				}
 			}
 		}
 		# PRUSSIA Wilhelm 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_pru_wilhelm_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -2579,13 +2791,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = pru_monarch_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# PRUSSIA Wilhelm 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_pru_wilhelm_01
 				}
@@ -2594,17 +2806,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = pru_heir_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# PRUSSIA Friedrich 03 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_pru_friedrich_03
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -2612,13 +2827,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = pru_monarch_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# PRUSSIA Friedrich 03 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_pru_friedrich_03
 				}
@@ -2627,17 +2842,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = pru_heir_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# PRUSSIA Wilhelm 02 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_pru_wilhelm_02
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -2645,13 +2863,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = pru_monarch_death.5
 					days = 1
-				}	
+				}
 			}
 		}
 		# PRUSSIA Wilhelm 02 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_pru_wilhelm_02
 				}
@@ -2660,17 +2878,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = pru_heir_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# PRUSSIA Wilhelm 03 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_pru_wilhelm_03
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -2678,13 +2899,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = pru_monarch_death.6
 					days = 1
-				}	
+				}
 			}
 		}
 		# PRUSSIA Wilhelm 03 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_pru_wilhelm_03
 				}
@@ -2693,17 +2914,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = pru_heir_death.5
 					days = 1
-				}	
+				}
 			}
 		}
 		# PRUSSIA ALTERNATE Friedrich Karl 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_pru_friedrich_karl_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -2711,13 +2935,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = pru_monarch_death.7
 					days = 1
-				}	
+				}
 			}
 		}
 		# PRUSSIA ALTERNATE Friedrich Karl 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_pru_friedrich_karl_01
 				}
@@ -2726,31 +2950,34 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = pru_heir_death.7
 					days = 1
-				}	
+				}
 			}
 		}
 		# PRUSSIA ALTERNATE Friedrich Karl 02 Dies as Ruler
 		if = {
 			limit = {
-					AND = { 
-						is_ruler = yes
-						has_template = is_pru_friedrich_karl_02
-						owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+				AND = {
+					is_ruler = yes
+					has_template = is_pru_friedrich_karl_02
+					owner = {
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
-					}
+				}
 			}
 			owner = {
 				trigger_event = {
 					id = pru_monarch_death.8
 					days = 1
-				}	
+				}
 			}
 		}
 		# PRUSSIA ALTERNATE Friedrich Karl 02 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_pru_friedrich_karl_02
 				}
@@ -2759,13 +2986,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = pru_heir_death.8
 					days = 1
-				}	
+				}
 			}
 		}
 		# PRUSSIA ALTERNATE Friedrich Leopold 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_pru_friedrich_leopold_01
 				}
@@ -2774,17 +3001,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = pru_heir_death.9
 					days = 1
-				}	
+				}
 			}
 		}
 		# PRUSSIA ALTERNATE Heinrich 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_pru_heinrich_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -2792,13 +3022,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = pru_monarch_death.9
 					days = 1
-				}	
+				}
 			}
 		}
 		# PRUSSIA ALTERNATE Heinrich 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_pru_heinrich_01
 				}
@@ -2807,17 +3037,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = pru_heir_death.10
 					days = 1
-				}	
+				}
 			}
 		}
 		# PRUSSIA ALTERNATE Waldemar 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_pru_waldemar_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -2825,13 +3058,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = pru_monarch_death.10
 					days = 1
-				}	
+				}
 			}
 		}
 		# PRUSSIA ALTERNATE Waldemar 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_pru_waldemar_01
 				}
@@ -2840,13 +3073,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = pru_heir_death.11
 					days = 1
-				}	
+				}
 			}
 		}
 		# PRUSSIA ALTERNATE Sigismund 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_pru_sigismund_01
 				}
@@ -2855,17 +3088,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = pru_heir_death.12
 					days = 1
-				}	
+				}
 			}
 		}
 		# PRUSSIA ALTERNATE Eitel Friedrich 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_pru_eitel_friedrich_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -2873,13 +3109,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = pru_monarch_death.11
 					days = 1
-				}	
+				}
 			}
 		}
 		# PRUSSIA ALTERNATE Eitel Friedrich 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_pru_eitel_friedrich_01
 				}
@@ -2888,21 +3124,24 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = pru_heir_death.13
 					days = 1
-				}	
+				}
 			}
 		}
 		# PRUSSIA ALTERNATE Adalbert 01 Dies as Ruler
 		if = {
 			limit = {
 				OR = {
-					AND = { 
+					AND = {
 						is_ruler = yes
 						has_template = is_pru_adalbert_01
 						owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+							any_scope_character = {
+								is_heir = yes
+								is_historical = yes
+							}
+						}
 					}
-					}
-					AND = { 
+					AND = {
 						is_heir = yes
 						has_template = is_pru_adalbert_01
 					}
@@ -2912,13 +3151,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = pru_monarch_death.12
 					days = 1
-				}	
+				}
 			}
 		}
 		# PRUSSIA ALTERNATE Adalbert 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_pru_adalbert_01
 				}
@@ -2927,13 +3166,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = pru_heir_death.14
 					days = 1
-				}	
+				}
 			}
 		}
 		# PRUSSIA ALTERNATE August Wilhelm 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_pru_august_wilhelm_01
 				}
@@ -2942,18 +3181,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = pru_heir_death.15
 					days = 1
-				}	
+				}
 			}
 		}
-
 		# RUSSIA Nikolai 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_rus_nikolai_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -2961,17 +3202,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = rus_monarch_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# RUSSIA Aleksandr 02 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_rus_aleksandr_02
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -2979,13 +3223,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = rus_monarch_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# RUSSIA Aleksandr 02 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_rus_aleksandr_02
 				}
@@ -2994,17 +3238,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = rus_heir_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# RUSSIA Tsesarevich Nikolai Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_rus_tsesarevich_nikolai
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -3012,13 +3259,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = rus_monarch_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# RUSSIA Tsesarevich Nikolai Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_rus_tsesarevich_nikolai
 				}
@@ -3027,17 +3274,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = rus_heir_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# RUSSIA Aleksandr 03 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_rus_aleksandr_03
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -3045,13 +3295,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = rus_monarch_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# RUSSIA Aleksandr 03 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_rus_aleksandr_03
 				}
@@ -3060,17 +3310,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = rus_heir_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# RUSSIA Nikolai 02 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_rus_nikolai_02
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -3078,13 +3331,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = rus_monarch_death.5
 					days = 1
-				}	
+				}
 			}
 		}
 		# RUSSIA Nikolai 02 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_rus_nikolai_02
 				}
@@ -3093,13 +3346,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = rus_heir_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# RUSSIA Aleksei 02 Dies as Heir 5
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_rus_aleksei_02
 				}
@@ -3108,17 +3361,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = rus_heir_death.5
 					days = 1
-				}	
+				}
 			}
 		}
 		# RUSSIA ALTERNATE Konstantin Nikolaevich Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_rus_konstantin_nikolaevich
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -3126,13 +3382,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = rus_monarch_death.7
 					days = 1
-				}	
+				}
 			}
 		}
 		# RUSSIA ALTERNATE Konstantin Nikolaevich Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_rus_konstantin_nikolaevich
 				}
@@ -3141,17 +3397,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = rus_heir_death.6
 					days = 1
-				}	
+				}
 			}
 		}
 		# RUSSIA ALTERNATE Konstantin Konstantinovich Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_rus_konstantin_konstantinovich
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -3159,13 +3418,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = rus_monarch_death.8
 					days = 1
-				}	
+				}
 			}
 		}
 		# RUSSIA ALTERNATE Konstantin Konstantinovich Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_rus_konstantin_konstantinovich
 				}
@@ -3174,13 +3433,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = rus_heir_death.7
 					days = 1
-				}	
+				}
 			}
 		}
 		# RUSSIA ALTERNATE Ivan Konstantinovich Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_rus_ivan_konstantinovich
 				}
@@ -3189,13 +3448,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = rus_heir_death.9
 					days = 1
-				}	
+				}
 			}
 		}
 		# RUSSIA ALTERNATE Vsevolod Ivanovich Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_rus_vsevolod_ivanovich
 				}
@@ -3204,17 +3463,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = rus_heir_death.11
 					days = 1
-				}	
+				}
 			}
 		}
 		# RUSSIA ALTERNATE Vladimir Aleksandrovich Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_rus_vladimir_aleksandrovich
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -3222,13 +3484,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = rus_monarch_death.13
 					days = 1
-				}	
+				}
 			}
 		}
 		# RUSSIA ALTERNATE Vladimir Aleksandrovich Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_rus_vladimir_aleksandrovich
 				}
@@ -3237,13 +3499,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = rus_heir_death.12
 					days = 1
-				}	
+				}
 			}
 		}
 		# RUSSIA ALTERNATE Kirill Vladimirovich Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_rus_kirill_vladimirovich
 				}
@@ -3252,13 +3514,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = rus_heir_death.14
 					days = 1
-				}	
+				}
 			}
 		}
 		# RUSSIA ALTERNATE Vladimir Kirillovich Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_rus_vladimir_kirillovich
 				}
@@ -3267,17 +3529,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = rus_heir_death.15
 					days = 1
-				}	
+				}
 			}
 		}
 		# RUSSIA ALTERNATE Boris Vladimirovich Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_rus_boris_vladimirovich
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -3285,13 +3550,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = rus_monarch_death.17
 					days = 1
-				}	
+				}
 			}
 		}
 		# RUSSIA ALTERNATE Boris Vladimirovich Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_rus_boris_vladimirovich
 				}
@@ -3300,13 +3565,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = rus_heir_death.16
 					days = 1
-				}	
+				}
 			}
 		}
 		# RUSSIA ALTERNATE Andrei Vladimirovich Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_rus_andrei_vladimirovich
 				}
@@ -3315,17 +3580,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = rus_heir_death.17
 					days = 1
-				}	
+				}
 			}
 		}
 		# RUSSIA ALTERNATE Georgy Aleksandrovich Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_rus_georgy_aleksandrovich
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -3333,13 +3601,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = rus_monarch_death.20
 					days = 1
-				}	
+				}
 			}
 		}
 		# RUSSIA ALTERNATE Georgy Aleksandrovich Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_rus_georgy_aleksandrovich
 				}
@@ -3348,13 +3616,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = rus_heir_death.19
 					days = 1
-				}	
+				}
 			}
 		}
 		# RUSSIA ALTERNATE Mikhail Aleksandrovich Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_rus_mikhail_aleksandrovich
 				}
@@ -3363,18 +3631,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = rus_heir_death.20
 					days = 1
-				}	
+				}
 			}
 		}
-
 		# SARDINIA Carlo Alberto 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_sar_carlo_alberto_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -3382,17 +3652,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = sar_monarch_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# SARDINIA Vittorio Emanuele 02 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_sar_vittorio_emanuele_02
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -3400,13 +3673,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = sar_monarch_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# SARDINIA Vittorio Emanuele 02 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_sar_vittorio_emanuele_02
 				}
@@ -3415,17 +3688,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = sar_heir_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# SARDINIA Umberto 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_sar_umberto_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -3433,13 +3709,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = sar_monarch_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# SARDINIA Umberto 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_sar_umberto_01
 				}
@@ -3448,13 +3724,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = sar_heir_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# SARDINIA Vittorio Emanuele 03 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_sar_vittorio_emanuele_03
 				}
@@ -3463,18 +3739,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = sar_heir_death.3
 					days = 1
-				}	
+				}
 			}
 		}
-
 		# SAXONY Anton 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_sax_anton_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -3482,17 +3760,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = sax_monarch_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# SAXONY Friedrich August 02 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_sax_friedrich_august_02
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -3500,13 +3781,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = sax_monarch_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# SAXONY Friedrich August 02 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_sax_friedrich_august_02
 				}
@@ -3515,17 +3796,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = sax_heir_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# SAXONY Johann 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_sax_johann_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -3533,13 +3817,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = sax_monarch_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# SAXONY Johann 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_sax_johann_01
 				}
@@ -3548,17 +3832,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = sax_heir_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# SAXONY Albert 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_sax_albert_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -3566,13 +3853,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = sax_monarch_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# SAXONY Albert 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_sax_albert_01
 				}
@@ -3581,17 +3868,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = sax_heir_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# SAXONY Georg 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_sax_georg_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -3599,13 +3889,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = sax_monarch_death.5
 					days = 1
-				}	
+				}
 			}
 		}
 		# SAXONY Georg 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_sax_georg_01
 				}
@@ -3614,13 +3904,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = sax_heir_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# SAXONY Friedrich August 03 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_sax_friedrich_august_03
 				}
@@ -3629,36 +3919,41 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = sax_heir_death.5
 					days = 1
-				}	
+				}
 			}
 		}
-
 		# SICILY Ferdinando 02 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_sic_ferdinando_02
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
-					} 
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
+					}
 				}
 			}
 			owner = {
 				trigger_event = {
 					id = sic_monarch_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# SICILY Francesco 02 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_sic_francesco_02
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -3666,32 +3961,35 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = sic_monarch_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# SICILY Francsesco 02 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
-					has_template = is_sic_francesco_02 
+					has_template = is_sic_francesco_02
 				}
 			}
 			owner = {
 				trigger_event = {
 					id = sic_heir_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# SICILY Alfonso 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_sic_alfonso_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -3699,13 +3997,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = sic_monarch_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# SICILY Alfonso 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_sic_alfonso_01
 				}
@@ -3714,17 +4012,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = sic_heir_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# SICILY Ferdinando 03 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_sic_ferdinando_03
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -3732,13 +4033,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = sic_monarch_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# SICILY Ferdinando 03 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_sic_ferdinando_03
 				}
@@ -3747,13 +4048,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = sic_heir_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# SICILY Carlo 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_sic_carlo_01
 				}
@@ -3762,18 +4063,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = sic_heir_death.4
 					days = 1
-				}	
+				}
 			}
 		}
-
 		# SPAIN Isabel 02 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_spa_isabel_02
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -3781,17 +4084,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = spa_monarch_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# SPAIN Alfonso 12 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_spa_alfonso_12
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -3799,13 +4105,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = spa_monarch_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# SPAIN Alfonso 12 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_spa_alfonso_12
 				}
@@ -3814,17 +4120,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = spa_heir_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# SPAIN Alfonso 13 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_spa_alfonso_13
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -3832,13 +4141,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = spa_monarch_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# SPAIN Alfonso 13 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_spa_alfonso_13
 				}
@@ -3847,17 +4156,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = spa_heir_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# SPAIN Alfonso 14 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_spa_alfonso_14
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -3865,13 +4177,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = spa_monarch_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# SPAIN Alfonso 14 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_spa_alfonso_14
 				}
@@ -3880,13 +4192,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = spa_heir_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# SPAIN Jaime 03 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_spa_jaime_03
 				}
@@ -3895,18 +4207,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = spa_heir_death.4
 					days = 1
-				}	
+				}
 			}
 		}
-
 		# SWEDEN Karl 14 Johan Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_swe_karl_14_johan
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -3914,17 +4228,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = swe_monarch_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# SWEDEN Oskar 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_swe_oskar_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -3932,13 +4249,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = swe_monarch_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# SWEDEN Oskar 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_swe_oskar_01
 				}
@@ -3947,17 +4264,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = swe_heir_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# SWEDEN Karl 15 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_swe_karl_15
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -3965,13 +4285,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = swe_monarch_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# SWEDEN Karl 15 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_swe_karl_15
 				}
@@ -3980,17 +4300,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = swe_heir_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# SWEDEN Oskar 02 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_swe_oskar_02
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -3998,13 +4321,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = swe_monarch_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# SWEDEN Oskar 02 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_swe_oskar_02
 				}
@@ -4013,17 +4336,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = swe_heir_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# SWEDEN Gustaf 05 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_swe_gustaf_05
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -4031,13 +4357,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = swe_monarch_death.5
 					days = 1
-				}	
+				}
 			}
 		}
 		# SWEDEN Gustaf 05 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_swe_gustaf_05
 				}
@@ -4046,13 +4372,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = swe_heir_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# SWEDEN Gustaf 06 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_swe_gustaf_06
 				}
@@ -4061,18 +4387,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = swe_heir_death.5
 					days = 1
-				}	
+				}
 			}
 		}
-
 		# TURKEY Mahmut 02 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_tur_mahmut_02
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -4080,17 +4408,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = tur_monarch_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# TURKEY Abdulmecid 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_tur_abdulmecid_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -4098,13 +4429,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = tur_monarch_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# TURKEY Abdulmecid 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_tur_abdulmecid_01
 				}
@@ -4113,17 +4444,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = tur_heir_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# TURKEY Murad 05 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_tur_murad_05
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -4131,13 +4465,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = tur_monarch_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# TURKEY Murad 05 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_tur_murad_05
 				}
@@ -4146,17 +4480,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = tur_heir_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# TURKEY Mehmed Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_tur_mehmed
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -4164,13 +4501,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = tur_monarch_death.4
 					days = 1
-				}	
+				}
 			}
 		}
 		# TURKEY Mehmed Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_tur_mehmed
 				}
@@ -4179,13 +4516,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = tur_heir_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# TURKEY Ahmed 04 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_tur_ahmed_04
 				}
@@ -4194,18 +4531,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = tur_heir_death.4
 					days = 1
-				}	
+				}
 			}
 		}
-
 		# WURTTEMBERG Wilhelm 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_wur_wilhelm_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -4213,17 +4552,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = wur_monarch_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# WURTTEMBERG Karl 01 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_wur_karl_01
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -4231,13 +4573,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = wur_monarch_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# WURTTEMBERG Karl 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_wur_karl_01
 				}
@@ -4246,17 +4588,20 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = wur_heir_death.1
 					days = 1
-				}	
+				}
 			}
 		}
 		# WURTTEMBERG Wilhelm_02 Dies as Ruler
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_ruler = yes
 					has_template = is_wur_wilhelm_02
 					owner = {
-						any_scope_character = { is_heir = yes is_historical = yes }
+						any_scope_character = {
+							is_heir = yes
+							is_historical = yes
+						}
 					}
 				}
 			}
@@ -4264,13 +4609,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = wur_monarch_death.3
 					days = 1
-				}	
+				}
 			}
 		}
 		# WURTTEMBERG Wilhelm 02 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_wur_wilhelm_02
 				}
@@ -4279,13 +4624,13 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = wur_heir_death.2
 					days = 1
-				}	
+				}
 			}
 		}
 		# WURTTEMBERG Albrecht 01 Dies as Heir
 		if = {
 			limit = {
-				AND = { 
+				AND = {
 					is_heir = yes
 					has_template = is_wur_albrecht_01
 				}
@@ -4294,23 +4639,25 @@ RS_character_death_counter = {
 				trigger_event = {
 					id = wur_heir_death.3
 					days = 1
-				}	
+				}
 			}
 		}
-
 	}
 }
 
 RS_historical_deaths = {
 	effect = {
-
 		# Canon Death for Ferdinand Phillippe
 		if = {
 			limit = {
 				ROOT = c:FRA
 				OR = {
-					ruler ?= { has_template = FRA_ferdinand_philippe }
-					heir ?= { has_template = FRA_ferdinand_philippe }
+					ruler ?= {
+						has_template = FRA_ferdinand_philippe
+					}
+					heir ?= {
+						has_template = FRA_ferdinand_philippe
+					}
 				}
 			}
 			trigger_event = {
@@ -4318,14 +4665,17 @@ RS_historical_deaths = {
 				days = 1
 			}
 		}
-
 		# Canon Death for Tsesarevich Nikolai
 		if = {
 			limit = {
 				ROOT = c:RUS
 				OR = {
-					ruler ?= { has_template = is_rus_tsesarevich_nikolai }
-					heir ?= { has_template = is_rus_tsesarevich_nikolai }
+					ruler ?= {
+						has_template = is_rus_tsesarevich_nikolai
+					}
+					heir ?= {
+						has_template = is_rus_tsesarevich_nikolai
+					}
 				}
 			}
 			trigger_event = {
@@ -4333,14 +4683,17 @@ RS_historical_deaths = {
 				days = 1
 			}
 		}
-
 		# Canon Death for Rudolf von Habsburg
 		if = {
 			limit = {
 				ROOT = c:AUS
 				OR = {
-					ruler ?= { has_template = is_aus_rudolf_01 }
-					heir ?= { has_template = is_aus_rudolf_01 }
+					ruler ?= {
+						has_template = is_aus_rudolf_01
+					}
+					heir ?= {
+						has_template = is_aus_rudolf_01
+					}
 				}
 			}
 			trigger_event = {
@@ -4348,14 +4701,17 @@ RS_historical_deaths = {
 				days = 1
 			}
 		}
-
 		# Canon Death for Albert 01
 		if = {
 			limit = {
 				ROOT = c:GBR
 				OR = {
-					ruler ?= { has_template = is_gbr_albert_01 }
-					heir ?= { has_template = is_gbr_albert_01 }
+					ruler ?= {
+						has_template = is_gbr_albert_01
+					}
+					heir ?= {
+						has_template = is_gbr_albert_01
+					}
 				}
 			}
 			trigger_event = {
@@ -4363,14 +4719,17 @@ RS_historical_deaths = {
 				days = 1
 			}
 		}
-
 		# Canon Death for Maria 02
 		if = {
 			limit = {
 				ROOT = c:POR
 				OR = {
-					ruler ?= { has_template = is_por_maria_02 }
-					heir ?= { has_template = is_por_maria_02 }
+					ruler ?= {
+						has_template = is_por_maria_02
+					}
+					heir ?= {
+						has_template = is_por_maria_02
+					}
 				}
 			}
 			trigger_event = {
@@ -4378,14 +4737,17 @@ RS_historical_deaths = {
 				days = 1
 			}
 		}
-
 		# Canon Death for Pedro 05
 		if = {
 			limit = {
 				ROOT = c:POR
 				OR = {
-					ruler ?= { has_template = is_por_pedro_05 }
-					heir ?= { has_template = is_por_pedro_05 }
+					ruler ?= {
+						has_template = is_por_pedro_05
+					}
+					heir ?= {
+						has_template = is_por_pedro_05
+					}
 				}
 			}
 			trigger_event = {
@@ -4457,6 +4819,8 @@ RS_historical_births = {
 		pru_monarch_birth.5
 		pru_monarch_birth.6
 		pru_monarch_birth.7
+		pru_monarch_birth.8
+		pru_monarch_birth.9
 		rus_monarch_birth.1
 		rus_monarch_birth.2
 		rus_monarch_birth.3
@@ -4491,7 +4855,6 @@ RS_historical_births = {
 }
 
 #Implementing on action
-
 on_character_death = {
 	on_actions = {
 		RS_character_death_counter

@@ -2,20 +2,14 @@
 # By fully enabling ship upgrades the AI better handles fleet modernisation.
 ### Vanilla overwrite
 REPLACE:combat_unit_type_carrier = {
-	group = combat_unit_group_support_ship
-	combat_unit_image = {
-		texture = "gfx/unit_illustrations/support_ships_carrier.dds"
-	}
+	group = combat_unit_group_light_ship
 	can_build = {
 		always = no
 	}
 }
 
 REPLACE:combat_unit_type_monitor = {
-	group = combat_unit_group_light_ship
-	combat_unit_image = {
-		texture = "gfx/unit_illustrations/capital_ships_monitor.dds"
-	}
+	group = combat_unit_group_support_ship
 	can_build = {
 		always = no
 	}
@@ -35,6 +29,7 @@ combat_unit_type_caravel = {
 		unit_navy_armor_add = 0.5
 		unit_navy_pen_add = 0.5
 		unit_convoy_defense_mult = 0.5
+		unit_is_wind_dependent_bool = yes
 		unit_blockade_add = 3
 	}
 	can_build = {
@@ -71,6 +66,7 @@ REPLACE:combat_unit_type_frigate = {
 		unit_navy_armor_add = 0.5
 		unit_navy_pen_add = 2
 		unit_convoy_defense_mult = 1
+		unit_is_wind_dependent_bool = yes
 		unit_blockade_add = 8
 	}
 	unlocking_technologies = {
@@ -230,6 +226,7 @@ REPLACE:combat_unit_type_man_o_war = {
 		unit_morale_loss_add = 8
 		unit_navy_armor_add = 1
 		unit_navy_pen_add = 2
+		unit_is_wind_dependent_bool = yes
 		unit_blockade_add = 15
 	}
 	unlocking_technologies = {
@@ -422,6 +419,7 @@ REPLACE:combat_unit_type_torpedo_boat = {
 		unit_navy_armor_add = 1
 		unit_navy_pen_add = 3
 		unit_convoy_raiding_mult = 1
+		unit_is_equipped_with_torpedoes_bool = yes
 		unit_blockade_add = 22
 	}
 	unlocking_technologies = {
@@ -439,30 +437,31 @@ REPLACE:combat_unit_type_torpedo_boat = {
 
 ### Support Ship group
 REPLACE:combat_unit_type_submarine = {
-	group = combat_unit_group_support_ship
+	group = combat_unit_group_raiding_ship
 	max_manpower = 1000
 	upkeep_modifier = {
 		goods_input_ironclads_add = 2
-		goods_input_artillery_add = 2
 		goods_input_ammunition_add = 2
 		goods_input_radios_add = 1
 		goods_input_oil_add = 0.5		# GGGG
 	}
 	battle_modifier = {
-		unit_offense_add = 60
-		unit_defense_add = 20
-		unit_blockade_add = 10
-		unit_morale_loss_add = 8
-		unit_convoy_raiding_mult = 1
-	}
-	formation_modifier = {
-		military_formation_movement_speed_mult = 0.2
+		unit_offense_add = 45
+		unit_defense_add = 45
+		unit_morale_loss_add = 4
+		unit_navy_armor_add = 2
+		unit_navy_pen_add = 6
+		unit_convoy_raiding_mult = 1.5
+		unit_is_equipped_with_torpedoes_bool = yes
+		unit_blockade_add = 45
 	}
 	unlocking_technologies = {
 		submarine
 	}
 	combat_unit_image = {
 		texture = "gfx/unit_illustrations/support_ships_submarine.dds"
+	}
+	can_build = {
 	}
 }
 
@@ -483,6 +482,7 @@ combat_unit_type_experimental_carrier = {
 		unit_morale_loss_add = 4
 		unit_navy_armor_add = 6
 		unit_navy_pen_add = 8
+		unit_provides_air_support_bool = yes
 		unit_blockade_add = 60
 	}
 	unlocking_technologies = {
