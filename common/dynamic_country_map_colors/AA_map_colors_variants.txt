@@ -22,7 +22,7 @@ REPLACE:unpleasant_germany = {
 	}
 }
 
-REPLACE_OR_CREATE:usa_commie = {
+usa_commie = {
 	color = "usa_commie"
 	possible = {
 		exists = c:USA
@@ -31,17 +31,16 @@ REPLACE_OR_CREATE:usa_commie = {
 	}
 }
 
-REPLACE_OR_CREATE:indochina = {
+indochina = {
 	color = "blue_indochina"
 	possible = {
 		has_variable = AA_indochina_var
 	}
 }
 
-REPLACE_OR_CREATE:greater_persia = {
+greater_persia = {
 	color = "purple_persia"
 	possible = {
 		has_variable = AA_persia_var
 	}
 }
-
