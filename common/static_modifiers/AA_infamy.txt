@@ -1,10 +1,6 @@
 ﻿# Infamy modifiers, applied from current infamy level
-TRY_INJECT:infamy_reputable = {
-	state_trade_advantage_mult = -0.1
-}
-
 TRY_INJECT:infamy_infamous = {
-	state_trade_advantage_mult = -0.2
+	state_trade_advantage_mult = -0.15
 }
 
 TRY_INJECT:infamy_notorious = {
