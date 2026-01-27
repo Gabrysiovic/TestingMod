@@ -72,6 +72,7 @@ REPLACE_OR_CREATE:power_of_the_purse = {
 	category = military
 	
 	modifier = {
+	state_building_naval_base_max_level_add = 10
 	}
 	
 	unlocking_technologies = {	
@@ -95,7 +96,9 @@ REPLACE_OR_CREATE:jeune_ecole = {
 	texture = "gfx/interface/icons/invention_icons/jeune_ecole.dds"
 	category = military
 	
-	modifier = {}
+	modifier = {
+	state_building_naval_base_max_level_add = 10
+	}
 	
 	unlocking_technologies = {	
 		power_of_the_purse
@@ -232,7 +235,9 @@ REPLACE_OR_CREATE:sea_lane_strategies = {
 	texture = "gfx/interface/icons/invention_icons/sea_lane_strategies.dds"
 	category = military
 	
-	modifier = {}
+	modifier = {
+	state_building_naval_base_max_level_add = 10
+	}
 	
 	unlocking_technologies = {	
 		jeune_ecole
@@ -292,39 +297,8 @@ REPLACE_OR_CREATE:carrier_tech = {
 	}
 }
 
-REPLACE_OR_CREATE:fleet_carrier_tech = {
-	# Unlocks Fleet Carriers PM in Naval Bases
-	era = era_5
-	texture = "gfx/interface/icons/invention_icons/fleet_carrier_tech.dds"
-	category = military
-	
-	unlocking_technologies = {	
-		carrier_tech
-	}
 
-	ai_weight = {
-		value = 0
-	}
 
-	can_research = no
-}
-
-REPLACE_OR_CREATE:armored_carrier_tech = {
-	# Unlocks Fleet Carriers PM in Naval Bases
-	era = era_5
-	texture = "gfx/interface/icons/invention_icons/armored_carrier_tech.dds"
-	category = military
-	
-	unlocking_technologies = {	
-		carrier_tech
-	}
-
-	ai_weight = {
-		value = 0
-	}
-
-	can_research = no
-}
 
 REPLACE_OR_CREATE:battlefleet_tactics = {
 	# Unlocks Battlefleet Tactics PM in Naval Bases
