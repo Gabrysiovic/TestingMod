@@ -1,0 +1,98 @@
+﻿AA_break_truce = {
+	### By Oaken: Last Updated 21/12/2025
+	groups = {
+		general
+	}
+	show_confirmation_box = yes
+	texture = "gfx/interface/icons/diplomatic_action_icons/AA_break_truce.dds"
+	potential = {
+		is_diplomatic_play_committed_participant = no
+		is_revolutionary = no
+		has_truce_with = scope:target_country
+		aggressive_diplomatic_plays_permitted = yes
+		NOT = {
+			scope:target_country = {
+				c:CIR ?= this
+			}
+		}
+		NOT = {
+			scope:target_country = {
+				c:CHC ?= this
+			}
+		}
+	}
+	possible = {
+		# Pariahs are not allowed to break truce
+		# 5 years minimum, 10 years maximum if (the initiator has less than 25 infamy) or (50 infamy if it is not a great power)
+		AND = {
+			NOT = {
+				custom_tooltip = {
+					text = not_pariah_custom_tooltip
+					infamy >= infamy_threshold:pariah
+				}
+			}
+			NOT = {
+				custom_tooltip = {
+					text = broken_truce_in_5_years_custom_tooltip
+					has_variable = broken_truce_5_years
+				}
+			}
+			OR = {
+				NOT = {
+					custom_tooltip = {
+						text = broken_truce_in_10_years_custom_tooltip
+						has_modifier = broken_truce_10_years
+					}
+				}
+				custom_tooltip = {
+					text = broken_truce_in_10_years_great_power_custom_tooltip
+					infamy <= 25
+				}
+				AND = {
+					custom_tooltip = {
+						text = broken_truce_in_10_years_not_great_power_custom_tooltip
+						infamy <= 50
+						country_rank < rank_value:great_power
+					}
+				}
+			}
+		}
+	}
+	accept_effect = {
+		change_infamy = {
+			value = 0
+			add = {
+				value = scope:target_country.total_population
+				divide = 100000
+				max = 50
+			}
+		}
+		hidden_effect = {
+			end_truce = scope:target_country
+		}
+		if = {
+			limit = {
+				has_modifier = broken_truce_10_years
+			}
+			remove_modifier = broken_truce_10_years
+		}
+		set_variable = {
+			name = broken_truce_5_years
+			years = 5
+		}
+		add_modifier = {
+			name = broken_truce_10_years
+			years = 10
+		}
+		custom_tooltip = {
+			text = AA_break_truce_custom_tooltip
+			subject = scope:target_country
+		}
+	}
+	ai = {
+		will_propose = {
+			always = no
+		}
+	}
+	is_hostile = yes
+}

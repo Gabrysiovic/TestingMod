@@ -13,6 +13,7 @@ goods_output_tts_capital_ships_add = {
 
 # Armor
 unit_navy_armor_add = {
+	script_only = yes
 	color = good
 	percent = no
 	decimals = 0
@@ -22,6 +23,7 @@ unit_navy_armor_add = {
 }
 
 unit_navy_pen_add = {
+	script_only = yes
 	color = good
 	percent = no
 	decimals = 0

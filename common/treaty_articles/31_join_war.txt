@@ -1,34 +1,31 @@
 ﻿### From Join Ongoing Wars mod (Added by Oaken): Last Updated  26/1/2025
 join_war = {
-    kind = directed
-    cost = 0
-
+	kind = directed
+	cost = 0
 	icon = "gfx/interface/icons/lens_toolbar_icons/intervene_in_war.dds"
-
 	flags = {
 		giftable
 		friendly
 	}
-
 	usage_limit = once_per_side
-
 	maintenance_paid_by = source_country
-
-    unlocked_by_technologies = {
-        
-    }
-
-	visible = {
-		NOT = { is_country_type = decentralized } is_revolutionary = no is_secessionist = no
-		aggressive_diplomatic_plays_permitted = yes
-		scope:other_country = { is_at_war = yes }
+	unlocked_by_technologies = {
 	}
-
+	visible = {
+		NOT = {
+			is_country_type = decentralized
+		}
+		is_revolutionary = no
+		is_secessionist = no
+		aggressive_diplomatic_plays_permitted = yes
+		scope:other_country = {
+			is_at_war = yes
+		}
+	}
 	possible = {
-		
 		#TARGET is at war, is the war leader and not at war with THIS
 		scope:other_country = {
-			OR = { 
+			OR = {
 				aggressive_diplomatic_plays_permitted = yes
 				is_subject_of = ROOT
 			}
@@ -39,57 +36,57 @@ join_war = {
 					attacker_warleader = {
 						OR = {
 							this = scope:other_country
-							NOT = {has_truce_with = ROOT}
+							NOT = {
+								has_truce_with = ROOT
+							}
 						}
 					}
 					defender_warleader = {
 						OR = {
 							this = scope:other_country
-							NOT = {has_truce_with = ROOT}
+							NOT = {
+								has_truce_with = ROOT
+							}
 						}
 					}
-					NOT = { is_war_participant = ROOT }
+					NOT = {
+						is_war_participant = ROOT
+					}
 				}
 			}
 		}
-
 		scope:other_country = {
 			custom_tooltip = {
 				text = intervene_in_war_offensive_relations
 				OR = {
 					scope:other_country.relations:root >= relations_threshold:cordial
 					# THIS has good relations with TARGET
-					any_scope_war = { 
+					any_scope_war = {
 						NOT = {
 							attacker_warleader = scope:other_country
 						}
 					}
 				}
 			}
-
 			custom_tooltip = {
 				text = DIPLO_ACTION_RELATIONS_POOR_OR_LESS_NOT
 				scope:other_country.relations:root > relations_threshold:poor
 			}
 		}
-
-		
 		#Not already part of the other country's wars
-		NOR = { 
-			is_in_war_together = scope:other_country 
-			has_war_with = scope:other_country 
+		NOR = {
+			is_in_war_together = scope:other_country
+			has_war_with = scope:other_country
 		}
-		
 	}
-
-    can_ratify = {
-        custom_tooltip = {
-            text = DUPLICATE_ARTICLE_SAME_INPUTS_TREATY
-            NOT = {
-                scope:source_country = {
-                    any_scope_treaty = {
+	can_ratify = {
+		custom_tooltip = {
+			text = DUPLICATE_ARTICLE_SAME_INPUTS_TREATY
+			NOT = {
+				scope:source_country = {
+					any_scope_treaty = {
 						binds = scope:target_country
-                        hidden_trigger = {
+						hidden_trigger = {
 							OR = {
 								scope:treaty = {
 									is_renegotiation = no
@@ -101,13 +98,12 @@ join_war = {
 							has_type = join_war
 							source_country = scope:source_country
 						}
-                    }
-                }
-            }
-        }
-    }
-
-    on_entry_into_force = {
+					}
+				}
+			}
+		}
+	}
+	on_entry_into_force = {
 		scope:article_options = {
 			target_country = {
 				save_scope_as = target
@@ -117,44 +113,49 @@ join_war = {
 			}
 			scope:actor ?= {
 				#Lobby
-				add_lobby_appeasement_from_diplomacy_bidirectional = { 
+				add_lobby_appeasement_from_diplomacy_bidirectional = {
 					FIRST = scope:actor
 					SECOND = scope:target
 					PRO_AMOUNT = 5
 					ANTI_AMOUNT = -5
 					FACTOR = appeasement_defensive_pact_formed
 				}
-				
 				#TARGET gains relations with subject
-				scope:target ?= { 
-					change_relations = { country = scope:actor value = 100 } 
+				scope:target ?= {
+					change_relations = {
+						country = scope:actor
+						value = 100
+					}
 					save_scope_as = target_country_scope
 				}
-				
 				#THIS gains infamy from joining an Aggressive War
 				if = {
 					limit = {
-						any_diplomatic_play = { 
+						any_diplomatic_play = {
 							is_war = yes
-							is_diplomatic_play_committed_participant = scope:target
-							NOT = { is_diplomatic_play_participant_with = scope:actor }
+							root = {
+								is_diplomatic_play_committed_participant = scope:target
+								NOT = {
+									is_diplomatic_play_participant_with = scope:actor
+								}
+							}
 							initiator_is = scope:target
 						}
 					}
 					change_infamy = 10
 				}
-				
 				#THIS joins TARGET's wars
 				custom_tooltip = {
 					text = intervene_in_war.tt
-				
 					#THIS joins the TARGET's war
 					every_diplomatic_play = {
 						limit = {
 							is_war = yes
 							scope:target = {
 								is_diplomatic_play_committed_participant = yes
-								NOT = { is_diplomatic_play_participant_with = scope:actor }
+								NOT = {
+									is_diplomatic_play_participant_with = scope:actor
+								}
 							}
 						}
 						if = {
@@ -174,25 +175,24 @@ join_war = {
 							}
 						}
 					}
-				
 				}
 			}
 		}
 	}
-
-	on_withdrawal = {}
+	on_withdrawal = {
+	}
 	on_break = {
 		scope:withdrawing_country = {
-			change_relations = { country = scope:non_withdrawing_country value = -10 }
+			change_relations = {
+				country = scope:non_withdrawing_country
+				value = -10
+			}
 		}
 	}
-
 	ai = {
-
 		treaty_categories = {
 			military
 		}
-
 		evaluation_chance = {
 			value = 0
 			add = {
@@ -200,22 +200,20 @@ join_war = {
 				multiply = 0.025
 			}
 		}
-
 		article_ai_usage = {
 			request
 		}
-
 		inherent_accept_score = {
 			value = 0
-
 			# We are doing this to be able to reuse loc across treaties and diplomatic actions
 			save_temporary_scope_as = target
 			scope:other_country = {
 				save_temporary_scope_as = actor
 			}
-
 			if = {
-				limit = { has_subject_relation_with = scope:other_country }
+				limit = {
+					has_subject_relation_with = scope:other_country
+				}
 				add = {
 					desc = "DIPLOMATIC_ACCEPTANCE_BASE_ADDITIONAL"
 					value = -50
@@ -227,7 +225,6 @@ join_war = {
 					value = -100
 				}
 			}
-
 			if = {
 				limit = {
 					has_strategic_adjacency = scope:other_country
@@ -237,7 +234,6 @@ join_war = {
 					value = 10
 				}
 			}
-
 			if = {
 				limit = {
 					has_strategy = ai_strategy_armed_isolationism
@@ -247,7 +243,6 @@ join_war = {
 					add = -25
 				}
 			}
-
 			add = {
 				desc = "DIPLOMATIC_ACCEPTANCE_ARMY_STRENGTH"
 				value = "scope:other_country.ai_army_comparison(root)"
@@ -256,7 +251,6 @@ join_war = {
 				min = -200
 				max = 50
 			}
-
 			add = {
 				desc = "DIPLOMATIC_ACCEPTANCE_ATTITUDE"
 				if = {
@@ -316,7 +310,6 @@ join_war = {
 					value = -50
 				}
 			}
-
 			if = {
 				limit = {
 					"num_alliances_and_defensive_pacts_with_rivals(scope:other_country)" > 0
@@ -327,7 +320,6 @@ join_war = {
 					multiply = -15
 				}
 			}
-
 			if = {
 				limit = {
 					"num_alliances_and_defensive_pacts_with_allies(scope:other_country)" > 0
@@ -338,7 +330,6 @@ join_war = {
 					multiply = 10
 				}
 			}
-
 			if = {
 				limit = {
 					"num_shared_rivals(scope:other_country)" > 0
@@ -350,7 +341,6 @@ join_war = {
 					max = 30
 				}
 			}
-
 			if = {
 				limit = {
 					NOT = {
@@ -375,7 +365,7 @@ join_war = {
 							limit = {
 								any_scope_article = {
 									has_type = defensive_pact
-						 		}
+								}
 							}
 							add = 1
 						}
@@ -383,11 +373,10 @@ join_war = {
 					multiply = -15
 				}
 			}
-
 			if = {
 				limit = {
 					exists = power_bloc
-					exists = scope:other_country.power_bloc			
+					exists = scope:other_country.power_bloc
 				}
 				if = {
 					limit = {
@@ -401,7 +390,9 @@ join_war = {
 				else_if = {
 					limit = {
 						is_power_bloc_leader = no
-						scope:other_country = { is_power_bloc_leader = no }							
+						scope:other_country = {
+							is_power_bloc_leader = no
+						}
 					}
 					add = {
 						desc = "DIPLOMATIC_ACCEPTANCE_DIFFERENT_POWER_BLOC"
@@ -409,10 +400,11 @@ join_war = {
 					}
 				}
 			}
-
 			if = {
 				limit = {
-					NOT = { exists = scope:is_treaty_active }
+					NOT = {
+						exists = scope:is_treaty_active
+					}
 					exists = scope:treaty
 					scope:treaty.binding_period >= 1825
 				}
@@ -425,14 +417,15 @@ join_war = {
 				}
 			}
 		}
-
 		contextual_accept_score = {
 			if = {
 				limit = {
 					scope:treaty ?= {
 						NOT = {
 							any_scope_article_option = {
-								NOT = { has_type = defensive_pact }
+								NOT = {
+									has_type = defensive_pact
+								}
 							}
 						}
 						any_scope_article_option = {
@@ -452,7 +445,6 @@ join_war = {
 						value = 50
 					}
 				}
-
 				if = {
 					limit = {
 						scope:other_country = {
@@ -479,7 +471,6 @@ join_war = {
 						value = 10
 					}
 				}
-
 				if = {
 					limit = {
 						scope:other_country = {
@@ -494,7 +485,5 @@ join_war = {
 				}
 			}
 		}
-		
 	}
-	
 }

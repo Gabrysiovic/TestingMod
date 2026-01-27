@@ -6,7 +6,7 @@
 			}
 			add = {
 				value = flotilla_pen_value
-				multiply = current_manpower
+				multiply = this.manpower
 			}
 		}
 	}
@@ -16,7 +16,7 @@
 				limit = {
 					owner = scope:character.owner
 				}
-				add = current_manpower
+				add = this.manpower
 			}
 		}
 		min = 1
@@ -31,7 +31,7 @@ enemy_side_armor = {
 			}
 			add = {
 				value = flotilla_armor_value
-				multiply = current_manpower
+				multiply = this.manpower
 			}
 		}
 	}
@@ -41,7 +41,7 @@ enemy_side_armor = {
 				limit = {
 					owner = scope:character.opposing_commander.owner
 				}
-				add = current_manpower
+				add = this.manpower
 			}
 		}
 		min = 1
@@ -52,7 +52,7 @@ formation_penetration = {
 	every_combat_unit = {
 		add = {
 			add = flotilla_pen_value
-			multiply = current_manpower
+			multiply = this.manpower
 		}
 	}
 	if = {
@@ -64,7 +64,7 @@ formation_penetration = {
 		}
 		divide = {
 			every_combat_unit = {
-				add = current_manpower
+				add = this.manpower
 			}
 		}
 	}
@@ -77,7 +77,7 @@ formation_armor = {
 	every_combat_unit = {
 		add = {
 			add = flotilla_armor_value
-			multiply = current_manpower
+			multiply = this.manpower
 		}
 	}
 	if = {
@@ -89,7 +89,7 @@ formation_armor = {
 		}
 		divide = {
 			every_combat_unit = {
-				add = current_manpower
+				add = this.manpower
 			}
 		}
 	}

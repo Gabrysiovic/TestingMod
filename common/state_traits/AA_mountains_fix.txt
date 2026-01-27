@@ -1,32 +1,29 @@
-﻿TRY_REPLACE:state_trait_sierra_madre_occidental = {
+﻿REPLACE:state_trait_sierra_madre_occidental = {
 	icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
-
 	modifier = {
 		state_construction_mult = -0.05
 		state_infrastructure_mult = -0.05
 	}
 }
 
-TRY_REPLACE:state_trait_sierra_madre_oriental = {
+REPLACE:state_trait_sierra_madre_oriental = {
 	icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
-
 	modifier = {
 		state_construction_mult = -0.05
 		state_infrastructure_mult = -0.05
 	}
 }
 
-TRY_REPLACE:state_trait_central_american_cordilleras = {
+REPLACE:state_trait_central_american_cordilleras = {
 	icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
-
 	modifier = {
 		state_construction_mult = -0.05
 		state_infrastructure_mult = -0.05
 	}
 }
-TRY_REPLACE:state_trait_andes = {
-	icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
 
+REPLACE:state_trait_andes = {
+	icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
 	modifier = {
 		state_construction_mult = -0.05
 		state_infrastructure_mult = -0.05
