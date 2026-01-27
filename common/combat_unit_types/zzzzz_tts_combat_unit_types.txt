@@ -1,0 +1,595 @@
+﻿### Light ship group
+
+REPLACE_OR_CREATE:combat_unit_type_caravel = {
+    group = combat_unit_group_light_ship
+    max_manpower = 1000
+
+    upkeep_modifier = {
+        goods_input_manowars_add = 0.5
+    }
+
+    battle_modifier = {
+        unit_offense_add = 3
+        unit_defense_add = 3
+        unit_morale_loss_add = 10
+        unit_naval_armor_add = 0.5
+        unit_naval_pen_add = 0.5
+        unit_convoy_defense_mult = 0.5
+        unit_is_wind_dependent_bool = yes
+        unit_blockade_add = 3
+    }
+
+    can_build = {
+    }
+
+
+	unlocking_technologies = {  }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/tts_caravels_east_asia.dds"
+    }
+	
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/tts_caravels.dds"
+    }
+}
+
+REPLACE_OR_CREATE:combat_unit_type_frigate = {
+    group = combat_unit_group_light_ship
+    max_manpower = 1000
+
+    upkeep_modifier = {
+        goods_input_manowars_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 8
+        unit_defense_add = 8
+        unit_morale_loss_add = 8
+        unit_naval_armor_add = 0.5
+        unit_naval_pen_add = 2
+        unit_convoy_defense_mult = 1
+        unit_is_wind_dependent_bool = yes
+        unit_blockade_add = 8
+    }
+
+
+	unlocking_technologies = { fully_rigged_ships }
+	
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/light_ships_frigate.dds"
+    }
+
+    can_build = {
+    }
+
+    upgrades = {
+        combat_unit_type_screw_frigate
+    }
+}
+
+REPLACE_OR_CREATE:combat_unit_type_screw_frigate = {
+    group = combat_unit_group_light_ship
+    max_manpower = 1000
+
+    upkeep_modifier = {
+        goods_input_manowars_add = 2
+        goods_input_coal_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 15
+        unit_defense_add = 15
+        unit_morale_loss_add = 6
+        unit_naval_armor_add = 1
+        unit_naval_pen_add = 2
+        unit_convoy_defense_mult = 1
+        unit_blockade_add = 15
+    }
+
+
+	unlocking_technologies = { screw_frigate }
+	
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/tts_screw_frigates.dds"
+    }
+    
+    can_build = {
+    }
+
+    upgrades = {
+        combat_unit_type_destroyer
+    }
+}
+
+REPLACE_OR_CREATE:combat_unit_type_destroyer = {
+    group = combat_unit_group_light_ship
+    max_manpower = 1000
+
+    upkeep_modifier = {
+        goods_input_ironclads_add = 4
+        goods_input_ammunition_add = 1
+        goods_input_coal_add = 1
+        goods_input_oil_add = 0.5
+        goods_input_artillery_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 40
+        unit_defense_add = 40
+        unit_morale_loss_add = 5
+        unit_naval_armor_add = 3
+        unit_naval_pen_add = 5
+        unit_convoy_defense_mult = 2
+        unit_is_equipped_with_torpedoes_bool = yes
+        unit_blockade_add = 40
+    }
+
+	unlocking_technologies = { destroyer }
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/light_ships_destroyer.dds"
+    }
+
+    can_build = {
+    }
+
+    upgrades = {
+        combat_unit_type_scout_cruiser
+    }
+}
+
+REPLACE_OR_CREATE:combat_unit_type_scout_cruiser = {
+    group = combat_unit_group_light_ship
+    max_manpower = 1000
+
+    upkeep_modifier = {
+        goods_input_ironclads_add = 6
+        goods_input_ammunition_add = 2
+        goods_input_radios_add = 1
+        goods_input_oil_add = 1
+        goods_input_artillery_add = 2
+    }
+
+    battle_modifier = {
+        unit_offense_add = 65
+        unit_defense_add = 65
+        unit_morale_loss_add = 4
+        unit_naval_armor_add = 6
+        unit_naval_pen_add = 9
+        unit_convoy_defense_mult = 1
+        unit_convoy_raiding_mult = 1
+        unit_is_equipped_with_torpedoes_bool = yes
+        unit_blockade_add = 65
+    }
+
+	unlocking_technologies = { sea_lane_strategies }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/light_ships_scout_cruiser.dds"
+    }
+
+    can_build = {
+    }
+}
+
+### Flagship group
+
+REPLACE_OR_CREATE:combat_unit_type_carrack = {
+    group = combat_unit_group_capital_ship
+    max_manpower = 1000
+
+    upkeep_modifier = {
+        goods_input_manowars_add = 1
+    }
+    battle_modifier = {
+        unit_offense_add = 5
+        unit_defense_add = 5
+        unit_morale_loss_add = 10
+        unit_naval_armor_add = 0.5
+        unit_naval_pen_add = 0.5
+        unit_is_wind_dependent_bool = yes
+        unit_blockade_add = 5
+    }
+
+	unlocking_technologies = { }
+
+    can_build = {
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/tts_carracks_east_asia.dds"
+    }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/tts_carracks.dds"
+    }
+}
+
+
+REPLACE_OR_CREATE:combat_unit_type_man_o_war = {
+    group = combat_unit_group_capital_ship
+    max_manpower = 1000
+
+    upkeep_modifier = {
+        goods_input_manowars_add = 2
+    }
+
+    battle_modifier = {
+        unit_offense_add = 15
+        unit_defense_add = 15
+        unit_morale_loss_add = 8
+        unit_naval_armor_add = 1
+        unit_naval_pen_add = 2
+        unit_is_wind_dependent_bool = yes
+        unit_blockade_add = 15
+    }
+
+	unlocking_technologies = { fully_rigged_ships }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/tts_ships_of_the_line.dds"
+    }
+
+    can_build = {
+    }
+
+    upgrades = {
+        combat_unit_type_steam_ship_of_the_line
+    }
+}
+
+REPLACE_OR_CREATE:combat_unit_type_steam_ship_of_the_line = {
+    group = combat_unit_group_capital_ship
+    max_manpower = 1000
+
+    upkeep_modifier = {
+        goods_input_manowars_add = 3
+        goods_input_ammunition_add = 0.5
+        goods_input_coal_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 25
+        unit_defense_add = 25
+        unit_morale_loss_add = 6
+        unit_naval_armor_add = 1
+        unit_naval_pen_add = 2
+        unit_blockade_add = 25
+    }
+
+	unlocking_technologies = { screw_frigate }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/tts_steam_ships_of_the_line.dds"
+    }
+
+    can_build = {
+    }
+
+    upgrades = {
+        combat_unit_type_ironclad
+    }
+}
+
+REPLACE_OR_CREATE:combat_unit_type_ironclad = {
+    group = combat_unit_group_capital_ship
+    max_manpower = 1000
+
+    upkeep_modifier = {
+        goods_input_ironclads_add = 4
+        goods_input_ammunition_add = 1
+        goods_input_coal_add = 2
+        goods_input_artillery_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 35
+        unit_defense_add = 35
+        unit_morale_loss_add = 5
+        unit_naval_armor_add = 4
+        unit_naval_pen_add = 3
+        unit_blockade_add = 35
+    }
+
+	unlocking_technologies = { ironclad_tech }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/capital_ships_monitor.dds"
+    }
+
+    can_build = {
+    }
+
+    upgrades = {
+        combat_unit_type_predreadnought
+    }
+}
+
+REPLACE_OR_CREATE:combat_unit_type_predreadnought = {
+    group = combat_unit_group_capital_ship
+    max_manpower = 1000
+
+    upkeep_modifier = {
+        goods_input_ironclads_add = 8
+        goods_input_ammunition_add = 2
+        goods_input_coal_add = 3
+        goods_input_artillery_add = 2
+    }
+
+    battle_modifier = {
+        unit_offense_add = 70
+        unit_defense_add = 70
+        unit_morale_loss_add = 3
+        unit_naval_armor_add = 8
+        unit_naval_pen_add = 9
+        unit_blockade_add = 70
+    }
+
+	unlocking_technologies = { predreadnought_tech }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/capital_ships_ironclad.dds"
+    }
+
+    can_build = {
+    }
+
+    upgrades = {
+        combat_unit_type_dreadnought
+    }
+}
+
+REPLACE_OR_CREATE:combat_unit_type_dreadnought = {
+    group = combat_unit_group_capital_ship
+    max_manpower = 1000
+
+    upkeep_modifier = {
+        goods_input_tts_capital_ships_add = 7
+        goods_input_ammunition_add = 3
+        goods_input_radios_add = 1
+        goods_input_coal_add = 1
+        goods_input_oil_add = 1
+        goods_input_artillery_add = 3
+    }
+
+    battle_modifier = {
+        unit_offense_add = 100
+        unit_defense_add = 100
+        unit_morale_loss_add = 3
+        unit_naval_armor_add = 10
+        unit_naval_pen_add = 13
+        unit_blockade_add = 100
+    }
+
+	unlocking_technologies = { dreadnought }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/capital_ships_dreadnought.dds"
+    }
+
+    can_build = {
+    }
+    
+    upgrades = {
+        combat_unit_type_battleship
+    }
+}
+
+REPLACE_OR_CREATE:combat_unit_type_battleship = {
+    group = combat_unit_group_capital_ship
+    max_manpower = 1000
+
+    upkeep_modifier = {
+        goods_input_tts_capital_ships_add = 12
+        goods_input_ammunition_add = 5
+        goods_input_radios_add = 2
+        goods_input_oil_add = 2
+        goods_input_artillery_add = 4
+    }
+
+    battle_modifier = {
+        unit_offense_add = 150
+        unit_defense_add = 150
+        unit_morale_loss_add = 3
+        unit_naval_armor_add = 12
+        unit_naval_pen_add = 15
+        unit_blockade_add = 150
+    }
+
+	unlocking_technologies = { battleship_tech }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/capital_ships_battleship.dds"
+    }
+
+    can_build = {
+    }
+}
+
+### Raiding Ship group
+
+REPLACE_OR_CREATE:combat_unit_type_torpedo_boat = {
+    group = combat_unit_group_raiding_ship
+    max_manpower = 1000
+
+    upkeep_modifier = {
+        goods_input_ironclads_add = 2
+        goods_input_ammunition_add = 1
+        goods_input_coal_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 22
+        unit_defense_add = 22
+        unit_morale_loss_add = 6
+        unit_naval_armor_add = 1
+        unit_naval_pen_add = 3
+        unit_convoy_raiding_mult = 1
+        unit_is_equipped_with_torpedoes_bool = yes
+        unit_blockade_add = 22
+    }
+
+	unlocking_technologies = { self_propelled_torpedoes }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/light_ships_torpedo_boat.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_submarine
+    }
+
+    can_build = {
+    }
+}
+
+
+REPLACE_OR_CREATE:combat_unit_type_submarine = {
+    group = combat_unit_group_raiding_ship
+    max_manpower = 1000
+
+    upkeep_modifier = {
+        goods_input_ironclads_add = 4
+        goods_input_ammunition_add = 3
+        goods_input_oil_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 45
+        unit_defense_add = 45
+        unit_morale_loss_add = 4
+        unit_naval_armor_add = 2
+        unit_naval_pen_add = 6
+        unit_convoy_raiding_mult = 1.5
+        unit_is_equipped_with_torpedoes_bool = yes
+        unit_blockade_add = 45
+    }
+
+	unlocking_technologies = { submarine }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/support_ships_submarine.dds"
+    }
+
+    can_build = {
+    }
+}
+
+### Support (Aviation) Ship group
+
+REPLACE_OR_CREATE:combat_unit_type_experimental_carrier = {
+    group = combat_unit_group_support_ship
+    max_manpower = 1000
+
+    upkeep_modifier = {
+        goods_input_ironclads_add = 2
+        goods_input_tts_capital_ships_add = 2
+        goods_input_radios_add = 1
+        goods_input_oil_add = 1
+        goods_input_aeroplanes_add = 2
+    }
+
+    battle_modifier = {
+        unit_offense_add = 60
+        unit_defense_add = 60
+        unit_morale_loss_add = 4
+        unit_naval_armor_add = 6
+        unit_naval_pen_add = 8
+        unit_provides_air_support_bool = yes
+        unit_blockade_add = 60
+    }
+
+	unlocking_technologies = { carrier_tech }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/support_ships_carrier.dds"
+    }
+
+    can_build = {
+    }
+
+    upgrades = {
+        combat_unit_type_fleet_carrier
+        combat_unit_type_armored_carrier
+    }
+}
+
+REPLACE_OR_CREATE:combat_unit_type_fleet_carrier = {
+    group = combat_unit_group_support_ship
+    max_manpower = 1000
+
+    upkeep_modifier = {
+        goods_input_tts_capital_ships_add = 8
+        goods_input_radios_add = 2
+        goods_input_oil_add = 2
+        goods_input_aeroplanes_add = 6
+    }
+
+    battle_modifier = {
+        unit_offense_add = 115
+        unit_defense_add = 115
+        unit_morale_loss_add = 4
+        unit_naval_armor_add = 9
+        unit_naval_pen_add = 10
+        unit_provides_air_support_bool = yes
+        unit_blockade_add = 115
+    }
+
+	unlocking_technologies = { fleet_carrier_tech }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/tts_fleet_carriers.dds"
+    }
+
+    can_build = {
+    }
+}
+
+REPLACE_OR_CREATE:combat_unit_type_armored_carrier = {
+    group = combat_unit_group_support_ship
+    max_manpower = 1000
+
+    upkeep_modifier = {
+        goods_input_tts_capital_ships_add = 8
+        goods_input_radios_add = 2
+        goods_input_oil_add = 2
+        goods_input_aeroplanes_add = 3
+    }
+
+    battle_modifier = {
+        unit_offense_add = 100
+        unit_defense_add = 100
+        unit_morale_loss_add = 3
+        unit_naval_armor_add = 10
+        unit_naval_pen_add = 10
+        unit_provides_air_support_bool = yes
+        unit_blockade_add = 100
+    }
+
+	unlocking_technologies = { armored_carrier_tech }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/tts_armored_carriers.dds"
+    }
+
+    can_build = {
+    }
+}
+
+REPLACE_OR_CREATE:combat_unit_type_monitor = {
+    can_build = {
+        always = no
+    }
+}
+
+REPLACE_OR_CREATE:combat_unit_type_carrier = {
+    can_build = {
+        always = no
+    }
+}
