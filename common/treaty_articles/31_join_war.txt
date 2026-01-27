@@ -33,19 +33,25 @@ join_war = {
 			custom_tooltip = {
 				text = intervene_in_war_no_truce
 				any_scope_war = {
-					attacker_warleader = {
-						OR = {
-							this = scope:other_country
-							NOT = {
-								has_truce_with = ROOT
+					OR = {
+						AND = {
+							attacker_warleader = {
+								this = scope:other_country
+							}
+							defender_warleader = {
+								NOT = {
+									has_truce_with = ROOT
+								}
 							}
 						}
-					}
-					defender_warleader = {
-						OR = {
-							this = scope:other_country
-							NOT = {
-								has_truce_with = ROOT
+						AND = {
+							attacker_warleader = {
+								NOT = {
+									has_truce_with = ROOT
+								}
+							}
+							defender_warleader = {
+								this = scope:other_country
 							}
 						}
 					}

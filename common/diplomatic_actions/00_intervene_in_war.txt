@@ -1,120 +1,129 @@
 ﻿### From Join Ongoing Wars mod (Added by Oaken): Last Updated  26/1/2025
+# Edited by Akiko as of 27/01/26
 intervene_in_war = {
-	groups = { general }
+	groups = {
+		general
+	}
 	should_notify_third_parties = yes
-	# requires_approval = yes
-
+	requires_approval = yes
 	potential = {
-		
 		#Parties are not decentralized
-		NOT = { is_country_type = decentralized }
-		scope:target_country = { NOT = { is_country_type = decentralized } }
-		
+		NOT = {
+			is_country_type = decentralized
+		}
+		scope:target_country = {
+			NOT = {
+				is_country_type = decentralized
+			}
+		}
 		#THIS is not a civil war country
-		is_revolutionary = no is_secessionist = no
-		
+		is_revolutionary = no
+		is_secessionist = no
 		#THIS has independent foreign affairs
 		aggressive_diplomatic_plays_permitted = yes
-		
 		#TARGET is at war, is the war leader, and not at war with THIS
-		scope:target_country = { 
-			OR = { 
+		scope:target_country = {
+			OR = {
 				aggressive_diplomatic_plays_permitted = yes
 				is_subject_of = scope:actor
 			}
 			is_at_war = yes
-			NOT = { has_war_with = scope:actor }
+			NOT = {
+				has_war_with = scope:actor
+			}
 			custom_tooltip = {
 				text = intervene_in_war_no_truce
-				any_scope_war = {			
-					attacker_warleader = {
-						OR = {
-							this = scope:target_country
-							NOT = {has_truce_with = ROOT}
+				any_scope_war = {
+					OR = {
+						AND = {
+							attacker_warleader = {
+								this = scope:target_country
+							}
+							defender_warleader = {
+								NOT = {
+									has_truce_with = ROOT
+								}
+							}
+						}
+						AND = {
+							attacker_warleader = {
+								NOT = {
+									has_truce_with = ROOT
+								}
+							}
+							defender_warleader = {
+								this = scope:target_country
+							}
 						}
 					}
-					defender_warleader = {
-						OR = {
-							this = scope:target_country
-							NOT = {has_truce_with = ROOT}
-						}
+					NOT = {
+						is_war_participant = ROOT
 					}
-					NOT = { is_war_participant = ROOT }
 				}
 			}
-
 		}
-	
-		
 	}
-
 	possible = {
 		#THIS is interested in the TARGET
 		has_diplomatic_relevance = scope:target_country
-		
 		scope:target_country = {
 			custom_tooltip = {
 				text = intervene_in_war_offensive_relations
 				OR = {
 					scope:target_country.relations:root >= relations_threshold:cordial
 					# THIS has good relations with TARGET
-					any_scope_war = { 
+					any_scope_war = {
 						NOT = {
 							attacker_warleader = scope:target_country
 						}
 					}
 				}
 			}
-
-
 			custom_tooltip = {
 				text = DIPLO_ACTION_RELATIONS_POOR_OR_LESS_NOT
 				scope:target_country.relations:root > relations_threshold:poor
 			}
 		}
-
-		
 	}
-	
 	accept_effect = {
-		
 		#Lobby
-		add_lobby_appeasement_from_diplomacy_bidirectional = { 
+		add_lobby_appeasement_from_diplomacy_bidirectional = {
 			FIRST = root
-			SECOND = scope:target_country 
+			SECOND = scope:target_country
 			PRO_AMOUNT = 5
 			ANTI_AMOUNT = -5
 			FACTOR = appeasement_defensive_pact_formed
 		}
-		
 		#TARGET gains relations with subject
-		scope:target_country = { 
-			change_relations = { country = scope:actor value = 30 } 
+		scope:target_country = {
+			change_relations = {
+				country = scope:actor
+				value = 30
+			}
 			save_scope_as = target_country_scope
 		}
-		
 		#THIS gains infamy from joining an Aggressive War
 		if = {
 			limit = {
-				any_diplomatic_play = { 
+				any_diplomatic_play = {
 					is_war = yes
 					initiator_is = scope:target_country
 				}
 			}
 			change_infamy = 10
 		}
-		
 		#THIS joins TARGET's wars
 		custom_tooltip = {
 			text = intervene_in_war.tt
-		
 			#THIS joins the TARGET's war
 			every_diplomatic_play = {
 				limit = {
 					is_war = yes
 					scope:target_country = {
 						is_diplomatic_play_committed_participant = yes
-						NOT = { is_diplomatic_play_participant_with = scope:actor }
+						NOT = {
+							is_diplomatic_play_participant_with = scope:actor
+						}
 					}
 				}
 				if = {
@@ -134,41 +143,41 @@ intervene_in_war = {
 					}
 				}
 			}
-		
 		}
-		
 	}
-	
 	ai = {
-	
 		evaluation_chance = {
-			value = 0.25		
+			value = 0.25
 		}
-
 		# accept_score = {
 		# 	value = 10
 		# }
-	
 		propose_score = {
 			value = 10
 		}
-		
 		will_propose = {
-			
 			#THIS wants to help TARGET
 			OR = {
-			
 				#THIS wants to help TARGET against a pariah
-				any_country = { 
-					has_war_with = scope:target_country 
+				any_country = {
+					has_war_with = scope:target_country
 					infamy >= infamy_threshold:pariah
 				}
-				
 				#THIS wants to help TARGET who is an ally or subject who is losing
-				scope:target_country = { 
+				scope:target_country = {
 					OR = {
-						any_scope_treaty = { binds = scope:actor any_scope_article = { has_type = alliance } }
-						any_scope_treaty = { binds = scope:actor any_scope_article = { has_type = defensive_pact } } 
+						any_scope_treaty = {
+							binds = scope:actor
+							any_scope_article = {
+								has_type = alliance
+							}
+						}
+						any_scope_treaty = {
+							binds = scope:actor
+							any_scope_article = {
+								has_type = defensive_pact
+							}
+						}
 						is_subject_of = scope:actor
 					}
 					any_scope_war = {
@@ -178,45 +187,45 @@ intervene_in_war = {
 						}
 					}
 				}
-				
 				#THIS wants to help its colony or puppet
-				scope:target_country = { 
-					is_subject_of = scope:actor 
+				scope:target_country = {
+					is_subject_of = scope:actor
 				}
-				
 			}
-			
 			#THIS wants to avoid helping TARGET at all costs
 			NOR = {
-				
 				#Enemy of TARGET has a stronger military than THIS
-				any_country = { 
-					has_war_with = scope:target_country 
-					OR = { 
+				any_country = {
+					has_war_with = scope:target_country
+					OR = {
 						navy_size > scope:actor.navy_size
 						army_size > scope:actor.army_size
 					}
 				}
-				
 				#Enemy of TARGET has good relations with THIS
-				any_country = { 
-					has_war_with = scope:target_country 
+				any_country = {
+					has_war_with = scope:target_country
 					OR = {
-						any_scope_treaty = { binds = scope:actor any_scope_article = { has_type = alliance } }
-						any_scope_treaty = { binds = scope:actor any_scope_article = { has_type = defensive_pact } } 
+						any_scope_treaty = {
+							binds = scope:actor
+							any_scope_article = {
+								has_type = alliance
+							}
+						}
+						any_scope_treaty = {
+							binds = scope:actor
+							any_scope_article = {
+								has_type = defensive_pact
+							}
+						}
 						is_subject_of = scope:actor
 						relations:root >= relations_threshold:cordial
 					}
 				}
-				
 			}
-			
 			#THIS has a strong economy
 			in_default = no
 			has_healthy_economy = yes
-			
 		}
-		
 	}
-	
 }

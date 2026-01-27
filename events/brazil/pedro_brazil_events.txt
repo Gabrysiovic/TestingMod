@@ -517,6 +517,34 @@ pedro.8 = {
 		}
 		if = {
 			limit = {
+				any_country = {
+					has_journal_entry = je_portugal_united_kingdom
+					any_scope_treaty = {
+						binds = ROOT
+						any_scope_article = {
+							has_type = amend_succession
+						}
+					}
+				}
+			}
+			random_country = {
+				limit = {
+					has_journal_entry = je_portugal_united_kingdom
+					any_scope_treaty = {
+						binds = ROOT
+						any_scope_article = {
+							has_type = amend_succession
+						}
+					}
+				}
+				trigger_event = {
+					id = lusofonia.4
+					popup = yes
+				}
+			}
+		}
+		if = {
+			limit = {
 				NOT = {
 					has_law = law_type:law_landed_voting
 				}
