@@ -4,10 +4,16 @@
  # Technology
  #####
 
- fully_rigged_ships: "Fully Rigged Ships"
- fully_rigged_ships_desc: "Ships with a full set of sails can move faster and carry more armament."
  predreadnought_tech: "Pre-Dreadnought"
  predreadnought_tech_desc: "With large caliber guns and steel armor, pre-dreadnought battleships are powerful vessels."
+ steel_shipbuilding_tech: "Steel Shipbuilding"
+ steel_shipbuilding_tech_desc: "TODO"
+ turbine_powered_ships_tech: "Turbine-Powered Ships"
+ turbine_powered_ships_tech_desc: "TODO"
+ large_scale_shipbuilding_tech: "Large Scale Shipbuilding"
+ large_scale_shipbuilding_tech_desc: "TODO"
+ fully_rigged_ships: "Fully Rigged Ships"
+ fully_rigged_ships_desc: "Ships with a full set of sails can move faster and carry more armament."
 
 ######
 # Modifier Types

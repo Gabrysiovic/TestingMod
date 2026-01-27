@@ -1,37 +1,44 @@
 ﻿namespace = fra_bourbon_monarch_death
+
 # Charles 10 dies [ New Heir: (A) Henri 05 (L19) ]
-fra_bourbon_monarch_death.1 = {
+fra_bourbon_monarch_death.1 = { 
 	type = country_event
+
 	placement = ROOT
 	title = historic_monarch_death.t
 	desc = historic_monarch_death.d
 	flavor = historic_monarch_death.f
+
 	duration = 1
+
 	gui_window = event_window_1char_tabloid
 	left_icon = scope:dead_character
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
 	trigger = {
 		has_law = law_type:law_monarchy
 		NOR = {
 			has_variable = orleanist_restoration_var
 			has_variable = bonapartist_restoration_var
 		}
-		always = no
 	}
+
 	immediate = {
 		# spawn a new heir
 	}
-	option = {
-		# Louis 19 becomes ruler, Henri 05 becomes heir
+
+	option = { # Louis 19 becomes ruler, Henri 05 becomes heir
 		name = fra_bourbon_monarch_death.1.a
 		default_option = yes
-		trigger = {
-			ruler = {
-				has_template = FRA_louis_antoine_de_bourbon
-			}
+
+		trigger = {	
+			ruler = { has_template = FRA_louis_antoine_de_bourbon }
 		}
+
 		create_character = {
 			template = FRA_henri_de_bourbon
 		}
@@ -39,18 +46,24 @@ fra_bourbon_monarch_death.1 = {
 }
 
 # Louis 19 dies [ New Heir: (A) Jean 03 (H5) ]
-fra_bourbon_monarch_death.2 = {
+fra_bourbon_monarch_death.2 = { 
 	type = country_event
+
 	placement = ROOT
 	title = historic_monarch_death.t
 	desc = historic_monarch_death.d
 	flavor = historic_monarch_death.f
+
 	duration = 1
+
 	gui_window = event_window_1char_tabloid
 	left_icon = scope:dead_character
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
 	trigger = {
 		has_law = law_type:law_monarchy
 		NOR = {
@@ -58,18 +71,19 @@ fra_bourbon_monarch_death.2 = {
 			has_variable = bonapartist_restoration_var
 		}
 	}
+
 	immediate = {
 		# spawn a new heir
 	}
-	option = {
-		# Henri 05 becomes ruler, Jean 03 becomes heir
+
+	option = { # Henri 05 becomes ruler, Jean 03 becomes heir
 		name = fra_bourbon_monarch_death.2.a
 		default_option = yes
-		trigger = {
-			ruler = {
-				has_template = FRA_henri_de_bourbon
-			}
+
+		trigger = {	
+			ruler = { has_template = FRA_henri_de_bourbon }
 		}
+
 		create_character = {
 			template = SPC_juan_iii_de_borbon_template
 		}
@@ -77,18 +91,24 @@ fra_bourbon_monarch_death.2 = {
 }
 
 # Henri 05 dies [ New Heir: (B) Charles 11 (J3>48) Nobody (J3<48) ]
-fra_bourbon_monarch_death.3 = {
+fra_bourbon_monarch_death.3 = { 
 	type = country_event
+
 	placement = ROOT
 	title = historic_monarch_death.t
 	desc = historic_monarch_death.d
 	flavor = historic_monarch_death.f
+
 	duration = 1
+
 	gui_window = event_window_1char_tabloid
 	left_icon = scope:dead_character
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
 	trigger = {
 		has_law = law_type:law_monarchy
 		NOR = {
@@ -96,30 +116,29 @@ fra_bourbon_monarch_death.3 = {
 			has_variable = bonapartist_restoration_var
 		}
 	}
+
 	immediate = {
 		# spawn a new heir
 	}
-	option = {
-		# Jean 03 becomes ruler, Charles 11 becomes heir
+
+	option = { # Jean 03 becomes ruler, Charles 11 becomes heir
 		name = fra_bourbon_monarch_death.3.a
 		default_option = yes
-		trigger = {
-			ruler = {
-				has_template = SPC_juan_iii_de_borbon_template
-			}
+
+		trigger = {	
+			ruler = { has_template = SPC_juan_iii_de_borbon_template }
 			game_date >= 1848.3.30
 		}
+
 		create_character = {
 			template = SPC_carlos_vii_de_borbon_template
 		}
 	}
-	option = {
-		# Henri 05 becomes ruler, Jean 03 becomes heir
+	option = { # Henri 05 becomes ruler, Jean 03 becomes heir
 		name = fra_bourbon_monarch_death.3.b
-		trigger = {
-			ruler = {
-				has_template = SPC_juan_iii_de_borbon_template
-			}
+
+		trigger = {	
+			ruler = { has_template = SPC_juan_iii_de_borbon_template }
 			game_date < 1848.3.30
 		}
 	}
@@ -127,18 +146,24 @@ fra_bourbon_monarch_death.3 = {
 
 #Carlists
 # Jean 03 dies [ New Heir: (B) Jacques 01 (C11>70) Charles 12 (C11<70/Jq1) ]
-fra_bourbon_monarch_death.4 = {
+fra_bourbon_monarch_death.4 = { 
 	type = country_event
+
 	placement = ROOT
 	title = historic_monarch_death.t
 	desc = historic_monarch_death.d
 	flavor = historic_monarch_death.f
+
 	duration = 1
+
 	gui_window = event_window_1char_tabloid
 	left_icon = scope:dead_character
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
 	trigger = {
 		has_law = law_type:law_monarchy
 		NOR = {
@@ -146,41 +171,39 @@ fra_bourbon_monarch_death.4 = {
 			has_variable = bonapartist_restoration_var
 		}
 	}
+
 	immediate = {
 		# spawn a new heir
 	}
-	option = {
-		# Charles 11 becomes ruler, Jacques 01 becomes heir
+
+	option = { # Charles 11 becomes ruler, Jacques 01 becomes heir
 		name = fra_bourbon_monarch_death.4.a
 		default_option = yes
-		trigger = {
-			ruler = {
-				has_template = SPC_carlos_vii_de_borbon_template
-			}
+
+		trigger = {	
+			ruler = { has_template = SPC_carlos_vii_de_borbon_template }
 			game_date >= 1870.6.27
 		}
+
 		create_character = {
 			template = SPC_carlos_vii_de_borbon_template
 		}
 	}
-	option = {
-		# Charles 11/Jacques 01 becomes ruler, Charles 12 becomes heir
+	option = { # Charles 11/Jacques 01 becomes ruler, Charles 12 becomes heir
 		name = fra_bourbon_monarch_death.4.b
-		trigger = {
+
+		trigger = {	
 			OR = {
 				AND = {
-					ruler = {
-						has_template = SPC_carlos_vii_de_borbon_template
-					}
+					ruler = { has_template = SPC_carlos_vii_de_borbon_template }
 					game_date > 1870.6.27
 				}
 				AND = {
-					ruler = {
-						has_template = SPC_jaime_iii_de_borbon_template
-					}
+					ruler = { has_template = SPC_jaime_iii_de_borbon_template }
 				}
-			}
+			}		
 		}
+
 		create_character = {
 			template = SPC_alfonso_i_de_borbon_template
 		}
@@ -188,18 +211,24 @@ fra_bourbon_monarch_death.4 = {
 }
 
 # Charles 11 dies [ New Heir: (B) Charles 12 (Jq1>49) Nobody (Jq1<49) ]
-fra_bourbon_monarch_death.5 = {
+fra_bourbon_monarch_death.5 = { 
 	type = country_event
+
 	placement = ROOT
 	title = historic_monarch_death.t
 	desc = historic_monarch_death.d
 	flavor = historic_monarch_death.f
+
 	duration = 1
+
 	gui_window = event_window_1char_tabloid
 	left_icon = scope:dead_character
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
 	trigger = {
 		has_law = law_type:law_monarchy
 		NOR = {
@@ -207,46 +236,51 @@ fra_bourbon_monarch_death.5 = {
 			has_variable = bonapartist_restoration_var
 		}
 	}
+
 	immediate = {
 		# spawn a new heir
 	}
-	option = {
-		# Jacques 01 becomes ruler, Charles 12 becomes heir
+
+	option = { # Jacques 01 becomes ruler, Charles 12 becomes heir
 		name = fra_bourbon_monarch_death.5.a
 		default_option = yes
-		trigger = {
-			ruler = {
-				has_template = SPC_jaime_iii_de_borbon_template
-			}
+
+		trigger = {	
+			ruler = { has_template = SPC_jaime_iii_de_borbon_template }
 		}
+
 		create_character = {
 			template = SPC_alfonso_i_de_borbon_template
 		}
 	}
-	option = {
-		# Jacques 01 becomes ruler, Nobody becomes heir
+	option = { # Jacques 01 becomes ruler, Nobody becomes heir
 		name = fra_bourbon_monarch_death.5.b
-		trigger = {
-			ruler = {
-				has_template = SPC_jaime_iii_de_borbon_template
-			}
+
+		trigger = {	
+			ruler = { has_template = SPC_jaime_iii_de_borbon_template }
 		}
 	}
 }
 
 # Jacques 01 dies [ New Heir: (B) Nobody (C12) Union! (Nobody) ]
-fra_bourbon_monarch_death.6 = {
+fra_bourbon_monarch_death.6 = { 
 	type = country_event
+
 	placement = ROOT
 	title = historic_monarch_death.t
 	desc = historic_monarch_death.d
 	flavor = historic_monarch_death.f
+
 	duration = 1
+
 	gui_window = event_window_1char_tabloid
 	left_icon = scope:dead_character
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
 	trigger = {
 		has_law = law_type:law_monarchy
 		NOR = {
@@ -254,43 +288,47 @@ fra_bourbon_monarch_death.6 = {
 			has_variable = bonapartist_restoration_var
 		}
 	}
+
 	immediate = {
 		# spawn a new heir
 	}
-	option = {
-		# Charles 12 becomes ruler, Nobody becomes heir
+
+	option = { # Charles 12 becomes ruler, Nobody becomes heir
 		name = fra_bourbon_monarch_death.6.a
 		default_option = yes
-		trigger = {
-			ruler = {
-				has_template = SPC_alfonso_i_de_borbon_template
-			}
+
+		trigger = {	
+			ruler = { has_template = SPC_alfonso_i_de_borbon_template }
 		}
 	}
-	option = {
-		# Ahistoric becomes ruler, Trigger Franco-Spanish Union Event
+	option = { # Ahistoric becomes ruler, Trigger Franco-Spanish Union Event
 		name = fra_bourbon_monarch_death.6.b
-		trigger = {
-			ruler = {
-				is_historical = no
-			}
+
+		trigger = {	
+			ruler = { is_historical = no }
 		}
 	}
 }
 
 # Charles 12 dies [ New Heir: (A) Union! ]
-fra_bourbon_monarch_death.7 = {
+fra_bourbon_monarch_death.7 = { 
 	type = country_event
+
 	placement = ROOT
 	title = historic_monarch_death.t
 	desc = historic_monarch_death.d
 	flavor = historic_monarch_death.f
+
 	duration = 1
+
 	gui_window = event_window_1char_tabloid
 	left_icon = scope:dead_character
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
 	trigger = {
 		has_law = law_type:law_monarchy
 		NOR = {
@@ -298,12 +336,14 @@ fra_bourbon_monarch_death.7 = {
 			has_variable = bonapartist_restoration_var
 		}
 	}
+
 	immediate = {
 		# spawn a new heir
 	}
-	option = {
-		# Trigger Franco-Spanish Union Event
+
+	option = { # Trigger Franco-Spanish Union Event
 		name = fra_bourbon_monarch_death.7.a
 		default_option = yes
+
 	}
 }

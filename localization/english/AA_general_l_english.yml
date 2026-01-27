@@ -130,35 +130,21 @@
     #Misc
     pm_monument_prestige_only_forbidden_city: "Forbidden City" #    -Akiko
     #fixing vanilla stuff -Akiko
-    rootgetname_RU_VP: ""
-    rootgetname_RU_RP: ""
-    rootgetname_noformatting_RU_TP: ""
-    IBE_var_RU_VP: ""
-    SPA_var_RU_RP: ""
-    SPA_RU_TP: ""
+    rootgetname_RU_VP: "[root.getname_RU_VP]"
+    rootgetname_RU_RP: "[root.getname_RU_RP]"
+    rootgetname_noformatting_RU_TP: "[root.getname_noformatting_RU_TP]"
     
     #Intervene in war
     intervene_in_war.tt: "Join any [concept_war] where [SCOPE.sCountry('target_country_scope').GetName] is the [concept_war_leader]"
     intervene_in_war: "Intervene in War"
     intervene_in_war_action_name: "Join the [TARGET_COUNTRY.GetAdjective] War"
     intervene_in_war_desc: "This [concept_diplomatic_action] allows the initiator to join any [concept_war] where the target country is the [concept_war_leader]."
-    #intervene_in_war_action_notification_name: "[INITIATOR_COUNTRY.GetAdjective] Intervention in [TARGET_COUNTRY.GetName]"
-    #intervene_in_war_action_notification_desc: "[INITIATOR_COUNTRY.GetName] has announced that it will give full military support to [TARGET_COUNTRY.GetName] in its war. The [INITIATOR_COUNTRY.GetAdjective] Armed Forces will now join the [TARGET_COUNTRY.GetAdjective] Armed Forces in its military operations."
-    #intervene_in_war_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetAdjective] Intervention in [TARGET_COUNTRY.GetName]"
-    #intervene_in_war_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] has announced that it will give full military support to [TARGET_COUNTRY.GetName] in its war. The [INITIATOR_COUNTRY.GetAdjective] Armed Forces will now join the [TARGET_COUNTRY.GetAdjective] Armed Forces in its military operations."
+    intervene_in_war_action_notification_name: "[INITIATOR_COUNTRY.GetAdjective] Intervention in [TARGET_COUNTRY.GetName]"
+    intervene_in_war_action_notification_desc: "[INITIATOR_COUNTRY.GetName] has announced that it will give full military support to [TARGET_COUNTRY.GetName] in its war. The [INITIATOR_COUNTRY.GetAdjective] Armed Forces will now join the [TARGET_COUNTRY.GetAdjective] Armed Forces in its military operations."
+    intervene_in_war_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetAdjective] Intervention in [TARGET_COUNTRY.GetName]"
+    intervene_in_war_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] has announced that it will give full military support to [TARGET_COUNTRY.GetName] in its war. The [INITIATOR_COUNTRY.GetAdjective] Armed Forces will now join the [TARGET_COUNTRY.GetAdjective] Armed Forces in its military operations."
     intervene_in_war_no_truce: "Has no truce with the enemy war leader."
     intervene_in_war_offensive_relations: "$DIPLO_ACTION_RELATIONS$ are at least $relations_cordial$ (since target is the attacker)."
-
-    intervene_in_war_proposal_accepted_name: "[TARGET_COUNTRY.GetName] accepts our intervention"
-    intervene_in_war_proposal_accepted_desc: "We have joined [TARGET_COUNTRY.GetName]'s war!"
-    intervene_in_war_proposal_declined_name: "[TARGET_COUNTRY.GetName] has declined our intervention"
-    intervene_in_war_proposal_declined_desc: "[TARGET_COUNTRY.GetName] stands alone!"
-    intervene_in_war_proposal_notification_name: "[SOURCE_COUNTRY.GetAdjective] Intervention Offer"
-    intervene_in_war_proposal_notification_desc: "[SOURCE_COUNTRY.GetAdjective] is offering to intervene in our war"
-    intervene_in_war_proposal_third_party_accepted_name: "[SOURCE_COUNTRY.GetAdjective] Intervention in [TARGET_COUNTRY.GetName]"
-    intervene_in_war_proposal_third_party_accepted_desc: "[SOURCER_COUNTRY.GetName] has announced that it will give full military support to [TARGET_COUNTRY.GetName] in its war. The [SOURCE_COUNTRY.GetAdjective] Armed Forces will now join the [TARGET_COUNTRY.GetAdjective] Armed Forces in its military operations."
-    intervene_in_war_proposal_third_party_declined_name: "[TARGET_COUNTRY.GetName] has declinied [SOURCE_COUNTRY.GetAdjective] Intervention"
-    intervene_in_war_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] has announced that it doesn't want help from [SOURCE_COUNTRY.GetName] in its war."
     #Join war
     join_war: "Join War"
     join_war_effects_desc: "• An agreement established by one [concept_country] targeting another, where the first $concept_country$ shall join any [concept_war] where the second $concept_country$ is the [concept_war_leader]."
