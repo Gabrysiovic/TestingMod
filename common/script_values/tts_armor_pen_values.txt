@@ -1,0 +1,323 @@
+﻿######
+# Calculation
+######
+flotilla_armor_value = {
+	value = 0
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_caravel
+		}
+		add = caravel_armor_value
+	}
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_frigate
+		}
+		add = frigate_armor_value
+	}
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_screw_frigate
+		}
+		add = screw_frigate_armor_value
+	}
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_destroyer
+		}
+		add = destroyer_armor_value
+	}
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_scout_cruiser
+		}
+		add = cruiser_armor_value
+	}
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_carrack
+		}
+		add = carrack_armor_value
+	}
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_man_o_war
+		}
+		add = ship_of_the_line_armor_value
+	}
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_steam_ship_of_the_line
+		}
+		add = steam_ship_of_the_line_armor_value
+	}
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_ironclad
+		}
+		add = ironclad_armor_value
+	}
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_predreadnought
+		}
+		add = predreadnought_armor_value
+	}
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_dreadnought
+		}
+		add = dreadnought_armor_value
+	}
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_battleship
+		}
+		add = battleship_armor_value
+	}
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_torpedo_boat
+		}
+		add = torpedo_boat_armor_value
+	}
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_submarine
+		}
+		add = submarine_armor_value
+	}
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_experimental_carrier
+		}
+		add = experimental_carrier_armor_value
+	}
+}
+
+flotilla_pen_value = {
+	value = 0
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_caravel
+		}
+		add = caravel_pen_value
+	}
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_frigate
+		}
+		add = frigate_pen_value
+	}
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_screw_frigate
+		}
+		add = screw_frigate_pen_value
+	}
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_destroyer
+		}
+		add = destroyer_pen_value
+	}
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_scout_cruiser
+		}
+		add = cruiser_pen_value
+	}
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_carrack
+		}
+		add = carrack_pen_value
+	}
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_man_o_war
+		}
+		add = ship_of_the_line_pen_value
+	}
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_steam_ship_of_the_line
+		}
+		add = steam_ship_of_the_line_pen_value
+	}
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_ironclad
+		}
+		add = ironclad_pen_value
+	}
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_predreadnought
+		}
+		add = predreadnought_pen_value
+	}
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_dreadnought
+		}
+		add = dreadnought_pen_value
+	}
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_battleship
+		}
+		add = battleship_pen_value
+	}
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_torpedo_boat
+		}
+		add = torpedo_boat_pen_value
+	}
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_submarine
+		}
+		add = submarine_pen_value
+	}
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_experimental_carrier
+		}
+		add = experimental_carrier_pen_value
+	}
+}
+
+######
+# Armor
+######
+# Capital Ships
+carrack_armor_value = {
+	value = 0.5
+}
+
+ship_of_the_line_armor_value = {
+	value = 1
+}
+
+steam_ship_of_the_line_armor_value = {
+	value = 1
+}
+
+ironclad_armor_value = {
+	value = 4
+}
+
+predreadnought_armor_value = {
+	value = 8
+}
+
+dreadnought_armor_value = {
+	value = 10
+}
+
+battleship_armor_value = {
+	value = 12
+}
+
+# Escorts
+caravel_armor_value = {
+	value = 0.5
+}
+
+frigate_armor_value = {
+	value = 0.5
+}
+
+screw_frigate_armor_value = {
+	value = 1
+}
+
+destroyer_armor_value = {
+	value = 3
+}
+
+cruiser_armor_value = {
+	value = 6
+}
+
+# Raiders
+torpedo_boat_armor_value = {
+	value = 1
+}
+
+submarine_armor_value = {
+	value = 2
+}
+
+# Aviation 
+experimental_carrier_armor_value = {
+	value = 2
+}
+
+######
+# Penetration
+######
+# Capital Ships
+carrack_pen_value = {
+	value = 0.5
+}
+
+ship_of_the_line_pen_value = {
+	value = 2
+}
+
+steam_ship_of_the_line_pen_value = {
+	value = 2
+}
+
+ironclad_pen_value = {
+	value = 3
+}
+
+predreadnought_pen_value = {
+	value = 9
+}
+
+dreadnought_pen_value = {
+	value = 13
+}
+
+battleship_pen_value = {
+	value = 15
+}
+
+# Escorts
+caravel_pen_value = {
+	value = 0.5
+}
+
+frigate_pen_value = {
+	value = 2
+}
+
+screw_frigate_pen_value = {
+	value = 2
+}
+
+destroyer_pen_value = {
+	value = 5
+}
+
+cruiser_pen_value = {
+	value = 9
+}
+
+# Raiders
+torpedo_boat_pen_value = {
+	value = 3
+}
+
+submarine_pen_value = {
+	value = 8
+}
+
+experimental_carrier_pen_value = {
+	value = 8
+}

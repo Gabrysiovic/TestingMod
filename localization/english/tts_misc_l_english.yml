@@ -18,10 +18,10 @@
 ######
 # Modifier Types
 ######
- unit_naval_armor_add: "[concept_naval_armor]"
- unit_naval_armor_add_desc: "A change in the armor of the unit"
- unit_naval_pen_add: "[concept_naval_pen]"
- unit_naval_pen_add_desc: "A change in the penetration of the unit"
+ unit_navy_armor_add: "[concept_navy_armor]"
+ unit_navy_armor_add_desc: "A change in the armor of the unit"
+ unit_navy_pen_add: "[concept_navy_pen]"
+ unit_navy_pen_add_desc: "A change in the penetration of the unit"
 
  #####
  # Goods
@@ -37,6 +37,14 @@
  pm_military_shipbuilding_steel: "Steel-Hulled Ships"
  pm_military_shipbuilding_turbine: "Turbine-Powered Ships"
  pm_military_shipbuilding_arc_welding: "Large Battleships"
+
+######
+# Customizable Localization
+######
+# Propellants
+ cordite: "Cordite"
+ poudre_b: "Poudre B"
+ smokeless_powder: "Smokeless Powder"
 
 ######
 # Custom triggers
@@ -83,6 +91,10 @@
  battle_condition_cant_penetrate_ship_desc: "This fleet's cannons are lacking in penetration to damage the enemy's armor."
  battle_condition_scouting_advantage: "Scouting Advantage"
  battle_condition_scouting_advantage_desc: "This fleet's carriers allowed it to outmaneuver the enemy with better scouting."
+ battle_condition_deck_bombed: "Deck Bombed"
+ battle_condition_deck_bombed_desc: "Our carriers were found and they are being bombed by enemy carriers"
+ battle_condition_deck_shelled: "Deck Shelled"
+ battle_condition_deck_shelled_desc: "Our carriers got found by the enemy battleships and are being shelled."
  battle_condition_torpedo_run: "Torpedo Run"
  battle_condition_torpedo_run_desc: "This fleet's torpedo-equipped ships are conducting a devastating torpedo run on the enemy's undefended capital ships."
  battle_condition_unfavorable_wind: "Unfavorable Wind"
@@ -94,7 +106,7 @@
 # Alerts
 ######
 
-# Combat unit grouos
+# Combat unit groups
  combat_unit_group_raiding_ship: "Raiders"
 
 ######
