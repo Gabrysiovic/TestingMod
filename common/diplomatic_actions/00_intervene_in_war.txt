@@ -1,8 +1,6 @@
-﻿### From Join Ongoing Wars mod (Added by Oaken): Last Updated  26/1/2025
-intervene_in_war = {
+﻿intervene_in_war = {
 	groups = { general }
 	should_notify_third_parties = yes
-	# requires_approval = yes
 
 	potential = {
 		
@@ -44,35 +42,64 @@ intervene_in_war = {
 			}
 
 		}
-	
+		
+		#THIS can reach the TARGET
+		OR = {
+		
+			#THIS has direct access to the TARGET
+			scope:target_country = {
+				OR = { 
+					has_strategic_adjacency = scope:actor
+					any_scope_state = { is_coastal = yes }
+				}
+			}
+			
+			#THIS has access to the TARGET through an ally who is also at war with the TARGET
+			any_scope_ally = {
+				is_at_war = yes
+				any_scope_war = {
+					is_war_participant = scope:target_country
+					is_warleader = scope:target_country
+				}
+				NOT = { has_war_with = scope:target_country }
+				has_strategic_adjacency = scope:target_country
+			}
+			
+			#THIS has access to the TARGET through a subject
+			any_country = {
+				is_subject_of = scope:actor
+				has_strategic_adjacency = scope:target_country
+			}
+			
+			#THIS has access to the TARGET through an enemy 3P
+			any_country = {
+				has_war_with = scope:actor
+				has_strategic_adjacency = scope:target_country
+			}
+			
+		}
 		
 	}
 
 	possible = {
+		
 		#THIS is interested in the TARGET
 		has_diplomatic_relevance = scope:target_country
 		
-		scope:target_country = {
-			custom_tooltip = {
-				text = intervene_in_war_offensive_relations
-				OR = {
-					scope:target_country.relations:root >= relations_threshold:cordial
-					# THIS has good relations with TARGET
-					any_scope_war = { 
-						NOT = {
-							attacker_warleader = scope:target_country
-						}
-					}
-				}
-			}
-
-
-			custom_tooltip = {
-				text = DIPLO_ACTION_RELATIONS_POOR_OR_LESS_NOT
-				scope:target_country.relations:root > relations_threshold:poor
-			}
+		#THIS does not have a truce with TARGET
+		NOT = { has_truce_with = scope:target_country }
+		
+		# THIS can and wants to intervene
+		OR = { 
+			scope:target_country = { has_strategic_land_adjacency = ROOT }
+			scope:target_country = { is_subject_of = ROOT }
 		}
-
+		
+		# THIS has good relations with TARGET
+		custom_tooltip = {
+			text = DIPLO_ACTION_RELATIONS_CORDIAL_OR_GREATER
+			scope:target_country.relations:root >= relations_threshold:cordial
+		}
 		
 	}
 	
@@ -98,6 +125,8 @@ intervene_in_war = {
 			limit = {
 				any_diplomatic_play = { 
 					is_war = yes
+					is_diplomatic_play_participant = scope:target_country
+					NOT = { is_diplomatic_play_participant = scope:actor }
 					initiator_is = scope:target_country
 				}
 			}
@@ -112,10 +141,8 @@ intervene_in_war = {
 			every_diplomatic_play = {
 				limit = {
 					is_war = yes
-					scope:target_country = {
-						is_diplomatic_play_committed_participant = yes
-						NOT = { is_diplomatic_play_participant_with = scope:actor }
-					}
+					is_diplomatic_play_participant = scope:target_country
+					NOT = { is_diplomatic_play_participant = scope:actor }
 				}
 				if = {
 					limit = {
@@ -144,10 +171,6 @@ intervene_in_war = {
 		evaluation_chance = {
 			value = 0.25		
 		}
-
-		# accept_score = {
-		# 	value = 10
-		# }
 	
 		propose_score = {
 			value = 10

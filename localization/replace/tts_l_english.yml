@@ -2,8 +2,7 @@
  #####
  # Technology
  #####
- fully_rigged_ships: "Fully Rigged Ships"
- fully_rigged_ships_desc: "Ships with a full set of sails can move faster and carry more armament."
+
  dreadnought: "Dreadnought"
  dreadnought_desc: "Equipped with powerful all-big-gun armament and steam turbines, the dreadnought battleship revolutionized naval warfare."
  battleship_tech_desc: "The so-called \"Super-dreadnought battleships\" carry bigger guns, thicker armor and more powerful engines, making the Dreadnought seem obsolete."
@@ -18,13 +17,6 @@
  modifier_goods_input_ironclads_add: "@ironclads! Warships input per level"
  modifier_goods_output_manowars_add: "@manowars! Men-o-War output per level"
  modifier_goods_output_ironclads_add: "@ironclads! Warships output per level"
-
-######
-# Flotilla Prefixes
-######
- flotilla_prefix_ins: "INS"
- flotilla_prefix_hmas: "HMAS"
- flotilla_prefix_hmcs: "HMCS"
 
 ######
 # Combat Unit Group Types
@@ -56,8 +48,10 @@
  # Submarine left as it is for now, transform into experimental submarine later
 
 # Buildings
- building_military_shipyard: "Naval Yard"
+  building_military_shipyards: "Naval Yards"
 
 # Production Methods
  pm_military_shipbuilding_wooden: "Men-o-War"
  pm_military_shipbuilding_wooden_2: "Screw Frigates"
+
+ 

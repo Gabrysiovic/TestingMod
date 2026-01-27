@@ -45,23 +45,23 @@ broken_truce_10_years = {
 #Slipstream modifiers -Akiko
 AA_pro_slipstream = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	country_allow_slipstream_bool = yes
+	country_AA_slipstream_bool = yes
 	country_production_tech_spread_mult = 0.2
 }
 
 AA_mil_slipstream = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-	country_allow_slipstream_bool = yes
+	country_AA_slipstream_bool = yes
 	country_military_tech_spread_mult = 0.2
 }
 
 AA_soc_slipstream = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	country_allow_slipstream_bool = yes
+	country_AA_slipstream_bool = yes
 	country_society_tech_spread_mult = 0.2
 }
 
-RP_restoration = {
+RP_restoration = { 
 	##By Gabriel, this is purely RP
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_democracy_positive.dds
 	country_prestige_mult = 0

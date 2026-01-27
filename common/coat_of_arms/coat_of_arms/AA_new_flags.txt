@@ -1,19 +1,22 @@
 INO_republic = {
 	pattern = "pattern_solid.tga"
 	color1 = {
-		219
-		128
-		0
-	}
-	color2 = {
-		33
-		183
-		197
+		185
+		100
+		80
 	}
 	colored_emblem = {
 		texture = "ce_solid.dds"
-		color1 = color2
-		color2 = color2
+		color1 = {
+			30
+			70
+			80
+		}
+		color2 = {
+			30
+			70
+			80
+		}
 		instance = {
 			position = {
 				0.5
@@ -28,11 +31,11 @@ INO_republic = {
 	colored_emblem = {
 		texture = "indochina.dds"
 		color1 = "white"
-		color2 = color1
+		color2 = "red"
 		instance = {
 			scale = {
-				0.45
-				0.45
+				0.33
+				0.33
 			}
 			position = {
 				0.5
@@ -66,8 +69,8 @@ INO_communist = {
 		color2 = "yellow"
 		instance = {
 			scale = {
-				0.45
-				0.45
+				0.33
+				0.33
 			}
 			position = {
 				0.5
@@ -157,23 +160,16 @@ IMF_communist = {
 	}
 }
 
+
 IRN = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 	color2 = "white"
 	color3 = "black"
+
 	textured_emblem = {
 		texture = "flag_per_1.dds"
-		instance = {
-			scale = {
-				1
-				1
-			}
-			position = {
-				0.5
-				0.5
-			}
-		}
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
 	}
 }
 
@@ -182,17 +178,9 @@ IRN_republic = {
 	color1 = "blue"
 	color2 = "white"
 	color3 = "black"
+
 	textured_emblem = {
 		texture = "flag_per_2.dds"
-		instance = {
-			scale = {
-				1
-				1
-			}
-			position = {
-				0.5
-				0.5
-			}
-		}
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
 	}
 }

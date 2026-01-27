@@ -3,6 +3,9 @@
 		create_character = {
 			# Charles XIV John of Sweden, born Jean Bernadotte, one of Napoleon's former marshals
 			template = is_swe_karl_14_johan
+			on_created = {
+				set_variable = charles_xv_ruler_var
+			}
 		}
 		create_character = {
 			# Oscar I of Sweden

@@ -94,8 +94,8 @@
     AA_pro_slipstream: "Production Slipstream"
     AA_mil_slipstream: "Military Slipstream"
     AA_soc_slipstream: "Society Slipstream"
-    country_allow_slipstream_bool: "@information! Slipstream Explanation"
-    country_allow_slipstream_bool_desc: "#b;white This modifier is based on your nation rank and gets worse the farther down that specific tech tree you are.#! \n [Concept('great_power', 'Great Powers')]: Tier 1– #b;g +10%#! Tier 2– #b;g +5%#! Tier 3-5– #b;white N/A#! \n [Concept('major_power', 'Major Powers')]: Tier 1– #b;g +15%#! Tier 2– #b;g +10%#! Tier 3– #b;g +5%#! Tier 4-5– #b;white N/A#! \n [Concept('minor_power', 'Minor Powers')]: Tier 1– #b;g +20%#! Tier 2– #b;g +15%#! Tier 3– #b;g +10%#! Tier 4– #b;g +5%#! Tier 5– #b;white N/A#! \n Subjects do #b not#! recieve these modifiers."
+    country_AA_slipstream_bool: "@information! Slipstream Explanation"
+    country_AA_slipstream_bool_desc: "#b;white This modifier is based on your nation rank and gets worse the farther down that specific tech tree you are.#! \n [Concept('great_power', 'Great Powers')]: Tier 1– #b;g +10%#! Tier 2– #b;g +5%#! Tier 3-5– #b;white N/A#! \n [Concept('major_power', 'Major Powers')]: Tier 1– #b;g +15%#! Tier 2– #b;g +10%#! Tier 3– #b;g +5%#! Tier 4-5– #b;white N/A#! \n [Concept('minor_power', 'Minor Powers')]: Tier 1– #b;g +20%#! Tier 2– #b;g +15%#! Tier 3– #b;g +10%#! Tier 4– #b;g +5%#! Tier 5– #b;white N/A#! \n Subjects do #b not#! recieve these modifiers."
     #Slipstream activation event -Akiko
     AA_slipstream_event.1.t: "The Advent of Global Mass Communication"
     AA_slipstream_event.1.d: "As communication has become faster, knowledge of various inventions has spread around the world leading to their faster adoption in less developed societies."
@@ -105,7 +105,7 @@
     AA_spread_dominion_reaction: "Our gracious overlord, [SCOPE.sCountry('AA_overlord_scope').GetName], has implemented censorship across their empire, but has decided to honour our #tooltippable;tooltip:da_knowledge_sharing_desc preexisting treaty#! and make a special exception for us to continue enjoying this freedom."
     AA_spread_subject_reaction: "Our overlord, [SCOPE.sCountry('AA_overlord_scope').GetName], has installed censorship in our nation in order to clamp down on the spread of their innovations. If we wish to modernise to their level, we have to ask them to #tooltippable;tooltip:da_knowledge_sharing_desc lift the ban#! for us."
     AA_slipstream_event.1.a: "[ROOT.GetCountry.GetCustom('AA_spread_action')]"
-    AA_slipstream_event.1.a.tt: "#italic #tooltippable;tooltip:country_allow_slipstream_bool_desc Slipstream#! is enabled#!"
+    AA_slipstream_event.1.a.tt: "#italic #tooltippable;tooltip:country_AA_slipstream_bool_desc Slipstream#! is enabled#!"
     AA_spread_great_action: "Crackdown on it immediately, we can't afford to let it get in the hands of other powers!"
     AA_spread_major_action: "Restrict the flow of information, but don't censor is completely."
     AA_spread_minor_action: "The wonders of this age!"
@@ -140,7 +140,6 @@
     intervene_in_war_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetAdjective] Intervention in [TARGET_COUNTRY.GetName]"
     intervene_in_war_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] has announced that it will give full military support to [TARGET_COUNTRY.GetName] in its war. The [INITIATOR_COUNTRY.GetAdjective] Armed Forces will now join the [TARGET_COUNTRY.GetAdjective] Armed Forces in its military operations."
     intervene_in_war_no_truce: "Has no truce with the enemy war leader."
-    intervene_in_war_offensive_relations: "$DIPLO_ACTION_RELATIONS$ are at least $relations_cordial$ (since target is the attacker)."
     #Join war
     join_war: "Join War"
     join_war_effects_desc: "• An agreement established by one [concept_country] targeting another, where the first $concept_country$ shall join any [concept_war] where the second $concept_country$ is the [concept_war_leader]."
