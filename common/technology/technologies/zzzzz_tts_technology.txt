@@ -1,367 +1,240 @@
 ﻿### ERA 1 Pre-1836
-
 # Vanilla has Paddle Steamer in this era
-
-REPLACE_OR_CREATE:admiralty = {
-	# Unlocks Naval Base building
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/admiralty.dds"
-	category = military
-	
-	modifier = {
-		state_building_naval_base_max_level_add = 40
-    }
-	
-	unlocking_technologies = {
-		navigation
-	}	
-
-	ai_weight = {
-		value = 3 # Very important in general
-	}
-}
-
-REPLACE_OR_CREATE:fully_rigged_ships = {
+fully_rigged_ships = {
 	era = era_1
 	texture = "gfx/interface/icons/goods_icons/man_o_wars.dds"
 	category = military
-	
 	#Unlocks Ships of the Line and Frigates. Disables Carracks and Caravels
-	
 	unlocking_technologies = {
 		admiralty
 	}
-	
 	ai_weight = {
-		value = 1	
+		value = 1
 	}
 }
 
-REPLACE_OR_CREATE:paddle_steamer = {
+REPLACE:paddle_steamer = {
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/paddle_steamer.dds"
 	category = military
-	
 	modifier = {
 		country_convoys_capacity_mult = 0.1
 	}
-	
 	unlocking_technologies = {
 		fully_rigged_ships
 	}
-	
 	ai_weight = {
 		value = 1
-		
 		# Important for naval powers
 		if = {
-			limit = { navy_size >= 20 }
+			limit = {
+				navy_size >= 20
+			}
 			add = 0.5
-		}	
+		}
 	}
 }
 
 ### ERA 2 1836-1861
-
 # Vanilla has Screw Frigate in this era
-
-REPLACE_OR_CREATE:power_of_the_purse = {
+REPLACE:power_of_the_purse = {
 	# Unlocks the Power of the Purse PM in Naval Bases
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/power_of_the_purse.dds"
 	category = military
-	
 	modifier = {
+		state_building_naval_base_max_level_add = 10
 	}
-	
-	unlocking_technologies = {	
+	unlocking_technologies = {
 		admiralty
 	}
-
 	ai_weight = {
 		value = 1
 	}
 }
 
-
 ### ERA 3 1862-1886
-
 # Vanilla has Monitor in this era, which we remove
 # It also has Ironclad, which we keep
-
-REPLACE_OR_CREATE:jeune_ecole = {
+REPLACE:jeune_ecole = {
 	# Unlocks Jeune Ecole PM in Naval Base
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/jeune_ecole.dds"
 	category = military
-	
-	modifier = {}
-	
-	unlocking_technologies = {	
+	modifier = {
+		state_building_naval_base_max_level_add = 10
+	}
+	unlocking_technologies = {
 		power_of_the_purse
 	}
-
 	ai_weight = {
 		value = 1
 	}
 }
 
-REPLACE_OR_CREATE:monitor_tech = {
+REPLACE:monitor_tech = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/monitor_tech.dds"
+	category = military
+	can_research = no
 	ai_weight = {
 		value = 0
 	}
-
-	can_research = no
 }
 
 ### ERA 4 1887-1911
+REPLACE:landing_craft = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/landing_craft.dds"
+	category = military
+	modifier = {
+		country_ignores_landing_craft_penalty_bool = yes
+	}
+	unlocking_technologies = {
+		jeune_ecole
+	}
+	ai_weight = {
+		value = 1
+		# Important for naval powers
+		if = {
+			limit = {
+				navy_size >= 20
+			}
+			add = 1
+		}
+	}
+}
 
-REPLACE_OR_CREATE:destroyer = {
+REPLACE:destroyer = {
 	# Unlocks Destroyer PM on Naval Bases
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/destroyers.dds"
 	category = military
-	
-	unlocking_technologies = {	
+	unlocking_technologies = {
 		self_propelled_torpedoes
 	}
-	
 	ai_weight = {
 		value = 1
 	}
 }
 
-REPLACE_OR_CREATE:predreadnought_tech = {
+predreadnought_tech = {
 	# Unlocks Pre-dreadnoughts PM in Naval Bases
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/predreadnought_tech.dds"
 	category = military
-	
 	modifier = {
 	}
-	
 	unlocking_technologies = {
 		ironclad_tech
 	}
-
 	ai_weight = {
 		value = 1
-		
 		# Important for naval powers
 		if = {
-			limit = { navy_size >= 20 }
+			limit = {
+				navy_size >= 20
+			}
 			add = 0.5
 		}
-		
-		if = {
-			limit = {
-				has_journal_entry = je_american_modernization
-			}
-			add = 10
-		}
 	}
 }
 
-
-REPLACE_OR_CREATE:steel_shipbuilding_tech = {
-	# Unlocks Steel Shipbuilding PM in Shipyards
-	era = era_4
-	texture = "gfx/interface/icons/invention_icons/predreadnought_tech.dds"
-	category = military
-	
-	modifier = {
-	}
-	
-	unlocking_technologies = {
-	}
-
-	ai_weight = {
-		value = 0
-	}
-
-	can_research = no
-}
-
-REPLACE_OR_CREATE:dreadnought = {
+REPLACE:dreadnought = {
 	# Unlocks Dreadnoughts PM in Naval Bases
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/dreadnought.dds"
 	category = military
-	
 	modifier = {
 	}
-	
 	unlocking_technologies = {
 		predreadnought_tech
 	}
-
 	ai_weight = {
 		value = 1
-		
 		# Important for naval powers
 		if = {
-			limit = { navy_size >= 20 }
+			limit = {
+				navy_size >= 20
+			}
 			add = 0.5
-		}			
+		}
 	}
 }
 
-REPLACE_OR_CREATE:turbine_powered_ships_tech = {
-	# Unlocks Steam Turbine PM in Shipyards
-	era = era_4
-	texture = "gfx/interface/icons/invention_icons/dreadnought.dds"
-	category = military
-	
-	modifier = {
-	}
-	
-	unlocking_technologies = {
-		steel_shipbuilding_tech
-	}
-
-	ai_weight = {
-		value = 0
-	}
-
-	can_research = no
-}
-
-REPLACE_OR_CREATE:sea_lane_strategies = {
+REPLACE:sea_lane_strategies = {
 	# Unlocks Sea Lane Strategies PM in Naval Bases
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/sea_lane_strategies.dds"
 	category = military
-	
-	modifier = {}
-	
-	unlocking_technologies = {	
+	modifier = {
+		state_building_naval_base_max_level_add = 10
+	}
+	unlocking_technologies = {
 		jeune_ecole
 		predreadnought_tech
 	}
-
 	ai_weight = {
 		value = 1
 	}
 }
 
-
 ### ERA 5 1911-1936
-
-REPLACE_OR_CREATE:battleship_tech = {
+REPLACE:battleship_tech = {
 	# Unlocks Battleships PM in Naval Bases
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/battleship_tech.dds"
 	category = military
-	
 	modifier = {
 	}
-	
 	unlocking_technologies = {
 		dreadnought
 	}
-
 	ai_weight = {
 		value = 1
-		
 		# Important for naval powers
 		if = {
-			limit = { navy_size >= 20 }
+			limit = {
+				navy_size >= 20
+			}
 			add = 0.5
-		}			
+		}
 	}
 }
 
-REPLACE_OR_CREATE:carrier_tech = {
+REPLACE:carrier_tech = {
 	# Unlocks Experimental Carriers PM in Naval Bases
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/carrier_tech.dds"
 	category = military
-	
-	unlocking_technologies = {	
+	unlocking_technologies = {
 		dreadnought
 	}
-
 	ai_weight = {
 		value = 1
-		
 		# Important for naval powers
 		if = {
-			limit = { navy_size >= 20 }
+			limit = {
+				navy_size >= 20
+			}
 			add = 0.5
-		}			
+		}
 	}
 }
 
-REPLACE_OR_CREATE:fleet_carrier_tech = {
-	# Unlocks Fleet Carriers PM in Naval Bases
-	era = era_5
-	texture = "gfx/interface/icons/invention_icons/fleet_carrier_tech.dds"
-	category = military
-	
-	unlocking_technologies = {	
-		carrier_tech
-	}
-
-	ai_weight = {
-		value = 0
-	}
-
-	can_research = no
-}
-
-REPLACE_OR_CREATE:armored_carrier_tech = {
-	# Unlocks Fleet Carriers PM in Naval Bases
-	era = era_5
-	texture = "gfx/interface/icons/invention_icons/armored_carrier_tech.dds"
-	category = military
-	
-	unlocking_technologies = {	
-		carrier_tech
-	}
-
-	ai_weight = {
-		value = 0
-	}
-
-	can_research = no
-}
-
-REPLACE_OR_CREATE:battlefleet_tactics = {
+REPLACE:battlefleet_tactics = {
 	# Unlocks Battlefleet Tactics PM in Naval Bases
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/battlefleet_tactics.dds"
 	category = military
-	
 	modifier = {
 		state_building_naval_base_max_level_add = 10
 	}
-	
-	unlocking_technologies = {	
+	unlocking_technologies = {
 		battleship_tech
 		sea_lane_strategies
 	}
-
 	ai_weight = {
 		value = 1
 	}
-}
-
-REPLACE_OR_CREATE:large_scale_shipbuilding_tech = {
-	# Unlocks Battleships PM in Naval Bases
-	era = era_5
-	texture = "gfx/interface/icons/invention_icons/battleship_tech.dds"
-	category = military
-	
-	modifier = {
-	}
-	
-	unlocking_technologies = {
-		turbine_powered_ships_tech
-	}
-
-	ai_weight = {
-		value = 0
-	}
-
-	can_research = no
 }
