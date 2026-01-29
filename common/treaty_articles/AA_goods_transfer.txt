@@ -1,4 +1,5 @@
 ﻿### By Oaken: Last updated 28/12/2025
+### Updated by Gabriel 29/01/2026
 REPLACE:goods_transfer = {
 	kind = directed
 	cost = 10
@@ -159,16 +160,18 @@ REPLACE:goods_transfer = {
 				exists = "scope:article.input_market_goods(scope:target_country)"
 			}
 			"scope:article.input_market_goods(scope:source_country)" ?= {
-				value = {
+				value = 
+				{
 					add = market_export_cap
 					subtract = treaty_exports
+					############ TECH
 					if = {
 						limit = {
 							"scope:source_country" = {
 								has_technology_researched = concrete_dockyards
 							}
 						}
-						multiply = 1
+						multiply = 0.5
 					}
 					else_if = {
 						limit = {
@@ -176,7 +179,7 @@ REPLACE:goods_transfer = {
 								has_technology_researched = floating_harbor
 							}
 						}
-						multiply = 0.6
+						multiply = 0.3
 					}
 					else_if = {
 						limit = {
@@ -184,10 +187,10 @@ REPLACE:goods_transfer = {
 								has_technology_researched = hydraulic_cranes
 							}
 						}
-						multiply = 0.3
+						multiply = 0.15
 					}
 					else = {
-						multiply = 0.15
+						multiply = 0.10
 					}
 				}
 			}
@@ -196,29 +199,67 @@ REPLACE:goods_transfer = {
 					add = market_import_cap
 					subtract = treaty_imports
 				}
-				"scope:target_country" ?= {
+				######### TECH
+				"scope:source_country" ?= {
 					if = {
 						limit = {
 							has_technology_researched = concrete_dockyards
 						}
-						multiply = 1
+						multiply = 0.5
 					}
 					else_if = {
 						limit = {
 							has_technology_researched = floating_harbor
 						}
-						multiply = 0.6
+						multiply = 0.3
 					}
 					else_if = {
 						limit = {
 							has_technology_researched = hydraulic_cranes
 						}
-						multiply = 0.3
-					}
-					else = {
 						multiply = 0.15
 					}
+					else = {
+						multiply = 0.10
+					}	
 				}
+				########## INFAMY - source
+				"scope:source_country" ?= {
+					if = {
+						limit = {
+							infamy >= 100
+						}
+						multiply = 0.1
+					}
+					else_if = {
+						limit = {
+							infamy >= 50
+						}
+						multiply = 0.75
+					}
+					else = {
+						multiply = 1
+					}	
+				}
+				#### INFAMY - TARGET
+				"scope:target_country" ?= {
+					if = {
+						limit = {
+							infamy >= 100
+						}
+						multiply = 0.1
+					}
+					else_if = {
+						limit = {
+							infamy >= 50
+						}
+						multiply = 0.75
+					}
+					else = {
+						multiply = 1
+					}	
+				}
+				
 			}
 		}
 		min = 10
