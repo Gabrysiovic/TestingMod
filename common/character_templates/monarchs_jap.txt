@@ -134,8 +134,10 @@ is_jap_komei = {
     dna = dna_jap_komei
     culture = cu:japanese
     interest_group = ig_armed_forces
+	ideology = ideology_modernizer_leader
     traits = {
         reserved # ditto
+		sickly
     }
 }
 is_jap_meiji = {
@@ -146,6 +148,7 @@ is_jap_meiji = {
     dna = dna_jap_meiji
     culture = cu:japanese
     interest_group = ig_industrialists
+	ideology = ideology_modernizer_leader
     traits = {
         innovative
         charismatic
@@ -160,7 +163,9 @@ is_jap_taisho = {
     dna = dna_jap_taisho
     culture = cu:japanese
 	interest_group = ig_industrialists
+	ideology = ideology_modernizer_leader
 	traits = {
+		sickly
 	}
 }
 is_jap_showa = {
@@ -171,6 +176,8 @@ is_jap_showa = {
 	dna = dna_jap_showa
 	culture = cu:japanese
 	interest_group = ig_armed_forces
+	ideology = ideology_modernizer_leader
 	traits = {
+		wrathful
 	}
 }

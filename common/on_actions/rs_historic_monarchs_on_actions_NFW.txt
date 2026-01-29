@@ -12,9 +12,6 @@ rs_yamato_historic_monarch_heir_handler = {
 				rs_st_character_is_jap_showa	= yes
 			}
 		}
-		NOT = {
-			exists = heir
-		}
 		has_variable = rs_jap_yamato_dynasty
 		var:rs_jap_yamato_dynasty < 4
 		government_transfer_of_power = hereditary
@@ -374,10 +371,7 @@ rs_chakri_historic_monarch_heir_handler = {
 				rs_st_character_is_sia_prajadhipok			= yes
 				rs_st_character_is_sia_ananda_mahidol		= yes
 				rs_st_character_is_sia_bhumibol_adulyadej	= yes
-			}
-		}
-		NOT = {
-			exists = heir
+			} 
 		}
 		has_variable = rs_sia_chakri_dynasty
 		var:rs_sia_chakri_dynasty < 6
