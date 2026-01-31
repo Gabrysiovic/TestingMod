@@ -1,0 +1,15 @@
+﻿l_braz_por:
+
+
+concept_navy_professionalism: "Profissionalismo da Marinha"
+concept_navy_professionalism_desc: "O Profissionalismo da Marinha é uma medida do nível geral de prontidão da marinha de um país, incluindo o treinamento e disciplina entre os marinheiros, e o nível de corrupção entre os oficiais. O nível de Profissionalismo da Marinha tem impacto no combate e pode desencadear eventos aleatórios ou novas opções.\n\nTodo mês, o Profissionalismo da Marinha tende a se aproximar de sua #BOLD posição natural#!, que é determinada por fatores como leis, salários militares e presença de edifícios especiais.\n\nUma maneira de temporariamente aumentar a posição natural do Profissionalismo da Marinha é tomando uma Decisão que pode ser selecionada periodicamente na guia Decisões.[AddLocalizationIf(GetPlayer.IsValid,'concept_navy_professionalism_ingame_added')]"
+ concept_navy_professionalism_ingame_added: "\n\nSeu Profissionalismo da Marinha atual é [GetPlayer.MakeScope.Var('navy_professionalism').GetValue|0]. Isso é considerado [GetPlayer.GetCustom('navy_professionalism_desc')]. Sua posição natural do Profissionalismo da marinha é [GetPlayer.MakeScope.ScriptValue('navyprof_natural_position')|0]."
+
+
+ concept_main_naval_powers: "Principais Potências Navais"
+ concept_main_naval_powers_desc: "As Principais Potências Navais são os 7 países [Concept('concept_subject', 'independentes')], [Concept('concept_recognized_power', 'reconhecidos')] com a maior projeção de poder naval do mundo."
+
+ concept_naval_armor: "Blindagem"
+ concept_naval_armor_desc: "Blindagem é a capacidade de um navio para resistir Penetração. Se a Blindagem média de uma frota é maior que a [concept_naval_pen] média inimiga, a frota inimiga tem a chance de receber a condição de batalha [GetBattleCondition('battle_condition_cant_penetrate_ship').GetName]."
+ concept_naval_pen: "Penetração"
+ concept_naval_pen_desc: "Penetração é a capacidade de um navio para derrotar Blindagem. Se a Penetração média de uma frota é menor que a [concept_naval_armor] da frota inimiga, aquela frota tem a chance de receber a condição de batalha [GetBattleCondition('battle_condition_cant_penetrate_ship').GetName]."

@@ -1,0 +1,40 @@
+﻿l_braz_por:
+
+
+PANEL_NAVY_PROFESSIONALISM: "@navyprof! [Country.MakeScope.Var('navy_professionalism').GetValue|1v]"
+PANEL_NAVY_PROFESSIONALISM_DESCRIPTION: "Profissionalismo da Marinha"
+
+NAVY_PROFESSIONALISM_TOOLTIP: "A [Country.GetCustom('name_of_navy')] possui [Country.GetCustom('navy_professionalism_desc')] [concept_navy_professionalism]. Isso resulta em:\n[Country.GetCustom('navy_professionalism_effects_desc')]\n$TOOLTIP_DELIMITER$\nO Profissionalismo da Marinha tem a posição natural de #white;bold [Country.MakeScope.ScriptValue('navyprof_natural_position')|0]#!. Seu Profissionalismo da Marinha vai mudar em [Country.MakeScope.ScriptValue('navyprof_monthly_change')|1+] este mês."
+
+ high_navyprof_effects: "[GetStaticModifier('high_navy_prof_modifier').GetDesc]"
+ medium_navyprof_effects: "[GetStaticModifier('medium_navy_prof_modifier').GetDesc]"
+ low_navyprof_effects: "[GetStaticModifier('low_navy_prof_modifier').GetDesc]"
+ very_low_navyprof_effects: "[GetStaticModifier('very_low_navy_prof_modifier').GetDesc]"
+
+
+high_professionalism: "#P ALTO#!"
+medium_professionalism: "#Yellow MÉDIO#!"
+low_professionalism: "#Gold BAIXO#!"
+very_low_professionalism: "#N MUITO BAIXO#!"
+
+INCREASE_NAVY_PROFESSIONALISM: "Isso irá #BOLD aumentar#! a posição natural do [concept_navy_professionalism] em @navyprof!#BOLD $VALUE|0$#! por 3 anos."
+DECREASE_NAVY_PROFESSIONALISM: "Isso irá #BOLD diminuir#! a posição natural do [concept_navy_professionalism] em @navyprof!#BOLD $VALUE|0$#! por 3 anos."
+
+ADD_NAVAL_INNOVATIONS: "Adiciona #BOLD $VALUE|0$#! Inovações Navais."
+
+navyprof_tooltip_format: "$VALUE|-=1$ $KEY$"
+navyprof_tooltip_mult_format: "$VALUE|-%1$ $KEY$"
+
+navyprof_base_decay_desc: "do decaimento base"
+navyprof_peace_decay_desc: "de estar em paz"
+navyprof_low_wages_decay_desc: "de salários militares baixos"
+navyprof_low_literacy_decay_desc: "de baixa alfabetização"
+navyprof_very_low_literacy_decay_desc: "de alfabetização muito baixa"
+navyprof_admiralty_decay_desc: "do Almirantado"
+navyprof_laws_desc: "das leis"
+
+ MILITARY_FORMATION_PENETRATION_ICON: "@penetration!"
+ MILITARY_FORMATION_ARMOR_ICON: "@armor!"
+
+ MILITARY_FORMATION_PENETRATION_TOOLTIP: "#header [concept_naval_pen]#!\n@penetration! [MilitaryFormation.MakeScope.ScriptValue('formation_penetration')|1] [concept_naval_pen] on average"
+ MILITARY_FORMATION_ARMOR_TOOLTIP: "#header [concept_naval_armor]#!\n@armor! [MilitaryFormation.MakeScope.ScriptValue('formation_armor')|1] [concept_naval_armor] on average"
