@@ -6,7 +6,7 @@
  concept_main_naval_powers: "Main Naval Powers"
  concept_main_naval_powers_desc: "The Main Naval Powers are the 7 [Concept('concept_subject', 'independent')], [Concept('concept_recognized_power', 'recognized')] countries with the highest Navy Power Projection in the world."
 
- concept_naval_armor: "Armor"
- concept_naval_armor_desc: "Armor is a ship's ability to resist Penetration. If a fleet's average Armor is larger than the opposing fleet's average [concept_naval_pen], the opposing fleet has a chance to receive the [GetBattleCondition('battle_condition_cant_penetrate_ship').GetName] battle condition."
- concept_naval_pen: "Penetration"
- concept_naval_pen_desc: "Penetration is a ship's ability to overcome Armor. If a fleet's average Penetration is less than the opposing fleet's average [concept_naval_armor], the fleet has a chance to receive the [GetBattleCondition('battle_condition_cant_penetrate_ship').GetName] battle condition."
+ concept_navy_armor: "Armor"
+ concept_navy_armor_desc: "Armor is a ship's ability to resist Penetration. If a fleet's average Armor is larger than the opposing fleet's average [concept_navy_pen], the opposing fleet has a chance to receive the [GetBattleCondition('battle_condition_cant_penetrate_ship').GetName] battle condition."
+ concept_navy_pen: "Penetration"
+ concept_navy_pen_desc: "Penetration is a ship's ability to overcome Armor. If a fleet's average Penetration is less than the opposing fleet's average [concept_navy_armor], the fleet has a chance to receive the [GetBattleCondition('battle_condition_cant_penetrate_ship').GetName] battle condition."
