@@ -559,10 +559,10 @@
  building_group_bg_navy_soldiers_standard_of_living_add: "Naval Base Servicemen Standard of Living"
  building_group_bg_navy_soldiers_standard_of_living_add_desc: "A change in the Standard of Living of servicemen in Naval Bases"
 
- unit_naval_armor_add: "[concept_naval_armor]"
- unit_naval_armor_add_desc: "A change in the armor of the unit"
- unit_naval_pen_add: "[concept_naval_pen]"
- unit_naval_pen_add_desc: "A change in the penetration of the unit"
+ unit_navy_armor_add: "[concept_navy_armor]"
+ unit_navy_armor_add_desc: "A change in the armor of the unit"
+ unit_navy_pen_add: "[concept_navy_pen]"
+ unit_navy_pen_add_desc: "A change in the penetration of the unit"
 
 # Goods
  goods_input_tts_capital_ships_add: "@tts_capital_ships! Capital Ships input"

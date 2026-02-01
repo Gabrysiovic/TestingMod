@@ -9,7 +9,7 @@ concept_navy_professionalism_desc: "O Profissionalismo da Marinha é uma medida 
  concept_main_naval_powers: "Principais Potências Navais"
  concept_main_naval_powers_desc: "As Principais Potências Navais são os 7 países [Concept('concept_subject', 'independentes')], [Concept('concept_recognized_power', 'reconhecidos')] com a maior projeção de poder naval do mundo."
 
- concept_naval_armor: "Blindagem"
- concept_naval_armor_desc: "Blindagem é a capacidade de um navio para resistir Penetração. Se a Blindagem média de uma frota é maior que a [concept_naval_pen] média inimiga, a frota inimiga tem a chance de receber a condição de batalha [GetBattleCondition('battle_condition_cant_penetrate_ship').GetName]."
- concept_naval_pen: "Penetração"
- concept_naval_pen_desc: "Penetração é a capacidade de um navio para derrotar Blindagem. Se a Penetração média de uma frota é menor que a [concept_naval_armor] da frota inimiga, aquela frota tem a chance de receber a condição de batalha [GetBattleCondition('battle_condition_cant_penetrate_ship').GetName]."
+ concept_navy_armor: "Blindagem"
+ concept_navy_armor_desc: "Blindagem é a capacidade de um navio para resistir Penetração. Se a Blindagem média de uma frota é maior que a [concept_navy_pen] média inimiga, a frota inimiga tem a chance de receber a condição de batalha [GetBattleCondition('battle_condition_cant_penetrate_ship').GetName]."
+ concept_navy_pen: "Penetração"
+ concept_navy_pen_desc: "Penetração é a capacidade de um navio para derrotar Blindagem. Se a Penetração média de uma frota é menor que a [concept_navy_armor] da frota inimiga, aquela frota tem a chance de receber a condição de batalha [GetBattleCondition('battle_condition_cant_penetrate_ship').GetName]."

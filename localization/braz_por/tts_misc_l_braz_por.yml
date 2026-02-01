@@ -570,10 +570,10 @@
   building_group_bg_navy_soldiers_standard_of_living_add: "Padrão de Vida dos Militares de Base Naval"
   building_group_bg_navy_soldiers_standard_of_living_add_desc: "Uma mudança no padrão de vida de militares empregados em bases navais"
 
-  unit_naval_armor_add: "[concept_naval_armor]"
-  unit_naval_armor_add_desc: "Uma mudança da blindagem da unidada"
-  unit_naval_pen_add: "[concept_naval_pen]"
-  unit_naval_pen_add_desc: "Uma mudança da penetração da unidade"
+  unit_navy_armor_add: "[concept_navy_armor]"
+  unit_navy_armor_add_desc: "Uma mudança da blindagem da unidada"
+  unit_navy_pen_add: "[concept_navy_pen]"
+  unit_navy_pen_add_desc: "Uma mudança da penetração da unidade"
 
 
   # Goods
