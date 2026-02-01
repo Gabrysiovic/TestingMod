@@ -1,4 +1,4 @@
-﻿l_english:
+﻿l_turkish:
  concept_navy_professionalism: "Navy Professionalism"
  concept_navy_professionalism_desc: "Navy Professionalism is a measure of the overall level of readiness of a country's navy, including training and discipline among the sailors, and the level of corruption within the officer staff. The level of Navy Professionalism has an impact in combat, and might trigger random events or new options.\n\nEvery month, Navy Professionalism will trend towards its #BOLD natural position#!, which is determined by factors such as laws, military wages and special buildings.\n\nOne way of temporarily increasing your Navy Professionalism natural position is through a Decision that can be periodically taken on the Decisions tab.[AddLocalizationIf(GetPlayer.IsValid,'concept_navy_professionalism_ingame_added')]"
  concept_navy_professionalism_ingame_added: "\n\nYour currently Navy Professionalism is [GetPlayer.MakeScope.Var('navy_professionalism').GetValue|0]. It is considered [GetPlayer.GetCustom('navy_professionalism_desc')]. Your Navy Professionalism natural position is [GetPlayer.MakeScope.ScriptValue('navyprof_natural_position')|0]."

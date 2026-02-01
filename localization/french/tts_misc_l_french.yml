@@ -40,9 +40,9 @@
  pmg_tts_naval_yards: "$pm_base$"
  pmg_ownership_capital_building_navy_yards: "$pmg_ownership$"
  pm_military_shipbuilding_ironclad: "Ironclads"
- pm_military_shipbuilding_steel: "Steel-Hulled Ships"
+ pm_military_shipbuilding_steam: "Steel-Hulled Ships"
  pm_military_shipbuilding_turbine: "Turbine-Powered Ships"
- pm_military_shipbuilding_arc_welding: "Large Battleships"
+ pm_military_shipbuilding_steam_2: "Large Battleships"
 
 
  # Naval Base
@@ -534,9 +534,9 @@
 # Custom triggers
 ######
 
- predreadnought_trigger_tt: "At least 5 levels of [GetBuildingType('building_military_shipyards').GetName] with ironclad production active"
- dreadnought_trigger_tt: "At least 10 levels of [GetBuildingType('building_military_shipyards').GetName] with steel shipbuilding active"
- battleship_trigger_tt: "At least 15 levels of [GetBuildingType('building_military_shipyards').GetName] with turbine shipbuilding active"
+ predreadnought_trigger_tt: "At least 5 levels of [GetBuildingType('building_military_shipyard').GetName] with ironclad production active"
+ dreadnought_trigger_tt: "At least 10 levels of [GetBuildingType('building_military_shipyard').GetName] with steel shipbuilding active"
+ battleship_trigger_tt: "At least 15 levels of [GetBuildingType('building_military_shipyard').GetName] with turbine shipbuilding active"
  high_navyprof_option_tt: "This option is available because of our #p HIGH#! @navyprof![concept_navy_professionalism]"
 
 ######
