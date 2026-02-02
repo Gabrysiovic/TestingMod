@@ -1,4 +1,4 @@
-TRY_REPLACE:je_meiji_restoration = {
+﻿TRY_REPLACE:je_meiji_restoration = {
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
 	group = je_group_meiji_restoration

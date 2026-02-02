@@ -1,4 +1,4 @@
-INO_republic = {
+﻿INO_republic = {
 	pattern = "pattern_solid.tga"
 	color1 = {
 		219

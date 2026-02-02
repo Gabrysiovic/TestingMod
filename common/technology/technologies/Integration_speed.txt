@@ -1,4 +1,4 @@
-INJECT:centralization = {
+﻿INJECT:centralization = {
 	
 	modifier = {
 		state_incorporation_speed_mult = 0.05
