@@ -1,9 +1,7 @@
 ﻿l_english:
- #####
- # Technology
- #####
- fully_rigged_ships: "Fully Rigged Ships"
- fully_rigged_ships_desc: "Ships with a full set of sails can move faster and carry more armament."
+#####
+# Technology
+#####
  dreadnought: "Dreadnought"
  dreadnought_desc: "Equipped with powerful all-big-gun armament and steam turbines, the dreadnought battleship revolutionized naval warfare."
  battleship_tech_desc: "The so-called \"Super-dreadnought battleships\" carry bigger guns, thicker armor and more powerful engines, making the Dreadnought seem obsolete."
@@ -61,3 +59,5 @@
 # Production Methods
  pm_military_shipbuilding_wooden: "Men-o-War"
  pm_military_shipbuilding_wooden_2: "Screw Frigates"
+ pm_military_shipbuilding_steam: "Steel-Hulled Ships"
+ pm_military_shipbuilding_steam_2: "Large Battleships"

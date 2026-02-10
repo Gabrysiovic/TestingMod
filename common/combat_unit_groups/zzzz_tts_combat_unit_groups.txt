@@ -1,10 +1,27 @@
-﻿combat_unit_group_raiding_ship = {
-	type = navy
-	default_group = yes
-	color = {
-		200
-		170
-		20
-	}
-	icon = "gfx/interface/icons/generic_icons/flotillas.dds"
+﻿REPLACE:combat_unit_group_light_ship = {
+    type = navy
+    default_group = yes
+    color = { 121  175  235 }
+    icon = "gfx/interface/icons/generic_icons/flotillas.dds"
+}
+
+REPLACE:combat_unit_group_capital_ship = {
+    type = navy
+    default_group = no
+    color = { 143 63 205 }
+    icon = "gfx/interface/icons/generic_icons/flotillas.dds"
+}
+
+REPLACE:combat_unit_group_support_ship = {
+    type = navy
+    default_group = no
+    color = { 20 210 180 }
+    icon = "gfx/interface/icons/generic_icons/flotillas.dds"
+}
+
+combat_unit_group_raiding_ship = {
+    type = navy
+    default_group = no
+    color = { 200 170 20 }
+    icon = "gfx/interface/icons/generic_icons/flotillas.dds"
 }

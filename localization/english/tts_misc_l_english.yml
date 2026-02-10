@@ -1,48 +1,45 @@
 ﻿l_english:
 
- #####
- # Technology
- #####
+#####
+# Technology
+#####
 
- fully_rigged_ships: "Fully Rigged Ships"
- fully_rigged_ships_desc: "Ships with a full set of sails can move faster and carry more armament."
  predreadnought_tech: "Pre-Dreadnought"
  predreadnought_tech_desc: "With large caliber guns and steel armor, pre-dreadnought battleships are powerful vessels."
+ fully_rigged_ships: "Fully Rigged Ships"
+ fully_rigged_ships_desc: "Ships with a full set of sails can move faster and carry more armament."
 
-######
-# Modifier Types
-######
- unit_navy_armor_add: "[concept_navy_armor]"
- unit_navy_armor_add_desc: "A change in the armor of the unit"
- unit_navy_pen_add: "[concept_navy_pen]"
- unit_navy_pen_add_desc: "A change in the penetration of the unit"
+#####
+# Goods
+#####
 
- #####
- # Goods
- #####
  tts_capital_ships: "Capital Ships"
 
- ######
- # Production Methods
- #####
+######
+# Production Methods
+#####
 
- # Mil Shipyards
+ # Mil Shipyard
  pm_military_shipbuilding_ironclad: "Ironclads"
- pm_military_shipbuilding_steel: "Steel-Hulled Ships"
  pm_military_shipbuilding_turbine: "Turbine-Powered Ships"
- pm_military_shipbuilding_arc_welding: "Large Battleships"
 
 ######
 # Customizable Localization
 ######
+
 # Propellants
  cordite: "Cordite"
  poudre_b: "Poudre B"
- smokeless_powder: "Smokeless Powder"
+ smokeless_powder: "smokeless powder"
 
 ######
-# Custom triggers
+# Modifier Types
 ######
+
+ unit_navy_armor_add: "[concept_navy_armor]"
+ unit_navy_armor_add_desc: "A change in the armor of the unit"
+ unit_navy_pen_add: "[concept_navy_pen]"
+ unit_navy_pen_add_desc: "A change in the penetration of the unit"
 
 # Goods
  goods_input_tts_capital_ships_add: "@tts_capital_ships! Capital Ships input"
@@ -52,6 +49,38 @@
  goods_output_tts_capital_ships_add_desc: "The amount of @tts_capital_ships! Capital Ships produced by buildings"
 
  # Unit combat modifiers
+ unit_combat_unit_type_man_o_war_offense_mult: "$combat_unit_type_man_o_war$ $unit_offense_mult$"
+ unit_combat_unit_type_man_o_war_offense_mult_desc: "$combat_unit_type_man_o_war$ $unit_offense_mult$"
+ unit_combat_unit_type_man_o_war_defense_mult: "$combat_unit_type_man_o_war$ $unit_defense_mult$"
+ unit_combat_unit_type_man_o_war_defense_mult_desc: "$combat_unit_type_man_o_war$ $unit_defense_mult$"
+ unit_combat_unit_type_steam_ship_of_the_line_offense_mult: "$combat_unit_type_steam_ship_of_the_line$ $unit_offense_mult$"
+ unit_combat_unit_type_steam_ship_of_the_line_offense_mult_desc: "$combat_unit_type_steam_ship_of_the_line$ $unit_offense_mult$"
+ unit_combat_unit_type_steam_ship_of_the_line_defense_mult: "$combat_unit_type_steam_ship_of_the_line$ $unit_defense_mult$"
+ unit_combat_unit_type_steam_ship_of_the_line_defense_mult_desc: "$combat_unit_type_steam_ship_of_the_line$ $unit_defense_mult$"
+ unit_combat_unit_type_ironclad_offense_mult: "$combat_unit_type_ironclad$ $unit_offense_mult$"
+ unit_combat_unit_type_ironclad_offense_mult_desc: "$combat_unit_type_ironclad$ $unit_offense_mult$"
+ unit_combat_unit_type_ironclad_defense_mult: "$combat_unit_type_ironclad$ $unit_defense_mult$"
+ unit_combat_unit_type_ironclad_defense_mult_desc: "$combat_unit_type_ironclad$ $unit_defense_mult$"
+ unit_combat_unit_type_predreadnought_offense_mult: "$combat_unit_type_predreadnought$ $unit_offense_mult$"
+ unit_combat_unit_type_predreadnought_offense_mult_desc: "$combat_unit_type_predreadnought$ $unit_offense_mult$"
+ unit_combat_unit_type_predreadnought_defense_mult: "$combat_unit_type_predreadnought$ $unit_defense_mult$"
+ unit_combat_unit_type_predreadnought_defense_mult_desc: "$combat_unit_type_predreadnought$ $unit_defense_mult$"
+ unit_combat_unit_type_dreadnought_offense_mult: "$combat_unit_type_dreadnought$ $unit_offense_mult$"
+ unit_combat_unit_type_dreadnought_offense_mult_desc: "$combat_unit_type_dreadnought$ $unit_offense_mult$"
+ unit_combat_unit_type_dreadnought_defense_mult: "$combat_unit_type_dreadnought$ $unit_defense_mult$"
+ unit_combat_unit_type_dreadnought_defense_mult_desc: "$combat_unit_type_dreadnought$ $unit_defense_mult$"
+ unit_combat_unit_type_battleship_offense_mult: "$combat_unit_type_battleship$ $unit_offense_mult$"
+ unit_combat_unit_type_battleship_offense_mult_desc: "$combat_unit_type_battleship$ $unit_offense_mult$"
+ unit_combat_unit_type_battleship_defense_mult: "$combat_unit_type_battleship$ $unit_defense_mult$"
+ unit_combat_unit_type_battleship_defense_mult_desc: "$combat_unit_type_battleship$ $unit_defense_mult$"
+ unit_combat_unit_type_frigate_offense_mult: "$combat_unit_type_frigate$ $unit_offense_mult$"
+ unit_combat_unit_type_frigate_offense_mult_desc: "$combat_unit_type_frigate$ $unit_offense_mult$"
+ unit_combat_unit_type_frigate_defense_mult: "$combat_unit_type_frigate$ $unit_defense_mult$"
+ unit_combat_unit_type_frigate_defense_mult_desc: "$combat_unit_type_frigate$ $unit_defense_mult$"
+ unit_combat_unit_type_screw_frigate_offense_mult: "$combat_unit_type_screw_frigate$ $unit_offense_mult$"
+ unit_combat_unit_type_screw_frigate_offense_mult_desc: "$combat_unit_type_screw_frigate$ $unit_offense_mult$"
+ unit_combat_unit_type_screw_frigate_defense_mult: "$combat_unit_type_screw_frigate$ $unit_defense_mult$"
+ unit_combat_unit_type_screw_frigate_defense_mult_desc: "$combat_unit_type_screw_frigate$ $unit_defense_mult$"
  unit_combat_unit_type_destroyer_offense_mult: "$combat_unit_type_destroyer$ $unit_offense_mult$"
  unit_combat_unit_type_destroyer_offense_mult_desc: "$combat_unit_type_destroyer$ $unit_offense_mult$"
  unit_combat_unit_type_destroyer_defense_mult: "$combat_unit_type_destroyer$ $unit_defense_mult$"
@@ -67,10 +96,6 @@
  unit_combat_unit_type_submarine_defense_mult: "$combat_unit_type_submarine$ $unit_defense_mult$"
  unit_combat_unit_type_submarine_defense_mult_desc: "$combat_unit_type_submarine$ $unit_defense_mult$"
 
-#####
-# Unit description modifiers
-#####
-
  unit_is_equipped_with_torpedoes_bool: "Unit is Equipped with Torpedoes"
  unit_is_equipped_with_torpedoes_bool_desc: "This unit is equipped with torpedoes. If the enemy side on a battle is composed of less than 50% escort ships, this unit can perform a devastating [GetBattleCondition('battle_condition_torpedo_run').GetName]."
  unit_is_wind_dependent_bool: "Unit Depends on Wind"
@@ -81,6 +106,7 @@
 #####
 # Battle Conditions
 #####
+
  battle_condition_cant_penetrate_ship: "Lacking Penetration"
  battle_condition_cant_penetrate_ship_desc: "This fleet's cannons are lacking in penetration to damage the enemy's armor."
  battle_condition_scouting_advantage: "Scouting Advantage"
@@ -97,10 +123,22 @@
  battle_condition_no_wind_desc: "There's no wind blowing, making this fleet very vulnerable to enemy steam powered ships."
 
 ######
-# Alerts
+# Flotilla Prefixes
+######
+ 
+ flotilla_prefix_ijn: "IJN"
+ flotilla_prefix_hmis: "HMIS"
+ flotilla_prefix_kms: "KMS"
+ flotilla_prefix_plan: "PLAN"
+ flotilla_prefix_cns: "CNS"
+ flotilla_prefix_mn: "MN"
+ flotilla_prefix_hirms: "HIRMS"
+ flotilla_prefix_vmf: "VMF"
+
+######
+# Combat unit grouos
 ######
 
-# Combat unit groups
  combat_unit_group_raiding_ship: "Raiders"
 
 ######

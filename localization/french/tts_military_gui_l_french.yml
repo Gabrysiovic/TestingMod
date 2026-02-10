@@ -1,4 +1,4 @@
-﻿l_english:
+﻿l_french:
 
  PANEL_NAVY_PROFESSIONALISM: "@navyprof! [Country.MakeScope.Var('navy_professionalism').GetValue|1v]"
  PANEL_NAVY_PROFESSIONALISM_DESCRIPTION: "Navy Professionalism"

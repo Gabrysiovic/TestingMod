@@ -1,22 +1,5 @@
-﻿# Base filename: zzzzzz_tts_combat_units.txt
-# By fully enabling ship upgrades the AI better handles fleet modernisation.
-### Vanilla overwrite
-REPLACE:combat_unit_type_carrier = {
-	group = combat_unit_group_light_ship
-	can_build = {
-		always = no
-	}
-}
-
-REPLACE:combat_unit_type_monitor = {
-	group = combat_unit_group_support_ship
-	can_build = {
-		always = no
-	}
-}
-
-### Light ship group
-combat_unit_type_caravel = {
+﻿### Light ship group
+REPLACE:combat_unit_type_caravel = {
 	group = combat_unit_group_light_ship
 	max_manpower = 1000
 	upkeep_modifier = {
@@ -84,7 +67,7 @@ REPLACE:combat_unit_type_frigate = {
 	}
 }
 
-combat_unit_type_screw_frigate = {
+REPLACE:combat_unit_type_screw_frigate = {
 	group = combat_unit_group_light_ship
 	max_manpower = 1000
 	upkeep_modifier = {
@@ -131,6 +114,7 @@ REPLACE:combat_unit_type_destroyer = {
 		unit_navy_armor_add = 3
 		unit_navy_pen_add = 5
 		unit_convoy_defense_mult = 2
+		unit_is_equipped_with_torpedoes_bool = yes
 		unit_blockade_add = 40
 	}
 	unlocking_technologies = {
@@ -164,6 +148,7 @@ REPLACE:combat_unit_type_scout_cruiser = {
 		unit_navy_pen_add = 9
 		unit_convoy_defense_mult = 1
 		unit_convoy_raiding_mult = 1
+		unit_is_equipped_with_torpedoes_bool = yes
 		unit_blockade_add = 65
 	}
 	unlocking_technologies = {
@@ -177,7 +162,7 @@ REPLACE:combat_unit_type_scout_cruiser = {
 }
 
 ### Flagship group
-combat_unit_type_carrack = {
+REPLACE:combat_unit_type_carrack = {
 	group = combat_unit_group_capital_ship
 	max_manpower = 1000
 	upkeep_modifier = {
@@ -189,7 +174,9 @@ combat_unit_type_carrack = {
 		unit_morale_loss_add = 10
 		unit_navy_armor_add = 0.5
 		unit_navy_pen_add = 0.5
-		unit_blockade_add = 5
+		unit_is_wind_dependent_bool = yes
+		unit_convoy_raiding_mult = -0.9
+		unit_blockade_add = 10
 	}
 	unlocking_technologies = {
 	}
@@ -227,6 +214,7 @@ REPLACE:combat_unit_type_man_o_war = {
 		unit_navy_armor_add = 1
 		unit_navy_pen_add = 2
 		unit_is_wind_dependent_bool = yes
+		unit_convoy_raiding_mult = -0.8
 		unit_blockade_add = 70
 	}
 	unlocking_technologies = {
@@ -246,7 +234,7 @@ REPLACE:combat_unit_type_man_o_war = {
 	}
 }
 
-combat_unit_type_steam_ship_of_the_line = {
+REPLACE:combat_unit_type_steam_ship_of_the_line = {
 	group = combat_unit_group_capital_ship
 	max_manpower = 1000
 	upkeep_modifier = {
@@ -258,6 +246,7 @@ combat_unit_type_steam_ship_of_the_line = {
 		unit_offense_add = 25
 		unit_defense_add = 25
 		unit_morale_loss_add = 6
+		unit_convoy_raiding_mult = -0.8
 		unit_navy_armor_add = 1
 		unit_navy_pen_add = 2
 		unit_blockade_add = 140
@@ -291,6 +280,7 @@ REPLACE:combat_unit_type_ironclad = {
 		unit_offense_add = 35
 		unit_defense_add = 35
 		unit_morale_loss_add = 5
+		unit_convoy_raiding_mult = -0.8
 		unit_navy_armor_add = 4
 		unit_navy_pen_add = 3
 		unit_blockade_add = 200
@@ -310,7 +300,7 @@ REPLACE:combat_unit_type_ironclad = {
 	}
 }
 
-combat_unit_type_predreadnought = {
+REPLACE:combat_unit_type_predreadnought = {
 	group = combat_unit_group_capital_ship
 	max_manpower = 1000
 	upkeep_modifier = {
@@ -323,6 +313,7 @@ combat_unit_type_predreadnought = {
 		unit_offense_add = 70
 		unit_defense_add = 70
 		unit_morale_loss_add = 3
+		unit_convoy_raiding_mult = -0.8
 		unit_navy_armor_add = 8
 		unit_navy_pen_add = 9
 		unit_blockade_add = 300
@@ -357,6 +348,7 @@ REPLACE:combat_unit_type_dreadnought = {
 		unit_offense_add = 100
 		unit_defense_add = 100
 		unit_morale_loss_add = 3
+		unit_convoy_raiding_mult = -0.8
 		unit_navy_armor_add = 10
 		unit_navy_pen_add = 13
 		unit_blockade_add = 400
@@ -378,16 +370,17 @@ REPLACE:combat_unit_type_battleship = {
 	group = combat_unit_group_capital_ship
 	max_manpower = 1000
 	upkeep_modifier = {
-		goods_input_tts_capital_ships_add = 8
-		goods_input_ammunition_add = 6
+		goods_input_tts_capital_ships_add = 12
+		goods_input_ammunition_add = 5
 		goods_input_radios_add = 2
-		goods_input_oil_add = 3
-		goods_input_artillery_add = 6
+		goods_input_oil_add = 2
+		goods_input_artillery_add = 4
 	}
 	battle_modifier = {
 		unit_offense_add = 150
 		unit_defense_add = 150
 		unit_morale_loss_add = 3
+		unit_convoy_raiding_mult = -0.8
 		unit_navy_armor_add = 12
 		unit_navy_pen_add = 15
 		unit_blockade_add = 500
@@ -402,7 +395,6 @@ REPLACE:combat_unit_type_battleship = {
 	}
 }
 
-# No need to touch Submarines or Carriers - but included due to compatibility issues
 ### Raiding Ship group
 REPLACE:combat_unit_type_torpedo_boat = {
 	group = combat_unit_group_raiding_ship
@@ -418,7 +410,7 @@ REPLACE:combat_unit_type_torpedo_boat = {
 		unit_morale_loss_add = 6
 		unit_navy_armor_add = 1
 		unit_navy_pen_add = 3
-		unit_convoy_raiding_mult = 1
+		unit_convoy_raiding_mult = 1.5
 		unit_is_equipped_with_torpedoes_bool = yes
 		unit_blockade_add = 22
 	}
@@ -435,15 +427,14 @@ REPLACE:combat_unit_type_torpedo_boat = {
 	}
 }
 
-### Support Ship group
 REPLACE:combat_unit_type_submarine = {
 	group = combat_unit_group_raiding_ship
 	max_manpower = 1000
 	upkeep_modifier = {
-		goods_input_ironclads_add = 2
+		goods_input_ironclads_add = 4
 		goods_input_ammunition_add = 2
 		goods_input_radios_add = 1
-		goods_input_oil_add = 0.5		# GGGG
+		goods_input_oil_add = 1
 	}
 	battle_modifier = {
 		unit_offense_add = 45
@@ -451,7 +442,7 @@ REPLACE:combat_unit_type_submarine = {
 		unit_morale_loss_add = 4
 		unit_navy_armor_add = 2
 		unit_navy_pen_add = 6
-		unit_convoy_raiding_mult = 1.5
+		unit_convoy_raiding_mult = 2
 		unit_is_equipped_with_torpedoes_bool = yes
 		unit_blockade_add = 45
 	}
@@ -466,7 +457,7 @@ REPLACE:combat_unit_type_submarine = {
 }
 
 ### Support (Aviation) Ship group
-combat_unit_type_experimental_carrier = {
+REPLACE:combat_unit_type_experimental_carrier = {
 	group = combat_unit_group_support_ship
 	max_manpower = 1000
 	upkeep_modifier = {
@@ -492,5 +483,17 @@ combat_unit_type_experimental_carrier = {
 		texture = "gfx/unit_illustrations/support_ships_carrier.dds"
 	}
 	can_build = {
+	}
+}
+
+combat_unit_type_monitor = {
+	can_build = {
+		always = no
+	}
+}
+
+combat_unit_type_carrier = {
+	can_build = {
+		always = no
 	}
 }

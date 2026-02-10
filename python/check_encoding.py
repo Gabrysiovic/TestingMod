@@ -1,4 +1,5 @@
 import os
+import argparse
 
 UTF8_BOM = b'\xef\xbb\xbf'
 
@@ -43,10 +44,14 @@ def check_and_optionally_convert(directory, convert=False):
                 )
 
 if __name__ == "__main__":
-    DIRECTORY = "localization"
-    CONVERT = True     # set True to enable conversion
-
+    
+    parser = argparse.ArgumentParser(description="Convert text files to UTF-8 with BOM")
+    parser.add_argument("directory", help="Directory to scan for .txt files")
+    parser.add_argument("--convert", action="store_true", help="Enable conversion (default: dry-run only)")
+    
+    args = parser.parse_args()
+    
     check_and_optionally_convert(
-        DIRECTORY,
-        convert=CONVERT,
+        args.directory,
+        convert=args.convert,
     )

@@ -1,0 +1,679 @@
+﻿l_turkish:
+
+## Naval Conference
+ # The conference starts
+ navalconference.1.t: "The [SCOPE.sCountry('naval_conference_host').GetCapital.GetCityHubName] Naval Conference"
+ navalconference.1.d: "Leading naval powers convened in the capital of [SCOPE.sCountry('naval_conference_host').GetCustom('use_the')][SCOPE.sCountry('naval_conference_host').GetName] to discuss a reduction in naval spending. We could propose an [SCOPE.sLawType('extensive_law').GetName] or a [SCOPE.sLawType('moderate_law').GetName]."
+ navalconference.1.f: "In a sumptuous hall in the heart of [SCOPE.sCountry('naval_conference_host').GetCapital.GetCityHubName], diplomats from around the world convene to discuss a traty that might shape naval developments for decades to come. Many peace activist groups hope this treaty might be the first in a series of disarmament treaties, with the ultimate goal of completely eliminating war. Some more pragmatic observers, however, dismiss the pacifists' objectives as fanciful dreams, and take the conference as an opportunity to take some of the military budget to something more useful."
+ 
+ navalconference.1.a: "We should push for a large reduction in fleet sizes."
+ navalconference.1.b: "We'll suggest a modest reduction."
+
+ navalconference.1.a.tt: "The proposal for [SCOPE.sLawType('extensive_law').GetName] will be sent to all other conference members. They have to accept it for the treaty to take effect. If accepted, it will reduce our navy to approximately #gold half#! of its current strength and prevent it from expanding for five years."
+ navalconference.1.b.tt: "The proposal for [SCOPE.sLawType('moderate_law').GetName] will be sent to all other conference members. They have to accept it for the treaty to take effect. If accepted, it will reduce our navy to approximately #gold three-quarters#! of its current strength and prevent it from expanding for five years."
+
+ # Proposal - large
+ navalconference.2.t: "The [SCOPE.sCountry('naval_conference_host').GetCapital.GetCityHubName] Naval Conference"
+ navalconference.2.d: "Leading naval powers convened in the capital of [SCOPE.sCountry('naval_conference_host').GetCustom('use_the')][SCOPE.sCountry('naval_conference_host').GetName] to discuss a reduction in naval spending. Their delegation proposed an [SCOPE.sLawType('treaty_law').GetName], involving a considerable reduction in fleet sizes amongst all the signatory countries with the intent of keeping budgets under control."
+ navalconference.2.f: "In a sumptuous hall in the heart of [SCOPE.sCountry('naval_conference_host').GetCapital.GetCityHubName], diplomats from around the world convene to discuss a traty that might shape naval developments for decades to come. Many peace activist groups hope this treaty might be the first in a series of disarmament treaties, with the ultimate goal of completely eliminating war. Some more pragmatic observers, however, dismiss the pacifists' objectives as fanciful dreams, and take the conference as an opportunity to take some of the military budget to something more useful."
+
+ navalconference.2.a: "We'll follow this new development closely."
+ #navalconference.2.a.tt: "We accept the terms of the conference. If all other participants agree, we will enact [SCOPE.sLawType('treaty_law').GetName]. This will reduce our navy to approximately #gold half#! of its current strength and prevent it from expanding for five years."
+
+ # Proposal - small
+ navalconference.3.t: "The [SCOPE.sCountry('naval_conference_host').GetCapital.GetCityHubName] Naval Conference"
+ navalconference.3.d: "Leading naval powers convened in the capital of [SCOPE.sCountry('naval_conference_host').GetCustom('use_the')][SCOPE.sCountry('naval_conference_host').GetName] to discuss a reduction in naval spending. Their delegation proposed a [SCOPE.sLawType('treaty_law').GetName], involving a reduction in fleet sizes amongst signatory countries."
+ navalconference.3.f: "In a sumptuous hall in the heart of [SCOPE.sCountry('naval_conference_host').GetCapital.GetCityHubName], diplomats from around the world convene to discuss a traty that might shape naval developments for decades to come. Many peace activist groups hope this treaty might be the first in a series of disarmament treaties, with the ultimate goal of completely eliminating war. Some more pragmatic observers, however, dismiss the pacifists' objectives as fanciful dreams, and take the conference as an opportunity to take some of the military budget to something more useful."
+ 
+ navalconference.3.a: "We'll follow this new development closely."
+ #navalconference.3.a.tt: "We accept the terms of the conference. If all other participants agree, we will enact [SCOPE.sLawType('treaty_law').GetName]. This will reduce our navy to approximately #gold three-quarters#! of its current strength and prevent it from expanding for five years."
+ 
+ # Treaty success!
+ navalconference.4.t: "Success"
+ navalconference.4.d: "The nations finally reached an agreement, and the [GetGlobalVariable('naval_conference_state_region').GetStateRegion.GetCityHubName] Naval Treaty will take effect."
+ navalconference.4.f: "Today is a historic day. Through diplomacy, several leading powers agreed to reduce their militaries, paving the way to further disarmament measures. Anti-war movements around the world are hopeful that the treaty is a sign that governments are willing to take steps towards world peace.\n\nNot all are as enthusiastic, however. One admiral from the [SCOPE.sCountry('event_navy').GetCustom('name_of_navy')] remarked: "Through the stroke of a pen, more [SCOPE.sCountry('event_navy').GetAdjectiveNoFormatting] ships were lost than in any battle in history.""
+ navalconference.4.a: "Excellent."
+
+ # Treaty failure
+ navalconference.5.t: "Failure"
+ navalconference.5.d: "Unfortunately, the parties couldn't reach an agreement. No treaty will be signed."
+ navalconference.5.f: "After a year of intense deliberation, the representatives from the nations involved were unable to find a working solution. A [SCOPE.sCountry('rejected_country').GetAdjectiveNoFormatting] delegate said the terms were \"unacceptable\", and elaborated: \"The proposals hitherto submitted are an affront to the [SCOPE.sCountry('rejected_country').GetCustom('name_of_navy')]. We will not accept this mockery of a treaty.\""
+ navalconference.5.a: "What a waste of time."
+
+ # Treaty results (unused)
+ navalconference.6.t: "Naval Conference Results"
+ navalconference.6.d: "After intense deliberation by the delegations, it's time to see if they can come to an agreement."
+ navalconference.6.f: "TODO"
+
+ navalconference.6.a: "And the results are..."
+ navalconference.6.a.tt: "We'll see if the parties agreed with the treaty"
+
+ # Accepting the Treaty
+ navalconference.8.t: "Accepting the Treaty"
+ navalconference.8.d: "Should we accept the terms of the [GetGlobalVariable('naval_conference_state_region').GetStateRegion.GetCityHubName] Naval Conference, in favor of the [GetGlobalVariable('treaty_law_var').GetLawType.GetName]?"
+ navalconference.8.a: "Yes, we agree."
+ navalconference.8.a.tt: "We agree to the terms of the Treaty. It will only be put in effect if all parties agree.\nWARNING: This vote cannot be undone."
+ navalconference.8.b: "On second thought, let's analyze it more carefully..."
+
+ # Convincing the others to join
+ navalconference.9.t: "Persuasive Arguments"
+ navalconference.9.d: "What should we do to persuade [SCOPE.sC('persuaded_country').GetCustom('use_the')][SCOPE.sC('persuaded_country').GetName] to agree to the Treaty?"
+ navalconference.9.f: ""We're interested in assuring world peace and prosperity. However, some other countries do not realize the value of our cause and might need some additional incentives.""
+ navalconference.9.a: "Offer them an obligation."
+ navalconference.9.a.tt: "We will promise them an [concept_obligation]. They will only receive it after the treaty gets approved."
+ navalconference.9.b: "Call in their obligation they owe to us."
+ navalconference.9.b.tt: "We will promise to forgive the [concept_obligation] they owe to use. It will only be absolved after the treaty gets approved."
+ navalconference.9.c: "Nothing some money can't solve."
+ navalconference.9.c.tt: "We will bribe them with #GOLD 500 thousand pounds#!, paid over 50 weeks. We will only give them after the treaty gets approved."
+
+ # Receiving an offer for an obligation
+ navalconference.10.t: "An Offer is Made"
+ navalconference.10.d: "[SCOPE.sC('persuaded_country').GetCustom('use_the')|U][SCOPE.sC('persuaded_country').GetName] has offered us an [concept_obligation] if we agree to vote in favor of the [GetGlobalVariable('treaty_law_var').GetLawType.GetName]."
+ navalconference.10.f: ""If you accept to work with us in this treaty, we might reward you in the future.""
+ navalconference.10.a: "We accept their offer."
+ navalconference.10.a.tt: "We will vote in favor of the treaty. The [concept_obligation] will only be given if the treaty gets approved."
+ navalconference.10.b: "We're not convinced."
+
+ # Receiving an offer to forgive our obligation
+ navalconference.11.t: "Calling In a Favor"
+ navalconference.11.d: "[SCOPE.sC('host_country').GetCustom('use_the')|U][SCOPE.sC('host_country').GetName] is willing to forgive the [concept_obligation] we have to them if we agree to vote in favor of the [GetGlobalVariable('treaty_law_var').GetLawType.GetName]."
+ navalconference.11.f: ""We have helped you in the past, it's only natural that you return the favor.""
+ navalconference.11.a: "A fair deal."
+ navalconference.11.a.tt: "We will vote in favor of the treaty. The [concept_obligation] will only be forgiven if the treaty gets approved."
+ navalconference.11.b: "We'll leave it for another time."
+
+ # Receiving an offer for a bribe
+ navalconference.12.t: "A Simple Solution"
+ navalconference.12.d: "[SCOPE.sC('host_country').GetAdjective] officials have been attempting to bribe some of our politicians to vote in favor of the [GetGlobalVariable('treaty_law_var').GetLawType.GetName]."
+ navalconference.12.f: "Some suspiciously large donations have been received by our representatives at the [GetGlobalVariable('naval_conference_state_region').GetStateRegion.GetCityHubName] Naval Conference, and we suspect there is more to come."
+ navalconference.12.a: "No harm in taking a little money."
+ navalconference.12.a.tt: "We will vote in favor of the treaty. [SCOPE.sC('host_country').GetCustom('use_the')|U][SCOPE.sC('host_country').GetName] will give us #GOLD 500 thousand pounds#! if the treaty gets approved."
+ navalconference.12.b: "Our politicians are incorruptible."
+
+ # They accepted our offer
+ navalconference.13.t: "Offer Accepted"
+ navalconference.13.d: "[SCOPE.sC('persuaded_country').GetCustom('use_the')|U][SCOPE.sC('persuaded_country').GetName] accepted our offer, and will be supporting the treaty."
+ navalconference.13.a: "Excellent."
+
+ # They rejected our offer
+ navalconference.14.t: "Offer Declined"
+ navalconference.14.d: "[SCOPE.sC('persuaded_country').GetCustom('use_the')|U][SCOPE.sC('persuaded_country').GetName] rejected our generous offer, and hasn't agreed to backing the treaty yet."
+ navalconference.14.a: "We'll find another way to convince them."
+
+
+## Cordite
+ # Relax safety procedures
+ cordite.1.t: "Review Safety Procedures?"
+ cordite.1.d: "After years of using [ROOT.GetCountry.GetCustom('powder_name')], some officers believe we could achive a higher fire by relaxing a few of our ammunition reloading procedures, as the new propellants are supposedly safer to handle. However, there's a risk that those explosives are not as safe as we thought."
+ cordite.1.f: "This new propellant, [ROOT.GetCountry.GetCustom('powder_name')], is a lot better than the black powder we used to have. It produces less smoke, leaves less residue and is much less volatile, making it safer to use onboard ships. We could take advantage of the added safety by optimizing the reloading procedures, and removing some of the precautions, to increase the rate of fire of our ships and therefore gain some extra firepower."
+
+ cordite.1.a: "We need all the firepower we can get."
+ cordite.1.a.tt: "This might have negative consequences."
+ cordite.1.b: "No need to take unnecessary risks."
+
+ # Ship Explosion
+ cordite.2.t: "Losses at Sea"
+ cordite.2.d: "During a recent naval battle, a number of our ships succumbed to magazine detonations, possibly as a result of unsafe ammunition handling."
+ cordite.2.f: "The detonations caused massive explosions onboard the ships, sending thick clouds of smoke, flame and debris billowing into the sky. The explosions were so powerful they could be heard from miles away as the ships were reduced to piles of burning wreckage.\n\nAs he watched the inferno unfold from afar, the admiral only had the energy to muster a few words:\n\n"There's something wrong with our bloody ships today!""
+ cordite.2.a: "A regrettable loss."
+ cordite.2.a.tt: "Your naval battles will have the [GetBattleCondition('battle_condition_exploding_ships').GetName] battle condition for as long as the modifier is active"
+
+ # Ship explodes during peacetime
+ cordite.3.t: "Battleship Explodes"
+ cordite.3.d: "One of our battleships seems to have suffered a catastrophic magazine detonation, while performing routine patrols. The explosion destroyed the ship, killing dozens of sailors."
+ cordite.3.f: "TODO"
+ cordite.3.a: "Maybe our explosives are not as safe as we thought."
+ cordite.3.b: "There's nothing we can do about it."
+ cordite.3.c: "That's an act of sabotage by [SCOPE.sCountry('scapegoat_country').GetCustom('use_the')][SCOPE.sCountry('scapegoat_country').GetName]! To war!"
+
+# Cheating the Naval Treaties
+ cheating_treaty.1.t: "Circumventing the Treaties"
+ cheating_treaty.1.d: "Through creative accounting, deceptive nomenclature, and straight lies, the [ROOT.GetCountry.GetCustom('name_of_navy')] managed to build up its forces in a way that exceeds the limit stipulated by Naval Treaties."
+ cheating_treaty.1.f: ""No matter what inspectors say, those cruisers are definitely under 10,000 tons. Also, this ship is too small to be considered an aircraft carrier, it's merely an escort vessel. And this water storage is for feeding the boilers, it shouldn't count towards our displacement...""
+ cheating_treaty.1.a: "I see nothing wrong here."
+
+# The Great Eastern
+ greateastern.1.t: "The Great Eastern"
+ greateastern.1.d: "Isambard Kingdom Brunel's latest ship, the Great Eastern, is finally complete. The giant vessel is considered a marvel of engineering. However, there's a concern that the behemoth might have difficulties making a profit."
+ greateastern.1.f: "Weighing over 30,000 tons fully loaded, the iron giant is six times larger than any other ship in the world. The mixed propulsion system of sails, paddles and screws is designed for a speed of 14 knots, offering a relatively fast transatlantic crossing."
+ greateastern.1.a: "Let's give it some financial support, this ship is the pride of Britain."
+ greateastern.1.b: "At least she might be useful for laying telegraph cables."
+ greateastern.1.c: "Brunel's vision might serve us well in parliament."
+ greateastern.1.e: "The ship is nothing more than a passing curiosity."
+
+# The Two Power Standard
+ twopowerstandard.1.t: "The Two-Power Standard"
+ twopowerstandard.1.d: "As an island nation, [ROOT.GetCountry.GetCustom('use_the')][ROOT.GetCountry.GetName] has always been dependent on its navy for trade and defense. Some have proposed formalizing our need for naval supremacy in the form of the #GOLD Two-Power Standard#!, where we'd commit to having a larger navy than the next two powers combined."
+ twopowerstandard.1.f: ""Our supremacy on the sea must, after all, be measured by the number of battleships we can put into line. As we find other nations pushing forward this particular class of shis, it is further our duty to do the same.\n\nI think I am accurate in saying that our establishment should be on such a scale that it equals the strength of any two other Countries.""
+ twopowerstandard.1.a: "Maintaining naval supremacy is paramount."
+ twopowerstandard.1.a.tt: "The [SCOPE.gsInterestGroup('navy_ig').GetName] will get an opinion modifier depending on our adherence to the standard"
+ twopowerstandard.1.b: "We can't afford to maintain such a large fleet."
+
+## Tech Events
+ # Innovative Admiral
+ tts_tech_events.1.t: "Admiral Promotes Innovations in the Navy"
+ tts_tech_events.1.d: "One of our admirals, [SCOPE.sCharacter('innovative_admiral').GetFullName], has been instrumental in the development of Dreadnought battleships, and is also promoting other innovative ideas in the [ROOT.GetCountry.GetCustom('name_of_navy')]."
+ tts_tech_events.1.f: "Nothing escapes Admiral [SCOPE.sCharacter('innovative_admiral').GetLastNameNoFormatting]'s eye. Battleships, escorts, torpedoes, everything is being modernized under his supervision."
+ tts_tech_events.1.a: "Excellent."
+ tts_tech_events.1.b: "[SCOPE.sCharacter('innovative_admiral').GetLastName]'s innovations have made him a public figure."
+
+ # Note: tts_tech_events.2 is a hidden event
+
+ # Open hearth process gives advantage to the navy
+ tts_tech_events.3.t: "Partners in the Industry"
+ tts_tech_events.3.d: "The [SCOPE.sBuilding('steel_mill_scope').GetName] in [SCOPE.sState('industrial_state').GetName] are a major supplier of steel for our navy, and the quality of their steel has allowed us to improve the design of our ships."
+ tts_tech_events.3.f: "Beneath the smoggy skies of [SCOPE.sState('industrial_state').GetCityHubName], steel mills are hard at work to fill the needs of the navy. The new compound armor promises to offer much more protection per inch than previous iron-based armor, while the the steel structure of the hull is lightweight and sturdy."
+ tts_tech_events.3.a: "Our industry is our strength."
+
+ # Predreadnought Research Finished
+ tts_tech_events.4.t: "Research Finished!"
+ tts_tech_events.4.d: "Our research is concluded. We can now build Steel Battleships."
+ tts_tech_events.4.f: "Many technological innovations have allowed us to develop a new generation of warships. The old wrought iron has been replaced by compound armor. Black powder has been replaced by [ROOT.GetCountry.GetCustom('powder_name')]. Rotating turrets are now commonplace.\n\nNaval design advances faster than ever before, and we must keep up with the new developments."
+ tts_tech_events.4.a: "Excellent."
+
+ # Dreadnought Research Finished
+ tts_tech_events.5.t: "Research Finished!"
+ tts_tech_events.5.d: "Our research is concluded. We can now build Dreadnought Battleships."
+ tts_tech_events.5.f: "The [ROOT.GetCountry.GetCustom('first_dreadnought_name')] is being launched today, and with it a new age dawns for our navy. It incorporates the most recent innovations, including a central rangefinder and fire control, allowing it to engage targets accurately at longer ranges, and a turbine-powered propulsion system, which allows it to outrun and outmaneuver previous ships."
+ tts_tech_events.5.a: "We are entering a new era of warfare."
+
+ # Battleship research finished
+ tts_tech_events.6.t: "Research Finished!"
+ tts_tech_events.6.d: "Our research is concluded. We can now build Battleships more efficiently."
+ tts_tech_events.6.f: "Yesterday, the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] went to [SCOPE.sState('port_state').GetPortHubName] to inspect the new battleships being built. The scope of the shipyard operations is truly amazing. On the shore, partially constructed ships are lined up in their drydock berths, while a swarm of workers weld parts together and install fittings. A giant crane lifts an entire pre-made section of a ship to be assembled. After it's done, it's tasked with moving a set of [ROOT.GetCountry.GetCustom('superdreadnought_caliber')] guns - the largest ever put on [ROOT.GetCountry.GetAdjectiveNoFormatting] ships. \"So far,\" a shipwright remarks; there are already plans for fitting even bigger guns.\n\nThe head of state left the inspection satisfied, knowing that the future is bright for our navy."
+ tts_tech_events.6.a: "Our ships shall rule the waves."
+
+ # Civilian shipyards help dreadnought research
+ tts_tech_events.7.t: "Shipyard Innovations"
+ tts_tech_events.7.d: "The [SCOPE.sBuilding('shipyard_building').GetName] at [SCOPE.sState('shipyard_state').GetName] are using their expertise in shipbuilding to help our development of Dreadnought Battleships."
+ tts_tech_events.7.f: "[SCOPE.sState('shipyard_state').GetPortHubName] is a city with a maritime vocation. From its shipyards, come yachts, steamers, and ocean liners of worldwide renown. But its engineers and mechanics are working on designing a new generation of battleships, larger, faster and more heavily armed than ever before. Certainly, such a task would be more difficult if we didn't have a large body of experienced workers to draw from."
+ tts_tech_events.7.a: "Keep it up."
+
+ # Civilian shipyards help battleship research
+ tts_tech_events.8.t: "Ship Mass Production"
+ tts_tech_events.8.d: "The [SCOPE.sBuilding('shipyard_building').GetName] at [SCOPE.sState('shipyard_state').GetName] are using their expertise in shipbuilding to help our development of Super-Dreadnought Battleships."
+ tts_tech_events.8.f: "The shipyard installations at [SCOPE.sState('shipyard_state').GetPortHubName] are some of the most extensive in the world. Row upon row of drydocks, each of them filled with ships in various stages of construction. Mass production on this scale will prove ever more necessary in the years to come, since larger and more complex ships will require a lot of man-hours to build, so parallel construction will be necessary if we are to maintain a steady flow of battleships into our navy. Luckily, our strong shipbuilding industry should be up to the task."
+ tts_tech_events.8.a: "Excellent."
+
+ # Large scale steelmaking benefits navy
+ tts_tech_events.9.t: "Steel Mass Production"
+ tts_tech_events.9.d: "The [SCOPE.sBuilding('steel_mill_scope').GetName] in [SCOPE.sState('industrial_state').GetName] are producing steel very efficiently, allowing us to increase the armor quality of our ships."
+ tts_tech_events.9.f: "The steelmaking industry of [SCOPE.sState('industrial_state').GetCityHubName] is a true colossus of engineering. Few industrial complexes in the world can compare to the scale of its ironworks. The vast steel production capacity allows the [ROOT.GetCountry.GetCustom('name_of_navy')] to afford better protection on its ships, by increasing both armor quality and coverage."
+ tts_tech_events.9.a: "Our industry is our strength."
+
+ # Convert a battleship to an aircraft carrier
+ tts_tech_events.10.t: "Convert One of Our Ships?"
+ tts_tech_events.10.d: "The large hull of one of our capital ships would make a good testbed for carrier development."
+ tts_tech_events.10.f: "As the result of a viability study conducted by the navy, our [ROOT.GetCountry.GetCustom('converted_carrier_name')] would be the ideal vessel for conversion to aircraft carrier. Its superstructure will be razed, and converted to a flight deck. Having a large aircraft carrier will be fundamental in training pilots and developing our carrier doctrine."
+ tts_tech_events.10.a: "An excellent idea."
+ tts_tech_events.10.a.tt: "This will accelerate our development of Fleet Carriers by a year."
+ tts_tech_events.10.b: "We can't afford to weaken our battle line."
+
+ # Convert a battleship to an aircraft carrier
+ tts_tech_events.11.t: "Ship Converted to Carrier"
+ tts_tech_events.11.d: "As a result of the Naval Treaties we've signed, a lot of capital ships were scrapped, but they also allow us to convert one of the ships under construction into a carrier."
+ tts_tech_events.11.d_treaty_name: "As a result of the #WHITE [GetGlobalVariable('naval_conference_state_region').GetStateRegion.GetCityHubName] Naval Treaty#!, a lot of capital ships were scrapped, but it also allowed us to convert one of the ships under construction into a carrier."
+ tts_tech_events.11.f: "According to a viability study conducted by the navy, our [ROOT.GetCountry.GetCustom('converted_carrier_name')] would be the ideal vessel for conversion to aircraft carrier. Its superstructure will be razed, and converted to a flight deck. Having a large aircraft carrier will be fundamental in training pilots and developing our carrier doctrine."
+ tts_tech_events.11.a: "At least we'll get something out of this."
+ tts_tech_events.11.a.tt: "This will accelerate our development of Fleet Carriers by a year."
+
+ # Convert an ocean liner to a carrier
+ tts_tech_events.12.t: "Liners to Carriers"
+ tts_tech_events.12.d: "An ocean liner, with its large, long hull and relatively high speed, would be a good candidate for conversion into an aircraft carrier."
+ tts_tech_events.12.f: "To aid in our carrier program, the Admiralty has proposed that [ROOT.GetCountry.GetCustom('converted_liner_name')]. It will be purchased from its previous owner and go through a rebuild process, so that it can be used in our Navy for testing."
+ tts_tech_events.12.a: "We need as many hulls as we can get."
+ tts_tech_events.12.a.tt: "This will accelerate our development of Fleet Carriers by a year."
+ tts_tech_events.12.b: "We can't afford it."
+
+ # Development of Dive Bombers
+ tts_tech_events.13.t: "Development of Dive Bombers"
+ tts_tech_events.13.d: "The [SCOPE.sBuilding('aircraft_building').GetName] at [SCOPE.sState('aircraft_state').GetName] have perfected carrier-borne Dive Bombers, allowing them to strike targets at sea with precision."
+ tts_tech_events.13.f: "It was a calm day at the Navy aircraft test field. Over the blue sky backdrop, between the few scattered clouds, a small dot could be seen. It was the new Dive Bomber prototype, ready to be evaluated. As it got close to the designated area, the skilled pilot pulled on the stick, sending the aircraft on a dive. He performed a simulated bombing run, dropping a dummy payload square in the target. The spectators seemed pleased with the result. Among them, there were generals, admirals, representatives of the government and the contracted companies. After this successful test, the new aircraft model was one step closer to being put in mass production."
+ tts_tech_events.13.a: "What will they come up with next?"
+ tts_tech_events.13.a.tt: "This will accelerate our development of Fleet Carriers by a year."
+
+ # Development of Monoplane Fighters
+ tts_tech_events.14.t: "One Wing is Better than Two"
+ tts_tech_events.14.d: "Onboard an Aircraft Carrier, the first test flight of a monoplane fighter was performed today."
+ tts_tech_events.14.f: "Tensions were high in the control tower of the carrier#WHITE [ROOT.GetCountry.GetCustom('carrier_name')]#!. Several officers were crammed inside, waiting for the test flight. On the deck, rested the prototype [ROOT.GetCountry.GetCustom('first_monoplane_fighter')], making its final preparations. A crewmember signals a takeoff clearance, and the fighter zips down the runway, up to the end of the flight deck. The suspense mounts as the plane dips below the deck, threatening to crash into the sea, but it manages to gain altitude and fly away, to the cheers of all the officers watching."
+ tts_tech_events.14.a: "This is surely the future of aviation!"
+ tts_tech_events.14.a.tt: "This will accelerate our development of Fleet Carriers by a year."
+
+ # Development of Homing Beacons
+ tts_tech_events.15.t: "Finding Our Directions"
+ tts_tech_events.15.d: "The [SCOPE.sBuilding('radio_building').GetName] at [SCOPE.sS('radio_state').GetName] have developed Homing Beacons to help carrier aircraft find their way to the ship."
+ tts_tech_events.15.f: "The beacon installed on the carrier sends a directional radio pulse on a predetermined pattern. By synchronizing their clocks, the aircraft can determine the direction to the carrier based on the timing of the pulses. If the directional pulse was calibrated to pass through the North at the beginning of each minute, then the pilot could know the carrier was on the opposite direction of the seconds hand on his watch, when he heard the signal.\n\nThis system can be used to help single-seat fighters to easily find a carrier to land on after a mission."
+ tts_tech_events.15.a: "Like a pigeon."
+ tts_tech_events.15.a.tt: "This will accelerate our development of Fleet Carriers by 6 months."
+
+ # Research Finished
+ tts_tech_events.16.t: "Research Finished!"
+ tts_tech_events.16.d: "We have developed more capable aircraft and aircraft carriers. Now we should decide on what we should focus on next."
+ tts_tech_events.16.a: "We need to get as many aircraft as we can in our carriers."
+ tts_tech_events.16.a.tt: "This will unlock [GetCombatUnitType('combat_unit_type_fleet_carrier').GetName] in our naval bases. They have more attack power than Armored Carriers, but they have slightly increased chance of getting a negative [concept_battle_condition] during battles.\n#YELLOW Warning:#! This choice is permanent and cannot be undone."
+ tts_tech_events.16.b: "Focus on protecting our carriers. They need armored flight decks."
+ tts_tech_events.16.b.tt: "This will unlock [GetCombatUnitType('combat_unit_type_armored_carrier').GetName] in our naval bases. They have a bonus to morale loss and have less chance of getting a negative [concept_battle_condition] during battles, but they have less attack power than Strike Carriers.\n#YELLOW Warning:#! This choice is permanent and cannot be undone."
+
+ # Researched Unarmored (Strike) Carriers
+ tts_tech_events.17.t: "Floating Airstrips"
+ tts_tech_events.17.d: "Our newest carriers are being commissioned. With the lessons learned in the past few years, our seaborne aircraft operations should be much more effective now."
+ tts_tech_events.17.f: "The [ROOT.GetCountry.GetCustom('political_head_of_navy')] went to [SCOPE.sS('carrier_state').GetPortHubName] for the commissioning ceremony. In his speech, he emphasized the importance of our carriers to project power abroad, and that a large airgroup with powerful aircraft is fundamental in fulfiling that role."
+ tts_tech_events.17.a: "We shall conquer the skies."
+
+ # Researched Armored Carriers
+ tts_tech_events.18.t: "Floating Bastions"
+ tts_tech_events.18.d: "Our newest carriers are being commissioned. With the lessons learned in the past few years, our carriers should be more survivable while still retaining considerable airpower."
+ tts_tech_events.18.f: "The [ROOT.GetCountry.GetCustom('political_head_of_navy')] went to [SCOPE.sS('carrier_state').GetPortHubName] for the commissioning ceremony. In his speech, he emphasized the importance of protecting our valuable carriers, as the ability to strike back at the enemy can be vital."
+ tts_tech_events.18.a: "Nothing shall stop us."
+
+ # Innovative admiral with carriers
+ tts_tech_events.19.t: "The Way Forward"
+ tts_tech_events.19.d: "Admiral [SCOPE.sCharacter('admiral_scope').GetFullName] has been finding new ways to use Aircraft Carriers, and some of his ideas have been shaping our naval doctrine."
+ tts_tech_events.19.f: "Aircraft Carriers are still relatively new, and there are a lot of undiscovered avenues to explore. Which airgroup composition is the best? Where should the carriers be positioned in the formation? How to organize flight operations in the most efficient way? Luckily, the fleet under Admiral [SCOPE.sCharacter('admiral_scope').GetLastNameNoFormatting] seems to be figuring some of them out."
+ tts_tech_events.19.a: "Excellent"
+ tts_tech_events.19.a.tt: "This will accelerate our development of Fleet Carriers by 6 months."
+
+ # Budget problems with carriers
+ tts_tech_events.20.t: "Budget Problems"
+ tts_tech_events.20.d: "Unfortunately, due to planning issues, our yearly budget was not enough to adequately fund our Carrier development program."
+ tts_tech_events.20.f: "No matter how you cut it, this budget is not enough to cover all the expenses involved in procuring new ships, aircraft, and the crew to man them. We need more if we want to have our new carriers up to speed."
+ tts_tech_events.20.a: "That's a shame."
+ tts_tech_events.20.a.tt: "This will delay our development of Fleet Carriers by 6 months."
+ tts_tech_events.20.b: "Find some way to allocate more budget to the Navy."
+ tts_tech_events.20.b.tt: "This will accelerate our development of Fleet Carriers by 6 months."
+
+## Developing shipbuilding technologies
+ # Developing Predreadnoughts'
+ tts_tech_events.21.t: "New Methods of Shipbuilding"
+ tts_tech_events.21.d: "We have researched [GetCombatUnitType('combat_unit_type_predreadnought').GetName]. However, to keep them supplied, we will likely need to develop new shipbuilding techniques."
+ tts_tech_events.21.f: "Developing [GetTechnology('steel_shipbuilding_tech').GetName] will allow us to increse our naval production considerably, to help supply the newly-built ships"
+ tts_tech_events.21.a: "We should get started as soon as possible!"
+ tts_tech_events.21.b: "Let's leave it for later"
+ tts_tech_events.21.b.tooltip: "We can take the #v decision#! to begin development at any point later."
+
+ # Developing Dreadnoughts'
+ tts_tech_events.22.t: "New Methods of Shipbuilding"
+ tts_tech_events.22.d: "Before we can start construction of [GetCombatUnitType('combat_unit_type_dreadnought').GetName], we will need to expend resources into overhauling our shipbuilding industry."
+ tts_tech_events.22.f: "Acquiring the technology to build [GetTechnology('turbine_powered_ships_tech').GetName] is essential in fielding new Dreadnoughts, which will require the new good, [GetGoods('tts_capital_ships').GetName]."
+ tts_tech_events.22.a: "We should get started as soon as possible!"
+ tts_tech_events.22.b: "Let's leave it for later"
+ tts_tech_events.22.b.tooltip: "We can take the #v decision#! to begin development at any point later."
+
+ # Developing Battleships'
+ tts_tech_events.23.t: "New Methods of Shipbuilding"
+ tts_tech_events.23.d: "Deploying the new [GetCombatUnitType('combat_unit_type_battleship').GetName] will require mass-scale production of [GetGoods('tts_capital_ships').GetName]. We should develop new shipbuilding methods to keep up with the demand"
+ tts_tech_events.23.f: ""
+ tts_tech_events.23.a: "We should get started as soon as possible!"
+ tts_tech_events.23.b: "Let's leave it for later"
+ tts_tech_events.23.b.tooltip: "We can take the #v decision#! to begin development at any point later."
+
+# Mahan
+ mahan_events.1.t: "The Influence of Sea Power"
+ mahan_events.1.d: "A book written by one of our naval officers, [SCOPE.sCharacter('mahan_scope').GetFullName], about the importance of naval power has been gaining international acclaim."
+ mahan_events.1.f: "Mahan's book, #ITALIC The Influence of Sea Power Upon History#!, is an analysis of the impact navies had in the development of nations, and how to obtain and utilize sea power. The book has caught the attention of many influential people in Europe, including heads of state, and Mahan has been called one of the most influential American writers of the century."
+ mahan_events.1.a: "We should listen to him."
+ mahan_events.1.b: "That's not of our concern."
+
+## Buying Ships
+
+ # Buying Dreadnoughts
+ buying_ships.1.t: "A New Era for our Navy"
+ buying_ships.1.d: "As one of the leading naval powers, [SCOPE.sCountry('seller_country').GetCustom('use_the')][SCOPE.sCountry('seller_country').GetName] seems like a good candidate for our new naval expansion plans. We will offer them #GOLD 1 million pounds#!, paid over the course of a year, to buy modern ships for the [SCOPE.sCountry('buyer_country').GetCustom('name_of_navy')]."
+ buying_ships.1.f: "Having a dreadnought battleship would put our navy in a very select club. They're expensive, but having only a few would likely allow us to control our home waters effectively, and dominate lesser navies."
+ buying_ships.1.a: "Let's send them the offer."
+ buying_ships.1.b: "We could ask [SCOPE.sCountry('alternative_seller').GetCustom('use_the')][SCOPE.sCountry('alternative_seller').GetName] instead."
+
+ buying_ships.2.t: "[SCOPE.sCountry('buyer_country').GetCustom('use_the')|U][SCOPE.sCountry('buyer_country').GetNameNoFormatting] Makes Offer for Dreadnoughts"
+ buying_ships.2.d: "The [SCOPE.sCountry('buyer_country').GetAdjective] goverment has offered us #GOLD 1 million pounds#! for the purchase of some of our ships, including dreadnoughts."
+ buying_ships.2.f: ""
+ buying_ships.2.a: "We accept the offer."
+ buying_ships.2.b: "It's not prudent to share our latest technology."
+
+ buying_ships.3.t: "Offer Accepted"
+ buying_ships.3.d: "[SCOPE.sCountry('seller_country').GetCustom('use_the')|U][SCOPE.sCountry('seller_country').GetName] accepted our offer, and the ships will be delivered soon."
+ buying_ships.3.f: "Hundreds of citizens gathered at [SCOPE.sState('port_state').GetPortHubName], [SCOPE.sState('port_state').GetNameNoFormatting] to watch as the [ROOT.GetCountry.GetCustom('name_of_new_dreadnought')] entered the harbor. Considered one of the most powerful warships in the world, the dreadnought is sure to be the core of the [ROOT.GetCountry.GetCustom('name_of_navy')] for years to come. Our neighbours are already getting nervous with our new acquisition, and might be looking to purchase dreadnoughts of their own."
+ buying_ships.3.a: "Excellent."
+ buying_ships.3.a.tt: "This will create a new Fleet with two [GetCombatUnitType('combat_unit_type_dreadnought').GetName] in [SCOPE.sState('port_state').GetName]"
+
+ buying_ships.4.t: "Ship Deal Refused"
+ buying_ships.4.d: "[SCOPE.sCountry('seller_country').GetCustom('use_the')|U][SCOPE.sCountry('seller_country').GetName] rejected our offer, they won't be selling the ships."
+ buying_ships.4.f: ""
+ buying_ships.4.a: "What a shame."
+ buying_ships.4.b: "What if we tried an alternative partner?"
+ buying_ships.4.b.tt: "We will appreach [SCOPE.sCountry('alternative_seller').GetCustom('use_the')][SCOPE.sCountry('alternative_seller').GetName] with an offer."
+
+ # South American Pre-Dreadnoughts
+ buying_ships.5.t: "An Upgrade to our Navy"
+ buying_ships.5.d: "We shall approach [SCOPE.sCountry('seller_country').GetCustom('use_the')][SCOPE.sCountry('seller_country').GetName], one of the leading naval powers, to negotiate the purchase of new battleships for our navy."
+ buying_ships.5.f: ""If we acquire those new battleships, no enemies will be able to match us in the seas."" 
+ buying_ships.5.a: "Let's make them an offer."
+ buying_ships.5.a.tt: "We'll offer them #GOLD 500 thousand pounds#!, paid throughout a year. They'll need to accept the offer for the deal to continue."
+ buying_ships.5.b: "We could ask [SCOPE.sCountry('alternative_seller').GetCustom('use_the')][SCOPE.sCountry('alternative_seller').GetName] instead."
+
+ buying_ships.6.t: "[SCOPE.sCountry('buyer_country').GetCustom('use_the')|U][SCOPE.sCountry('buyer_country').GetNameNoFormatting] Wants our Ships"
+ buying_ships.6.d: "We received an offer from [SCOPE.sCountry('buyer_country').GetCustom('use_the')][SCOPE.sCountry('buyer_country').GetName], to buy some of our battleships. They are willing to pay #GOLD 500 thousand pounds#!, distributed over the course of a year."
+ buying_ships.6.f: ""The money is good, and they are not projected to be an enemy in the near future.""
+ buying_ships.6.a: "We accept the offer."
+ buying_ships.6.b: "It's not prudent to share our latest technology."
+
+ buying_ships.7.t: "Ship Deal Accepted"
+ buying_ships.7.d: "[SCOPE.sCountry('seller_country').GetCustom('use_the')|U][SCOPE.sCountry('seller_country').GetName] accepted our offer, and the ships will be delivered soon."
+ buying_ships.7.f: "With the new battleships, the [SCOPE.sCountry('buyer_country').GetCustom('name_of_navy')] is going to be one of the most powerful in the region."
+ buying_ships.7.a: "Excellent."
+ buying_ships.7.a.tt: "This will create a new Fleet with two [GetCombatUnitType('combat_unit_type_predreadnought').GetName] in [SCOPE.sState('port_state').GetName]"
+
+ buying_ships.8.t: "Ship Deal Refused"
+ buying_ships.8.d: "[SCOPE.sCountry('seller_country').GetCustom('use_the')|U][SCOPE.sCountry('seller_country').GetName] rejected our offer, they won't be selling the ships."
+ buying_ships.8.f: ""
+ buying_ships.8.a: "What a shame."
+ buying_ships.8.b: "What if we tried an alternative partner?"
+ buying_ships.8.b.tt: "We will appreach [SCOPE.sCountry('alternative_seller').GetCustom('use_the')][SCOPE.sCountry('alternative_seller').GetName] with an offer."
+
+ buying_ships.9.t: "An Upgrade to our Navy"
+ buying_ships.9.d: "Members of the [SCOPE.gsInterestGroup('navy_ig').GetName] have proposed buying battleships from [SCOPE.sCountry('seller_country').GetCustom('use_the')][SCOPE.sCountry('seller_country').GetName], to give our navy the upper hand in a local conflict."
+ buying_ships.9.f: ""If we acquire those new battleships, no enemies will be able to match us in the seas."" 
+ buying_ships.9.a: "Let's make them an offer."
+ buying_ships.9.a.tt: "We'll offer them #GOLD 500 thousand pounds#!, paid throughout a year. They'll need to accept the offer for the deal to continue."
+ buying_ships.9.b: "We could ask [SCOPE.sCountry('alternative_seller').GetCustom('use_the')][SCOPE.sCountry('alternative_seller').GetName] instead."
+ buying_ships.9.c: "That's too expensive."
+
+# US surpassed by South America
+ usa_jealousy.1.t: "A Wake-Up Call"
+ usa_jealousy.1.d: "After a recent visit to [SCOPE.sCountry('south_american_country').GetCustom('use_the')][SCOPE.sCountry('south_american_country').GetName], some officials have been raising concerns over the obsolete state of our Navy."
+ usa_jealousy.1.f: "American naval superiority in the continent has been put into question after the acquisition of the [SCOPE.sCountry('south_american_country').GetCustom('name_of_new_battleship')] by the [SCOPE.sCountry('south_american_country').GetCustom('name_of_navy')].\n\nIn an address to Congress, the chairman of the Naval Affairs Committee remarked: \"If all this old navy of ours were drawn up in battle array and confronted by the [SCOPE.sCountry('south_american_country').GetCustom('name_of_new_battleship')], it is doubtful whether a single vessel bearing the American flag would get into port\"."
+ usa_jealousy.1.a: "We need to modernize our navy."
+ usa_jealousy.1.a.tt: "We pledge to #GOLD triple#! our navy size and have [GetCombatUnitType('combat_unit_type_predreadnought').GetName] active within five years."
+ usa_jealousy.1.b: "That's not necessary."
+
+ usa_jealousy.2.t: "Beating the Americans"
+ usa_jealousy.2.d: "Our recently-acquired battleships have caused some fear among the [SCOPE.sC('usa_scope').GetAdjective] government."
+ usa_jealousy.2.f: "The [ROOT.GetCountry.GetCustom('name_of_new_battleship')] has been causing a stir in American circles lately. In an address to Congress, the chairman of the Naval Affairs Committee remarked: \"If all this old navy of ours were drawn up in battle array and confronted by the [ROOT.GetCountry.GetCustom('name_of_new_battleship')], it is doubtful whether a single vessel bearing the American flag would get into port\"."
+ usa_jealousy.2.a: "The purchase was clearly worth it."
+
+ usa_jealousy.3.t: "A Modernized Navy"
+ usa_jealousy.3.d: "With our new battleships, the [ROOT.GetCountry.GetCustom('name_of_navy')] is back at its rightful place of dominance in the continent."
+ usa_jealousy.3.f: "As a result of our modernization, we have a navy to be feared. The newly-commissioned USS Texas is vastly more powerful than any ship on this side of the Atlantic, and there are many more new battleships to come."
+ usa_jealousy.3.a: "We're in the right track!"
+
+ usa_jealousy.4.t: "Failure to Modernize"
+ usa_jealousy.4.d: "After years of effort, our navy is still no better than it was before."
+ usa_jealousy.4.f: "Our small navy is still a handful of obsolete and undermanned vessels. It is doubtful that we could maintain our international image in this state."
+ usa_jealousy.4.a: "We don't need a navy anyway."
+
+## American Downsizing of their Navy
+ american_isolation.1.t: "Cutting Down our Navy"
+ american_isolation.1.d: "Certain segments of our population have been questioning if the expense of maintaining a large navy is worth it."
+ american_isolation.1.f: "\"How can one justify the huge expense of maintaing a fleet when there are more pressing issues at home?\""
+ american_isolation.1.a: "They're right, we should cut costs."
+ american_isolation.1.a.tt: "This will severely reduce our maximum navy size."
+ american_isolation.1.b: "Our navy is essential for protecting our foreign interests."
+
+ american_isolation.2.t: "Rebuild our Navy"
+ american_isolation.2.d: "[SCOPE.sCharacter('jingoist_leader').GetFullName] of the [SCOPE.gsInterestGroup('jingoist_ig').GetName] has been pushing for a reconstruction of our navy."
+ american_isolation.2.f: "Years of neglect have left our fleet in state of disrepair, and our ability to project power within the American continent and abroad is severely limited. If we are to become a major player in the world stage, we need to ramp up investment in our fleet."
+ american_isolation.2.a: "It's time to rethink our naval policy."
+ american_isolation.2.b: "There's no need to rock the boat."
+
+# The Great White Fleet
+ great_white_fleet.1.t: "The Great White Fleet"
+ great_white_fleet.1.d: "The [SCOPE.sCountry('usa_scope').GetName] sent their fleet on a tour around the world, showing the ascending navy's capability to project power anywhere in the globe."
+ great_white_fleet.1.f: "The fleet visited cities such as Rio de Janeiro, San Francisco, Sydney, Manila and Yokohama, gathering a crowd of spectators wherever they went. The battleships' bright white paint scheme earned them the nickname \"Great White Fleet\". The circumnavigation no doubt cemented the nation's status as a Great Power."
+ great_white_fleet.1.a: "Hurrah!"
+ great_white_fleet.1.b: "Impressive."
+ 
+## Britain feels threatened by a large naval power
+ gbr_threatened.1.t: "A Dangerous Competitor"
+ gbr_threatened.1.d: "It's come to our attention that the [SCOPE.sCountry('threatening_country').GetAdjective] Navy has grown to a size that threatens our own."
+ gbr_threatened.1.f: "As reports of the [SCOPE.sCountry('threatening_country').GetCustom('name_of_navy')] reached the ears of the Admiralty, a sense of unease fell upon the British government. As an island nation, the mastery of the sea has kept us protected from foreign invasion and secured our trade. Now, however, it seems that another nation is attempting to challenge our naval supremacy. The question is whether we should take action to prevent this potential threat from growing further.\n\nSome argue that we should send a sternly-worded letter, warning them that their naval expansion is not in the best interests of international peace and stability. Other, however, worry that such a move could be seen as aggressive, and might only serve to antagonize them further."
+ gbr_threatened.1.a: "Demand they stop expanding their navy."
+ gbr_threatened.1.a.tt: "Send them a demand to halt naval expansion for five years."
+ gbr_threatened.1.b: "Just let them."
+
+ # Country asked to stop expanding
+ gbr_threatened.2.t: "[SCOPE.sCountry('gbr_scope').GetCustom('use_the')|U][SCOPE.sCountry('gbr_scope').GetNameNoFormatting] Fears our Might!"
+ gbr_threatened.2.d: "[SCOPE.sCountry('gbr_scope').GetCustom('use_the')|U][SCOPE.sCountry('gbr_scope').GetName] sent us a demand to stop our naval expansion, citing geopolitical concerns."
+ gbr_threatened.2.f: "\"It has come to our attention that your country has been putting great effort in expanding your fleet. As you are aware, [SCOPE.sCountry('gbr_scope').GetCustom('use_the')][SCOPE.sCountry('gbr_scope').GetNameNoFormatting] has long been the world's leading naval power, and we take our responsibility to safeguard international trade and maintain order on the seas very seriously.\n\nWhile we respect your right to maintain a navy for defensive purposes, we must express our concern that the size and scope of your recent expansion efforts exceed what's necessary for mere defence. We believe such a developement threatens the delicate balance of power. Therefore, we request that you reconsider the scale of your naval expansion plans. We urge you to remember that maintaining peaceful relations between our nations is in the best interest of all parties.\""
+ gbr_threatened.2.a: "We shouldn't anger them."
+ gbr_threatened.2.a.tt: "We won't be able to expand naval bases for #GOLD 5 years#!."
+ gbr_threatened.2.b: "Just ignore their empty threats."
+
+ # Country accepts demands
+ gbr_threatened.3.t: "[SCOPE.sCountry('threatening_country').GetCustom('use_the')|U][SCOPE.sCountry('threatening_country').GetNameNoFormatting] Backs Down"
+ gbr_threatened.3.d: "[SCOPE.sCountry('threatening_country').GetCustom('use_the')|U][SCOPE.sCountry('threatening_country').GetName] accepted our demands, and will halt naval expansion."
+ gbr_threatened.3.f: ""
+ gbr_threatened.3.a: "Excellent."
+
+  # Country refuses demands
+ gbr_threatened.4.t: "[SCOPE.sCountry('threatening_country').GetCustom('use_the')|U][SCOPE.sCountry('threatening_country').GetNameNoFormatting] Rejects our Demands"
+ gbr_threatened.4.d: "[SCOPE.sCountry('threatening_country').GetCustom('use_the')|U][SCOPE.sCountry('threatening_country').GetName] rejected our demands, and will not halt naval expansion."
+ gbr_threatened.4.f: ""
+ gbr_threatened.4.a: "They will regret it."
+
+## Early Turreted Ship is Unstable (HMS Captain)
+ unstable_ship.1.t: "A New Solution for our Firepower Needs"
+ unstable_ship.1.d: "The inventor [SCOPE.sCharacter('new_ship_designer').GetFullName], who had already been designing turrets for the [ROOT.GetCountry.GetCustom('name_of_navy')], has now proposed building a ship of their own design. The innovative ironclad, which boasts improved firepower with its two rotating turrets, has already gathered press attention and captivated the public. However, some voices within the Navy suggest such a ship might stability problems in rough weather."
+ unstable_ship.1.f: "At over 7,000 tons and four guns mounted on two turrets, the new ship is designed to be more than a match to any other opponent afloat. Many newspapers have praised its design, and have been calling the [ROOT.GetCountry.GetCustom('name_of_navy')] craven for not adopting it more extensively."
+ unstable_ship.1.a: "Let's give it a chance."
+ unstable_ship.1.a.tt: "We'll find the results of the new design soon."
+ unstable_ship.1.b: "We shouldn't take the risk of an unproven design."
+
+ # The ship sinks
+ unstable_ship.2.t: "New Ironclad Lost at Sea"
+ unstable_ship.2.d: "Our innovative turreted ship sunk during a storm. The ironclad took 500 souls with it, including it designer [SCOPE.sCharacter('new_ship_designer').GetFullName]."
+ unstable_ship.2.f: "The low freeboard ironclad didn't endure the heavy weather very well. After being hit by strong wings and towering waves, the ship capsized and sunk."
+ unstable_ship.2.a: "An unfortunate loss."
+
+ # The ship is a success
+ unstable_ship.3.t: "Firepower Achieved"
+ unstable_ship.3.d: "The turreted ship invented by [SCOPE.sCharacter('new_ship_designer').GetLastName] has exceeded expectations, and is a seen as an example of concentrated firepower."
+ unstable_ship.3.f: "The two turrets can pour more shells down the enemy than any competitor. [SCOPE.sCharacter('new_ship_designer').GetFullNameNoFormatting] has become even more popular after this success."
+ unstable_ship.3.a: "Excellent."
+
+## Navy Professionalism
+ # Increasing Navy Professionalism - crew
+ navy_professionalism.2.t: "Improving our Crew Quality"
+ navy_professionalism.2.d: "The [ROOT.GetCountry.GetCustom('name_of_navy')] could use some improvements. What should we do?"
+
+ navy_professionalism.2.a: "Start a comprehensive training program."
+ navy_professionalism.2.b: "Purge corrupt naval officers."
+ navy_professionalism.2.c: "Enforce discipline among the sailors."
+ navy_professionalism.2.e: "Send an attaché to [SCOPE.sCountry('attache_country').GetCustom('use_the')][SCOPE.sCountry('attache_country').GetName] to learn their practices."
+
+ # Increasing Navy Professionalism - equipment
+ navy_professionalism.3.t: "Fixing our Equipment"
+ navy_professionalism.3.d: "To ensure a well-functioning navy, we need to purchase new equipment."
+ navy_professionalism.3.a: "We need the best materiel for our navy."
+ navy_professionalism.3.b: "Try to find some affordable supplier."
+ navy_professionalism.3.c: "We could ask [SCOPE.sC('lender_country').GetCustom('use_the')][SCOPE.sC('lender_country').GetName] to lend some of their equipment..."
+
+ # Ruler redirects navy funds
+ navy_professionalism.4.t: "Ruler Redirects Navy Funding"
+ navy_professionalism.4.d: "Our [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] has decided to transfer some of the funds from the navy to [ROOT.GetCountry.GetRuler.GetHerHis] personal projects. It's rumored that the money will be used to [ROOT.GetCountry.GetRuler.GetCustom('reason_for_taking_funds')]."
+ navy_professionalism.4.a: "That's bad news for the navy."
+ navy_professionalism.4.b: "Find a way to stop [ROOT.GetCountry.GetRuler.GetHerHim]."
+
+ # Admiral Embezzles Funds
+ navy_professionalism.5.t: "Admiral Embezzles Funds"
+ navy_professionalism.5.d: "Our Admiral, [SCOPE.sCharacter('corrupt_admiral').GetFullName], has been caught embezzling funds from the Navy."
+ navy_professionalism.5.d2: " It's rumored that he was using it to [SCOPE.sCharacter('corrupt_admiral').GetCustom('reason_for_taking_funds')]."
+ navy_professionalism.5.a: "We should just let it slide."
+ navy_professionalism.5.b: "Off with his head."
+
+ # Torpedo Juice
+ navy_professionalism.6.t: "Torpedo Juice"
+ navy_professionalism.6.d: "Sailors in the [ROOT.GetCountry.GetCustom('name_of_navy')] have started making cocktails with the alcohol used as fuel in torpedoes, nicknamed \"Torpedo Juice\"."
+ navy_professionalism.6.a: "Just leave them be."
+ navy_professionalism.6.b: "Poison the alcohol to discourage them."
+
+ # Shells with stolen charges
+ navy_professionalism.7.t: "Faulty Shells"
+ navy_professionalism.7.d: "Some officers are suspected to be stealing some of the explosives destined for shells and replacing it with sand or cement."
+ navy_professionalism.7.a: "That's just an unsubstantiated rumor."
+ navy_professionalism.7.b: "Find them and prosecute the to the full extent of the law."
+
+ # Sailors complain about harsh punishments
+ navy_professionalism.8.t: "Harsh punishments"
+ navy_professionalism.8.d: "Sailors have been complaining about the harsh punishments they receive in the [ROOT.GetCountry.GetCustom('name_of_navy')]."
+ navy_professionalism.8.a: "Beatings will continue until morale improves."
+ navy_professionalism.8.b: "Relax the discipline somewhat."
+
+ # Admiral gets promoted through corrupt means
+ navy_professionalism.9.t: "Admiral Calls Favor in Government"
+ navy_professionalism.9.d: "Admiral [SCOPE.sCharacter('corrupt_admiral').GetFullName] is very well-connected in the government, and is using his influence to get himself a promotion, despite his lack of naval skill."
+ navy_professionalism.9.f: "Everybody can see that Mr. [SCOPE.sCharacter('corrupt_admiral').GetLastNameNoFormatting] was not meant to command ships. He has no knowledge of strategy, can't tell a mast from a cannon and gets seasick just from stepping on a ship. However, he feels much more at ease when offering a toast at state banquets, or giving interviews to journalists. Due to his popularity, [SCOPE.sCharacter('corrupt_admiral').GetLastNameNoFormatting] is considered one of the rising stars in the navy, and voices within the government have been calling for his promotion."
+ navy_professionalism.9.a: "He deserves the promotion."
+ navy_professionalism.9.b: "The navy will not bow to political pressure."
+
+ # Generalized breakdown of discipline
+ navy_professionalism.10.t: "Breakdown of Discipline in the Navy"
+ navy_professionalism.10.d: "Discipline in the [ROOT.GetCountry.GetCustom('name_of_navy')] has reached a breaking point."
+ navy_professionalism.10.f: "Between mutinies, desertion, and a general lack of order, the navy has become nearly impossible to control. There isn't a week that goes by without some ship needing to stop operations due to crew issues."
+ navy_professionalism.10.a: "Crack down on any rebellious behavior."
+ navy_professionalism.10.b: "It might go away if we ignore it..."
+
+ # Officer purge (very low navyprof)
+ navy_professionalism.11.t: "Officer Purge"
+ navy_professionalism.11.d: "The corruption within the [ROOT.GetCountry.GetCustom('name_of_navy')] is at a critical point. Some believe a complete replacement of the admiralty is in order."
+ navy_professionalism.11.a: "It must be done."
+ navy_professionalism.11.a.tt: "#BOLD All#! admirals in the country will be fired."
+ navy_professionalism.11.b: "Let's just do some reshuffling of the officers."
+ navy_professionalism.11.c: "Actually, this is all [SCOPE.sCharacter('scapegoat_admiral').GetFullName]'s fault."
+ navy_professionalism.11.c.tt: "[SCOPE.sCharacter('scapegoat_admiral').GetLastName] will be fired."
+
+ # Naval Exercise
+ navy_professionalism.12.t: "Naval Exercises"
+ navy_professionalism.12.d: "It's time to conduct Naval Exercises, to make sure our fleet can work together in formation."
+ navy_professionalism.12.a: "We musn't spare any expenses."
+ navy_professionalism.12.b: "There's only space in the budget for a moderately-sized exercise."
+ navy_professionalism.12.c: "Just conduct some minor local training, no need for a full fleet exercise."
+
+## The Revolt of the Lash
+ revolt_lash.1.t: "The Revolt of the Lash"
+ revolt_lash.1.d: "Sailors serving on the battleships in [SCOPE.sState('revolting_state').GetName] seized control of the vessels and are threatening to bombard the coast. They protest against the poor working conditions, which includes frequent corporal punishment, especially against [SCOPE.sCulture('afro_culture').GetName] sailors."
+ revolt_lash.1.f: "Not satisfied with the low pay, inadequate food, corporal punishment and racial discrimination, the enlisted sailors onboard the new dreadnoughts Minas Geraes and São Paulo, along with other modernized ships, mutined and threatened to bombard the city if their demands for decent working conditions are not met. Their leader, João Cândido, has been nicknamed #ITALIC Almirante Negro#!, \"The Black Admiral.\""
+ revolt_lash.1.a: "Let's negotiate with them."
+ revolt_lash.1.b: "Use the remainder of our fleet to deal with them."
+
+ # Revolt of the Lash - negotiation
+ revolt_lash.2.t: "The Negotiation"
+ revolt_lash.2.d: "The mutined sailors demand many things, including an improvement to working conditions, a ban on the lash and amnesty to the sailors involved."
+ revolt_lash.2.f: "\"We, as sailors and Brazilian citizens, can no longer accept the slavery as practiced in the Brazilian Navy. We are tearing away the black veil that covers the eyes of this patriotic but mislead population. With all the ships under our control, with the officers prisoners, those same officers who made the Brazilian Navy weak by continuing to withhold the treatment we have earned, that of citizens working in defense of our country.\n\nWe ask, end the disorder, and grant us some favors to better our Brazilian Navy, such as, to remove incompetent and indignant officers. Reform the immoral and shameful code under which we serve, end the use of the whip and other similar punishments. Raise our pay according to the negotiated plan. Educate those seamen who lack the competence to wear our proud uniform, and put a limit on our daily service and see that it is respected. Your Excellency has the pleasure of 12 hours in order to send us a satisfactory response, or else you will see the nation annihilated.\n\nSent from the Battleship São Paulo on [TimeKeeper.GetCurrentDate.GetString]."
+ revolt_lash.2.a: "Accept some of the demands, but arrest the sailors anyway."
+ revolt_lash.2.b: "Try to meet their demands as best as we can."
+
+# Lack of civilian shipbuilding threatens naval yards
+ shipyard_events.1.t: "Naval Yards Can't Find Workers"
+ shipyard_events.1.d: "The [SCOPE.sBuilding('naval_yard_building').GetName] at [SCOPE.sState('naval_yard_state').GetName] are having difficulty finding qualified personnel, due to the small scale of civilian shipbuilding in our country."
+ shipyard_events.1.f: "The construction of a warship involves a large number of many different trades, some of them hard to find. Often, those jobs are shared with the civilian shipbuilding industry, and many companies build both commercial and military ships. However, the small size of our civilian shipbuilding sector has been causing bottlenecks in hiring."
+ shipyard_events.1.a: "There's nothing we can do about it."
+ shipyard_events.1.b: "Protect the shipbuilding industry at any cost."
+
+# Renaming of Soviet Battleships
+ communist_ships.1.t: "Renaming of Battleships"
+ communist_ships.1.d: "After taking power, the Communists have renamed the battleships in our fleet."
+ communist_ships.1.f.start: "We shall purge the influence of the old Imperial system from our navy, as we did with our government. The #WHITE Imperatritsa Ekaterina Velikaya#! will now be called #WHITE Svobodnaya Rossiya#!, \"Free Russia\"."
+ communist_ships.1.f.ukraine: "The #WHITE Imperator Nikolai I#! shall be renamed #WHITE Soborna Ukraina#!."
+ communist_ships.1.f.paris: "And the #WHITE Petropavlovsk#! and #WHITE Sevastopol#! will become #WHITE #ITALIC Marat#!#! and #WHITE Parizhskaya Kommuna#!, in honor of the French revolutionaries."
+ communist_ships.1.f.noparis: "And the #WHITE Petropavlovsk#! will become #WHITE Marat#!, in honor of the French revolutionary."
+ communist_ships.1.a: "For the Revolution!"
+
+## Fleet Review
+ # Deciding on costs
+ fleet_review_events.1.t: "Deciding on a Budget"
+ fleet_review_events.1.d: "Before the Fleet Review starts, we need to decide how much we're willing to spend."
+ fleet_review_events.1.a: "Spare no expenses."
+ fleet_review_events.1.b: "Spend enough to make a good display."
+ fleet_review_events.1.c: "As little as possible. The navy already has their own funding."
+
+ # Choosing a special guest
+ fleet_review_events.2.t: "Our Guest of Honor"
+ fleet_review_events.2.d: "We could use the fleet review as an opportunity to pay homage to a special guest. Who should we choose?"
+ fleet_review_events.2.a: "[SCOPE.sC('friendly_nation_1').GetCustom('use_the')|U][SCOPE.sC('friendly_nation_1').GetName] would make a good guest."
+ fleet_review_events.2.a.tt: "Our relations with [SCOPE.sC('friendly_nation_1').GetCustom('use_the')][SCOPE.sC('friendly_nation_1').GetName] will change depending on the results."
+ fleet_review_events.2.b: "[SCOPE.sC('friendly_nation_2').GetCustom('use_the')|U][SCOPE.sC('friendly_nation_2').GetName] is our greatest friend."
+ fleet_review_events.2.b.tt: "Our relations with [SCOPE.sC('friendly_nation_2').GetCustom('use_the')][SCOPE.sC('friendly_nation_2').GetName] will change depending on the results."
+ fleet_review_events.2.c: "Homage? The purpose of the display is to show the [SCOPE.sC('rival_country').GetAdjective] who's best!"
+ fleet_review_events.2.c.tt: "Our Navy [concept_power_projection] will change depending on the results."
+
+ # Fleet review starts (navy tech level)
+ fleet_review_events.3.t: "The Review Begins"
+ fleet_review_events.3.d_intro: "The Fleet Review has started, and our ships attract the attention of the crowd."
+ fleet_review_events.3.d_impressive: "They are at the very cutting edge of naval technology."
+ fleet_review_events.3.d_middle: "They are amongst the most advanced in the world."
+ fleet_review_events.3.d_disappointing: "However, they are quite old, and not very impressive."
+ fleet_review_events.3.f_intro: "The ships approach in two columns, as the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] watches from an elevated platform. Next to [ROOT.GetCountry.GetRuler.GetHerHim] there are other officials and foreign dignataries, including a [SCOPE.sC('guest_country').GetAdjectiveNoFormatting] delegation.\n\nLeading the parade is the flagship#WHITE [ROOT.GetCountry.GetCustom('custom_flagship_name')]#!, [ROOT.GetCountry.GetCustom('review_flagship_type')]\n\n"
+ fleet_review_events.3.f_impressive_friend: "The ship is one of the newest and most powerful in the world, and our guests and the general public are very impressed."
+ fleet_review_events.3.f_middle_friend: "That is a modern and well-equipped ship, and the public seems to be pleased with the display."
+ fleet_review_events.3.f_disappointing_friend: "Unfortunately, it's not a very modern ship, and some people in the crowd seem disappointed at the obsolete state of our navy."
+ fleet_review_events.3.f_impressive_rival: "The ship is one of the newest and most powerful in the world, and even the [SCOPE.sC('guest_country').GetAdjectiveNoFormatting] guests were impressed by its might."
+ fleet_review_events.3.f_middle_rival: "The ship was relatively modern and in decent condition, but that didn't seem to impress our [SCOPE.sC('guest_country').GetAdjectiveNoFormatting] guests. \"I've seen better,\" they claim."
+ fleet_review_events.3.f_disappointing_rival: "The ship is not particularly modern, and some barely-disguised scoffs could be heard from the [SCOPE.sC('guest_country').GetAdjectiveNoFormatting] side as it passed."
+ fleet_review_events.3.a: "We are the vanguard of innovation."
+ fleet_review_events.3.b: "We must not be complacent."
+ fleet_review_events.3.c: "That's fine, technology isn't everything..."
+ 
+ # Fleet Review: Navy Professionalism
+ fleet_review_events.4.t: "Fleet Review: Our Crews"
+ fleet_review_events.4.d_high: "During the Fleet Review, our ships' crews have shown remarkable skill."
+ fleet_review_events.4.d_medium: "During the Fleet Review, our ships' crews have performed decently well."
+ fleet_review_events.4.d_low: "During the Fleet Review, our ship's crews have displayed a quite poor performance."
+ fleet_review_events.4.f_high: "The ships maintain the formation perfectly. As each ship's crew salutes the audience from the decks, you can feel they're proud of their work."
+ fleet_review_events.4.f_medium: "The ships sail in formation, as the crowd watches. They performed their duties well, albeit with a few minor issues along the ceremony."
+ fleet_review_events.4.f_low: "The review almost ended in disaster when one of the ships went off-course, nearly colliding with the other column. Many other ships can't maintain formation properly. It's clear that the training is quite lacking in the [ROOT.GetCountry.GetCustom('name_of_navy')]."
+ fleet_review_events.4.a: "We salute our brave sailors."
+ fleet_review_events.4.b: "They're doing a fine job."
+ fleet_review_events.4.c: "They'll have a meeting with the cat-o'-nine-tails later..."
+ 
+ # Fleet Review: Fleet size
+ fleet_review_events.5.t: "Fleet Review: The Size of Our Fleet"
+ fleet_review_events.5.d_best: "Our fleet is the largest in the world, and it makes our Review much more impressive."
+ fleet_review_events.5.d_good: "Our fleet is quite large, and the Review is a display of our power."
+ fleet_review_events.5.d_medium: "Our fleet is not that large, but it can still make a good display."
+ fleet_review_events.5.d_small: "Our fleet is tiny, which makes the Review a little underwhelming."
+ fleet_review_events.5.f_best: "The Review goes on for a long time, which is natural given the size of our fleet. Row upon row of warships go past our [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle], seemingly without end. After witnessing such a sight, there's no doubt in anyone's mind about the might of our fleet."
+ fleet_review_events.5.f_good: "The Review includes several rows of warships of different sizes. Although our fleet is not the biggest in the world, it's certainly not to be messed with."
+ fleet_review_events.5.f_medium: "The Review goes on for a while, but it's pretty clear that our fleet isn't really one of the largest. As a moderately-sized navy, the [ROOT.GetCountry.GetCustom('name_of_navy')] has just enough ships to be an active fighting force, but not enough to be a major player in the global stage."
+ fleet_review_events.5.f_small: "The Review ends quite shortly after it begins, disappointing some spectators. It's clear that the size of our navy is not something worth bragging about."
+ fleet_review_events.5.f_rival: "Some [SCOPE.sC('guest_country').GetAdjectiveNoFormatting] guests laugh at the state of our fleet."
+ fleet_review_events.5.a: "Nothing can beat our navy!"
+ fleet_review_events.5.b: "Other nations fear our navy."
+ fleet_review_events.5.c: "A respectable display."
+ fleet_review_events.5.e: "It's not about the size of the navy, it's how you use it!"
+
+ # The end of the fleet review
+ fleet_review_events.6.t: "The End of the Review"
+ fleet_review_events.6.d_good: "The Fleet Review is over, and it can be considered a great success. Our fleet performed spectacularly."
+ fleet_review_events.6.d_medium: "The Fleet Review is over, and the overall result can be considered good."
+ fleet_review_events.6.d_bad: "The Fleet Review is over, and the results were not good. Our navy's reputation was tarnished as a result."
+ fleet_review_events.6.f_good: "The [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] could not have been more satisfied. It's clear that [ROOT.GetCountry.GetRuler.GetHerHis] navy was ready to take on any opponent. The crowd cheered, ecstatic, as the last few ships sailed by, flying a large [ROOT.GetCountry.GetAdjectiveNoFormatting] naval ensign on their afts. As the flags disappeared over the horizon, the Review came to a close, but some enthusiastic voices could still be heard from the audience."
+ fleet_review_events.6.f_medium: "The [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] watched as the last few ships sailed by. [ROOT.GetCountry.GetRuler.GetSheHe|U] was pleased by the result. It was not the most spectacular display in the world, but it showed that the [ROOT.GetCountry.GetCustom('name_of_navy')] was a capable fighting force."
+ fleet_review_events.6.f_bad: "The Review could only be described as a disaster. After many misfortunes and embarrassments, the [ROOT.GetCountry.GetCustom('name_of_navy')] became the laughing stock of the world."
+ fleet_review_events.6.a: "The [ROOT.GetCountry.GetCustom('name_of_navy')] is the best in the world!"
+ fleet_review_events.6.b: "An acceptable result."
+ fleet_review_events.6.c: "A shameful display."
+
+## Admiralty Events
+ 
+ # Opposition politicians want some concessions
+ admiralty.1.t: "Their Fair Share"
+ admiralty.1.d: "Opposition politicians from the [SCOPE.gsIG('complaining_ig').GetName] are worried that their interests aren't going to be represented in the newly reformed Admiralty."
+ admiralty.1.f: "\"This attempt to centralize and expand the Navy's command structure is a blatant power grab from the sitting government,\" said one of the politicians. \"The [ROOT.GetCountry.GetCustom('political_head_of_navy')] is in the [SCOPE.gsIG('government_ig').GetNameNoFormatting]'s pocket, and his staff a bunch of political apointees.\""
+ admiralty.1.a: "Make some concessions to calm them down."
+ admiralty.1.a.tt: "This will set back the Admiralty reform by 3 months."
+ admiralty.1.b: "Ignore them."
+
+ # Government politician want concessions
+ admiralty.2.t: "Our Piece of the Pie"
+ admiralty.2.d: "Politicians representing the [SCOPE.gsIG('complaining_ig').GetName] are complaining that the newly reformed Admiralty doesn't benefit them enough."
+ admiralty.2.f: "It's only natural that politicians in the sitting government would expect some special treatment for their interest group. Members of the [SCOPE.gsIG('complaining_ig').GetNameNoFormatting] demand that a certain set of positions must be reserved for staff sympathetic to or appointed by their politicians."
+ admiralty.2.a: "Arrange some positions for them, where they won't cause much trouble."
+ admiralty.2.a.tt: "This will set back the Admiralty reform by 3 months."
+ admiralty.2.b: "They already have enough."
+
+ # Officers don't want to lose local control
+ admiralty.3.t: "Losing Control"
+ admiralty.3.d: "Some naval officers are worried that the new Admiralty will reduce their autonomy and the control they have over their own units."
+ admiralty.3.f: "A petition has been circulating within the government, signed by several officers from the [ROOT.GetCountry.GetCustom('name_of_navy')]. They fear the new policies might impact their work and take away their authority."
+ admiralty.3.a: "Put some guarantees to soothe their nerves."
+ admiralty.3.a.tt: "This will set back the Admiralty reform by 3 months."
+ admiralty.3.b: "The Admiralty is more important."

@@ -43,9 +43,7 @@
   pmg_tts_naval_yards: "$pm_base$"
   pmg_ownership_capital_building_navy_yards: "$pmg_ownership$"
   pm_military_shipbuilding_ironclad: "Navios de Casco de Ferro"
-  pm_military_shipbuilding_steel: "Navios de Casco de Aço"
   pm_military_shipbuilding_turbine: "Navios com Turbinas"
-  pm_military_shipbuilding_arc_welding: "Grandes Navios de Guerra"
 
   # Naval Base
   pm_tts_ships_of_the_line: "Navios de Linha"
@@ -145,6 +143,7 @@
   eroding_navy_professionalism: "Profissionalismo da Marinha Erodindo"
   early_navy_adopter: "Pioneiro Naval"
   importing_battleships: "Importando Encouraçados"
+  cheat_well_supplied_navy: "Marinha Bem Suprida"
 
   # Opinion modifiers
   meeting_two_power_standard: "Cumprindo o Padrão de Duas Potências"
@@ -546,9 +545,9 @@
   # Custom triggers
   ######
 
-  predreadnought_trigger_tt: "Pelo menos 5 níveis de [GetBuildingType('building_military_shipyards').GetName] com produção de couraçados em ferro ativa"
-  dreadnought_trigger_tt: "Pelo menos 10 níveis de [GetBuildingType('building_military_shipyards').GetName] com construção de navios de aço ativa"
-  battleship_trigger_tt: "Pelo menos 15 níveis de [GetBuildingType('building_military_shipyards').GetName] com construção de navios a turbina ativa"
+  predreadnought_trigger_tt: "Pelo menos 5 níveis de [GetBuildingType('building_military_shipyard').GetName] com produção de couraçados em ferro ativa"
+  dreadnought_trigger_tt: "Pelo menos 10 níveis de [GetBuildingType('building_military_shipyard').GetName] com construção de navios de aço ativa"
+  battleship_trigger_tt: "Pelo menos 15 níveis de [GetBuildingType('building_military_shipyard').GetName] com construção de navios a turbina ativa"
   high_navyprof_option_tt: "Esta opção está disponível devido ao nosso #p ALTO#! @navyprof![concept_navy_professionalism]"
 
 
@@ -571,10 +570,10 @@
   building_group_bg_navy_soldiers_standard_of_living_add: "Padrão de Vida dos Militares de Base Naval"
   building_group_bg_navy_soldiers_standard_of_living_add_desc: "Uma mudança no padrão de vida de militares empregados em bases navais"
 
-  unit_naval_armor_add: "[concept_naval_armor]"
-  unit_naval_armor_add_desc: "Uma mudança da blindagem da unidada"
-  unit_naval_pen_add: "[concept_naval_pen]"
-  unit_naval_pen_add_desc: "Uma mudança da penetração da unidade"
+  unit_navy_armor_add: "[concept_navy_armor]"
+  unit_navy_armor_add_desc: "Uma mudança da blindagem da unidada"
+  unit_navy_pen_add: "[concept_navy_pen]"
+  unit_navy_pen_add_desc: "Uma mudança da penetração da unidade"
 
 
   # Goods
@@ -610,6 +609,9 @@
 
   state_sell_orders_aeroplanes_add: "Ordens de Venda de [GetGoods('aeroplanes').GetTextIcon][Nbsp][GetGoods('aeroplanes').GetNameNoFormatting]"
   state_sell_orders_aeroplanes_add_desc: "Um aumento ou diminuição das [concept_sell_orders] de [GetGoods('aeroplanes').GetName] em um [concept_state]"
+
+  state_sell_orders_radios_add: "Ordens de Venda de [GetGoods('radios').GetTextIcon][Nbsp][GetGoods('radios').GetNameNoFormatting]"
+  state_sell_orders_radios_add_desc: "Um aumento ou diminuição das [concept_sell_orders] de [GetGoods('radios').GetName] em um [concept_state]"
 
   # country
   country_navy_professionalism_admiralty_add: "Profissionalismo da Marinha pelo Almirantado"

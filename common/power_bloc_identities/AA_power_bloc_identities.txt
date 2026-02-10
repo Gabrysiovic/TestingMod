@@ -432,8 +432,8 @@ REPLACE:identity_ideological_union = {
 			limit = {
 				has_law = law_type:law_monarchy
 				OR = {
-					has_law = law_type:law_autocracy
-					has_law = law_type:law_oligarchy
+					has_law_or_variant = law_type:law_autocracy
+					has_law_or_variant = law_type:law_oligarchy
 				}
 			}
 			add = 100
@@ -649,8 +649,8 @@ REPLACE:identity_religious = {
 	}
 	possible = {
 		OR = {
-			has_law = law_type:law_state_religion
-			has_law = law_type:law_freedom_of_conscience
+			has_law_or_variant = law_type:law_state_religion
+			has_law_or_variant = law_type:law_freedom_of_conscience
 		}
 	}
 	member_modifier = {
@@ -799,7 +799,7 @@ REPLACE:identity_religious = {
 		}
 		if = {
 			limit = {
-				has_law = law_type:law_state_religion
+				has_law_or_variant = law_type:law_state_religion
 			}
 			multiply = 1.5
 		}
