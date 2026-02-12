@@ -5,3 +5,28 @@ country_allow_slipstream_bool = {
 	color = good
 	boolean = yes
 }
+
+#Caste restrictions modifiers
+state_soldiers_internal_migration_disallowed_bool = {
+	color = bad
+	boolean = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+state_machinists_internal_migration_disallowed_bool = {
+	color = bad
+	boolean = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+state_laborers_internal_migration_disallowed_bool = {
+	color = bad
+	boolean = yes
+	game_data = {
+		ai_value = 0
+	}
+}
