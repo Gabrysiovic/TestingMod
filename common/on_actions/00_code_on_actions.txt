@@ -542,7 +542,7 @@ on_monthly_pulse_country = {
 		# Sweden
 		sweden_monarchy.2
 		sweden_monarchy.3
-		# fake events
+		# fake events -Akiko
 		aus_monarch_death.6
 		aus_heir_death.5
 		pru_heir_death.1
