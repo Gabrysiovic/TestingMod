@@ -1,0 +1,25 @@
+﻿#Created by Akiko
+on_game_started = {
+	on_actions = {
+		AA_indian_migration
+	}
+}
+
+#Adds amendment to restrict migration in India
+AA_indian_migration = {
+	effect = {
+		every_country = {
+			if = {
+				limit = {
+					is_subject = yes
+				}
+			}
+			active_law:lawgroup_migration ?= {
+				add_amendment = {
+					type = amendment_caste_restrictions
+					sponsor = PREV.ig:ig_landowners
+				}
+			}
+		}
+	}
+}

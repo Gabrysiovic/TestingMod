@@ -1,4 +1,5 @@
 ﻿### By Merc (Gabriel said), last updated by Oaken: 28/12/2025
+### Updated by Gabriel 30/01/2026
 # Negative
 REPLACE:drought = {
 	trigger = {
@@ -24,14 +25,14 @@ REPLACE:drought = {
 		}
 	}
 	modifier = {
-		#Throughput
-		building_group_bg_agriculture_throughput_add = -0.05
-		building_group_bg_plantations_throughput_add = -0.05
-		building_group_bg_ranching_throughput_add = -0.05
-		#Infrastructure
-		building_group_bg_agriculture_infrastructure_usage_mult = 0.1
-		building_group_bg_plantations_infrastructure_usage_mult = 0.1
-		building_group_bg_ranching_infrastructure_usage_mult = 0.1
+		#Throughput - stronger
+		building_group_bg_agriculture_throughput_add = -0.08
+		building_group_bg_plantations_throughput_add = -0.08
+		building_group_bg_ranching_throughput_add = -0.08
+		#Infrastructure - removed
+##		building_group_bg_agriculture_infrastructure_usage_mult = 0.1
+##		building_group_bg_plantations_infrastructure_usage_mult = 0.1
+##		building_group_bg_ranching_infrastructure_usage_mult = 0.1
 		#Subsistence
 		state_peasants_consumption_multiplier_add = 0.025
 	}
@@ -88,15 +89,15 @@ REPLACE:flood = {
 		}
 	}
 	modifier = {
-		#Infrastructure
-		state_infrastructure_mult = -0.05
+		#Infrastructure - removed
+##		state_infrastructure_mult = -0.05
 		#MAPI
 		state_market_access_price_impact = -0.05
-		#Throughput
-		building_group_bg_agriculture_throughput_add = -0.05
-		building_group_bg_plantations_throughput_add = -0.05
-		building_group_bg_ranching_throughput_add = -0.05
-		building_group_bg_extraction_throughput_add = -0.05
+		#Throughput - stronger
+		building_group_bg_agriculture_throughput_add = -0.08
+		building_group_bg_plantations_throughput_add = -0.08
+		building_group_bg_ranching_throughput_add = -0.08
+		building_group_bg_extraction_throughput_add = -0.08
 		#Subsistence
 		state_peasants_consumption_multiplier_add = 0.025
 	}
@@ -221,15 +222,15 @@ REPLACE:wildfire = {
 		}
 	}
 	modifier = {
-		# Throughput
-		building_group_bg_agriculture_throughput_add = -0.05
-		building_group_bg_plantations_throughput_add = -0.05
-		building_group_bg_ranching_throughput_add = -0.05
-		building_group_bg_extraction_throughput_add = -0.05
+		# Throughput - stronger
+		building_group_bg_agriculture_throughput_add = -0.08
+		building_group_bg_plantations_throughput_add = -0.08
+		building_group_bg_ranching_throughput_add = -0.08
+		building_group_bg_extraction_throughput_add = -0.08
 		# Infra - Building
-		building_group_bg_agriculture_infrastructure_usage_mult = 0.1
-		building_group_bg_plantations_infrastructure_usage_mult = 0.1
-		building_group_bg_ranching_infrastructure_usage_mult = 0.1
+##		building_group_bg_agriculture_infrastructure_usage_mult = 0.1
+##		building_group_bg_plantations_infrastructure_usage_mult = 0.1
+##		building_group_bg_ranching_infrastructure_usage_mult = 0.1
 		# Infra - State
 		building_group_bg_agriculture_throughput_add = -0.05
 		#Subsistence

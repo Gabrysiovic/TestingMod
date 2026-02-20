@@ -1,0 +1,54 @@
+﻿#Created by Akiko
+amendment_caste_restrictions = {
+	parent = law_serfdom
+	allowed_laws = {
+		law_closed_borders
+		law_migration_controls
+		law_no_migration_controls
+	}
+	modifier = {
+		interest_group_ig_landowners_approval_add = 1
+		interest_group_ig_landowners_pol_str_mult = 0.1
+		state_peasants_internal_migration_disallowed_bool = yes
+		state_soldiers_internal_migration_disallowed_bool = yes
+		state_machinists_internal_migration_disallowed_bool = yes
+		state_laborers_internal_migration_disallowed_bool = yes
+	}
+	possible = {
+		has_social_hierarchy = british_indian_caste_system
+		NOT = {
+			this = c:BIC
+		}
+		NOT = {
+			has_law_or_variant = law_type:law_affirmative_action
+		}
+	}
+	would_sponsor = {
+		AND = {
+			exists = scope:approval
+			scope:approval > 0
+		}
+	}
+	ai_will_revoke = {
+		OR = {
+			ruler = {
+				law_enactment_stance = {
+					law = law_type:law_affirmative_action
+					value > neutral
+				}
+			}
+			any_interest_group = {
+				is_in_government = yes
+				law_enactment_stance = {
+					law = law_type:law_affirmative_action
+					value > neutral
+				}
+			}
+		}
+	}
+	can_repeal = {
+		has_law_or_variant = law_type:law_affirmative_action
+		legitimacy >= legitimacy_to_repeal_amendment
+	}
+	amendment_activism_multiplier = 0.5
+}

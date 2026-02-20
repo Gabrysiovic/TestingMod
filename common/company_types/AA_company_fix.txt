@@ -1,5 +1,5 @@
 ﻿# Compagnie du Congo pour le Commerce et l'Industrie
-TRY_REPLACE:company_ccci = {
+REPLACE:company_ccci = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/ccci.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 	flavored_company = yes
@@ -61,7 +61,7 @@ TRY_REPLACE:company_ccci = {
 	}
 }
 
-TRY_REPLACE:company_basic_food = {
+REPLACE:company_basic_food = {
 	icon = "gfx/interface/icons/company_icons/basic_food.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 	category = aristocrat_owned
@@ -117,7 +117,7 @@ TRY_REPLACE:company_basic_food = {
 }
 
 # Arthur Guinness Son & Co. Ltd
-TRY_REPLACE:company_guinness = {
+REPLACE:company_guinness = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/arthur_guinness_son.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
 	flavored_company = yes
@@ -190,7 +190,7 @@ TRY_REPLACE:company_guinness = {
 }
 
 # Confédération générale des vignerons
-TRY_REPLACE:company_cgv = {
+REPLACE:company_cgv = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/france_cgv.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rice.dds"
 	category = shopkeeper_owned
@@ -249,43 +249,36 @@ TRY_REPLACE:company_cgv = {
 	}
 }
 
-
-
-TRY_REPLACE:company_mozambique_company = {
+REPLACE:company_mozambique_company = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/mozambique_companhia_de_mocambique.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
-
 	category = bureaucrat_owned
-
 	flavored_company = yes
-
-	preferred_headquarters = { STATE_MOCAMBIQUE STATE_ZAMBEZIA STATE_LOURENCO_MARQUES }
-
+	preferred_headquarters = {
+		STATE_MOCAMBIQUE
+		STATE_ZAMBEZIA
+		STATE_LOURENCO_MARQUES
+	}
 	building_types = {
 		building_cotton_plantation
 		building_tea_plantation
 		building_millet_farm
 	}
-
 	extension_building_types = {
 		building_logging_camp
 	}
-
 	possible_prestige_goods = {
 		prestige_good_generic_grain
 	}
-
 	prestige_goods_trigger = {
 		custom_tooltip = {
 			text = je_prestige_goods_grain_complete_tt
 			has_variable = prestige_good_generic_grain_var
 		}
 	}
-
 	potential = {
 		country_has_primary_culture = cu:portuguese
 	}
-
 	possible = {
 		has_technology_researched = mutual_funds
 		any_scope_state = {
@@ -303,12 +296,10 @@ TRY_REPLACE:company_mozambique_company = {
 			}
 		}
 	}
-
 	prosperity_modifier = {
 		state_colony_growth_speed_mult = 0.1
 		state_colony_growth_creation_factor = 0.1
 	}
-
 	ai_will_do = {
 		has_technology_researched = mutual_funds
 		any_scope_state = {
@@ -320,7 +311,6 @@ TRY_REPLACE:company_mozambique_company = {
 			is_incorporated = yes
 		}
 	}
-
 	ai_construction_targets = {
 		building_cotton_plantation = {
 			level = 5
@@ -345,8 +335,13 @@ TRY_REPLACE:company_mozambique_company = {
 			}
 		}
 	}
-
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3		# Higher base value for flavored companies
+	}
+}
+
+INJECT:company_de_beers = {
+	extension_building_types = {
+		building_coal_mine
 	}
 }
