@@ -129,23 +129,12 @@
 
     #Misc
     pm_monument_prestige_only_forbidden_city: "Forbidden City" #    -Akiko
-    #fixing vanilla stuff -Akiko
-    #rootgetname_RU_VP: ""
-    #rootgetname_RU_RP: ""
-    #rootgetname_noformatting_RU_TP: ""
-    #IBE_var_RU_VP: ""
-    #SPA_var_RU_RP: ""
-    #SPA_RU_TP: ""
     
     #Intervene in war
     intervene_in_war.tt: "Join any [concept_war] where [SCOPE.sCountry('target_country_scope').GetName] is the [concept_war_leader]"
     intervene_in_war: "Intervene in War"
     intervene_in_war_action_name: "Join the [TARGET_COUNTRY.GetAdjective] War"
     intervene_in_war_desc: "This [concept_diplomatic_action] allows the initiator to join any [concept_war] where the target country is the [concept_war_leader]."
-    #intervene_in_war_action_notification_name: "[INITIATOR_COUNTRY.GetAdjective] Intervention in [TARGET_COUNTRY.GetName]"
-    #intervene_in_war_action_notification_desc: "[INITIATOR_COUNTRY.GetName] has announced that it will give full military support to [TARGET_COUNTRY.GetName] in its war. The [INITIATOR_COUNTRY.GetAdjective] Armed Forces will now join the [TARGET_COUNTRY.GetAdjective] Armed Forces in its military operations."
-    #intervene_in_war_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetAdjective] Intervention in [TARGET_COUNTRY.GetName]"
-    #intervene_in_war_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] has announced that it will give full military support to [TARGET_COUNTRY.GetName] in its war. The [INITIATOR_COUNTRY.GetAdjective] Armed Forces will now join the [TARGET_COUNTRY.GetAdjective] Armed Forces in its military operations."
     intervene_in_war_no_truce: "Has no truce with the enemy war leader."
     intervene_in_war_offensive_relations: "$DIPLO_ACTION_RELATIONS$ are at least $relations_cordial$ (since target is the attacker)."
 

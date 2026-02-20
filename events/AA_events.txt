@@ -83,7 +83,7 @@ AA_apocalypse.1 = {
 	on_opened_soundeffect = event:/SFX/UI/Alerts/event_appear
 	duration = 1
 	trigger = {
-		year = 2000
+		always = no
 	}
 	immediate = {
 	}

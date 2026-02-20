@@ -4759,6 +4759,10 @@ RS_historical_deaths = {
 }
 
 RS_historical_births = {
+	#Added to remove error -Akiko
+	trigger = {
+		exists = heir
+	}
 	events = {
 		afg_monarch_birth.1
 		afg_monarch_birth.2

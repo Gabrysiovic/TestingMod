@@ -1,0 +1,29 @@
+﻿######## GVFH fixes to 00_code_on_actions
+# No root scope set
+on_yearly_pulse_country = {
+	events = {
+		gvfh_critical_trade_center_event.1		# GVFH: Add one trade center in capital or treaty port if country has none
+		# My fixes to remove fake events from another mod -Akiko
+		aus_heir_death.5
+		aus_monarch_death.6
+		fra_bourbon_monarch_death.1
+		pru_heir_death.1
+	}
+}
+
+# Root = Country
+on_election_campaign_start = {
+	events = {
+		delay = {
+			days = 1
+		}
+		gvfh_elections_fix.1
+	}
+}
+
+# Root = Country
+on_election_campaign_end = {
+	events = {
+		gvfh_elections_fix.1		# GVFH: Not needed but just in case single party state is enact in the middle of election
+	}
+}

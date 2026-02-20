@@ -1,13 +1,10 @@
 ﻿#### GVFH
-je_uneasy_raj = {
+REPLACE:je_uneasy_raj = {
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
-
 	group = je_group_global_international_situations
-
 	should_be_involved = {
 		c:BIC ?= this
 	}
-
 	should_show_when_not_involved = {
 		OR = {
 			is_in_geographic_region = geographic_region_india
@@ -16,17 +13,24 @@ je_uneasy_raj = {
 			}
 		}
 	}
-
 	scripted_progress_bar = sepoy_mutiny_progress_bar_bengal
 	scripted_progress_bar = sepoy_mutiny_progress_bar_bombay
 	scripted_progress_bar = sepoy_mutiny_progress_bar_madras
-
 	immediate = {
 		c:BIC ?= {
 			save_scope_as = raj_scope
-			set_global_variable = { name = bengal_presidency_stability value = "scope:journal_entry.scripted_bar_progress(sepoy_mutiny_progress_bar_bengal)" }
-			set_global_variable = { name = bombay_presidency_stability value = "scope:journal_entry.scripted_bar_progress(sepoy_mutiny_progress_bar_bombay)" }
-			set_global_variable = { name = madras_presidency_stability value = "scope:journal_entry.scripted_bar_progress(sepoy_mutiny_progress_bar_madras)" }
+			set_global_variable = {
+				name = bengal_presidency_stability
+				value = "scope:journal_entry.scripted_bar_progress(sepoy_mutiny_progress_bar_bengal)"
+			}
+			set_global_variable = {
+				name = bombay_presidency_stability
+				value = "scope:journal_entry.scripted_bar_progress(sepoy_mutiny_progress_bar_bombay)"
+			}
+			set_global_variable = {
+				name = madras_presidency_stability
+				value = "scope:journal_entry.scripted_bar_progress(sepoy_mutiny_progress_bar_madras)"
+			}
 			sr:region_bengal = {
 				save_scope_as = bengal_sr_scope
 			}
@@ -48,9 +52,7 @@ je_uneasy_raj = {
 			}
 		}
 	}
-
 	custom_completion_header = je_uneasy_raj_complete_header
-
 	complete = {
 		c:BIC ?= {
 			custom_tooltip = {
@@ -59,13 +61,11 @@ je_uneasy_raj = {
 			}
 			average_sol >= 10
 			radical_fraction = {
-				value <= 0.10
+				value <= 0.1
 			}
 		}
 	}
-
 	custom_failure_header = je_uneasy_raj_fail_header
-
 	fail = {
 		c:BIC ?= {
 			OR = {
@@ -82,9 +82,7 @@ je_uneasy_raj = {
 			}
 		}
 	}
-
 	timeout = 9000
-
 	on_timeout = {
 		c:BIC ?= {
 			custom_tooltip = {
@@ -98,8 +96,13 @@ je_uneasy_raj = {
 					}
 					custom_tooltip = no_more_utilitarianism_tt
 				}
-				add_journal_entry = { type = je_sepoy_mutiny }
-				trigger_event = { id = sepoy_mutiny_events.3 popup = yes }
+				add_journal_entry = {
+					type = je_sepoy_mutiny
+				}
+				trigger_event = {
+					id = sepoy_mutiny_events.3
+					popup = yes
+				}
 				remove_global_variable = bengal_presidency_stability
 				remove_global_variable = bombay_presidency_stability
 				remove_global_variable = madras_presidency_stability
@@ -211,32 +214,23 @@ je_uneasy_raj = {
 			}
 		}
 	}
-
-	#event_outcome_timeout_desc = {
-	#	first_valid = {
-	#		triggered_desc = {
-	#			desc = event_effects_sepoy_mutiny_events.3_tt
-	#		}
-	#	}
-	#}
-
 	invalid = {
 	}
-
 	custom_on_completion_header = je_uneasy_raj_on_complete_header
-
 	on_complete = {
 		c:BIC ?= {
 			custom_tooltip = home_rule_unavailable_tt
 			custom_tooltip = end_company_rule_made_available_tt
-			trigger_event = { id = sepoy_mutiny_events.11 popup = yes }
+			trigger_event = {
+				id = sepoy_mutiny_events.11
+				popup = yes
+			}
 			remove_global_variable = bengal_presidency_stability
 			remove_global_variable = bombay_presidency_stability
 			remove_global_variable = madras_presidency_stability
 			set_variable = company_rule_enduring
 		}
 	}
-
 	event_outcome_completed_desc = {
 		first_valid = {
 			triggered_desc = {
@@ -244,9 +238,7 @@ je_uneasy_raj = {
 			}
 		}
 	}
-
 	custom_on_failure_header = je_uneasy_raj_on_fail_header
-
 	on_fail = {
 		c:BIC ?= {
 			custom_tooltip = british_raj_later_tt
@@ -258,8 +250,13 @@ je_uneasy_raj = {
 				}
 				custom_tooltip = no_more_utilitarianism_tt
 			}
-			add_journal_entry = { type = je_sepoy_mutiny }
-			trigger_event = { id = sepoy_mutiny_events.3 popup = yes }
+			add_journal_entry = {
+				type = je_sepoy_mutiny
+			}
+			trigger_event = {
+				id = sepoy_mutiny_events.3
+				popup = yes
+			}
 			# Bengal Presidency
 			if = {
 				limit = {
@@ -370,7 +367,6 @@ je_uneasy_raj = {
 			remove_global_variable = madras_presidency_stability
 		}
 	}
-
 	event_outcome_failed_desc = {
 		first_valid = {
 			triggered_desc = {
@@ -378,19 +374,26 @@ je_uneasy_raj = {
 			}
 		}
 	}
-
 	on_weekly_pulse = {
 		events = {
 		}
 		effect = {
 			c:BIC ?= {
-				set_global_variable = { name = bengal_presidency_stability value = "scope:journal_entry.scripted_bar_progress(sepoy_mutiny_progress_bar_bengal)" }
-				set_global_variable = { name = bombay_presidency_stability value = "scope:journal_entry.scripted_bar_progress(sepoy_mutiny_progress_bar_bombay)" }
-				set_global_variable = { name = madras_presidency_stability value = "scope:journal_entry.scripted_bar_progress(sepoy_mutiny_progress_bar_madras)" }
+				set_global_variable = {
+					name = bengal_presidency_stability
+					value = "scope:journal_entry.scripted_bar_progress(sepoy_mutiny_progress_bar_bengal)"
+				}
+				set_global_variable = {
+					name = bombay_presidency_stability
+					value = "scope:journal_entry.scripted_bar_progress(sepoy_mutiny_progress_bar_bombay)"
+				}
+				set_global_variable = {
+					name = madras_presidency_stability
+					value = "scope:journal_entry.scripted_bar_progress(sepoy_mutiny_progress_bar_madras)"
+				}
 			}
 		}
 	}
-
 	on_monthly_pulse = {
 		effect = {
 			if = {
@@ -418,207 +421,21 @@ je_uneasy_raj = {
 			}
 			c:BIC ?= {
 				random_list = {
-					11 = { }
-					1 = { trigger_event = sepoy_mutiny_events.6 }
-					1 = { trigger_event = raj.4 }
-					1 = { trigger_event = raj.5 }
-				}
-			}
-		}
-	}
-
-	weight = 100
-	should_be_pinned_by_default = yes
-}
-
-je_sepoy_mutiny = {
-	icon = "gfx/interface/icons/event_icons/event_military.dds"
-
-	group = je_group_british_india
-
-	immediate = {
-		ig:ig_industrialists ?= {
-			save_scope_as = eic_ig
-		}
-	}
-
-	complete = {
-		trigger_if = {
-			limit = {
-				c:MUG ?= {
-					has_variable = sepoy_mutiny_revolter_var
-				}
-			}
-			c:MUG ?= { is_country_alive = no }
-		}
-		trigger_if = {
-			limit = {
-				c:BGL ?= {
-					has_variable = sepoy_mutiny_revolter_var
-				}
-			}
-			c:BGL ?= { is_country_alive = no }
-		}
-		trigger_if = {
-			limit = {
-				c:SAT ?= {
-					has_variable = sepoy_mutiny_revolter_var
-				}
-			}
-			c:SAT ?= { is_country_alive = no }
-		}
-		trigger_if = {
-			limit = {
-				c:PAN ?= {
-					has_variable = sepoy_mutiny_revolter_var
-				}
-			}
-			c:PAN ?= { is_country_alive = no }
-		}
-		highest_secession_progress < 0.3
-		has_any_secessionists_broken_out = no
-		is_at_war = no
-	}
-
-	on_complete = {
-		if = {
-			limit = {
-				exists = c:GBR
-				is_subject_of = c:GBR
-				c:GBR ?= {
-					is_country_alive = yes
-					NOT = { has_variable = british_raj_var }
-				}
-			}
-			c:GBR ?= {
-				trigger_event = { id = raj.1 days = 0 popup = yes }
-			}
-		}
-		else = {
-			add_modifier = {
-				name = company_crushed_mutiny
-				days = normal_modifier_time
-			}
-		}
-		hidden_effect = {
-			every_scope_state = {
-				limit = {
-					owner = ROOT
-					has_variable = bic_incorporated_state
-				}
-				set_state_type = incorporated
-				remove_variable = bic_incorporated_state
-			}
-		}
-	}
-
-	event_outcome_completed_desc = {
-		first_valid = {
-            triggered_desc = {
-                desc = event_effects_raj.1_tt
-            }
-        }
-	}
-
-	fail = {
-		OR = {
-			trigger_if = {
-				limit = {
-					c:MUG ?= {
-						has_variable = sepoy_mutiny_revolter_var
+					11 = {
 					}
-				}
-				exists = c:MUG
-				NOT = {
-					has_war_with = c:MUG
-					has_state_in_state_region = STATE_DELHI
-					has_state_in_state_region = STATE_AGRA
-				}
-			}
-			trigger_if = {
-				limit = {
-					c:BGL ?= {
-						has_variable = sepoy_mutiny_revolter_var
+					1 = {
+						trigger_event = sepoy_mutiny_events.6
 					}
-				}
-				exists = c:BGL
-				NOT = {
-					has_war_with = c:BGL
-					has_state_in_state_region = STATE_EAST_BENGAL
-					has_state_in_state_region = STATE_WEST_BENGAL
-				}
-			}
-			trigger_if = {
-				limit = {
-					c:SAT ?= {
-						has_variable = sepoy_mutiny_revolter_var
+					1 = {
+						trigger_event = raj.4
 					}
-				}
-				exists = c:SAT
-				NOT = {
-					has_war_with = c:SAT
-					has_state_in_state_region = STATE_BOMBAY
-				}
-			}
-			trigger_if = {
-				limit = {
-					c:PAN ?= {
-						has_variable = sepoy_mutiny_revolter_var
-					}
-				}
-				exists = c:PAN
-				NOT = {
-					has_war_with = c:PAN
-					has_state_in_state_region = STATE_PUNJAB
-					has_state_in_state_region = STATE_HILL_PUNJAB
-				}
-			}
-			trigger_if = {
-				limit = {
-					c:KNO ?= {
-						has_variable = sepoy_mutiny_revolter_var
-					}
-				}
-				exists = c:KNO
-				NOT = {
-					has_war_with = c:KNO
-					has_state_in_state_region = STATE_MADRAS
-				}
-			}
-		}
-		hidden_trigger = {
-			NOT = {
-				any_diplomatic_play = {
-					any_scope_play_involved = { this = root }
-					is_diplomatic_play_type = dp_sepoy_mutiny
-					target = {
-						capital = {
-							OR = {
-								region = sr:region_bengal
-								region = sr:region_bombay
-								region = sr:region_madras
-								region = sr:region_punjab
-								region = sr:region_central_india
-							}
-						}
+					1 = {
+						trigger_event = raj.5
 					}
 				}
 			}
 		}
 	}
-
-	on_fail = {
-		trigger_event = { id = sepoy_mutiny_events.2 days = 0 popup = yes }
-	}
-
-    event_outcome_failed_desc = {
-        first_valid = {
-            triggered_desc = {
-                desc = event_effects_sepoy_mutiny_events.2_tt
-            }
-        }
-    }
-
 	weight = 100
 	should_be_pinned_by_default = yes
 }
