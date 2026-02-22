@@ -148,6 +148,8 @@
     intervene_in_war_proposal_third_party_accepted_desc: "[SOURCER_COUNTRY.GetName] has announced that it will give full military support to [TARGET_COUNTRY.GetName] in its war. The [SOURCE_COUNTRY.GetAdjective] Armed Forces will now join the [TARGET_COUNTRY.GetAdjective] Armed Forces in its military operations."
     intervene_in_war_proposal_third_party_declined_name: "[TARGET_COUNTRY.GetName] has declinied [SOURCE_COUNTRY.GetAdjective] Intervention"
     intervene_in_war_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] has announced that it doesn't want help from [SOURCE_COUNTRY.GetName] in its war."
+
+    DIPLOMATIC_ACCEPTANCE_OVERLORD_SUBJECT: "from [SCOPE.sCountry('target').GetName] being a [concept_subject] of [SCOPE.sCountry('target').GetOverlord.GetName]"
     #Join war
     join_war: "Join War"
     join_war_effects_desc: "• An agreement established by one [concept_country] targeting another, where the first $concept_country$ shall join any [concept_war] where the second $concept_country$ is the [concept_war_leader]."

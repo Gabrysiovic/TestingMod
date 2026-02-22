@@ -1,4 +1,5 @@
-﻿check_substation_state = {
+﻿###Power Plants+
+check_substation_state = {
 	if = {
 		limit = {
 			sg:electricity.state_goods_delta != 0

@@ -1,4 +1,5 @@
-﻿#inputs
+﻿###Power Plants+
+#inputs
 #local_var:
 #root = country
 calculate_price_percentage_electricity_market = {

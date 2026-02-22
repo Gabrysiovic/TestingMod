@@ -1,4 +1,5 @@
-﻿electricity_market = {
+﻿###Power Plants+
+electricity_market = {
 	texture = "gfx/interface/icons/goods_icons/electricity_market.dds"
 	cost = 30
 	category = staple

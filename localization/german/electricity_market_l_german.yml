@@ -1,4 +1,5 @@
-﻿l_german:
+﻿###Power Plants+
+l_german:
  electrical_generation: "Gleichstromerzeugung"
  electrical_generation_desc: "Die Erzeugung und Nutzung von Gleichstrom ermöglicht eine zuverlässige und dezentrale Stromversorgung, ideal für lokale Industriezentren und isolierte Netze, aber begrenzt in Reichweite und Effizienz."
 

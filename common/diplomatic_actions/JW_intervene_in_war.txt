@@ -147,11 +147,23 @@ intervene_in_war = {
 	}
 	ai = {
 		evaluation_chance = {
-			value = 0.25
+			value = country_rank
+			multiply = 0.025
 		}
-		# accept_score = {
-		# 	value = 10
-		# }
+		accept_score = {
+			value = 0
+			if = {
+				limit = {
+					scope:target_country = {
+						is_subject_of = scope:actor
+					}
+				}
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_OVERLORD_SUBJECT"
+					value = 1
+				}
+			}
+		}
 		propose_score = {
 			value = 10
 		}

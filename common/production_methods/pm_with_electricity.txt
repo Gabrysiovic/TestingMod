@@ -1,4 +1,5 @@
-﻿REPLACE:pm_electric_saw_mills = {
+﻿###Power Plants+
+REPLACE:pm_electric_saw_mills = {
 	texture = "gfx/interface/icons/production_method_icons/electric_saw_mills.dds"
 	unlocking_technologies = {
 		electrical_generation

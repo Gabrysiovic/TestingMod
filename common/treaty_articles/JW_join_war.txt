@@ -200,11 +200,8 @@ join_war = {
 			military
 		}
 		evaluation_chance = {
-			value = 0
-			add = {
-				value = country_rank
-				multiply = 0.025
-			}
+			value = country_rank
+			multiply = 0.025
 		}
 		article_ai_usage = {
 			request

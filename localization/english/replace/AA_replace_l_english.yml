@@ -1,7 +1,9 @@
 ﻿l_english:
-  #electricity mod -Akiko
+  #Drasp mode
+  mm_players: "Drasp Mode"
+  #Power Plants+ locs -Akiko
   electricity: "Direct Current"
   electrical_generation: "Direct Current Generation"
   electrical_generation_desc: "The generation and use of direct current allows for reliable and decentralized power supply, ideal for local industrial centers and isolated networks, but limited in range and efficiency."
-  #GVFH loc
+  #GVFH loc -Akiko
   je_uneasy_raj_reason: "Unrest is brewing in the three [Concept('concept_presidency', '$concept_presidencies$')] of the [SCOPE.sCountry('raj_scope').GetName].\n\nTroubled by harsh [Concept('concept_taxes','$concept_taxation$')] regimes, increasing disrespect for local customs and territorial expansion at the expense of native princes, Indian opposition to Company rule has been mounting in recent years.\n\nWorse still, discord can be found even within the proud ranks of the native sepoy regiments, who resent any challenge to their traditional status and privileges.\n\n#bold Sepoy Mutiny#!\nIf the [Concept('concept_presidency_stability','$concept_presidency_stability_short$')] of any $concept_presidency$ is #bold medium#! ([GetPlayer.MakeScope.ScriptValue('uneasy_raj_stability_medium_upper_bound')]) or less for #variable 100#! months, India will erupt in #tooltippable #tooltip:je_uneasy_raj_tt_4 #bold open rebellion#!#!#!. Currently this has been true for #variable [GetGlobalVariable('sepoy_mutiny_timer_var').GetValue]#! months."

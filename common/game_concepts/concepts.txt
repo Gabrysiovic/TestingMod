@@ -1,4 +1,5 @@
-﻿concept_direct_current = {
+﻿###Power Plants+
+concept_direct_current = {
 	texture = "gfx/interface/icons/goods_icons/electricity.dds"
 	is_loading_tip = yes
 }

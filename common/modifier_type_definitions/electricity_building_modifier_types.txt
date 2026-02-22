@@ -1,4 +1,5 @@
-﻿goods_input_electricity_market_add = {
+﻿###Power Plants+
+goods_input_electricity_market_add = {
 	decimals = 1
 	color = bad
 	game_data = {

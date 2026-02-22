@@ -1,4 +1,5 @@
-﻿price_percentage_electricity_market = {
+﻿###Power Plants+
+price_percentage_electricity_market = {
 	value = impl_delta
 	divide = impl_divisor
 	multiply = -0.7
@@ -12,12 +13,10 @@ impl_delta = {
 
 impl_divisor = {
 	value = local_var:electricity_market_buy_orders
-
 	if = {
 		limit = {
 			impl_delta <= 0
 		}
-
 		value = local_var:electricity_market_sell_orders
 	}
 }

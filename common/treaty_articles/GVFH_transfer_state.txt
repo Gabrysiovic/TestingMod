@@ -1,58 +1,53 @@
 ﻿##### GVFH
-state_transfer = {
+REPLACE:state_transfer = {
 	kind = directed
 	cost = 0
-
 	icon = "gfx/interface/icons/diplomatic_treaties_articles_icons/transfer_state.dds"
-
 	flags = {
 		causes_state_transfer
 		giftable
 	}
-
 	usage_limit = once_per_side_with_same_inputs
-
 	maintenance_paid_by = source_country
-
-    required_inputs = {
+	required_inputs = {
 		state
-    }
-
+	}
 	can_ratify = {
 		scope:source_country = {
 			num_states >= 2
 		}
-
 		custom_tooltip = {
-            text = DUPLICATE_ARTICLE_SAME_INPUTS
-            scope:treaty ?= {
-                NOT = {
-                    any_scope_article_option = {
-                        count > 1
-                        has_type = state_transfer
-                        source_country = scope:source_country
-                        input_state = root.input_state
-                    }
-                }
-            }
-        }
+			text = DUPLICATE_ARTICLE_SAME_INPUTS
+			scope:treaty ?= {
+				NOT = {
+					any_scope_article_option = {
+						count > 1
+						has_type = state_transfer
+						source_country = scope:source_country
+						input_state = root.input_state
+					}
+				}
+			}
+		}
 	}
-
 	state_valid_trigger = {
 		scope:input = {
 			owner = root
 			is_capital = no
 			is_under_colonization = no
 			OR = {
-				scope:other_country = { is_adjacent_to_state = prev }
+				scope:other_country = {
+					is_adjacent_to_state = prev
+				}
 				AND = {
 					is_coastal = yes
-					scope:other_country = { has_port = yes }
+					scope:other_country = {
+						has_port = yes
+					}
 				}
 			}
 		}
 	}
-
 	on_entry_into_force = {
 		scope:article_options = {
 			target_country = {
@@ -61,12 +56,14 @@ state_transfer = {
 			source_country = {
 				save_scope_as = state_giver
 			}
-
 			if = {
-				limit = { exists = input_state }
-				input_state = { set_state_owner = scope:state_taker }
+				limit = {
+					exists = input_state
+				}
+				input_state = {
+					set_state_owner = scope:state_taker
+				}
 			}
-
 			scope:state_taker ?= {
 				if = {
 					limit = {
@@ -79,7 +76,9 @@ state_transfer = {
 				}
 				else_if = {
 					limit = {
-						NOT = { has_variable = recently_traded_states_counter }
+						NOT = {
+							has_variable = recently_traded_states_counter
+						}
 					}
 					set_variable = {
 						name = recently_traded_states_counter
@@ -87,8 +86,6 @@ state_transfer = {
 					}
 				}
 			}
-
-
 			scope:state_giver ?= {
 				if = {
 					limit = {
@@ -110,8 +107,8 @@ state_transfer = {
 			}
 		}
 	}
-
-	on_withdrawal = {}
+	on_withdrawal = {
+	}
 	on_break = {
 		scope:withdrawing_country = {
 			change_relations = {
@@ -148,29 +145,22 @@ state_transfer = {
 			}
 		}
 	}
-
 	ai = {
-
 		treaty_categories = {
 			expansion
 		}
-
 		evaluation_chance = {
 			value = 0.1
 		}
-
 		article_ai_usage = {
-            request
-        }
-
+			request
+		}
 		inherent_accept_score = {
 			value = 0
-
 			if = {
 				limit = {
 					exists = scope:is_renegotiation
 				}
-
 				add = {
 					desc = "DIPLOMATIC_ACCEPTANCE_ALREADY_TRADED_STATE"
 					value = -1000
@@ -180,14 +170,15 @@ state_transfer = {
 				limit = {
 					exists = scope:article.input_state
 					scope:source_country ?= this
-					NOT = { exists = scope:is_treaty_active }
+					NOT = {
+						exists = scope:is_treaty_active
+					}
 					scope:article.input_state.ai_state_value:root > 0
 				}
 				subtract = {
 					desc = "DIPLOMATIC_ACCEPTANCE_TRADE_STATE_SOURCE"
 					value = scope:article.input_state.ai_state_value:root
 					min = 100
-
 					if = {
 						limit = {
 							scope:article.input_state = {
@@ -202,7 +193,6 @@ state_transfer = {
 						}
 						min = 200
 					}
-
 					if = {
 						limit = {
 							scope:source_country.country_rank > scope:target_country.country_rank
@@ -215,7 +205,6 @@ state_transfer = {
 						}
 					}
 				}
-
 				if = {
 					limit = {
 						exists = scope:target_country.var:recently_traded_states_counter
@@ -223,7 +212,6 @@ state_transfer = {
 					}
 					add = {
 						desc = "DIPLOMATIC_ACCEPTANCE_RECENTLY_TRADED_STATES"
-
 						value = -50
 						multiply = scope:target_country.var:recently_traded_states_counter
 					}
@@ -233,7 +221,9 @@ state_transfer = {
 				limit = {
 					exists = scope:article.input_state
 					scope:target_country ?= this
-					NOT = { exists = scope:is_treaty_active }
+					NOT = {
+						exists = scope:is_treaty_active
+					}
 					scope:article.input_state.ai_state_value:root > 0
 				}
 				add = {
@@ -242,18 +232,23 @@ state_transfer = {
 				}
 			}
 			else_if = {
-				limit = { NOT = { exists = scope:is_treaty_active } }
+				limit = {
+					NOT = {
+						exists = scope:is_treaty_active
+					}
+				}
 				add = {
 					desc = "DIPLOMATIC_ACCEPTANCE_TRADE_STATE_REJECT"
 					value = -300
 				}
 			}
 		}
-
 		contextual_accept_score = {
 			if = {
 				limit = {
-					NOT = { exists = scope:is_treaty_active }
+					NOT = {
+						exists = scope:is_treaty_active
+					}
 					scope:treaty ?= {
 						any_scope_article_option = {
 							has_type = state_transfer
@@ -261,15 +256,16 @@ state_transfer = {
 						}
 						NOT = {
 							any_scope_article_option = {
-								NOR = { 
-									has_type = state_transfer 
-									has_type = free_text 
+								NOR = {
+									has_type = state_transfer
+									has_type = free_text
 								}
 							}
 						}
 					}
 					OR = {
-						AND = { # GVFH: If source country is giving a bugged treaty port					
+						AND = {
+							# GVFH: If source country is giving a bugged treaty port					
 							scope:target_country ?= this
 							any_state = {
 								owner = scope:source_country
@@ -284,10 +280,11 @@ state_transfer = {
 								state_region = scope:article.input_state.state_region
 							}
 						}
-						AND = { # GVFH: If asking for treaty port state
+						AND = {
+							# GVFH: If asking for treaty port state
 							scope:source_country ?= this
 							scope:source_country.country_rank <= scope:target_country.country_rank
-							any_state = { 
+							any_state = {
 								owner = scope:source_country
 								is_treaty_port = yes
 								is_split_state = yes
@@ -303,7 +300,7 @@ state_transfer = {
 					}
 				}
 				add = {
-					value = 5000 # GVFH: Bonus only apply if you give only for the treaty port
+					value = 5000					# GVFH: Bonus only apply if you give only for the treaty port
 					desc = "GVFH: From giving the treaty port"
 				}
 			}

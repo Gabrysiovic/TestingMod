@@ -1,4 +1,5 @@
-﻿target_state_electricity_delta = {
+﻿###Power Plants+
+target_state_electricity_delta = {
 	value = state_electricity_delta
 	if = {
 		limit = {

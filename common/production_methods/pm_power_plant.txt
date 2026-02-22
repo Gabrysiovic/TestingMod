@@ -1,4 +1,5 @@
-﻿REPLACE:pm_early_power_plant = {
+﻿###Power Plants+
+REPLACE:pm_early_power_plant = {
 	texture = "gfx/interface/icons/production_method_icons/power_plant.dds"
 	replacement_if_valid = pm_early_power_plant_market
 	state_modifiers = {

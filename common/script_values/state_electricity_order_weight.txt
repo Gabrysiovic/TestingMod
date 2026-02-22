@@ -1,4 +1,5 @@
-﻿#root = state
+﻿###Power Plants+
+#root = state
 state_electricity_order_weight = {
 	value = state_electricity_delta
 }

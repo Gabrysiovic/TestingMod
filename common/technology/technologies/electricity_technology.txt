@@ -1,4 +1,5 @@
-﻿REPLACE:electrical_generation = {
+﻿###Power Plants+
+REPLACE:electrical_generation = {
 	# Unlocks Power Plants
 	# Unlocks Electric Sewing Machines PM and Automatic Power Looms PM in Textile Mills
 	# Unlocks Brine Electrolysis PM in Chemical Plants
