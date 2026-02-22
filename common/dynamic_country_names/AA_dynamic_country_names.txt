@@ -1,55 +1,47 @@
-﻿INJECT_OR_CREATE:DAI = { #Indochina
+﻿DAI = {
+	#Indochina
 	dynamic_country_name = {
-	name = AA_indochina
-	adjective = AA_indochina_adj
-	
-	is_main_tag_only = no
-	
-	trigger =
-		{
+		name = AA_indochina
+		adjective = AA_indochina_adj
+		is_main_tag_only = no
+		trigger = {
 			exists = scope:actor
 			scope:actor ?= {
 				has_variable = AA_indochina_var
 			}
-			
 		}
-	priority = 10	
+		priority = 10
 	}
 }
 
-INJECT_OR_CREATE:GBR = { #Imperial Federation
+INJECT:GBR = {
+	#Imperial Federation
 	dynamic_country_name = {
-	name = AA_federation
-	adjective = AA_federation_adj
-	
-	is_main_tag_only = no
-	
-	trigger = 
-	{
-		exists = scope:actor
-		scope:actor ?= {
-			has_variable = AA_federation_var
+		name = AA_federation
+		adjective = AA_federation_adj
+		is_main_tag_only = no
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_variable = AA_federation_var
+			}
 		}
-	}
-	priority = 10000
+		priority = 10000
 	}
 }
 
-INJECT_OR_CREATE:PER = { #Eranshahr
+INJECT:PER = {
+	#Eranshahr
 	dynamic_country_name = {
-	name = AA_persia
-	adjective = AA_persia_adj
-	
-	is_main_tag_only = yes
-	
-	trigger =
-	{
-		exists = scope:actor
-		scope:actor ?= {
-			has_variable = AA_persia_var
+		name = AA_persia
+		adjective = AA_persia_adj
+		is_main_tag_only = yes
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_variable = AA_persia_var
+			}
 		}
-			
+		priority = 10
 	}
-	priority = 10
-	}
-}	
+}

@@ -10,20 +10,3 @@ on_yearly_pulse_country = {
 		pru_heir_death.1
 	}
 }
-
-# Root = Country
-on_election_campaign_start = {
-	events = {
-		delay = {
-			days = 1
-		}
-		gvfh_elections_fix.1
-	}
-}
-
-# Root = Country
-on_election_campaign_end = {
-	events = {
-		gvfh_elections_fix.1		# GVFH: Not needed but just in case single party state is enact in the middle of election
-	}
-}
