@@ -100,7 +100,7 @@ pm_early_power_plant_market = {
 pm_coal-fired_plant_market = {
 	texture = "gfx/interface/icons/production_method_icons/coal_fired_plant.dds"
 	unlocking_technologies = {
-		alternating_voltage
+		steam_turbine
 	}
 	state_modifiers = {
 		workforce_scaled = {
@@ -124,7 +124,7 @@ pm_coal-fired_plant_market = {
 pm_oil-fired_plant_market = {
 	texture = "gfx/interface/icons/production_method_icons/oil_fired_plant.dds"
 	unlocking_technologies = {
-		alternating_voltage
+		oil_turbine
 	}
 	state_modifiers = {
 		workforce_scaled = {

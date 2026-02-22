@@ -32,7 +32,7 @@ alternating_voltage = {
 	texture = "gfx/interface/icons/invention_icons/electrical_generation.dds"
 	category = production
 	unlocking_technologies = {
-		electrical_capacitors
+		electrical_generation
 	}
 	modifier = {
 		country_can_share_electricity_in_market_bool = yes
@@ -48,5 +48,20 @@ alternating_voltage = {
 			}
 			add = 2
 		}
+	}
+}
+
+REPLACE:steam_turbine = {
+	# Unlocks the Coal-Firing PM in Power Plants
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/steam_turbines.dds"
+	category = production
+
+	unlocking_technologies = {
+		alternating_voltage
+	}
+
+	ai_weight = {
+		value = 1
 	}
 }
