@@ -6,7 +6,7 @@ country_allow_slipstream_bool = {
 	boolean = yes
 }
 
-#Caste restrictions modifiers
+#Caste restrictions modifiers -Akiko
 state_soldiers_internal_migration_disallowed_bool = {
 	color = bad
 	boolean = yes

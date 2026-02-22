@@ -25,7 +25,6 @@ technology_events.50 = {
 	immediate = {
 		set_variable = {
 			name = war_time_cans
-			value = yes
 		}
 	}
 	option = {
