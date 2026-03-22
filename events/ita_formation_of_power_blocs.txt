@@ -1,37 +1,50 @@
 ﻿namespace = ita_formation_of_power_blocs
+
 ## Handel Extern##
+
 ita_formation_of_power_blocs.1 = {
 	type = country_event
 	placement = root
 	hidden = yes
-	cooldown = {
-		days = 1750
-	}
+
+	cooldown = { days = 1750 }
+
 	trigger = {
-		c:ITA ?= {
+		exists = c:ITA
+		game_date >= 1837.1.1
+		c:ITA = {
 			is_ai = yes
 			OR = {
-				AND = {
+				AND  = {			
 					country_rank >= rank_value:unrecognized_major_power
 					global_country_ranking <= 8
 				}
 				country_rank >= rank_value:great_power
-			}
-			NOT = {
-				has_law_or_variant = law_type:law_isolationism
-			}
-			NOT = {
-				is_country_type = decentralized
-			}
+			}	
+			NOT = { has_law_or_variant = law_type:law_isolationism }
+			NOT = { is_country_type = decentralized }
 			is_revolutionary = no
 			is_in_power_bloc = no
 			is_at_war = no
 			is_subject = no
+			ruler = {
+				AND = {
+					NOT = {
+						has_trait = trait_child
+						has_trait = cautious
+						has_trait = reserved
+					}					
+					NOT = {
+						has_ideology = ideology:ideology_luddite
+						has_ideology = ideology:ideology_protectionist
+						has_ideology = ideology:ideology_vanguardist
+						has_ideology = ideology:ideology_despotic_utopian
+					}
+				}
+			}
 			OR = {
 				AND = {
-					ig:ig_industrialists ?= {
-						is_in_government = yes
-					}
+					ig:ig_industrialists ?= { is_in_government = yes }
 					has_law_or_variant = law_type:law_free_trade
 				}
 				AND = {
@@ -48,8 +61,8 @@ ita_formation_of_power_blocs.1 = {
 				has_radical_leftist_government = yes
 			}
 		}
-		game_date >= 1837.1.1
 	}
+
 	immediate = {
 		if = {
 			limit = {
@@ -57,27 +70,36 @@ ita_formation_of_power_blocs.1 = {
 				c:ITA = {
 					is_ai = yes
 					OR = {
-						AND = {
+						AND  = {			
 							country_rank >= rank_value:unrecognized_major_power
 							global_country_ranking <= 8
 						}
 						country_rank >= rank_value:great_power
-					}
-					NOT = {
-						has_law_or_variant = law_type:law_isolationism
-					}
-					NOT = {
-						is_country_type = decentralized
-					}
+					}	
+					NOT = { has_law_or_variant = law_type:law_isolationism }
+					NOT = { is_country_type = decentralized }
 					is_revolutionary = no
 					is_in_power_bloc = no
 					is_at_war = no
 					is_subject = no
+					ruler = {
+						AND = {
+							NOT = {
+								has_trait = trait_child
+								has_trait = cautious
+								has_trait = reserved
+							}							
+							NOT = {
+								has_ideology = ideology:ideology_luddite
+								has_ideology = ideology:ideology_protectionist
+								has_ideology = ideology:ideology_vanguardist
+								has_ideology = ideology:ideology_despotic_utopian
+							}
+						}
+					}
 					OR = {
 						AND = {
-							ig:ig_industrialists ?= {
-								is_in_government = yes
-							}
+							ig:ig_industrialists ?= { is_in_government = yes }
 							has_law_or_variant = law_type:law_free_trade
 						}
 						AND = {
@@ -99,11 +121,7 @@ ita_formation_of_power_blocs.1 = {
 			c:ITA = {
 				create_power_bloc = {
 					name = "Alleanza Mercantile di Torino"
-					map_color = {
-						73
-						118
-						71
-					}
+					map_color = { 73 118 71 }
 					identity = identity_trade_league
 					principle = principle_external_trade_1
 				}
@@ -113,37 +131,44 @@ ita_formation_of_power_blocs.1 = {
 }
 
 ## Interner Handel ##
+
 ita_formation_of_power_blocs.2 = {
 	type = country_event
 	placement = root
 	hidden = yes
-	cooldown = {
-		days = 1750
-	}
+
+	cooldown = { days = 1750 }
+
 	trigger = {
-		c:ITA ?= {
+		exists = c:ITA
+		c:ITA = {
 			is_ai = yes
 			OR = {
-				AND = {
+				AND  = {			
 					country_rank >= rank_value:unrecognized_major_power
 					global_country_ranking <= 8
 				}
 				country_rank >= rank_value:great_power
-			}
-			NOT = {
-				has_law_or_variant = law_type:law_isolationism
-			}
-			NOT = {
-				is_country_type = decentralized
-			}
+			}	
+			NOT = { has_law_or_variant = law_type:law_isolationism }
+			NOT = { is_country_type = decentralized }
 			is_revolutionary = no
 			is_in_power_bloc = no
 			is_at_war = no
 			is_subject = no
-			AND = {
-				ig:ig_industrialists ?= {
-					is_in_government = yes
+			ruler = {
+				AND = {
+					NOT = {
+						has_trait = trait_child
+					}					
+					NOT = {
+						has_ideology = ideology:ideology_market_liberal
+						has_ideology = ideology:ideology_orleanist
+					}
 				}
+			}
+			AND = {
+				ig:ig_industrialists ?= { is_in_government = yes }
 				has_strategy = ai_strategy_economic_imperialism
 				OR = {
 					has_law_or_variant = law_type:law_mercantilism
@@ -161,6 +186,7 @@ ita_formation_of_power_blocs.2 = {
 			game_date >= 1837.1.1
 		}
 	}
+
 	immediate = {
 		if = {
 			limit = {
@@ -168,26 +194,31 @@ ita_formation_of_power_blocs.2 = {
 				c:ITA = {
 					is_ai = yes
 					OR = {
-						AND = {
+						AND  = {			
 							country_rank >= rank_value:unrecognized_major_power
 							global_country_ranking <= 8
 						}
 						country_rank >= rank_value:great_power
-					}
-					NOT = {
-						has_law_or_variant = law_type:law_isolationism
-					}
-					NOT = {
-						is_country_type = decentralized
-					}
+					}	
+					NOT = { has_law_or_variant = law_type:law_isolationism }
+					NOT = { is_country_type = decentralized }
 					is_revolutionary = no
 					is_in_power_bloc = no
 					is_at_war = no
 					is_subject = no
-					AND = {
-						ig:ig_industrialists ?= {
-							is_in_government = yes
+					ruler = {
+						AND = {
+							NOT = {
+								has_trait = trait_child
+							}					
+							NOT = {
+								has_ideology = ideology:ideology_market_liberal
+								has_ideology = ideology:ideology_orleanist
+							}
 						}
+					}
+					AND = {
+						ig:ig_industrialists ?= { is_in_government = yes }
 						has_strategy = ai_strategy_economic_imperialism
 						OR = {
 							has_law_or_variant = law_type:law_mercantilism
@@ -208,11 +239,7 @@ ita_formation_of_power_blocs.2 = {
 			c:ITA = {
 				create_power_bloc = {
 					name = "Confederazione Economica Italiana"
-					map_color = {
-						73
-						118
-						71
-					}
+					map_color = { 73 118 71 }
 					identity = identity_trade_league
 					principle = principle_internal_trade_1
 				}
@@ -226,32 +253,46 @@ ita_formation_of_power_blocs.3 = {
 	type = country_event
 	placement = root
 	hidden = yes
-	cooldown = {
-		days = 1750
-	}
+
+	cooldown = { days = 1750 }
+
 	trigger = {
-		c:ITA ?= {
+		exists = c:ITA
+		c:ITA = {
 			is_ai = yes
 			OR = {
-				AND = {
+				AND  = {			
 					country_rank >= rank_value:unrecognized_major_power
 					global_country_ranking <= 8
 				}
 				country_rank >= rank_value:great_power
-			}
-			NOT = {
-				has_law_or_variant = law_type:law_isolationism
-			}
-			NOT = {
-				is_country_type = decentralized
-			}
+			}	
+			NOT = { has_law_or_variant = law_type:law_isolationism }
+			NOT = { is_country_type = decentralized }
 			is_revolutionary = no
 			is_in_power_bloc = no
 			is_at_war = no
 			is_subject = no
 			num_subjects >= 2
-			num_defensive_pacts >= 1
 			num_rivals >= 1
+			ruler = {
+				AND = {
+					NOT = {
+						has_trait = trait_child
+					}
+					NOT = {
+						has_ideology = ideology:ideology_anarchist
+						has_ideology = ideology:ideology_communist
+						has_ideology = ideology:ideology_nihilist
+						has_ideology = ideology:ideology_positivist
+						has_ideology = ideology:ideology_radical
+						has_ideology = ideology:ideology_republican_leader
+						has_ideology = ideology:ideology_utopian
+						has_ideology = ideology:ideology_vanguardist
+						has_ideology = ideology:ideology_jacksonian_democrat
+					}
+				}
+			}
 			OR = {
 				has_law = law_type:law_chiefdom
 				has_law = law_type:law_monarchy
@@ -263,10 +304,11 @@ ita_formation_of_power_blocs.3 = {
 				has_law_or_variant = law_type:law_theocracy
 				has_law = law_type:law_corporate_state
 				has_radical_leftist_government = yes
-			}
+			}			
 			game_date >= 1837.1.1
 		}
 	}
+
 	immediate = {
 		if = {
 			limit = {
@@ -274,25 +316,38 @@ ita_formation_of_power_blocs.3 = {
 				c:ITA = {
 					is_ai = yes
 					OR = {
-						AND = {
+						AND  = {			
 							country_rank >= rank_value:unrecognized_major_power
 							global_country_ranking <= 8
 						}
 						country_rank >= rank_value:great_power
-					}
-					NOT = {
-						has_law_or_variant = law_type:law_isolationism
-					}
-					NOT = {
-						is_country_type = decentralized
-					}
+					}	
+					NOT = { has_law_or_variant = law_type:law_isolationism }
+					NOT = { is_country_type = decentralized }
 					is_revolutionary = no
 					is_in_power_bloc = no
 					is_at_war = no
 					is_subject = no
 					num_subjects >= 2
-					num_defensive_pacts >= 1
 					num_rivals >= 1
+					ruler = {
+						AND = {
+							NOT = {
+								has_trait = trait_child
+							}
+							NOT = {
+								has_ideology = ideology:ideology_anarchist
+								has_ideology = ideology:ideology_communist
+								has_ideology = ideology:ideology_nihilist
+								has_ideology = ideology:ideology_positivist
+								has_ideology = ideology:ideology_radical
+								has_ideology = ideology:ideology_republican_leader
+								has_ideology = ideology:ideology_utopian
+								has_ideology = ideology:ideology_vanguardist
+								has_ideology = ideology:ideology_jacksonian_democrat
+							}
+						}
+					}
 					OR = {
 						has_law = law_type:law_chiefdom
 						has_law = law_type:law_monarchy
@@ -304,18 +359,14 @@ ita_formation_of_power_blocs.3 = {
 						has_law_or_variant = law_type:law_theocracy
 						has_law = law_type:law_corporate_state
 						has_radical_leftist_government = yes
-					}
+					}					
 					game_date >= 1837.1.1
 				}
 			}
 			c:ITA = {
 				create_power_bloc = {
 					name = "Alleanza della Corona d’Italia"
-					map_color = {
-						73
-						118
-						71
-					}
+					map_color = { 73 118 71 }
 					identity = identity_sovereign_empire
 					principle = principle_vassalization_1
 				}
@@ -325,35 +376,68 @@ ita_formation_of_power_blocs.3 = {
 }
 
 ### Ausbeutung ###
+
 ita_formation_of_power_blocs.4 = {
 	type = country_event
 	placement = root
 	hidden = yes
-	cooldown = {
-		days = 1750
-	}
+
+	cooldown = { days = 1750 }
+
 	trigger = {
-		c:ITA ?= {
+		exists = c:ITA
+		c:ITA = {
 			is_ai = yes
 			OR = {
-				AND = {
+				AND  = {			
 					country_rank >= rank_value:unrecognized_major_power
 					global_country_ranking <= 8
 				}
 				country_rank >= rank_value:great_power
-			}
-			NOT = {
-				has_law_or_variant = law_type:law_isolationism
-			}
-			NOT = {
-				is_country_type = decentralized
-			}
+			}	
+			NOT = { has_law_or_variant = law_type:law_isolationism }
+			NOT = { is_country_type = decentralized }
 			is_revolutionary = no
 			is_in_power_bloc = no
 			is_at_war = no
 			is_subject = no
-			num_colony_projects >= 2
-			num_subjects >= 1
+			ruler = {
+				AND = {
+					OR = {					
+						has_trait = arrogant
+						has_trait = bigoted
+						has_trait = reckless
+						has_trait = imperious
+						has_trait = wrathful
+						has_trait = cruel
+						has_trait = imposing
+						has_trait = ruthless
+					}
+					NOT = {
+						has_ideology = ideology:ideology_abolitionist
+						has_ideology = ideology:ideology_utilitarian_leader
+						has_ideology = ideology:ideology_utopian
+						has_ideology = ideology:ideology_jacksonian_democrat
+						has_ideology = ideology:ideology_communist
+						has_ideology = ideology:ideology_land_reformer
+						has_ideology = ideology:ideology_market_liberal
+						has_ideology = ideology:ideology_modernizer_leader
+						has_ideology = ideology:ideology_vanguardist
+						has_ideology = ideology:ideology_humanitarian
+						has_ideology = ideology:ideology_humanitarian_royalist
+						has_ideology = ideology:ideology_liberal_leader
+						has_ideology = ideology:ideology_moderate
+						has_ideology = ideology:ideology_nihilist
+						has_ideology = ideology:ideology_pacifist
+						has_ideology = ideology:ideology_positivist
+						has_ideology = ideology:ideology_radical
+						has_ideology = ideology:ideology_reformer
+						has_ideology = ideology:ideology_social_democrat
+						has_ideology = ideology:ideology_sovereignist_leader
+						has_ideology = ideology:ideology_ilustrado_leader
+					}
+				}
+			}
 			OR = {
 				has_strategy = ai_strategy_territorial_expansion
 				has_strategy = ai_strategy_economic_imperialism
@@ -375,6 +459,7 @@ ita_formation_of_power_blocs.4 = {
 			}
 		}
 	}
+
 	immediate = {
 		if = {
 			limit = {
@@ -382,24 +467,55 @@ ita_formation_of_power_blocs.4 = {
 				c:ITA = {
 					is_ai = yes
 					OR = {
-						AND = {
+						AND  = {			
 							country_rank >= rank_value:unrecognized_major_power
 							global_country_ranking <= 8
 						}
 						country_rank >= rank_value:great_power
-					}
-					NOT = {
-						has_law_or_variant = law_type:law_isolationism
-					}
-					NOT = {
-						is_country_type = decentralized
-					}
+					}	
+					NOT = { has_law_or_variant = law_type:law_isolationism }
+					NOT = { is_country_type = decentralized }
 					is_revolutionary = no
 					is_in_power_bloc = no
 					is_at_war = no
 					is_subject = no
-					num_colony_projects >= 2
-					num_subjects >= 1
+					ruler = {
+						AND = {
+							OR = {					
+								has_trait = arrogant
+								has_trait = bigoted
+								has_trait = reckless
+								has_trait = imperious
+								has_trait = wrathful
+								has_trait = cruel
+								has_trait = imposing
+								has_trait = ruthless
+							}
+							NOT = {
+								has_ideology = ideology:ideology_abolitionist
+								has_ideology = ideology:ideology_utilitarian_leader
+								has_ideology = ideology:ideology_utopian
+								has_ideology = ideology:ideology_jacksonian_democrat
+								has_ideology = ideology:ideology_communist
+								has_ideology = ideology:ideology_land_reformer
+								has_ideology = ideology:ideology_market_liberal
+								has_ideology = ideology:ideology_modernizer_leader
+								has_ideology = ideology:ideology_vanguardist
+								has_ideology = ideology:ideology_humanitarian
+								has_ideology = ideology:ideology_humanitarian_royalist
+								has_ideology = ideology:ideology_liberal_leader
+								has_ideology = ideology:ideology_moderate
+								has_ideology = ideology:ideology_nihilist
+								has_ideology = ideology:ideology_pacifist
+								has_ideology = ideology:ideology_positivist
+								has_ideology = ideology:ideology_radical
+								has_ideology = ideology:ideology_reformer
+								has_ideology = ideology:ideology_social_democrat
+								has_ideology = ideology:ideology_sovereignist_leader
+								has_ideology = ideology:ideology_ilustrado_leader
+							}
+						}
+					}
 					OR = {
 						has_strategy = ai_strategy_territorial_expansion
 						has_strategy = ai_strategy_economic_imperialism
@@ -424,11 +540,7 @@ ita_formation_of_power_blocs.4 = {
 			c:ITA = {
 				create_power_bloc = {
 					name = "Patto del Mare Nostrum"
-					map_color = {
-						73
-						118
-						71
-					}
+					map_color = { 73 118 71 }
 					identity = identity_sovereign_empire
 					principle = principle_exploit_members_1
 				}
@@ -438,42 +550,73 @@ ita_formation_of_power_blocs.4 = {
 }
 
 ## Freiheitliche Ideologie ##
+
 ita_formation_of_power_blocs.5 = {
 	type = country_event
 	placement = root
 	hidden = yes
-	cooldown = {
-		days = 1750
-	}
+
+	cooldown = { days = 1750 }
+
 	trigger = {
-		c:ITA ?= {
+		exists = c:ITA
+		c:ITA = {
 			is_ai = yes
 			OR = {
-				AND = {
+				AND  = {			
 					country_rank >= rank_value:unrecognized_major_power
 					global_country_ranking <= 8
 				}
 				country_rank >= rank_value:great_power
-			}
-			NOT = {
-				has_law_or_variant = law_type:law_isolationism
-			}
-			NOT = {
-				is_country_type = decentralized
-			}
+			}	
+			NOT = { has_law_or_variant = law_type:law_isolationism }
+			NOT = { is_country_type = decentralized }
 			is_revolutionary = no
 			is_in_power_bloc = no
 			is_at_war = no
 			is_subject = no
 			has_strategy = ai_strategy_maintain_power_balance
-			ig:ig_intelligentsia ?= {
-				is_in_government = yes
+			ig:ig_intelligentsia ?= { is_in_government = yes }
+			ruler = {
+				AND = {
+					NOT = {
+						has_trait = arrogant
+						has_trait = bigoted
+						has_trait = reckless
+						has_trait = imperious
+						has_trait = cruel
+						has_trait = pious
+						has_trait = imposing
+						has_trait = ruthless
+					}
+					NOT = {
+						has_ideology = ideology:ideology_authoritarian
+						has_ideology = ideology:ideology_ethno_nationalist
+						has_ideology = ideology:ideology_fascist
+						has_ideology = ideology:ideology_integralist
+						has_ideology = ideology:ideology_luddite
+						has_ideology = ideology:ideology_traditionalist_minoritarian
+						has_ideology = ideology:ideology_royalist
+						has_ideology = ideology:ideology_slaver
+						has_ideology = ideology:ideology_theocrat
+						has_ideology = ideology:ideology_traditionalist
+						has_ideology = ideology:ideology_vanguardist#
+						has_ideology = ideology:ideology_bonapartist
+						has_ideology = ideology:ideology_legitimist
+						has_ideology = ideology:ideology_orleanist
+						has_ideology = ideology:ideology_despotic_utopian
+						has_ideology = ideology:ideology_carlist
+						has_ideology = ideology:ideology_carlist_2
+						has_ideology = ideology:ideology_miguelist
+						has_ideology = ideology:ideology_miguelist_2
+					}
+				}
 			}
 			OR = {
 				has_law = law_type:law_presidential_republic
 				has_law = law_type:law_parliamentary_republic
 				has_law = law_type:law_corporate_state
-			}
+			}					
 			OR = {
 				has_law = law_type:law_landed_voting
 				has_law = law_type:law_wealth_voting
@@ -491,6 +634,7 @@ ita_formation_of_power_blocs.5 = {
 			game_date >= 1837.1.1
 		}
 	}
+
 	immediate = {
 		if = {
 			limit = {
@@ -498,31 +642,60 @@ ita_formation_of_power_blocs.5 = {
 				c:ITA = {
 					is_ai = yes
 					OR = {
-						AND = {
+						AND  = {			
 							country_rank >= rank_value:unrecognized_major_power
 							global_country_ranking <= 8
 						}
 						country_rank >= rank_value:great_power
-					}
-					NOT = {
-						has_law_or_variant = law_type:law_isolationism
-					}
-					NOT = {
-						is_country_type = decentralized
-					}
+					}	
+					NOT = { has_law_or_variant = law_type:law_isolationism }
+					NOT = { is_country_type = decentralized }
 					is_revolutionary = no
 					is_in_power_bloc = no
 					is_at_war = no
 					is_subject = no
 					has_strategy = ai_strategy_maintain_power_balance
-					ig:ig_intelligentsia ?= {
-						is_in_government = yes
+					ig:ig_intelligentsia ?= { is_in_government = yes }
+					ruler = {
+						AND = {
+							NOT = {
+								has_trait = arrogant
+								has_trait = bigoted
+								has_trait = reckless
+								has_trait = imperious
+								has_trait = cruel
+								has_trait = pious
+								has_trait = imposing
+								has_trait = ruthless
+							}
+							NOT = {
+								has_ideology = ideology:ideology_authoritarian
+								has_ideology = ideology:ideology_ethno_nationalist
+								has_ideology = ideology:ideology_fascist
+								has_ideology = ideology:ideology_integralist
+								has_ideology = ideology:ideology_luddite
+								has_ideology = ideology:ideology_traditionalist_minoritarian
+								has_ideology = ideology:ideology_royalist
+								has_ideology = ideology:ideology_slaver
+								has_ideology = ideology:ideology_theocrat
+								has_ideology = ideology:ideology_traditionalist
+								has_ideology = ideology:ideology_vanguardist#
+								has_ideology = ideology:ideology_bonapartist
+								has_ideology = ideology:ideology_legitimist
+								has_ideology = ideology:ideology_orleanist
+								has_ideology = ideology:ideology_despotic_utopian
+								has_ideology = ideology:ideology_carlist
+								has_ideology = ideology:ideology_carlist_2
+								has_ideology = ideology:ideology_miguelist
+								has_ideology = ideology:ideology_miguelist_2
+							}
+						}
 					}
 					OR = {
 						has_law = law_type:law_presidential_republic
 						has_law = law_type:law_parliamentary_republic
 						has_law = law_type:law_corporate_state
-					}
+					}					
 					OR = {
 						has_law = law_type:law_landed_voting
 						has_law = law_type:law_wealth_voting
@@ -543,11 +716,7 @@ ita_formation_of_power_blocs.5 = {
 			c:ITA = {
 				create_power_bloc = {
 					name = "Consesso delle Costituzioni Latine"
-					map_color = {
-						73
-						118
-						71
-					}
+					map_color = { 73 118 71 }
 					identity = identity_ideological_union
 					principle = principle_ideological_truth_1
 				}
@@ -557,29 +726,27 @@ ita_formation_of_power_blocs.5 = {
 }
 
 ## Kommunistische Ideologie ##
+
 ita_formation_of_power_blocs.6 = {
 	type = country_event
 	placement = root
 	hidden = yes
-	cooldown = {
-		days = 1750
-	}
+
+	cooldown = { days = 1750 }
+
 	trigger = {
-		c:ITA ?= {
+		exists = c:ITA
+		c:ITA = {
 			is_ai = yes
 			OR = {
-				AND = {
+				AND  = {			
 					country_rank >= rank_value:unrecognized_major_power
 					global_country_ranking <= 8
 				}
 				country_rank >= rank_value:great_power
-			}
-			NOT = {
-				has_law_or_variant = law_type:law_isolationism
-			}
-			NOT = {
-				is_country_type = decentralized
-			}
+			}	
+			NOT = { has_law_or_variant = law_type:law_isolationism }
+			NOT = { is_country_type = decentralized }
 			is_revolutionary = no
 			is_in_power_bloc = no
 			is_at_war = no
@@ -594,6 +761,7 @@ ita_formation_of_power_blocs.6 = {
 			}
 		}
 	}
+
 	immediate = {
 		if = {
 			limit = {
@@ -601,18 +769,14 @@ ita_formation_of_power_blocs.6 = {
 				c:ITA = {
 					is_ai = yes
 					OR = {
-						AND = {
+						AND  = {			
 							country_rank >= rank_value:unrecognized_major_power
 							global_country_ranking <= 8
 						}
 						country_rank >= rank_value:great_power
-					}
-					NOT = {
-						has_law_or_variant = law_type:law_isolationism
-					}
-					NOT = {
-						is_country_type = decentralized
-					}
+					}	
+					NOT = { has_law_or_variant = law_type:law_isolationism }
+					NOT = { is_country_type = decentralized }
 					is_revolutionary = no
 					is_in_power_bloc = no
 					is_at_war = no
@@ -630,11 +794,7 @@ ita_formation_of_power_blocs.6 = {
 			c:ITA = {
 				create_power_bloc = {
 					name = "Patto Rosso"
-					map_color = {
-						190
-						83
-						83
-					}
+					map_color = { 190 83 83 }
 					identity = identity_ideological_union
 					principle = principle_ideological_truth_1
 				}
@@ -644,29 +804,27 @@ ita_formation_of_power_blocs.6 = {
 }
 
 ## Faschistische Ideologie ##
+
 ita_formation_of_power_blocs.7 = {
 	type = country_event
 	placement = root
 	hidden = yes
-	cooldown = {
-		days = 1750
-	}
+
+	cooldown = { days = 1750 }
+
 	trigger = {
-		c:ITA ?= {
-			is_ai = yes
+		exists = c:ITA
+		c:ITA = {
+			is_ai = yes	
 			OR = {
-				AND = {
+				AND  = {			
 					country_rank >= rank_value:unrecognized_major_power
 					global_country_ranking <= 8
 				}
 				country_rank >= rank_value:great_power
-			}
-			NOT = {
-				has_law_or_variant = law_type:law_isolationism
-			}
-			NOT = {
-				is_country_type = decentralized
-			}
+			}	
+			NOT = { has_law_or_variant = law_type:law_isolationism }
+			NOT = { is_country_type = decentralized }
 			is_revolutionary = no
 			is_in_power_bloc = no
 			is_at_war = no
@@ -677,7 +835,7 @@ ita_formation_of_power_blocs.7 = {
 				has_law = law_type:law_oligarchy
 				has_law = law_type:law_technocracy
 				has_law = law_type:law_autocracy
-				has_law = law_type:law_single_party_state
+				has_law = law_type:law_single_party_state						
 				ruler ?= {
 					OR = {
 						has_ideology = ideology:ideology_fascist
@@ -690,10 +848,11 @@ ita_formation_of_power_blocs.7 = {
 				has_law_or_variant = law_type:law_anarchy
 				has_law_or_variant = law_type:law_theocracy
 				has_radical_leftist_government = yes
-			}
+			}			
 		}
 		game_date >= 1837.1.1
 	}
+
 	immediate = {
 		if = {
 			limit = {
@@ -701,18 +860,14 @@ ita_formation_of_power_blocs.7 = {
 				c:ITA = {
 					is_ai = yes
 					OR = {
-						AND = {
+						AND  = {			
 							country_rank >= rank_value:unrecognized_major_power
 							global_country_ranking <= 8
 						}
 						country_rank >= rank_value:great_power
-					}
-					NOT = {
-						has_law_or_variant = law_type:law_isolationism
-					}
-					NOT = {
-						is_country_type = decentralized
-					}
+					}	
+					NOT = { has_law_or_variant = law_type:law_isolationism }
+					NOT = { is_country_type = decentralized }
 					is_revolutionary = no
 					is_in_power_bloc = no
 					is_at_war = no
@@ -723,7 +878,7 @@ ita_formation_of_power_blocs.7 = {
 						has_law = law_type:law_oligarchy
 						has_law = law_type:law_technocracy
 						has_law = law_type:law_autocracy
-						has_law = law_type:law_single_party_state
+						has_law = law_type:law_single_party_state						
 						ruler ?= {
 							OR = {
 								has_ideology = ideology:ideology_fascist
@@ -743,11 +898,7 @@ ita_formation_of_power_blocs.7 = {
 			c:ITA = {
 				create_power_bloc = {
 					name = "Fratellanza dei Legionari Italiani"
-					map_color = {
-						73
-						118
-						71
-					}
+					map_color = { 73 118 71 }
 					identity = identity_ideological_union
 					principle = principle_ideological_truth_1
 				}
@@ -757,29 +908,27 @@ ita_formation_of_power_blocs.7 = {
 }
 
 ## Technokratische Ideologie ##
+
 ita_formation_of_power_blocs.8 = {
 	type = country_event
 	placement = root
 	hidden = yes
-	cooldown = {
-		days = 1750
-	}
+
+	cooldown = { days = 1750 }
+
 	trigger = {
-		c:ITA ?= {
+		exists = c:ITA
+		c:ITA = {
 			is_ai = yes
 			OR = {
-				AND = {
+				AND  = {			
 					country_rank >= rank_value:unrecognized_major_power
 					global_country_ranking <= 8
 				}
 				country_rank >= rank_value:great_power
-			}
-			NOT = {
-				has_law_or_variant = law_type:law_isolationism
-			}
-			NOT = {
-				is_country_type = decentralized
-			}
+			}	
+			NOT = { has_law_or_variant = law_type:law_isolationism }
+			NOT = { is_country_type = decentralized }
 			is_revolutionary = no
 			is_in_power_bloc = no
 			is_at_war = no
@@ -794,6 +943,7 @@ ita_formation_of_power_blocs.8 = {
 			}
 		}
 	}
+
 	immediate = {
 		if = {
 			limit = {
@@ -801,18 +951,14 @@ ita_formation_of_power_blocs.8 = {
 				c:ITA = {
 					is_ai = yes
 					OR = {
-						AND = {
+						AND  = {			
 							country_rank >= rank_value:unrecognized_major_power
 							global_country_ranking <= 8
 						}
 						country_rank >= rank_value:great_power
-					}
-					NOT = {
-						has_law_or_variant = law_type:law_isolationism
-					}
-					NOT = {
-						is_country_type = decentralized
-					}
+					}	
+					NOT = { has_law_or_variant = law_type:law_isolationism }
+					NOT = { is_country_type = decentralized }
 					is_revolutionary = no
 					is_in_power_bloc = no
 					is_at_war = no
@@ -830,11 +976,7 @@ ita_formation_of_power_blocs.8 = {
 			c:ITA = {
 				create_power_bloc = {
 					name = "Unione delle Accademie Tecniche"
-					map_color = {
-						73
-						118
-						71
-					}
+					map_color = { 73 118 71 }
 					identity = identity_ideological_union
 					principle = principle_creative_legislature_1
 				}
@@ -844,35 +986,40 @@ ita_formation_of_power_blocs.8 = {
 }
 
 ## Bedrohung von Aussen ##
+
 ita_formation_of_power_blocs.9 = {
 	type = country_event
 	placement = root
 	hidden = yes
-	cooldown = {
-		days = 1750
-	}
+
+	cooldown = { days = 1750 }
+
 	trigger = {
-		c:ITA ?= {
+		exists = c:ITA
+		c:ITA = {
 			is_ai = yes
 			OR = {
-				AND = {
+				AND  = {			
 					country_rank >= rank_value:unrecognized_major_power
 					global_country_ranking <= 8
 				}
 				country_rank >= rank_value:great_power
-			}
-			NOT = {
-				has_law_or_variant = law_type:law_isolationism
-			}
-			NOT = {
-				is_country_type = decentralized
-			}
+			}	
+			NOT = { has_law_or_variant = law_type:law_isolationism }
+			NOT = { is_country_type = decentralized }
 			is_revolutionary = no
 			is_in_power_bloc = no
 			is_at_war = no
 			is_subject = no
-			num_subjects <= 1
-			num_rivals >= 2
+			num_rivals >=1
+			ruler = {
+				NOT = {
+					has_trait = trait_child
+					has_trait = arrogant
+					has_trait = bigoted
+					has_trait = reckless
+				}
+			}
 			game_date >= 1837.1.1
 			NOT = {
 				has_law_or_variant = law_type:law_anarchy
@@ -886,6 +1033,7 @@ ita_formation_of_power_blocs.9 = {
 			}
 		}
 	}
+
 	immediate = {
 		if = {
 			limit = {
@@ -893,24 +1041,27 @@ ita_formation_of_power_blocs.9 = {
 				c:ITA = {
 					is_ai = yes
 					OR = {
-						AND = {
+						AND  = {			
 							country_rank >= rank_value:unrecognized_major_power
 							global_country_ranking <= 8
 						}
 						country_rank >= rank_value:great_power
-					}
-					NOT = {
-						has_law_or_variant = law_type:law_isolationism
-					}
-					NOT = {
-						is_country_type = decentralized
-					}
+					}	
+					NOT = { has_law_or_variant = law_type:law_isolationism }
+					NOT = { is_country_type = decentralized }
 					is_revolutionary = no
 					is_in_power_bloc = no
 					is_at_war = no
 					is_subject = no
-					num_subjects <= 1
-					num_rivals >= 2
+					num_rivals >=1
+					ruler = {
+						NOT = {
+							has_trait = trait_child
+							has_trait = arrogant
+							has_trait = bigoted
+							has_trait = reckless
+						}
+					}
 					game_date >= 1837.1.1
 					NOT = {
 						has_law_or_variant = law_type:law_anarchy
@@ -924,11 +1075,7 @@ ita_formation_of_power_blocs.9 = {
 			c:ITA = {
 				create_power_bloc = {
 					name = "Fortezza d’Italia"
-					map_color = {
-						73
-						118
-						71
-					}
+					map_color = { 73 118 71 }
 					identity = identity_military_treaty_organization
 					principle = principle_defensive_cooperation_1
 				}
@@ -938,37 +1085,33 @@ ita_formation_of_power_blocs.9 = {
 }
 
 ## Expansion ##
+
 ita_formation_of_power_blocs.10 = {
 	type = country_event
 	placement = root
 	hidden = yes
-	cooldown = {
-		days = 1750
-	}
+
+	cooldown = { days = 1750 }
+
 	trigger = {
-		c:ITA ?= {
+		exists = c:ITA
+		c:ITA = {
 			is_ai = yes
 			OR = {
-				AND = {
+				AND  = {			
 					country_rank >= rank_value:unrecognized_major_power
 					global_country_ranking <= 8
 				}
 				country_rank >= rank_value:great_power
-			}
-			NOT = {
-				has_law_or_variant = law_type:law_isolationism
-			}
-			NOT = {
-				is_country_type = decentralized
-			}
+			}	
+			NOT = { has_law_or_variant = law_type:law_isolationism }
+			NOT = { is_country_type = decentralized }
 			is_revolutionary = no
 			is_in_power_bloc = no
 			is_at_war = no
 			is_subject = no
 			has_strategy = ai_strategy_territorial_expansion
-			ig:ig_armed_forces ?= {
-				is_in_government = yes
-			}
+			ig:ig_armed_forces ?= { is_in_government = yes }
 			game_date >= 1837.1.1
 			NOT = {
 				has_law_or_variant = law_type:law_anarchy
@@ -979,38 +1122,31 @@ ita_formation_of_power_blocs.10 = {
 			}
 			ruler = {
 				AND = {
-					OR = {
-						has_trait = arrogant
-						has_trait = bigoted
-						has_trait = reckless
-						has_trait = ambitious
-						has_trait = imperious
-						has_trait = wrathful
-						has_trait = cruel
-						has_trait = brave
-						has_trait = imposing
-						has_trait = ruthless
+					NOT = {
+						has_trait = trait_child
+						has_trait = cautious
+						has_trait = reserved
+						has_trait = romantic
+						has_trait = honorable
+						has_trait = aesthete
 					}
-					OR = {
-						has_ideology = ideology:ideology_radical
-						has_ideology = ideology:ideology_jingoist_leader
-						has_ideology = ideology:ideology_royalist
-						has_ideology = ideology:ideology_communist
-						has_ideology = ideology:ideology_vanguardist
-						has_ideology = ideology:ideology_fascist
-						has_ideology = ideology:ideology_ethno_nationalist
-						has_ideology = ideology:ideology_authoritarian
-						has_ideology = ideology:ideology_corporatist_leader
-						has_ideology = ideology:ideology_despotic_utopian
-						has_ideology = ideology:ideology_miguelist_2
-						has_ideology = ideology:ideology_miguelist
-						has_ideology = ideology:ideology_carlist_2
-						has_ideology = ideology:ideology_carlist
+					NOT = {
+						has_ideology = ideology:ideology_anarchist
+						has_ideology = ideology:ideology_feminist
+						has_ideology = ideology:ideology_humanitarian
+						has_ideology = ideology:ideology_humanitarian_royalist
+						has_ideology = ideology:ideology_liberal_leader
+						has_ideology = ideology:ideology_luddite
+						has_ideology = ideology:ideology_market_liberal
+						has_ideology = ideology:ideology_moderate
+						has_ideology = ideology:ideology_nihilist
+						has_ideology = ideology:ideology_orleanist
 					}
 				}
 			}
 		}
 	}
+
 	immediate = {
 		if = {
 			limit = {
@@ -1018,26 +1154,20 @@ ita_formation_of_power_blocs.10 = {
 				c:ITA = {
 					is_ai = yes
 					OR = {
-						AND = {
+						AND  = {			
 							country_rank >= rank_value:unrecognized_major_power
 							global_country_ranking <= 8
 						}
 						country_rank >= rank_value:great_power
-					}
-					NOT = {
-						has_law_or_variant = law_type:law_isolationism
-					}
-					NOT = {
-						is_country_type = decentralized
-					}
+					}	
+					NOT = { has_law_or_variant = law_type:law_isolationism }
+					NOT = { is_country_type = decentralized }
 					is_revolutionary = no
 					is_in_power_bloc = no
 					is_at_war = no
 					is_subject = no
 					has_strategy = ai_strategy_territorial_expansion
-					ig:ig_armed_forces ?= {
-						is_in_government = yes
-					}
+					ig:ig_armed_forces ?= { is_in_government = yes }
 					game_date >= 1837.1.1
 					NOT = {
 						has_law_or_variant = law_type:law_anarchy
@@ -1048,33 +1178,25 @@ ita_formation_of_power_blocs.10 = {
 					}
 					ruler = {
 						AND = {
-							OR = {
-								has_trait = arrogant
-								has_trait = bigoted
-								has_trait = reckless
-								has_trait = ambitious
-								has_trait = imperious
-								has_trait = wrathful
-								has_trait = cruel
-								has_trait = brave
-								has_trait = imposing
-								has_trait = ruthless
+							NOT = {
+								has_trait = trait_child
+								has_trait = cautious
+								has_trait = reserved
+								has_trait = romantic
+								has_trait = honorable
+								has_trait = aesthete
 							}
-							OR = {
-								has_ideology = ideology:ideology_radical
-								has_ideology = ideology:ideology_jingoist_leader
-								has_ideology = ideology:ideology_royalist
-								has_ideology = ideology:ideology_communist
-								has_ideology = ideology:ideology_vanguardist
-								has_ideology = ideology:ideology_fascist
-								has_ideology = ideology:ideology_ethno_nationalist
-								has_ideology = ideology:ideology_authoritarian
-								has_ideology = ideology:ideology_corporatist_leader
-								has_ideology = ideology:ideology_despotic_utopian
-								has_ideology = ideology:ideology_miguelist_2
-								has_ideology = ideology:ideology_miguelist
-								has_ideology = ideology:ideology_carlist_2
-								has_ideology = ideology:ideology_carlist
+							NOT = {
+								has_ideology = ideology:ideology_anarchist
+								has_ideology = ideology:ideology_feminist
+								has_ideology = ideology:ideology_humanitarian
+								has_ideology = ideology:ideology_humanitarian_royalist
+								has_ideology = ideology:ideology_liberal_leader
+								has_ideology = ideology:ideology_luddite
+								has_ideology = ideology:ideology_market_liberal
+								has_ideology = ideology:ideology_moderate
+								has_ideology = ideology:ideology_nihilist
+								has_ideology = ideology:ideology_orleanist
 							}
 						}
 					}
@@ -1083,11 +1205,7 @@ ita_formation_of_power_blocs.10 = {
 			c:ITA = {
 				create_power_bloc = {
 					name = "Legione Imperiale Italiana"
-					map_color = {
-						73
-						118
-						71
-					}
+					map_color = { 73 118 71 }
 					identity = identity_military_treaty_organization
 					principle = principle_aggressive_coordination_1
 				}
@@ -1097,37 +1215,33 @@ ita_formation_of_power_blocs.10 = {
 }
 
 ## Religion Christlich - Oekonomie ##
+
 ita_formation_of_power_blocs.11 = {
 	type = country_event
 	placement = root
 	hidden = yes
-	cooldown = {
-		days = 1750
-	}
+
+	cooldown = { days = 1750 }
+
 	trigger = {
-		c:ITA ?= {
+		exists = c:ITA
+		c:ITA = {
 			is_ai = yes
 			OR = {
-				AND = {
+				AND  = {			
 					country_rank >= rank_value:unrecognized_major_power
 					global_country_ranking <= 8
 				}
 				country_rank >= rank_value:great_power
-			}
-			NOT = {
-				has_law_or_variant = law_type:law_isolationism
-			}
-			NOT = {
-				is_country_type = decentralized
-			}
+			}	
+			NOT = { has_law_or_variant = law_type:law_isolationism }
+			NOT = { is_country_type = decentralized }
 			is_revolutionary = no
 			is_in_power_bloc = no
 			is_at_war = no
 			is_subject = no
 			num_subjects >= 3
-			ig:ig_devout ?= {
-				is_in_government = yes
-			}
+			ig:ig_devout ?= { is_in_government = yes }
 			has_law_or_variant = law_type:law_state_religion
 			has_law_or_variant = law_type:law_theocracy
 			religion = {
@@ -1143,6 +1257,7 @@ ita_formation_of_power_blocs.11 = {
 			game_date >= 1837.1.1
 		}
 	}
+
 	immediate = {
 		if = {
 			limit = {
@@ -1150,26 +1265,20 @@ ita_formation_of_power_blocs.11 = {
 				c:ITA = {
 					is_ai = yes
 					OR = {
-						AND = {
+						AND  = {			
 							country_rank >= rank_value:unrecognized_major_power
 							global_country_ranking <= 8
 						}
 						country_rank >= rank_value:great_power
-					}
-					NOT = {
-						has_law_or_variant = law_type:law_isolationism
-					}
-					NOT = {
-						is_country_type = decentralized
-					}
+					}	
+					NOT = { has_law_or_variant = law_type:law_isolationism }
+					NOT = { is_country_type = decentralized }
 					is_revolutionary = no
 					is_in_power_bloc = no
 					is_at_war = no
 					is_subject = no
 					num_subjects >= 3
-					ig:ig_devout ?= {
-						is_in_government = yes
-					}
+					ig:ig_devout ?= { is_in_government = yes }
 					has_law_or_variant = law_type:law_state_religion
 					has_law_or_variant = law_type:law_theocracy
 					religion = {
@@ -1188,11 +1297,7 @@ ita_formation_of_power_blocs.11 = {
 			c:ITA = {
 				create_power_bloc = {
 					name = "Patto dei Cavalieri della Croce"
-					map_color = {
-						73
-						118
-						71
-					}
+					map_color = { 73 118 71 }
 					identity = identity_religious
 					principle = principle_divine_economics_1
 				}
@@ -1202,37 +1307,33 @@ ita_formation_of_power_blocs.11 = {
 }
 
 ## Religion Christlich - Zivilgesellschaft ##
+
 ita_formation_of_power_blocs.12 = {
 	type = country_event
 	placement = root
 	hidden = yes
-	cooldown = {
-		days = 1750
-	}
+
+	cooldown = { days = 1750 }
+
 	trigger = {
-		c:ITA ?= {
+		exists = c:ITA
+		c:ITA = {
 			is_ai = yes
 			OR = {
-				AND = {
+				AND  = {			
 					country_rank >= rank_value:unrecognized_major_power
 					global_country_ranking <= 8
 				}
 				country_rank >= rank_value:great_power
-			}
-			NOT = {
-				has_law_or_variant = law_type:law_isolationism
-			}
-			NOT = {
-				is_country_type = decentralized
-			}
+			}	
+			NOT = { has_law_or_variant = law_type:law_isolationism }
+			NOT = { is_country_type = decentralized }
 			is_revolutionary = no
 			is_in_power_bloc = no
 			is_at_war = no
 			is_subject = no
 			num_subjects <= 2
-			ig:ig_devout ?= {
-				is_in_government = yes
-			}
+			ig:ig_devout ?= { is_in_government = yes }
 			has_law_or_variant = law_type:law_state_religion
 			has_law_or_variant = law_type:law_theocracy
 			religion = {
@@ -1248,6 +1349,7 @@ ita_formation_of_power_blocs.12 = {
 			}
 		}
 	}
+
 	immediate = {
 		if = {
 			limit = {
@@ -1255,26 +1357,20 @@ ita_formation_of_power_blocs.12 = {
 				c:ITA = {
 					is_ai = yes
 					OR = {
-						AND = {
+						AND  = {			
 							country_rank >= rank_value:unrecognized_major_power
 							global_country_ranking <= 8
 						}
 						country_rank >= rank_value:great_power
-					}
-					NOT = {
-						has_law_or_variant = law_type:law_isolationism
-					}
-					NOT = {
-						is_country_type = decentralized
-					}
+					}	
+					NOT = { has_law_or_variant = law_type:law_isolationism }
+					NOT = { is_country_type = decentralized }
 					is_revolutionary = no
 					is_in_power_bloc = no
 					is_at_war = no
 					is_subject = no
 					num_subjects <= 2
-					ig:ig_devout ?= {
-						is_in_government = yes
-					}
+					ig:ig_devout ?= { is_in_government = yes }
 					has_law_or_variant = law_type:law_state_religion
 					has_law_or_variant = law_type:law_theocracy
 					religion = {
@@ -1293,11 +1389,7 @@ ita_formation_of_power_blocs.12 = {
 			c:ITA = {
 				create_power_bloc = {
 					name = "Fratellanza dei Sacri Stati"
-					map_color = {
-						73
-						118
-						71
-					}
+					map_color = { 73 118 71 }
 					identity = identity_religious
 					principle = principle_sacred_civics_1
 				}
@@ -1307,29 +1399,27 @@ ita_formation_of_power_blocs.12 = {
 }
 
 ## Religion Atheistisch ##
+
 ita_formation_of_power_blocs.13 = {
 	type = country_event
 	placement = root
 	hidden = yes
-	cooldown = {
-		days = 1750
-	}
+
+	cooldown = { days = 1750 }
+
 	trigger = {
-		c:ITA ?= {
+		exists = c:ITA
+		c:ITA = {
 			is_ai = yes
 			OR = {
-				AND = {
+				AND  = {			
 					country_rank >= rank_value:unrecognized_major_power
 					global_country_ranking <= 8
 				}
 				country_rank >= rank_value:great_power
-			}
-			NOT = {
-				has_law_or_variant = law_type:law_isolationism
-			}
-			NOT = {
-				is_country_type = decentralized
-			}
+			}	
+			NOT = { has_law_or_variant = law_type:law_isolationism }
+			NOT = { is_country_type = decentralized }
 			is_revolutionary = no
 			is_in_power_bloc = no
 			is_at_war = no
@@ -1345,6 +1435,7 @@ ita_formation_of_power_blocs.13 = {
 			}
 		}
 	}
+
 	immediate = {
 		if = {
 			limit = {
@@ -1352,18 +1443,14 @@ ita_formation_of_power_blocs.13 = {
 				c:ITA = {
 					is_ai = yes
 					OR = {
-						AND = {
+						AND  = {			
 							country_rank >= rank_value:unrecognized_major_power
 							global_country_ranking <= 8
 						}
 						country_rank >= rank_value:great_power
-					}
-					NOT = {
-						has_law_or_variant = law_type:law_isolationism
-					}
-					NOT = {
-						is_country_type = decentralized
-					}
+					}	
+					NOT = { has_law_or_variant = law_type:law_isolationism }
+					NOT = { is_country_type = decentralized }
 					is_revolutionary = no
 					is_in_power_bloc = no
 					is_at_war = no
@@ -1382,11 +1469,7 @@ ita_formation_of_power_blocs.13 = {
 			c:ITA = {
 				create_power_bloc = {
 					name = "Lega dei Liberi Cittadini"
-					map_color = {
-						73
-						118
-						71
-					}
+					map_color = { 73 118 71 }
 					identity = identity_ideological_union
 					principle = principle_ideological_truth_1
 				}
@@ -1396,33 +1479,54 @@ ita_formation_of_power_blocs.13 = {
 }
 
 ## Kulturunion ##
+
 ita_formation_of_power_blocs.14 = {
 	type = country_event
 	placement = root
 	hidden = yes
-	cooldown = {
-		days = 1750
-	}
+
+	cooldown = { days = 1750 }
+
 	trigger = {
-		c:ITA ?= {
+		exists = c:ITA
+		c:ITA = {
 			is_ai = yes
 			OR = {
-				AND = {
+				AND  = {			
 					country_rank >= rank_value:unrecognized_major_power
 					global_country_ranking <= 8
 				}
 				country_rank >= rank_value:great_power
-			}
-			NOT = {
-				has_law_or_variant = law_type:law_isolationism
-			}
-			NOT = {
-				is_country_type = decentralized
-			}
+			}	
+			NOT = { has_law_or_variant = law_type:law_isolationism }
+			NOT = { is_country_type = decentralized }
 			is_revolutionary = no
 			is_in_power_bloc = no
 			is_at_war = no
 			is_subject = no
+			ruler = {
+				AND = {
+					NOT = {
+						has_trait = trait_child
+						has_trait = imperious
+						has_trait = imposing
+						has_trait = ruthless
+					}
+					NOT = {
+						has_ideology = ideology:ideology_anarchist
+						has_ideology = ideology:ideology_communist
+						has_ideology = ideology:ideology_humanitarian
+						has_ideology = ideology:ideology_humanitarian_royalist
+						has_ideology = ideology:ideology_reformer
+						has_ideology = ideology:ideology_jacksonian_democrat
+						has_ideology = ideology:ideology_legitimist
+						has_ideology = ideology:ideology_bonapartist
+						has_ideology = ideology:ideology_orleanist
+						has_ideology = ideology:ideology_sovereignist_leader
+						has_ideology = ideology:ideology_vanguardist
+					}
+				}
+			}
 			NOT = {
 				has_law_or_variant = law_type:law_anarchy
 				has_law_or_variant = law_type:law_state_atheism
@@ -1435,15 +1539,20 @@ ita_formation_of_power_blocs.14 = {
 		c:ITA = {
 			any_scope_ally = {
 				OR = {
+					country_rank <= rank_value:unrecognized_major_power
+					global_country_ranking >= 9
+				}
+				OR = {
 					country_has_primary_culture = cu:north_italian
 					country_has_primary_culture = cu:south_italian
 					country_has_primary_culture = cu:maltese
 					country_has_primary_culture = cu:corsican
 				}
-			}
+			}	
 		}
 		game_date >= 1837.1.1
 	}
+
 	immediate = {
 		if = {
 			limit = {
@@ -1451,23 +1560,42 @@ ita_formation_of_power_blocs.14 = {
 				c:ITA = {
 					is_ai = yes
 					OR = {
-						AND = {
+						AND  = {			
 							country_rank >= rank_value:unrecognized_major_power
 							global_country_ranking <= 8
 						}
 						country_rank >= rank_value:great_power
-					}
-					NOT = {
-						has_law_or_variant = law_type:law_isolationism
-					}
-					NOT = {
-						is_country_type = decentralized
-					}
+					}	
+					NOT = { has_law_or_variant = law_type:law_isolationism }
+					NOT = { is_country_type = decentralized }
 					is_revolutionary = no
 					is_in_power_bloc = no
 					is_at_war = no
 					is_subject = no
 					game_date >= 1837.1.1
+					ruler = {
+						AND = {
+							NOT = {
+								has_trait = trait_child
+								has_trait = imperious
+								has_trait = imposing
+								has_trait = ruthless
+							}
+							NOT = {
+								has_ideology = ideology:ideology_anarchist
+								has_ideology = ideology:ideology_communist
+								has_ideology = ideology:ideology_humanitarian
+								has_ideology = ideology:ideology_humanitarian_royalist
+								has_ideology = ideology:ideology_reformer
+								has_ideology = ideology:ideology_jacksonian_democrat
+								has_ideology = ideology:ideology_legitimist
+								has_ideology = ideology:ideology_bonapartist
+								has_ideology = ideology:ideology_orleanist
+								has_ideology = ideology:ideology_sovereignist_leader
+								has_ideology = ideology:ideology_vanguardist
+							}
+						}
+					}
 					NOT = {
 						has_law_or_variant = law_type:law_anarchy
 						has_law_or_variant = law_type:law_state_atheism
@@ -1481,11 +1609,7 @@ ita_formation_of_power_blocs.14 = {
 			c:ITA = {
 				create_power_bloc = {
 					name = "Fratellanza della Magna Cultura"
-					map_color = {
-						73
-						118
-						71
-					}
+					map_color = { 73 118 71 }
 					identity = identity_cultural
 					principle = principle_shared_canon_1
 				}
@@ -1493,48 +1617,53 @@ ita_formation_of_power_blocs.14 = {
 		}
 	}
 }
-
 ## Migration ##
+
 ita_formation_of_power_blocs.15 = {
 	type = country_event
 	placement = root
 	hidden = yes
-	cooldown = {
-		days = 1750
-	}
+
+	cooldown = { days = 1750 }
+
 	trigger = {
-		c:ITA ?= {
+		exists = c:ITA
+		c:ITA = {
 			is_ai = yes
 			OR = {
-				AND = {
+				AND  = {			
 					country_rank >= rank_value:unrecognized_major_power
 					global_country_ranking <= 8
 				}
 				country_rank >= rank_value:great_power
-			}
-			NOT = {
-				has_law_or_variant = law_type:law_isolationism
-			}
-			NOT = {
-				is_country_type = decentralized
-			}
+			}	
+			NOT = { has_law_or_variant = law_type:law_isolationism }
+			NOT = { is_country_type = decentralized }
 			is_revolutionary = no
 			is_in_power_bloc = no
 			is_at_war = no
 			is_subject = no
 			game_date >= 1837.1.1
+			ruler = {
+				AND = {
+					NOT = {
+						has_trait = trait_child
+						has_trait = cautious
+					}
+					NOT = {
+						has_ideology = ideology:ideology_ethno_nationalist
+						has_ideology = ideology:ideology_sovereignist_leader
+					}
+				}
+			}
 			OR = {
 				is_in_geographic_region = geographic_region_north_america
 				is_in_geographic_region = geographic_region_central_america
 				is_in_geographic_region = geographic_region_south_america
 			}
-			ig:ig_intelligentsia ?= {
-				is_in_government = yes
-			}
+			ig:ig_intelligentsia ?= { is_in_government = yes }
 			has_strategy = ai_strategy_progressive_agenda
-			NOT = {
-				has_law_or_variant = law_type:law_migration_controls
-			}
+			NOT = { has_law_or_variant = law_type:law_migration_controls }
 			NOT = {
 				has_law_or_variant = law_type:law_anarchy
 				has_law_or_variant = law_type:law_state_atheism
@@ -1542,9 +1671,10 @@ ita_formation_of_power_blocs.15 = {
 				has_law_or_variant = law_type:law_theocracy
 				has_law = law_type:law_corporate_state
 				has_radical_leftist_government = yes
-			}
+			}			
 		}
 	}
+
 	immediate = {
 		if = {
 			limit = {
@@ -1552,35 +1682,39 @@ ita_formation_of_power_blocs.15 = {
 				c:ITA = {
 					is_ai = yes
 					OR = {
-						AND = {
+						AND  = {			
 							country_rank >= rank_value:unrecognized_major_power
 							global_country_ranking <= 8
 						}
 						country_rank >= rank_value:great_power
-					}
-					NOT = {
-						has_law_or_variant = law_type:law_isolationism
-					}
-					NOT = {
-						is_country_type = decentralized
-					}
+					}	
+					NOT = { has_law_or_variant = law_type:law_isolationism }
+					NOT = { is_country_type = decentralized }
 					is_revolutionary = no
 					is_in_power_bloc = no
 					is_at_war = no
 					is_subject = no
 					game_date >= 1837.1.1
+					ruler = {
+						AND = {
+							NOT = {
+								has_trait = trait_child
+								has_trait = cautious
+							}
+							NOT = {
+								has_ideology = ideology:ideology_ethno_nationalist
+								has_ideology = ideology:ideology_sovereignist_leader
+							}
+						}
+					}
 					OR = {
 						is_in_geographic_region = geographic_region_north_america
 						is_in_geographic_region = geographic_region_central_america
 						is_in_geographic_region = geographic_region_south_america
 					}
-					ig:ig_intelligentsia ?= {
-						is_in_government = yes
-					}
+					ig:ig_intelligentsia ?= { is_in_government = yes }
 					has_strategy = ai_strategy_progressive_agenda
-					NOT = {
-						has_law_or_variant = law_type:law_migration_controls
-					}
+					NOT = { has_law_or_variant = law_type:law_migration_controls }
 					NOT = {
 						has_law_or_variant = law_type:law_anarchy
 						has_law_or_variant = law_type:law_state_atheism
@@ -1588,17 +1722,13 @@ ita_formation_of_power_blocs.15 = {
 						has_law_or_variant = law_type:law_theocracy
 						has_law = law_type:law_corporate_state
 						has_radical_leftist_government = yes
-					}
+					}					
 				}
 			}
 			c:ITA = {
 				create_power_bloc = {
 					name = "Figli del Risorgimento"
-					map_color = {
-						73
-						118
-						71
-					}
+					map_color = { 73 118 71 }
 					identity = identity_cultural
 					principle = principle_freedom_of_movement_1
 				}
@@ -1608,29 +1738,27 @@ ita_formation_of_power_blocs.15 = {
 }
 
 ## Anarchie ##
+
 ita_formation_of_power_blocs.16 = {
 	type = country_event
 	placement = root
 	hidden = yes
-	cooldown = {
-		days = 1750
-	}
+
+	cooldown = { days = 1750 }
+
 	trigger = {
-		c:ITA ?= {
+		exists = c:ITA
+		c:ITA = {
 			is_ai = yes
 			OR = {
-				AND = {
+				AND  = {			
 					country_rank >= rank_value:unrecognized_major_power
 					global_country_ranking <= 8
 				}
 				country_rank >= rank_value:great_power
-			}
-			NOT = {
-				has_law_or_variant = law_type:law_isolationism
-			}
-			NOT = {
-				is_country_type = decentralized
-			}
+			}	
+			NOT = { has_law_or_variant = law_type:law_isolationism }
+			NOT = { is_country_type = decentralized }
 			is_revolutionary = no
 			is_in_power_bloc = no
 			is_at_war = no
@@ -1644,6 +1772,7 @@ ita_formation_of_power_blocs.16 = {
 			}
 		}
 	}
+
 	immediate = {
 		if = {
 			limit = {
@@ -1651,39 +1780,31 @@ ita_formation_of_power_blocs.16 = {
 				c:ITA = {
 					is_ai = yes
 					OR = {
-						AND = {
+						AND  = {			
 							country_rank >= rank_value:unrecognized_major_power
 							global_country_ranking <= 8
 						}
 						country_rank >= rank_value:great_power
-					}
-					NOT = {
-						has_law_or_variant = law_type:law_isolationism
-					}
-					NOT = {
-						is_country_type = decentralized
-					}
+					}	
+					NOT = { has_law_or_variant = law_type:law_isolationism }
+					NOT = { is_country_type = decentralized }
 					is_revolutionary = no
 					is_in_power_bloc = no
 					is_at_war = no
 					is_subject = no
 					has_law_or_variant = law_type:law_anarchy
+					NOT = {
+						has_law = law_type:law_technocracy
+						has_law_or_variant = law_type:law_theocracy
+						has_law = law_type:law_corporate_state
+					}
 				}
 				game_date >= 1837.1.1
-				NOT = {
-					has_law = law_type:law_technocracy
-					has_law_or_variant = law_type:law_theocracy
-					has_law = law_type:law_corporate_state
-				}
 			}
 			c:ITA = {
 				create_power_bloc = {
 					name = "Popoli Rivoluzionari Italiani"
-					map_color = {
-						109
-						132
-						122
-					}
+					map_color = { 109 132 122 }
 					identity = identity_ideological_union
 					principle = principle_ideological_truth_1
 				}
