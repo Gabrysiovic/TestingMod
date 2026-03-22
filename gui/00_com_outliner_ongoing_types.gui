@@ -1,0 +1,153 @@
+﻿@entry_width = 350
+@entry_height = 30
+
+types com_ongoing_outliner_items {
+    # Changes are marked with CMF
+
+	### JOURNAL ENTRIES LIST
+	type outliner_journal_entries = flowcontainer {
+		direction = vertical
+		parentanchor = hcenter
+
+		# OBJECTIVES / TUTORIAL
+		textbox = {
+			visible = "[And(Not(GetGlobalVariable('community_gui_objective_var').IsSet),GetPlayer.HasObjective)]" #CMF Hide objective
+			raw_text = "#title [AccessPlayer.GetObjective.GetName]#!"
+			autoresize = yes
+			multiline = yes
+			align = left|nobaseline
+			minimumsize = { 340 -1 }
+			maximumsize = { 340 -1 }
+			margin = { 10 6 }
+
+			background = {
+				using = default_header_bg
+				margin = { -2 0 }
+			}
+
+			flowcontainer = {
+				visible = "[Not(AccessPlayer.IsObjectiveIdle)]"
+				parentanchor = right|vcenter
+				position = { -3 0 }
+				spacing = 5
+
+				flowcontainer = {
+					visible = "[And(GetPlayer.HasObjective, Not(IsDataModelEmpty(AccessPlayer.AccessActivePlayerObjectiveJournalEntries)))]"
+
+					flowcontainer = {
+						visible = "[NotEqualTo_int32(GetDataModelSize(AccessPlayer.AccessActivePlayerObjectiveJournalEntries), GetDataModelSize(AccessPlayer.AccessActivePinnedPlayerObjectiveJournalEntries))]"
+						spacing = 5
+
+						textbox = {
+							text = "NUMBER_OF_PLAYER_OBJECTIVE_JOURNAL_ENTRIES_SHORT"
+							autoresize = yes
+							align = left|nobaseline
+						}
+					}
+				}
+
+				button_icon_goto = {
+					size = { 25 25 }
+					onclick = "[InformationPanelBar.OpenPanelTab('journal', 'default')]"
+					tooltip = "GO_TO_BUTTON_JOURNAL"
+				}
+			}
+		}
+
+		textbox = {
+			visible = "[And(Not(GetGlobalVariable('community_gui_objective_var').IsSet),GetPlayer.IsObjectiveIdle)]" #CMF Hide objective
+			text = "[AccessPlayer.GetObjective.GetObjectiveType.GetIdleHeader]"
+			autoresize = yes
+			multiline = yes
+			align = nobaseline
+			minimumsize = { 340 -1 }
+			maximumsize = { 340 -1 }
+			margin = { 10 0 }
+			margin_top = 5
+			using = fontsize_large
+		}
+
+		textbox = {
+			visible = "[And(Not(GetGlobalVariable('community_gui_objective_var').IsSet),GetPlayer.IsObjectiveIdle)]" #CMF Hide objective
+			text = "[AccessPlayer.GetObjective.GetObjectiveType.GetIdleHint]"
+			autoresize = yes
+			multiline = yes
+			align = nobaseline
+			minimumsize = { 340 -1 }
+			maximumsize = { 340 -1 }
+			margin = { 10 0 }
+			margin_bottom = 5
+		}
+
+
+		flowcontainer = {
+			direction = vertical
+			visible = "[Not(GetGlobalVariable('community_gui_objective_var').IsSet)]" #CMF Hide objective
+			parentanchor = hcenter
+			datamodel = "[AccessPlayer.AccessActivePlayerObjectiveJournalEntries]"
+
+			item = {
+				outliner_journal_entry = { }
+			}
+		}
+
+		# OTHER JOURNAL ENTRIES
+		textbox = {
+			text = "ACTIVE_JOURNAL_ENTRIES"
+			autoresize = yes
+			multiline = yes
+			align = left|nobaseline
+			minimumsize = { 340 -1 }
+			maximumsize = { 340 -1 }
+			margin = { 10 6 }
+
+			background = {
+				using = default_header_bg
+				margin = { -2 0 }
+			}
+
+			flowcontainer = {
+				parentanchor = right|vcenter
+				position = { -3 0 }
+				spacing = 5
+
+				textbox = {
+
+					visible = "[And( Not( IsDataModelEmpty(AccessPlayer.AccessActiveNonPlayerObjectiveJournalEntries) ), NotEqualTo_int32( GetDataModelSize(AccessPlayer.AccessActiveNonPlayerObjectiveJournalEntries), GetDataModelSize(AccessPlayer.AccessActivePinnedNonPlayerObjectiveJournalEntries)))]"
+					text = "NUMBER_OF_NON_PLAYER_OBJECTIVE_JOURNAL_ENTRIES_SHORT"
+					autoresize = yes
+					parentanchor = vcenter
+					align = right|nobaseline
+					elide = right
+					fontsize_min = 14
+					minimumsize = { 180 -1 }
+					maximumsize = { 180 -1 }
+				}
+
+				textbox = {
+					visible = "[IsDataModelEmpty(AccessPlayer.AccessActiveNonPlayerObjectiveJournalEntries)]"
+					text = "NO_JOURNAL_ENTRIES_OUTLINER"
+					autoresize = yes
+					align = nobaseline
+				}
+
+				button_icon_goto = {
+					size = { 25 25 }
+					onclick = "[InformationPanelBar.OpenPanelTab('journal', 'default')]"
+					tooltip = "GO_TO_BUTTON_JOURNAL"
+				}
+			}
+		}
+
+		flowcontainer = {
+			direction = vertical
+			parentanchor = hcenter
+			visible = "[Not(IsDataModelEmpty(AccessPlayer.AccessActivePinnedNonPlayerObjectiveJournalEntries))]"
+			datamodel = "[AccessPlayer.AccessActivePinnedNonPlayerObjectiveJournalEntries]"
+
+			item = {
+				outliner_journal_entry = { }
+			}
+		}
+	}
+}

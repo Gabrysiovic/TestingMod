@@ -1,0 +1,7 @@
+﻿eqfm_revolt_mechanics_trigger = {
+	always = no
+}
+
+eqfm_minority_revolt_possible_trigger = {
+	always = yes
+}

@@ -1,0 +1,36 @@
+﻿textformatting = {
+
+    # Handwritten Letter
+    format = {
+        name = com_handwritten_letter
+        format = "size:14;FONT:ComHandwrittenLetter;com_letter_black"
+    }
+
+    # Typewriter
+    format = {
+        name = com_typewriter
+        format = "size:18;FONT:ComTypewriter;com_letter_black"
+    }
+
+    # Newspaper Header
+    format = {
+        name = com_newspaper_header
+        format = "size:100;FONT:ComNewspaperHeader;com_newspaper_black"
+    }
+
+    # Transcribed Letter
+    format = {
+        name = com_letter
+        format = "size:17;com_letter_black"
+    }
+
+    format = {
+        name = com_letter_black
+        format = "color:{ 0.25, 0.25, 0.25}"
+    }
+
+    format = {
+        name = com_newspaper_black
+        format = "color:{ 0.05, 0.05, 0.05}"
+    }
+}
