@@ -112,6 +112,26 @@ INJECT_OR_CREATE:GBR = {
 			}
 		}
 	}
+	flag_definition = {
+		coa = ki_AGV
+		priority = 1500
+		trigger = {
+			scope:actor ?= {
+				has_variable = AA_angevin_var
+			}
+		}
+	}
+	flag_definition = {
+		coa = ki_AGV_republic
+		priority = 1600
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+			scope:actor ?= {
+				has_variable = AA_angevin_var
+			}
+		}
+		
+	}
 }
 
 

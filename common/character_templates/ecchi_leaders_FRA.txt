@@ -17,9 +17,15 @@ ecchi_fra_petain_character_template = {
 	commander_rank = default
 	commander_usage = {
 		country_trigger = {
-			hga_is_active = no
-			exists = c:FRA
-			this = c:FRA
+			OR =
+			{
+				AND =
+				{
+					exists = c:FRA
+					this = c:FRA
+				}
+				has_variable = AA_angevin_var
+			}
 		}
 		role = general
 		earliest_usage_date = 1910.1.1
@@ -46,8 +52,15 @@ ecchi_fra_de_gaulle_character_template = {
 	commander_rank = default
 	commander_usage = {
 		country_trigger = {
-			exists = c:FRA
-			this = c:FRA
+			OR =
+			{
+				AND =
+				{
+					exists = c:FRA
+					this = c:FRA
+				}
+				has_variable = AA_angevin_var
+			}
 		}
 		role = general
 		earliest_usage_date = 1916.1.1
@@ -73,8 +86,15 @@ ecchi_fra_dreyfus_character_template = {
 	commander_rank = default
 	commander_usage = {
 		country_trigger = {
-			exists = c:FRA
-			this = c:FRA
+			OR =
+			{
+				AND =
+				{
+					exists = c:FRA
+					this = c:FRA
+				}
+				has_variable = AA_angevin_var
+			}
 		}
 		role = general
 		earliest_usage_date = 1890.1.1
@@ -100,8 +120,15 @@ ecchi_fra_zola_character_template = {
 	}
 	interest_group_leader_usage = {
 		country_trigger = {
-			exists = c:FRA
-			this = c:FRA
+			OR =
+			{
+				AND =
+				{
+					exists = c:FRA
+					this = c:FRA
+				}
+				has_variable = AA_angevin_var
+			}
 		}
 		interest_group_trigger = {
 			is_interest_group_type = ig_intelligentsia
@@ -128,8 +155,15 @@ ecchi_fra_reclus_character_template = {
 	}
 	interest_group_leader_usage = {
 		country_trigger = {
-			exists = c:FRA
-			this = c:FRA
+			OR =
+			{
+				AND =
+				{
+					exists = c:FRA
+					this = c:FRA
+				}
+				has_variable = AA_angevin_var
+			}
 		}
 		interest_group_trigger = {
 			is_interest_group_type = ig_intelligentsia
@@ -157,8 +191,15 @@ ecchi_fra_blanc_character_template = {
 	}
 	interest_group_leader_usage = {
 		country_trigger = {
-			exists = c:FRA
-			this = c:FRA
+			OR =
+			{
+				AND =
+				{
+					exists = c:FRA
+					this = c:FRA
+				}
+				has_variable = AA_angevin_var
+			}
 		}
 		interest_group_trigger = {
 			is_interest_group_type = ig_trade_unions
@@ -185,8 +226,15 @@ ecchi_fra_buisson_character_template = {
 	}
 	interest_group_leader_usage = {
 		country_trigger = {
-			exists = c:FRA
-			this = c:FRA
+			OR =
+			{
+				AND =
+				{
+					exists = c:FRA
+					this = c:FRA
+				}
+				has_variable = AA_angevin_var
+			}
 		}
 		interest_group_trigger = {
 			is_interest_group_type = ig_devout
@@ -214,8 +262,15 @@ ecchi_fra_passy_character_template = {
 	}
 	interest_group_leader_usage = {
 		country_trigger = {
-			exists = c:FRA
-			this = c:FRA
+			OR =
+			{
+				AND =
+				{
+					exists = c:FRA
+					this = c:FRA
+				}
+				has_variable = AA_angevin_var
+			}
 		}
 		interest_group_trigger = {
 			is_interest_group_type = ig_industrialists
@@ -243,8 +298,15 @@ ecchi_fra_durkheim_character_template = {
 	}
 	agitator_usage = {
 		country_trigger = {
-			exists = c:FRA
-			this = c:FRA
+			OR =
+			{
+				AND =
+				{
+					exists = c:FRA
+					this = c:FRA
+				}
+				has_variable = AA_angevin_var
+			}
 		}
 		interest_group_trigger = {
 			is_interest_group_type = ig_intelligentsia
@@ -275,8 +337,15 @@ ecchi_fra_dumas_alexandre_character_template = {
 	agitator_usage = {
 		country_trigger = {
 			morgenrote_is_active = no
-			exists = c:FRA
-			this = c:FRA
+			OR =
+			{
+				AND =
+				{
+					exists = c:FRA
+					this = c:FRA
+				}
+				has_variable = AA_angevin_var
+			}
 		}
 		interest_group_trigger = {
 			is_interest_group_type = ig_intelligentsia
@@ -307,8 +376,15 @@ mr_fra_verne_jules_character_template = {
 	agitator_usage = {
 		country_trigger = {
 			morgenrote_is_active = no
-			exists = c:FRA
-			this = c:FRA
+			OR =
+			{
+				AND =
+				{
+					exists = c:FRA
+					this = c:FRA
+				}
+				has_variable = AA_angevin_var
+			}
 		}
 		interest_group_trigger = {
 			is_interest_group_type = ig_intelligentsia
@@ -336,8 +412,15 @@ ecchi_fra_pasteur_character_template = {
 	}
 	agitator_usage = {
 		country_trigger = {
-			exists = c:FRA
-			this = c:FRA
+			OR =
+			{
+				AND =
+				{
+					exists = c:FRA
+					this = c:FRA
+				}
+				has_variable = AA_angevin_var
+			}
 		}
 		interest_group_trigger = {
 			is_interest_group_type = ig_intelligentsia
@@ -365,8 +448,15 @@ ecchi_fra_citroen_character_template = {
 	}
 	interest_group_leader_usage = {
 		country_trigger = {
-			exists = c:FRA
-			this = c:FRA
+			OR =
+			{
+				AND =
+				{
+					exists = c:FRA
+					this = c:FRA
+				}
+				has_variable = AA_angevin_var
+			}
 		}
 		interest_group_trigger = {
 			is_interest_group_type = ig_industrialists
@@ -514,8 +604,15 @@ ecchi_fra_blum_character_template = {
 	}
 	interest_group_leader_usage = {
 		country_trigger = {
-			exists = c:FRA
-			this = c:FRA
+			OR =
+			{
+				AND =
+				{
+					exists = c:FRA
+					this = c:FRA
+				}
+				has_variable = AA_angevin_var
+			}
 		}
 		interest_group_trigger = {
 			is_interest_group_type = ig_trade_unions
@@ -752,8 +849,15 @@ ecchi_fra_lacordaire_character_template = {
 	}
 	interest_group_leader_usage = {
 		country_trigger = {
-			exists = c:FRA
-			this = c:FRA
+			OR =
+			{
+				AND =
+				{
+					exists = c:FRA
+					this = c:FRA
+				}
+				has_variable = AA_angevin_var
+			}
 		}
 		interest_group_trigger = {
 			is_interest_group_type = ig_devout
@@ -782,8 +886,15 @@ ecchi_fra_de_mun_character_template = {
 	}
 	interest_group_leader_usage = {
 		country_trigger = {
-			exists = c:FRA
-			this = c:FRA
+			OR =
+			{
+				AND =
+				{
+					exists = c:FRA
+					this = c:FRA
+				}
+				has_variable = AA_angevin_var
+			}
 		}
 		interest_group_trigger = {
 			is_interest_group_type = ig_devout
@@ -845,8 +956,15 @@ ecchi_fra_meline_character_template = {
 	}
 	interest_group_leader_usage = {
 		country_trigger = {
-			exists = c:FRA
-			this = c:FRA
+			OR =
+			{
+				AND =
+				{
+					exists = c:FRA
+					this = c:FRA
+				}
+				has_variable = AA_angevin_var
+			}
 		}
 		interest_group_trigger = {
 			is_interest_group_type = ig_rural_folk
@@ -876,7 +994,11 @@ ecchi_fra_durand_character_template = {
 	}
 	agitator_usage = {
 		country_trigger = {
-			c:FRA ?= this
+			OR =
+			{
+				c:FRA ?= this
+				has_variable = AA_angevin_var
+			}
 		}
 		interest_group_trigger = {
 			ig_counts_as_marginal = no
@@ -906,8 +1028,15 @@ ecchi_fra_pelletan_character_template = {
 	}
 	interest_group_leader_usage = {
 		country_trigger = {
-			exists = c:FRA
-			this = c:FRA
+			OR =
+			{
+				AND =
+				{
+					exists = c:FRA
+					this = c:FRA
+				}
+				has_variable = AA_angevin_var
+			}
 		}
 		interest_group_trigger = {
 			is_interest_group_type = ig_intelligentsia
@@ -936,8 +1065,15 @@ ecchi_fra_bourgeois_character_template = {
 	}
 	interest_group_leader_usage = {
 		country_trigger = {
-			exists = c:FRA
-			this = c:FRA
+			OR =
+			{
+				AND =
+				{
+					exists = c:FRA
+					this = c:FRA
+				}
+				has_variable = AA_angevin_var
+			}
 		}
 		interest_group_trigger = {
 			is_interest_group_type = ig_intelligentsia
@@ -966,8 +1102,15 @@ ecchi_fra_harmel_character_template = {
 	}
 	interest_group_leader_usage = {
 		country_trigger = {
-			exists = c:FRA
-			this = c:FRA
+			OR =
+			{
+				AND =
+				{
+					exists = c:FRA
+					this = c:FRA
+				}
+				has_variable = AA_angevin_var
+			}
 		}
 		interest_group_trigger = {
 			is_interest_group_type = ig_industrialists
@@ -995,8 +1138,15 @@ ecchi_fra_plichonl_character_template = {
 	}
 	interest_group_leader_usage = {
 		country_trigger = {
-			exists = c:FRA
-			this = c:FRA
+			OR =
+			{
+				AND =
+				{
+					exists = c:FRA
+					this = c:FRA
+				}
+				has_variable = AA_angevin_var
+			}
 		}
 		interest_group_trigger = {
 			is_interest_group_type = ig_industrialists
@@ -1025,8 +1175,15 @@ ecchi_fra_courtot_de_cissey_character_template = {
 	}
 	interest_group_leader_usage = {
 		country_trigger = {
-			exists = c:FRA
-			this = c:FRA
+			OR =
+			{
+				AND =
+				{
+					exists = c:FRA
+					this = c:FRA
+				}
+				has_variable = AA_angevin_var
+			}
 		}
 		interest_group_trigger = {
 			is_interest_group_type = ig_armed_forces
@@ -1054,8 +1211,15 @@ ecchi_fra_lyautey_character_template = {
 	}
 	interest_group_leader_usage = {
 		country_trigger = {
-			exists = c:FRA
-			this = c:FRA
+			OR =
+			{
+				AND =
+				{
+					exists = c:FRA
+					this = c:FRA
+				}
+				has_variable = AA_angevin_var
+			}
 		}
 		interest_group_trigger = {
 			is_interest_group_type = ig_armed_forces
@@ -1083,8 +1247,15 @@ ecchi_fra_poincare_character_template = {
 	}
 	interest_group_leader_usage = {
 		country_trigger = {
-			exists = c:FRA
-			this = c:FRA
+			OR =
+			{
+				AND =
+				{
+					exists = c:FRA
+					this = c:FRA
+				}
+				has_variable = AA_angevin_var
+			}
 		}
 		interest_group_trigger = {
 			is_interest_group_type = ig_petty_bourgeoisie
@@ -1112,8 +1283,15 @@ ecchi_fra_capus_character_template = {
 	}
 	interest_group_leader_usage = {
 		country_trigger = {
-			exists = c:FRA
-			this = c:FRA
+			OR =
+			{
+				AND =
+				{
+					exists = c:FRA
+					this = c:FRA
+				}
+				has_variable = AA_angevin_var
+			}
 		}
 		interest_group_trigger = {
 			is_interest_group_type = ig_rural_folk
@@ -1178,8 +1356,15 @@ ecchi_fra_capusde_baudry_d_asson_character_template = {
 	}
 	interest_group_leader_usage = {
 		country_trigger = {
-			exists = c:FRA
-			this = c:FRA
+			OR =
+			{
+				AND =
+				{
+					exists = c:FRA
+					this = c:FRA
+				}
+				has_variable = AA_angevin_var
+			}
 		}
 		interest_group_trigger = {
 			is_interest_group_type = ig_landowners
@@ -1207,8 +1392,15 @@ ecchi_fra_de_levis_mirepoix_character_template = {
 	}
 	interest_group_leader_usage = {
 		country_trigger = {
-			exists = c:FRA
-			this = c:FRA
+			OR =
+			{
+				AND =
+				{
+					exists = c:FRA
+					this = c:FRA
+				}
+				has_variable = AA_angevin_var
+			}
 		}
 		interest_group_trigger = {
 			is_interest_group_type = ig_landowners
@@ -1272,8 +1464,15 @@ ecchi_fra_groussau_character_template = {
 	}
 	interest_group_leader_usage = {
 		country_trigger = {
-			exists = c:FRA
-			this = c:FRA
+			OR =
+			{
+				AND =
+				{
+					exists = c:FRA
+					this = c:FRA
+				}
+				has_variable = AA_angevin_var
+			}
 		}
 		interest_group_trigger = {
 			is_interest_group_type = ig_devout
@@ -1337,8 +1536,15 @@ ecchi_fra_d_audiffret_pasquier_character_template = {
 	}
 	interest_group_leader_usage = {
 		country_trigger = {
-			exists = c:FRA
-			this = c:FRA
+			OR =
+			{
+				AND =
+				{
+					exists = c:FRA
+					this = c:FRA
+				}
+				has_variable = AA_angevin_var
+			}
 		}
 		interest_group_trigger = {
 			is_interest_group_type = ig_landowners

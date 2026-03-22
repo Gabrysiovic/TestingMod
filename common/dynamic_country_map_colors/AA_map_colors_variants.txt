@@ -44,3 +44,10 @@ greater_persia = {
 		has_variable = AA_persia_var
 	}
 }
+
+gbr_angevin = {
+	color = "purple_angevin"
+	possible = {
+		has_variable = AA_angevin_var
+	}
+}

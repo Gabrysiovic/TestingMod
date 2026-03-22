@@ -264,7 +264,7 @@ RS_removing_sweden_and_fixing_russia_on_new_ruler = {
 			}
 			else_if = {
 				limit = {
-					has_template = RUS_michael_ii
+					has_template = is_rus_mikhail_aleksandrovich 
 				}
 				owner = {
 					trigger_event = {
@@ -275,7 +275,7 @@ RS_removing_sweden_and_fixing_russia_on_new_ruler = {
 			}
 			else_if = {
 				limit = {
-					has_template = RUS_george_i
+					has_template = is_rus_georgy_aleksandrovich
 				}
 				owner = {
 					trigger_event = {

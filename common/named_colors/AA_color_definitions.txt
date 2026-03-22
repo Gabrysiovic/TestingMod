@@ -4,4 +4,5 @@
 	usa_commie  = rgb { 161 62 62 }
 	blue_indochina = rgb { 78 171 97 }
 	purple_persia = rgb { 85 53 97 }
+	purple_angevin = rgb { 81 0 119 }
 } 

@@ -26,8 +26,23 @@ INJECT:GBR = {
 				has_variable = AA_federation_var
 			}
 		}
+		priority = 10001
+	}
+	
+	#Angevin
+	dynamic_country_name = {
+		name = AA_angevin
+		adjective = AA_angevin_adj
+		is_main_tag_only = no
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_variable = AA_angevin_var
+			}
+		}
 		priority = 10000
 	}
+	
 }
 
 INJECT:PER = {

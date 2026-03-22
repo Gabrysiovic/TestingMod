@@ -196,3 +196,75 @@ IRN_republic = {
 		}
 	}
 }
+
+ki_AGV = {
+	pattern = "pattern_checkers_01.tga"
+	color1 = "red"
+	color2 = "blue"
+
+	colored_emblem  = {
+		texture = "ce_cross_england_fimbriated.dds"
+		color1 = "white"
+		color2 = "blue"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+	
+	colored_emblem  = {
+		texture = "ce_lion_passant_guardant_long.dds"
+		color1 = "yellow"
+		color2 = "red"
+		instance = { scale = { 0.4 0.4 } position = { 0.20 0.17 } }
+	}
+
+	colored_emblem  = {
+		texture = "ce_lion_passant_guardant_long.dds"
+		color1 = "yellow"
+		color2 = "red"
+		instance = { scale = { 0.4 0.4 } position = { 0.8 0.83 } }
+	}
+	
+	colored_emblem  = {
+		texture = "ce_fleur_quebec.dds"
+		color1 = "yellow"
+		instance = { scale = { 0.2 0.2 } position = { 0.2 0.825 } }
+	}
+	colored_emblem  = {
+		texture = "ce_fleur_quebec.dds"
+		color1 = "yellow"
+		instance = { scale = { 0.2 0.2 } position = { 0.08 0.825 } }
+	}
+	colored_emblem  = {
+		texture = "ce_fleur_quebec.dds"
+		color1 = "yellow"
+		instance = { scale = { 0.2 0.2 } position = { 0.32 0.825 } }
+	}
+	
+		colored_emblem  = {
+		texture = "ce_fleur_quebec.dds"
+		color1 = "yellow"
+		instance = { scale = { 0.2 0.2 } position = { 0.8 0.175 } }
+	}
+	colored_emblem  = {
+		texture = "ce_fleur_quebec.dds"
+		color1 = "yellow"
+		instance = { scale = { 0.2 0.2 } position = { 0.92 0.175 } }
+	}
+	colored_emblem  = {
+		texture = "ce_fleur_quebec.dds"
+		color1 = "yellow"
+		instance = { scale = { 0.2 0.2 } position = { 0.68 0.175 } }
+	}
+}
+
+ki_AGV_republic = {
+	pattern = "pattern_checkers_01.tga"
+	color1 = "red"
+	color2 = "blue"
+
+	colored_emblem  = {
+		texture = "ce_cross_england_fimbriated.dds"
+		color1 = "white"
+		color2 = "blue"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+}
