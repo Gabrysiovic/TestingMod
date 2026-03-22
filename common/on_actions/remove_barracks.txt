@@ -1,0 +1,30 @@
+﻿on_state_owner_change = {
+	effect = {
+		if = {
+			limit = {
+				owner = {
+					is_player = yes
+				}
+				is_incorporated = no
+			}
+			if = {
+				limit = {
+					has_building = building_barrack
+				}
+				remove_building = building_barrack
+			}
+			if = {
+				limit = {
+					has_building = building_conscription_center
+				}
+				remove_building = building_conscription_center
+			}
+			if = {
+				limit = {
+					has_building = building_naval_base
+				}
+				remove_building = building_naval_base
+			}
+		}
+	}
+}
