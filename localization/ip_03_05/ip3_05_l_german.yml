@@ -1,0 +1,11 @@
+﻿l_german:
+ ottoman_monarchs.3.t: "Disease of the Sultans"
+ ottoman_monarchs.3.d: "The [SCOPE.sCharacter('abdulmecid_scope').GetPrimaryRoleTitle] [SCOPE.sCharacter('abdulmecid_scope').GetFullName] has developped a chronic cough. The doctors have been doing their best to help the [SCOPE.sCharacter('abdulmecid_scope').GetPrimaryRoleTitle] but medical knowledge has been ineffective to help him."
+ ottoman_monarchs.3.f: "[SCOPE.sCharacter('abdulmecid_scope').GetFullNameNoFormatting]'s health has only deteriorated since his childhood. The mortality of Ottoman sultans has been plaguing them for centuries. Can modern medicine save him, unlike his ancestors?"
+ ottoman_monarchs.3.a: "We need to try everything."
+ ottoman_monarchs.4.t: "The Last Wish"
+ ottoman_monarchs.4.d: "For weeks, the Sultan Abdulmecid Osmanoglu has been suffering from a heavy fever, which has worsened into a rapid decline of his health. Refusing to follow his treatment due to grief, our doctors have been unable to help him."
+ ottoman_monarchs.4.f: "From his very young age, his sensitive nature, kindness and compassion have been exploit by his relatives and family, life is only sickness and pain. The Sultan Abdulmecid last wish is to be buried next to Sultan Selim, whom he love and respect the most among his ancestors."
+ ottoman_monarchs.4.a: "Make sure to respect his wish."
+ ottoman_monarchs.4.b: "Call the most innovative doctors, we won't let him die."
+ abdulmecid_lives_tt: "The [SCOPE.sCharacter('abdulmecid_scope').GetPrimaryRoleTitle] will be stronger than ever."
