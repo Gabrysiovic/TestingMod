@@ -549,7 +549,7 @@ on_monthly_pulse_country = {
 				has_dlc_feature = ip3_content
 				c:TUR ?= this
 				ruler ?= {
-					has_template = tur_abdulaziz_osmanoglu_template
+					has_template = is_tur_abdulaziz_01 # RSHM: Update with mod template
 				}
 				game_date >= 1875.1.1
 				c:TUR ?= {
@@ -569,7 +569,7 @@ on_monthly_pulse_country = {
 			limit = {
 				has_dlc_feature = ip3_content
 				ruler ?= {
-					has_template = tur_murad_v_osmanoglu_template
+					has_template = is_tur_murad_05 # RSHM: Update with mod template
 				}
 				game_date >= 1876.1.1
 				has_variable = sultan_aziz_coup_happened
@@ -581,7 +581,7 @@ on_monthly_pulse_country = {
 			limit = {
 				c:TUR ?= this
 				ruler ?= {
-					has_template = is_tur_abdulmecid_01
+					has_template = is_tur_abdulmecid_01 # RSHM: Update with mod template
 				}
 			}
 			if = {
