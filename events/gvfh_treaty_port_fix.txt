@@ -1,0 +1,45 @@
+﻿namespace = gvfh_treaty_port_fix
+
+# GVFH: This script reset the treaty port status end up in the same market as owner as the wargoal is bugged
+gvfh_treaty_port_fix.1 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		any_scope_state = {
+			is_treaty_port = yes
+			market = root.market_capital.market
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				is_treaty_port = yes
+			}
+			if = {
+				limit = {
+					market = root.market_capital.market
+				}
+				save_scope_as = bugged_treaty_port_state
+			}
+		}
+		random_state = {
+			limit = {
+				state_region = scope:bugged_treaty_port_state.state_region
+				is_split_state = yes
+				NOT = { owner = ROOT } 
+			}
+			owner = {
+				save_scope_as = treaty_port_giver
+			}
+			save_scope_as = treaty_port_state
+		}
+		scope:bugged_treaty_port_state = {
+			set_state_owner = scope:treaty_port_giver
+		}
+		scope:treaty_port_state = {
+			cede_treaty_port = ROOT
+		}
+	}
+}
