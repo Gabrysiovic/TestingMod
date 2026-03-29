@@ -1,0 +1,11 @@
+﻿l_french:
+ ottoman_monarchs.3.t : "La maladie des sultans"
+ ottoman_monarchs.3.d : "Le [SCOPE.sCharacter("abdulmecid_scope").GetPrimaryRoleTitle] [SCOPE.sCharacter("abdulmecid_scope").GetFullName] souffre d'une toux chronique. Les médecins ont fait de leur mieux pour aider le [SCOPE.sCharacter("abdulmecid_scope").GetPrimaryRoleTitle], mais les connaissances médicales se sont révélées inefficaces pour le soigner."
+ ottoman_monarchs.3.f : "La santé de [SCOPE.sCharacter("abdulmecid_scope").GetFullNameNoFormatting] n'a cessé de se détériorer depuis son enfance. La mortalité des sultans ottomans les afflige depuis des siècles. La médecine moderne pourra-t-elle le sauver, contrairement à ses ancêtres ?"
+ ottoman_monarchs.3.a : "Nous devons tout essayer."
+ ottoman_monarchs.4.t : "Le dernier souhait"
+ ottoman_monarchs.4.d : "Depuis des semaines, le sultan Abdulmecid Osmanoglu souffre d'une forte fièvre, qui a entraîné une détérioration rapide de son état de santé. Refusant de suivre son traitement en raison de son chagrin, nos médecins ont été incapables de l'aider."
+ ottoman_monarchs.4.f : "Depuis son plus jeune âge, sa nature sensible, sa gentillesse et sa compassion ont été exploitées par ses proches et sa famille, sa vie n'est que maladie et souffrance. Le dernier souhait du sultan Abdulmecid est d'être enterré aux côtés du Sultan Selim, qu'il admire et respecte le plus parmi ses ancêtres."
+ ottoman_monarchs.4.a : "Veillez à respecter son souhait."
+ ottoman_monarchs.4.b : "Appelez les médecins les plus innovants, nous ne le laisserons pas mourir."
+ abdulmecid_lives_tt : "Le [SCOPE.sCharacter("abdulmecid_scope").GetPrimaryRoleTitle] sera plus fort que jamais."

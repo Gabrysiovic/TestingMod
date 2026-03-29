@@ -1,0 +1,154 @@
+﻿namespace = gfp_ottoman_monarchs
+
+gfp_ottoman_monarchs.3 = {
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	# dlc = dlc014 # GFP: It's not part of the dlc as everyone should be able to save Abdulmecid
+
+	title = ottoman_monarchs.3.t
+	desc = ottoman_monarchs.3.d
+	flavor = ottoman_monarchs.3.f
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:abdulmecid_scope
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	trigger = {
+		ruler = {
+			has_template = is_tur_abdulmecid_01
+		}
+		NOT = { has_technology_researched = modern_nursing }
+	}
+
+	immediate = {
+		random_scope_character = {
+			limit = {
+				has_template = is_tur_abdulmecid_01
+			}
+			save_scope_as = abdulmecid_scope
+		}
+	}
+
+	option = {
+		name = ottoman_monarchs.3.a
+		default_option = yes
+
+		scope:abdulmecid_scope ?= {
+			set_variable = sultan_disease
+			if = {
+				limit = { # GFP: Give Abdulmecid tuberculosis
+					NOT = { has_trait = tuberculosis }
+				}
+				add_trait = tuberculosis
+			}
+			else_if = {
+				limit = { # GFP: If Abdulmecid already has tuberculosis somehow, give him sickly on top of it
+					NOT = { has_trait = sickly }
+				} 
+				add_trait = sickly
+			}
+			
+		}
+	}
+}
+
+gfp_ottoman_monarchs.4 = {
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	# dlc = dlc014 # GFP: It's not part of the dlc as everyone should be able to save Abdulmecid
+
+	title = ottoman_monarchs.4.t
+	desc = ottoman_monarchs.4.d
+	flavor = ottoman_monarchs.4.f
+
+	event_image = {
+		video = "unspecific_sick_in_hospital"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	immediate = {
+		if = {
+			limit = {  # GFP: Check as he may be dead
+				any_scope_character = {
+					has_template = is_tur_abdulmecid_01
+				}
+			}
+			random_scope_character = {
+				limit = {
+					has_template = is_tur_abdulmecid_01
+				}
+				save_scope_as = abdulmecid_scope
+			}
+		}
+	}
+
+	option = {
+		name = ottoman_monarchs.4.a
+		default_option = yes
+
+		if = {
+			limit = {
+				exists = scope:abdulmecid_scope
+			}
+			scope:abdulmecid_scope ?= {
+				kill_character = yes
+			}
+		}
+	}
+
+	option = {
+		name = ottoman_monarchs.4.b
+		
+		highlighted_option = yes
+
+		trigger = {
+			exists = scope:abdulmecid_scope
+			has_technology_researched = modern_nursing
+		}
+
+		custom_tooltip = {
+			scope:abdulmecid_scope = {
+				if = {
+					limit = {
+						OR = {
+							has_trait = cancer
+							has_trait = tuberculosis
+							has_trait = sickly
+							has_trait = syphilis
+							has_trait = psychological_affliction
+							has_trait = kidney_stones
+						}
+					}
+					remove_trait = cancer
+					remove_trait = tuberculosis
+					remove_trait = sickly
+					remove_trait = syphilis
+					remove_trait = psychological_affliction
+					remove_trait = kidney_stones
+				}
+				remove_variable = sultan_disease
+				scope:abdulmecid_scope = {
+					add_trait = persistent
+				}
+			}
+			text = abdulmecid_lives_tt
+		}
+	}
+}
