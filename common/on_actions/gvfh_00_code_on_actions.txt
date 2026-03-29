@@ -1,0 +1,140 @@
+﻿# For on_actions launched by the code itself.
+
+on_yearly_pulse_country = {
+	events = {
+		gvfh_critical_trade_center_event.1 # GVFH: Add one trade center in capital or treaty port if country has none
+		#[TEMP] My fixes to remove fake events from another mod -Akiko
+		aus_heir_death.5
+		aus_monarch_death.6
+		fra_bourbon_monarch_death.1
+		pru_heir_death.1
+	}
+}
+
+on_monthly_pulse_country = {
+	events = {
+		gvfh_treaty_port_fix.1
+	}
+}
+
+# Root = Country (in which the company is established)
+# scope:company = The company that was established
+on_company_established = {
+	# GVFH: If JE was already completed the company start with it activated because we can't reactivate JE
+	effect = {
+		if = {
+			limit = {
+				scope:company = { can_potentially_produce_prestige_goods = prestige_good_generic_clothes }
+				has_variable = prestige_good_generic_clothes_var
+			}
+			set_variable = prestige_good_generic_clothes_var
+		}
+		if = {
+			limit = {
+				scope:company = { can_potentially_produce_prestige_goods = prestige_good_generic_groceries }
+				has_variable = prestige_good_generic_groceries_var
+			}
+			set_variable = prestige_good_generic_groceries_var
+		}
+		if = {
+			limit = {
+				scope:company = { can_potentially_produce_prestige_goods = prestige_good_generic_furniture }
+				has_variable = prestige_good_generic_furniture_var
+			}
+			set_variable = prestige_good_generic_furniture_var
+		}
+		if = {
+			limit = {
+				scope:company = { can_potentially_produce_prestige_goods = prestige_good_generic_fertilizer }
+				has_variable = prestige_good_generic_fertilizer_var
+			}
+			set_variable = prestige_good_generic_fertilizer_var
+		}
+		if = {
+			limit = {
+				scope:company = { can_potentially_produce_prestige_goods = prestige_good_generic_tools }
+				has_variable = prestige_good_generic_tools_var
+			}
+			set_variable = prestige_good_generic_tools_var
+		}
+		if = {
+			limit = {
+				scope:company = { can_potentially_produce_prestige_goods = prestige_good_generic_fish }
+				has_variable = prestige_good_generic_fish_var
+			}
+			scope:company = {
+				set_variable = prestige_good_generic_fish_var
+			}
+		}
+		if = {
+			limit = {
+				scope:company = { can_potentially_produce_prestige_goods = prestige_good_generic_meat }
+				has_variable = prestige_good_generic_meat_var
+			}
+			set_variable = prestige_good_generic_meat_var
+		}
+		if = {
+			limit = {
+				scope:company = { can_potentially_produce_prestige_goods = prestige_good_generic_coffee }
+				has_variable = prestige_good_generic_coffee_var
+			}
+			set_variable = prestige_good_generic_coffee_var
+		}
+		if = {
+			limit = {
+				scope:company = { can_potentially_produce_prestige_goods = prestige_good_generic_steel }
+				has_variable = prestige_good_generic_steel_var
+			}
+			set_variable = prestige_good_generic_steel_var
+		}
+		if = {
+			limit = {
+				scope:company = { can_potentially_produce_prestige_goods = prestige_good_generic_opium }
+				has_variable = prestige_good_generic_opium_var
+			}
+			set_variable = prestige_good_generic_opium_var
+		}
+		if = {
+			limit = {
+				scope:company = { can_potentially_produce_prestige_goods = prestige_good_generic_small_arms }
+				has_variable = prestige_good_generic_small_arms_var
+			}
+			set_variable = prestige_good_generic_small_arms_var
+		}
+		if = {
+			limit = {
+				scope:company = { can_potentially_produce_prestige_goods = prestige_good_generic_artillery }
+				has_variable = prestige_good_generic_artillery_var
+			}
+			set_variable = prestige_good_generic_artillery_var
+		}
+		if = {
+			limit = {
+				scope:company = { can_potentially_produce_prestige_goods = prestige_good_generic_merchant_marine }
+				has_variable = prestige_good_generic_merchant_marine_var
+			}
+			set_variable = prestige_good_generic_merchant_marine_var
+		}
+		if = {
+			limit = {
+				scope:company = { can_potentially_produce_prestige_goods = prestige_good_generic_grain }
+				has_variable = prestige_good_generic_grain_var
+			}
+			set_variable = prestige_good_generic_grain_var
+		}
+		if = {
+			limit = {
+				scope:company = { can_potentially_produce_prestige_goods = prestige_good_generic_paper }
+				has_variable = prestige_good_generic_paper_var
+			}
+			set_variable = prestige_good_generic_paper_var
+		}
+		if = {
+			limit = {
+				scope:company = { can_potentially_produce_prestige_goods = prestige_good_generic_explosives }
+				has_variable = prestige_good_generic_explosives_var
+			}
+			set_variable = prestige_good_generic_explosives_var
+		}
+	}
+}
