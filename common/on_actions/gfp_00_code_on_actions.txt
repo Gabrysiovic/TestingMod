@@ -1,0 +1,86 @@
+﻿# Root = Country
+on_monthly_pulse_country = {
+	effect = {
+		# Ottoman Monarchy Events #
+		if = { # Coup of Abdulaziz, Murad becomes the ruler
+			limit = {
+				has_dlc_feature = ip3_content
+				c:TUR ?= this
+				ruler ?= {
+					has_template = is_tur_abdulaziz_01 # RSHM: Update with mod template
+				}
+				game_date >= 1875.1.1
+				c:TUR ?= {
+					ig:ig_intelligentsia ?= {
+						ig_approval <= -5
+					}
+					ig:ig_armed_forces ?= {
+						ig_approval < 0
+					}
+					legitimacy < 65
+				}
+			}
+			trigger_event = ottoman_monarchs.1
+		}
+
+		if = { # Murad loses sanity, Abdulhamid becomes the ruler
+			limit = {
+				has_dlc_feature = ip3_content
+				ruler ?= {
+					has_template = is_tur_murad_05 # RSHM: Update with mod template
+				}
+				game_date >= 1876.1.1
+				has_variable = sultan_aziz_coup_happened
+			}
+			trigger_event = ottoman_monarchs.2
+		}
+
+		if = {
+			limit = {
+				c:TUR ?= this
+				ruler ?= {
+					has_template = is_tur_abdulmecid_01 # RSHM: Update with mod template
+				}
+			}
+			if = {
+				limit = {
+					game_date >= 1858.1.1
+				}
+				random = {
+					chance = 20 # Roll the cosmic tuberculosis shaped dice
+
+					trigger_event = gfp_ottoman_monarchs.3 # GFP: Disease of Sultans
+				}
+			}
+			if = {
+				limit = {
+					game_date >= 1861.1.1 # Historical death 25 June 1861
+					ruler ?= {
+						has_variable = sultan_disease
+					}
+					has_technology_researched = modern_nursing # GFP: Modern nursing trigger his death event
+				}
+				trigger_event = gfp_ottoman_monarchs.4 # GFP: The Last wish
+			}
+		}
+	}
+}
+
+# Root = Character
+on_character_death = {
+	effect = {
+		if = {
+			limit = { # GFP: Abdulmecid died from tuberculosis
+				is_ruler = yes
+				has_variable = sultan_disease
+				has_template = is_tur_abdulmecid_01 # GFP: Mod template cancels vanilla code execution
+				owner ?= {
+					c:TUR ?= this
+				}
+			}
+			owner ?= {
+				trigger_event = gfp_ottoman_monarchs.4 #  #GFP: The Last Wish
+			}
+		}
+	}
+}
