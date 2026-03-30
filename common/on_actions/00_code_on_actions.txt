@@ -1,5 +1,5 @@
 ﻿# For on_actions launched by the code itself.
-
+### Edited for GVFH (Gaspote)
 # GFP: Can't save abdulmecid without rewriting this whole file but this is a sacrifice worth doing
 
 # Fires when bookmark initialization is complete but players are still in the lobby
