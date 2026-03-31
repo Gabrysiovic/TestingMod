@@ -1,5 +1,5 @@
 # Reconstruction ending event 25/03/2026 Changed by Gabriel. No more primary culture
-REPLACE:acw_je_events.3 = {
+AA_acw_je_events.1 = {
 	type = country_event
 	event_image = {
 		video = "europenorthamerica_london_center"
@@ -34,7 +34,7 @@ REPLACE:acw_je_events.3 = {
 			ROOT = {
 	 				add_culture_acceptance_modifier = {
 						culture = cu:afro_american
-						multiplier = 40
+						multiplier = 30
 					}
 				}
 		}

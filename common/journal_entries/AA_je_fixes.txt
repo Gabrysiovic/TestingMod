@@ -97,6 +97,46 @@ REPLACE:je_sick_man_main = {
 	should_be_pinned_by_default = yes
 }
 
+## Changes final event
+
+REPLACE:je_acw_reconstruction = {
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	group = je_group_usa_american_civil_war
+
+	complete = {
+		scope:journal_entry = {
+			is_goal_complete = yes
+		}
+	}
+
+	on_complete = {
+		trigger_event = { id = acw_je_events.3 }
+		hidden_effect = { # sanity check just in case something somehow falls through the cracks
+			every_scope_state = {
+				limit = { has_modifier = unreconstructed_state }
+				remove_modifier = unreconstructed_state
+			}
+		}
+	}
+
+	current_value = {
+		value = var:reconstruction_var
+	}
+
+	goal_add_value = {
+		add = 3
+	}
+
+	timeout = 4380
+
+	should_be_pinned_by_default = yes
+
+	on_timeout = {
+		trigger_event = { id = AA_acw_je_events.1 }
+	}
+}
+
 #Lowers acceptance requirment to make Afro-american a primary culture easier
 REPLACE:je_acw_equality = {
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
@@ -110,7 +150,7 @@ REPLACE:je_acw_equality = {
 	complete = {
 		country_average_culture_pop_acceptance = {
 			culture = cu:afro_american
-			value >= 40
+			value >= 50
 		}
 	}
 
