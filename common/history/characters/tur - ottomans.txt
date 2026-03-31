@@ -35,7 +35,7 @@ CHARACTERS = {
 			birth_date = 1800.3.13
 			ig_leader = yes
 			interest_group = ig_intelligentsia
-			ideology = ideology_moderate
+			ideology = ideology_modernizer_leader
 			traits = {
 				experienced_political_operator
 				experienced_diplomat
@@ -52,7 +52,7 @@ CHARACTERS = {
 			ig_leader = yes
 			culture = cu:albanian
 			interest_group = ig_rural_folk
-			ideology = ideology_moderate
+			ideology = ideology_traditionalist
 			traits = {
 				imperious
 			}
@@ -67,7 +67,7 @@ CHARACTERS = {
 			age = 67 # not sure of his actual birth date, born in 1756 or thereabouts
 			ig_leader = yes
 			interest_group = ig_armed_forces
-			ideology = ideology_moderate
+			ideology = ideology_reformer
 			traits = {
 			}
 		}
@@ -95,6 +95,7 @@ CHARACTERS = {
 			age = 74
 			ig_leader = yes
 			interest_group = ig_devout
+			ideology = ideology_traditionalist
 			traits = {
 				tactful
 			}
