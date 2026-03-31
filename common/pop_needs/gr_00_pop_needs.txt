@@ -1,0 +1,48 @@
+﻿# goods						The good being referenced
+# weight					The base weight that is applied to this good based on market Sell Order share
+# max_supply_share			The maximum weight that can be applied to this good based on market Sell Order share, relative supply above this amount will have no further impact on base weight
+# min_supply_share			If above 0, a minimum of this multiplier of the base weight will be applied to a good regardless of its market Sell Order share
+
+REPLACE:popneed_basic_food = {
+	default = grain
+
+	entry = {
+		goods = grain
+
+		weight = 0.85
+		max_supply_share = 0.9
+		min_supply_share = 0.0
+	}
+
+	entry = {
+		goods = fish
+
+		weight = 1
+		max_supply_share = 0.9
+		min_supply_share = 0.0
+	}
+
+	entry = {
+		goods = meat
+
+		weight = 1
+		max_supply_share = 0.9
+		min_supply_share = 0.0
+	}
+
+	entry = {
+		goods = fruit
+
+		weight = 0.85 #vanilla 1 GR: Fruit needs reduction
+		max_supply_share = 0.9
+		min_supply_share = 0.0
+	}
+
+	entry = {
+		goods = groceries
+
+		weight = 1.15
+		max_supply_share = 0.9
+		min_supply_share = 0.0
+	}
+}
