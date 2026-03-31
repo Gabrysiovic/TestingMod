@@ -1,4 +1,6 @@
-﻿REPLACE:default_building_banana_plantation = {
+﻿#### AA banana fix by Gaspote 30/03/2026
+
+REPLACE:default_building_banana_plantation = {
 	texture = "gfx/interface/icons/production_method_icons/plantation_production.dds"
 
 	building_modifiers = {
@@ -33,7 +35,7 @@ REPLACE:slave_exploitation_banana = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_fruit_add = 10 #vanilla 25 GR: Reduce prod from slavery so it's 35 < 50 with irrigation #slaves weren't used for this often
+			goods_output_fruit_add = 20 #vanilla 25 GR: Reduce prod from slavery so it's 35 < 50 with irrigation #slaves weren't used for this often
 		}
 
 		unscaled = {
@@ -64,7 +66,7 @@ REPLACE:worker_exploitation_banana = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			# goods_output_fruit_add = 20 # GR: Remove additional production
+			goods_output_fruit_add = 10 # Changed
 		}
 
 		level_scaled = {
