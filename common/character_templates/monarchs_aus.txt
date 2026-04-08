@@ -46,14 +46,15 @@ REPLACE:is_aus_maximilian_01 = {
 	birth_date = 1832.7.6
 	dna = dna_aus_maximilian_01
 	interest_group = ig_intelligentsia
-	ideology = ideology_humanitarian_royalist
+	ideology = ideology_liberal_leader
 	traits = {
-		dockyard_master
+		tactful
 		charismatic
 	}
 	on_created = {
 		set_variable = is_married
 	}
+	 
 }
 
 REPLACE:is_aus_karl_ludwig_01 = {
