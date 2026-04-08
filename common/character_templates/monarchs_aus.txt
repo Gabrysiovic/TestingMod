@@ -35,7 +35,7 @@ is_aus_franz_josef_01 = {
 	}
 }
 
-REPLACE:is_aus_maximilian_01 = {
+is_aus_maximilian_01 = {
 	heir = yes
 	culture = cu:south_german
 	first_name = Maximilian
@@ -57,7 +57,7 @@ REPLACE:is_aus_maximilian_01 = {
 	 
 }
 
-REPLACE:is_aus_karl_ludwig_01 = {
+is_aus_karl_ludwig_01 = {
 	heir = yes
 	culture = cu:south_german
 	first_name = Karl_Ludwig
