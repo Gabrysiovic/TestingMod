@@ -1,0 +1,100 @@
+REPLACE:exiles_events.4 = {
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	title = exiles_events.4.t
+	desc = exiles_events.4.d
+	flavor = exiles_events.4.f
+
+	event_image = {
+		video = "votp_gunboat_diplomacy"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	cooldown = { days = long_modifier_time }
+
+	trigger = {
+		any_interest_group = {
+			OR = {
+				has_modifier = failed_coup
+				has_modifier = revolution_lost_ig
+				has_variable = coup_guilty
+			}
+			any_scope_character = {
+				AND = 
+				{
+					is_ruler = no
+					is_heir = no
+					OR = {
+						has_role = agitator
+						has_modifier = incompetent_coup_attempt
+					}
+				}
+			}
+		}
+	}
+
+	cancellation_trigger = {
+		OR = {
+			NOT = {
+				exists = scope:failed_revolution_agitator
+			}
+			scope:failed_revolution_agitator ?= {
+				is_character_alive = no
+			}
+		}
+	}
+
+	immediate = {
+		random_interest_group = {
+			limit = {
+				OR = {
+					has_modifier = failed_coup
+					has_modifier = revolution_lost_ig
+					has_variable = coup_guilty
+				}
+			}
+			save_scope_as = failed_revolution_ig
+			random_scope_character = {
+				limit = {
+					OR = {
+						has_role = agitator
+						has_modifier = incompetent_coup_attempt
+					}
+				}
+				save_scope_as = failed_revolution_agitator
+			}
+		}
+	}
+
+	option = {
+		name = exiles_events.4.a
+		default_option = yes
+		scope:failed_revolution_agitator = {
+			exile_character_with_martyrdom = yes
+		}
+	}
+
+	option = {
+		name = exiles_events.4.b
+		scope:failed_revolution_agitator = {
+			random_list = {
+				33 = {
+					exile_character_with_martyrdom = yes
+				}
+				33 = {
+					add_trait = wounded
+					exile_character_with_martyrdom = yes
+				}
+				33 = {
+					kill_character = yes
+				}
+			}
+		}
+	}
+}

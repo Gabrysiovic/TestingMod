@@ -57,7 +57,7 @@ INJECT:law_command_economy = {
 INJECT:law_no_migration_controls = {
 	can_enact = {
 		NAND = {
-			this = c:BIC
+			c:BIC ?= THIS
 			is_subject = yes
 		}
 	}
