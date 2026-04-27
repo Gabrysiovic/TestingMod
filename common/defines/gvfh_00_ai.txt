@@ -1,4 +1,0 @@
-﻿NAI = {
-	# Below data is used to determine which states the AI should incorporate
-	INCORPORATE_STATE_MAX_YEARS = 15 # Max years that incorporation is allowed to take for the AI to incorporate a state # GVFH: Make it 15 years
-}

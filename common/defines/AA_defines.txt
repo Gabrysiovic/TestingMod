@@ -21,3 +21,6 @@ NPolitics = {
 NEconomy = {
 	MIN_POPS_PER_PROFESSION = 10	# 3
 }
+
+## Gabriel 27/04/2026 integration for AI
+INCORPORATE_STATE_MAX_YEARS = 40
