@@ -5,6 +5,7 @@ ecchi_arg_de_san_martin_character_template = {
     last_name = ecchi_de_San_Martin
     historical = yes
     culture = cu:platinean
+    home_region = STATE_RIO_NEGRO
 
     religion = rel:catholic
     ideology = ideology_moderate
@@ -70,41 +71,42 @@ ecchi_arg_de_san_martin_character_template = {
 #     }
 # }
 
-ecchi_arg_mitre_character_template = {
-    first_name = Bartolome
-    last_name = Mitre
-    historical = yes
-    culture = cu:platinean
-
-    religion = rel:catholic
-    ideology = ideology_moderate
-    interest_group = ig_intelligentsia
-	dna = ecchi_dna_bartolome_mitre
-    birth_date = 1821.6.26
-    traits = { reserved reckless traditionalist_commander }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:ARG
-            this = c:ARG
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            OR = {
-                is_interest_group_type = ig_intelligentsia
-                is_interest_group_type = ig_armed_forces
-            }
-        }
-        earliest_usage_date = 1860.1.1
-        latest_usage_date = 1906.1.19
-        chance = 65
-    }
-}
+#ecchi_arg_mitre_character_template = {
+#    first_name = Bartolome
+#    last_name = Mitre
+#    historical = yes
+#    culture = cu:platinean
+#
+#    religion = rel:catholic
+#    ideology = ideology_moderate
+#    interest_group = ig_intelligentsia
+#	dna = ecchi_dna_bartolome_mitre
+#    birth_date = 1821.6.26
+#    traits = { reserved reckless traditionalist_commander }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            exists = c:ARG
+#            this = c:ARG
+#        }
+#        interest_group_trigger = {
+#            ig_counts_as_marginal = no
+#            OR = {
+#                is_interest_group_type = ig_intelligentsia
+#                is_interest_group_type = ig_armed_forces
+#            }
+#        }
+#        earliest_usage_date = 1860.1.1
+#        latest_usage_date = 1906.1.19
+#        chance = 65
+#    }
+#}
 
 ecchi_arg_sarmiento_character_template = {
     first_name = ecchi_Domingo_Faustino
     last_name = ecchi_Sarmiento
     historical = yes
     culture = cu:platinean
+    home_region = STATE_TUCUMAN
 
     religion = rel:catholic
     ideology = ideology_reformer
@@ -135,6 +137,7 @@ ecchi_arg_roca_character_template = {
     last_name = Roca
     historical = yes
     culture = cu:platinean
+    home_region = STATE_RIO_NEGRO
 
     religion = rel:catholic
     ideology = ideology_jingoist_leader
@@ -162,6 +165,7 @@ ecchi_arg_peron_character_template = {
     last_name = ecchi_Peron
     historical = yes
     culture = cu:platinean
+    home_region = STATE_BUENOS_AIRES
 
     religion = rel:catholic
     ideology = ideology_despotic_utopian
@@ -189,6 +193,7 @@ ecchi_arg_yrigoyen_character_template = {
     last_name = Yrigoyen
     historical = yes
     culture = cu:platinean
+    home_region = STATE_BUENOS_AIRES
 
     religion = rel:catholic
     ideology = ideology_radical

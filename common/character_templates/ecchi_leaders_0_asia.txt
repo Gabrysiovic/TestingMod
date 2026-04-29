@@ -174,7 +174,7 @@ ecchi_tur_ataturk_character_template = {
 		}
 		earliest_usage_date = 1910.1.1
 		latest_usage_date = 1938.11.10
-		chance = 80 ## I mean It's Ataturk. He deserves at least 80% chance to spawn
+		chance = 65
 	}
 }
 
