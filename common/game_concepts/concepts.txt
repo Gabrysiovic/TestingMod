@@ -8,11 +8,3 @@ concept_alternating_current = {
 	texture = "gfx/interface/icons/goods_icons/electricity_market.dds"
 	is_loading_tip = yes
 }
-
-concept_navy_armor = {
-	texture = "gfx/interface/icons/military_icons/armor.dds"
-}
-
-concept_navy_pen = {
-	texture = "gfx/interface/icons/military_icons/penetration.dds"
-}

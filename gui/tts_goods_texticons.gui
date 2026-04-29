@@ -1,9 +1,0 @@
-﻿texticon = {
-	icon = tts_capital_ships
-	iconsize = {
-		texture = "gfx/interface/icons/goods_icons/capital_ships.dds"
-		size = { 25 25 }
-		offset = { 0 7 }
-		fontsize = 18
-	}
-}
