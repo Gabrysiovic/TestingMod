@@ -47,30 +47,6 @@ GLOBAL = {
 			multiply = -1.0
 		}
 	}
-	c:SWE = {
-		add_treasury = {
-			value = gold_reserves_limit
-			multiply = -0.6
-		}
-	}
-	c:DEN = {
-		add_treasury = {
-			value = gold_reserves_limit
-			multiply = -0.8
-		}
-	}
-	c:SAR = {
-		add_treasury = {
-			value = gold_reserves_limit
-			multiply = -1.7
-		}
-	}
-	c:SIC = {
-		add_treasury = {
-			value = gold_reserves_limit
-			multiply = -1.4
-		}
-	}
 	c:BIC = {
 		add_treasury = {
 			value = gold_reserves_limit
