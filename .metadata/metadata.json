@@ -1,11 +1,11 @@
 {
   "name": "Testingmod",
   "id": "",
-  "version": "1.0",
-  "supported_game_version": "1.12.*",
+  "version": "1.2",
+  "supported_game_version": "1.13.*",
   "short_description": "",
   "tags": [
-    "1.12.*"
+    "1.13.*"
   ],
   "relationships": [],
   "game_custom_data": {

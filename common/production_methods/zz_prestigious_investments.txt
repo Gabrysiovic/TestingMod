@@ -1,7 +1,7 @@
 ﻿INJECT:pm_financial_district_privately_owned = {
 	country_modifiers = {
 		workforce_scaled = {
-			country_prestige_add = 0.5
+			country_prestige_add = 0.1
 		}
 	}
 }
@@ -9,7 +9,7 @@
 INJECT:pm_financial_district_publicly_traded = {
 	country_modifiers = {
 		workforce_scaled = {
-			country_prestige_add = 0.5
+			country_prestige_add = 0.1
 		}
 	}
 }
@@ -23,7 +23,7 @@ REPLACE:pm_financial_district_principle_divine_economics_2 = {
 	}
 	country_modifiers = {
 		workforce_scaled = {
-			country_prestige_add = 0.5
+			country_prestige_add = 0.1
 		}
 	}
 	building_modifiers = {
@@ -42,7 +42,7 @@ REPLACE:pm_financial_district_principle_divine_economics_2 = {
 INJECT:pm_company_headquarter_privately_owned = {
 	country_modifiers = {
 		workforce_scaled = {
-			country_prestige_add = 0.5
+			country_prestige_add = 0.1
 		}
 	}
 }
@@ -60,7 +60,7 @@ REPLACE:pm_company_headquarter_principle_divine_economics_2 = {
 	}
 	country_modifiers = {
 		workforce_scaled = {
-			country_prestige_add = 0.5
+			country_prestige_add = 0.1
 		}
 	}
 	building_modifiers = {
@@ -78,7 +78,7 @@ REPLACE:pm_company_headquarter_principle_divine_economics_2 = {
 INJECT:pm_company_headquarter_government_run = {
 	country_modifiers = {
 		workforce_scaled = {
-			country_prestige_add = 0.5
+			country_prestige_add = 0.1
 		}
 	}
 }
@@ -86,7 +86,7 @@ INJECT:pm_company_headquarter_government_run = {
 INJECT:pm_company_headquarter_worker_cooperative = {
 	country_modifiers = {
 		workforce_scaled = {
-			country_prestige_add = 0.5
+			country_prestige_add = 0.1
 		}
 	}
 }
