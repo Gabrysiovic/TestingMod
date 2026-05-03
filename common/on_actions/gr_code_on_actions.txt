@@ -1,0 +1,19 @@
+﻿on_game_started_after_lobby = {
+	on_actions = {
+		assign_countries_construction_share
+	}
+}
+
+on_monthly_pulse_country = {
+    events = {
+		gr_construction_event.1
+    }
+}
+
+assign_countries_construction_share = {
+	effect = {
+		every_country = {
+			trigger_event = { id = gr_construction_event.1 }
+		}
+	}
+}
