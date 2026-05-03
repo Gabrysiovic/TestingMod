@@ -2,21 +2,27 @@
 REPLACE:company_ccci = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/ccci.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+
+	category = aristocrat_owned
+
 	flavored_company = yes
+
 	building_types = {
 		building_rubber_plantation
 		building_logging_camp
 		building_iron_mine
 	}
+
 	extension_building_types = {
 		building_railway
 		building_livestock_ranch
 	}
+
 	possible = {
 		OR = {
 			any_subject_or_below = {
 				any_scope_state = {
-					region = sr:region_congo
+					is_in_geographic_region = geographic_region_congo_old
 					any_scope_building = {
 						is_building_type = building_rubber_plantation
 						level >= 5
@@ -24,7 +30,7 @@ REPLACE:company_ccci = {
 				}
 			}
 			any_scope_state = {
-				region = sr:region_congo
+				is_in_geographic_region = geographic_region_congo_old
 				any_scope_building = {
 					is_building_type = building_rubber_plantation
 					level >= 5
@@ -32,34 +38,41 @@ REPLACE:company_ccci = {
 			}
 		}
 	}
+
 	prosperity_modifier = {
 		country_prestige_mult = 0.15
 		building_group_bg_rubber_mortality_mult = 0.2
 	}
+
 	ai_will_do = {
 		OR = {
 			any_subject_or_below = {
 				any_scope_state = {
-					region = sr:region_congo
+					is_in_geographic_region = geographic_region_congo_old
 				}
 			}
 			any_scope_state = {
-				region = sr:region_congo
+				is_in_geographic_region = geographic_region_congo_old
 			}
 		}
 	}
+
 	ai_construction_targets = {
 		building_rubber_plantation = {
 			level = 5
 			state_trigger = {
-				region = sr:region_congo
+				is_in_geographic_region = geographic_region_congo_old
 			}
 		}
 	}
+
 	ai_weight = {
-		value = 3		# Higher base value for flavored companies
+		value = 3 # Higher base value for flavored companies
 	}
 }
+
+
+
 
 REPLACE:company_basic_food = {
 	icon = "gfx/interface/icons/company_icons/basic_food.dds"
@@ -142,7 +155,7 @@ REPLACE:company_guinness = {
 		}
 	}
 	potential = {
-		has_interest_marker_in_region = region_north_sea_coast
+		has_interest_marker_in_region = sr:region_western_europe
 	}
 	attainable = {
 		hidden_trigger = {

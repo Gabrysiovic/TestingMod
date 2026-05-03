@@ -127,38 +127,38 @@ AA_greater_persia_form = {
 	}
 }	
 
-AA_angevin_form = {
-	is_shown = {
-		c:GBR ?= THIS
-		NOT = {
-			exists = c:FRA
-			}
-		hidden_trigger = {
-			NOT = {
-				has_variable = AA_angevin_var
-			}
-		}
-		NOT = {
-			has_modifier = RP_restoration
-		}
-	}
-	possible = {
-	sr:region_france = {
-			any_scope_state = {
-				owner = ROOT
-				count >= 7
-			}
-		}
-	}
-	when_taken = {
-		set_variable = AA_angevin_var
-		add_primary_culture = cu:french
-		add_modifier = {
-			name = RP_restoration
-			days = long_modifier_time
-		}
-	}
-	ai_chance = {
-		value = 0
-	}
-}
+#AA_angevin_form = {
+#	is_shown = {
+#		c:GBR ?= THIS
+#		NOT = {
+#			exists = c:FRA
+#			}
+#		hidden_trigger = {
+#			NOT = {
+#				has_variable = AA_angevin_var
+#			}
+#		}
+#		NOT = {
+#			has_modifier = RP_restoration
+#		}
+#	}
+#	possible = {
+#	sr:region_france = {    ### Region france no longer exists /G
+#			any_scope_state = {
+#				owner = ROOT
+#				count >= 7
+#			}
+#		}
+#	}
+#	when_taken = {
+#		set_variable = AA_angevin_var
+#		add_primary_culture = cu:french
+#		add_modifier = {
+#			name = RP_restoration
+#			days = long_modifier_time
+#		}
+#	}
+#	ai_chance = {
+#		value = 0
+#	}
+#}

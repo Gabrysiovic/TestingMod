@@ -12,13 +12,13 @@
 		law_public_health_insurance = disapprove
 	}
 }
-
-ideology_anti_isolationist = {
-	icon = "gfx/interface/icons/ideology_icons/confucian.dds"
-	lawgroup_trade_policy = {
-		law_isolationism = disapprove
-		law_free_trade = neutral
-		law_mercantilism = approve
-		law_protectionism = approve
-	}
-}
+#
+#ideology_anti_isolationist = {
+#	icon = "gfx/interface/icons/ideology_icons/confucian.dds"
+#	lawgroup_trade_policy = {
+#		law_isolationism = disapprove
+#		law_free_trade = neutral
+#		law_mercantilism = approve
+#		law_protectionism = approve
+#	}
+#}
