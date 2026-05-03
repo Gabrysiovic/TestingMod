@@ -1,4 +1,4 @@
 NDiplomacy = {
 	PRESTIGE_FROM_ARMY_POWER_PROJECTION = 0.02 # Was .03 Per point of power projection from army combat power
-	PRESTIGE_FROM_NAVY_POWER_PROJECTION = 0.06 # Was .10 Per point of power projection from navy combat power
+	PRESTIGE_FROM_NAVY_POWER_PROJECTION = 0.004 # Was .006 Per point of power projection from navy combat power
 }
