@@ -1,0 +1,4 @@
+﻿promote_immigration_expenses = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	country_expenses_add = 1
+}

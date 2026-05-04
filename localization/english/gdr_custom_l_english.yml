@@ -1,8 +1,12 @@
-﻿# TODO: Update all the languages localization files
 l_english:
 
- earning_recognition_law_censorship_tt: "having [GetLawType('law_censorship').GetName]"
- earning_recognition_progress_gdpb_tt: "[Concept('concept_gdp_per_capita','$concept_gdp_per_capita_short$')] in top 50"
- earning_recognition_literacy_60_tt: "[concept_literacy] rate above #v 60%#!"
- earning_recognition_progress_solb_tt: "[concept_sol] in top 50"
- earning_recognition_progress_solc_tt: "[concept_sol] in top 20"
+ # Immigration
+ promote_immigration: "Promote Immigration"
+ promote_immigration_desc: "Launch a large-scale campaign to encourage people to move to our country.\nCheaper operations are expected in country with ten times our total population."
+ promote_immigration_action_notification_name: "[INITIATOR_COUNTRY.GetName] has start promoting migration in us"
+ promote_immigration_action_notification_desc: "[INITIATOR_COUNTRY.GetName] has launched a large-scale campaign in us to encourage people to move to his country"
+ promote_immigration_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName] has start promoting migration in [TARGET_COUNTRY.GetName]"
+ promote_immigration_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] has start launch a large-scale campaign to encourage people to move to his country in [TARGET_COUNTRY.GetName]"
+ has_enough_population_to_migrate_tt: "Has enough population to migrate"
+ has_not_been_target_recently_tt: "Has Not Been Target Recently"
+ promote_immigration_expenses: "Promote Immigration Expenses"
