@@ -1,0 +1,30 @@
+﻿namespace = gr_construction_event
+
+gr_construction_event.1 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_modifier = hegemony_shattering
+			}
+			remove_modifier = hegemony_shattering
+		}
+		if = {
+			limit = {
+				global_gdp_share_and_global_ownership_share > 0.06
+			}
+			add_modifier = { # GR: Credit to borangs for this idea
+				name = hegemony_shattering
+				multiplier = {
+					value = 0.05 # GR: Effect start at 1 percent over 5 percent ownership gdp share
+					subtract = global_gdp_share_and_global_ownership_share
+				}
+			}
+		}
+	}
+}

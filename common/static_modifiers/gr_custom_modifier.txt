@@ -1,0 +1,7 @@
+﻿# GR: Hegemony shattering effect design to nerf the snowballing effect of leading countries
+hegemony_shattering = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+
+	state_construction_mult = 1
+	country_construction_goods_cost_mult = -1
+}

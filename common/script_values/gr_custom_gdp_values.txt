@@ -1,0 +1,21 @@
+﻿global_investment_pool_income = {
+	every_country = {
+		add = investment_pool_income
+	}
+}
+
+global_investment_pool_share = {
+	value = investment_pool_income
+	divide = global_investment_pool_income
+}
+
+global_gdp_share = {
+	value = gdp
+	divide = global_gdp
+}
+
+global_gdp_share_and_global_ownership_share = {
+	value = global_gdp_share
+	add = global_investment_pool_share
+	divide = 2
+}
