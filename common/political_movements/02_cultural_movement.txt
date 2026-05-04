@@ -1,0 +1,40 @@
+﻿
+INJECT:movement_cultural_majority = {
+	additional_radicalism_factors = {
+		if = {	# GR: Add additional activism from cultural exclusion
+			limit = {
+				owner = {
+					has_law_or_variant = law_type:law_cultural_exclusion
+				}
+			}
+			add = {
+				value = 0.05
+				desc = "law_cultural_exclusion"
+			}
+		}
+
+		if = {	# GR: Add additional activism from multiculturalism
+			limit = {
+				owner = {
+					has_law_or_variant = law_type:law_multicultural
+				}
+			}
+			add = {
+				value = 0.20
+				desc = "law_multicultural"
+			}
+		}
+
+		if = {	# GR: Add additional activism from no migration controls law
+			limit = {
+				owner = {
+					has_law_or_variant = law_type:law_no_migration_controls
+				}
+			}
+			add = {
+				value = 0.15
+				desc = "law_no_migration_controls"
+			}
+		}
+	}
+}

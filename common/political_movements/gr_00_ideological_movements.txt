@@ -1,0 +1,3 @@
+﻿INJECT:movement_feminist = {
+	can_cause_obstinance = yes # GR: Go girls !
+}
