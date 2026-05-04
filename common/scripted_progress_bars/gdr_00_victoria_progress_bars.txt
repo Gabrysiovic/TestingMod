@@ -1,0 +1,171 @@
+﻿### For je_earn_recognition
+
+REPLACE:earn_recognition_progress_bar = {
+	name = "earning_recognition_progress_bar"
+	desc = "earning_recognition_progress_bar_desc"
+
+	default = yes
+
+	monthly_progress = {
+		# if = { # GDR: Rank doesn't matter as China should be unrecognized even with 1st gdp
+		# 	limit = {
+		# 		# Your absolute GDP is relatively high
+		# 		gdp_ranking <= 10 # Lower = better
+		# 	}
+		# 	add = {
+		# 		desc = "earning_recognition_progress_gdp_tt"
+		# 		value = 1
+		# 	}
+		# }
+		if = {
+			limit = {
+				# Your GDP per Capita is relatively high
+				gdp_per_capita_ranking <= 50 # GR: Add an easier to get bonus
+			}
+			add = {
+				desc = "earning_recognition_progress_gdpb_tt"
+				value = 0.5
+			}
+			if = {
+				limit = {
+					# Your GDP per Capita is relatively high
+					gdp_per_capita_ranking <= 20 # Lower = better
+				}
+				add = {
+					desc = "earning_recognition_progress_gdpc_tt"
+					value = 0.5
+				}
+			}
+		}
+		if = {
+			limit = {
+				country_has_voting_franchise = yes
+			}
+			add = {
+				desc = "earning_recognition_progress_voting_tt"
+				value = 1
+			}
+		}
+		if = { # GR: Literacy should only negatively impact recognition if too low
+			limit = {
+				# Literacy rating is high-isch
+				literacy_rate >= 0.6
+			}
+			add = {
+				desc = "earning_recognition_literacy_60_tt"
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				# Your Standard of Living is relatively high
+				sol_ranking <= 50 # GR: Add an easier to get bonus
+			}
+			add = {
+				desc = "earning_recognition_progress_solb_tt"
+				value = 0.5
+			}
+			if = {
+				limit = {
+					# Your Standard of Living is relatively high
+					sol_ranking <= 20 # GR: Add an easier to get bonus
+				}
+				add = {
+					desc = "earning_recognition_progress_solc_tt"
+					value = 0.5
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_scope_treaty = {
+					any_scope_article = {
+						has_type = offer_embassy
+						target_country = root
+					}
+				}
+			}
+			add = {
+				desc = "offer_embassy"
+				value = {
+					add = 1 # GR: Embassy give 1 point, any additional give nothing
+				}
+			}
+		}
+		if = {
+			limit = {
+				# Slavery is legal
+				NOT = {
+					has_law_or_variant = law_type:law_slavery_banned
+				}
+			}
+			subtract = {
+				desc = "earning_recognition_slavery_tt"
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				# Isolationist
+				has_law_or_variant = law_type:law_isolationism
+			}
+			subtract = {
+				desc = "earning_recognition_isolationism_tt"
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				# Serfdom is legal
+				has_law_or_variant = law_type:law_serfdom
+			}
+			subtract = {
+				desc = "earning_recognition_serfdom_tt"
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				# Traditional economic system
+				has_law_or_variant = law_type:law_traditionalism
+			}
+			subtract = {
+				desc = "earning_recognition_traditionalism_tt"
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				# 'Draconic' law
+				has_law_or_variant = law_type:law_censorship # GR: Censorship negatively impact recognition
+			}
+			subtract = {
+				desc = "earning_recognition_law_censorship_tt"
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				# Literacy rating is low
+				literacy_rate < 0.2
+			}
+			subtract = {
+				desc = "earning_recognition_low_literacy_tt"
+				value = 1
+			}
+		}
+		#  if = { # GDR: Punish unfairly smaller nations
+		# 	 limit = {
+		# 		 # Absolute GDP ranking is low
+		# 		 gdp_ranking > 30
+		# 	 }
+		# 	 subtract = {
+		# 		 desc = "earning_recognition_low_gdp_tt"
+		# 		 value = 1
+		# 	 }
+		#  }
+	}
+	start_value = 0
+	min_value = 0
+	max_value = 200
+}

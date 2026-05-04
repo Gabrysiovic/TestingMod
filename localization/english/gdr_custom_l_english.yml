@@ -1,0 +1,8 @@
+﻿# TODO: Update all the languages localization files
+l_english:
+
+ earning_recognition_law_censorship_tt: "having [GetLawType('law_censorship').GetName]"
+ earning_recognition_progress_gdpb_tt: "[Concept('concept_gdp_per_capita','$concept_gdp_per_capita_short$')] in top 50"
+ earning_recognition_literacy_60_tt: "[concept_literacy] rate above #v 60%#!"
+ earning_recognition_progress_solb_tt: "[concept_sol] in top 50"
+ earning_recognition_progress_solc_tt: "[concept_sol] in top 20"
