@@ -1,0 +1,14 @@
+﻿immigration_population_cap = {
+	value = num_incorporated_states
+	multiply = 1500000
+}
+
+quarter_total_population = {
+	value = total_population
+	multiply = 0.25
+}
+
+one_tenth_total_population = {
+	value = total_population
+	multiply = 0.10
+}
