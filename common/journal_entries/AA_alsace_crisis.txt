@@ -28,7 +28,7 @@
 	}
 	
 	fail = {
-		NOT = { owns_entire_state_region = STATE_ALSACE_LORRAINE }
+		c:GER = { owns_entire_state_region = STATE_ALSACE_LORRAINE }
 		custom_tooltip = {
 			text = ger_has_formed
 			exists = c:GER
