@@ -207,7 +207,7 @@ join_war = {
 			request
 		}
 		inherent_accept_score = {
-			value = 0
+			value = 1
 			# We are doing this to be able to reuse loc across treaties and diplomatic actions
 			save_temporary_scope_as = target
 			scope:other_country = {

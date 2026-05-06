@@ -1,4 +1,4 @@
-REPLACE:exiles_events.4 = {
+exiles_events.4 = {
 	type = country_event
 	placement = root
 
