@@ -318,7 +318,7 @@ headlines_action = {
 				}
 				OR = {
 					has_game_rule = headlines_all_minor_events
-					has_interest_marker_in_region = region_central_america
+					has_interest_marker_in_region = sr:region_central_america
 				}
 				NOT = {
 					has_variable = headlines_uca_collapse_seen
@@ -596,7 +596,16 @@ headlines_action = {
 				}
 				exists = c:JAP
 				c:JAP = {
-					has_variable = meiji_restoration_complete
+					has_variable = japan_restoration_complete
+                    NOT = {
+                        any_active_law = {
+                            has_amendment = amendment_type:amendment_taikunate
+                        }
+                    }
+                    country_has_monarchy_law = yes
+                    NOT = {
+                        has_law = law_type:law_bakufu
+                    }
 				}
 			 }
 			 c:JAP = {
@@ -605,6 +614,50 @@ headlines_action = {
 			 post_notification = headlines_japan_restoration
 			 set_variable = headlines_japan_restoration_seen
 		}
+        #Japan Taikunate
+        if = {
+            limit = {
+                NOT = {
+                    has_variable = headlines_japan_taikunate_seen
+                }
+                exists = c:JAP
+                c:JAP = {
+                    any_active_law = {
+                        has_amendment = amendment_type:amendment_taikunate
+                    }
+                }
+            }
+            c:JAP = {
+                save_scope_as = japan_scope
+            }
+            post_notification = headlines_japan_taikunate
+            set_variable = headlines_japan_taikunate_seen
+        }
+        #Shogunate Kobu Gattai
+        if = {
+            limit = {
+                NOT = {
+                    has_variable = headlines_japan_shogun_marriage_seen
+                }
+                exists = c:JAP
+                c:JAP = {
+                    custom_tooltip = {
+                        text = kobu_gattai_trigger_tt
+                        has_variable = kobu_gattai
+                    }
+                    custom_tooltip = {
+                        text = completed_meiji_restoration_with_shogunate_victory_tt
+                        has_variable = japan_restoration_complete
+                    }
+                    has_modifier = modifier_court_and_shogunate
+                }
+            }
+            c:JAP = {
+                save_scope_as = japan_scope
+            }
+            post_notification = headlines_japan_shogun_marriage
+            set_variable = headlines_japan_shogun_marriage_seen
+        }
 		#French Commune
 		if = {
 			limit = {
@@ -627,7 +680,7 @@ headlines_action = {
 			limit = { 
 				exists = c:FRA
 				c:FRA = {
-					has_law = law_type:law_monarchy
+					country_has_monarchy_law = yes
 					has_variable = legitimist_restoration_var
 					has_variable = one_true_french_dynasty
 				}
@@ -646,7 +699,7 @@ headlines_action = {
 			limit = {
 				exists = c:FRA
 				c:FRA = {
-					has_law = law_type:law_monarchy
+					country_has_monarchy_law = yes
 				}
 				OR = {
 					has_variable = headlines_french_commune_seen
@@ -656,9 +709,9 @@ headlines_action = {
 					has_variable = headlines_french_monarchy_seen
 				}
 			 }
-			 c:FRA = {
-				save_scope_as = france_scope
-			 }
+            c:FRA = {
+                save_scope_as = france_scope
+            }
 			 set_variable = headlines_french_monarchy_seen
 			 post_notification = headlines_french_monarchy_returns
 		}
@@ -675,10 +728,10 @@ headlines_action = {
 				NOT = {
 					has_variable = headlines_french_republic_seen
 				}
-			 }
-			 c:FRA = {
-				save_scope_as = france_scope
-			}
+            }
+            c:FRA = {
+                save_scope_as = france_scope
+            }
 			 set_variable = headlines_french_republic_seen
 			 post_notification = headlines_french_republic
 		}
@@ -687,7 +740,7 @@ headlines_action = {
 			limit = { 
 				exists = c:FRA
 				c:FRA = {
-					has_law = law_type:law_monarchy
+					country_has_monarchy_law = yes
 					has_variable = bonapartist_restoration_var
 					has_variable = one_true_french_dynasty
 				}
@@ -695,9 +748,9 @@ headlines_action = {
 					has_variable = headlines_french_empire_seen
 				}
 			}
-			c:FRA = {
-				save_scope_as = france_scope
-			}
+            c:FRA = {
+                save_scope_as = france_scope
+            }
 			set_variable = headlines_french_empire_seen
 			post_notification = headlines_french_empire
 		}
@@ -740,7 +793,7 @@ headlines_action = {
 			limit = { 
 				exists = c:USA
 				c:USA = {
-					has_law = law_type:law_monarchy
+					country_has_monarchy_law = yes
 				}
 				NOT = {
 					has_variable = headlines_monarchy_usa_seen
@@ -885,7 +938,7 @@ headlines_action = {
 				c:BRZ = {
 					has_law = law_type:law_presidential_republic
 					ruler = {
-						has_variable = is_pedro
+						has_template = brz_pedro_braganca_template
 					}
 				}
 				NOT = {
@@ -903,19 +956,19 @@ headlines_action = {
 			limit = {
 				exists = c:BRZ
 				c:BRZ = {
-					has_law = law_type:law_monarchy
+					country_has_monarchy_law = yes
 					ruler = {
 						NOT = {
 							has_variable = is_pedro
 						}
-						has_variable = isabel_var
+						has_template = brz_isabel_template
 					}
 				}
 				NOT = {
 					has_variable = headlines_pedro_death_seen
 				}
 				NOT = {
-					has_interest_marker_in_region = region_brazil
+					has_interest_marker_in_region = sr:region_brazil
 				}
 			}
 			c:BRZ = {
@@ -950,7 +1003,7 @@ headlines_action = {
 				}
 				OR = {
 					has_game_rule = headlines_all_minor_events
-					has_interest_marker_in_region = region_caribbean
+					has_interest_marker_in_region = sr:region_central_america
 				}
 				exists = c:CUB
 				c:CUB = {
@@ -975,7 +1028,7 @@ headlines_action = {
 				}
 				OR = {
 					has_game_rule = headlines_all_minor_events
-					has_interest_marker_in_region = region_caribbean
+					has_interest_marker_in_region = sr:region_central_america
 				}
 				exists = c:USA
 				c:USA = {
@@ -1352,7 +1405,7 @@ headlines_action = {
 				}
 				OR = {
 					has_game_rule = headlines_all_minor_events
-					has_interest_marker_in_region = region_north_africa
+					has_interest_marker_in_region = sr:region_north_africa
 				}
 				exists = c:FRA 
 				c:FRA = {
@@ -1448,7 +1501,7 @@ headlines_action = {
 				}
 				exists = c:GBR
 				c:GBR = {
-					has_law = law_type:law_monarchy
+					country_has_monarchy_law = yes
 					ruler = {
 						has_modifier = queen_victoria_mod
 					}
@@ -1476,7 +1529,7 @@ headlines_action = {
 				exists = c:GBR 
 				c:GBR = {
 					NOT = {
-						has_law = law_type:law_monarchy
+						country_has_monarchy_law = yes
 						has_variable = headlines_victoria_overthrown
 					}
 				}
@@ -1494,7 +1547,7 @@ headlines_action = {
 				}
 				exists = c:GBR
 				c:GBR = {
-					has_law = law_type:law_monarchy
+					country_has_monarchy_law = yes
 					ruler = {
 						NOT = {
 							has_modifier = queen_victoria_mod
@@ -1536,9 +1589,8 @@ headlines_action = {
 				}
 				OR = {
 					has_game_rule = headlines_all_minor_events
-					has_interest_marker_in_region = region_rhine
-					has_interest_marker_in_region = region_france
-					has_interest_marker_in_region = region_north_germany
+					has_interest_marker_in_region = sr:region_western_europe
+					has_interest_marker_in_region = sr:region_central_europe
 				}
 			 }
 			 c:BEL ?= {
@@ -1568,9 +1620,8 @@ headlines_action = {
 				}
 				OR = {
 					has_game_rule = headlines_all_minor_events
-					has_interest_marker_in_region = region_rhine
-					has_interest_marker_in_region = region_france
-					has_interest_marker_in_region = region_north_germany
+                    has_interest_marker_in_region = sr:region_western_europe
+                    has_interest_marker_in_region = sr:region_central_europe
 				}
 			 }
 			 c:BEL ?= {
@@ -1600,9 +1651,8 @@ headlines_action = {
 				}
 				OR = {
 					has_game_rule = headlines_all_minor_events
-					has_interest_marker_in_region = region_rhine
-					has_interest_marker_in_region = region_france
-					has_interest_marker_in_region = region_north_germany
+                    has_interest_marker_in_region = sr:region_western_europe
+                    has_interest_marker_in_region = sr:region_central_europe
 				}
 			 }
 			 c:BEL ?= {
@@ -1632,9 +1682,8 @@ headlines_action = {
 				}
 				OR = {
 					has_game_rule = headlines_all_minor_events
-					has_interest_marker_in_region = region_rhine
-					has_interest_marker_in_region = region_france
-					has_interest_marker_in_region = region_north_germany
+                    has_interest_marker_in_region = sr:region_western_europe
+                    has_interest_marker_in_region = sr:region_central_europe
 				}
 			 }
 			 c:BEL ?= {
@@ -1661,9 +1710,8 @@ headlines_action = {
 				}
 				OR = {
 					has_game_rule = headlines_all_minor_events
-					has_interest_marker_in_region = region_rhine
-					has_interest_marker_in_region = region_france
-					has_interest_marker_in_region = region_north_germany
+                    has_interest_marker_in_region = sr:region_western_europe
+                    has_interest_marker_in_region = sr:region_central_europe
 				}
 			 }
 			 c:BEL ?= {

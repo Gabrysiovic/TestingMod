@@ -48,7 +48,8 @@ TRY_REPLACE:brz_isabel_accession = {
 TRY_REPLACE:pbc_peru_bolivia_collapse = {
 	type = country
 	texture = "gfx/interface/icons/notification_icons/news.dds"
-	days = 28
+    group = "headlines_minor_group"
+    days = 28
 	color = neutral
 	notification_type = feed
 }
@@ -56,7 +57,8 @@ TRY_REPLACE:pbc_peru_bolivia_collapse = {
 TRY_REPLACE:pbc_peru_bolivia_success = {
 	type = country
 	texture = "gfx/interface/icons/notification_icons/news.dds"
-	days = 28
+    group = "headlines_major_group"
+    days = 28
 	color = neutral
 	notification_type = feed
 }

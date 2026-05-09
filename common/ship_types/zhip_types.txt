@@ -1,0 +1,79 @@
+﻿ship_type_merchantman = {
+
+    ship_group = ship_group_cruisers
+
+    modification_construction_cost = 7
+
+    can_be_flagship = no
+
+    is_obsolete = {
+        has_technology_researched = ironclad_tech
+    }
+
+    is_very_obsolete = {
+        has_technology_researched = monitor_tech
+    }
+
+    modifier = {
+        ship_construction_progress_max_add = 15
+        ship_hit_points_max_add = 200
+        ship_crew_max_add = 100
+        ship_movement_speed_add = 2
+        ship_supply_capacity_add = 10
+        ship_hull_damage_add = 0.1
+        ship_crew_damage_add = 0.1
+        ship_armor_add = 1
+        ship_critical_hit_chance_add = 0.01
+        ship_critical_hit_multiplier_add = 0.01
+        ship_vulnerability_add = 5
+        ship_screening_add = 2
+        ship_readiness_gain_add = 2
+        ship_accuracy_add = 2
+        ship_visibility_add = 5
+        ship_detection_add = 15
+        ship_blockade_strength_add = 2
+        ship_carrying_capacity_add = 0.4
+        ship_marine_capacity_add = 0.1
+    }
+
+    construction_goods = {
+        goods_input_hardwood_add = 200
+        goods_input_fabric_add = 120
+    }
+
+    materiel_goods = {
+        goods_input_grain_add = 1
+        goods_input_hardwood_add = 0.1
+    }
+
+    icon = "gfx/interface/icons/ships/ship_category/ship_group_cruisers.dds"
+    profile_texture = "gfx/interface/icons/ships/ship_types/silhouette_merchantman.dds"
+
+    ai_weight = 0.5
+
+    modifications = {
+        ship_mod_slot_armor = {
+            ship_mod_merchantman_armor_light
+            ship_mod_merchantman_armor_medium
+            ship_mod_merchantman_armor_high
+        }
+        ship_mod_slot_guns = {
+            ship_mod_merchantman_guns_light
+            ship_mod_merchantman_guns_medium
+            ship_mod_merchantman_guns_high
+        }
+        ship_mod_slot_propulsion = {
+            ship_mod_merchantman_propulsion_light
+            ship_mod_merchantman_propulsion_medium
+            ship_mod_merchantman_propulsion_high
+        }
+        ship_mod_slot_range = {
+            ship_mod_merchantman_range_light
+            ship_mod_merchantman_range_medium
+            ship_mod_merchantman_range_high
+        }
+        ship_mod_slot_utility_1 = {
+			utility_mod_extended_sick_bay
+        }
+    }
+}

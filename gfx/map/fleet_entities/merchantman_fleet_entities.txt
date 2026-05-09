@@ -1,0 +1,45 @@
+﻿ship_type_merchantman = {
+    ship_type = ship_type_merchantman
+	weapon_type = cannon
+	hull_type = wood
+	motion_intensity = 0.5
+
+	entity = "merchantman_base_entity"
+
+	locator = {
+		name = loc_foam
+		position = { 0.0 0.01 1.1 }
+	}
+
+	# Positions of damage decals
+	damage_decal_positions = {
+		{ -0.1 0.04 1.2 0.0 }
+		{ 0.0 0.05 0.8 0.0 }
+		{ -0.0 0.04 1.4 0.0 }
+		{ 0.05 0.045 0.7 0.0 }
+	}
+
+	# VFX entity for states: 'damaged_light' and 'damaged_heavy'
+	vfx_entity = {
+		entity = "vfx_ship_hull_frigate_damaged_entity"
+		attach = yes  								# Controls whether VFX should follow ship animation or not
+	}
+
+	# VFX entity for states: 'damage' and 'damage_weak'
+	vfx_entity = {
+		entity = "vfx_ship_frigate_damage_entity"
+		attach = yes
+	}
+
+	# VFX entity for states: 'idle', 'moving', 'move_local', and 'sink'
+	vfx_entity = {
+		entity = "vfx_frigate_foam_entity"
+		locator = loc_foam
+	}
+
+	# VFX entity for states: 'miss'
+	vfx_entity = {
+		entity = "vfx_ship_water_miss_entity"
+		locator = loc_foam
+	}
+}

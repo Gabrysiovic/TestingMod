@@ -169,6 +169,16 @@ notification_headlines_japan_restoration_tooltip:0 "#header $notification_headli
  notification_headlines_japan_restoration_name:0 "#b EMPEROR TAKES POWER IN JAPAN #!"
  notification_headlines_japan_restoration_desc:1 "The shogunate that dominated [SCOPE.sCountry('japan_scope').GetName] for centuries has been dissolved, and political power restored to [SCOPE.sCountry('japan_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('japan_scope').GetRuler.GetFirstName]. #lore The new administration has already announced sweeping reforms, seeking to modernize and industrialize the island nation. Several bands of disgruntled samurai clashed with government forces...#!"
 
+ #Japan Taikunate
+ notification_headlines_japan_taikunate_tooltip:0 "#header $notification_headlines_japan_taikunate_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_japan_taikunate_desc$"
+ notification_headlines_japan_taikunate_name:0 "#b THE IMPERIAL PARLIAMENT #!"
+ notification_headlines_japan_taikunate_desc:1 "The shogunate has reformed into the[SCOPE.sCountry('japan_scope').GetName], implementing a system of parliamentary rule nominally headed by the emperor. #lore The new government issued precise correspondence to the western powers informing them of the new situation, and has reportedly assembled an exploratory mission bound for Europe and the Americas, with the goal of... #!"
+
+ #Japan Shogunate Marriage
+ notification_headlines_japan_shogun_marriage_tooltip:0 "#header $notification_headlines_japan_shogun_marriage_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_japan_shogun_marriage_desc$"
+ notification_headlines_japan_shogun_marriage_name:0 "#b THE SHOGUN'S IMPERIAL WEDDING #!"
+ notification_headlines_japan_shogun_marriage_desc:1 "The [SCOPE.sCountry('japan_scope').GetRuler.GetLastName] Shogunate has secured a marriage into the Japanese Imperial Family, cementing the reign of the [GetLawType('law_bakufu').GetName]. #lore A grand affair was held in the exclusive imperial palace, with all the highest born lords and ladies invited to...#!"
+
 #Tricolors over Rome
 notification_headlines_roman_republic_tooltip:0 "#header $notification_headlines_roman_republic_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_roman_republic_desc$"
  notification_headlines_roman_republic_name:0 "#b POPE OUSTED FROM ROME #!"
@@ -387,8 +397,3 @@ notification_headlines_london_conference_luxembourg_desc:1 "The territorial disp
 notification_headlines_london_conference_failure_tooltip:0 "#header $notification_headlines_london_conference_failure_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_london_conference_failure_desc$"
 notification_headlines_london_conference_failure_name:0 "#b LONDON CONFERENCE COLLAPSES #!"
 notification_headlines_london_conference_failure_desc:1 "Mediation between [SCOPE.sCountry('belgium_scope').GetName] and the [SCOPE.sCountry('netherlands_scope').GetName] has fallen apart. #lore Diplomats around Europe have issued dire warnings about the future stability of the Low Countries, with several interested powers... #!"
-
-#mukden incident -Akiko
-notification_headlines_mukden_tooltip: "#header $notification_headlines_mukden_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_mukden_desc$"
-notification_headlines_mukden_name: "#b INCIDENT ON MANCHURIAN BORDER #!"
-notification_headlines_mukden_desc: "Dubbed the Mukden Incident, [SCOPE.sCountry('japan_scope').GetAdjective] troops claim to have been attacked by the [SCOPE.sCountry('mukden_target_scope').GetAdjective] though they deny so, claiming it as a false flag. #lore Regardless of the truth of the matter, [SCOPE.sCountry('japan_scope').GetName] wishes to take revenge upon [SCOPE.sCountry('mukden_target_scope').GetName] by posturing to take their land... #!"

@@ -715,7 +715,7 @@ headlines_tech = {
 		#Dreadnought*
 		if = {
 			limit = { 
-				has_technology_researched = dreadnought
+				has_technology_researched = dreadnought_tech
 				NOT = {
 					has_global_variable = headlines_dreadnought_researched
 				}

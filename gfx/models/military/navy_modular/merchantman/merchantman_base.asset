@@ -1,0 +1,58 @@
+﻿pdxmesh = {
+	name = "merchantman_base_mesh"
+	file = "merchant_model.mesh"
+
+	scale = 1.2
+
+	meshsettings = {
+		name = "merchant_shape"
+		index = 0
+		texture_diffuse = "merchantman_diffuse.dds"
+		texture_normal = "merchantman_normal.dds"
+		texture_specular = "merchantman_properties.dds"
+		shader = "standard"
+		additional_shader_defines = { "EMISSIVE_NIGHT" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	meshsettings = {
+		name = "merchant_sail_shape"
+		index = 0
+		texture_diffuse = "merchantman_sail_diffuse.dds"
+		texture_normal = "merchantman_sail_normal.dds"
+		texture_specular = "merchantman_sail_properties.dds"
+		shader = "standard"
+		additional_shader_defines = { "EMISSIVE_NIGHT" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}	
+}
+
+
+entity = {
+	name = "merchantman_base_entity"
+	pdxmesh = "merchantman_base_mesh"
+	
+	default_state = "move"
+
+	state = { name = "idle"
+		event = { time = 0 keep_sound = yes sound = { soundeffect = "event:/SFX/Animation/vehicles/naval/fleet/cruisers/frigate/anm_ship_frigate_idle" } }
+	}
+
+	state = { name = "move"
+		event = { time = 0 keep_sound = yes sound = { soundeffect = "event:/SFX/Animation/vehicles/naval/fleet/cruisers/frigate/anm_ship_frigate_moving" } }
+		event = { time = 0 trigger_once = yes keep_sound = no sound  = { soundeffect = "event:/SFX/Animation/vehicles/naval/fleet/cruisers/frigate/anm_ship_frigate_moving_start" } }
+	}
+
+	state = { name = "move_local"
+		event = { time = 0 keep_sound = yes sound = { soundeffect = "event:/SFX/Animation/vehicles/naval/fleet/cruisers/frigate/anm_ship_frigate_moving_local" } }
+		event = { time = 0 trigger_once = yes keep_sound = no sound  = { soundeffect = "event:/SFX/Animation/vehicles/naval/fleet/cruisers/frigate/anm_ship_frigate_moving_start" } }
+	}
+
+	state = { name = "move_ship_viewer"
+		event = { time = 0 keep_sound = yes sound = { soundeffect = "event:/SFX/Animation/vehicles/naval/fleet/cruisers/frigate/anm_ship_frigate_moving_ship_viewer" } }
+	}
+
+
+	state = { name = "destroyed"
+		event = { time = 0 keep_sound = yes sound = { soundeffect = "event:/SFX/Animation/vehicles/naval/fleet/cruisers/frigate/anm_ship_frigate_destroyed" } }
+	}	
+}

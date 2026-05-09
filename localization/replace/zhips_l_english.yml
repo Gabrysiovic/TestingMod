@@ -1,0 +1,28 @@
+﻿l_english:
+ 
+ ship_type_merchantman: "Unrated Merchant Ship"
+ ship_type_merchantman_desc: "A small and nimble sailing ship designed for trading with faraway ports, but also very useful to move soldiers around.\n@information! Stats and model are subject to change in future!"
+ 
+ ship_mod_merchantman_armor_light: "$ship_mod_napoleonic_framing$"
+ ship_mod_merchantman_armor_medium: "$ship_mod_seppings_braced_hull$"
+ ship_mod_merchantman_armor_high: "$ship_mod_iron_reinforced_hull$"
+ ship_mod_merchantman_guns_light: "$ship_mod_no_guns$"
+ ship_mod_merchantman_guns_medium: "$ship_mod_swivels$"
+ ship_mod_merchantman_guns_high: "$ship_mod_4_pdrs$"
+ ship_mod_merchantman_propulsion_light: "$ship_mod_schooner_sail_rig$"
+ ship_mod_merchantman_propulsion_medium: "$ship_mod_bark_sail_rig$"
+ ship_mod_merchantman_propulsion_high: "$ship_mod_ship_sail_rig$"
+ ship_mod_merchantman_range_light: "$ship_mod_no_quarterdeck$"
+ ship_mod_merchantman_range_medium: "$ship_mod_raised_quarterdeck$"
+ ship_mod_merchantman_range_high: "$ship_mod_extended_quarterdeck$"
+ 
+ 
+ ship_mod_schooner_sail_rig: "Schooner Rig"
+ ship_mod_bark_sail_rig: "Bark Rig"
+ ship_mod_ship_sail_rig: "Ship Rig"
+ 
+ ship_mod_no_guns:0 "No armament"
+ ship_mod_swivels:0 "Swivel Guns"
+ ship_mod_4_pdrs:0 "4-Pounder Guns"
+ 
+ shipname_fallback_merchant: "$NUM|O$ $ship_type_torpedo_boat$ Flotilla"
