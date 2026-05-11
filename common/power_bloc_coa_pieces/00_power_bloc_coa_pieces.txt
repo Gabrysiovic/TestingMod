@@ -2941,6 +2941,9 @@ mcoa_colored_charge_dragon_4_flag_china.png = {
 mcoa_colored_charge_dragon_4_flag_china_small.png = {
     piece = top
 }
+mcoa_colored_charge_republic_china.png = {
+    piece = top
+}
 mcoa_colored_charge_dragon_china_5.png = {
     piece = top
 }
@@ -3060,6 +3063,9 @@ Frame_Zara_Lion.png = {
     piece = shield_frame
 }
 Frame_Zara_Elephant.png = {
+    piece = shield_frame
+}
+Frame_Zara_Dragons.png = {
     piece = shield_frame
 }
 Frame_Zara_Christian.png = {

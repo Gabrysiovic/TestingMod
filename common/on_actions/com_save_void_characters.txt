@@ -29,6 +29,12 @@ on_com_save_structs = {
 				set_career_length = {
 					years = 10000
 				}
+				replace_character_roles = {
+					add = {
+						com_struct_role
+					}
+					remove_all = yes
+				}
 				if = {
 					limit = {
 						is_in_void = no
