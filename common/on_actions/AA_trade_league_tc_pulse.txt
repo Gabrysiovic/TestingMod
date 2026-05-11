@@ -1,0 +1,3 @@
+# AA_trade_league_tc_pulse.txt
+# Removed: cohesion is now computed inline in AA_power_bloc_identities.txt.
+# No caching or monthly pulse needed.

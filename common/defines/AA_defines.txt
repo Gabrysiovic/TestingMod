@@ -10,6 +10,7 @@ NPowerBlocs = {
 	MAX_MANDATES = 1	# 3
 	COHESION_WEEKLY_DRIFT_MAX = 2	# 1
 	POWER_BLOC_INFLUENCE_COST = 250	# 500
+
 }
 
 #Guarantees the law to pass

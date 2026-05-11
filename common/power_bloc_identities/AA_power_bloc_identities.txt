@@ -13,7 +13,7 @@
 		state_trade_capacity_mult = 0.25
 	}
 	non_leader_modifier = {
-		country_convoy_contribution_to_market_owner_add = 0.2
+		# country_convoy_contribution_to_market_owner_add removed — modifier no longer exists in this game version
 	}
 	can_leave = {
 		OR = {
@@ -37,7 +37,7 @@
 	}
 	cohesion = {
 		add = {
-			add = 0.15
+			add = 0.5
 			multiply = define:NPowerBlocs|COHESION_TARGET_MAX
 			desc = POWER_BLOC_COHESION_BASE
 		}
@@ -61,43 +61,22 @@
 			desc = POWER_BLOC_COHESION_GOODS_SHORTAGES
 		}
 		add = {
-			if = {
-				limit = {
-					exists = scope:with_country
-				}
-				add = "scope:power_bloc.power_bloc_total_leading_goods_producers_with(scope:with_country)"
-			}
-			else_if = {
-				limit = {
-					exists = scope:without_country
-				}
-				add = "scope:power_bloc.power_bloc_total_leading_goods_producers_without(scope:without_country)"
-			}
-			else = {
-				add = scope:power_bloc.power_bloc_total_leading_goods_producers
-			}
-			multiply = 3
-			desc = POWER_BLOC_COHESION_LEADING_GOODS_PRODUCER
+			value = define:NPowerBlocs|COHESION_TARGET_MAX
+			multiply = ig:ig_industrialists.ig_clout
+			add = -10
+			multiply = 4
+			desc = POWER_BLOC_COHESION_INDUSTRIALISTS_IG_CLOUT
 		}
-		add = {
-			if = {
-				limit = {
-					exists = scope:with_country
+		if = {
+			limit = {
+				ig:ig_industrialists ?= {
+					is_in_government = no
 				}
-				add = "power_bloc_share_gdp_with(scope:with_country)"
 			}
-			else_if = {
-				limit = {
-					exists = scope:without_country
-				}
-				add = "power_bloc_share_gdp_without(scope:without_country)"
+			add = {
+				add = -15
+				desc = POWER_BLOC_COHESION_INDUSTRIALISTS_IG_NOT_IN_GOVERNMENT
 			}
-			else = {
-				add = power_bloc_share_gdp
-			}
-			multiply = define:NPowerBlocs|COHESION_TARGET_MAX
-			multiply = 0.5
-			desc = POWER_BLOC_COHESION_SHARE_GDP
 		}
 		add = {
 			if = {
@@ -121,27 +100,16 @@
 			max = 0
 			desc = POWER_BLOC_COHESION_WORST_LEADER_RELATIONS
 		}
+		# Trade centre density malus: sum of all members' contributions computed inline.
 		add = {
-			if = {
-				limit = {
-					exists = scope:with_country
+			scope:power_bloc = {
+				every_power_bloc_member = {
+					add = country_tc_density_contribution
 				}
-				add = "scope:power_bloc.power_bloc_worst_economic_dependence_with(scope:with_country)"
 			}
-			else_if = {
-				limit = {
-					exists = scope:without_country
-				}
-				add = "scope:power_bloc.power_bloc_worst_economic_dependence_without(scope:without_country)"
-			}
-			else = {
-				add = scope:power_bloc.power_bloc_worst_economic_dependence
-			}
-			add = -3.5
-			divide = define:NDiplomacy|ECONOMIC_DEPENDENCE_MAX
-			multiply = define:NPowerBlocs|COHESION_TARGET_MAX
-			multiply = 0.5
-			desc = POWER_BLOC_COHESION_WORST_ECONOMIC_DEPENDENCE
+			max = 15
+			multiply = -1
+			desc = POWER_BLOC_COHESION_TRADE_CENTRE_DEFICIT
 		}
 	}
 	ai_weight = {

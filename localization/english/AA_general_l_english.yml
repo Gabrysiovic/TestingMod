@@ -196,3 +196,8 @@
     AA_angevin_form_desc: "Dual Monarchy is the modern equalivent of Angevin Realm. Despite Britain conceding its claim on the French throne in 1803, we must unite against our common foes."
     
     acw_gain_african_american: "Gain additional acceptance of African culture"
+
+    # Trade League cohesion rework
+    POWER_BLOC_COHESION_INDUSTRIALISTS_IG_CLOUT: "[SCOPE.GetRootScope.GetCountry.GetInterestGroupOfType('ig_industrialists').GetName] [concept_clout] ($identity_trade_league$)"
+    POWER_BLOC_COHESION_INDUSTRIALISTS_IG_NOT_IN_GOVERNMENT: "[SCOPE.GetRootScope.GetCountry.GetInterestGroupOfType('ig_industrialists').GetName] is #v not#! in [concept_government] ($identity_trade_league$)"
+    POWER_BLOC_COHESION_TRADE_CENTRE_DEFICIT: "Insufficient Trade Centre investment by [Concept('concept_power_bloc_member','$concept_power_bloc_members$')] relative to GDP ($identity_trade_league$)"
