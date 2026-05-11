@@ -1,0 +1,4 @@
+INJECT:GER = {
+	required_states_fraction = 0.79
+
+}
