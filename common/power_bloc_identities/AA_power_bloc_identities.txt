@@ -107,9 +107,8 @@
 					add = country_tc_density_contribution
 				}
 			}
-			min = -15
-			max = 15
-			multiply = -1
+			min = -20
+			max = 40
 			desc = POWER_BLOC_COHESION_TRADE_CENTRE_DEFICIT
 		}
 	}
