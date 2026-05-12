@@ -74,7 +74,7 @@
 				}
 			}
 			add = {
-				add = -15
+				add = -10
 				desc = POWER_BLOC_COHESION_INDUSTRIALISTS_IG_NOT_IN_GOVERNMENT
 			}
 		}
