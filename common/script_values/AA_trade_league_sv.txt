@@ -1,26 +1,35 @@
 # Trade League cohesion helper values
 
 # Per-country TC density contribution.
-# f_i = max(0, GDP / TC_DENSITY_GDP_FACTOR - TC_levels / TC_DENSITY_TC_FACTOR - 1)
+# f_i = max(-GDP/1M + 1, GDP / TC_DENSITY_GDP_FACTOR - TC_levels / TC_DENSITY_TC_FACTOR - 1)
 # 0 = at or above target; positive = underinvesting relative to GDP.
-# Countries with GDP < 1M already yield 0 via min=0 (formula evaluates to < 0 for them),
-# so no explicit exemption trigger is needed.
+# Countries with GDP < 1M contribute 0. The dynamic min reduces small-country drag.
 # Note: every_scope_building in country scope iterates all buildings in all states (confirmed
 # in 00_victoria_scripted_effects.txt:2184). country_has_building_type_levels(bt:...) silently
 # returns 0 in script value context — always use the loop form.
 country_tc_density_contribution = {
-	value = gdp
-	divide = 1000000
-	add = {
-		value = {
-			every_scope_building = {
-				limit = { is_building_type = building_trade_center }
-				add = this.level
+	value = 0
+	if = {
+		limit = { gdp >= 1000000 }
+		add = {
+			value = gdp
+			divide = 1000000
+			add = {
+				value = {
+					every_scope_building = {
+						limit = { is_building_type = building_trade_center }
+						add = this.level
+					}
+				}
+				divide = 2
+				multiply = -1
+			}
+			add = -1
+			min = {
+				value = gdp
+				divide = -1000000
+				add = 1
 			}
 		}
-		divide = 2
-		multiply = -1
 	}
-	add = -1
-	min = 0
 }
