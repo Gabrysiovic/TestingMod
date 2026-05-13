@@ -16,3 +16,23 @@ REPLACE:unlock_power_bloc_principle_slot_4 = {
 		has_dlc_feature = power_bloc_features
 	}
 }
+
+
+
+REPLACE:can_sign_treaty_with = {
+	scope:other_country = {
+		NOT = { is_country_type = decentralized }
+	}
+	root = {
+		NOT = { is_diplomatic_play_enemy_of = scope:other_country }
+	}
+
+	OR = {
+		has_strategic_adjacency = scope:other_country
+		OR = {
+			has_port_country = yes
+			scope:other_country = { has_port_country = yes }
+		}
+		is_in_same_power_bloc = scope:other_country
+	}
+}
