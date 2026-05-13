@@ -54,11 +54,5 @@
 			set_company_establishment_date = 1807.1.1
 			set_company_state_region = s:STATE_WESTPHALIA
 		}
-		add_modifier = 
-		{
-			name = modifier_AA_zollverein
-			years = 15
-			is_decaying = yes
-		}
 	}
 }

@@ -48,6 +48,8 @@
     dsk_france.3.a: "Whether Germany is a friend or foe is for us to decide."
     
     modifier_ger_winner: "Crown of Germany"
+    modifier_AA_zollverein: "Zollverein Cohesion Initial Buff"
+    modifier_AA_zollverein_desc: "To offset the abysmal initial cohesion"
     ally_fra_pru: "If there is an alliance or defensive pact between France and Prussia, the journal entry will resolve peacefully."
     
     dsk_france.4: "Crown of Germany - small"

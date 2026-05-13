@@ -44,14 +44,6 @@
 		add = {
 			if = {
 				limit = {
-					has_modifier = modifier_AA_zollverein
-				}
-				add = 40
-			}
-		}
-		add = {
-			if = {
-				limit = {
 					exists = scope:with_country
 				}
 				add = "scope:power_bloc.power_bloc_leader.market.market_number_goods_shortages_with(scope:with_country)"

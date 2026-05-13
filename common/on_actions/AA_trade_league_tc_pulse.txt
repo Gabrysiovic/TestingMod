@@ -1,3 +1,23 @@
-# AA_trade_league_tc_pulse.txt
-# Removed: cohesion is now computed inline in AA_power_bloc_identities.txt.
-# No caching or monthly pulse needed.
+﻿# AA_trade_league_tc_pulse.txt
+# Cohesion is computed inline in AA_power_bloc_identities.txt.
+# This file handles game-start effects for the Zollverein.
+
+on_game_started_after_lobby = {
+	effect = {
+		c:PRU ?= {
+			if = {
+				limit = {
+					is_power_bloc_leader = yes
+					has_dlc_feature = power_bloc_features
+				}
+				power_bloc = {
+					add_modifier = {
+						name = modifier_AA_zollverein
+						years = 15
+						is_decaying = yes
+					}
+				}
+			}
+		}
+	}
+}
