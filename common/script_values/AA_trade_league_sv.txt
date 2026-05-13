@@ -13,7 +13,7 @@ country_tc_density_contribution = {
 		limit = { gdp >= 1000000 }
 		add = {
 			value = gdp
-			divide = 1000000
+			divide = -1000000
 			add = {
 				value = {
 					every_scope_building = {
@@ -21,10 +21,14 @@ country_tc_density_contribution = {
 						add = this.level
 					}
 				}
-				divide = 2
-				multiply = -1
+				divide = 5
 			}
-			add = -1
+			add = 1
+			max = {
+				value = gdp
+				divide = 1000000
+				add = -1
+			}
 			min = {
 				value = gdp
 				divide = -1000000
