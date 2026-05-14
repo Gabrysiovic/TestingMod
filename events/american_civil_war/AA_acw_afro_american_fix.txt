@@ -1,4 +1,4 @@
-# Reconstruction ending event 25/03/2026 Changed by Gabriel. No more primary culture
+﻿# Reconstruction ending event 25/03/2026 Changed by Gabriel. No more primary culture
 AA_acw_je_events.1 = {
 	type = country_event
 	event_image = {

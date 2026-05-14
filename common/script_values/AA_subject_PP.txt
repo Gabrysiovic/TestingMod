@@ -1,4 +1,4 @@
-REPLACE:liberty_desire_weekly_change = { #AKA liberty_desire_weekly_progress BY GABRIEL 22/03/2026
+﻿REPLACE:liberty_desire_weekly_change = { #AKA liberty_desire_weekly_progress BY GABRIEL 22/03/2026
 	add = {
 		value = 0.1
 		desc = "base_value"

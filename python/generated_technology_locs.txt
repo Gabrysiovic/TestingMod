@@ -1,4 +1,4 @@
-notification_headlines_tech_bessemer_process_tooltip:0 "#header $notification_headlines_tech_bessemer_process_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_bessemer_process_desc$"
+﻿notification_headlines_tech_bessemer_process_tooltip:0 "#header $notification_headlines_tech_bessemer_process_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_bessemer_process_desc$"
  notification_headlines_tech_bessemer_process_name:0 "#b bessemer_process researched #!"
  notification_headlines_tech_bessemer_process_desc:1 " [SCOPE.sCountry('headlines_bessemer_process_researcher').GetName] has invented #bold bessemer_process #!. #lore REPLACE_ME #!"
 

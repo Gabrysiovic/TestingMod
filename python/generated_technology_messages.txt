@@ -1,4 +1,4 @@
-headlines_tech_bessemer_process = {
+﻿headlines_tech_bessemer_process = {
     type = country
     texture = "gfx/interface/icons/notification_icons/news_tech.dds"
     group = "headlines_tech_group"
