@@ -32,7 +32,7 @@ GLOBAL = {
 	c:SPA = {
 		add_treasury = {
 			value = gold_reserves_limit
-			multiply = -0.5
+			multiply = -0.4
 		}
 	}
 	c:NET = {
