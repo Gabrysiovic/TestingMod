@@ -54,7 +54,7 @@
 		}
 	}
 	weight = 200
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
 je_spring_reforms_economic = {
@@ -112,7 +112,7 @@ je_spring_reforms_economic = {
 		}
 	}
 	weight = 200
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
 je_spring_reforms_landowners = {
@@ -178,5 +178,5 @@ je_spring_reforms_landowners = {
 		}
 	}
 	weight = 200
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }

@@ -70,7 +70,7 @@
 			}
 			if = { # Override to make the ruler of British India always an Industrialist
 				limit = {
-					is_ruler = yes
+					is_ruler_of_own_country = yes
 					c:BIC ?= owner
 					NOT = {
 						is_interest_group_type = ig_industrialists
@@ -108,7 +108,7 @@
 			### Monarchial succession - add all successions here.
 			if = {
 				limit = {
-					is_ruler = yes
+					is_ruler_of_own_country = yes
 					owner ?= {
 						has_law = law_type:law_monarchy
 					}

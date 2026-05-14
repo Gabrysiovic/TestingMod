@@ -205,7 +205,7 @@
 				any_scope_character = {
 					has_ideology = ideology:ideology_sovereignist_leader
 					OR = {
-						is_ruler = yes
+						is_ruler_of_own_country = yes
 						AND = {
 							has_role = politician
 							interest_group = {
