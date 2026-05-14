@@ -59,7 +59,7 @@ dsk_france.2 = {
 #				has_template = fra_napoleon_iii_character_template
 #				OR = {
 #				is_agitators = yes
-#				is_ruler = yes
+#				is_ruler_of_own_country = yes
 #				}
 #			}
 #			kill_character = yes

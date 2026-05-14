@@ -74,11 +74,11 @@ RS_removing_sweden_and_gbr_monthly_pulse_country = {
 				c:SWE ?= this
 				game_date >= 1872.9.29
 				any_scope_character = {
-					is_ruler = yes
+					is_ruler_of_own_country = yes
 					has_template = swe_charles_bernadotte_template
 				}
 				any_scope_character = {
-					is_heir = yes
+					is_heir_of_own_country = yes
 					has_template = swe_oscar_ii_bernadotte_template
 				}
 			}
@@ -88,7 +88,7 @@ RS_removing_sweden_and_gbr_monthly_pulse_country = {
 				c:SWE ?= this
 				game_date >= 1872.9.29
 				any_scope_character = {
-					is_ruler = yes
+					is_ruler_of_own_country = yes
 					has_template = swe_oscar_ii_bernadotte_template
 				}
 				NOT = {
@@ -191,7 +191,7 @@ RS_removing_sweden_and_fixing_russia_on_new_ruler = {
 					c:SWE ?= this
 					has_law = law_type:law_monarchy
 				}
-				is_ruler = yes
+				is_ruler_of_own_country = yes
 			}
 			if = {
 				limit = {
@@ -205,7 +205,7 @@ RS_removing_sweden_and_fixing_russia_on_new_ruler = {
 					c:RUS ?= this
 					has_law = law_type:law_monarchy
 				}
-				is_ruler = yes
+				is_ruler_of_own_country = yes
 			}
 			if = {
 				limit = {

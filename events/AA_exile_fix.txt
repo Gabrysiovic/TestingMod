@@ -1,4 +1,4 @@
-exiles_events.4 = {
+﻿exiles_events.4 = {
 	type = country_event
 	placement = root
 
@@ -28,8 +28,8 @@ exiles_events.4 = {
 			any_scope_character = {
 				AND = 
 				{
-					is_ruler = no
-					is_heir = no
+					is_ruler_of_own_country = no
+					is_heir_of_own_country = no
 					OR = {
 						has_role = agitator
 						has_modifier = incompetent_coup_attempt
