@@ -21,7 +21,7 @@ country_tc_density_contribution = {
 						add = this.level
 					}
 				}
-				divide = 5
+				divide = 2
 			}
 			add = 1
 			max = {

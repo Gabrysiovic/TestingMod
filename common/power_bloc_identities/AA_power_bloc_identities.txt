@@ -6,7 +6,6 @@
 		# power_bloc_mandate_progress_per_minor_power_member_add = 1
 		# power_bloc_mandate_progress_per_unrecognized_major_power_member_add = 2
 		# power_bloc_mandate_progress_per_unrecognized_regional_power_member_add = 1
-		power_bloc_cohesion_per_member_add = -1
 		power_bloc_invite_acceptance_great_power_add = -15
 	}
 	leader_modifier = {
@@ -110,6 +109,67 @@
 			min = -20
 			max = 40
 			desc = POWER_BLOC_COHESION_TRADE_CENTRE_DEFICIT
+		}
+		add = {
+			scope:power_bloc = {
+				every_power_bloc_member = {
+					if = {
+						limit = { is_power_bloc_leader = no is_subject = no country_rank = rank_value:great_power }
+						add = -5
+					}
+					else_if = {
+						limit = { is_power_bloc_leader = no is_subject = no country_rank = rank_value:major_power }
+						add = -3
+					}
+					else_if = {
+						limit = { is_power_bloc_leader = no is_subject = no country_rank = rank_value:minor_power }
+						add = -1
+					}
+				}
+			}
+			if = {
+				limit = {
+					exists = scope:with_country
+					scope:with_country ?= { is_subject = no country_rank = rank_value:great_power }
+				}
+				add = -5
+			}
+			else_if = {
+				limit = {
+					exists = scope:with_country
+					scope:with_country ?= { is_subject = no country_rank = rank_value:major_power }
+				}
+				add = -3
+			}
+			else_if = {
+				limit = {
+					exists = scope:with_country
+					scope:with_country ?= { is_subject = no country_rank = rank_value:minor_power }
+				}
+				add = -1
+			}
+			else_if = {
+				limit = {
+					exists = scope:without_country
+					scope:without_country ?= { is_subject = no country_rank = rank_value:great_power }
+				}
+				add = 5
+			}
+			else_if = {
+				limit = {
+					exists = scope:without_country
+					scope:without_country ?= { is_subject = no country_rank = rank_value:major_power }
+				}
+				add = 3
+			}
+			else_if = {
+				limit = {
+					exists = scope:without_country
+					scope:without_country ?= { is_subject = no country_rank = rank_value:minor_power }
+				}
+				add = 1
+			}
+			desc = POWER_BLOC_COHESION_MEMBER_RANK
 		}
 	}
 	ai_weight = {

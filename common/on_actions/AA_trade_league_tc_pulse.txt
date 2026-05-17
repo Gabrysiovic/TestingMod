@@ -3,6 +3,12 @@
 # This file handles game-start effects for the Zollverein.
 
 on_game_started_after_lobby = {
+	on_actions = {
+		AA_zollverein_game_start
+	}
+}
+
+AA_zollverein_game_start = {
 	effect = {
 		c:PRU ?= {
 			if = {
@@ -11,6 +17,7 @@ on_game_started_after_lobby = {
 					has_dlc_feature = power_bloc_features
 				}
 				power_bloc = {
+					add_cohesion_number = 50
 					add_modifier = {
 						name = modifier_AA_zollverein
 						years = 15

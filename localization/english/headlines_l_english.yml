@@ -393,6 +393,11 @@ notification_headlines_london_conference_luxembourg_tooltip:0 "#header $notifica
 notification_headlines_london_conference_luxembourg_name:0 "#b LONDON CONFERENCE CONCLUDES #!"
 notification_headlines_london_conference_luxembourg_desc:1 "The territorial dispute between [SCOPE.sCountry('belgium_scope').GetName] and the [SCOPE.sCountry('netherlands_scope').GetName] has been settled diplomatically, with both countries trading disputed lands. #lore Diplomats around Europe hail the outcome as a guarantor of peace in the Low Countries, with... #!"
 
+#Japan Claims on Manchuria
+notification_headlines_mukden_tooltip:0 "#header $notification_headlines_mukden_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_mukden_desc$"
+ notification_headlines_mukden_name:0 "#b JAPAN ASSERTS CLAIMS ON MANCHURIA #!"
+ notification_headlines_mukden_desc:1 "The [SCOPE.sCountry('japan_scope').GetName] has formally asserted territorial claims on Manchurian lands following its military campaigns in the region. #lore Foreign observers note that the move signals Japan's growing ambitions on the Asian continent, with diplomats in [SCOPE.sCountry('mukden_target_scope').GetCapitalName] said to be... #!"
+
 #London Conference: Failure
 notification_headlines_london_conference_failure_tooltip:0 "#header $notification_headlines_london_conference_failure_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_london_conference_failure_desc$"
 notification_headlines_london_conference_failure_name:0 "#b LONDON CONFERENCE COLLAPSES #!"

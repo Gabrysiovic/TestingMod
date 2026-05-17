@@ -18,8 +18,8 @@
 	when_taken = {
 		remove_variable = AA_indochina_var
 		remove_variable = AA_federation_var
-		has_variable = AA_persia_var
-		AA_angevin_var
+		remove_variable = AA_persia_var
+		remove_variable = AA_angevin_var
 	}
 }
 
