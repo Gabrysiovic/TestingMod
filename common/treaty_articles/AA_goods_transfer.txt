@@ -30,11 +30,11 @@ REPLACE:goods_transfer = {
 		OR = {
 			AND = {
 				any_scope_state = {
-					has_port = yes
+					has_port_state = yes
 				}
 				scope:other_country = {
 					any_scope_state = {
-						has_port = yes
+						has_port_state = yes
 					}
 				}
 			}
@@ -72,7 +72,7 @@ REPLACE:goods_transfer = {
 									is_adjacent_to_market = scope:article.target_country.market
 								}
 								any_scope_state = {
-									has_port = yes
+									has_port_state = yes
 								}
 							}
 						}

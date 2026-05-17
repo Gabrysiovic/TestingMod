@@ -698,6 +698,15 @@ headlines_london_conference_luxembourg = {
 	days = 28
 	color = neutral
 }
+#Japan Claims on Manchuria
+headlines_mukden = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
 #London Conference failure
 headlines_london_conference_failure = {
 	type = country
