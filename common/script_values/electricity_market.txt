@@ -1,4 +1,3 @@
-﻿###Power Plants+
 #root = country
 electricity_market_production = {
 	market = {
