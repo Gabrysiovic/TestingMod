@@ -1,7 +1,8 @@
-﻿###Power Plants+
+
 #root = state
 state_electricity_delta = {
 	value = sg:electricity.state_goods_delta
+
 	if = {
 		limit = {
 			has_variable = substation_multiplier
@@ -11,9 +12,10 @@ state_electricity_delta = {
 				production_method = pm_substation_down
 			}
 		}
+
 		subtract = {
 			value = var:substation_multiplier
-			add = 1			# Von der PM
+			add = 1 # Von der PM
 			multiply = substation_electricity_multiplier
 		}
 	}
@@ -26,9 +28,10 @@ state_electricity_delta = {
 				production_method = pm_substation_up
 			}
 		}
+
 		add = {
 			value = var:substation_multiplier
-			add = 1			# Von der PM
+			add = 1 # Von der PM
 			multiply = substation_electricity_multiplier
 		}
 	}
@@ -37,6 +40,7 @@ state_electricity_delta = {
 #root = state
 state_electricity_sell_orders = {
 	value = sg:electricity.state_goods_production
+
 	if = {
 		limit = {
 			has_variable = substation_multiplier
@@ -46,17 +50,20 @@ state_electricity_sell_orders = {
 				production_method = pm_substation_down
 			}
 		}
+
 		subtract = {
 			value = var:substation_multiplier
-			add = 1			# Von der PM
+			add = 1 # Von der PM
 			multiply = substation_electricity_multiplier
 		}
 	}
 }
 
+
 #root = state
 state_electricity_buy_orders = {
 	value = sg:electricity.state_goods_consumption
+ 
 	if = {
 		limit = {
 			has_variable = substation_multiplier
@@ -66,19 +73,24 @@ state_electricity_buy_orders = {
 				production_method = pm_substation_up
 			}
 		}
+
 		subtract = {
 			value = var:substation_multiplier
-			add = 1			# Von der PM
+			add = 1 # Von der PM
 			multiply = substation_electricity_multiplier
 		}
 	}
 }
 
+
+
+
 substations_building_level = {
 	value = 0
+
 	if = {
-		limit = {
-			has_building = building_substation
+		limit = { 
+			has_building = building_substation 
 			has_variable = substation_multiplier
 		}
 		add = var:substation_multiplier
