@@ -1,0 +1,40 @@
+﻿TRY_INJECT:african_city = {
+	building_kiel_canal = {"canal_suezcanal_01_mesh"}
+}
+
+TRY_INJECT:arabic_city = {
+	building_kiel_canal = {"canal_suezcanal_01_mesh"}
+}
+
+TRY_INJECT:asian_city = {
+	building_kiel_canal = {"canal_suezcanal_01_mesh"}
+}
+
+TRY_INJECT:balkan_city = {
+	building_kiel_canal = {"canal_suezcanal_01_mesh"}
+}
+
+TRY_INJECT:default_city = {
+	building_kiel_canal = {"canal_suezcanal_01_mesh"}
+}
+
+TRY_INJECT:french_city = {
+	building_kiel_canal = {"canal_suezcanal_01_mesh"}
+}
+
+TRY_INJECT:indian_city = {
+	building_kiel_canal = {"canal_suezcanal_01_mesh"}
+}
+
+TRY_INJECT:japan_city = {
+	building_kiel_canal = {"canal_suezcanal_01_mesh"}
+}
+
+TRY_INJECT:latin_city = {
+	building_kiel_canal = {"canal_suezcanal_01_mesh"}
+}
+
+TRY_INJECT:southasian_city = {
+	building_kiel_canal = {"canal_suezcanal_01_mesh"}
+}
+
