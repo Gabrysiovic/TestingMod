@@ -1,6 +1,6 @@
 ﻿building_kiel_canal = {
 	building_group = bg_canals
-	icon = "gfx/interface/icons/building_icons/JPIK/kiel_canal.dds"
+	icon = "gfx/interface/icons/building_icons/AA_kiel_canal.dds"
 	strait = canal_kiel
 	expandable = no
 	downsizeable = no
