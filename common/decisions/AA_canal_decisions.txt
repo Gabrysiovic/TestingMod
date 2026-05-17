@@ -207,3 +207,86 @@ REPLACE:panama_canal_purchase = {
 		}
 	}
 }
+
+kiel_survey_decision = {
+	is_shown = {
+		has_interest_marker_in_region = sr:region_central_europe
+		NOT = {
+			has_variable = survey_kiel_taken
+			has_global_variable = kiel_canal_complete
+		}
+		OR = {
+			country_rank = rank_value:great_power
+			s:STATE_SCHLESWIG_HOLSTEIN = {
+				any_scope_state = {
+					owner = ROOT
+				}
+			}
+		}
+		s:STATE_SCHLESWIG_HOLSTEIN = {
+			NOT = {
+				any_scope_state = {
+					has_building = building_kiel_canal
+				}
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = civilizing_mission
+		produced_bureaucracy > 1000
+		owns_entire_state_region = STATE_SCHLESWIG_HOLSTEIN
+	}
+
+	when_taken = {
+		set_variable = {
+			name = survey_kiel_taken
+			value = 0
+		}
+		add_modifier = {
+			name = modifier_surveying_kiel
+		}
+		add_journal_entry = {
+			type = je_kiel_survey
+		}
+	}
+
+	ai_chance = {
+		value = 0
+		if = {
+			limit = { produced_bureaucracy > 5000 }
+			add = 10
+		}
+		if = {
+			limit = {
+				has_strategy = ai_strategy_armed_isolationism
+			}
+			multiply = 0
+		}
+		if = {
+			limit = {
+				OR = {
+					is_diplomatic_play_committed_participant = yes
+					is_at_war = yes
+				}
+			}
+			multiply = 0
+		}
+	}
+}
+
+stop_kiel_survey_decision = {
+	is_shown = {
+		has_modifier = modifier_surveying_kiel
+	}
+	possible = {
+		has_modifier = modifier_surveying_kiel
+	}
+	when_taken = {
+		remove_variable = survey_kiel_taken
+		remove_modifier = modifier_surveying_kiel
+	}
+	ai_chance = {
+		value = 0
+	}
+}

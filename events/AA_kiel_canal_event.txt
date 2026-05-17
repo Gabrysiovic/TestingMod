@@ -1,0 +1,64 @@
+﻿namespace = canal_events
+
+canal_events.111 = {
+	type = country_event
+
+	title = expedition_events.1000.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = expedition_events.1000.d
+				trigger = {
+					any_scope_state = { state_region = s:STATE_SCHLESWIG_HOLSTEIN }
+				}
+			}
+			triggered_desc = {
+				desc = canal_events.1000.d
+				trigger = {
+					NOT = { any_scope_state = { state_region = s:STATE_SCHLESWIG_HOLSTEIN } }
+				}
+			}
+		}
+	}
+	flavor = expedition_events.1000.f
+
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	duration = 3
+
+	trigger = {
+		# triggered by JE
+	}
+
+	immediate = {
+		add_to_variable_list = {
+		  name = kiel_survey_complete
+		}
+		s:STATE_SCHLESWIG_HOLSTEIN = {
+			save_scope_as = schleswig_holstein_state
+			random_scope_state = {
+				owner = {
+					save_scope_as = schleswig_holstein_owner
+				}
+			}
+		}
+	}
+	
+	option = { # we will build the canal
+		name = canal_events.1000.c
+		trigger = {
+			any_scope_state = { state_region = s:STATE_SCHLESWIG_HOLSTEIN }
+		}
+        add_journal_entry = {
+			type = je_kiel_canal
+		}
+		set_variable = kiel_survey_complete
+		}
+	}
+}
