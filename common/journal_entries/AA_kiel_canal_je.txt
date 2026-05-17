@@ -1,0 +1,95 @@
+﻿je_kiel_survey = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_technology
+
+	on_monthly_pulse = {
+		effect = {
+			change_variable = {
+				name = survey_kiel_taken
+				add = 1
+			}
+		}
+	}
+
+	complete = {
+		scope:journal_entry = { is_goal_complete = yes }
+	}
+
+	on_complete = {
+		remove_modifier = modifier_surveying_kiel
+		trigger_event = { id = canal_events.111 }
+	}
+
+	current_value = {
+		value = root.var:survey_kiel_taken
+	}
+
+	goal_add_value = {
+		value = 18
+	}
+
+	invalid = {
+		OR = {
+			NOT = { has_variable = survey_kiel_taken }
+			s:STATE_SCHLESWIG_HOLSTEIN = {
+				any_scope_state = {
+					NOT = { owner = ROOT }
+					has_building = building_kiel_canal
+				}
+			}
+		}
+	}
+
+	on_invalid = {
+		remove_variable = survey_kiel_taken
+		remove_modifier = modifier_surveying_kiel
+	}
+
+	progressbar = yes
+
+	weight = 10
+		
+	should_be_pinned_by_default_uninvolved_or_context = no
+}
+
+je_kiel_canal = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_technology
+
+	complete = {
+		s:STATE_SCHLESWIG_HOLSTEIN = {
+			any_scope_state = {
+				owner = root
+				any_scope_building = {
+					is_building_type = building_kiel_canal
+					occupancy >= 0.9
+				}
+			}
+		}
+	}
+
+	on_complete = {
+		set_global_variable = kiel_canal_complete
+	}
+
+	invalid = {
+		OR = {
+			NOT = { has_variable = survey_kiel_taken }
+			s:STATE_SCHLESWIG_HOLSTEIN = {
+				any_scope_state = {
+					NOT = { owner = ROOT }
+					has_building = building_kiel_canal
+				}
+			}
+		}
+	}
+
+	on_invalid = {
+		remove_variable = survey_kiel_taken
+		remove_modifier = modifier_surveying_kiel
+	}
+		
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
