@@ -200,6 +200,8 @@
     acw_gain_african_american: "Gain additional acceptance of African culture"
 
     # Trade League cohesion rework
+    POWER_BLOC_COHESION_MEMBER_RANK: "#tooltippable;tooltip:POWER_BLOC_COHESION_MEMBER_RANK_tt Member [concept_rank]#! ($identity_trade_league$)"
+    POWER_BLOC_COHESION_MEMBER_RANK_tt: "#b Member Rank Cohesion Penalty#!\n\nEach non-leader member reduces cohesion based on their [concept_rank]. More powerful members are harder to keep aligned with the league's interests.\n\n#b;white Per-member penalty:#!\n  #r Great Power#!: #v -5#!\n  #r Major Power#!: #v -3#!\n  Minor Power: -1\n  Unrecognized: no penalty"
     POWER_BLOC_COHESION_INDUSTRIALISTS_IG_CLOUT: "[SCOPE.GetRootScope.GetCountry.GetInterestGroupOfType('ig_industrialists').GetName] [concept_clout] ($identity_trade_league$)"
     POWER_BLOC_COHESION_INDUSTRIALISTS_IG_NOT_IN_GOVERNMENT: "[SCOPE.GetRootScope.GetCountry.GetInterestGroupOfType('ig_industrialists').GetName] is #v not#! in [concept_government] ($identity_trade_league$)"
     POWER_BLOC_COHESION_TRADE_CENTRE_DEFICIT: "#tooltippable;tooltip:POWER_BLOC_COHESION_TRADE_CENTRE_DEFICIT_tt Trade Centre Investment#! relative to GDP ($identity_trade_league$)"

@@ -207,7 +207,7 @@
 					OR = {
 						is_ruler_of_own_country = yes
 						AND = {
-							has_role = politician
+							has_role_of_type = politician
 							interest_group = {
 								is_in_government = yes
 							}
@@ -776,7 +776,7 @@
 		limit = {
 			root.second_country.market = root.first_country.market
 			root.first_country.supply_network_strength < 1
-			root.second_country = { has_port = yes }
+			root.second_country = { has_port_country = yes }
 			NOT = { root.second_country = { is_adjacent_to_country = root.first_country }}
 		}
 		add = {
