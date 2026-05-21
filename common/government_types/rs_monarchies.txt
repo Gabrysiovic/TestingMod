@@ -1,0 +1,368 @@
+﻿gov_hm_gov = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_KING"
+	female_ruler = "RULER_TITLE_QUEEN"
+	
+	male_heir = "RULER_TITLE_PRINCE"
+	female_heir = "RULER_TITLE_PRINCESS"
+	
+	possible = {
+		has_law = law_type:law_monarchy
+		country_has_primary_culture = cu:british
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+gov_absolute_empire = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_EMPEROR"
+	female_ruler = "RULER_TITLE_EMPRESS"
+	
+	male_heir = "RULER_TITLE_PRINCE"
+	female_heir = "RULER_TITLE_PRINCESS"
+	
+	possible = {
+		has_law = law_type:law_monarchy
+		has_law = law_type:law_autocracy 
+		OR = {
+			country_tier = hegemony
+			country_tier = empire
+			country_has_primary_culture = cu:yankee
+			country_has_primary_culture = cu:dixie
+			country_has_primary_culture = cu:afro_american
+			country_has_primary_culture = cu:brazilian
+			country_has_primary_culture = cu:north_andean
+			country_has_primary_culture = cu:south_andean
+			country_has_primary_culture = cu:platinean
+			country_has_primary_culture = cu:central_american
+			country_has_primary_culture = cu:mexican
+			country_has_primary_culture = cu:caribeno
+			country_has_primary_culture = cu:afro_caribeno
+			country_has_primary_culture = cu:afro_caribbean
+			country_has_primary_culture = cu:guarani
+			country_has_primary_culture = cu:amazonian
+			country_has_primary_culture = cu:patagonian
+			country_has_primary_culture = cu:afro_antillean
+		}
+		NOR = {
+			has_variable = orleanist_restoration_var
+			has_variable = legitimist_restoration_var
+		}
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+gov_feudal_empire = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_EMPEROR"
+	female_ruler = "RULER_TITLE_EMPRESS"
+	
+	male_heir = "RULER_TITLE_PRINCE"
+	female_heir = "RULER_TITLE_PRINCESS"
+	
+	possible = {
+		has_law = law_type:law_monarchy
+		country_has_voting_franchise = no
+		has_law = law_type:law_serfdom
+
+		OR = {
+			country_tier = hegemony
+			country_tier = empire
+			country_has_primary_culture = cu:yankee
+			country_has_primary_culture = cu:dixie
+			country_has_primary_culture = cu:afro_american
+			country_has_primary_culture = cu:brazilian
+			country_has_primary_culture = cu:north_andean
+			country_has_primary_culture = cu:south_andean
+			country_has_primary_culture = cu:platinean
+			country_has_primary_culture = cu:central_american
+			country_has_primary_culture = cu:mexican
+			country_has_primary_culture = cu:caribeno
+			country_has_primary_culture = cu:afro_caribeno
+			country_has_primary_culture = cu:afro_caribbean
+			country_has_primary_culture = cu:guarani
+			country_has_primary_culture = cu:amazonian
+			country_has_primary_culture = cu:patagonian
+			country_has_primary_culture = cu:afro_antillean
+		}
+		NOR = {
+			has_variable = orleanist_restoration_var
+			has_variable = legitimist_restoration_var
+		}
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+gov_empire = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_EMPEROR"
+	female_ruler = "RULER_TITLE_EMPRESS"
+	
+	male_heir = "RULER_TITLE_PRINCE"
+	female_heir = "RULER_TITLE_PRINCESS"
+	
+	possible = {
+		has_law = law_type:law_monarchy
+		country_has_voting_franchise = no
+		OR = {
+			country_tier = hegemony
+			country_tier = empire
+			country_has_primary_culture = cu:yankee
+			country_has_primary_culture = cu:dixie
+			country_has_primary_culture = cu:afro_american
+			country_has_primary_culture = cu:brazilian
+			country_has_primary_culture = cu:north_andean
+			country_has_primary_culture = cu:south_andean
+			country_has_primary_culture = cu:platinean
+			country_has_primary_culture = cu:central_american
+			country_has_primary_culture = cu:mexican
+			country_has_primary_culture = cu:caribeno
+			country_has_primary_culture = cu:afro_caribeno
+			country_has_primary_culture = cu:afro_caribbean
+			country_has_primary_culture = cu:guarani
+			country_has_primary_culture = cu:amazonian
+			country_has_primary_culture = cu:patagonian
+			country_has_primary_culture = cu:afro_antillean
+		}
+		NOR = {
+			has_variable = orleanist_restoration_var
+			has_variable = legitimist_restoration_var
+		}
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+gov_constitutional_empire = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_EMPEROR"
+	female_ruler = "RULER_TITLE_EMPRESS"
+	
+	male_heir = "RULER_TITLE_PRINCE"
+	female_heir = "RULER_TITLE_PRINCESS"
+	
+	possible = {
+		has_law = law_type:law_monarchy
+		country_has_voting_franchise = yes
+		OR = {
+			country_tier = hegemony
+			country_tier = empire
+			country_has_primary_culture = cu:yankee
+			country_has_primary_culture = cu:dixie
+			country_has_primary_culture = cu:afro_american
+			country_has_primary_culture = cu:brazilian
+			country_has_primary_culture = cu:north_andean
+			country_has_primary_culture = cu:south_andean
+			country_has_primary_culture = cu:platinean
+			country_has_primary_culture = cu:central_american
+			country_has_primary_culture = cu:mexican
+			country_has_primary_culture = cu:caribeno
+			country_has_primary_culture = cu:afro_caribeno
+			country_has_primary_culture = cu:afro_caribbean
+			country_has_primary_culture = cu:guarani
+			country_has_primary_culture = cu:amazonian
+			country_has_primary_culture = cu:patagonian
+			country_has_primary_culture = cu:afro_antillean
+		}
+		NOR = {
+			has_variable = orleanist_restoration_var
+			has_variable = legitimist_restoration_var
+		}
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+gov_absolute_kingdom = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_KING"
+	female_ruler = "RULER_TITLE_QUEEN"
+	
+	male_heir = "RULER_TITLE_PRINCE"
+	female_heir = "RULER_TITLE_PRINCESS"
+	
+	possible = {
+		has_law = law_type:law_monarchy
+		has_law = law_type:law_autocracy 
+		OR = {	
+			country_tier = kingdom
+			AND = {
+				country_tier = empire
+				OR = {
+					country_has_primary_culture = cu:north_italian
+					country_has_primary_culture = cu:south_italian
+					AND = { 
+						country_has_primary_culture = cu:french
+						NOR = {
+							has_variable = orleanist_restoration_var
+							has_variable = legitimist_restoration_var
+							has_variable = bonapartist_restoration_var
+						}
+					}
+				}
+			}
+		}
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+gov_feudal_kingdom = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_KING"
+	female_ruler = "RULER_TITLE_QUEEN"
+	
+	male_heir = "RULER_TITLE_PRINCE"
+	female_heir = "RULER_TITLE_PRINCESS"
+	
+	possible = {
+		has_law = law_type:law_monarchy
+		country_has_voting_franchise = no
+		has_law = law_type:law_serfdom
+		OR = {	
+			country_tier = kingdom
+			AND = {
+				country_tier = empire
+				OR = {
+					country_has_primary_culture = cu:north_italian
+					country_has_primary_culture = cu:south_italian
+					AND = { 
+						country_has_primary_culture = cu:french
+						NOR = {
+							has_variable = orleanist_restoration_var
+							has_variable = legitimist_restoration_var
+							has_variable = bonapartist_restoration_var
+						}
+					}
+				}
+			}
+		}
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+gov_kingdom = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_KING"
+	female_ruler = "RULER_TITLE_QUEEN"
+	
+	male_heir = "RULER_TITLE_PRINCE"
+	female_heir = "RULER_TITLE_PRINCESS"
+	
+	possible = {
+		has_law = law_type:law_monarchy
+		country_has_voting_franchise = no
+		OR = {	
+			country_tier = kingdom
+			AND = {
+				country_tier = empire
+				OR = {
+					country_has_primary_culture = cu:north_italian
+					country_has_primary_culture = cu:south_italian
+					AND = { 
+						country_has_primary_culture = cu:french
+						NOR = {
+							has_variable = orleanist_restoration_var
+							has_variable = legitimist_restoration_var
+							has_variable = bonapartist_restoration_var
+						}
+					}
+				}
+			}
+		}
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+gov_constitutional_kingdom = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_KING"
+	female_ruler = "RULER_TITLE_QUEEN"
+	
+	male_heir = "RULER_TITLE_PRINCE"
+	female_heir = "RULER_TITLE_PRINCESS"
+	
+	possible = {
+		has_law = law_type:law_monarchy
+		country_has_voting_franchise = yes
+		OR = {	
+			country_tier = kingdom
+			AND = {
+				country_tier = empire
+				OR = {
+					country_has_primary_culture = cu:north_italian
+					country_has_primary_culture = cu:south_italian
+					AND = { 
+						country_has_primary_culture = cu:french
+						NOR = {
+							has_variable = orleanist_restoration_var
+							has_variable = legitimist_restoration_var
+							has_variable = bonapartist_restoration_var
+						}
+					}
+				}
+			}
+		}
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}

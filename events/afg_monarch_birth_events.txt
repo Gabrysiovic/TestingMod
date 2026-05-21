@@ -33,7 +33,7 @@ afg_monarch_birth.1 = {
 	}
 
 	option = {
-		name = historic_monarch_birth_reaction
+		name = afg_monarch_birth.1.a
 		default_option = yes
 
 		create_character = {
@@ -75,7 +75,7 @@ afg_monarch_birth.2 = {
 	}
 
 	option = {
-		name = historic_monarch_birth_reaction
+		name = afg_monarch_birth.2.a
 		default_option = yes
 
 		create_character = {
@@ -117,7 +117,7 @@ afg_monarch_birth.3 = {
 	}
 
 	option = {
-		name = historic_monarch_birth_reaction
+		name = afg_monarch_birth.3.a
 		default_option = yes
 
 		create_character = {
