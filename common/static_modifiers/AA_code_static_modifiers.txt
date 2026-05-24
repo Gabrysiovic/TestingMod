@@ -17,3 +17,8 @@ REPLACE:weak_power_bloc = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 	power_bloc_cohesion_mult = 0
 }
+
+AA_agreeable_to_imposition = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	country_law_enactment_success_add = 1
+}	

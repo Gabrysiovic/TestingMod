@@ -28,3 +28,23 @@ AA_zollverein_game_start = {
 		}
 	}
 }
+
+on_law_activated = {
+	on_actions = {
+		AA_imposition_removal
+	}
+}
+
+AA_imposition_removal = {
+	effect = {
+	owner = {
+		if = {
+				limit = {
+					has_law = scope:article.input_law
+				}
+				remove_modifier = AA_agreeable_to_imposition
+		}
+	}
+	}
+}
+
