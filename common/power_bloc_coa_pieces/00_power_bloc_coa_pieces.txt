@@ -2688,6 +2688,12 @@ mcoa_colored_charge_france.png = {
 mcoa_colored_charge_france_small.png = {
     piece = top
 }
+mcoa_colored_charge_july_monarchy.png = {
+    piece = top
+}
+mcoa_colored_charge_july_monarchy_small.png = {
+    piece = top
+}
 mcoa_colored_germany_bundesschild_Dienstflagge.png = {
     piece = top
 }
