@@ -1,17 +1,18 @@
 ﻿# Poland
 
-ecchi_pol_prus_character_template = {
+ecchi_pol_prus = {
     first_name = Boleslaw
     last_name = ecchi_Prus
     historical = yes
     culture = cu:polish
+    home_region = STATE_LESSER_POLAND
 
     religion = rel:catholic
     ideology = ideology_moderate
     interest_group = ig_intelligentsia
 	dna = ecchi_dna_boleslaw_prus
     birth_date = 1847.8.20
-    traits = { romantic inspirational_orator aesthete }
+    traits = { romantic inspirational_orator }
     interest_group_leader_usage = {
         country_trigger = {
             OR = {
@@ -35,18 +36,19 @@ ecchi_pol_prus_character_template = {
     }
 }
 
-ecchi_pol_pilsudski_character_template = {
+ecchi_pol_pilsudski = {
     first_name = Jozef
     last_name = Pilsudski
     historical = yes
     culture = cu:polish
+    home_region = STATE_VILNIUS
 
     religion = rel:catholic
-    ideology = ideology_reformer
+    ideology = ideology_liberal_praetorian
     interest_group = ig_armed_forces
 	dna = ecchi_dna_jozef_pilsudski
     birth_date = 1867.12.5
-    traits = { experienced_diplomat ambitious experienced_offensive_planner }
+    traits = { experienced_diplomat experienced_offensive_planner }
     commander_rank = default
     commander_usage = {
         country_trigger = {
@@ -69,14 +71,15 @@ ecchi_pol_pilsudski_character_template = {
     }
 }
 
-ecchi_pol_mieroslawski_character_template = {
+ecchi_pol_mieroslawski = {
     first_name = Ludwik
     last_name = Mieroslawski
     historical = yes
     culture = cu:polish
+    home_region = STATE_MAZOVIA
 
     religion = rel:catholic
-    ideology = ideology_radical
+    ideology = ideology_jingoist_leader
     interest_group = ig_intelligentsia
 	dna = ecchi_dna_ludwik_mieroslawski
     birth_date = 1814.1.17
@@ -103,11 +106,12 @@ ecchi_pol_mieroslawski_character_template = {
     }
 }
 
-ecchi_pol_wysocki_character_template = {
+ecchi_pol_wysocki = {
     first_name = Piotr
     last_name = Wysocki
     historical = yes
     culture = cu:polish
+    home_region = STATE_MAZOVIA
 
     religion = rel:catholic
     ideology = ideology_traditionalist
@@ -137,14 +141,15 @@ ecchi_pol_wysocki_character_template = {
     }
 }
 
-ecchi_pol_conrad_character_template = {
+ecchi_pol_conrad = {
     first_name = Joseph
     last_name = Conrad
     historical = yes
     culture = cu:polish
+    home_region = STATE_VOLHYNIA
 
     religion = rel:catholic
-    ideology = ideology_humanitarian
+    ideology = ideology_reformer
     interest_group = ig_intelligentsia
 	dna = ecchi_dna_joseph_conrad
     birth_date = 1857.12.3
@@ -180,7 +185,7 @@ ecchi_pol_conrad_character_template = {
     }
 }
 
-# pol_rosa_luxemburg_character_template = {
+# pol_rosa_luxemburg = {
 #     first_name = Rosa
 #     last_name = Luxemburg
 #     historical = yes
@@ -238,11 +243,12 @@ ecchi_pol_conrad_character_template = {
 
 ## Walery Mroczkowski
 
-ecchi_pol_mroczkowski_character_template = {
+ecchi_pol_mroczkowski = {
     first_name = ecchi_Walery
     last_name = ecchi_Mroczkowski
     historical = yes
     culture = cu:polish
+    home_region = STATE_LESSER_POLAND
 
     religion = rel:catholic
     ideology = ideology_anarchist
@@ -285,14 +291,15 @@ ecchi_pol_mroczkowski_character_template = {
 
 ## Roman Dmowski
 
-ecchi_pol_dmoski_character_template = {
+ecchi_pol_dmoski = {
     first_name = Roman
     last_name = ecchi_Dmowski
     historical = yes
     culture = cu:polish
+    home_region = STATE_MAZOVIA
 
     religion = rel:catholic
-    ideology = ideology_ethno_nationalist
+    ideology = ideology_liberal_leader
     interest_group = ig_petty_bourgeoisie
     dna = ecchi_dna_roman_dmoski
     birth_date = 1864.8.9
@@ -315,11 +322,12 @@ ecchi_pol_dmoski_character_template = {
 
 ## Ignacy Jan Paderewski
 
-ecchi_pol_paderewski_character_template = {
+ecchi_pol_paderewski = {
     first_name = ecchi_Ignacy_Jan
     last_name = ecchi_Paderewski
     historical = yes
     culture = cu:polish
+    home_region = STATE_MAZOVIA
 
     religion = rel:catholic
     ideology = ideology_reformer
@@ -348,11 +356,12 @@ ecchi_pol_paderewski_character_template = {
 
 ## Henryk Sienkiewicz
 
-ecchi_pol_sienkiewicz_character_template = {
+ecchi_pol_sienkiewicz = {
     first_name = ecchi_Henryk
     last_name = ecchi_Sienkiewicz
     historical = yes
     culture = cu:polish
+    home_region = STATE_LESSER_POLAND
 
     religion = rel:catholic
     ideology = ideology_humanitarian
