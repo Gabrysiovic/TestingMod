@@ -1,0 +1,3 @@
+rsz_darthlogo.png = {
+    piece = top
+}
