@@ -15,7 +15,7 @@ NPowerBlocs = {
 
 #Guarantees the law to pass
 NPolitics = {
-	LAW_ENACTMENT_LAW_COMMITMENT_EFFECT = 1	# 0.05
+	LAW_ENACTMENT_LAW_COMMITMENT_EFFECT = 2	# 0.05
 }
 
 #[TEMP] Might fix unemployment, remove if fixed in vanilla -Akiko
