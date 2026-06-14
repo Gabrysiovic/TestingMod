@@ -1,0 +1,10 @@
+SPQ_republic = {
+	textured_emblem = {
+		texture = "SPQ_republic.dds"	
+	}
+}
+SPQ_socialism_republic = {
+	textured_emblem = {
+		texture = "SPQ_socialism_republic.dds"	
+	}
+}

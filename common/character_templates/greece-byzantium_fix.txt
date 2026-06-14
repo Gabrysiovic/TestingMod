@@ -7,6 +7,7 @@
 	female = no
 	religion = rel:orthodox
 	ideology = ideology_moderate
+	home_region = STATE_IONIAN_ISLANDS
 	commander_rank = default
 	interest_group = ig_armed_forces
 	birth_date = 1805.6.28	# approximate birth date
@@ -34,7 +35,6 @@
 		role = general
 		earliest_usage_date = 1836.1.1
 		latest_usage_date = 1865.1.1
-		chance = 50
 	}
 }
 
@@ -47,6 +47,7 @@ TRY_REPLACE:GRE_general_kallergis = {
 	female = no
 	religion = rel:orthodox
 	ideology = ideology_traditionalist
+	home_region = STATE_CRETE
 	commander_rank = default
 	interest_group = ig_armed_forces
 	birth_date = 1805.6.28	# approximate birth date
@@ -71,7 +72,6 @@ TRY_REPLACE:GRE_general_kallergis = {
 		role = general
 		earliest_usage_date = 1836.1.1
 		latest_usage_date = 1865.1.1
-		chance = 50
 	}
 }
 
@@ -86,6 +86,7 @@ TRY_REPLACE:agitator_ion_dragoumis = {
 	female = no
 	interest_group = ig_landowners
 	ideology = ideology_fascist
+	home_region = STATE_ATTICA
 	birth_date = 1878.9.14
 	traits = {
 		experienced_diplomat
@@ -121,7 +122,6 @@ TRY_REPLACE:agitator_ion_dragoumis = {
 		}
 		earliest_usage_date = 1907.1.1
 		latest_usage_date = 1935.12.31		# Historically, he was shot in 1920
-		chance = 50
 	}
 	on_created = {
 		owner = {
@@ -143,6 +143,7 @@ TRY_REPLACE:GRE_ioannis_makriyannis = {
 	ig_leader = yes
 	interest_group = ig_armed_forces
 	ideology = ideology_royalist
+	home_region = STATE_ATTICA
 	traits = {
 		charismatic
 		persistent
@@ -170,7 +171,6 @@ TRY_REPLACE:GRE_ioannis_makriyannis = {
 		}
 		earliest_usage_date = 1836.1.1
 		latest_usage_date = 1864.4.27
-		chance = 50
 	}
 }
 
@@ -186,6 +186,7 @@ TRY_REPLACE:GRE_anastasios_nectarios_kephalas = {
 	ig_leader = yes
 	interest_group = ig_devout
 	ideology = ideology_theocrat
+	home_region = STATE_EASTERN_THRACE
 	traits = {
 		pious
 		persistent
@@ -213,7 +214,6 @@ TRY_REPLACE:GRE_anastasios_nectarios_kephalas = {
 		}
 		earliest_usage_date = 1879.11.7
 		latest_usage_date = 1920.11.8
-		chance = 50
 	}
 }
 
@@ -229,6 +229,7 @@ TRY_REPLACE:GRE_andreas_syggros = {
 	ig_leader = yes
 	interest_group = ig_industrialists
 	ideology = ideology_market_liberal
+	home_region = STATE_EASTERN_THRACE
 	traits = {
 		ambitious
 		imperious
@@ -256,7 +257,6 @@ TRY_REPLACE:GRE_andreas_syggros = {
 		}
 		earliest_usage_date = 1871.1.1
 		latest_usage_date = 1899.2.13
-		chance = 50
 	}
 }
 
@@ -272,6 +272,7 @@ TRY_REPLACE:GRE_constantine_paparrigopoulos = {
 	ig_leader = yes
 	interest_group = ig_intelligentsia
 	ideology = ideology_reformer
+	home_region = STATE_EASTERN_THRACE
 	traits = {
 		meticulous
 		inspirational_orator
@@ -298,7 +299,6 @@ TRY_REPLACE:GRE_constantine_paparrigopoulos = {
 		}
 		earliest_usage_date = 1845.1.1
 		latest_usage_date = 1891.4.14
-		chance = 50
 	}
 }
 
@@ -314,6 +314,7 @@ TRY_REPLACE:GRE_petrobey_mavromichalis = {
 	ig_leader = yes
 	interest_group = ig_landowners
 	ideology = ideology_traditionalist
+	home_region = STATE_PELOPONNESE
 	traits = {
 		compliant
 		arrogant
@@ -341,7 +342,6 @@ TRY_REPLACE:GRE_petrobey_mavromichalis = {
 		}
 		earliest_usage_date = 1836.1.1
 		latest_usage_date = 1848.1.17
-		chance = 50
 	}
 }
 
@@ -357,6 +357,7 @@ TRY_REPLACE:GRE_anastasios_polyzoidis = {
 	ig_leader = yes
 	interest_group = ig_petty_bourgeoisie
 	ideology = ideology_social_democrat
+	home_region = STATE_BULGARIA
 	traits = {
 		charismatic
 		direct
@@ -384,7 +385,6 @@ TRY_REPLACE:GRE_anastasios_polyzoidis = {
 		}
 		earliest_usage_date = 1836.1.1
 		latest_usage_date = 1873.5.17
-		chance = 50
 	}
 }
 
@@ -400,6 +400,7 @@ TRY_REPLACE:GRE_anastasios_londos = {
 	ig_leader = yes
 	interest_group = ig_rural_folk
 	ideology = ideology_land_reformer
+	home_region = STATE_PELOPONNESE
 	traits = {
 		persistent
 		demagogue
@@ -426,7 +427,6 @@ TRY_REPLACE:GRE_anastasios_londos = {
 		}
 		earliest_usage_date = 1836.1.1
 		latest_usage_date = 1856.1.1
-		chance = 50
 	}
 }
 
@@ -442,6 +442,7 @@ TRY_REPLACE:GRE_stavros_kallergis = {
 	ig_leader = yes
 	interest_group = ig_trade_unions
 	ideology = ideology_utopian
+	home_region = STATE_CRETE
 	traits = {
 		ambitious
 		charismatic
@@ -469,7 +470,6 @@ TRY_REPLACE:GRE_stavros_kallergis = {
 		}
 		earliest_usage_date = 1890.1.1
 		latest_usage_date = 1926.4.27
-		chance = 50
 	}
 }
 
@@ -484,6 +484,7 @@ TRY_REPLACE:GRE_alexandros_koumoundouros = {
 	religion = rel:orthodox
 	interest_group = ig_petty_bourgeoisie
 	ideology = ideology_reformer
+	home_region = STATE_PELOPONNESE
 	birth_date = 1815.2.4
 	traits = {
 		persistent
@@ -512,7 +513,6 @@ TRY_REPLACE:GRE_alexandros_koumoundouros = {
 		}
 		earliest_usage_date = 1853.1.1
 		latest_usage_date = 1883.2.26
-		chance = 50
 	}
 }
 
@@ -525,6 +525,7 @@ TRY_REPLACE:GRE_general_panagiotis_danglis = {
 	culture = cu:greek
 	religion = rel:orthodox
 	ideology = ideology_jingoist_leader
+	home_region = STATE_ATTICA
 	interest_group = ig_armed_forces
 	birth_date = 1853.11.17
 	commander_rank = commander_rank_2
@@ -554,7 +555,6 @@ TRY_REPLACE:GRE_general_panagiotis_danglis = {
 		role = general
 		earliest_usage_date = 1878.1.1
 		latest_usage_date = 1920.10.7
-		chance = 75
 	}
 }
 
@@ -566,6 +566,7 @@ TRY_REPLACE:GRE_general_anastasios_papoulas = {
 	culture = cu:greek
 	religion = rel:orthodox
 	ideology = ideology_royalist
+	home_region = STATE_ATTICA
 	interest_group = ig_armed_forces
 	birth_date = 1857.1.13
 	commander_rank = commander_rank_2
@@ -595,7 +596,6 @@ TRY_REPLACE:GRE_general_anastasios_papoulas = {
 		role = general
 		earliest_usage_date = 1878.1.1
 		latest_usage_date = 1922.5.19
-		chance = 75
 	}
 }
 
@@ -608,6 +608,7 @@ TRY_REPLACE:GRE_admiral_konstantinos_kanaris = {
 	culture = cu:greek
 	religion = rel:orthodox
 	ideology = ideology_jingoist_leader
+	home_region = STATE_ATTICA
 	interest_group = ig_armed_forces
 	birth_date = 1790.1.1
 	commander_rank = commander_rank_2
@@ -637,7 +638,6 @@ TRY_REPLACE:GRE_admiral_konstantinos_kanaris = {
 		role = admiral
 		earliest_usage_date = 1836.1.1
 		latest_usage_date = 1877.9.2
-		chance = 75
 	}
 }
 
@@ -649,6 +649,7 @@ TRY_REPLACE:GRE_admiral_leonidas_palaskas = {
 	culture = cu:greek
 	religion = rel:orthodox
 	ideology = ideology_jingoist_leader
+	home_region = STATE_ATTICA
 	interest_group = ig_armed_forces
 	birth_date = 1819.1.1
 	commander_rank = commander_rank_3
@@ -678,6 +679,5 @@ TRY_REPLACE:GRE_admiral_leonidas_palaskas = {
 		role = admiral
 		earliest_usage_date = 1836.1.1
 		latest_usage_date = 1880.1.14
-		chance = 75
 	}
 }
