@@ -1326,7 +1326,7 @@ ecchi_gbr_cobden = {
     home_region = STATE_HOME_COUNTIES
 
     religion = rel:protestant
-    ideology = ideology_radical
+    ideology = ideology_pacifist
     interest_group = ig_industrialists
     dna = ecchi_dna_richard_cobden
     birth_date = 1804.6.3

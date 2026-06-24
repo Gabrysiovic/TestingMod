@@ -14,27 +14,18 @@ INJECT:pm_financial_district_publicly_traded = {
 	}
 }
 
-REPLACE:pm_financial_district_principle_divine_economics_2 = {
-	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
-	is_hidden_when_unavailable = yes
-	unlocking_principles = {
-		principle_divine_economics_2
-		principle_divine_economics_3
-	}
+INJECT:pm_financial_district_principle_divine_economics_2 = {
 	country_modifiers = {
 		workforce_scaled = {
 			country_prestige_add = 0.1
 		}
 	}
-	building_modifiers = {
-		level_scaled = {
-			building_employment_capitalists_add = 50
-			building_employment_clergymen_add = 25
-			building_employment_clerks_add = 25
-		}
-		unscaled = {
-			building_capitalists_shares_add = 10
-			building_clergymen_shares_add = 2
+}
+
+INJECT:pm_financial_district_publicly_traded = {
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 0.1
 		}
 	}
 }
@@ -47,30 +38,90 @@ INJECT:pm_company_headquarter_privately_owned = {
 	}
 }
 
-REPLACE:pm_company_headquarter_principle_divine_economics_2 = {
-	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
-	is_hidden_when_unavailable = yes
-	disallowing_laws = {
-		law_command_economy
-		law_cooperative_ownership
-	}
-	unlocking_principles = {
-		principle_divine_economics_2
-		principle_divine_economics_3
-	}
+INJECT:pm_company_headquarter_privately_owned_aristocrats = {
 	country_modifiers = {
 		workforce_scaled = {
 			country_prestige_add = 0.1
 		}
 	}
-	building_modifiers = {
-		level_scaled = {
-			building_employment_capitalists_add = 25
-			building_employment_clergymen_add = 25
+}
+
+INJECT:pm_company_headquarter_privately_owned_aristocrats_commercial_agriculture = {
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 0.1
 		}
-		unscaled = {
-			building_capitalists_shares_add = 10
-			building_clergymen_shares_add = 2
+	}
+}
+
+INJECT:pm_company_headquarter_privately_owned_shopkeepers = {
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 0.1
+		}
+	}
+}
+
+INJECT:pm_company_headquarter_privately_owned_bureaucrats = {
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 0.1
+		}
+	}
+}
+
+INJECT:pm_company_headquarter_privately_owned_academics = {
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 0.1
+		}
+	}
+}
+
+INJECT:pm_company_headquarter_principle_divine_economics_2 = {
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 0.1
+		}
+	}
+}
+
+INJECT:pm_company_headquarter_principle_divine_economics_2_aristocrats = {
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 0.1
+		}
+	}
+}
+
+INJECT:pm_company_headquarter_principle_divine_economics_2_aristocrats_commercial_agriculture = {
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 0.1
+		}
+	}
+}
+
+INJECT:pm_company_headquarter_principle_divine_economics_2_shopkeepers = {
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 0.1
+		}
+	}
+}
+
+INJECT:pm_company_headquarter_principle_divine_economics_2_bureaucrats = {
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 0.1
+		}
+	}
+}
+
+INJECT:pm_company_headquarter_principle_divine_economics_2_academics = {
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 0.1
 		}
 	}
 }
