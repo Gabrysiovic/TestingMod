@@ -131,7 +131,7 @@ dsk_france.4 = {
 	default_option = yes
 	add_modifier = {
 	name = modifier_ger_winner
-	months = 360
+	months = 180
 			}
         hidden_effect = { 
                 every_country = {
