@@ -1,0 +1,37 @@
+﻿l_simp_chinese:
+ je_martial_law_progress_bar: "控制"
+ je_martial_law_progress_bar_desc: "控制：#v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#!"
+
+ # Martial Law Control - Modifiers
+ WADDLE_MARTIAL_LAW_BASE: "已宣布#Bold 戒严#!"
+ WADDLE_MARTIAL_LAW_MILITARY_PRESENCE: "军事[concept_military_formation]存在"
+ WADDLE_MARTIAL_LAW_BUREAUCRACY: "[Concept('concept_institution', '$concept_institutions$')]"
+ WADDLE_MARTIAL_LAW_LOYALISTS: "[concept_loyalist]人口"
+ WADDLE_MARTIAL_LAW_GOVERNMENT_CLOUT: "[concept_government][concept_clout]"
+ WADDLE_MARTIAL_LAW_REPRESSIVE_LAWS: "压制性[Concept('concept_law','$concept_laws$')]"
+ WADDLE_MARTIAL_LAW_TURMOIL: "民间[concept_turmoil]"
+ WADDLE_MARTIAL_LAW_RADICALS: "[concept_radical][Concept('concept_pop', '$concept_population$')]"
+ WADDLE_MARTIAL_LAW_LENGTH: "#Bold 戒严#!持续时间"
+ WADDLE_MARTIAL_LAW_LITERACY: "[Concept('concept_literacy','$concept_literate$')][Concept('concept_pop', '$concept_population$')]"
+ WADDLE_MARTIAL_LAW_BUDGET: "[concept_treasury]结余"
+ WADDLE_MARTIAL_LAW_EXTRA: "其他因素"
+ WADDLE_MARTIAL_LAW_OCCUPATION: "[concept_occupation]"
+
+ # Journal Entry
+ je_waddle_martial_law: "#Bold 戒严#!"
+ je_waddle_martial_law_reason: "国家正面对强敌，政府已暂停通常的文官行政，转而实行直接军事权力。执行$je_waddle_martial_law$需要持续关注。若放任不管，这套机器会裂解，激化其所压制的民众，并削弱它本应保护的战争努力。"
+
+ # Button
+ waddle_end_martial_law_button: "解除$je_waddle_martial_law$"
+ waddle_end_martial_law_button_desc: "恢复文官行政并解散$je_waddle_martial_law$机构。秩序曾以何种方式维持，将塑造公众对此时期的记忆。"
+ waddle_martial_law_cooldown: "自$je_waddle_martial_law$宣布以来已超过#Bold 一个月#!"
+
+ # Tooltips
+ waddle_martial_law_end_tt_desc: "$je_waddle_martial_law$将被解除。根据其持续期间维持的控制水平，回归文官统治可能顺利，也可能在民众中留下长期怨恨。"
+ waddle_martial_law_ended_tt: "$je_waddle_martial_law$已被解除。"
+
+ # Actual modifiers
+ base_martial_law_modifier: "$je_waddle_martial_law$的影响"
+ base_martial_law_modifier_scaled_half: "镇压反对派的影响"
+ base_martial_law_modifier_scaled_full: "$je_martial_law_progress_bar$的影响"
+ base_martial_law_modifier_scaled_time: "时间的影响"

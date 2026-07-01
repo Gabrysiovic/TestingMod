@@ -1,0 +1,37 @@
+﻿l_turkish:
+ je_martial_law_progress_bar: "Kontrol"
+ je_martial_law_progress_bar_desc: "Kontrol: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#!"
+
+ # Martial Law Control - Modifiers
+ WADDLE_MARTIAL_LAW_BASE: "#Bold Sıkıyönetim#! İlan Edildi"
+ WADDLE_MARTIAL_LAW_MILITARY_PRESENCE: "Askeri [concept_military_formation] Varlığı"
+ WADDLE_MARTIAL_LAW_BUREAUCRACY: "[Concept('concept_institution', '$concept_institutions$')]"
+ WADDLE_MARTIAL_LAW_LOYALISTS: "[concept_loyalist] Nüfus"
+ WADDLE_MARTIAL_LAW_GOVERNMENT_CLOUT: "[concept_government] [concept_clout]"
+ WADDLE_MARTIAL_LAW_REPRESSIVE_LAWS: "Baskıcı [Concept('concept_law','$concept_laws$')]"
+ WADDLE_MARTIAL_LAW_TURMOIL: "Sivil [concept_turmoil]"
+ WADDLE_MARTIAL_LAW_RADICALS: "[concept_radical] [Concept('concept_pop', '$concept_population$')]"
+ WADDLE_MARTIAL_LAW_LENGTH: "#Bold Sıkıyönetim#! Süresi"
+ WADDLE_MARTIAL_LAW_LITERACY: "[Concept('concept_literacy','$concept_literate$')] [Concept('concept_pop', '$concept_population$')]"
+ WADDLE_MARTIAL_LAW_BUDGET: "[concept_treasury] Dengesi"
+ WADDLE_MARTIAL_LAW_EXTRA: "Diğer etkenler"
+ WADDLE_MARTIAL_LAW_OCCUPATION: "[concept_occupation]"
+
+ # Journal Entry
+ je_waddle_martial_law: "#Bold Sıkıyönetim#!"
+ je_waddle_martial_law_reason: "Ulus çetin bir düşmanla karşı karşıyayken hükümet olağan sivil idareyi askıya alıp doğrudan askeri otoriteye başvurdu. $je_waddle_martial_law$ uygulaması sürekli dikkat gerektirir. Denetimsiz bırakılırsa bu düzenek çatlar, bastırdığı halkı radikalleştirir ve korumak için kurulduğu savaş çabasını zayıflatır."
+
+ # Button
+ waddle_end_martial_law_button: "$je_waddle_martial_law$ Kaldır"
+ waddle_end_martial_law_button_desc: "Sivil idareyi geri getirir ve $je_waddle_martial_law$ aygıtını dağıtır. Düzenin nasıl korunduğu, halkın bu dönemi nasıl hatırlayacağını şekillendirecektir."
+ waddle_martial_law_cooldown: "$je_waddle_martial_law$ ilanından bu yana #Bold Bir Aydan#! fazla zaman geçti"
+
+ # Tooltips
+ waddle_martial_law_end_tt_desc: "$je_waddle_martial_law$ kaldırılacak. Süresi boyunca korunmuş Kontrol düzeyine bağlı olarak sivil yönetime dönüş sorunsuz olabilir veya halk arasında kalıcı kırgınlık bırakabilir."
+ waddle_martial_law_ended_tt: "$je_waddle_martial_law$ kaldırıldı."
+
+ # Actual modifiers
+ base_martial_law_modifier: "$je_waddle_martial_law$ Etkileri"
+ base_martial_law_modifier_scaled_half: "Muhalefet Baskısının Etkileri"
+ base_martial_law_modifier_scaled_full: "$je_martial_law_progress_bar$ Etkileri"
+ base_martial_law_modifier_scaled_time: "Zamanın Etkileri"

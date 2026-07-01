@@ -1,0 +1,37 @@
+﻿l_korean:
+ je_martial_law_progress_bar: "통제"
+ je_martial_law_progress_bar_desc: "통제: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#!"
+
+ # Martial Law Control - Modifiers
+ WADDLE_MARTIAL_LAW_BASE: "#Bold 계엄령#! 선포"
+ WADDLE_MARTIAL_LAW_MILITARY_PRESENCE: "군사 [concept_military_formation] 주둔"
+ WADDLE_MARTIAL_LAW_BUREAUCRACY: "[Concept('concept_institution', '$concept_institutions$')]"
+ WADDLE_MARTIAL_LAW_LOYALISTS: "[concept_loyalist] 인구"
+ WADDLE_MARTIAL_LAW_GOVERNMENT_CLOUT: "[concept_government] [concept_clout]"
+ WADDLE_MARTIAL_LAW_REPRESSIVE_LAWS: "억압적 [Concept('concept_law','$concept_laws$')]"
+ WADDLE_MARTIAL_LAW_TURMOIL: "민간 [concept_turmoil]"
+ WADDLE_MARTIAL_LAW_RADICALS: "[concept_radical] [Concept('concept_pop', '$concept_population$')]"
+ WADDLE_MARTIAL_LAW_LENGTH: "#Bold 계엄령#! 기간"
+ WADDLE_MARTIAL_LAW_LITERACY: "[Concept('concept_literacy','$concept_literate$')] [Concept('concept_pop', '$concept_population$')]"
+ WADDLE_MARTIAL_LAW_BUDGET: "[concept_treasury] 수지"
+ WADDLE_MARTIAL_LAW_EXTRA: "기타 요인"
+ WADDLE_MARTIAL_LAW_OCCUPATION: "[concept_occupation]"
+
+ # Journal Entry
+ je_waddle_martial_law: "#Bold 계엄령#!"
+ je_waddle_martial_law_reason: "국가가 강대한 적과 맞선 가운데 정부는 일반 민간 행정을 중단하고 직접적인 군사 권한을 택했다. $je_waddle_martial_law$의 집행에는 끊임없는 주의가 필요하다. 방치하면 이 장치는 균열을 일으키고, 억누르는 인구를 급진화시키며, 보호하려던 전쟁 수행 자체를 약화시킨다."
+
+ # Button
+ waddle_end_martial_law_button: "$je_waddle_martial_law$ 해제"
+ waddle_end_martial_law_button_desc: "민간 행정을 복구하고 $je_waddle_martial_law$ 장치를 해체합니다. 질서가 어떤 방식으로 유지되었는지는 이 시기에 대한 대중의 기억을 형성할 것입니다."
+ waddle_martial_law_cooldown: "$je_waddle_martial_law$ 선포 이후 #Bold 한 달#! 이상 지났습니다"
+
+ # Tooltips
+ waddle_martial_law_end_tt_desc: "$je_waddle_martial_law$이 해제됩니다. 기간 동안 유지된 통제 수준에 따라 민간 통치로의 전환은 순조로울 수도, 인구에 오래 남는 원한을 남길 수도 있습니다."
+ waddle_martial_law_ended_tt: "$je_waddle_martial_law$이 해제되었습니다."
+
+ # Actual modifiers
+ base_martial_law_modifier: "$je_waddle_martial_law$의 효과"
+ base_martial_law_modifier_scaled_half: "반대파 탄압의 효과"
+ base_martial_law_modifier_scaled_full: "$je_martial_law_progress_bar$의 효과"
+ base_martial_law_modifier_scaled_time: "시간의 효과"

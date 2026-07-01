@@ -1,0 +1,37 @@
+﻿l_polish:
+ je_martial_law_progress_bar: "Kontrola"
+ je_martial_law_progress_bar_desc: "Kontrola: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#!"
+
+ # Martial Law Control - Modifiers
+ WADDLE_MARTIAL_LAW_BASE: "Ogłoszono #Bold stan wojenny#!"
+ WADDLE_MARTIAL_LAW_MILITARY_PRESENCE: "Obecność wojskowych [concept_military_formation]"
+ WADDLE_MARTIAL_LAW_BUREAUCRACY: "[Concept('concept_institution', '$concept_institutions$')]"
+ WADDLE_MARTIAL_LAW_LOYALISTS: "Populacja [concept_loyalist]"
+ WADDLE_MARTIAL_LAW_GOVERNMENT_CLOUT: "[concept_clout] [concept_government]"
+ WADDLE_MARTIAL_LAW_REPRESSIVE_LAWS: "Represyjne [Concept('concept_law','$concept_laws$')]"
+ WADDLE_MARTIAL_LAW_TURMOIL: "Cywilne [concept_turmoil]"
+ WADDLE_MARTIAL_LAW_RADICALS: "[concept_radical] [Concept('concept_pop', '$concept_population$')]"
+ WADDLE_MARTIAL_LAW_LENGTH: "Czas trwania #Bold stanu wojennego#!"
+ WADDLE_MARTIAL_LAW_LITERACY: "[Concept('concept_literacy','$concept_literate$')] [Concept('concept_pop', '$concept_population$')]"
+ WADDLE_MARTIAL_LAW_BUDGET: "Bilans [concept_treasury]"
+ WADDLE_MARTIAL_LAW_EXTRA: "Inne czynniki"
+ WADDLE_MARTIAL_LAW_OCCUPATION: "[concept_occupation]"
+
+ # Journal Entry
+ je_waddle_martial_law: "#Bold Stan wojenny#!"
+ je_waddle_martial_law_reason: "W obliczu groźnego wroga rząd zawiesił zwykłą administrację cywilną na rzecz bezpośredniej władzy wojskowej. Egzekwowanie $je_waddle_martial_law$ wymaga stałej uwagi. Pozostawiony bez nadzoru aparat pęka, radykalizuje ludność, którą tłumi, i podkopuje wysiłek wojenny, który miał chronić."
+
+ # Button
+ waddle_end_martial_law_button: "Znieś $je_waddle_martial_law$"
+ waddle_end_martial_law_button_desc: "Przywraca administrację cywilną i rozwiązuje aparat $je_waddle_martial_law$. Sposób utrzymania porządku ukształtuje pamięć publiczną o tym okresie."
+ waddle_martial_law_cooldown: "Od ogłoszenia $je_waddle_martial_law$ minął ponad #Bold jeden miesiąc#!"
+
+ # Tooltips
+ waddle_martial_law_end_tt_desc: "$je_waddle_martial_law$ zostanie zniesiony. Zależnie od poziomu Kontroli utrzymanego w czasie jego trwania, powrót do rządów cywilnych może być płynny albo pozostawić wśród ludności trwałą urazę."
+ waddle_martial_law_ended_tt: "$je_waddle_martial_law$ został zniesiony."
+
+ # Actual modifiers
+ base_martial_law_modifier: "Skutki $je_waddle_martial_law$"
+ base_martial_law_modifier_scaled_half: "Skutki tłumienia opozycji"
+ base_martial_law_modifier_scaled_full: "Skutki $je_martial_law_progress_bar$"
+ base_martial_law_modifier_scaled_time: "Skutki czasu"

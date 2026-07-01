@@ -1,0 +1,37 @@
+﻿l_russian:
+ je_martial_law_progress_bar: "Контроль"
+ je_martial_law_progress_bar_desc: "Контроль: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#!"
+
+ # Martial Law Control - Modifiers
+ WADDLE_MARTIAL_LAW_BASE: "#Bold Военное положение#! объявлено"
+ WADDLE_MARTIAL_LAW_MILITARY_PRESENCE: "Присутствие военных [concept_military_formation]"
+ WADDLE_MARTIAL_LAW_BUREAUCRACY: "[Concept('concept_institution', '$concept_institutions$')]"
+ WADDLE_MARTIAL_LAW_LOYALISTS: "[concept_loyalist] население"
+ WADDLE_MARTIAL_LAW_GOVERNMENT_CLOUT: "[concept_clout] [concept_government]"
+ WADDLE_MARTIAL_LAW_REPRESSIVE_LAWS: "Репрессивные [Concept('concept_law','$concept_laws$')]"
+ WADDLE_MARTIAL_LAW_TURMOIL: "Гражданские [concept_turmoil]"
+ WADDLE_MARTIAL_LAW_RADICALS: "[concept_radical] [Concept('concept_pop', '$concept_population$')]"
+ WADDLE_MARTIAL_LAW_LENGTH: "Длительность #Bold военного положения#!"
+ WADDLE_MARTIAL_LAW_LITERACY: "[Concept('concept_literacy','$concept_literate$')] [Concept('concept_pop', '$concept_population$')]"
+ WADDLE_MARTIAL_LAW_BUDGET: "Баланс [concept_treasury]"
+ WADDLE_MARTIAL_LAW_EXTRA: "Прочие факторы"
+ WADDLE_MARTIAL_LAW_OCCUPATION: "[concept_occupation]"
+
+ # Journal Entry
+ je_waddle_martial_law: "#Bold Военное положение#!"
+ je_waddle_martial_law_reason: "Перед лицом грозного врага правительство приостановило обычное гражданское управление в пользу прямой военной власти. Поддержание $je_waddle_martial_law$ требует постоянного внимания. Если оставить аппарат без контроля, он расколется, радикализует подавляемое население и подорвет те самые военные усилия, которые должен был защищать."
+
+ # Button
+ waddle_end_martial_law_button: "Отменить $je_waddle_martial_law$"
+ waddle_end_martial_law_button_desc: "Восстановить гражданское управление и распустить аппарат $je_waddle_martial_law$. То, как поддерживался порядок, определит общественную память об этом периоде."
+ waddle_martial_law_cooldown: "Прошло более #Bold одного месяца#! с момента объявления $je_waddle_martial_law$"
+
+ # Tooltips
+ waddle_martial_law_end_tt_desc: "$je_waddle_martial_law$ будет отменено. В зависимости от уровня Контроля, поддержанного за время его действия, переход обратно к гражданскому правлению может быть плавным или оставить у населения долгую обиду."
+ waddle_martial_law_ended_tt: "$je_waddle_martial_law$ отменено."
+
+ # Actual modifiers
+ base_martial_law_modifier: "Эффекты $je_waddle_martial_law$"
+ base_martial_law_modifier_scaled_half: "Эффекты подавления оппозиции"
+ base_martial_law_modifier_scaled_full: "Эффекты $je_martial_law_progress_bar$"
+ base_martial_law_modifier_scaled_time: "Эффекты времени"

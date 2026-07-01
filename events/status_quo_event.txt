@@ -1,0 +1,31 @@
+﻿namespace = waddle_status_quo
+
+waddle_status_quo.1 = {
+    type = country_event
+    hidden = yes
+
+    immediate = {
+        if = {
+            limit = {
+                exists = scope:waddle_status_quo_play
+                exists = scope:waddle_status_quo_war
+                exists = scope:waddle_status_quo_initiator
+
+                scope:waddle_status_quo_war = {
+                    NOT = {
+                        is_holder_of_wargoal_in_war = root
+                    }
+                }
+            }
+
+            scope:waddle_status_quo_play = {
+                add_war_goal = {
+                    holder = root
+                    type = humiliation
+                    target_country = scope:waddle_status_quo_initiator
+                    primary_demand = yes
+                }
+            }
+        }
+    }
+}

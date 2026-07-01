@@ -1,0 +1,27 @@
+on_diplo_play_war_start = {
+    on_actions = {
+        waddle_schedule_status_quo_check
+    }
+}
+
+waddle_schedule_status_quo_check = {
+    effect = {
+        save_scope_as = waddle_status_quo_play
+
+        root.war = {
+            save_scope_as = waddle_status_quo_war
+        }
+
+        root.initiator = {
+            save_scope_as = waddle_status_quo_initiator
+        }
+
+        root.target = {
+            trigger_event = {
+                id = waddle_status_quo.1
+                days = 5
+                # popup = no
+            }
+        }
+    }
+}

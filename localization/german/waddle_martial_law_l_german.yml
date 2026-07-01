@@ -1,0 +1,37 @@
+﻿l_german:
+ je_martial_law_progress_bar: "Kontrolle"
+ je_martial_law_progress_bar_desc: "Kontrolle: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#!"
+
+ # Martial Law Control - Modifiers
+ WADDLE_MARTIAL_LAW_BASE: "#Bold Kriegsrecht#! verhängt"
+ WADDLE_MARTIAL_LAW_MILITARY_PRESENCE: "Präsenz militärischer [concept_military_formation]"
+ WADDLE_MARTIAL_LAW_BUREAUCRACY: "[Concept('concept_institution', '$concept_institutions$')]"
+ WADDLE_MARTIAL_LAW_LOYALISTS: "[concept_loyalist]-Bevölkerung"
+ WADDLE_MARTIAL_LAW_GOVERNMENT_CLOUT: "[concept_clout] der [concept_government]"
+ WADDLE_MARTIAL_LAW_REPRESSIVE_LAWS: "Repressive [Concept('concept_law','$concept_laws$')]"
+ WADDLE_MARTIAL_LAW_TURMOIL: "Zivile [concept_turmoil]"
+ WADDLE_MARTIAL_LAW_RADICALS: "[concept_radical]e [Concept('concept_pop', '$concept_population$')]"
+ WADDLE_MARTIAL_LAW_LENGTH: "Dauer des #Bold Kriegsrechts#!"
+ WADDLE_MARTIAL_LAW_LITERACY: "[Concept('concept_literacy','$concept_literate$')] [Concept('concept_pop', '$concept_population$')]"
+ WADDLE_MARTIAL_LAW_BUDGET: "[concept_treasury]-Saldo"
+ WADDLE_MARTIAL_LAW_EXTRA: "Andere Faktoren"
+ WADDLE_MARTIAL_LAW_OCCUPATION: "[concept_occupation]"
+
+ # Journal Entry
+ je_waddle_martial_law: "#Bold Kriegsrecht#!"
+ je_waddle_martial_law_reason: "Da die Nation einem gewaltigen Feind gegenübersteht, hat die Regierung die gewöhnliche Zivilverwaltung zugunsten direkter militärischer Autorität ausgesetzt. Die Durchsetzung von $je_waddle_martial_law$ verlangt ständige Aufmerksamkeit. Bleibt der Apparat unbeaufsichtigt, zerbricht er, radikalisiert die Bevölkerung, die er unterdrückt, und untergräbt genau jene Kriegsanstrengung, die er schützen sollte."
+
+ # Button
+ waddle_end_martial_law_button: "$je_waddle_martial_law$ aufheben"
+ waddle_end_martial_law_button_desc: "Stellt die Zivilverwaltung wieder her und löst den Apparat von $je_waddle_martial_law$ auf. Die Art, wie Ordnung gewahrt wurde, wird die öffentliche Erinnerung an diese Zeit prägen."
+ waddle_martial_law_cooldown: "Seit der Verhängung von $je_waddle_martial_law$ ist mehr als #Bold ein Monat#! vergangen"
+
+ # Tooltips
+ waddle_martial_law_end_tt_desc: "$je_waddle_martial_law$ wird aufgehoben. Je nach dem während seiner Dauer aufrechterhaltenen Kontrollniveau kann der Übergang zurück zur Zivilherrschaft reibungslos verlaufen oder dauerhafte Verbitterung in der Bevölkerung hinterlassen."
+ waddle_martial_law_ended_tt: "$je_waddle_martial_law$ wurde aufgehoben."
+
+ # Actual modifiers
+ base_martial_law_modifier: "Auswirkungen von $je_waddle_martial_law$"
+ base_martial_law_modifier_scaled_half: "Auswirkungen des Vorgehens gegen die Opposition"
+ base_martial_law_modifier_scaled_full: "Auswirkungen von $je_martial_law_progress_bar$"
+ base_martial_law_modifier_scaled_time: "Auswirkungen der Zeit"

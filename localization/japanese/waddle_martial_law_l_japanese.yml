@@ -1,0 +1,37 @@
+﻿l_japanese:
+ je_martial_law_progress_bar: "統制"
+ je_martial_law_progress_bar_desc: "統制: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#!"
+
+ # Martial Law Control - Modifiers
+ WADDLE_MARTIAL_LAW_BASE: "#Bold 戒厳令#!を布告"
+ WADDLE_MARTIAL_LAW_MILITARY_PRESENCE: "軍事[concept_military_formation]の駐留"
+ WADDLE_MARTIAL_LAW_BUREAUCRACY: "[Concept('concept_institution', '$concept_institutions$')]"
+ WADDLE_MARTIAL_LAW_LOYALISTS: "[concept_loyalist]人口"
+ WADDLE_MARTIAL_LAW_GOVERNMENT_CLOUT: "[concept_government]の[concept_clout]"
+ WADDLE_MARTIAL_LAW_REPRESSIVE_LAWS: "抑圧的な[Concept('concept_law','$concept_laws$')]"
+ WADDLE_MARTIAL_LAW_TURMOIL: "市民の[concept_turmoil]"
+ WADDLE_MARTIAL_LAW_RADICALS: "[concept_radical]な[Concept('concept_pop', '$concept_population$')]"
+ WADDLE_MARTIAL_LAW_LENGTH: "#Bold 戒厳令#!の継続期間"
+ WADDLE_MARTIAL_LAW_LITERACY: "[Concept('concept_literacy','$concept_literate$')]な[Concept('concept_pop', '$concept_population$')]"
+ WADDLE_MARTIAL_LAW_BUDGET: "[concept_treasury]収支"
+ WADDLE_MARTIAL_LAW_EXTRA: "その他の要因"
+ WADDLE_MARTIAL_LAW_OCCUPATION: "[concept_occupation]"
+
+ # Journal Entry
+ je_waddle_martial_law: "#Bold 戒厳令#!"
+ je_waddle_martial_law_reason: "国家が強大な敵と対峙する中、政府は通常の文民行政を停止し、軍の直接統治に委ねた。$je_waddle_martial_law$の維持には絶え間ない注意が必要である。放置すれば、この機構は亀裂を生み、抑え込むはずの住民を急進化させ、守るべき戦争遂行そのものを損なうだろう。"
+
+ # Button
+ waddle_end_martial_law_button: "$je_waddle_martial_law$を解除"
+ waddle_end_martial_law_button_desc: "文民行政を回復し、$je_waddle_martial_law$の機構を解体する。秩序がどのように保たれたかは、この時期に対する人々の記憶を形作る。"
+ waddle_martial_law_cooldown: "$je_waddle_martial_law$の布告から#Bold 1か月#!以上が経過している"
+
+ # Tooltips
+ waddle_martial_law_end_tt_desc: "$je_waddle_martial_law$は解除される。期間中に維持された統制の水準によって、文民統治への移行は円滑にもなり、住民に長く残る怨恨を残すことにもなる。"
+ waddle_martial_law_ended_tt: "$je_waddle_martial_law$は解除された。"
+
+ # Actual modifiers
+ base_martial_law_modifier: "$je_waddle_martial_law$の影響"
+ base_martial_law_modifier_scaled_half: "反対派弾圧の影響"
+ base_martial_law_modifier_scaled_full: "$je_martial_law_progress_bar$の影響"
+ base_martial_law_modifier_scaled_time: "時間経過の影響"
