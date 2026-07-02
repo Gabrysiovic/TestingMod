@@ -10,7 +10,7 @@
 	ai_value = 100000 # Canals are very important
 
 	unlocking_technologies = {
-		civilizing_mission
+		ironclad_tech
 	}
 
 	potential = {
