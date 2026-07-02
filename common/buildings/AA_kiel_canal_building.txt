@@ -1,13 +1,13 @@
-﻿building_kiel_canal = {
+﻿REPLACE:building_kiel_canal = {
 	building_group = bg_canals
-	icon = "gfx/interface/icons/building_icons/AA_kiel_canal.dds"
+	icon = "gfx/interface/icons/building_icons/kiel_canal.dds"
 	strait = canal_kiel
 	expandable = no
 	downsizeable = no
 	unique = yes
 	required_construction = construction_cost_canal
 
-	ai_value = 50000 # Canals are very important
+	ai_value = 100000 # Canals are very important
 
 	unlocking_technologies = {
 		civilizing_mission
@@ -25,8 +25,8 @@
 	}
 
 	entity_not_constructed = { }
-	entity_under_construction = { "canal_panamacanal_under_construction_01_entity" }
-	entity_constructed = { "canal_panamacanal_01_entity" }
+	entity_under_construction = { }
+	entity_constructed = { "canal_kiel_entity" }
 	locator = "canal_kiel_locator"
 
 	city_gfx_interactions = {
