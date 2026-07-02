@@ -50,7 +50,7 @@
 
 	weight = 10
 		
-	should_be_pinned_by_default_uninvolved_or_context = no
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
 je_kiel_canal = {
