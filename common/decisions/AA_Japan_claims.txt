@@ -15,7 +15,7 @@ AA_mukden_decision = {
 			}
 			custom_tooltip = {
 				text = is_meiji_japan
-				has_variable = meiji_restoration_complete
+				has_variable = japan_restoration_complete
 			}
 		}
 	}
