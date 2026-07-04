@@ -134,9 +134,8 @@ is_aus_franz_ferdinand_01 = {
 	ideology = ideology_reformer
 	traits = {
 		explorer
-		romantic
 		direct
-		persistent
+		experienced_diplomat
 	}
 	birth_date = 1863.12.18
 	on_created = {

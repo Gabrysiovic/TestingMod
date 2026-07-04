@@ -1317,3 +1317,24 @@ REPLACE:AUS_admiral_anton_haus = {
 		chance = 75
 	}
 }
+
+### RULERS
+
+REPLACE:aus_franz_ferdinand = {
+    # Archduke Franz Ferdinand of Austria
+    first_name = Franz_Ferdinand
+    last_name = von_Osterreich-Este
+    historical = yes
+    culture = cu:south_german
+    heir = yes
+    noble = yes
+    dna = dna_archduke_franz_ferdinand_of_austria
+    birth_date = 1863.12.18
+    interest_group = ig_armed_forces
+    ideology = ideology_moderate
+	home_region = STATE_STYRIA
+    traits = {
+        experienced_diplomat
+        experienced_offensive_planner
+    }
+}
