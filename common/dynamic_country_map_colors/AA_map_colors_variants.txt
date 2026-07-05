@@ -51,3 +51,14 @@ gbr_angevin = {
 		has_variable = AA_angevin_var
 	}
 }
+
+
+REPLACE:soviet_red = {
+	color = "red_dark2"
+
+	possible = {
+		exists = c:RUS
+		c:RUS ?= THIS
+		has_law_or_variant = law_type:law_council_republic
+	}
+}

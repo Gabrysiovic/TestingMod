@@ -1331,10 +1331,11 @@ REPLACE:aus_franz_ferdinand = {
     dna = dna_archduke_franz_ferdinand_of_austria
     birth_date = 1863.12.18
     interest_group = ig_armed_forces
-    ideology = ideology_moderate
+    ideology = ideology_reformer
 	home_region = STATE_STYRIA
     traits = {
-        experienced_diplomat
-        experienced_offensive_planner
+        explorer
+		direct
+		experienced_diplomat
     }
 }
