@@ -1,7 +1,6 @@
 ﻿REPLACE:da_knowledge_sharing = {
 	### By Oaken: Last updated 28/12/2025
 	groups = {
-		power_bloc_leader
 		overlord
 	}
 	requires_approval = no
@@ -67,10 +66,7 @@
 		requirement_to_maintain = {
 			trigger = {
 				scope:target_country = {
-					OR = {
-						is_subject_of = root
-						power_bloc.power_bloc_leader ?= root
-					}
+					is_subject_of = root
 				}
 			}
 		}
