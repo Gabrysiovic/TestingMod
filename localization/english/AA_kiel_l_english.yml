@@ -17,3 +17,4 @@
   expedition_events.1000.d: "Our survey of the Jutland Peninsula is complete. We have confirmed it would be possible to construct a canal to link an alternate route between the North and Baltic seas"
   expedition_events.1000.f: "A reliable and faster route between the North and Baltic seas has long been sought, but now we shall make it ourselves"
   canal_events.1000.d: "Our aim to build a canal has been snatched from us due to an agressive power occupying the Peninsula, we are no longer able to construct the canal"
+  HUB_NAME_STATE_ZEALAND_port: "Kronborg"
