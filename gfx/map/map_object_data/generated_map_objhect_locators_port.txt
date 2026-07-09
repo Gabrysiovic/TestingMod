@@ -1,0 +1,14 @@
+REPLACE:game_object_locator={
+	name="port"
+	clamp_to_water_level=yes
+	render_under_water=no
+	generated_content=no
+	layer="locators"
+	instances={
+      {
+      id=7
+      position={ 4379.598633 0.000000 2941.759229 }
+      rotation={ -0.000000 0.919709 -0.000000 0.392601 }
+      scale={ 1.000000 1.000000 1.000000 }
+      }
+}
