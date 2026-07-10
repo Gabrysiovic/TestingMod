@@ -1,0 +1,118 @@
+REPLACE:strait_gibraltar = {
+	type = natural
+
+	total_block_requires_full_control = yes
+	military_block_requires_full_control = yes
+	tolls_require_full_control = yes
+
+	first_land_endpoint = xBC6ED3
+	second_land_endpoint = xA0B0C0
+
+	first_sea_endpoint = x5FDDFB
+	second_sea_endpoint = x40D9DB
+}
+
+strait_bosporus = {
+	type = natural
+
+	total_block_requires_full_control = no
+	military_block_requires_full_control = no
+
+	first_land_endpoint = x2073f0
+	second_land_endpoint = xb0a060
+
+	first_sea_endpoint = x47DCFA
+	second_sea_endpoint = x48FAFA
+}
+
+strait_bab_el_mandeb = {
+	type = natural
+
+	total_block_requires_full_control = no
+	military_block_requires_full_control = no
+
+	first_land_endpoint = x319060
+	second_land_endpoint = x40E050
+	
+
+	first_sea_endpoint = x4FDCFA
+	second_sea_endpoint = x807D98
+}
+
+strait_oresund = {
+	type = natural
+
+	total_block_requires_full_control = no
+	military_block_requires_full_control = no
+
+	first_land_endpoint = xC04161
+	second_land_endpoint = xED2792
+
+	first_sea_endpoint = x0AC8FA
+	second_sea_endpoint = x807D99
+}
+
+strait_malacca = {
+	type = natural
+
+	total_block_requires_full_control = no
+	military_block_requires_full_control = no
+
+	first_land_endpoint = xC00130
+	second_land_endpoint = x8A3E15
+
+	first_sea_endpoint = x61C8C8
+	second_sea_endpoint = x807D97
+}
+
+strait_tsugaru = {
+	type = natural
+
+	total_block_requires_full_control = no
+	military_block_requires_full_control = no
+
+	first_land_endpoint = xE0D080
+	second_land_endpoint = xA090C0
+
+	first_sea_endpoint = x9F5EAE
+	second_sea_endpoint = x00FBFB
+}
+
+strait_sunda = {
+	type = natural
+
+	total_block_requires_full_control = no
+	military_block_requires_full_control = no
+
+	first_land_endpoint = xA97585
+	second_land_endpoint = xD70117
+
+	first_sea_endpoint = xB6CECE
+	second_sea_endpoint = x63DCFA
+}
+
+strait_lombok = {
+	type = natural
+
+	total_block_requires_full_control = no
+	military_block_requires_full_control = no
+
+	first_land_endpoint = x5ABA94
+	second_land_endpoint = x5ABA94
+
+	first_sea_endpoint = x63DCFA
+	second_sea_endpoint = x49C9C9
+}
+
+strait_hormuz = {
+	type = natural
+
+	total_block_requires_full_control = no
+	military_block_requires_full_control = no
+
+	first_land_endpoint = x350DED
+	second_land_endpoint = x0DC972
+
+	first_sea_endpoint = x56C8FA
+	second_sea_endpoint = x54FAFA
+}
