@@ -1,8 +1,5 @@
 ﻿###Numbers in comments are the vanilla values -Akiko
-#Faster devastation recovery
-NWar = {
-	DEVASTATION_DECAY_RATE = -0.07	# -0.025
-}
+
 
 #Makes powerblocs slightly easier
 NPowerBlocs = {
@@ -23,5 +20,4 @@ NEconomy = {
 	MIN_POPS_PER_PROFESSION = 10	# 3
 }
 
-## Gabriel 27/04/2026 integration for AI
-INCORPORATE_STATE_MAX_YEARS = 40
+

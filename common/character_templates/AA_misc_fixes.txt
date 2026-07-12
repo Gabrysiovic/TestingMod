@@ -38,3 +38,42 @@ TRY_REPLACE:aus_maximilian_I_habsburg_template = {
         #experienced_naval_commander trait is added in austria_events.31
     }
 }
+
+
+REPLACE:GBR_john_maynard_keynes = {
+    first_name = John
+    last_name = Keynes
+    historical = yes
+    culture = cu:british
+    female = no
+    religion = rel:atheist
+    role = character_role_politician
+    ideology = ideology_protectionist
+	home_region = STATE_EAST_ANGLIA
+    interest_group = ig_industrialists
+    birth_date = 1883.6.5
+    dna = dna_john_maynard_keynes
+    traits = {
+        literary
+		meticulous
+        erudite
+		demagogue
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:GBR
+            c:GBR ?= THIS
+			has_dlc_feature = ep1_content
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            OR = {
+                is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_intelligentsia
+            }
+        }
+        earliest_usage_date = 1914.1.1
+        latest_usage_date = 1936.12.31
+        #guaranteed to spawn if possible
+    }
+}
