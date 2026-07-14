@@ -199,6 +199,10 @@
     
     acw_gain_african_american: "Gain additional acceptance of African culture"
 
+
+    # Hegemony shaterring nerf
+    hegemony_shattering: "Hegemonial dysfunction"
+
     # Trade League cohesion rework
     POWER_BLOC_COHESION_MEMBER_RANK: "#tooltippable;tooltip:POWER_BLOC_COHESION_MEMBER_RANK_tt Member [concept_rank]#! ($identity_trade_league$)"
     POWER_BLOC_COHESION_MEMBER_RANK_tt: "#b Member Rank Cohesion Penalty#!\n\nEach non-leader member reduces cohesion based on their [concept_rank]. More powerful members are harder to keep aligned with the league's interests.\n\n#b;white Per-member penalty:#!\n  #r Great Power#!: #v -5#!\n  #r Major Power#!: #v -3#!\n  Minor Power: -1\n  Unrecognized: no penalty"
