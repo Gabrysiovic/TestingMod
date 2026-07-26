@@ -1,72 +1,24 @@
 ﻿CHARACTERS = {
-	c:WUR = {
+	c:WUR ?= {
 		create_character = {
-			# William I of Wurttemberg
-			template = is_wur_wilhelm_01
+			template = WUR_wilhelm_von_wurttemberg
+			ruler = yes
 		}	
 
 		create_character = {
-			# Charles I of Wurttemberg
-			template = is_wur_karl_01
+			template = WUR_karl_von_wurttemberg
+			heir = yes
 		}
 
-		# create_character = {
-			# name = "Fredrich Wilhelm I"
-			# age = 55
-			# traits = {
-				# impetuous
-				# cavalry_school
-			# }
-		# }
-		
-		# create_character = {
-			# name = "Ferdinand Gottleb"
-			# age = 54
-			# traits = {
-				# indifferent
-				# powerful_friends
-			# }
-		# }
-		
 		#create_character = {
-		#	first_name = Wilhelm_I
-		#	last_name = Wurttemberg
-		#	age = 55
-		#	traits = {
-		#		able
-		#		aristocrat
-		#	}
-#
+		#	template = WUR_wilhelm_i_wurttemberg
 		#}
 		
 		create_character = {
-			is_general = yes
-			first_name = Prince_Friedrich
-			last_name = von_Wurttemberg
-			historical = yes
-			culture = cu:south_german
-			birth_date = 1808.2.21
-			interest_group = ig_landowners
-			ideology = ideology_royalist
-			traits = {
-				basic_political_operator
-				expensive_tastes
-			}
+			template = WUR_prince_friedrich_von_wurttemberg
 		}
 		create_character = {
-			# Moriz von Miller, infantry general, and later minister of war
-			is_general = yes
-			first_name = Moriz
-			last_name = Miller
-			historical = yes
-			culture = cu:south_german
-			birth_date = 1792.3.10
-			interest_group = ig_armed_forces
-			ideology = ideology_reformer
-			traits = {
-				meticulous
-				engineer
-			}
+			template = WUR_moriz_miller
 		}
 	}
 }

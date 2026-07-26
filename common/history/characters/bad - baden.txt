@@ -1,13 +1,13 @@
 ﻿CHARACTERS = {
-	c:BAD = {
+	c:BAD ?= {
 		create_character = {
-			# Leopold, Grand Duke of Baden
-			template = is_bad_leopold_01
+			template = BAD_leopold_von_baden
+			ruler = yes
 		}
 		
 		create_character = {
-			# Louis II, Grande Duke of Baden
-			template = is_bad_ludwig_02
+			template = BAD_ludwig_von_baden
+			heir = yes
 		}
 
 		create_character = {

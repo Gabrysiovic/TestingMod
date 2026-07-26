@@ -1,13 +1,13 @@
 ﻿CHARACTERS = {
-	c:PRU = {
+	c:PRU ?= {
 		create_character = {
-			# Frederick William III of Prussia
-			template = is_pru_friedrich_wilhelm_03
-		}	
+			template = pru_wilhelm_III_hohenzollern_template			
+			ruler = yes
+		}
 
 		create_character = {
-			# Frederick William IV of Prussia
-			template = is_pru_friedrich_wilhelm_04
+			template = pru_wilhelm_IV_hohenzollern_template
+			heir = yes
 		}
 
 		create_character = {

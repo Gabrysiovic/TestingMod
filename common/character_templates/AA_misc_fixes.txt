@@ -77,3 +77,22 @@ REPLACE:GBR_john_maynard_keynes = {
         #guaranteed to spawn if possible
     }
 }
+
+REPLACE:RUS_tsarevich_nicholas_alexandrovich = { #Tsarevich Nicholas Alexandrovich, eldest son of Alexander II
+	first_name = Nikolai
+	last_name = Romanov
+	historical = yes
+	culture = primary_culture
+	heir = yes
+	birth_date = 1843.9.8
+	home_region = STATE_INGRIA
+	dna = dna_tsarevich_nicholas
+	interest_group = ig_ideology_humanitarian_royalist
+	ideology = ideology_reformer
+	traits = {
+		innovative
+		charismatic
+		erudite 
+		romantic
+	}
+}
