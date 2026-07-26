@@ -96,3 +96,47 @@ REPLACE:RUS_tsarevich_nicholas_alexandrovich = { #Tsarevich Nicholas Alexandrovi
 		romantic
 	}
 }
+
+REPLACE:sar_charles_albert_sardinia_template = {
+    # Charles Albert of Sardinia-Piedmont
+    is_general = yes
+    first_name = "Carlo_Alberto"
+    last_name = "di_Savoia"
+    historical = yes
+    culture = primary_culture
+    ruler = yes
+    dna = dna_charles_albert_of_savoy
+    birth_date = 1798.10.2
+    interest_group = ig_intelligentsia
+    ideology = ideology_moderate
+    home_region = STATE_PIEDMONT
+    traits = {
+        reserved
+        romantic
+    }
+    on_created = {
+        set_variable = is_married
+        set_variable = house_savoy
+    }
+}
+
+REPLACE:sar_victor_emmanuel_template = {
+    # Victor Emmanuel II
+    first_name = "Vittorio_Emanuele"
+    last_name = "di_Savoia"
+    historical = yes
+    culture = primary_culture
+    heir = yes
+    birth_date = 1820.3.14 # pi day!
+    dna = dna_king_victor_emmanuel_02
+    interest_group = ig_intelligentsia
+    ideology = ideology_moderate
+    home_region = STATE_PIEDMONT
+    traits = {
+        ambitious
+		direct
+    }
+    on_created = {
+        set_variable = house_savoy
+    }
+}
