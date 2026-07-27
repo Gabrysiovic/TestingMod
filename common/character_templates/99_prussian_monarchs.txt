@@ -68,7 +68,7 @@ rr_pru_frederick_iii = { # Frederick III of Prussia
 	noble = yes
     birth_date = 1831.10.18
     interest_group = ig_intelligentsia
-    ideology = ideology_humanitarian_royalist
+    ideology = ideology_liberal_leader
 	home_region = STATE_BRANDENBURG
     traits = {
  		honorable
