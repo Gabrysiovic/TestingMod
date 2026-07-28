@@ -58,6 +58,7 @@ GBR_edward_viii = { # Edward VIII of the United Kingdom
 		charismatic
 		hedonist
 		expensive_tastes
+		trench_rat
 		bigoted
 		reckless
 	}

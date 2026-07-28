@@ -13,7 +13,8 @@
     home_region = STATE_FLANDERS
     traits = {
 		ruthless
-		masterful_diplomat
+        bigoted
+		ambitious
     }
 	on_created = {
 		set_variable = house_saxe_coburg_gotha

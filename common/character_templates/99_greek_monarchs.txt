@@ -20,7 +20,7 @@
 	}
 }
 
-rr_GRE_constantine_i = { # King Konstantinos I of Greece
+GRE_constantine_i = { # King Konstantinos I of Greece
 	first_name = Konstantinos
 	last_name = of_Glucksburg
 	historical = yes
@@ -33,16 +33,17 @@ rr_GRE_constantine_i = { # King Konstantinos I of Greece
 	birth_date = 1868.8.2
 	home_region = STATE_ATTICA
 	traits = {
+		traditionalist_commander
 		imperious
-		ambitious
 		reckless
+		tactful
 	}
 	on_created = {
         set_variable = is_married
     }
 }
 
-rr_GRE_geroge_II = { # King Georgios II of Greece
+GRE_geroge_II = { # King Georgios II of Greece
 	first_name = Georgios
 	last_name = of_Glucksburg
 	historical = yes
@@ -61,7 +62,7 @@ rr_GRE_geroge_II = { # King Georgios II of Greece
 	}
 }
 
-rr_GRE_paul_i = { # King Pavlos I of Greece
+GRE_paul_i = { # King Pavlos I of Greece
 	first_name = Pavlos
 	last_name = of_Glucksburg
 	historical = yes
