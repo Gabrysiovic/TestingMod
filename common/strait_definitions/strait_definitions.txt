@@ -1,11 +1,11 @@
-canal_panama = {
+﻿canal_panama = {
 	type = artificial
 
 	total_block_requires_full_control = no
 	military_block_requires_full_control = no
 
 	first_land_endpoint = xD0EF40
-	second_land_endpoint = x910E14
+	second_land_endpoint = xD0EF40
 
 	first_sea_endpoint = x1FC9E5
 	second_sea_endpoint = x0D61DC
@@ -18,7 +18,7 @@ canal_suez = {
 	military_block_requires_full_control = no
 
 	first_land_endpoint = xC01060
-	second_land_endpoint = x8ED45E
+	second_land_endpoint = xC01060
 
 	first_sea_endpoint = x46C8FA
 	second_sea_endpoint = x4FDCFA
@@ -70,7 +70,7 @@ strait_bab_el_mandeb = {
 	total_block_requires_full_control = no
 	military_block_requires_full_control = no
 
-	first_land_endpoint = x319060
+	first_land_endpoint = x9EDF3C
 	second_land_endpoint = x40E050
 	
 
