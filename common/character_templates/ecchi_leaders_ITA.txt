@@ -146,6 +146,7 @@ mr_ita_cavour = {
     traits = {
         ambitious
         masterful_diplomat
+		experienced_political_operator
     }
     interest_group_leader_usage = {
         country_trigger = {
@@ -166,7 +167,6 @@ mr_ita_cavour = {
         }
         earliest_usage_date = 1847.1.1
         latest_usage_date = 1861.6.6
-        chance = 80
     }
 }
 

@@ -1,0 +1,175 @@
+# Confédération générale des vignerons
+INJECT:company_cgv = {
+	building_types = {
+		building_tobacco_plantation
+	}
+}
+
+# Manufacture d'armes de Saint-Étienne
+REPLACE:company_saint_etienne = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/france_saint_etienne.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_RHONE }
+
+	building_types = {
+		building_arms_industry
+		building_artillery_foundry
+		building_munition_plant
+	}
+
+	extension_building_types = {
+		building_explosives_factory
+	}
+
+	possible_prestige_goods = {
+		prestige_good_saint_etienne_rifles
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_southern_europe
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_RHONE
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = repeaters
+		any_scope_state = {
+			state_region = s:STATE_RHONE
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_arms_industry
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		unit_offense_mult = 0.05
+		unit_defense_mult = 0.05
+	}
+
+	ai_will_do = {
+		has_technology_researched = repeaters
+		any_scope_state = {
+			state_region = s:STATE_RHONE
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_arms_industry = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_RHONE
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+
+# Maison Worth
+REPLACE:company_maison_worth = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_maison_worth.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	category = shopkeeper_owned
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_ILE_DE_FRANCE }
+
+	building_types = {
+		building_textile_mill
+		building_cotton_plantation
+		building_silk_plantation
+	}
+
+	extension_building_types = {
+		building_art_academy
+	}
+
+	possible_prestige_goods = {
+		prestige_good_haute_couture
+	}
+
+	potential = {
+		has_dlc_feature = mp1_content
+		has_interest_marker_in_region = sr:region_western_europe
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			s:STATE_ILE_DE_FRANCE = {
+				any_scope_state = {
+					owner = root
+				}
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_ILE_DE_FRANCE
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_textile_mill
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_influence_mult = 0.05
+		country_leverage_generation_mult = 0.05
+		state_assimilation_mult = 0.05
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_ILE_DE_FRANCE
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_textile_mill = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_ILE_DE_FRANCE
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+
+# Compagnie des mines d'Anzin
+INJECT:company_mines_anzin = {
+	building_types = {
+		building_railway
+	}
+}
+
+# Société Mokta El Hadid
+INJECT:company_societe_mokta_el_hadid = {
+	possible_prestige_goods = {
+		prestige_good_swedish_bar_iron
+	}
+
+}
