@@ -1,0 +1,6 @@
+﻿l_english:
+rule_power_bloc_rank_requirement: "Power Bloc Rank Requirements"
+setting_power_bloc_rank_free: "Unrestricted"
+setting_power_bloc_rank_free_desc: "Any country may found and lead a [Concept('concept_power_bloc', '$concept_power_blocs$')], regardless of [concept_country_rank]."
+setting_power_bloc_rank_ai_only: "AI Restricted"
+setting_power_bloc_rank_ai_only_desc: "Players may found and lead a [Concept('concept_power_bloc', '$concept_power_blocs$')] at any [concept_country_rank]. AI countries must be at least an Unrecognized Major Power to found one, and at least a Major Power to lead one — an AI bloc leader that falls below Major Power loses its bloc."

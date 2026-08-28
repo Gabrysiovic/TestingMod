@@ -1,0 +1,6 @@
+﻿power_bloc_rank_requirement = {
+	default = power_bloc_rank_ai_only
+
+	power_bloc_rank_free = {}
+	power_bloc_rank_ai_only = {}
+}

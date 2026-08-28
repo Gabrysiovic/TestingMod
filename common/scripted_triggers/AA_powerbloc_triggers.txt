@@ -17,6 +17,37 @@
 		NOT = {
 			has_law_or_variant = law_type:law_isolationism
 		}
+		# Vanilla's rank gate, re-applied according to the power_bloc_rank_requirement game rule.
+		# trigger_if with no trigger_else passes when the limit is false, so this disappears
+		# entirely under power_bloc_rank_free.
+		trigger_if = {
+			limit = {
+				has_game_rule = power_bloc_rank_ai_only
+				is_ai = yes
+			}
+			country_rank >= rank_value:unrecognized_major_power
+		}
+	}
+}
+
+# The leadership condition, defined once and shared by:
+#   - REPLACE:can_lead_power_bloc  (common/scripted_rules/AA_scripted_rules.txt)
+#   - AA_power_bloc_rank_sweep     (common/on_actions/AA_power_bloc_rank_sweep.txt)
+#
+# The sweep exists because can_lead_power_bloc is only evaluated by the engine on a
+# rank or country-type change. An AI that was ALREADY below Major Power when it got
+# its bloc never triggers that re-evaluation, so the rule alone leaves it in charge
+# indefinitely -- confirmed 2026-08-28, Sardinia-Piedmont held a bloc for two years.
+AA_can_lead_power_bloc_by_rule = {
+	trigger_if = {
+		limit = {
+			has_game_rule = power_bloc_rank_ai_only
+			is_ai = yes
+		}
+		country_rank >= rank_value:major_power
+	}
+	trigger_else = {
+		always = yes
 	}
 }
 

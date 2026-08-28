@@ -1,0 +1,28 @@
+﻿# Monthly enforcement sweep for the power_bloc_rank_requirement game rule.
+#
+# WHY THIS EXISTS: the engine only evaluates can_lead_power_bloc on a rank or
+# country-type change. An AI that was already below Major Power when it acquired its
+# bloc never triggers that re-evaluation, so the scripted rule alone never fires --
+# verified 2026-08-28 (Sardinia-Piedmont kept a bloc for two years with the rule on).
+# This is also the Two Sicilies / Metternich case from the design discussion: a
+# leadership handover is not a rank change for the new leader.
+#
+# com_disband_power_bloc (common/scripted_effects/com_dissolve_power_bloc.txt) forces
+# exactly that re-evaluation by flipping the leader country type back and forth.
+on_monthly_pulse_country = {
+	on_actions = {
+		AA_power_bloc_rank_sweep
+	}
+}
+
+AA_power_bloc_rank_sweep = {
+	effect = {
+		if = {
+			limit = {
+				is_power_bloc_leader = yes
+				NOT = { AA_can_lead_power_bloc_by_rule = yes }
+			}
+			com_disband_power_bloc = { power_bloc = power_bloc }
+		}
+	}
+}
