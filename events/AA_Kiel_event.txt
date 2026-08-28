@@ -59,6 +59,5 @@ canal_events.111 = {
 			type = je_kiel_canal
 		}
 		set_variable = kiel_survey_complete
-		}
 	}
 }
