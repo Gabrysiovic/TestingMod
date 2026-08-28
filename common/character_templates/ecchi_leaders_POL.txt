@@ -149,7 +149,7 @@ ecchi_pol_conrad = {
     home_region = STATE_VOLHYNIA
 
     religion = rel:catholic
-    ideology = ideology_reformer
+    ideology = ideology_traditionalist
     interest_group = ig_intelligentsia
 	dna = ecchi_dna_joseph_conrad
     birth_date = 1857.12.3
@@ -299,7 +299,7 @@ ecchi_pol_dmoski = {
     home_region = STATE_MAZOVIA
 
     religion = rel:catholic
-    ideology = ideology_liberal_leader
+    ideology = ideology_ethno_nationalist
     interest_group = ig_petty_bourgeoisie
     dna = ecchi_dna_roman_dmoski
     birth_date = 1864.8.9
