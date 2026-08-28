@@ -12,9 +12,9 @@
     ideology = ideology_jingoist_leader
     home_region = STATE_FLANDERS
     traits = {
-		ruthless
-        bigoted
-		ambitious
+		trait_child
+        ruthless
+		masterful_diplomat
     }
 	on_created = {
 		set_variable = house_saxe_coburg_gotha
