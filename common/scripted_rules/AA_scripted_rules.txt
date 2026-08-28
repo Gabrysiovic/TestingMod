@@ -1,6 +1,9 @@
 ﻿# Root = Country
+# Driven by the power_bloc_rank_requirement game rule:
+#   power_bloc_rank_free    - anyone leads, regardless of rank (the mod's old always = yes)
+#   power_bloc_rank_ai_only - human players lead at any rank, AI needs Major Power or above
 REPLACE:can_lead_power_bloc = {
-	always = yes
+	AA_can_lead_power_bloc_by_rule = yes
 }
 
 # If you ever change these conditions, remember to update the loc-key: TOOLTIP_LOCKED_PRINCIPLE_SLOT_3_DURING_FORMATION
