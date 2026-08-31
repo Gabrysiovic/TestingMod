@@ -510,66 +510,6 @@ charater_baltic_governorates_scripted_deaths_effect = {
 			}
 		}
 	}
-	else_if = {
-		limit = {
-			has_template = UBD_yevgeny_golovin
-			year >= 1848
-		}
-		transfer_character = c:RUS
-		owner ?= {
-			create_character = {
-				template = UBD_alexander_suvorov
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			has_template = UBD_alexander_suvorov
-			year >= 1861
-		}
-		transfer_character = c:RUS
-		owner ?= {
-			create_character = {
-				template = UBD_wilhelm_heinrich_von_lieven
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			has_template = UBD_wilhelm_heinrich_von_lieven
-			year >= 1864
-		}
-		transfer_character = c:RUS
-		owner ?= {
-			create_character = {
-				template = UBD_pyotr_shuvalov
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			has_template = UBD_pyotr_shuvalov
-			year >= 1866
-		}
-		transfer_character = c:RUS
-		owner ?= {
-			create_character = {
-				template = UBD_pyotr_albedinsky
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			has_template = UBD_pyotr_albedinsky
-			year >= 1870
-		}
-		transfer_character = c:RUS
-		owner ?= {
-			create_character = {
-				template = UBD_pyotr_bagratoni
-			}
-		}
-	}
 }
 
 character_hungary_scripted_deaths_effect = {
@@ -1737,24 +1677,6 @@ character_france_scripted_deaths_effect = {
 		limit = {
 			has_template = FRA_louis_philippe
 			year >= 1850
-		}
-		kill_character = { hidden = no }
-	}
-	else_if = {
-		limit = {
-			has_template = FRA_ferdinand_philippe
-			year >= 1842
-		}
-		if = {
-			limit = {
-				is_heir_of_own_country = yes
-			}
-			owner ?= {
-				create_character = {
-					template = FRA_philippe_de_orleans_of_paris
-					heir = yes
-				}
-			}
 		}
 		kill_character = { hidden = no }
 	}
