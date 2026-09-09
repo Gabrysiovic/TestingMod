@@ -1,0 +1,61 @@
+# We need an heir
+maximilian_events.2 = {
+	type = country_event
+	placement = root
+	title = maximilian_events.2.t
+	desc = maximilian_events.2.d
+	flavor = maximilian_events.2.f
+
+	event_image = {
+		video = "ip3_police_raid"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	cooldown = { days = stupidly_long_modifier_time }
+
+	duration = 3
+
+	dlc = dlc014
+
+	trigger = {
+		has_dlc_feature = ip3_content
+		NOT = { has_variable = maximilian_incident_happened_var }
+		any_scope_character = {
+			OR = {
+				has_template = is_aus_maximilian_01
+				has_template = is_aus_karl_ludwig_01
+			}	
+		}
+		game_date >= 1863.12.18
+		c:MEX ?= this
+	}
+
+	immediate = {
+		random_scope_character = {
+			limit = {
+				is_ruler_of_own_country = yes
+			}
+			save_scope_as = relevant_ruler
+		}
+		set_variable = maximilian_incident_happened_var
+	}
+
+
+	option = {
+		name = maximilian_events.2.a
+		default_option = yes
+		custom_tooltip = {
+			text = maximilian_events.2_tt
+			scope:heir = {
+				kill_character = { hidden = yes } # Rudolf dies
+			}
+			create_character = {
+				#  Franz Ferdinand is the new heir
+				template = aus_franz_ferdinand_mex
+			}
+		}
+	}
+}
