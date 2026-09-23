@@ -2024,16 +2024,6 @@ historical_heirs_on_monthly_pulse_country = {
 				}
 				bukhara_generate_scripted_heirs = yes
 			}
-			else_if = { # Khiva
-				limit = {
-					OR = {
-						c:KHI ?= this
-						was_formed_from = KHI
-					}
-					can_generate_scripted_heirs = yes
-				}
-				character_khiva_ruler_succession_chain_effect = yes
-			}
 			else_if = { # Kokand
 				limit = {
 					OR = {

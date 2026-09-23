@@ -11,16 +11,14 @@ is_aus_maximilian_01 = {
 	birth_date = 1832.7.6
 	dna = dna_aus_maximilian_01
 	interest_group = ig_intelligentsia
-	ideology = ideology_humanitarian_royalist
+	ideology = ideology_liberal_leader
+	home_region = STATE_AUSTRIA
 	traits = {
-		dockyard_master
+		tactful
 		charismatic
 	}
 	on_created = {
 		set_variable = is_married
-	}
-	trait_generation = {
-		# nothing!
 	}
 }
 
@@ -35,16 +33,14 @@ is_aus_karl_ludwig_01 = {
 	birth_date = 1833.7.30
 	dna = dna_aus_karl_ludwig_01
 	interest_group = ig_devout
-	ideology = ideology_traditionalist
+	ideology = ideology_moderate
+	home_region = STATE_AUSTRIA
 	traits = {
 		bigoted
 		pious
 	}
 	on_created = {
 		set_variable = is_married
-	}
-	trait_generation = {
-		# nothing!
 	}
 }
 
@@ -64,7 +60,24 @@ is_mex_miguel_miramón01 = {
 		bigoted
 		pious
 	}
-	trait_generation = {
-		# nothing!
-	}
 }
+
+
+aus_franz_ferdinand_mex = {
+    # Archduke Franz Ferdinand of Austria
+    first_name = Franz_Ferdinand
+    last_name = von_Osterreich-Este
+    historical = yes
+    culture = cu:south_german
+    heir = yes
+    noble = yes
+    dna = dna_archduke_franz_ferdinand_of_austria
+    birth_date = 1863.12.18
+    interest_group = ig_armed_forces
+    ideology = ideology_reformer
+	home_region = STATE_STYRIA
+    traits = {
+        explorer
+		direct
+		experienced_diplomat
+    }
