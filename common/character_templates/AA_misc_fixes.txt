@@ -48,7 +48,7 @@ REPLACE:GBR_john_maynard_keynes = {
     female = no
     religion = rel:atheist
     role = character_role_politician
-    ideology = ideology_protectionist
+    ideology = ideology_modernizer_leader
 	home_region = STATE_EAST_ANGLIA
     interest_group = ig_industrialists
     birth_date = 1883.6.5
@@ -78,72 +78,11 @@ REPLACE:GBR_john_maynard_keynes = {
     }
 }
 
-REPLACE:RUS_tsarevich_nicholas_alexandrovich = { #Tsarevich Nicholas Alexandrovich, eldest son of Alexander II
-	first_name = Nikolai
-	last_name = Romanov
-	historical = yes
-	culture = primary_culture
-	heir = yes
-	birth_date = 1843.9.8
-	home_region = STATE_INGRIA
-	dna = dna_tsarevich_nicholas
-	interest_group = ig_ideology_humanitarian_royalist
-	ideology = ideology_reformer
-	traits = {
-		innovative
-		charismatic
-		erudite 
-		romantic
-	}
-}
-
-REPLACE:sar_charles_albert_sardinia_template = {
-    # Charles Albert of Sardinia-Piedmont
-    is_general = yes
-    first_name = "Carlo_Alberto"
-    last_name = "di_Savoia"
-    historical = yes
-    culture = primary_culture
-    ruler = yes
-    dna = dna_charles_albert_of_savoy
-    birth_date = 1798.10.2
-    interest_group = ig_intelligentsia
-    ideology = ideology_moderate
-    home_region = STATE_PIEDMONT
-    traits = {
-        reserved
-        romantic
-    }
-    on_created = {
-        set_variable = is_married
-        set_variable = house_savoy
-    }
-}
-
-REPLACE:sar_victor_emmanuel_template = {
-    # Victor Emmanuel II
-    first_name = "Vittorio_Emanuele"
-    last_name = "di_Savoia"
-    historical = yes
-    culture = primary_culture
-    heir = yes
-    birth_date = 1820.3.14 # pi day!
-    dna = dna_king_victor_emmanuel_02
-    interest_group = ig_intelligentsia
-    ideology = ideology_moderate
-    home_region = STATE_PIEDMONT
-    traits = {
-        ambitious
-		direct
-    }
-    on_created = {
-        set_variable = house_savoy
-    }
-}
 
 
-REPLACE: # Sardinia-Piedmont - SAR
-sar_benso_character_template = { # The Count of Cavour
+
+# Sardinia-Piedmont - SAR
+REPLACE:sar_benso_character_template = { # The Count of Cavour
     first_name = Camillo
     last_name = Benso
     historical = yes
