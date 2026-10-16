@@ -44,12 +44,12 @@ ecchi_pol_pilsudski = {
     home_region = STATE_VILNIUS
 
     religion = rel:catholic
-    ideology = ideology_liberal_praetorian
+    ideology = ideology_positivist
     interest_group = ig_armed_forces
 	dna = ecchi_dna_jozef_pilsudski
     birth_date = 1867.12.5
-    traits = { experienced_diplomat experienced_offensive_planner }
-    commander_rank = default
+    traits = { celebrity_commander experienced_offensive_planner charismatic ambitious }
+    commander_rank = commander_rank_4
     commander_usage = {
         country_trigger = {
             OR = {
@@ -65,9 +65,8 @@ ecchi_pol_pilsudski = {
             }
         }
         role = general
-        earliest_usage_date = 1890.1.1
+        earliest_usage_date = 1892.1.1
         latest_usage_date = 1935.5.12
-        chance = 65
     }
 }
 

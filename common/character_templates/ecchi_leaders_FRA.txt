@@ -916,7 +916,7 @@ ecchi_fra_harmel = {
     home_region = STATE_ILE_DE_FRANCE
 
     religion = rel:catholic
-    ideology = ideology_utilitarian
+    ideology = ideology_utilitarian_leader
     interest_group = ig_industrialists
     #dna = ecchi_dna_andre_citroen
     birth_date = 1829.2.17

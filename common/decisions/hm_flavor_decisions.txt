@@ -1,5 +1,8 @@
 ﻿hm_british_windsor_name_change = {
 	is_shown = {
+		NOT = {
+			has_variable = windsor_taken
+		}
 		country_has_primary_culture = cu:british
 		country_has_monarchy_law = yes
 		country_has_non_monarchy_law = no
@@ -29,6 +32,7 @@
 		}
 	}
 	when_taken = {
+		set_variable = windsor_taken
 		custom_tooltip = {
 			text = hm_british_windsor_name_change_tt.2
 			every_scope_character = {
