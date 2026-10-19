@@ -136,7 +136,7 @@ fra_formation_of_power_blocs.1 = {
 			}
 			c:FRA = {
 				create_power_bloc = {
-					name = "Confédération du Grand Commerce Français"
+					name = FRANCE_EXTERNAL_TRADE
 					map_color = { 16 95 128 }
 					identity = identity_trade_league
 					principle = principle_external_trade_1
@@ -280,7 +280,7 @@ fra_formation_of_power_blocs.2 = {
 			}
 			c:FRA = {
 				create_power_bloc = {
-					name = "Système Central des Échanges"
+					name = FRANCE_INTERNAL_TRADE
 					map_color = { 16 95 128 }
 					identity = identity_trade_league
 					principle = principle_internal_trade_1
@@ -336,7 +336,7 @@ fra_formation_of_power_blocs.3 = {
 			}
 			OR = {
 				has_law = law_type:law_chiefdom
-				has_law = law_type:law_monarchy
+				has_law_or_variant = law_type:law_monarchy
 			}
 			NOT = {
 				has_law_or_variant = law_type:law_anarchy
@@ -394,7 +394,7 @@ fra_formation_of_power_blocs.3 = {
 					}
 					OR = {
 						has_law = law_type:law_chiefdom
-						has_law = law_type:law_monarchy
+						has_law_or_variant = law_type:law_monarchy
 					}	
 					NOT = {
 						has_law_or_variant = law_type:law_anarchy
@@ -413,7 +413,7 @@ fra_formation_of_power_blocs.3 = {
 			}
 			c:FRA = {
 				create_power_bloc = {
-					name = "Hégémonie Impériale"
+					name = FRANCE_VASSALIZATION
 					map_color = { 16 95 128 }
 					identity = identity_sovereign_empire
 					principle = principle_vassalization_1
@@ -498,8 +498,8 @@ fra_formation_of_power_blocs.4 = {
 			}
 			OR = {
 				has_law = law_type:law_chiefdom
-				has_law = law_type:law_monarchy
-				has_law = law_type:law_autocracy
+				has_law_or_variant = law_type:law_monarchy
+				has_law_or_variant = law_type:law_autocracy
 				has_law = law_type:law_single_party_state
 			}
 			NOT = {
@@ -581,8 +581,8 @@ fra_formation_of_power_blocs.4 = {
 					}
 					OR = {
 						has_law = law_type:law_chiefdom
-						has_law = law_type:law_monarchy
-						has_law = law_type:law_autocracy
+						has_law_or_variant = law_type:law_monarchy
+						has_law_or_variant = law_type:law_autocracy
 						has_law = law_type:law_single_party_state
 					}
 					NOT = {
@@ -597,7 +597,7 @@ fra_formation_of_power_blocs.4 = {
 			}
 			c:FRA = {
 				create_power_bloc = {
-					name = "Ordre Impérial de Rendement"
+					name = FRANCE_EXPLOITATION
 					map_color = { 16 95 128 }
 					identity = identity_sovereign_empire
 					principle = principle_exploit_members_1
@@ -777,7 +777,7 @@ fra_formation_of_power_blocs.5 = {
 			}
 			c:FRA = {
 				create_power_bloc = {
-					name = "Confédération des Républiques Libres"
+					name = FRANCE_LIBERAL_IDEOLOGY
 					map_color = { 16 95 128 }
 					identity = identity_ideological_union
 					principle = principle_ideological_truth_1
@@ -853,7 +853,7 @@ fra_formation_of_power_blocs.6 = {
 			}
 			c:FRA = {
 				create_power_bloc = {
-					name = "Ligue des Communes Libérées"
+					name = FRANCE_COMMUNIST_IDEOLOGY
 					map_color = { 182 0 0 }
 					identity = identity_ideological_union
 					principle = principle_ideological_truth_1
@@ -892,9 +892,9 @@ fra_formation_of_power_blocs.7 = {
 			has_law = law_type:law_corporate_state
 			OR = {
 				has_law = law_type:law_elder_council
-				has_law = law_type:law_oligarchy
+				has_law_or_variant = law_type:law_oligarchy
 				has_law = law_type:law_technocracy
-				has_law = law_type:law_autocracy
+				has_law_or_variant = law_type:law_autocracy
 				has_law = law_type:law_single_party_state						
 				ruler ?= {
 					OR = {
@@ -934,9 +934,9 @@ fra_formation_of_power_blocs.7 = {
 					has_law = law_type:law_corporate_state
 					OR = {
 						has_law = law_type:law_elder_council
-						has_law = law_type:law_oligarchy
+						has_law_or_variant = law_type:law_oligarchy
 						has_law = law_type:law_technocracy
-						has_law = law_type:law_autocracy
+						has_law_or_variant = law_type:law_autocracy
 						has_law = law_type:law_single_party_state						
 						ruler ?= {
 							OR = {
@@ -955,7 +955,7 @@ fra_formation_of_power_blocs.7 = {
 			}
 			c:FRA = {
 				create_power_bloc = {
-					name = "Ordre National Populaire"
+					name = FRANCE_FASCIST_IDEOLOGY
 					map_color = { 48 85 100 }
 					identity = identity_ideological_union
 					principle = principle_ideological_truth_1
@@ -1033,7 +1033,7 @@ fra_formation_of_power_blocs.8 = {
 			}
 			c:FRA = {
 				create_power_bloc = {
-					name = "Administration Supérieure des États"
+					name = FRANCE_TECHNOCRATIC_IDEOLOGY
 					map_color = { 106 124 131 }
 					identity = identity_ideological_union
 					principle = principle_creative_legislature_1
@@ -1134,7 +1134,7 @@ fra_formation_of_power_blocs.9 = {
 			}
 			c:FRA = {
 				create_power_bloc = {
-					name = "Entente de Défense"
+					name = FRANCE_DEFENSIVE_PACT
 					map_color = { 16 95 128 }
 					identity = identity_military_treaty_organization
 					principle = principle_defensive_cooperation_1
@@ -1266,7 +1266,7 @@ fra_formation_of_power_blocs.10 = {
 			}
 			c:FRA = {
 				create_power_bloc = {
-					name = "Pacte de Puissance"
+					name = FRANCE_EXPANSION
 					map_color = { 16 95 128 }
 					identity = identity_military_treaty_organization
 					principle = principle_aggressive_coordination_1
@@ -1360,7 +1360,7 @@ fra_formation_of_power_blocs.11 = {
 			}
 			c:FRA = {
 				create_power_bloc = {
-					name = "Le Sillon"
+					name = FRANCE_DIVINE_ECONOMICS
 					map_color = { 16 95 128 }
 					identity = identity_religious
 					principle = principle_divine_economics_1
@@ -1454,7 +1454,7 @@ fra_formation_of_power_blocs.12 = {
 			}
 			c:FRA = {
 				create_power_bloc = {
-					name = "Union Ultramontaine"
+					name = FRANCE_SACRED_CIVICS
 					map_color = { 49 61 79 }
 					identity = identity_religious
 					principle = principle_sacred_civics_1
@@ -1534,7 +1534,7 @@ fra_formation_of_power_blocs.13 = {
 			}
 			c:FRA = {
 				create_power_bloc = {
-					name = "Ligue des États Laïques"
+					name = FRANCE_ATHEIST_IDEOLOGY
 					map_color = { 49 61 79 }
 					identity = identity_ideological_union
 					principle = principle_ideological_truth_1
@@ -1680,7 +1680,7 @@ fra_formation_of_power_blocs.14 = {
 			}
 			c:FRA = {
 				create_power_bloc = {
-					name = "Communauté francophone"
+					name = FRANCE_CULTURAL_UNION
 					map_color = { 59 110 185 }
 					identity = identity_cultural
 					principle = principle_shared_canon_1
@@ -1801,7 +1801,7 @@ fra_formation_of_power_blocs.15 = {
 			}
 			c:FRA = {
 				create_power_bloc = {
-					name = "Pacte de Colonisation Civile"
+					name = FRANCE_MIGRATION
 					map_color = { 59 110 185 }
 					identity = identity_cultural
 					principle = principle_freedom_of_movement_1
@@ -1879,7 +1879,7 @@ fra_formation_of_power_blocs.16 = {
 			}
 			c:FRA = {
 				create_power_bloc = {
-					name = "Confédération générale du travail"
+					name = FRANCE_ANARCHISM
 					map_color = { 112 112 112 }
 					identity = identity_ideological_union
 					principle = principle_ideological_truth_1
