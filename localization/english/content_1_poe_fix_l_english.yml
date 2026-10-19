@@ -1,0 +1,43 @@
+﻿l_english:
+ raj.1.d_company:0 "The [SCOPE.sCountry('company_country').GetName] has petitioned the [SCOPE.sCountry('company_country').GetOverlord.GetAdjective] government to be reorganized into a proper colony, so better to manage the Indian subcontinent. History shall mark this day as the inception of the [SCOPE.sCountry('company_country').GetOverlord.GetAdjectiveNoFormatting] Raj."
+ bic_activates_caste_system_enforced_tt:0 "To better manage the native population, the Indian administration will enact [GetLawType('law_hindu_caste_codified').GetName]."
+  john_stuart_mill_returns_tt:0 "Dissatisfied with the change in administration, [SCOPE.sCharacter('john_stuart_mill_scope').GetFullName] will return to [SCOPE.sCountry('gbr_scope').GetName] as a [concept_politician]."
+
+ raj.4.c:0 "Take the willing and accommodate the rest."
+
+ raj.5.c:0 "Make a token effort to tamp down on missionary activity."
+
+ bic_breakup.1.t_colonial:0 "The [ROOT.GetCountry.GetNameNoFormatting]"
+ bic_breakup.1.d_colonial:0 "The colonial adminstration of India now finds itself free of its former overlord. Though now independent, the foreign administrators that remain fully intend to maintain their grip on power."
+ bic_breakup.1.f_colonial:0 ""Did the Indians really think that just because we were now independent that we would hand them the reigns of power? If so they were sorely mistaken. Only through our hand can India be ruled to prosperity. To even entertain the idea of a native government is to flirt with chaos.""
+ continue_as_princely_state_tt:0 "We will continue as one of the $concept_princely_states$."
+
+ bic_breakup.2.t:0 "India Shattered"
+ bic_breakup.2.d:0 "India is divided once again, its foreign rulers expelled by Indian rebels, the colonial territory split among the [Concept('concept_princely_state', '$concept_princely_states$')]. The era of colonial rule over India is no more, but so too is the era of unity under a single ruler."
+ bic_breakup.2.f:0 ""Is it true? The foreigners have been made to leave?"\n\n"Aye, forced out at gunpoint. I wonder though, does their expulsion herald prosperity or strife not just for [ROOT.GetCountry.GetNameNoFormatting], but for all of India...""
+ bic_breakup.2.a:0 "What was united is fractured once more."
+ india_now_divided_tt:0 "#b India#! has been divided among the [Concept('concept_princely_state', '$concept_princely_states$')]."
+ can_one_unite_india_tt:0 "But perhaps one will rise to re-unite the subcontinent..."
+ unify_india_now_available_tt:0 "The #b [GetDiplomaticPlayType('dp_unify_india').GetName]#! [concept_diplomatic_play] and [concept_war_goal] are now available, allowing us to militarily unify [GetGeographicRegion('geographic_region_india').GetName] at a reduced [concept_infamy] cost."
+
+ bic_breakup.3.t:0 "Under New Management"
+ bic_breakup.3.d:0 "The #b $dyn_c_east_india_company$#! finds itself the subject of a new colonial overlord. The old corporate administration is now being re-organized into that of a proper [concept_colony]."
+ bic_breakup.3.f:0 ""I suppose the [ROOT.GetCountry.GetOverlord.GetRuler.GetPrimaryRoleTitle] wasn't a fan of our strategic roadmap...""
+ bic_breakup.3.a:0 "I never much liked corporate governance anyway."
+
+ bic_breakup.4.t:0 "The End of the [SCOPE.sCompany('eic_scope').GetNameNoFormatting]"
+ bic_breakup.4.d:0 "Having lost control of #b India#!, the [ROOT.GetCountry.GetAdjectiveNoFormatting] government has made the decision to disband the [SCOPE.sCompany('eic_scope').GetName], its purpose now gone without its namesake colony."
+ bic_breakup.4.f:0 ""The memory of John Company lives on, men, in our hearts and in our pocketbooks.""
+ bic_breakup.4.a:0 "I hope the shareholders will be alright."
+
+ bic_breakup.6.t:0 "Uniting the Subcontinent"
+ bic_breakup.6.d:0 "Though once more divided, whispers have begun to spread across the subcontinent, carrying the idea of a unified [GetGeographicRegion('geographic_region_india').GetName]. An era of conflict may be upon us, and some say [ROOT.GetCountry.GetRuler.GetFullNameWithTitle] should be the one to bring India under a single banner."
+ bic_breakup.6.f:0 ""It is time now for India to be ruled by Indians, not as petty, squabbling states but as a grand, unified empire.""
+ bic_breakup.6.a:0 "Can India be united once more?"
+
+ bic_breakup.7.t:0 "The Jewel Lost"
+ bic_breakup.7.d:0 "The unthinkable has been made reality. We have lost control of our colony in India, and are left bereft of the jewel of our empire. Government officials are speechless and unsure of our future."
+ bic_breakup.7.f:0 "No one in the cabinet could believe the news. How? How had our most valuable colony slipped so freely from between our fingers?\n\nIf such a thing was possible, what else was possible for the [ROOT.GetCountry.GetAdjectiveNoFormatting] empire?"
+ bic_breakup.7.a:0 "Is this the beginning of the end of the [ROOT.GetCountry.GetAdjectiveNoFormatting] Empire?"
+ indian_empire_lost_tt:0 "We have lost our rule of #b India#!"
+ pivot_of_empire_lost:0 "Pivot of Empire Lost"

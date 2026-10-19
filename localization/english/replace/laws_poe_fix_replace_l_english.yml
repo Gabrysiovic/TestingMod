@@ -1,0 +1,8 @@
+﻿l_english:
+  # Caste Hegemony, a Social Stratification law group
+ lawgroup_caste_hegemony_desc:1 "Restrictions on rights and privileges as determined by one's place within the [GetSocialHierarchy('british_indian_caste_system').GetName]"
+ law_hindu_caste_enforced_desc:1 "Caste hierarchy is legally enforced with strict restrictions on social mobility and access to education."
+ law_hindu_caste_codified_desc:1 "Castes become simplified and codified, a bureaucratic tool that simplifies administration but highlights discrimination and inequality."
+ law_hindu_caste_not_enforced:1 "Traditional Caste System"
+ law_hindu_caste_not_enforced_desc:1 "Castes are myriad, regional, and fluid. Discrimination exists, but upward mobility is possible through migration and economic opportunity."
+ law_affirmative_action_desc:1 "The government funds and creates programs that provide access to education and opportunities for those within historically discriminated castes."

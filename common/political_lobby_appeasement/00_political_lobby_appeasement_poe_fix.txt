@@ -1,0 +1,15 @@
+﻿REPLACE_OR_CREATE:appeasement_indian_democratic_reform_passed = {
+	duration_to_show = { days = 3075 }
+}
+
+REPLACE_OR_CREATE:appeasement_indian_democratic_reform_rejected = {
+	duration_to_show = { days = 3075 }
+}
+
+REPLACE_OR_CREATE:appeasement_indian_sovereignty_demand_rejected = {
+	duration_to_show = { days = 5125 }
+}
+
+REPLACE_OR_CREATE:appeasement_indian_hostile_action = {
+	duration_to_show = { days = 3600 }
+}

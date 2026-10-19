@@ -1,0 +1,10 @@
+﻿REPLACE:british_indian_caste_system = {
+	pop_criteria = {
+		custom_tooltip = {
+			text = british_indian_caste_system_trigger_desc
+			culture = {
+				has_discrimination_trait_group = heritage_group_south_asian
+			}
+		}
+	}
+}

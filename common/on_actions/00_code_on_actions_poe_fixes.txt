@@ -1,0 +1,322 @@
+﻿# Root = Country
+on_monthly_pulse_country = {
+	on_actions = {
+    	poe_fix_on_monthly_pulse_country
+    }
+}
+
+poe_fix_on_monthly_pulse_country = {
+	events = {
+		# Triggers relevant events when GBR loses BIC
+		bic_breakup.5
+	}
+}
+
+# Root = Character
+on_character_death = {
+	on_actions = {
+		colonial_republic_succession
+	}
+}
+
+# Validate for both Chartered Company and Colony and Dominion subject types
+colonial_republic_succession = {
+	trigger = {
+		owner.country_definition ?= cd:BIC
+		owner ?= {
+			has_government_type = gov_colonial_republic
+		}
+		is_ruler_of_own_country = yes
+	}
+	effect = {
+		owner ?= {
+			ig:ig_industrialists ?= {
+				leader ?= {
+					set_character_as_ruler = yes
+					remove_as_interest_group_leader = yes
+				}
+			}
+		}
+	}
+}
+
+# Root = Character
+on_heir_born = {
+	on_actions = {
+		colonial_empire_heir_born
+	}
+}
+
+colonial_empire_heir_born = {
+	trigger = {
+		owner.country_definition ?= cd:BIC
+	}
+	effect = {
+		# Force heirs of Colonial Indian monarchies to have "Government of India" interest group
+		owner ?= {
+			ig:ig_industrialists ?= {
+				save_temporary_scope_as = gov_of_india_scope
+			}
+		}
+		set_interest_group = scope:gov_of_india_scope
+	}
+}
+
+# Root = Country
+# scope:target = Uprising country
+on_revolution_start = {
+	on_actions = {
+		add_pro_slavery_colonial_to_landowners
+		add_pro_slavery_to_landowners
+		update_colonial_indian_revolution
+		retire_non_native_characters
+	}
+}
+
+# Root = Country
+# scope:target = Uprising country
+on_secession_start = {
+	on_actions = {
+		add_pro_slavery_colonial_to_landowners
+		add_pro_slavery_to_landowners
+		update_colonial_indian_revolution
+		retire_non_native_characters
+	}
+}
+
+add_pro_slavery_colonial_to_landowners = {
+	trigger = {
+		ROOT ?= {
+			ig:ig_landowners ?= {
+				OR = {
+					has_ideology = ideology:ideology_pro_slavery_colonial
+				}
+			}
+		}
+	}
+	effect = {
+		scope:target ?= {
+			ig:ig_landowners ?= {
+				add_ideology = ideology_pro_slavery_colonial
+			}
+		}
+	}
+}
+
+add_pro_slavery_to_landowners = {
+	trigger = {
+		ROOT ?= {
+			ig:ig_landowners ?= {
+				OR = {
+					has_ideology = ideology:ideology_pro_slavery
+				}
+			}
+		}
+	}
+	effect = {
+		scope:target ?= {
+			ig:ig_landowners ?= {
+				add_ideology = ideology_pro_slavery
+			}
+		}
+	}
+}
+
+update_colonial_indian_revolution = {
+	trigger = {
+		scope:target.country_definition ?= cd:BIC
+	}
+	effect = {
+		scope:target ?= {
+			make_bic_raj = yes
+			if = {
+				limit = {
+					ROOT ?= {
+						ig:ig_industrialists ?= {
+							has_ideology = ideology:ideology_utilitarian_millian
+						}
+					}
+				}
+				ig:ig_industrialists ?= {
+					remove_ideology = ideology_malthusian
+					add_ideology = ideology_utilitarian_millian
+				}
+			}
+		}
+	}
+}
+
+# Current code incorrectly retires non-Indian characters before changing the primary culture and state religion
+retire_non_native_characters = {
+	trigger = {
+		ROOT.country_definition ?= cd:BIC
+		NOT = {
+			scope:target.country_definition ?= cd:BIC
+		}
+	}
+	effect = {
+		scope:target ?= {
+			# Work-around for https://forum.paradoxplaza.com/forum/threads/fix-included-indian-revolutions-create-zombie-englishmen-that-cannot-die.1919888/
+			# Do this first because these characters may already be dead/retired and trying to retire them again will
+			# just throw an error.
+			every_interest_group ?= {
+				leader ?= {
+					if = {
+						limit = {
+							OR = {
+								culture ?= {
+									NOT = {
+										shares_heritage_trait_group_with_any_primary_culture = scope:target
+									}
+									# (BIC will spawn British, Scottish, and Irish IG leaders)
+									shares_heritage_trait_with_any_primary_culture = ROOT
+								}
+								religion ?= {
+									NOT = {
+										is_state_religion = scope:target
+									}
+									is_state_religion = ROOT
+								}
+							}
+						}
+						remove_as_interest_group_leader = yes
+					}
+				}
+			}
+			# Now retire
+			every_scope_character ?= {
+				limit = {
+					OR = {
+						culture ?= {
+							NOT = {
+								shares_heritage_trait_group_with_any_primary_culture = scope:target
+							}
+							# (BIC will spawn British, Scottish, and Irish IG leaders)
+							shares_heritage_trait_with_any_primary_culture = ROOT
+						}
+						religion ?= {
+							NOT = {
+								is_state_religion = scope:target
+							}
+							is_state_religion = ROOT
+						}
+					}
+				}
+				retire_character = yes
+			}
+		}
+	}
+}
+
+on_diplomatic_action_overlord_decrease_autonomy = {
+	on_actions = {
+		inc_appeasement_autonomy_decreased
+		bic_to_raj_autonomy_decreased
+	}
+}
+
+inc_appeasement_autonomy_decreased = {
+	trigger = {
+		scope:recipient ?= {
+			c:BIC ?= this
+			has_journal_entry = je_india_home_rule
+		}
+	}
+	effect = {
+		scope:recipient ?= {
+			random_political_lobby = {
+				limit = {
+					is_political_lobby_type = lobby_indian_national_congress
+				}
+				change_appeasement = {
+					amount = -3
+					factor = appeasement_autonomy_decreased
+				}
+			}
+		}
+	}
+}
+
+bic_to_raj_autonomy_decreased = {
+	trigger = {
+		scope:recipient ?= {
+			c:BIC ?= this
+			OR = {
+				has_modifier = modifier_india_company_rule
+				has_modifier = modifier_india_company_rule_upgraded
+			}
+		}
+	}
+	effect = {
+		scope:actor ?= {
+			trigger_event = { id = raj.1 popup = yes }
+		}
+	}
+}
+
+on_diplomatic_action_overlord_increase_autonomy = {
+	on_actions = {
+		indian_reform_increase_autonomy
+	}
+}
+
+on_diplomatic_action_overlord_increase_own_autonomy = {
+	on_actions = {
+		indian_reform_increase_autonomy
+	}
+}
+
+indian_reform_increase_autonomy = {
+	trigger = {
+		scope:recipient ?= {
+			c:BIC ?= this
+			has_journal_entry = je_india_home_rule
+		}
+	}
+	effect = {
+		scope:recipient ?= {
+			indian_reform_passed_effect = yes
+		}
+	}
+}
+
+on_law_enactment_pass = {
+	on_actions = {
+		indian_reform_law_passed
+	}
+}
+
+indian_reform_law_passed = {
+	trigger = {
+		c:BIC ?= this
+		has_journal_entry = je_india_home_rule
+		OR = {
+			ROOT.currently_enacting_law.type ?= law_type:law_elected_bureaucrats
+			ROOT.currently_enacting_law.type ?= law_type:law_multicultural
+		}
+	}
+	effect = {
+		indian_reform_passed_effect = yes
+	}
+}
+
+on_acquired_technology = {
+	on_actions = {
+		unify_india_notification_event
+	}
+}
+
+unify_india_notification_event = {
+	trigger = {
+		has_technology_researched = pan-nationalism
+		can_form_nation = BHT
+		has_indian_primary_culture = yes
+		NOT = {
+			has_variable = pan_nationalism_researched
+		}
+	}
+	effect = {
+		set_variable = pan_nationalism_researched
+		trigger_event = { id = bic_breakup.6 }
+	}
+}

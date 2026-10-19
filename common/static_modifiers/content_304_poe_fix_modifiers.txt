@@ -1,0 +1,125 @@
+﻿REPLACE_OR_CREATE:modifier_koh_i_noor_hoarded = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	interest_group_approval_add = -2
+}
+
+REPLACE:modifier_simon_commission_boycott = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	political_movement_pop_attraction_mult = 0.15
+	political_movement_radicalism_add = 0.05
+}
+
+REPLACE:modifier_simon_commission_embraced = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_legitimacy_base_add = 5
+}
+
+REPLACE:modifier_childrens_protest_marches = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	political_movement_pop_attraction_mult = 0.10
+}
+
+REPLACE:modifier_india_massacred_protesters = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	state_radicals_from_political_movements_mult = 0.10
+}
+
+REPLACE:modifier_disciplined_war_criminal = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+	interest_group_approval_add = -4
+}
+
+REPLACE_OR_CREATE:indian_war_criminal_punished = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	political_movement_radicalism_add = -0.1
+}
+
+REPLACE_OR_CREATE:modifier_crowned_monarch_of_india_good = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	interest_group_approval_add = 2
+}
+
+REPLACE_OR_CREATE:modifier_crowned_monarch_of_india_bad = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	interest_group_approval_add = -2
+}
+
+REPLACE_OR_CREATE:modifier_refused_to_crown_monarch_of_india_good = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	interest_group_approval_add = 2
+}
+
+REPLACE_OR_CREATE:modifier_refused_to_crown_monarch_of_india_bad = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	interest_group_approval_add = -2
+}
+
+REPLACE:modifier_indian_independence_request = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	political_movement_pop_attraction_mult = 0.10
+}
+
+REPLACE:modifier_shuttered_pwks = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	political_movement_pop_attraction_mult = -0.1
+	political_movement_radicalism_add = -0.1
+}
+
+REPLACE_OR_CREATE:modifier_indian_enemy_conspiracy = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	political_movement_pop_attraction_mult = 0.2
+	political_movement_radicalism_add = 0.2
+}
+
+REPLACE:modifier_indian_conspiracy_trials = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	country_authority_mult = -0.05
+	country_legitimacy_base_add = 5
+}
+
+REPLACE:modifier_india_forty_two_martyrs = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+	political_movement_pop_attraction_mult = 0.10
+	political_movement_radicalism_add = 0.10
+}
+
+REPLACE_OR_CREATE:modifier_indian_martyr_executed = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	political_movement_radicalism_add = 0.1
+}
+
+REPLACE_OR_CREATE:indian_lax_punishment_for_terrorists = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_authority_mult = -0.05
+	country_legitimacy_base_add = -5
+}
+
+REPLACE:modifier_india_league_ig = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	interest_group_pol_str_mult = 0.10
+}
+
+REPLACE_OR_CREATE:modifier_condition_of_india_approved_good = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	interest_group_approval_add = 2
+}
+
+REPLACE_OR_CREATE:modifier_condition_of_india_approved_bad = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+	interest_group_approval_add = -2
+}
+
+REPLACE_OR_CREATE:modifier_condition_of_india_rejected_good = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	interest_group_approval_add = 2
+}
+
+REPLACE:modifier_salt_tax_protests = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coin_negative.dds
+	state_tax_collection_mult = -0.10
+}
+
+REPLACE_OR_CREATE:modifier_salt_march_movement = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	political_movement_pop_attraction_mult = 0.2
+}

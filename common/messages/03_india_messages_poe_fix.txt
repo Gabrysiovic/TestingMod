@@ -1,0 +1,132 @@
+﻿REPLACE:besant_to_india = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/character.dds"
+
+	notification_type = toast
+}
+
+REPLACE:joins_union_of_india = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/influence.dds"
+
+	notification_type = toast
+}
+
+REPLACE:refuses_to_join_union_of_india = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/influence_bad.dds"
+
+	notification_type = toast
+}
+
+REPLACE_OR_CREATE:overlord_home_rule_denied = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/journal.dds"
+
+	notification_type = toast
+}
+
+REPLACE_OR_CREATE:overlord_independence_denied = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/journal.dds"
+
+	notification_type = toast
+}
+
+REPLACE_OR_CREATE:rowlatt_act_passed = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/journal.dds"
+
+	notification_type = toast
+}
+
+REPLACE_OR_CREATE:jallianwala_massacre = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/journal.dds"
+
+	notification_type = toast
+}
+
+REPLACE_OR_CREATE:simon_commission_advance = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/journal.dds"
+
+	notification_type = toast
+}
+
+REPLACE_OR_CREATE:simon_commission_nothing = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/journal.dds"
+
+	notification_type = toast
+}
+
+REPLACE_OR_CREATE:simon_commission_retreat = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/journal.dds"
+
+	notification_type = toast
+}
+
+REPLACE_OR_CREATE:simon_commission_retreat_towards_independence = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/journal.dds"
+
+	notification_type = toast
+}
+
+REPLACE_OR_CREATE:swadeshi_movement_successful = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/journal.dds"
+
+	notification_type = toast
+}
+
+REPLACE_OR_CREATE:swadeshi_movement_failed = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/journal.dds"
+
+	notification_type = toast
+}
+
+REPLACE_OR_CREATE:non_cooperation_movement_started = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/influence.dds"
+
+	notification_type = toast
+}
+
+REPLACE_OR_CREATE:non_cooperation_movement_successful = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/journal.dds"
+
+	notification_type = toast
+}
+
+REPLACE_OR_CREATE:non_cooperation_movement_failed = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/journal.dds"
+
+	notification_type = toast
+}
+
+REPLACE_OR_CREATE:communal_divides_change_factor_increased = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/journal.dds"
+
+	notification_type = toast
+}
+
+REPLACE_OR_CREATE:inc_supporting_burmese_autonomy = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/journal.dds"
+
+	notification_type = toast
+}
+
+REPLACE_OR_CREATE:inc_supporting_burmese_territorial_integrity = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/journal.dds"
+
+	notification_type = toast
+}

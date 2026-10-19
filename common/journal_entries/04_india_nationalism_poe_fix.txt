@@ -1,0 +1,266 @@
+﻿# Replace this JE with The Indian War of Independence as a new fail condition for je_india_home_rule
+REPLACE:je_india_nationalism = {
+	should_be_pinned_by_default_involved = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
+	icon = "gfx/interface/icons/war_goals/independence.dds"
+
+	group = je_group_british_india_global
+
+	should_be_involved = {
+		OR = {
+			c:BIC ?= ROOT
+			c:BIC ?= {
+				overlord ?= ROOT
+			}
+			AND = {
+				c:BHT ?= ROOT
+				is_revolutionary = yes
+			}
+		}
+	}
+
+	should_show_when_not_involved = {
+		exists = c:BIC
+		is_subject_of = c:BIC
+	}
+
+	is_shown_when_inactive = {
+		has_dlc_feature = ip2_content
+		c:BIC ?= {
+			has_civil_war_from_movement_type = movement_type:movement_india_pan_national
+		}
+	}
+
+	possible = {
+		always = yes
+	}
+
+	immediate = {
+		hidden_effect = {
+			c:BIC ?= {
+				save_scope_as = india_scope
+				trigger_event = { id = india_nationalism_events.1 popup = yes }
+				set_variable = indian_war_of_independence
+			}
+			if = {
+				limit = {
+					c:BIC ?= {
+						is_subject = yes
+					}
+				}
+				c:BIC ?= {
+					overlord ?= {
+						save_scope_as = overlord_scope
+						trigger_event = { id = india_nationalism_events.1 popup = yes }
+					}
+				}
+			}
+			if = {
+				limit = {
+					exists = c:BUR
+					c:BIC ?= {
+						OR = {
+							has_variable = supporting_burmese_subject
+							has_variable = supporting_burmese_independence
+						}
+					}
+				}
+				c:BUR ?= {
+					trigger_event = { id = indian_nation_events.15 popup = yes }
+				}
+			}
+			c:BHT ?= {
+				save_scope_as = revolutionary_india_scope
+				set_variable = revolutionary_india
+			}
+			every_character_in_jail = {
+				limit = {
+					has_variable = indian_national_movement_prisoner
+				}
+				# This is the only way we can "liberate" these agitators if Revolutionary India wins the war
+				free_character_from_void = yes
+				transfer_character = scope:revolutionary_india_scope
+				place_character_in_void = 132
+			}
+		}
+	}
+
+	custom_completion_header = je_india_nationalism_complete_header
+
+	complete = {
+		custom_tooltip = {
+			text = india_wins_war_of_independence_tt
+			NAND = {
+				exists = c:BHT
+				c:BHT = {
+					is_revolutionary = yes
+				}
+			}
+			c:BIC = {
+				has_variable = revolutionary_india
+			}
+		}
+	}
+
+	custom_on_completion_header = je_india_nationalism_on_complete_header
+
+	on_complete = {
+		custom_tooltip = india_emerges_free_tt
+		c:BIC = {
+			# Reset india_scope to the surviving, former revolutionary country so that scripted effects work
+			save_scope_as = india_scope
+			if = {
+				limit = {
+					any_character_in_jail = {
+						has_variable = indian_national_movement_prisoner
+					}
+				}
+				custom_tooltip = {
+					text = all_indian_national_movement_agitators_freed_tt
+					every_character_in_jail = {
+						limit = {
+							has_variable = indian_national_movement_prisoner
+						}
+						free_character_from_void = yes
+						remove_variable = prison_country
+						remove_variable = prison_time_var
+					}
+				}
+			}
+			hidden_effect = {
+				change_tag = BHT
+			}
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				custom_tooltip = {
+					text = all_indian_states_transferred_from_overlord_tt
+					transfer_all_indian_states_from_overlord = yes
+					transfer_all_princely_state_subjects_from_overlord = yes
+				}
+			}
+			# Give Union of India JE
+			if = {
+				limit = {
+					any_direct_subject = {
+						is_princely_state = yes
+					}
+				}
+				hidden_effect = {
+					add_journal_entry = {
+						type = je_federation_of_india
+					}
+				}
+			}
+			# Burmese Sovereignty Effects
+			indian_sovereignty_je_burma_effects = yes
+			# Partition India if Communal Divides failed
+			if = {
+				limit = {
+					has_variable = indian_partition_promised
+					# Has the necessary land to create Pakistan
+					OR = {
+						has_state_in_state_region = STATE_PUNJAB
+						has_state_in_state_region = STATE_SINDH
+						has_state_in_state_region = STATE_KASHMIR
+						has_state_in_state_region = STATE_PASHTUNISTAN
+						has_state_in_state_region = STATE_BALUCHISTAN
+						has_state_in_state_region = STATE_QUETTA
+						has_state_in_state_region = STATE_EAST_BENGAL
+						OR = {
+							scope:revolutionary_india_scope ?= {
+								OR = {
+									has_state_in_state_region = STATE_PUNJAB
+									has_state_in_state_region = STATE_SINDH
+									has_state_in_state_region = STATE_KASHMIR
+									has_state_in_state_region = STATE_PASHTUNISTAN
+									has_state_in_state_region = STATE_BALUCHISTAN
+									has_state_in_state_region = STATE_QUETTA
+									has_state_in_state_region = STATE_EAST_BENGAL
+								}
+							}
+						}
+					}
+				}
+				custom_tooltip = {
+					text = india_will_partition_tt
+					trigger_event = {
+						id = indian_nation_events.7
+					}
+				}
+			}
+			hidden_effect = {
+				trigger_event = {
+					id = india_home_rule_events.1
+					popup = yes
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = scope:overlord_scope
+				}
+				scope:overlord_scope = {
+					trigger_event = {
+						id = bic_breakup.7
+						popup = yes
+					}
+				}
+			}
+		}
+	}
+
+	custom_failure_header = je_india_nationalism_fail_header
+
+	fail = {
+		custom_tooltip = {
+			text = india_loses_war_of_independence_tt
+			NAND = {
+				exists = c:BHT
+				c:BHT = {
+					is_revolutionary = yes
+				}
+			}
+			c:BIC = {
+				NOT = {
+					has_variable = revolutionary_india
+				}
+			}
+		}
+	}
+
+	custom_on_failure_header = je_india_nationalism_on_fail_header
+
+	on_fail = {
+		custom_tooltip = {
+			text = british_rule_secured_indefinitely_tt
+			c:BIC = {
+				set_variable = colonial_victory_in_indian_war_of_independence
+				trigger_event = {
+					id = india_nationalism_events.2
+					popup = yes
+				}
+			}
+			scope:overlord_scope ?= {
+				trigger_event = {
+					id = india_nationalism_events.2
+					popup = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_character_in_jail = {
+					has_variable = indian_national_movement_prisoner
+				}
+			}
+			custom_tooltip = {
+				text = all_indian_national_movement_agitators_imprisoned_forever_tt
+			}
+		}
+	}
+
+	weight = 1000
+}

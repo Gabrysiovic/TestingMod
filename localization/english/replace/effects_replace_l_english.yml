@@ -1,0 +1,3 @@
+﻿l_english:
+ DECREASE_AUTONOMY_FIRST:1 "We decrease our [concept_autonomy], becoming a [SUBJECT_TYPE.GetName|v]"
+ DECREASE_AUTONOMY_THIRD:1 "[COUNTRY.GetName] has their autonomy decreased, becoming a [SUBJECT_TYPE.GetName|v] of [COUNTRY.GetOverlord.GetName]"

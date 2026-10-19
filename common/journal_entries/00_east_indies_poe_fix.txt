@@ -1,0 +1,90 @@
+﻿REPLACE:je_consolidate_colonial_rule = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	group = je_group_british_india
+
+	is_shown_in_lobby = {
+		# Other JEs are shown instead
+		NOT = {
+			has_dlc_feature = ip2_content #Pivot of Empire
+		}
+		c:BIC ?= THIS
+	}
+
+	immediate = {
+		ig:ig_industrialists ?= {
+			save_scope_as = industrialists_ig
+		}
+	}
+
+	complete = {
+		any_state = {
+			filter = {
+				OR = {
+					state_region = s:STATE_PUNJAB
+					state_region = s:STATE_HILL_PUNJAB
+					state_region = s:STATE_SINDH
+					state_region = s:STATE_PASHTUNISTAN
+					state_region = s:STATE_QUETTA
+					state_region = s:STATE_KASHMIR
+					state_region = s:STATE_BALUCHISTAN
+					state_region = s:STATE_MANDALAY
+					state_region = s:STATE_KACHIN
+					state_region = s:STATE_SHAN_STATES
+					state_region = s:STATE_PEGU
+				}
+			}
+			OR = {
+				owner = ROOT
+				owner = {
+					is_subject_of = ROOT
+				}
+				trigger_if = {
+					limit = {
+						exists = ROOT.overlord
+					}
+					OR = {
+						owner = ROOT.overlord
+						owner = {
+							is_subject_of = ROOT.overlord
+						}
+					}
+				}
+			}
+			percent >= 0.80
+		}
+		NOT = {
+            has_any_secessionists_growing = yes
+		}
+	}
+
+	on_complete = {
+		trigger_event = { id = east_indies.1 }
+		set_variable = consolidated_colonial_rule
+	}
+
+	event_outcome_completed_effect_desc = {
+        header = event_effects_header_east_indies.1.a
+        effect = { execute_event_option = { event = east_indies.1 option = 0 } }
+    }
+
+    event_outcome_completed_effect_desc = {
+        header = event_effects_header_east_indies.1.b
+        effect = { execute_event_option = { event = east_indies.1 option = 1 } }
+    }
+
+    fail = {
+    	trigger_if = {
+    		limit = {
+    			has_dlc_feature = ip2_content
+    		}
+    		NOT = {
+    			has_journal_entry = je_uneasy_raj
+    		}
+    	}
+    }
+
+	should_be_pinned_by_default_uninvolved_or_context = yes
+
+	weight = 100
+}

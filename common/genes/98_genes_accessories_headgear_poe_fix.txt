@@ -1,0 +1,24 @@
+﻿special_genes = {
+	accessory_genes = {
+
+
+	#####################################
+	#									#
+	# 			   HEADGEAR 			#
+	#									#
+	#####################################
+		TRY_INJECT:headgear = {
+			indian_military_turban = {
+				index = 122
+				male = {
+					1 = male_headgear_arabic_common_02
+				}
+
+				female = {
+				}
+				boy = male
+				girl = female
+			}
+		}
+	}
+}

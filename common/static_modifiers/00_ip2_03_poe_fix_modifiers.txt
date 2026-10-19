@@ -1,0 +1,179 @@
+﻿# Utilitarian Content Modifiers
+REPLACE:utilitarian_bonus = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_education_access_add = 0.02
+}
+
+REPLACE:util_colonial_admin_success = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	interest_group_pol_str_mult = 0.05
+	interest_group_pop_attraction_mult = 0.02
+}
+
+REPLACE_OR_CREATE:utilitarian_bureaucracy = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_bureaucracy_investment_cost_factor_mult = -0.02
+}
+
+REPLACE:utilitarian_malus = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+	country_legitimacy_base_add = -5
+}
+
+REPLACE_OR_CREATE:distancing_from_overlord = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	country_overlord_income_transfer_mult = -0.10
+}
+
+REPLACE_OR_CREATE:empowering_civil_servants = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	interest_group_pol_str_mult = 0.10
+}
+
+REPLACE_OR_CREATE:empowering_civil_servants_angry = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	interest_group_approval_add = -2
+}
+
+REPLACE:persuasive_util_pamphlet_pol_str = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	interest_group_pol_str_mult = 0.20
+}
+
+REPLACE:persuasive_util_pamphlet_attract = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	political_movement_pop_attraction_mult = 1.00 # +100%
+}
+
+REPLACE_OR_CREATE:utilitarian_advocate = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	character_prominence_add = 20
+}
+
+REPLACE_OR_CREATE:champion_of_utilitarianism = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	character_popularity_add = 20
+}
+
+REPLACE:unrestrained_fortune_seekers = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	building_bureaucrats_standard_of_living_add = 1
+}
+
+REPLACE:restrained_fortune_seekers = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	building_government_administration_throughput_add = -0.20
+}
+
+REPLACE:utilitarian_census_in_progress_cost = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	country_bureaucracy_mult = -0.05
+	state_infrastructure_mult = 0.10
+	country_legitimacy_base_add = 5
+}
+
+REPLACE:util_authority = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_authority_mult = 0.1
+	country_legitimacy_base_add = -5
+}
+
+REPLACE:railway_hunger_relief = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	state_lower_strata_standard_of_living_add = 1
+	building_railway_throughput_add = -0.50
+	state_sell_orders_grain_add = 100
+}
+
+REPLACE_OR_CREATE:grand_indian_railway = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	building_railway_throughput_add = 0.10
+}
+
+# Princely States Content Modifiers
+REPLACE:modifier_increase_autonomy = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	country_liberty_desire_add = 0.20
+}
+
+REPLACE_OR_CREATE:india_eyed_with_suspicion = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	country_liberty_desire_add = -0.20
+}
+
+REPLACE_OR_CREATE:order_of_the_indian_empire = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_authority_add = 200
+}
+
+REPLACE_OR_CREATE:indian_knight_grand_commander = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	character_prominence_add = 20
+}
+
+REPLACE:doctrine_of_lapse_upset = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	country_liberty_desire_add = 0.10
+}
+
+REPLACE_OR_CREATE:princely_state_stockpiling_small_arms = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	state_buy_orders_small_arms_add = 1
+}
+
+REPLACE_OR_CREATE:princely_state_stockpiling_artillery = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	state_buy_orders_artillery_add = 1
+}
+
+REPLACE_OR_CREATE:princely_state_stockpiling_ammunition = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	state_buy_orders_ammunition_add = 1
+}
+
+REPLACE_OR_CREATE:princely_state_stockpile_coordination = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_bureaucracy_add = -1
+}
+
+REPLACE_OR_CREATE:princely_state_small_arms_stockpile = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	state_sell_orders_small_arms_add = 1
+}
+
+REPLACE_OR_CREATE:princely_state_artillery_stockpile = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	state_sell_orders_artillery_add = 1
+}
+
+REPLACE_OR_CREATE:princely_state_ammunition_stockpile = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	state_sell_orders_ammunition_add = 1
+}
+
+# Caste Conflict Modifiers
+
+REPLACE:tides_of_change = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_kshatriyas_qualification_growth_mult = 0.25
+	country_vaishyas_qualification_growth_mult = 0.25
+
+	country_shudras_qualification_growth_mult = 0.25
+	country_dalit_qualification_growth_mult = 0.25
+}
+
+REPLACE:future_minds = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_kshatriyas_education_access_add = 0.10
+	country_vaishyas_education_access_add = 0.10
+
+	country_shudras_education_access_add = 0.10
+	country_dalit_education_access_add = 0.10
+}
+
+REPLACE:priestly_polluted_water = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	country_radicalism_increases_violent_hostility_mult = 0.10
+	country_radicalism_increases_cultural_erasure_mult = 0.10
+	country_radicalism_increases_open_prejudice_mult = 0.10
+}

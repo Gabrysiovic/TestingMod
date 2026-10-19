@@ -1,0 +1,4 @@
+﻿l_english:
+ grant_leadership_must_be_south_asian: "[concept_agitator] must have a [concept_culture] with the [GetCulture('bengali').GetHeritageTrait.GetTraitGroup.GetName] [Concept('concept_discrimination_trait_group', '$concept_discrimination_trait_group_short$')]"
+# FIX LINE
+ arrest_agitator_supports_indian_national_movement: "[concept_agitator] supports the #b $movement_india_pan_national$#!"

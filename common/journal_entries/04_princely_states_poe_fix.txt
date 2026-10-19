@@ -1,0 +1,289 @@
+﻿REPLACE:je_princely_states = {
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	group = je_group_historical_content
+
+    scripted_progress_bar = je_princely_states_dissent_progress_bar
+
+    scripted_button = je_princely_states_spread_dissent
+    scripted_button = je_princely_states_stockpile_munitions
+    scripted_button = je_princely_states_stop_stockpiling_munitions
+
+    is_shown_in_lobby = {
+        has_dlc_feature = ip2_content #Pivot of Empire
+        OR = {
+            is_in_geographic_region = geographic_region_india
+            is_in_geographic_region = geographic_region_burma
+        }
+        OR = {
+            has_indian_primary_culture = yes
+            any_primary_culture = {
+                has_discrimination_trait = heritage_burmese
+            }
+        }
+        OR = {
+            is_direct_subject_of = c:BIC
+            AND = {
+                OR = {
+                    trigger_if = {
+                        limit = {
+                            c:BIC ?= { is_subject = yes }
+                        }
+                        is_direct_subject_of = c:BIC.overlord
+                    }
+                    is_subject = no
+                }
+                has_strategic_land_adjacency = c:BIC
+            }
+        }
+    }
+
+    is_shown_when_inactive = {
+        has_dlc_feature = ip2_content
+        c:BIC ?= {
+            has_journal_entry = je_uneasy_raj
+        }
+        OR = {
+            is_in_geographic_region = geographic_region_india
+            is_in_geographic_region = geographic_region_burma
+        }
+        OR = {
+            has_indian_primary_culture = yes
+            any_primary_culture = {
+                has_discrimination_trait = heritage_burmese
+            }
+        }
+        OR = {
+            is_direct_subject_of = c:BIC
+            AND = {
+                OR = {
+                    trigger_if = {
+                        limit = {
+                            c:BIC ?= { is_subject = yes }
+                        }
+                        is_direct_subject_of = c:BIC.overlord
+                    }
+                    is_subject = no
+                }
+                has_strategic_land_adjacency = c:BIC
+            }
+        }
+    }
+
+    possible = {
+        c:BIC ?= {
+            has_journal_entry = je_uneasy_raj
+        }
+        OR = {
+            is_direct_subject_of = c:BIC
+            AND = {
+                OR = {
+                    trigger_if = {
+                        limit = {
+                            c:BIC ?= { is_subject = yes }
+                        }
+                        is_direct_subject_of = c:BIC.overlord
+                    }
+                    is_subject = no
+                }
+                has_strategic_land_adjacency = c:BIC
+            }
+        }
+        #custom_tooltip = {
+        #    text = taken_begin_fomenting_rebellion_decision_tt
+        #}
+        has_variable = sepoy_mutiny_instigator
+    }
+
+    status_desc = {
+        first_valid = {
+            triggered_desc = {
+                desc = blank_tt
+                trigger = {
+                    NOT = {
+                        has_journal_entry = je_princely_states
+                    }
+                }
+            }
+            triggered_desc = {
+                desc = je_princely_states_status
+                trigger = {
+                    always = yes
+                }
+            }
+        }
+    }
+
+    modifiers_while_active = {
+        modifier_increase_autonomy
+    }
+
+    immediate = {
+        ROOT = {
+            save_scope_as = princely_state_scope
+        }
+        c:BIC ?= {
+            save_scope_as = overlord_scope
+            je:je_uneasy_raj ?= {
+                add_to_variable_list = {
+                    name = fomenting_rebellion_countries
+                    target = ROOT
+                }
+            }
+            # This is updated monthly but we increment it now so the Stockpile Munitions button is more accurate
+            # if a player pauses before the monthly tick
+            change_global_variable = {
+                name = num_sepoy_rebel_countries
+                add = 1
+            }
+        }
+        scope:overlord_scope = {
+            post_notification = struggle_for_sovereignty_message
+        }
+        if = {
+            limit = {
+                is_subject = yes
+            }
+            je:je_princely_states ?= {
+                set_variable = started_subject
+            }
+        }
+        je:je_princely_states ?= {
+            set_variable = {
+                name = one_year_timer
+                years = 1
+            }
+            set_variable = {
+                name = two_year_timer
+                years = 2
+            }
+            set_variable = {
+                name = three_year_timer
+                years = 3
+            }
+            set_variable = {
+                name = four_year_timer
+                years = 4
+            }
+            set_variable = {
+                name = five_year_timer
+                years = 5
+            }
+        }
+        g:small_arms = {
+            save_scope_as = small_arms_scope
+        }
+        g:artillery = {
+            save_scope_as = artillery_scope
+        }
+        g:ammunition = {
+            save_scope_as = ammunition_scope
+        }
+    }
+
+    complete = {
+        custom_tooltip = {
+            text = sepoy_mutiny_triggered_fomenting_rebellion_tt
+            c:BIC ?= {
+                has_journal_entry = je_sepoy_mutiny
+            }
+        }
+    }
+
+    on_complete = {
+        #trigger_event = { id = princely_states.2 }
+        custom_tooltip = join_indian_rebellion_tt
+        custom_tooltip = gain_colonial_indian_territory_rebellion_tt
+    }
+
+    invalid = {
+        OR = {
+            NOT = {
+                exists = c:BIC
+            }
+            trigger_if = {
+                limit = {
+                    scope:journal_entry ?= {
+                        has_variable = started_subject
+                    }
+                }
+                is_subject = no
+            }
+            AND = {
+                is_subject = yes
+                NOR = {
+                    is_direct_subject_of = c:BIC
+                    AND = {
+                        c:BIC ?= {
+                            is_subject = yes
+                        }
+                        is_direct_subject_of = c:BIC.overlord
+                    }
+                }
+            }
+        }
+    }
+
+    on_invalid = {
+        if = {
+            limit = {
+                has_variable = sepoy_mutiny_instigator
+            }
+            remove_variable = sepoy_mutiny_instigator
+        }
+        c:BIC ?= {
+            je:je_uneasy_raj ?= {
+                remove_list_variable = {
+                    name = fomenting_rebellion_countries
+                    target = ROOT
+                }
+            }
+        }
+    }
+
+    fail = {
+        custom_tooltip = {
+            text = indian_rebellion_averted_fomenting_rebellion_tt
+            c:BIC ?= {
+                # Variable set when BIC completes (timeout) je_unasy_raj
+                has_variable = company_rule_enduring
+            }
+        }
+    }
+
+    on_fail = {
+        hidden_effect = {
+            trigger_event = { id = princely_states.2 }
+        }
+        show_as_tooltip = {
+            execute_event_option = { event = princely_states.2 option = 0 }
+        }
+    }
+
+    on_monthly_pulse = {
+        effect = {
+            if = {
+                limit = {
+                    scope:journal_entry ?= {
+                        has_variable = stockpiling_munitions
+                    }
+                }
+                update_locally_produced_munitions = yes
+            }
+        }
+    }
+
+    on_yearly_pulse = {
+        random_events = {
+            60 = 0
+            10 = princely_states.3
+            10 = princely_states.4
+            60 = princely_states.5
+        }
+    }
+
+    weight = 1000
+    can_revolution_inherit = no
+
+    should_be_pinned_by_default_uninvolved_or_context = yes
+}

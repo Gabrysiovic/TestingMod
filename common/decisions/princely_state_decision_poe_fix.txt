@@ -1,0 +1,82 @@
+﻿REPLACE:princely_state_decision = {
+	is_shown = {
+		has_dlc_feature = ip2_content
+		NOT = {
+        	has_variable = sepoy_mutiny_instigator
+        }
+        c:BIC ?= {
+            has_journal_entry = je_uneasy_raj
+        }
+        OR = {
+        	is_in_geographic_region = geographic_region_india
+        	is_in_geographic_region = geographic_region_burma
+        }
+        OR = {
+            has_indian_primary_culture = yes
+            any_primary_culture = {
+                has_discrimination_trait = heritage_burmese
+            }
+        }
+        OR = {
+			is_direct_subject_of = c:BIC
+			AND = {
+				OR = {
+					trigger_if = {
+						limit = {
+							c:BIC ?= { is_subject = yes }
+						}
+						is_direct_subject_of = c:BIC.overlord
+					}
+					is_subject = no
+				}
+				has_strategic_land_adjacency = c:BIC
+			}
+		}
+	}
+
+	possible = {
+		c:BIC ?= {
+            has_journal_entry = je_uneasy_raj
+        }
+        OR = {
+			is_direct_subject_of = c:BIC
+			AND = {
+				OR = {
+					trigger_if = {
+						limit = {
+							c:BIC ?= { is_subject = yes }
+						}
+						is_direct_subject_of = c:BIC.overlord
+					}
+					is_subject = no
+				}
+				has_strategic_land_adjacency = c:BIC
+			}
+		}
+	}
+
+	when_taken = {
+		custom_tooltip = {
+			text = activates_fomenting_rebellion_tt
+			set_variable = sepoy_mutiny_instigator
+			if = {
+				# This allows a country to restart the JE if it was made invalid due to gaining independence
+				# (only humans will do this)
+				limit = {
+					NOR = {
+						has_journal_entry = je_princely_states
+						has_inactive_journal_entry = je_princely_states
+					}
+				}
+				add_journal_entry = {
+					type = je_princely_states
+				}
+			}
+		}
+		custom_tooltip = commit_to_indian_rebellion_tt
+	}
+
+	ai_chance = {
+		value = 0
+	}
+}

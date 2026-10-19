@@ -1,0 +1,821 @@
+﻿REPLACE:gov_social_monarchy_princely_state_rawalate = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_MAHARAWAL"
+	female_ruler = "RULER_TITLE_MAHARANI"
+
+	male_heir = "RULER_TITLE_YUVARAJ"
+	female_heir = "RULER_TITLE_YUVARANI"
+
+	possible = {
+		has_law = law_type:law_social_monarchy
+		coa_fascist_trigger = no
+		coa_absolute_monarchy_trigger = no
+		is_subject = yes
+		exists = c:JAS
+		c:JAS = ROOT
+		has_gov_regency = no
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+REPLACE:gov_social_monarchy_princely_state_maharaja = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_MAHARAJA"
+	female_ruler = "RULER_TITLE_MAHARANI"
+
+	male_heir = "RULER_TITLE_YUVARAJ"
+	female_heir = "RULER_TITLE_YUVARANI"
+
+	possible = {
+		has_law = law_type:law_social_monarchy
+		coa_fascist_trigger = no
+		coa_absolute_monarchy_trigger = no
+		is_subject = yes
+		OR = {
+			AND = { exists = c:NAG c:NAG = ROOT }
+			AND = { exists = c:MYS c:MYS = ROOT }
+			AND = { exists = c:GWA c:GWA = ROOT }
+			AND = { exists = c:BER c:BER = ROOT }
+			AND = { exists = c:MEW c:MEW = ROOT }
+			AND = { exists = c:JOD c:JOD = ROOT }
+			AND = { exists = c:JAI c:JAI = ROOT }
+			AND = { exists = c:PTA c:PTA = ROOT } # Maharaja-e Rajgan
+		}
+		NOT = { is_subject_type = subject_type_crown_land }
+		has_gov_regency = no
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+REPLACE:gov_social_monarchy_princely_state_diwanate = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_DIWAN"
+	female_ruler = "RULER_TITLE_BEGUM"
+
+	male_heir = "RULER_TITLE_WALI_AHAD"
+	female_heir = "RULER_TITLE_PRINCESS"
+
+	possible = {
+		has_law = law_type:law_social_monarchy
+		coa_fascist_trigger = no
+		coa_absolute_monarchy_trigger = no
+		is_subject = yes
+		OR = {
+			AND = { exists = c:PLP c:PLP = ROOT }
+		}
+		NOT = { is_subject_type = subject_type_crown_land }
+		has_gov_regency = no
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+REPLACE:gov_social_monarchy_princely_state_khanate = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_KHAN"
+	female_ruler = "RULER_TITLE_KHATUN"
+
+	male_heir = "RULER_TITLE_PRINCE"
+	female_heir = "RULER_TITLE_PRINCESS"
+
+	possible = {
+		has_law = law_type:law_social_monarchy
+		coa_fascist_trigger = no
+		coa_absolute_monarchy_trigger = no
+		is_subject = yes
+		OR = {
+			AND = { exists = c:KAL c:KAL = ROOT }
+			AND = { exists = c:DIR c:DIR = ROOT }
+		}
+		NOT = { is_subject_type = subject_type_crown_land }
+		has_gov_regency = no
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+REPLACE:gov_social_monarchy_princely_state_nizamate = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_NIZAM"
+	female_ruler = "RULER_TITLE_NAWAB_BEGUM"
+
+	male_heir = "RULER_TITLE_WALI_AHAD"
+	female_heir = "RULER_TITLE_SHAHZADI"
+
+	possible = {
+		has_law = law_type:law_social_monarchy
+		coa_fascist_trigger = no
+		coa_absolute_monarchy_trigger = no
+		is_subject = yes
+		AND = { exists = c:HYD c:HYD = ROOT }
+		NOT = { is_subject_type = subject_type_crown_land }
+		has_gov_regency = no
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+REPLACE:gov_social_monarchy_princely_state_nawabate = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_NAWAB"
+	female_ruler = "RULER_TITLE_NAWAB_BEGUM"
+
+	male_heir = "RULER_TITLE_NAWABZADA"
+	female_heir = "RULER_TITLE_NAWABZADI"
+
+	possible = {
+		has_law = law_type:law_social_monarchy
+		coa_fascist_trigger = no
+		coa_absolute_monarchy_trigger = no
+		is_subject = yes
+		OR = {
+			AND = { exists = c:BHW c:BHW = ROOT }
+			AND = { exists = c:CAR c:CAR = ROOT }
+			AND = { exists = c:JUN c:JUN = ROOT }
+			AND = { exists = c:KHR c:KHR = ROOT }
+			AND = { exists = c:BGL c:BGL = ROOT }
+			AND = { exists = c:AWA c:AWA = ROOT }
+			AND = { exists = c:BHO c:BHO = ROOT }
+			AND = { exists = c:KNO c:KNO = ROOT }
+			AND = { exists = c:MAK c:MAK = ROOT }
+		}
+		NOT = { is_subject_type = subject_type_crown_land }
+		has_gov_regency = no
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+REPLACE:gov_social_monarchy_princely_state_maratha_raja = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_RAJA_CHHATRAPATI"
+	female_ruler = "RULER_TITLE_RANI"
+
+	male_heir = "RULER_TITLE_PRINCE"
+	female_heir = "RULER_TITLE_PRINCESS"
+
+	possible = {
+		has_law = law_type:law_social_monarchy
+		coa_fascist_trigger = no
+		coa_absolute_monarchy_trigger = no
+		is_subject = yes
+		OR = {
+			AND = { exists = c:SAT c:SAT = ROOT }
+			AND = { exists = c:KHP c:KHP = ROOT }
+		}
+		country_has_state_religion = rel:hindu
+		NOT = { is_subject_type = subject_type_crown_land }
+		has_gov_regency = no
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+REPLACE:gov_social_monarchy_princely_state_raja = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_RAJA"
+	female_ruler = "RULER_TITLE_RANI"
+
+	male_heir = "RULER_TITLE_PRINCE"
+	female_heir = "RULER_TITLE_PRINCESS"
+
+	possible = {
+		has_law = law_type:law_social_monarchy
+		coa_fascist_trigger = no
+		coa_absolute_monarchy_trigger = no
+		is_in_geographic_region = geographic_region_india
+		is_subject = yes
+		country_has_state_religion = rel:hindu
+		NOT = { is_subject_type = subject_type_crown_land }
+		has_gov_regency = no
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+REPLACE:gov_social_monarchy_princely_state_sultan = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_SULTAN"
+	female_ruler = "RULER_TITLE_SULTANA"
+
+	male_heir = "RULER_TITLE_PRINCE"
+	female_heir = "RULER_TITLE_PRINCESS"
+
+	possible = {
+		has_law = law_type:law_social_monarchy
+		coa_fascist_trigger = no
+		coa_absolute_monarchy_trigger = no
+		is_in_geographic_region = geographic_region_india
+		is_subject = yes
+		OR = {
+			country_has_state_religion = rel:sunni
+			country_has_state_religion = rel:shiite
+			country_has_state_religion = rel:ibadi
+		}
+		NOT = { is_subject_type = subject_type_crown_land }
+		has_gov_regency = no
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+REPLACE:gov_social_monarchy_princely_state_rawalate_fascist = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_MAHARAWAL"
+	female_ruler = "RULER_TITLE_MAHARANI"
+
+	male_heir = "RULER_TITLE_YUVARAJ"
+	female_heir = "RULER_TITLE_YUVARANI"
+
+	possible = {
+		has_law = law_type:law_social_monarchy
+		coa_fascist_trigger = yes
+		coa_absolute_monarchy_trigger = no
+		is_subject = yes
+		exists = c:JAS
+		c:JAS = ROOT
+		has_gov_regency = no
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+REPLACE:gov_social_monarchy_princely_state_maharaja_fascist = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_MAHARAJA"
+	female_ruler = "RULER_TITLE_MAHARANI"
+
+	male_heir = "RULER_TITLE_YUVARAJ"
+	female_heir = "RULER_TITLE_YUVARANI"
+
+	possible = {
+		has_law = law_type:law_social_monarchy
+		coa_fascist_trigger = yes
+		coa_absolute_monarchy_trigger = no
+		is_subject = yes
+		OR = {
+			AND = { exists = c:NAG c:NAG = ROOT }
+			AND = { exists = c:MYS c:MYS = ROOT }
+			AND = { exists = c:GWA c:GWA = ROOT }
+			AND = { exists = c:BER c:BER = ROOT }
+			AND = { exists = c:MEW c:MEW = ROOT }
+			AND = { exists = c:JOD c:JOD = ROOT }
+			AND = { exists = c:JAI c:JAI = ROOT }
+			AND = { exists = c:PTA c:PTA = ROOT } # Maharaja-e Rajgan
+		}
+		NOT = { is_subject_type = subject_type_crown_land }
+		has_gov_regency = no
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+REPLACE:gov_social_monarchy_princely_state_diwanate_fascist = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_DIWAN"
+	female_ruler = "RULER_TITLE_BEGUM"
+
+	male_heir = "RULER_TITLE_WALI_AHAD"
+	female_heir = "RULER_TITLE_PRINCESS"
+
+	possible = {
+		has_law = law_type:law_social_monarchy
+		coa_fascist_trigger = yes
+		coa_absolute_monarchy_trigger = no
+		is_subject = yes
+		OR = {
+			AND = { exists = c:PLP c:PLP = ROOT }
+		}
+		NOT = { is_subject_type = subject_type_crown_land }
+		has_gov_regency = no
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+REPLACE:gov_social_monarchy_princely_state_khanate_fascist = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_KHAN"
+	female_ruler = "RULER_TITLE_KHATUN"
+
+	male_heir = "RULER_TITLE_PRINCE"
+	female_heir = "RULER_TITLE_PRINCESS"
+
+	possible = {
+		has_law = law_type:law_social_monarchy
+		coa_fascist_trigger = yes
+		coa_absolute_monarchy_trigger = no
+		is_subject = yes
+		OR = {
+			AND = { exists = c:KAL c:KAL = ROOT }
+			AND = { exists = c:DIR c:DIR = ROOT }
+		}
+		NOT = { is_subject_type = subject_type_crown_land }
+		has_gov_regency = no
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+REPLACE:gov_social_monarchy_princely_state_nizamate_fascist = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_NIZAM"
+	female_ruler = "RULER_TITLE_NAWAB_BEGUM"
+
+	male_heir = "RULER_TITLE_WALI_AHAD"
+	female_heir = "RULER_TITLE_SHAHZADI"
+
+	possible = {
+		has_law = law_type:law_social_monarchy
+		coa_fascist_trigger = yes
+		coa_absolute_monarchy_trigger = no
+		is_subject = yes
+		AND = { exists = c:HYD c:HYD = ROOT }
+		NOT = { is_subject_type = subject_type_crown_land }
+		has_gov_regency = no
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+REPLACE:gov_social_monarchy_princely_state_nawabate_fascist = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_NAWAB"
+	female_ruler = "RULER_TITLE_NAWAB_BEGUM"
+
+	male_heir = "RULER_TITLE_NAWABZADA"
+	female_heir = "RULER_TITLE_NAWABZADI"
+
+	possible = {
+		has_law = law_type:law_social_monarchy
+		coa_fascist_trigger = yes
+		coa_absolute_monarchy_trigger = no
+		is_subject = yes
+		OR = {
+			AND = { exists = c:BHW c:BHW = ROOT }
+			AND = { exists = c:CAR c:CAR = ROOT }
+			AND = { exists = c:JUN c:JUN = ROOT }
+			AND = { exists = c:KHR c:KHR = ROOT }
+			AND = { exists = c:BGL c:BGL = ROOT }
+			AND = { exists = c:AWA c:AWA = ROOT }
+			AND = { exists = c:BHO c:BHO = ROOT }
+			AND = { exists = c:KNO c:KNO = ROOT }
+			AND = { exists = c:MAK c:MAK = ROOT }
+		}
+		NOT = { is_subject_type = subject_type_crown_land }
+		has_gov_regency = no
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+REPLACE:gov_social_monarchy_princely_state_maratha_raja_fascist = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_RAJA_CHHATRAPATI"
+	female_ruler = "RULER_TITLE_RANI"
+
+	male_heir = "RULER_TITLE_PRINCE"
+	female_heir = "RULER_TITLE_PRINCESS"
+
+	possible = {
+		has_law = law_type:law_social_monarchy
+		coa_fascist_trigger = yes
+		coa_absolute_monarchy_trigger = no
+		is_subject = yes
+		OR = {
+			AND = { exists = c:SAT c:SAT = ROOT }
+			AND = { exists = c:KHP c:KHP = ROOT }
+		}
+		country_has_state_religion = rel:hindu
+		NOT = { is_subject_type = subject_type_crown_land }
+		has_gov_regency = no
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+REPLACE:gov_social_monarchy_princely_state_raja_fascist = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_RAJA"
+	female_ruler = "RULER_TITLE_RANI"
+
+	male_heir = "RULER_TITLE_PRINCE"
+	female_heir = "RULER_TITLE_PRINCESS"
+
+	possible = {
+		has_law = law_type:law_social_monarchy
+		coa_fascist_trigger = yes
+		coa_absolute_monarchy_trigger = no
+		is_in_geographic_region = geographic_region_india
+		is_subject = yes
+		country_has_state_religion = rel:hindu
+		NOT = { is_subject_type = subject_type_crown_land }
+		has_gov_regency = no
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+REPLACE:gov_social_monarchy_princely_state_sultan_fascist = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_SULTAN"
+	female_ruler = "RULER_TITLE_SULTANA"
+
+	male_heir = "RULER_TITLE_PRINCE"
+	female_heir = "RULER_TITLE_PRINCESS"
+
+	possible = {
+		has_law = law_type:law_social_monarchy
+		coa_fascist_trigger = yes
+		coa_absolute_monarchy_trigger = no
+		is_in_geographic_region = geographic_region_india
+		is_subject = yes
+		OR = {
+			country_has_state_religion = rel:sunni
+			country_has_state_religion = rel:shiite
+			country_has_state_religion = rel:ibadi
+		}
+		NOT = { is_subject_type = subject_type_crown_land }
+		has_gov_regency = no
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+REPLACE:gov_social_monarchy_princely_state_rawalate_absolutist = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_MAHARAWAL"
+	female_ruler = "RULER_TITLE_MAHARANI"
+
+	male_heir = "RULER_TITLE_YUVARAJ"
+	female_heir = "RULER_TITLE_YUVARANI"
+
+	possible = {
+		has_law = law_type:law_social_monarchy
+		coa_absolute_monarchy_trigger = yes
+		is_subject = yes
+		exists = c:JAS
+		c:JAS = ROOT
+		has_gov_regency = no
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+REPLACE:gov_social_monarchy_princely_state_maharaja_absolutist = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_MAHARAJA"
+	female_ruler = "RULER_TITLE_MAHARANI"
+
+	male_heir = "RULER_TITLE_YUVARAJ"
+	female_heir = "RULER_TITLE_YUVARANI"
+
+	possible = {
+		has_law = law_type:law_social_monarchy
+		coa_absolute_monarchy_trigger = yes
+		is_subject = yes
+		OR = {
+			AND = { exists = c:NAG c:NAG = ROOT }
+			AND = { exists = c:MYS c:MYS = ROOT }
+			AND = { exists = c:GWA c:GWA = ROOT }
+			AND = { exists = c:BER c:BER = ROOT }
+			AND = { exists = c:MEW c:MEW = ROOT }
+			AND = { exists = c:JOD c:JOD = ROOT }
+			AND = { exists = c:JAI c:JAI = ROOT }
+			AND = { exists = c:PTA c:PTA = ROOT } # Maharaja-e Rajgan
+		}
+		NOT = { is_subject_type = subject_type_crown_land }
+		has_gov_regency = no
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+REPLACE:gov_social_monarchy_princely_state_diwanate_absolutist = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_DIWAN"
+	female_ruler = "RULER_TITLE_BEGUM"
+
+	male_heir = "RULER_TITLE_WALI_AHAD"
+	female_heir = "RULER_TITLE_PRINCESS"
+
+	possible = {
+		has_law = law_type:law_social_monarchy
+		coa_absolute_monarchy_trigger = yes
+		is_subject = yes
+		OR = {
+			AND = { exists = c:PLP c:PLP = ROOT }
+		}
+		NOT = { is_subject_type = subject_type_crown_land }
+		has_gov_regency = no
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+REPLACE:gov_social_monarchy_princely_state_khanate_absolutist = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_KHAN"
+	female_ruler = "RULER_TITLE_KHATUN"
+
+	male_heir = "RULER_TITLE_PRINCE"
+	female_heir = "RULER_TITLE_PRINCESS"
+
+	possible = {
+		has_law = law_type:law_social_monarchy
+		coa_absolute_monarchy_trigger = yes
+		is_subject = yes
+		OR = {
+			AND = { exists = c:KAL c:KAL = ROOT }
+			AND = { exists = c:DIR c:DIR = ROOT }
+		}
+		NOT = { is_subject_type = subject_type_crown_land }
+		has_gov_regency = no
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+REPLACE:gov_social_monarchy_princely_state_nizamate_absolutist = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_NIZAM"
+	female_ruler = "RULER_TITLE_NAWAB_BEGUM"
+
+	male_heir = "RULER_TITLE_WALI_AHAD"
+	female_heir = "RULER_TITLE_SHAHZADI"
+
+	possible = {
+		has_law = law_type:law_social_monarchy
+		coa_absolute_monarchy_trigger = yes
+		is_subject = yes
+		AND = { exists = c:HYD c:HYD = ROOT }
+		NOT = { is_subject_type = subject_type_crown_land }
+		has_gov_regency = no
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+REPLACE:gov_social_monarchy_princely_state_nawabate_absolutist = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_NAWAB"
+	female_ruler = "RULER_TITLE_NAWAB_BEGUM"
+
+	male_heir = "RULER_TITLE_NAWABZADA"
+	female_heir = "RULER_TITLE_NAWABZADI"
+
+	possible = {
+		has_law = law_type:law_social_monarchy
+		coa_absolute_monarchy_trigger = yes
+		is_subject = yes
+		OR = {
+			AND = { exists = c:BHW c:BHW = ROOT }
+			AND = { exists = c:CAR c:CAR = ROOT }
+			AND = { exists = c:JUN c:JUN = ROOT }
+			AND = { exists = c:KHR c:KHR = ROOT }
+			AND = { exists = c:BGL c:BGL = ROOT }
+			AND = { exists = c:AWA c:AWA = ROOT }
+			AND = { exists = c:BHO c:BHO = ROOT }
+			AND = { exists = c:KNO c:KNO = ROOT }
+			AND = { exists = c:MAK c:MAK = ROOT }
+		}
+		NOT = { is_subject_type = subject_type_crown_land }
+		has_gov_regency = no
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+REPLACE:gov_social_monarchy_princely_state_maratha_raja_absolutist = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_RAJA_CHHATRAPATI"
+	female_ruler = "RULER_TITLE_RANI"
+
+	male_heir = "RULER_TITLE_PRINCE"
+	female_heir = "RULER_TITLE_PRINCESS"
+
+	possible = {
+		has_law = law_type:law_social_monarchy
+		coa_absolute_monarchy_trigger = yes
+		is_subject = yes
+		OR = {
+			AND = { exists = c:SAT c:SAT = ROOT }
+			AND = { exists = c:KHP c:KHP = ROOT }
+		}
+		country_has_state_religion = rel:hindu
+		NOT = { is_subject_type = subject_type_crown_land }
+		has_gov_regency = no
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+REPLACE:gov_social_monarchy_princely_state_raja_absolutist = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_RAJA"
+	female_ruler = "RULER_TITLE_RANI"
+
+	male_heir = "RULER_TITLE_PRINCE"
+	female_heir = "RULER_TITLE_PRINCESS"
+
+	possible = {
+		has_law = law_type:law_social_monarchy
+		coa_absolute_monarchy_trigger = yes
+		is_in_geographic_region = geographic_region_india
+		is_subject = yes
+		country_has_state_religion = rel:hindu
+		NOT = { is_subject_type = subject_type_crown_land }
+		has_gov_regency = no
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+REPLACE:gov_social_monarchy_princely_state_sultan_absolutist = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_SULTAN"
+	female_ruler = "RULER_TITLE_SULTANA"
+
+	male_heir = "RULER_TITLE_PRINCE"
+	female_heir = "RULER_TITLE_PRINCESS"
+
+	possible = {
+		has_law = law_type:law_social_monarchy
+		coa_absolute_monarchy_trigger = yes
+		is_in_geographic_region = geographic_region_india
+		is_subject = yes
+		OR = {
+			country_has_state_religion = rel:sunni
+			country_has_state_religion = rel:shiite
+			country_has_state_religion = rel:ibadi
+		}
+		NOT = { is_subject_type = subject_type_crown_land }
+		has_gov_regency = no
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}

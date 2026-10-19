@@ -1,0 +1,982 @@
+﻿ ### For je_india_home_rule
+
+ REPLACE:je_india_home_rule_progressbar = {
+	name = "je_india_home_rule_progressbar"
+	desc = "je_india_home_rule_progressbar_desc"
+
+	default = yes
+
+	monthly_progress = {
+		c:BIC ?= {
+			add = {
+				value = {
+					every_political_movement = {
+						limit = {
+							is_political_movement_type = movement_india_pan_national
+						}
+						add = political_movement_support
+					}
+				}
+				desc = "home_rule_progress_from_india_pan_national_movement"
+			}
+			add = {
+				value = {
+					every_interest_group = {
+						limit = {
+							OR = {
+								has_ideology = ideology:ideology_sovereignist
+								leader = {
+									has_ideology = ideology:ideology_sovereignist_leader
+								}
+								is_member_of_lobby = lobby_type:lobby_indian_national_congress
+							}
+						}
+						add = {
+							value = ig_clout
+						}
+					}
+				}
+				desc = "home_rule_progress_from_sovereignist_interest_groups"
+			}
+			add = {
+				value = 0
+				if = {
+					limit = {
+						has_law_or_variant = law_type:law_elected_bureaucrats
+					}
+					add = 0.1
+				}
+				if = {
+					limit = {
+						country_has_voting_franchise = yes
+					}
+					add = 0.1
+				}
+				if = {
+					limit = {
+						OR = {
+							has_law_or_variant = law_type:law_multicultural
+							active_law:lawgroup_citizenship ?= {
+								has_amendment = amendment_type:amendment_government_of_india_act
+							}
+						}
+					}
+					add = 0.1
+				}
+				if = {
+					limit = {
+						OR = {
+							is_subject_type = subject_type_dominion
+							is_subject_type = subject_type_protectorate
+						}
+					}
+					add = 0.1
+				}
+				desc = "home_rule_progress_from_democratic_reforms"
+			}
+			if = {
+				limit = {
+					is_subject = yes
+					overlord = {
+						any_interest_group = {
+							is_in_government = yes
+							ig_is_indian_reformist = yes
+						}
+					}
+				}
+				add = {
+					value = {
+						value = 0
+						je:je_india_home_rule = {
+							add = "scripted_bar_progress(je_india_home_rule_progressbar)"
+						}
+						multiply = 0.001
+					}
+					desc = "home_rule_progress_from_reformist_overlord_interest_groups"
+				}
+			}
+			if = {
+				limit = {
+					has_journal_entry = je_india_swadeshi_movement
+				}
+				add = {
+					value = 0.1
+					desc = "home_rule_progress_from_active_swadeshi_je"
+				}
+			}
+			if = {
+				limit = {
+					has_variable = swadeshi_je_successful
+				}
+				add = {
+					value = 0.1
+					desc = "home_rule_progress_from_completed_swadeshi_je"
+				}
+			}
+			if = {
+				limit = {
+					has_journal_entry = je_india_non_cooperation_movement
+				}
+				add = {
+					value = 0.1
+					desc = "home_rule_progress_from_active_non_cooperation_je"
+				}
+			}
+			if = {
+				limit = {
+					has_variable = non_cooperation_je_successful
+				}
+				add = {
+					value = 0.1
+					desc = "home_rule_progress_from_completed_non_cooperation_je"
+				}
+			}
+			if = {
+				limit = {
+					has_variable = supporting_burmese_independence
+				}
+				if = {
+					limit = {
+						exists = c:BUR
+						NOR = {
+							c:BUR ?= {
+								is_subject_of = prev
+							}
+							AND = {
+								is_subject = yes
+								c:BUR ?= {
+									is_subject_of = prev.overlord
+								}
+							}
+						}
+					}
+					add = {
+						value = 0.1
+						desc = "home_rule_progress_from_supporting_burmese_territorial_integrity"
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							is_subject = no
+							has_variable = india_home_rule_failed
+						}
+					}
+					add = {
+						value = 0.1
+						desc = "home_rule_progress_from_supporting_burmese_independence"
+					}
+				}
+				else = {
+					add = {
+						value = 0.1
+						desc = "home_rule_progress_from_supporting_greater_burmese_autonomy"
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_political_movement = {
+						is_political_movement_type = movement_india_pan_national
+						has_modifier = modifier_quit_india_movement
+					}
+				}
+				add = {
+					value = 0.2
+					desc = "home_rule_progress_from_quit_india_movement"
+				}
+			}
+			if = {
+				limit = {
+					is_subject = no
+				}
+				add = {
+					value = 0.2
+					desc = "home_rule_progress_from_independence"
+				}
+			}
+			subtract = {
+				value = {
+					every_interest_group = {
+						limit = {
+							OR = {
+								is_interest_group_type = ig_industrialists
+								is_interest_group_type = ig_armed_forces
+							}
+						}
+						add = {
+							value = ig_clout
+						}
+					}
+				}
+				desc = "home_rule_loss_from_loyal_interest_groups"
+			}
+			if = {
+				limit = {
+					is_subject = yes
+					overlord = {
+						any_interest_group = {
+							is_in_government = yes
+							ig_is_indian_imperialist = yes
+						}
+					}
+				}
+				subtract = {
+					value = {
+						je:je_india_home_rule = {
+							add = "scripted_bar_progress(je_india_home_rule_progressbar)"
+						}
+						multiply = 0.001
+					}
+					desc = "home_rule_loss_from_imperialist_overlord_interest_groups"
+				}
+			}
+			if = {
+				limit = {
+					has_variable = opposing_burmese_independence
+				}
+				subtract = {
+					value = 0.3
+					desc = "home_rule_loss_from_complicit_in_burmese_colonialism"
+				}
+			}
+			if = {
+				limit = {
+					has_variable = supporting_burmese_subject
+				}
+				subtract = {
+					value = 0.1
+					desc = "home_rule_loss_from_limiting_future_burmese_autonomy"
+				}
+			}
+			if = {
+				limit = {
+					has_journal_entry = je_indian_famines
+				}
+				add = {
+					desc = "presidencies_je_indian_famines_tt"
+					add = -0.5
+				}
+			}
+		}
+	}
+
+	start_value = 0
+	min_value = 0
+	max_value = 500
+ }
+
+ # For je_communal_divides
+
+ je_communal_divides_hindu_progressbar = {
+	name = "je_communal_divides_hindu_progressbar"
+	desc = "je_communal_divides_hindu_progressbar_left_desc"
+ 	second_desc = "je_communal_divides_hindu_progressbar_right_desc"
+
+	double_sided_bad = yes
+
+	monthly_progress = {
+		# Activism
+		if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_hindu_nationalist
+					political_movement_radicalism >= 0.60
+				}
+			}
+			add = {
+				value = -0.50
+				if = {
+					limit = {
+						je:je_communal_divides = {
+							has_variable = change_factor
+						}
+					}
+					je:je_communal_divides = {
+						multiply = var:change_factor
+					}
+				}
+				desc = cd_60_movement_activism
+			}
+		}
+		else_if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_hindu_nationalist
+					political_movement_radicalism >= 0.40
+				}
+			}
+			add = {
+				value = -0.25
+				if = {
+					limit = {
+						je:je_communal_divides = {
+							has_variable = change_factor
+						}
+					}
+					je:je_communal_divides = {
+						multiply = var:change_factor
+					}
+				}
+				desc = cd_40_movement_activism
+			}
+		}
+		else_if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_hindu_nationalist
+					political_movement_radicalism >= 0.20
+				}
+			}
+			add = {
+				value = 0
+				desc = cd_20_movement_activism
+			}
+		}
+		else_if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_hindu_nationalist
+					political_movement_radicalism < 0.20
+				}
+			}
+			if = {
+				limit = {
+					any_political_movement = {
+						is_political_movement_type = movement_muslim_nationalist
+						political_movement_radicalism < 0.20
+					}
+				}
+				add = {
+				value = 0.50
+					if = {
+						limit = {
+							je:je_communal_divides = {
+								has_variable = change_factor
+							}
+						}
+						je:je_communal_divides = {
+							multiply = var:change_factor
+						}
+					}
+					desc = cd_0_both_movement_activism
+				}
+			}
+			else = {
+				add = {
+					value = 0.25
+					if = {
+						limit = {
+							je:je_communal_divides = {
+								has_variable = change_factor
+							}
+						}
+						je:je_communal_divides = {
+							multiply = var:change_factor
+						}
+					}
+					desc = cd_0_movement_activism
+				}
+			}
+		}
+		# Identity Support
+		if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_hindu_nationalist
+					political_movement_identity_support >= 0.36
+				}
+			}
+			add = {
+				value = -0.50
+				if = {
+					limit = {
+						je:je_communal_divides = {
+							has_variable = change_factor
+						}
+					}
+					je:je_communal_divides = {
+						multiply = var:change_factor
+					}
+				}
+				desc = cd_very_high_hindu_movement_identity_support
+			}
+		}
+		else_if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_hindu_nationalist
+					political_movement_identity_support >= 0.24
+				}
+			}
+			add = {
+				value = -0.25
+				if = {
+					limit = {
+						je:je_communal_divides = {
+							has_variable = change_factor
+						}
+					}
+					je:je_communal_divides = {
+						multiply = var:change_factor
+					}
+				}
+				desc = cd_high_hindu_movement_identity_support
+			}
+		}
+		else_if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_hindu_nationalist
+					political_movement_identity_support >= 0.12
+				}
+			}
+			add = {
+				value = 0
+				desc = cd_medium_hindu_movement_identity_support
+			}
+		}
+		else_if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_hindu_nationalist
+					political_movement_identity_support < 0.12
+				}
+			}
+			if = {
+				limit = {
+					any_political_movement = {
+						is_political_movement_type = movement_muslim_nationalist
+						political_movement_identity_support < 0.12
+					}
+				}
+				add = {
+					value = 0.50
+					if = {
+						limit = {
+							je:je_communal_divides = {
+								has_variable = change_factor
+							}
+						}
+						je:je_communal_divides = {
+							multiply = var:change_factor
+						}
+					}
+					desc = cd_low_both_movement_identity_support
+				}
+			}
+			else = {
+				add = {
+					value = 0.25
+					if = {
+						limit = {
+							je:je_communal_divides = {
+								has_variable = change_factor
+							}
+						}
+						je:je_communal_divides = {
+							multiply = var:change_factor
+						}
+					}
+					desc = cd_low_hindu_movement_identity_support
+				}
+			}
+		}
+	}
+
+	start_value = 50
+	min_value = 0
+	max_value = 100
+ }
+
+  je_communal_divides_muslim_progressbar = {
+	name = "je_communal_divides_muslim_progressbar"
+	desc = "je_communal_divides_muslim_progressbar_left_desc"
+ 	second_desc = "je_communal_divides_muslim_progressbar_right_desc"
+
+	double_sided_bad = yes
+
+	monthly_progress = {
+		# Activism
+		if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_muslim_nationalist
+					political_movement_radicalism >= 0.60
+				}
+			}
+			add = {
+				value = -0.50
+				if = {
+					limit = {
+						je:je_communal_divides = {
+							has_variable = change_factor
+						}
+					}
+					je:je_communal_divides = {
+						multiply = var:change_factor
+					}
+				}
+				desc = cd_60_movement_activism
+			}
+		}
+		else_if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_muslim_nationalist
+					political_movement_radicalism >= 0.40
+				}
+			}
+			add = {
+				value = -0.25
+				if = {
+					limit = {
+						je:je_communal_divides = {
+							has_variable = change_factor
+						}
+					}
+					je:je_communal_divides = {
+						multiply = var:change_factor
+					}
+				}
+				desc = cd_40_movement_activism
+			}
+		}
+		else_if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_muslim_nationalist
+					political_movement_radicalism >= 0.20
+				}
+			}
+			add = {
+				value = 0
+				desc = cd_20_movement_activism
+			}
+		}
+		else_if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_muslim_nationalist
+					political_movement_radicalism < 0.20
+				}
+			}
+			if = {
+				limit = {
+					any_political_movement = {
+						is_political_movement_type = movement_hindu_nationalist
+						political_movement_radicalism < 0.20
+					}
+				}
+				add = {
+					value = 0.50
+					if = {
+						limit = {
+							je:je_communal_divides = {
+								has_variable = change_factor
+							}
+						}
+						je:je_communal_divides = {
+							multiply = var:change_factor
+						}
+					}
+					desc = cd_0_both_movement_activism
+				}
+			}
+			else = {
+				add = {
+					value = 0.25
+					if = {
+						limit = {
+							je:je_communal_divides = {
+								has_variable = change_factor
+							}
+						}
+						je:je_communal_divides = {
+							multiply = var:change_factor
+						}
+					}
+					desc = cd_0_movement_activism
+				}
+			}
+		}
+		# Identity Support
+		if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_muslim_nationalist
+					political_movement_identity_support >= 0.36
+				}
+			}
+			add = {
+				value = -0.50
+				if = {
+					limit = {
+						je:je_communal_divides = {
+							has_variable = change_factor
+						}
+					}
+					je:je_communal_divides = {
+						multiply = var:change_factor
+					}
+				}
+				desc = cd_very_high_muslim_movement_identity_support
+			}
+		}
+		else_if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_muslim_nationalist
+					political_movement_identity_support >= 0.24
+				}
+			}
+			add = {
+				value = -0.25
+				if = {
+					limit = {
+						je:je_communal_divides = {
+							has_variable = change_factor
+						}
+					}
+					je:je_communal_divides = {
+						multiply = var:change_factor
+					}
+				}
+				desc = cd_high_muslim_movement_identity_support
+			}
+		}
+		else_if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_muslim_nationalist
+					political_movement_identity_support >= 0.12
+				}
+			}
+			add = {
+				value = 0
+				desc = cd_medium_muslim_movement_identity_support
+			}
+		}
+		else_if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_muslim_nationalist
+					political_movement_identity_support < 0.12
+				}
+			}
+			if = {
+				limit = {
+					any_political_movement = {
+						is_political_movement_type = movement_hindu_nationalist
+						political_movement_identity_support < 0.12
+					}
+				}
+				add = {
+					value = 0.50
+					if = {
+						limit = {
+							je:je_communal_divides = {
+								has_variable = change_factor
+							}
+						}
+						je:je_communal_divides = {
+							multiply = var:change_factor
+						}
+					}
+					desc = cd_low_both_movement_identity_support
+				}
+			}
+			else = {
+				add = {
+					value = 0.25
+					if = {
+						limit = {
+							je:je_communal_divides = {
+								has_variable = change_factor
+							}
+						}
+						je:je_communal_divides = {
+							multiply = var:change_factor
+						}
+					}
+					desc = cd_low_muslim_movement_identity_support
+				}
+			}
+		}
+	}
+
+	start_value = 50
+	min_value = 0
+	max_value = 100
+ }
+
+REPLACE_OR_CREATE:je_princely_states_dissent_progress_bar = {
+	name = "je_princely_states_dissent_progress_bar"
+	desc = "je_princely_states_dissent_progress_bar_desc"
+
+	default = yes
+
+	monthly_progress = {
+		add = {
+			value = influence
+			divide = 500
+			min = 0
+			desc = dissent_progress_from_unused_influence
+		}
+		add = {
+			value = army_power_projection
+			c:BIC ?= {
+				divide = army_power_projection
+			}
+			multiply = 4
+			desc = dissent_progress_from_army_strength
+		}
+		if = {
+			limit = {
+				any_scope_ally = {
+					always = yes
+				}
+			}
+			add = {
+				every_scope_ally = {
+					add = army_power_projection
+				}
+				c:BIC ?= {
+					divide = army_power_projection
+				}
+				multiply = 4
+				desc = dissent_progress_from_ally_army_strength
+			}
+		}
+		if = {
+			limit = {
+				any_scope_treaty = {
+					any_scope_article = {
+						has_type = guarantee_independence
+						NOT = {
+							source_country ?= ROOT
+						}
+					}
+				}
+			}
+			add = {
+				every_scope_treaty = {
+					every_scope_article = {
+						limit = {
+							has_type = guarantee_independence
+							NOT = {
+								source_country ?= ROOT
+							}
+						}
+						source_country ?= {
+							add = army_power_projection
+						}
+					}
+				}
+				c:BIC ?= {
+					divide = army_power_projection
+				}
+				multiply = 4
+				desc = dissent_progress_from_guarantee_army_strength
+			}
+		}
+		if = {
+			limit = {
+				any_scope_treaty = {
+					any_scope_article = {
+						has_type = support_independence
+						NOT = {
+							source_country ?= ROOT
+						}
+					}
+				}
+			}
+			add = {
+				every_scope_treaty = {
+					every_scope_article = {
+						limit = {
+							has_type = support_independence
+							NOT = {
+								source_country ?= ROOT
+							}
+						}
+						source_country ?= {
+							add = army_power_projection
+						}
+					}
+				}
+				c:BIC ?= {
+					divide = army_power_projection
+				}
+				multiply = 4
+				desc = dissent_progress_from_support_independence_army_strength
+			}
+		}
+		add = {
+			c:BIC ?= {
+				add = relations:root
+				divide = -50
+				min = 0
+			}
+			desc = dissent_progress_from_relations
+		}
+		if = {
+			limit = {
+				is_subject = yes
+				c:BIC ?= overlord
+			}
+			add = {
+				add = liberty_desire
+				subtract = 25
+				divide = 50
+				min = 0
+				desc = dissent_progress_from_liberty_desire
+			}
+		}
+		else_if = {
+			limit = {
+				is_subject = no
+			}
+			add = {
+				add = 1
+				desc = dissent_progress_from_independent
+			}
+		}
+		add = {
+			every_primary_culture = {
+				add = culture_current_fervor
+			}
+			divide = {
+				every_primary_culture = {
+					add = 100
+				}
+			}
+			desc = dissent_progress_from_cultural_fervor
+		}
+		subtract = {
+			value = {
+				je:je_princely_states = {
+					add = "scripted_bar_progress(je_princely_states_dissent_progress_bar)"
+				}
+				multiply = 0.05 # -1 at 20, -5 at 100
+			}
+			desc = dissent_loss_from_decay
+		}
+	}
+
+	start_value = 0
+	min_value = 0
+	max_value = 100
+ }
+
+ REPLACE_OR_CREATE:je_dravidian_movement_anti_caste_pressure_progressbar = {
+	name = "je_dravidian_movement_anti_caste_pressure_progressbar"
+	desc = "je_dravidian_movement_anti_caste_pressure_progressbar_desc"
+
+	default_green = yes
+
+	monthly_progress = {
+		add = {
+			value = {
+				every_interest_group = {
+					limit = {
+						law_stance = {
+							law = law_type:law_hindu_caste_discrimination_outlawed
+							value > neutral
+						}
+						NOR = {
+							is_powerful = yes
+							is_marginal = yes
+						}
+					}
+					add = {
+						value = 0.5
+						if = {
+							limit = {
+								is_in_government = yes
+							}
+							multiply = 2
+						}
+					}
+				}
+			}
+			desc = anti_caste_progress_from_influential_igs
+		}
+		add = {
+			value = {
+				every_interest_group = {
+					limit = {
+						law_stance = {
+							law = law_type:law_hindu_caste_discrimination_outlawed
+							value > neutral
+						}
+						is_powerful = yes
+					}
+					add = {
+						value = 1
+						if = {
+							limit = {
+								is_in_government = yes
+							}
+							multiply = 2
+						}
+					}
+				}
+			}
+			desc = anti_caste_progress_from_powerful_igs
+		}
+		subtract = {
+			value = {
+				every_interest_group = {
+					limit = {
+						law_stance = {
+							law = law_type:law_hindu_caste_discrimination_outlawed
+							value < neutral
+						}
+						NOR = {
+							is_powerful = yes
+							is_marginal = yes
+						}
+					}
+					add = {
+						value = 0.5
+						if = {
+							limit = {
+								is_in_government = yes
+							}
+							multiply = 2
+						}
+					}
+				}
+			}
+			desc = anti_caste_loss_from_influential_igs
+		}
+		subtract = {
+			value = {
+				every_interest_group = {
+					limit = {
+						law_stance = {
+							law = law_type:law_hindu_caste_discrimination_outlawed
+							value < neutral
+						}
+						is_powerful = yes
+					}
+					add = {
+						value = 1
+						if = {
+							limit = {
+								is_in_government = yes
+							}
+							multiply = 2
+						}
+					}
+				}
+			}
+			desc = anti_caste_loss_from_powerful_igs
+		}
+	}
+
+	start_value = 0
+	min_value = 0
+	max_value = 50
+ }

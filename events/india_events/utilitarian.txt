@@ -1,0 +1,1226 @@
+﻿namespace = utilitarian
+
+# Good Governance For All, on JE completion
+utilitarian.1 = {
+	type = country_event
+	placement = root
+	title = utilitarian.1.t
+	desc = utilitarian.1.d
+	flavor = {
+		first_valid = {
+			triggered_desc = {
+				desc = utilitarian.1.f # Loc if a Utilitarian character exists
+				trigger = {
+					any_scope_character = {
+						has_ideology = ideology:ideology_utilitarian_leader
+					}
+				}
+			}
+			triggered_desc = {
+				desc = utilitarian.1.f2 # Loc if no Utilitarian character exists
+				trigger = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	event_image = {
+		video = "ip2_india_factory_floor"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	duration = 3
+
+	cooldown = { days = stupidly_long_modifier_time }
+
+	# Triggered by completion of je_imperialism_of_promise
+	trigger = {}
+
+	immediate = {
+		if = {
+			limit = {
+				any_scope_character = {
+					has_template = agitator_john_stuart_mill
+				}
+			}
+			random_scope_character ?= {
+				limit = {
+					has_template = agitator_john_stuart_mill
+				}
+				save_scope_as = relevant_character
+			}
+		}
+		else = {
+			random_scope_character = {
+				limit = {
+					has_ideology = ideology:ideology_utilitarian_leader
+				}
+				save_scope_as = relevant_character
+			}
+		}
+		random_interest_group = {
+			limit = {
+				is_interest_group_type = ig_industrialists
+			}
+			save_scope_as = relevant_ig
+		}
+		random_scope_character = {
+			limit = {
+				has_template = agitator_john_stuart_mill
+			}
+			# His work complete, John Stuart Mill walks into the sunset.
+			set_career_length = {
+				years = 0.25
+				random_range = { 1.0 4.0 } # 0.25-1 years
+			}
+		}
+	}
+
+	cancellation_trigger = { }
+
+	option = {
+		name = utilitarian.1.a
+		default_option = yes
+		ig:ig_industrialists ?= {
+			if = {
+				limit = {
+					has_ideology = ideology:ideology_malthusian
+				}
+				remove_ideology = ideology_malthusian
+				add_ideology = ideology_utilitarian_millian
+			}
+		}
+		add_modifier = {
+			name = utilitarian_bonus
+			days = long_modifier_time
+			multiplier = 5
+		}
+		add_modifier = {
+			name = utilitarian_bureaucracy
+			multiplier = 5
+		}
+		every_interest_group = {
+			limit = {
+				any_scope_character = {
+					OR = {
+						has_role_of_type = agitator
+						has_role_of_type = politician
+					}
+					has_ideology = ideology:ideology_utilitarian_leader
+				}
+			}
+			add_modifier = {
+				name = util_colonial_admin_success
+				days = long_modifier_time
+				multiplier = 5
+			}
+		}
+	}
+}
+
+# False Promises, on JE fail
+utilitarian.2 = {
+	type = country_event
+	placement = root
+	title = utilitarian.2.t
+	desc = utilitarian.2.d
+	flavor = utilitarian.2.f
+
+	event_image = {
+		video = "asia_sepoy_mutiny"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	cooldown = { days = stupidly_long_modifier_time }
+
+	trigger = {
+		# Triggered by Imperialism of Promise JE
+	}
+
+	immediate = {
+		random_scope_character = {
+			limit = {
+				has_template = agitator_john_stuart_mill
+			}
+			save_scope_as = john_stuart_mill_scope
+		}
+	}
+
+	cancellation_trigger = { }
+
+	option = {
+		name = utilitarian.2.a
+		default_option = yes
+		add_modifier = {
+			name = utilitarian_malus
+			days = long_modifier_time
+		}
+		ig:ig_industrialists ?= {
+			if = {
+				limit = {
+					has_modifier = persuasive_util_pamphlet_pol_str
+				}
+				remove_modifier = persuasive_util_pamphlet_pol_str
+			}
+			add_modifier = {
+				name = util_colonial_admin_fail
+				days = long_modifier_time
+			}
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_utilitarian
+				has_modifier = persuasive_util_pamphlet_attract
+			}
+			remove_modifier = persuasive_util_pamphlet_attract
+		}
+		if = {
+			limit = {
+				exists = scope:john_stuart_mill_scope
+			}
+			custom_tooltip = {
+				text = john_stuart_mill_busy_tt
+				scope:john_stuart_mill_scope ?= {
+					if = {
+						limit = {
+							has_modifier = utilitarian_advocate
+						}
+						remove_modifier = utilitarian_advocate
+					}
+					if = {
+						limit = {
+							has_modifier = champion_of_utilitarianism
+						}
+						remove_modifier = champion_of_utilitarianism
+					}
+					place_character_in_void = 360
+				}
+			}
+		}
+		every_scope_character = {
+			limit = {
+				has_ideology = ideology:ideology_utilitarian_leader
+				NOT = {
+					has_template = agitator_john_stuart_mill
+				}
+			}
+			retire_character = yes
+		}
+	}
+}
+
+# A Project Without Progress, on JE time out
+utilitarian.3 = {
+	type = country_event
+	placement = root
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = utilitarian.3.t
+				trigger = {
+					has_local_variable = util_end_var
+					local_var:util_end_var < 3
+				}
+			}
+			triggered_desc = {
+				desc = utilitarian.3.t_partial_success
+				trigger = {
+					always = yes
+				}
+			}
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = utilitarian.3.d
+				trigger = {
+					has_local_variable = util_end_var
+					local_var:util_end_var < 3
+				}
+			}
+			triggered_desc = {
+				desc = utilitarian.3.d_partial_success
+				trigger = {
+					always = yes
+				}
+			}
+		}
+	}
+	flavor = {
+		first_valid = {
+			triggered_desc = {
+				desc = utilitarian.3.f_partial_success
+				trigger = {
+					has_local_variable = util_end_var
+					local_var:util_end_var >= 3
+				}
+			}
+			triggered_desc = {
+				desc = utilitarian.3.f # Loc if a Utilitarian character exists
+				trigger = {
+					any_scope_character = {
+						has_ideology = ideology:ideology_utilitarian_leader
+					}
+				}
+			}
+			triggered_desc = {
+				desc = utilitarian.3.f2 # Loc if no Utilitarian character exists
+				trigger = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	event_image = {
+		video = "asia_politician_parliament_motion"
+		trigger = {
+			local_var:util_end_var < 3
+		}
+	}
+	event_image = {
+		video = "ip2_india_urban_scene"
+		trigger = {
+			local_var:util_end_var >= 3
+		}
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	duration = 3
+
+	cooldown = { days = stupidly_long_modifier_time }
+
+	trigger = {
+		# Triggered by Imperialism of Promise JE
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				any_scope_character = {
+					has_template = agitator_john_stuart_mill
+				}
+			}
+			random_scope_character = {
+				limit = {
+					has_template = agitator_john_stuart_mill
+				}
+				save_scope_as = relevant_character
+			}
+		}
+		else = {
+			random_scope_character = {
+				limit = {
+					has_ideology = ideology:ideology_utilitarian_leader
+				}
+				save_scope_as = relevant_character
+			}
+		}
+		random_scope_character = {
+			limit = {
+				has_template = agitator_john_stuart_mill
+			}
+			save_scope_as = john_stuart_mill_scope
+		}
+		set_local_variable = {
+			name = util_end_var
+			value = 0
+		}
+		if = {
+			limit = {
+				bureaucracy >= 0
+				approaching_bureaucracy_shortage = no
+			}
+			change_local_variable = {
+				name = util_end_var
+				add = 1
+			}
+		}
+		if = {
+			limit = {
+				has_law_or_variant = law_type:law_public_schools
+			}
+			change_local_variable = {
+				name = util_end_var
+				add = 1
+			}
+		}
+		if = {
+			limit = {
+				institution_investment_level = {
+					institution = institution_schools
+					value >= 3
+				}
+			}
+			change_local_variable = {
+				name = util_end_var
+				add = 1
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_law_or_variant = law_type:law_no_womens_rights
+				}
+			}
+			change_local_variable = {
+				name = util_end_var
+				add = 1
+			}
+		}
+		if = {
+			limit = {
+				has_law_or_variant = law_type:law_slavery_banned
+			}
+			change_local_variable = {
+				name = util_end_var
+				add = 1
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_proportional_taxation
+					has_law_or_variant = law_type:law_graduated_taxation
+				}
+			}
+			change_local_variable = {
+				name = util_end_var
+				add = 1
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					NOT = {
+						is_subject_type = subject_type_chartered_company
+					}
+					has_law_or_variant = law_type:law_hindu_caste_not_enforced
+					has_law_or_variant = law_type:law_affirmative_action
+				}
+			}
+			change_local_variable = {
+				name = util_end_var
+				add = 1
+			}
+		}
+		set_local_variable = {
+			name = util_end_multiplier
+			value = {
+				value = local_var:util_end_var
+				subtract = 2
+			}
+		}
+	}
+
+	cancellation_trigger = { }
+
+	option = {
+		name = utilitarian.3.a
+		default_option = yes
+		trigger = {
+			local_var:util_end_var < 3
+		}
+		add_modifier = {
+			name = utilitarian_malus
+			days = long_modifier_time
+		}
+		every_interest_group = {
+			limit = {
+				any_scope_character = {
+					OR = {
+						has_role_of_type = agitator
+						has_role_of_type = politician
+					}
+					has_ideology = ideology:ideology_utilitarian_leader
+				}
+			}
+			add_modifier = {
+				name = util_colonial_admin_fail
+				days = long_modifier_time
+			}
+		}
+		if = {
+			limit = {
+				exists = scope:john_stuart_mill_scope
+			}
+			custom_tooltip = {
+				text = john_stuart_mill_busy_tt
+				scope:john_stuart_mill_scope ?= {
+					place_character_in_void = 120
+				}
+			}
+		}
+		every_scope_character = {
+			limit = {
+				has_ideology = ideology:ideology_utilitarian_leader
+				NOT = {
+					has_template = agitator_john_stuart_mill
+				}
+			}
+			retire_character = yes
+		}
+	}
+
+	option = {
+		name = utilitarian.3.b
+		default_option = yes
+		trigger = {
+			local_var:util_end_var >= 3
+		}
+		if = {
+			limit = {
+				local_var:util_end_var >= 5
+			}
+			ig:ig_industrialists ?= {
+				if = {
+					limit = {
+						has_ideology = ideology:ideology_malthusian
+					}
+					remove_ideology = ideology_malthusian
+					add_ideology = ideology_utilitarian_millian
+				}
+			}
+		}
+		add_modifier = {
+			name = utilitarian_bonus
+			days = long_modifier_time
+			multiplier = local_var:util_end_multiplier
+		}
+		add_modifier = {
+			name = utilitarian_bureaucracy
+			multiplier = local_var:util_end_multiplier
+		}
+		ig:ig_industrialists ?= {
+			add_modifier = {
+				name = util_colonial_admin_success
+				days = long_modifier_time
+				multiplier = local_var:util_end_multiplier
+			}
+		}
+		hidden_effect = {
+			scope:john_stuart_mill_scope ?= {
+				# His work complete, John Stuart Mill walks into the sunset.
+				set_career_length = {
+					years = 0.25
+					random_range = { 1.0 4.0 } # 0.25-1 years
+				}
+			}
+		}
+	}
+}
+
+# Undue Influence
+utilitarian.4 = {
+	type = country_event
+	placement = root
+	title = utilitarian.4.t
+	desc = utilitarian.4.d
+	flavor = utilitarian.4.f
+
+	event_image = {
+		video = "ep1_octopus"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	cooldown = { days = stupidly_long_modifier_time }
+
+	# Triggered by yearly pulse on je_imperialism_of_promise
+	trigger = {
+		is_subject = yes
+	}
+
+	immediate = {
+		c:BIC ?= {
+			save_scope_as = bic_scope
+			overlord = {
+				save_scope_as = relevant_overlord
+			}
+		}
+		random_interest_group = {
+			limit = {
+				any_scope_character = {
+					OR = {
+						has_role_of_type = agitator
+						has_role_of_type = politician
+					}
+					has_ideology = ideology:ideology_utilitarian_leader
+				}
+			}
+			save_scope_as = relevant_ig
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:relevant_ig
+				}
+			}
+			ig:ig_industrialists = {
+				save_scope_as = relevant_ig
+			}
+		}
+	}
+
+	cancellation_trigger = {
+		is_subject = no
+	}
+
+	option = {
+		name = utilitarian.4.a
+		default_option = yes
+		change_relations = {
+			country = scope:relevant_overlord
+			value = -10
+		}
+		add_modifier = {
+			name = stop_meddlesome_affairs
+			days = normal_modifier_time
+		}
+	}
+	option = {
+		name = utilitarian.4.b
+		change_relations = {
+			country = scope:relevant_overlord
+			value = 10
+		}
+		add_modifier = {
+			name = meddlesome_affairs
+			days = normal_modifier_time
+		}
+	}
+}
+
+# Danger to Imperial Mission
+utilitarian.5 = {
+	type = country_event
+	placement = scope:relevant_state
+	title = utilitarian.5.t
+	desc = utilitarian.5.d
+	flavor = utilitarian.5.f
+
+	event_image = {
+		video = "ip2_intercommunal_tensions"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 3
+
+	cooldown = { days = stupidly_long_modifier_time }
+
+	# Triggered by yearly pulse on je_imperialism_of_promise
+	trigger = {
+		any_scope_state = {
+			is_in_geographic_region = geographic_region_india
+			any_scope_pop = {
+				pop_acceptance < acceptance_status_4
+				culture = {
+					has_discrimination_trait_group = heritage_group_south_asian
+				}
+				pop_has_primary_culture = no
+			}
+			any_scope_pop = {
+				pop_acceptance >= acceptance_status_4
+				culture = {
+					shares_heritage_trait_with_any_primary_culture = prev.owner
+				}
+			}
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				is_in_geographic_region = geographic_region_india
+				is_capital = no
+				state_has_building_type_levels = {
+ 					target = bt:building_government_administration
+ 					value >= 10
+				}
+				any_scope_pop = {
+					pop_acceptance < acceptance_status_4
+					culture = {
+						has_discrimination_trait_group = heritage_group_south_asian
+					}
+					prev.state_region = {
+						is_homeland = prev.culture
+					}
+					pop_has_primary_culture = no
+				}
+				any_scope_pop = {
+					pop_acceptance >= acceptance_status_4
+					culture = {
+						shares_heritage_trait_with_any_primary_culture = prev.owner
+					}
+					is_pop_type = bureaucrats
+				}
+			}
+			random_scope_pop = {
+				limit = {
+					pop_acceptance < acceptance_status_4
+					culture = {
+						has_discrimination_trait_group = heritage_group_south_asian
+					}
+					prev.state_region = {
+						is_homeland = prev.culture
+					}
+					pop_has_primary_culture = no
+				}
+				culture = { save_scope_as = discriminated_culture }
+			}
+			random_scope_pop = {
+				limit = {
+					pop_acceptance >= acceptance_status_4
+					culture = {
+						shares_heritage_trait_with_any_primary_culture = prev.owner
+					}
+					is_pop_type = bureaucrats
+				}
+				culture = { save_scope_as = not_discriminated_culture }
+			}
+			save_scope_as = relevant_state
+		}
+	}
+
+	cancellation_trigger = { }
+
+	option = { # "favored" option for Utilitarian ideology
+		name = utilitarian.5.a
+		default_option = yes
+		scope:relevant_state = {
+			add_loyalists_in_state = {
+				value = medium_radicals
+				culture = scope:discriminated_culture
+			}
+			add_radicals_in_state = {
+				value = very_large_radicals
+				culture = scope:not_discriminated_culture
+				pop_type = bureaucrats
+			}
+			every_scope_building = {
+				limit = {
+					type = bt:building_government_administration
+				}
+				add_modifier = {
+					name = restrained_fortune_seekers
+					days = normal_modifier_time
+				}
+			}
+		}
+	}
+	option = {
+		name = utilitarian.5.b
+		scope:relevant_state = {
+			add_radicals_in_state = {
+				value = medium_radicals
+				culture = scope:discriminated_culture
+			}
+			add_loyalists_in_state = {
+				value = very_large_radicals
+				culture = scope:not_discriminated_culture
+				pop_type = bureaucrats
+			}
+			every_scope_building = {
+				limit = {
+					type = bt:building_government_administration
+				}
+				add_modifier = {
+					name = unrestrained_fortune_seekers
+					days = normal_modifier_time
+				}
+			}
+		}
+	}
+}
+
+# Strengthening Ties
+utilitarian.6 = {
+	type = country_event
+	placement = root
+	title = utilitarian.6.t
+	desc = utilitarian.6.d
+	flavor = utilitarian.6.f
+
+	event_image = {
+		video = "ep1_power_blocs"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 3
+
+	cooldown = { days = stupidly_long_modifier_time }
+
+	# Triggered by yearly pulse on je_imperialism_of_promise
+	trigger = {
+		is_subject = yes
+		any_political_lobby = {
+			is_political_lobby_type = lobby_pro_overlord
+		}
+	}
+
+	immediate = {
+		random_political_lobby = {
+			limit = {
+				is_political_lobby_type = lobby_pro_overlord
+			}
+			save_scope_as = relevant_lobby
+			random_lobby_member = {
+				save_scope_as = relevant_lobby_member
+			}
+			target = {
+				save_scope_as = relevant_lobby_country
+			}
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = { exists = scope:relevant_lobby }
+	}
+
+	option = { # distancing from GBR
+		name = utilitarian.6.a
+		default_option = yes
+		scope:relevant_lobby = {
+			change_appeasement = {
+				amount = -2
+				factor = appeasement_lobby_loss
+			}
+		}
+		add_radicals = {
+			value = medium_radicals
+			interest_group = scope:relevant_lobby_member
+		}
+		add_modifier = {
+			name = distancing_from_overlord
+			days = normal_modifier_time
+		}
+	}
+	option = {
+		name = utilitarian.6.b
+		change_relations = {
+			country = scope:relevant_lobby_country
+			value = 10
+		}
+		add_loyalists = {
+			value = medium_radicals
+			interest_group = scope:relevant_lobby_member
+		}
+	}
+}
+
+# Delayed Decisions
+utilitarian.7 = {
+	type = country_event
+	placement = root
+	title = utilitarian.7.t
+	desc = utilitarian.7.d
+	flavor = utilitarian.7.f
+
+	event_image = {
+		video = "ep1_clandestine_meeting"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	duration = 3
+
+	cooldown = { days = stupidly_long_modifier_time }
+
+	# Triggered by yearly pulse on je_imperialism_of_promise
+	trigger = {
+		any_scope_state = {
+			is_in_geographic_region = geographic_region_india
+			is_capital = no
+			any_scope_pop = {
+				pop_acceptance < acceptance_status_4
+				culture = {
+					has_discrimination_trait_group = heritage_group_south_asian
+				}
+				pop_has_primary_culture = no
+			}
+			any_scope_pop = {
+				pop_acceptance >= acceptance_status_4
+				culture = {
+					shares_heritage_trait_with_any_primary_culture = prev.owner
+				}
+				# TODO: Double-check this
+				total_size >= 5000
+			}
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				is_in_geographic_region = geographic_region_india
+				is_capital = no
+				any_scope_pop = {
+					pop_acceptance < acceptance_status_4
+					culture = {
+						has_discrimination_trait_group = heritage_group_south_asian
+					}
+					pop_has_primary_culture = no
+				}
+				any_scope_pop = {
+					pop_acceptance >= acceptance_status_4
+					culture = {
+						shares_heritage_trait_with_any_primary_culture = prev.owner
+					}
+					total_size >= 5000
+				}
+			}
+			random_scope_pop = {
+				limit = {
+					pop_acceptance >= acceptance_status_4
+					culture = {
+						shares_heritage_trait_with_any_primary_culture = prev.owner
+					}
+					total_size >= 5000
+				}
+				culture = { save_scope_as = not_discriminated_culture }
+			}
+			save_scope_as = relevant_state
+		}
+	}
+
+	cancellation_trigger = { }
+
+	option = {
+		name = utilitarian.7.a
+		default_option = yes
+		add_modifier = {
+			name = bic_by_the_book
+			days = normal_modifier_time
+		}
+	}
+	option = {
+		name = utilitarian.7.b
+		scope:relevant_state = {
+			add_loyalists_in_state = {
+				value = medium_radicals
+				pop_type = bureaucrats
+			}
+		}
+	}
+}
+
+# Equal Opportunities
+utilitarian.8 = { # Success event for schooling
+	type = country_event
+	placement = root
+	title = utilitarian.8.t
+	desc = utilitarian.8.d
+	flavor = utilitarian.8.f
+
+	category = enactment
+
+	event_image = {
+		video = "ip2_india_urban_scene"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 3
+
+	cooldown = { days = stupidly_long_modifier_time }
+
+	trigger = { # is fired by the enactment pulse
+		has_dlc_feature = ip2_content
+		has_journal_entry = je_imperialism_of_promise
+		c:BIC ?= this
+		OR = {
+			AND = {
+				is_enacting_law = law_type:law_compulsory_primary_school
+				any_interest_group = {
+					law_stance = {
+						law = law_type:law_compulsory_primary_school
+						value > neutral
+					}
+				}
+			}
+			AND = {
+				is_enacting_law = law_type:law_public_schools
+				any_interest_group = {
+					law_stance = {
+						law = law_type:law_public_schools
+						value > neutral
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		currently_enacting_law = {
+    		save_scope_as = relevant_law_scope
+    	}
+    	ig:ig_intelligentsia ?= {
+    		save_scope_as = relevant_ig
+    	}
+	}
+
+	cancellation_trigger = {
+		OR = {
+			NOT = {
+				currently_enacting_law = scope:relevant_law_scope
+			}
+		}
+	}
+
+	option = {
+		name = utilitarian.8.a
+		default_option = yes
+		add_enactment_modifier = {
+			name = util_law_enactment_progress
+		}
+		random_interest_group = {
+			limit = {
+				is_interest_group_type = ig_intelligentsia
+			}
+			add_modifier = {
+				name = empowering_civil_servants
+				days = normal_modifier_time
+			}
+		}
+		every_interest_group = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_industrialists
+					is_interest_group_type = ig_armed_forces
+				}
+			}
+			add_modifier = {
+				name = empowering_civil_servants_angry
+				days = normal_modifier_time
+			}
+		}
+	}
+	option = {
+		name = utilitarian.8.b
+	}
+}
+
+# An Extraordinarily Demanding Vision
+utilitarian.9 = {
+	type = country_event
+	placement = root
+	title = utilitarian.9.t
+	desc = utilitarian.9.d
+	flavor = utilitarian.9.f
+
+	event_image = {
+		video = "ip2_india_factory_floor"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	duration = 3
+
+	cooldown = { days = stupidly_long_modifier_time }
+
+	# Triggered by activation of je_imperialism_of_promise
+	trigger = {}
+
+	immediate = {
+		ig:ig_industrialists = {
+			save_scope_as = relevant_ig
+		}
+		random_scope_character = {
+			limit = {
+				has_template = agitator_john_stuart_mill
+			}
+			save_scope_as = john_stuart_mill_scope
+			# We want Johnny Mill to be around long enough for the entire Imperialism of Promise JE
+			set_career_length = {
+				years = 30
+				random_range = { 1.0 1.166 } # 30-35 years
+			}
+		}
+	}
+
+	cancellation_trigger = { }
+
+	option = {
+		name = utilitarian.9.a
+		default_option = yes
+		if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_utilitarian
+				}
+			}
+			random_political_movement = {
+				limit = {
+					is_political_movement_type = movement_utilitarian
+				}
+				add_modifier = {
+					name = persuasive_util_pamphlet_attract
+					days = even_longer_modifier_time
+				}
+			}
+		}
+		add_medium_european_loyalists = yes
+		scope:john_stuart_mill_scope ?= {
+			add_character_role = agitator
+			add_modifier = {
+				name = champion_of_utilitarianism
+				days = even_longer_modifier_time
+			}
+		}
+	}
+	option = {
+		name = utilitarian.9.b
+		scope:relevant_ig = {
+			add_modifier = {
+				name = persuasive_util_pamphlet_pol_str
+				days = even_longer_modifier_time
+			}
+		}
+		add_loyalists = {
+			value = medium_radicals
+			pop_type = bureaucrats
+		}
+		scope:john_stuart_mill_scope ?= {
+			add_modifier = {
+				name = utilitarian_advocate
+				days = even_longer_modifier_time
+			}
+			set_as_interest_group_leader = yes
+		}
+	}
+
+	option = {
+		name = utilitarian.9.c
+		custom_tooltip = {
+			text = dismissed_imperialism_of_promise_je_tt
+			set_variable = rejected_imperialism_of_promise
+		}
+		custom_tooltip = {
+			text = john_stuart_mill_busy_tt
+			scope:john_stuart_mill_scope ?= {
+				place_character_in_void = 360
+			}
+		}
+	}
+}
+
+# The Study of Indian Society
+utilitarian.10 = {
+	type = country_event
+	placement = root
+	title = utilitarian.10.t
+	desc = utilitarian.10.d
+	flavor = utilitarian.10.f
+
+	event_image = {
+		video = "ip2_india_urban_scene"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	duration = 3
+
+	# Would only want this to happen once for the Imperialism of Promise JE
+	cooldown = { days = stupidly_long_modifier_time }
+
+	trigger = {
+		any_scope_state = {
+			any_scope_pop = {
+				pop_acceptance < acceptance_status_4
+				culture = {
+					has_discrimination_trait_group = heritage_group_south_asian
+				}
+			}
+		}
+	}
+
+	immediate = { }
+
+	cancellation_trigger = {}
+
+	option = {
+		name = utilitarian.10.a
+		default_option = yes
+		add_modifier = {
+			name = utilitarian_census_in_progress_cost
+			days = normal_modifier_time
+		}
+		add_modifier = {
+			name = util_caste_divisions
+			days = normal_modifier_time
+		}
+	}
+	option = {
+		name = utilitarian.10.b
+		every_interest_group = {
+			limit = {
+				any_scope_character = {
+					OR = {
+						has_role_of_type = agitator
+						has_role_of_type = politician
+					}
+					has_ideology = ideology:ideology_utilitarian_leader
+				}
+			}
+			add_modifier = {
+				name = utilitarian_no_census
+				days = normal_modifier_time
+			}
+		}
+		add_modifier = {
+			name = util_authority
+			days = normal_modifier_time
+		}
+	}
+}

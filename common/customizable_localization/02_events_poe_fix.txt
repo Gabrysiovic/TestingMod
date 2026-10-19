@@ -1,0 +1,70 @@
+﻿REPLACE:GetDivinity = {
+	type = country
+	text = {
+		trigger = {
+			OR = {
+				religion = rel:catholic
+				religion = rel:protestant
+				religion = rel:orthodox
+				religion = rel:oriental_orthodox
+			}
+		}
+		localization_key = custom_god
+	}
+	text = {
+		trigger = { religion = rel:jewish }
+		localization_key = custom_the_lord
+	}
+	text = {
+		trigger = {
+			OR = {
+				religion = rel:sunni
+				religion = rel:shiite
+			}
+		}
+		localization_key = custom_allah
+	}
+	text = {
+		trigger = {
+			religion = rel:hindu
+		}
+		localization_key = custom_gods
+	}
+	text = {
+		trigger = {
+			religion = rel:sikh
+		}
+		# Sikhs are monotheistic, Paradox >:U
+		localization_key = custom_god
+	}
+	text = {
+		trigger = {
+			religion = rel:shinto
+		}
+		localization_key = custom_gods
+	}
+	text = {
+		trigger = {
+			religion = rel:animist
+		}
+		localization_key = custom_gods
+	}
+	text = {
+		trigger = {
+			NOR = {
+				religion = rel:catholic
+				religion = rel:protestant
+				religion = rel:orthodox
+				religion = rel:oriental_orthodox
+				religion = rel:jewish
+				religion = rel:sunni
+				religion = rel:shiite
+				religion = rel:hindu
+				religion = rel:sikh
+				religion = rel:shinto
+				religion = rel:animist
+			}
+		}
+		localization_key = custom_god #we use "god" as the standard translation, but this could be tweaked
+	}
+}

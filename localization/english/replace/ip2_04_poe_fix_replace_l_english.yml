@@ -1,0 +1,183 @@
+﻿l_english:
+  je_british_dictate_plantations:1 "Colonial Dictate: Agriculture"
+  je_british_dictate_plantations_reason:1 "With an abundance of fertile land and countless hands to work it, the soil of India is ripe for trade and treasure. By properly re-organizing the land into cash crop plantations, we can unlock the true wealth of the Indian subcontinent."
+
+  je_british_dictate_military:1 "Colonial Dictate: Military"
+  je_british_dictate_military_reason:1 "An India unprotected is an India waiting to be lost. We must ensure both our colonial army and navy are sufficiently manned, equipped, and modernized to protect the [ROOT.GetCountry.GetNameNoFormatting] from all foreign threats."
+
+  je_british_dictate_universities:1 "Colonial Dictate: Education"
+  je_british_dictate_universities_reason:1 "A growing civil service is necessary to properly govern the Indian subcontinent, and in turn an educated populace is needed to fill its many roles. We must ensure our Indian subjects are properly educated and qualified for this purpose lest the vastness of India overwhelm our administration."
+
+  upset_every_princely_state_relations_tt:1 "[concept_relations] with every [concept_princely_state] will further deteriorate by #negative_value [SCOPE.ScriptValue('basic_princely_state_relations_change')]#!"
+
+  india_events.2.b:1 "A chance for the [SCOPE.sPoliticalMovement('indian_national_movement').GetNameNoFormatting] to offer its loyalty, and humbly request sovereign home rule."
+
+  koh_i_noor_in_europe_tt:1 "A #bold Diplomatically Relevant#! [concept_country] is in possession of the #bold Koh-i-Noor#! diamond"
+
+  india_events.4.t:1 "[SCOPE.sCountry('india_scope').GetNameNoFormatting] Demands Return of the Koh-i-Noor"
+  india_events.4.f:1 ""It's just one jewel and we have so many. Surely the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] wouldn't mind returning it."\n\n"High Commissioner, you will find that nothing is so simple. That jewel is a [ROOT.GetCountry.GetAdjectiveNoFormatting] treasure, and we won't just be giving it away.""
+
+  india_events.13.a:1 "He will be allowed to realize his full potential."
+
+  add_small_indian_radicals_tt:1 "[SCOPE.ScriptValue('small_radicals')|-=1%] of [GetCulture('bengali').GetHeritageTrait.GetTraitGroup.GetName] [Concept('concept_pop', '$concept_pops$')] in [ROOT.GetCountry.GetNameNoFlag] become more [concept_radical]"
+  add_medium_indian_radicals_tt:1 "[SCOPE.ScriptValue('medium_radicals')|-=1%] of [GetCulture('bengali').GetHeritageTrait.GetTraitGroup.GetName] [Concept('concept_pop', '$concept_pops$')] in [ROOT.GetCountry.GetNameNoFlag] become more [concept_radical]"
+  add_large_indian_radicals_tt:1 "[SCOPE.ScriptValue('large_radicals')|-=1%] of [GetCulture('bengali').GetHeritageTrait.GetTraitGroup.GetName] [Concept('concept_pop', '$concept_pops$')] in [ROOT.GetCountry.GetNameNoFlag] become more [concept_radical]"
+  add_small_indian_loyalists_tt:1 "[SCOPE.ScriptValue('small_radicals')|+=1%] of [GetCulture('bengali').GetHeritageTrait.GetTraitGroup.GetName] [Concept('concept_pop', '$concept_pops$')] in [ROOT.GetCountry.GetNameNoFlag] become more [concept_loyalist]"
+  add_medium_indian_loyalists_tt:1 "[SCOPE.ScriptValue('medium_radicals')|+=1%] of [GetCulture('bengali').GetHeritageTrait.GetTraitGroup.GetName] [Concept('concept_pop', '$concept_pops$')] in [ROOT.GetCountry.GetNameNoFlag] become more [concept_loyalist]"
+  add_large_indian_loyalists_tt:1 "[SCOPE.ScriptValue('large_radicals')|+=1%] of [GetCulture('bengali').GetHeritageTrait.GetTraitGroup.GetName] [Concept('concept_pop', '$concept_pops$')] in [ROOT.GetCountry.GetNameNoFlag] become more [concept_loyalist]"
+
+  #state only
+  add_huge_indian_radicals_tt:1 "#v 20%#! of [GetCulture('bengali').GetHeritageTrait.GetTraitGroup.GetName] [Concept('concept_pop', '$concept_pops$')] in [SCOPE.sState('swadeshi_state').GetName] become more [concept_radical]"
+
+  add_small_indian_radicals_third_tt:1 "[SCOPE.ScriptValue('small_radicals')|-=1%] of [GetCulture('bengali').GetHeritageTrait.GetTraitGroup.GetName] [Concept('concept_pop', '$concept_pops$')] in this country become more [concept_radical]"
+  add_medium_indian_radicals_third_tt:1 "[SCOPE.ScriptValue('medium_radicals')|-=1%] of [GetCulture('bengali').GetHeritageTrait.GetTraitGroup.GetName] [Concept('concept_pop', '$concept_pops$')] in this country become more [concept_radical]"
+  add_large_indian_radicals_third_tt:1 "[SCOPE.ScriptValue('large_radicals')|-=1%] of [GetCulture('bengali').GetHeritageTrait.GetTraitGroup.GetName] [Concept('concept_pop', '$concept_pops$')] in this country become more [concept_radical]"
+  add_small_indian_loyalists_third_tt:1 "[SCOPE.ScriptValue('small_radicals')|+=1%] of [GetCulture('bengali').GetHeritageTrait.GetTraitGroup.GetName] [Concept('concept_pop', '$concept_pops$')] in this country become more [concept_loyalist]"
+  add_medium_indian_loyalists_third_tt:1 "[SCOPE.ScriptValue('medium_radicals')|+=1%] of [GetCulture('bengali').GetHeritageTrait.GetTraitGroup.GetName] [Concept('concept_pop', '$concept_pops$')] in this country become more [concept_loyalist]"
+  add_large_indian_loyalists_third_tt:1 "[SCOPE.ScriptValue('large_radicals')|+=1%] of [GetCulture('bengali').GetHeritageTrait.GetTraitGroup.GetName] [Concept('concept_pop', '$concept_pops$')] in this country become more [concept_loyalist]"
+
+  add_small_european_radicals_tt:1 "[SCOPE.ScriptValue('small_radicals')|-=1%] of [GetCulture('british').GetHeritageTrait.GetTraitGroup.GetName] [Concept('concept_pop', '$concept_pops$')] in [ROOT.GetCountry.GetNameNoFlag] become more [concept_radical]"
+  add_medium_european_radicals_tt:1 "[SCOPE.ScriptValue('medium_radicals')|-=1%] of [GetCulture('british').GetHeritageTrait.GetTraitGroup.GetName] [Concept('concept_pop', '$concept_pops$')] in [ROOT.GetCountry.GetNameNoFlag] become more [concept_radical]"
+  add_large_european_radicals_tt:1 "[SCOPE.ScriptValue('large_radicals')|-=1%] of [GetCulture('british').GetHeritageTrait.GetTraitGroup.GetName] [Concept('concept_pop', '$concept_pops$')] in [ROOT.GetCountry.GetNameNoFlag] become more [concept_radical]"
+  add_small_european_loyalists_tt:1 "[SCOPE.ScriptValue('small_radicals')|+=1%] of [GetCulture('british').GetHeritageTrait.GetTraitGroup.GetName] [Concept('concept_pop', '$concept_pops$')] in [ROOT.GetCountry.GetNameNoFlag] become more [concept_loyalist]"
+  add_medium_european_loyalists_tt:1 "[SCOPE.ScriptValue('medium_radicals')|+=1%] of [GetCulture('british').GetHeritageTrait.GetTraitGroup.GetName] [Concept('concept_pop', '$concept_pops$')] in [ROOT.GetCountry.GetNameNoFlag] become more [concept_loyalist]"
+  add_large_european_loyalists_tt:1 "[SCOPE.ScriptValue('large_radicals')|+=1%] of [GetCulture('british').GetHeritageTrait.GetTraitGroup.GetName] [Concept('concept_pop', '$concept_pops$')] in [ROOT.GetCountry.GetNameNoFlag] become more [concept_loyalist]"
+
+  notification_koh_i_noor_returned_desc:1 "The [SCOPE.sCountry('koh_i_noor_owner_scope').GetAdjective] government has agreed to return the Koh-i-Noor diamond to [SCOPE.sCountry('india_scope').GetNameNoFlag]. Our [concept_relations] with them have increased as a result."
+
+  notification_koh_i_noor_not_returned_desc:1 "The current holders of the Koh-i-Noor diamond in [SCOPE.sCountry('koh_i_noor_owner_scope').GetName] have refused to return it, claiming that it is rightfully theirs by the terms of the treaty signed with its previous owners. Our [concept_relations] with them have decreased as a result."
+
+  india_events.7.f:1 "The newspapers and the people followed the trial with great interest. For some it was a sign of the growing discontent. For others, it was proof that no gunpowder plot could undermine the colonial government. For most locals, however, it was simply what it was. A solemn procession of three hundred men, condemned one after another."
+
+  india_events.12.d:1 "After becoming a prominent member of the [ROOT.GetCountry.GetCapital.GetCityHubName] Theosophical Society, [SCOPE.sCharacter('besant_scope').GetFullName] has announced her intention to depart for India. She will soon join her Theosophist colleagues at their headquarters in [SCOPE.sState('madras_state').GetName]."
+
+  je_india_home_rule:1 "The Indian Nation"
+  je_india_home_rule_reason:1 "@information! Various factors will #tooltippable;tooltip:[GetPlayer.GetTooltipTag],indian_nationalism_advance_reasons_tt advance#! and #tooltippable;tooltip:[GetPlayer.GetTooltipTag],indian_nationalism_retreat_reasons_tt retreat#! the #b Indian Nationalism#! progress bar. As [concept_indian_nationalism] grows, there will be an increasing chance for the [SCOPE.sCountry('india_scope').GetName] to receive yearly protest events. #b Peaceful protest events#! will occur when the [Concept('concept_activism','$concept_activism_short$')] of the [SCOPE.sPoliticalMovement('indian_national_movement').GetName] is low, while #b violent protest events#! are more likely with higher activism.\n\nEvents and [Concept('concept_journal_entry','$concept_journal_entries$')] will occur as #b Indian Nationalism#! reaches certain thresholds. [JournalEntry.GetCustom('get_je_india_home_rule_reason')]"
+
+  je_india_nationalism:1 "The Indian War of Independence"
+  je_india_nationalism_reason:1 "War has broken out across the [SCOPE.sCountry('india_scope').GetName] as fervent radicalism in the #b $movement_india_pan_national$#! has driven its members to launch a war of independence. #b Indian nationalists#! across the subcontinent have taken up arms for the cause of freedom, while colonial soldiers prepare to put down the rebellion. Win or lose, the future of India will be decided here and now."
+
+  south_asian_primary_cultures_tt:1 "All [GetCulture('bengali').GetHeritageTrait.GetTraitGroup.GetName] [Concept('concept_culture', '$concept_cultures$')] with [Concept('concept_homeland','$concept_homelands$')] in the [SCOPE.sCountry('india_scope').GetName] will become [concept_primary_cultures] of the new #b Indian#! nation."
+
+  india_home_rule_events.1.d:1 "After a long struggle, the $movement_india_pan_national$ has achieved its goal. Following negotiation with native Indian leaders, the [ROOT.GetCountry.GetOverlord.GetAdjective] government has passed a law reorganizing the former Raj into the Dominion of India, granting long-sought sovereign rule to the native population."
+  india_home_rule_events.1.f:1 ""From this day forth, the colony of India, that was under the direct authority of the [ROOT.GetCountry.GetOverlord.GetAdjectiveNoFormatting] government, will form the Dominion of India. This Dominion, within the domain of [ROOT.GetCountry.GetOverlord.GetNameNoFormatting], will have its own legislative authority; insofar as it does not encroach, resist, or counter the authority of the dominion itself.""
+  india_home_rule_events.1.a:1 "India is now in charge of its own destiny."
+
+  india_home_rule_events.2.t:1 "Indian Administration Requests Local Elections"
+  india_home_rule_events.2.d:1 "Facing pressure from the [SCOPE.sPoliticalMovement('indian_national_movement').GetName], the [SCOPE.sCountry('india_scope').GetName] has requested our approval to permit local elections to positions in the Indian administration.\n\nIf we choose to permit such reforms, we will send a #b Statutory Commission#! in #v 10 years#! to assess the potential for self-rule."
+  # NO LOC (minor rewording)
+  india_home_rule_events.2.b:1 "A necessary step for stabilizing the administration."
+  authorise_indian_self_governance_tt:1 "The [SCOPE.sCountry('india_scope').GetName] will pass [GetLawType('law_wealth_voting').GetName]"
+  simon_commission_in_ten_years_tt:1 "In #v 10#! years, a [SCOPE.sCountry('overlord_scope').GetAdjective] government commission will be sent to assess the potential for self-rule."
+
+  india_home_rule_events.3.t:1 "The [SCOPE.sState('jallianwala_bagh_state').GetFarmHubName] Massacre"
+  # NO LOC (minor rewording)
+  india_home_rule_events.3.d:1 "Amidst a peaceful protest in [SCOPE.sState('jallianwala_bagh_state').GetFarmHubName] against the suppression of the [SCOPE.sPoliticalMovement('indian_national_movement').GetName], a [ROOT.GetCountry.GetAdjective] Army unit headed by [SCOPE.sCharacter('dyer_scope').GetPrimaryRoleTitle] [SCOPE.sCharacter('dyer_scope').GetFullName] has opened fire on the crowd. Hundreds of Indians have been killed with thousands more wounded."
+  india_home_rule_events.3.a:1 "Recall [SCOPE.sCharacter('dyer_scope').GetFullNameNoFormatting] at once."
+
+  india_home_rule_events.4.f:1 "In response to the suppression of the [SCOPE.sState('jallianwala_bagh_state').GetFarmHubName] rebellion this Sunday, the people of India have taken to rioting.\n\n"Down with [SCOPE.sCountry('overlord_scope').GetAdjectiveNoFormatting] imperialism! Down with [SCOPE.sCountry('overlord_scope').GetAdjectiveNoFormatting] dirty dogs!", were the words hurled at [SCOPE.sCountry('overlord_scope').GetAdjectiveNoFormatting] administrators as they made their way to their offices on Monday morning."
+
+  india_home_rule_events.5.a:1 "Recall [SCOPE.sCharacter('dyer_scope').GetLastName] to [SCOPE.sCountry('overlord_scope').GetCapital.GetCityHubName] posthaste."
+  dyer_returns_home_tt:1 "[SCOPE.sCharacter('dyer_scope').GetLastName] will be permitted to resign without penalty, and return to [ROOT.GetCountry.GetOverlord.GetName] with [SCOPE.sCharacter('dyer_scope').GetHerHis] honor intact"
+  dyer_disgraced_tt:1 "[SCOPE.sCharacter('dyer_scope').GetLastName] will be stripped of [SCOPE.sCharacter('dyer_scope').GetHerHis] rank and awards, and deported back to [ROOT.GetCountry.GetOverlord.GetName]"
+
+  india_home_rule_events.6.d:1 "After ordering his men to open fire on peaceful Indian protestors, and a subsequent inquiry, the former Brigadier General [SCOPE.sCharacter('dyer_scope').GetLastName] has returned to [ROOT.GetCountry.GetName]. [SCOPE.sCharacter('dyer_scope').GetCustom('dyer_fate')]"
+
+  india_home_rule_events.7.d:1 "National consciousness has begun to grow across India, spear-headed by the [SCOPE.gsInterestGroup('petty_bourgeoisie_ig').GetName] who find their financial interests clashing with [SCOPE.sCountry('overlord_scope').GetAdjectiveNoFormatting] businesses. Demands for greater self-governance have begun, and acts of protest may soon follow."
+  india_home_rule_events.7.a:1 "Can they really expect to force [SCOPE.sCountry('overlord_scope').GetNameNoFormatting]'s hand?"
+
+  india_home_rule_events.8.d:1 "National consciousness in India is beginning to grow amongst the native [SCOPE.gsInterestGroup('petty_bourgeoisie_ig').GetName] who find their financial interests clashing with [ROOT.GetCountry.GetAdjectiveNoFormatting] businesses. Calls for greater self-governance have begun, and key figures are beginning to organize into a wider sovereignty movement."
+  india_home_rule_events.8.f:1 "#bold Indian Subjects reject [ROOT.GetCountry.GetAdjectiveNoFormatting] Rule! Call for Self-Government!#!\n\nNative subjects in #b India#! have begun showing signs of Nationalist Agitation, demanding the right to sovereignty and self-government.\n\nSeveral politicians debated the matter. Some believe that this is a natural outcome after unifying the subcontinent and educating its populace. Others argue that this is the work of a few rebellious instigators. A member who wished to remain anonymous said, "[SCOPE.gsInterestGroup('petty_bourgeoisie_ig').GetLeader.GetFullNameNoFormatting] will not lead India to capable self-government. The [SCOPE.sCountry('india_scope').GetNameNoFormatting] must continue, firm and unshaken in its administration of justice to all men.""
+  affect_bar_india_policies_tt:1 "As long as #b $je_india_home_rule$#! [concept_journal_entry] is active, we may receive reform requests from the [SCOPE.sCountry('india_scope').GetName]."
+
+  india_home_rule_events.9.t:1 "The [SCOPE.sCharacter('montagu_scope').GetLastNameNoFormatting]-[SCOPE.sCharacter('chelmsford_scope').GetLastNameNoFormatting] Reforms"
+  india_home_rule_events.9.d:1 "In response to growing nationalist agitation against [SCOPE.sCountry('overlord_scope').GetAdjective] rule, the [SCOPE.sCountry('overlord_scope').GetAdjectiveNoFormatting] government has authorized a series of reforms in the [ROOT.GetCountry.GetName]. Several elected bodies have been established to assist in the governance of India."
+  india_home_rule_events.9.a:1 "An important step towards full self-governance."
+
+  india_home_rule_events.10.d_1:1 "The government has made the decision to immediately dispatch a commission to the [SCOPE.sCountry('india_scope').GetName] to discuss the possibility of native self-rule. The question remains of who should be included in the commission."
+  india_home_rule_events.10.d_2:1 "As scheduled, the government has begun to assemble a commission to send to the [SCOPE.sCountry('india_scope').GetName] to discuss the possibility of native self-rule. The question remains of who should be included in the commission."
+  india_home_rule_events.10.a:1 "We will send an imperialist-leaning, all-[ROOT.GetCountry.GetAdjectiveNoFormatting] commission to assess the matter."
+  india_home_rule_events.10.b:1 "We will send a reformist-leaning commission that will include Indian members."
+  commission_sent_conservative_tt:1 "An all-[ROOT.GetCountry.GetAdjectiveNoFormatting] commission will be dispatched to the [SCOPE.sCountry('india_scope').GetName] to discuss the possibility of Indian self-rule."
+  commission_sent_liberal_tt:1 "A joint [ROOT.GetCountry.GetAdjectiveNoFormatting]-Indian commission will be dispatched to the [SCOPE.sCountry('india_scope').GetName] to discuss the possibility of Indian self-rule."
+
+  india_home_rule_events.11.d_1:1 "The [SCOPE.sCountry('overlord_scope').GetAdjective] government has dispatched a statutory commission to [ROOT.GetCountry.GetCapital.GetCityHubName] to assess the potential for Indian self-rule. Several local Indian leaders have been invited to sit on the commission."
+  india_home_rule_events.11.d_2:1 "The [SCOPE.sCountry('overlord_scope').GetAdjective] government has dispatched a statutory commission to [ROOT.GetCountry.GetCapital.GetCityHubName] to assess the potential for Indian self-rule. With no #b Indian#! members, the commission has sparked discontent amongst Indian nationalists."
+
+  india_nationalism_events.1.t:1 "The Indian War of Independence"
+  india_nationalism_events.1.d:1 "Protest for Indian sovereignty has turned to outright rebellion as native Indians across the subcontinent take up arms for the cause of freedom."
+  india_nationalism_events.1.f:1 "Win or lose, India's destiny was to be decided by this war. Would it emerge as a sovereign, independent nation free from foreign masters? Or would a [SCOPE.sCountry('overlord_scope').GetAdjectiveNoFormatting] victory smother the dream of Indian freedom once and for all?"
+  india_nationalism_events.1.a:1 "India will serve the [SCOPE.sCountry('overlord_scope').GetAdjectiveNoFormatting] no longer!"
+
+  notification_overlord_government_reform_accepted_name:1 "[SCOPE.sCountry('overlord_scope').GetName] Accepts Government Reform"
+  notification_overlord_government_reform_accepted_desc:1 "[SCOPE.sCountry('overlord_scope').GetName] has granted our request for government reform. This has increased the number of native Indian [Concept('concept_loyalist', '$concept_loyalists$')], increased the approval of the [SCOPE.sPoliticalLobby('inc_scope').GetName], and lowered the [Concept('concept_activism','$concept_activism_short$')] of the [SCOPE.sPoliticalMovement('indian_national_movement').GetName]."
+
+  notification_overlord_government_reform_denied_name:1 "[SCOPE.sCountry('overlord_scope').GetName] Denies Government Reform"
+  notification_overlord_government_reform_denied_desc:1 "[SCOPE.sCountry('overlord_scope').GetName] has refused our request for government reform. This has increased the number of native Indian [Concept('concept_radical', '$concept_radicals$')], increased the disapproval of the [SCOPE.sPoliticalLobby('inc_scope').GetName], and increased the [Concept('concept_activism','$concept_activism_short$')] of the [SCOPE.sPoliticalMovement('indian_national_movement').GetName]."
+
+  india_nationalism_events.2.t:1 "The Jewel Secured"
+  india_nationalism_events.2.d:1 "The rebellion in #b India#! has finally been stamped out. After a bloody war that saw fighting throughout the subcontinent, [SCOPE.sCountry('overlord_scope').GetAdjective] rule has been secured. Any hope of Indian sovereignty has died with the rebellion."
+  india_nationalism_events.2.f:1 ""It is a question I often ask myself looking back on the rebellion and my time in the war. Had we, as their overlords, been too harsh in our rule, and in so instigated the entire affair? Or perhaps, instead, we had not been harsh enough.""
+  india_nationalism_events.2.a:1 "May [SCOPE.sCountry('overlord_scope').GetAdjectiveNoFormatting] rule in India be everlasting."
+
+  india_nationalism_events.3.d:1 "Indian nationalists led by [SCOPE.sCharacter('prisoner_scope').GetFullName] have marched to the seaside of [SCOPE.sState('salt_march_state').GetName] to protest the [SCOPE.sCountry('overlord_scope').GetAdjectiveNoFlag] salt monopoly. Upon arriving at the shore, they intentionally violated the law by harvesting salt. The protest has brought international attention to the [SCOPE.sPoliticalMovement('indian_national_movement').GetName], and unwanted notoriety to the [SCOPE.sCountry('overlord_scope').GetAdjectiveNoFormatting] government."
+  india_nationalism_events.3.f:1 "#bold Salt Riot in [SCOPE.sState('salt_march_state').GetPortHubName]!#!\n\nOn [TimeKeeper.GetCurrentDate.GetString], a large group arrived in [SCOPE.sState('salt_march_state').GetPortHubName] with the clear intent of breaking the law. They collected seawater and boiled it to produce salt. Nearly all the people gathered were arrested.\n\nWe asked the march leader, a senior member of the [SCOPE.sPoliticalLobby('anti_overlord_lobby').GetNameNoFormatting], what they intended to do with the salt. [SCOPE.sCharacter('prisoner_scope').GetSheHe|U] explained that they deemed the salt tax untenable and wished to exert their right to self-rule through this nonviolent protest. If the reader is amused, then they are not alone! But at least one can rest assured that the nationalist movement is in harmless hands."
+  india_nationalism_events.3.a:1 "This little parade has garnered significant attention..."
+
+  india_nationalism_events.5.t:1 "Gandhi Returns"
+  india_nationalism_events.5.d:1 "After spending many years abroad, [SCOPE.sCharacter('gandhi_scope').GetFullName] has returned to the [ROOT.GetCountry.GetName]. He has put his theory of Satyagraha, or "holding firmly to truth", to use in support of the [SCOPE.sPoliticalMovement('indian_national_movement').GetName]."
+  india_nationalism_events.5.a:1 "The Mahatma returns to his native land."
+
+  notification_gandhi_leaves_desc:1 "[SCOPE.sCharacter('gandhi_scope').GetFullName] has departed [SCOPE.sCountry('gandhi_exit_scope').GetName], seeking to assist the #b $movement_india_pan_national$#!."
+
+  india_nationalism_events.6.f:1 ""John, I was at high tea with the ladies, and a young woman approached us with the most perplexing petition. At first, I thought it was an odd prank played by Emma. You know how she is with her fancies. But it seems that this woman was quite serious. She said she is part of the India League, and they advocate for Indian self-rule. At first I thought it was a prank, but no, they're quite serious. As if the whole notion wasn't absolutely ridiculous.\n\nI don't know where these kids get those ideas. I suppose this is the cost of letting some of those Indians study and work here...""
+  india_nationalism_events.6.b:1 "Surely just a fad."
+
+  india_nationalism_events.7.f:1 "The officer eyed the telegram on his desk, a smirk tugging at his lips. The [SCOPE.sCountry('india_scope').GetRuler.GetPrimaryRoleTitle] had written to him to complain about the India League and their lengthy document about the treatment of Indians in India. The [SCOPE.sCountry('india_scope').GetRuler.GetPrimaryRoleTitle] was furious that the Home Office had allowed the League any room to breathe. The [SCOPE.sCountry('india_scope').GetRuler.GetPrimaryRoleTitle] had his sympathies, but the officer could not help but laugh. Surely the Indian people already knew their condition? What did the league hope to achieve? Only a traitor would support their cause. That they allowed some Indians to come study in this great country was kindness enough."
+  india_nationalism_events.7.b:1 "Hardly worth our attention."
+
+  INDIA_SUBJECT:1 "[concept_chartered_company] or [concept_colony] [concept_subject]"
+
+  je_federation_of_india:1 "The [SCOPE.GetRootScope.GetCountry.GetCustom('get_federation_union')] of [ROOT.GetCountry.GetDefinition.GetName]"
+  je_federation_of_india_reason:1 "[SCOPE.GetRootScope.GetCountry.GetCustom('get_federation_of_india_intro_text')]\n$TOOLTIP_DELIMITER$\nWhilst this $concept_journal_entry$ is active, [concept_princely_state] [Concept('concept_subject', '$concept_subjects$')] with low [concept_liberty_desire] and high [concept_relations] will occasionally petition for accession into the [SCOPE.GetRootScope.GetCountry.GetCustom('get_federation_union')].\n\n#b The [concept_privy_purse]:#!\nThe former rulers of the #b Princely States#! will be entitled to a state pension as compensation for accession to the [SCOPE.GetRootScope.GetCountry.GetCustom('get_federation_union')]. The $concept_privy_purse$ payments will add #b National Expenses#! based on the [Concept('concept_gdp', '$concept_gdp_short$')] of each #b $concept_princely_state$#! annexed using this $concept_journal_entry$."
+  je_federation_of_india_reason_intro_home_rule:1 "#lore Per the terms of the #b Indian Home Rule Act#!, any $concept_princely_state$ may petition for accession into the [ROOT.GetCountry.GetNameNoFormatting].#!"
+  je_federation_of_india_reason_intro_independence:1 "#lore The process of our independence has left a multitude of autonomous $concept_princely_states$ scattered across the Indian subcontinent. If these colonial remnants are not integrated into [ROOT.GetCountry.GetNameNoFormatting] proper, their continued existence could provide a pretext for further division of our nation.#!"
+
+  privy_purse_payments_total_tt:1 "Our current [concept_privy_purse] payments amount to @money![GetPlayer.MakeScope.Var('privy_purse_multiplier').GetValue|D-]"
+
+  all_princely_states_have_acceded_to_the_federation_tt:1 "All of our [concept_princely_state] [Concept('concept_subject', '$concept_subjects$')] have joined [ROOT.GetCountry.GetName]"
+
+  federation_of_india.1.t:1 "[SCOPE.sCountry('india_scope').GetNameNoFormatting] Offers Accession"
+  federation_of_india.1.f:1 ""I, _______, Ruler of _______, in the exercise of my sovereignty in and over my said State Do hereby execute this my Instrument of Accession and,\n\n1. I hereby declare I accede to the [SCOPE.sCountry('india_scope').GetCustom('get_federation_union')] of [SCOPE.sCountry('india_scope').GetDefinition.GetName] with the intent that the [SCOPE.sCountry('india_scope').GetRuler.GetPrimaryRoleTitle] of [SCOPE.sCountry('india_scope').GetDefinition.GetName], the Federal Legislature, the Federal Court, and any other authority established for the purposes of the [ROOT.GetCountry.GetCustom('get_federation_union')] shall, by virtue of this my Instrument of Accession, but subject always to the terms thereof, and for the purposes only of the [SCOPE.sCountry('india_scope').GetCustom('get_federation_union')], exercise in relation to the State of _______ all governmental functions.""
+
+  federation_of_india.3.f:1 ""The character of the Government which proclaims itself to represent all of [ROOT.GetCountry.GetDefinition.GetName] is fundamentally incompatible with that of the State of [SCOPE.sCountry('relevant_country').GetNameNoFormatting]. It has proved unwilling to reach equitable agreements with the other Indian States. I fear that, without a fundamental change in the diplomatic posture of the [ROOT.GetCountry.GetRuler.GetLastNameNoFormatting] Government, no constructive and enduring settlement, for [ROOT.GetCountry.GetCustom('get_federation_union')] or otherwise, may be reached by any party.\n\nIt is thus that I, the sovereign [SCOPE.sCountry('relevant_country').GetRuler.GetPrimaryRoleTitle] of [SCOPE.sCountry('relevant_country').GetNameNoFormatting], in accordance with my peers amongst the other Indian states, announce my indefinite abstinence from the [ROOT.GetCountry.GetCustom('get_federation_union')] in question.""
+   federation_of_india.3.a:1 "[ROOT.GetCountry.GetDefinition.GetName] will be one, by pen or by sword."
+
+  federation_of_india.4.t:1 "[SCOPE.sCountry('relevant_princely_state').GetNameNoFormatting] Requests Accession"
+  federation_of_india.4.d:1 "The [SCOPE.sCountry('relevant_princely_state').GetRuler.GetPrimaryRoleTitle] of [SCOPE.sCountry('relevant_princely_state').GetNameNoFlag] has requested the accession of [SCOPE.sCountry('relevant_princely_state').GetRuler.GetHerHis] state to the [ROOT.GetCountry.GetCustom('get_federation_union')] of [ROOT.GetCountry.GetDefinition.GetName]."
+  federation_of_india.4.f:1 ""I, [SCOPE.sCountry('relevant_princely_state').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('relevant_princely_state').GetRuler.GetLastNameNoFormatting], Ruler of [SCOPE.sCountry('relevant_princely_state').GetNameNoFormatting], in the exercise of my sovereignty in and over my said State Do hereby execute this my Instrument of Accession and,\n\n1. I hereby declare I accede to the [ROOT.GetCountry.GetCustom('get_federation_union')] of [ROOT.GetCountry.GetDefinition.GetName] with the intent that the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] of [ROOT.GetCountry.GetDefinition.GetName], the Federal Legislature, the Federal Court, and any other authority established for the purposes of the [ROOT.GetCountry.GetCustom('get_federation_union')] shall, by virtue of this my Instrument of Accession, but subject always to the terms thereof, and for the purposes only of the [ROOT.GetCountry.GetCustom('get_federation_union')], exercise in relation to the State of [SCOPE.sCountry('relevant_princely_state').GetNameNoFormatting] all governmental functions."" #- Lightly modified version of the official Instrument of Accession.
+
+  add_claims_on_india_tt:1 "[ROOT.GetCountry.GetName] gains [Concept('concept_claim', '$concept_claims$')] on all [Concept('concept_state', '$concept_states$')] in [GetGeographicRegion('geographic_region_india').GetName] held by our [concept_princely_state] [Concept('concept_subject', '$concept_subjects$')]"
+
+  no_federation_je_tt:1 "Does #b not#! have an active #v The Federation of [ROOT.GetCountry.GetDefinition.GetName]#! [concept_journal_entry]"
+  no_union_je_tt:1 "Does #b not#! have an active #v The Union of [ROOT.GetCountry.GetDefinition.GetName]#! [concept_journal_entry]"
+
+  upset_every_princely_state_federation_tt:1 "The [concept_liberty_desire] of each of our [concept_princely_state] [Concept('concept_subject', '$concept_subjects$')] will increase by #r 30#! and [concept_relations] will deteriorate by #r 50#!"
+  # === FIX LINE ===
+
+ je_india_home_rule_progressbar: "Indian Nationalism"
+ je_india_home_rule_progressbar_desc: "Indian Nationalism: ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/500)"
+
+ je_india_home_rule_request_democracy_permission_desc: "The nationalist calls for self-governance have grown too loud to ignore. We must petition our suzerain for permission to enact a #tooltippable;tooltip:[GetPlayer.GetTooltipTag],indian_democratic_reforms_tt democratic reform#!.\n\n[SCOPE.sCountry('india_scope').GetOverlord.GetNameNoFlag] will be more likely to accept if the combined [Concept('concept_political_movement_support', '$concept_political_movement_support_short$')] and [Concept('concept_activism', '$concept_activism_short$')] of the [SCOPE.sPoliticalMovement('indian_national_movement').GetName] exceeds #v 70%#!. A #tooltippable;tooltip:[GetPlayer.GetTooltipTag],ig_indian_reformist_tt reformist#! [SCOPE.sCountry('india_scope').GetOverlord.GetAdjectiveNoFormatting] government will also be more likely to accept, while an #tooltippable;tooltip:[GetPlayer.GetTooltipTag],ig_indian_imperialist_tt imperialist#! one will be less likely.\n\nIf [SCOPE.sCountry('india_scope').GetOverlord.GetNameNoFormatting] refuses, it will increase the number of native Indian [Concept('concept_radical', 'radicals')], the disapproval of the #b $lobby_indian_national_congress_icon$ $lobby_indian_national_congress_name$#!, and the [Concept('concept_activism', '$concept_activism_short$')] of the [SCOPE.sPoliticalMovement('indian_national_movement').GetName].[ROOT.GetCountry.GetCustom('get_je_india_home_rule_switch_from_chartered_company_notice')]"
+
+ requested_dop_permission_tt: "Has not requested a reform or sovereignty in the last #Bold 2#! years"
+
+ je_india_nationalism_britain_indian_self_governance: "Authorize Reform"
+ je_india_nationalism_britain_indian_self_governance_desc: "With the growing agitation of the [SCOPE.sPoliticalMovement('indian_national_movement').GetName], we must enact a #tooltippable;tooltip:[GetPlayer.GetTooltipTag],indian_democratic_reforms_tt reform#! to appease the native population. Doing so will temporarily appease the movement's more radical elements, but increase the rate of [concept_indian_nationalism].[ROOT.GetCountry.GetCustom('get_je_india_home_rule_switch_from_chartered_company_notice')]"
+
+ je_india_nationalism_britain_dispatch_simon_commission_desc: "After enacting democratic enforms in [SCOPE.sCountry('india_scope').GetName], we have promised to send a commission to assess the need for further reforms in #v [SCOPE.sJournalEntry('journal_entry').MakeScope.Var('simon_commission_timer_var').GetValue|v0]#! months.\n\nA #tooltippable;tooltip:[GetPlayer.GetTooltipTag],ig_indian_reformist_tt reformist#! government will send a #b reformist#!-leaning commission more likely to advance the [concept_indian_nationalism] progress bar, while an #tooltippable;tooltip:[GetPlayer.GetTooltipTag],ig_indian_imperialist_tt imperialist#! government will send a #b imperialist#!-leaning commission more likely to delay its progress. However, if we are concerned about a change in government before the commission is sent, we may choose to send the commission early with our current government."
+ simon_commission_dispatch_timer_tt: "If this action is not taken, the #bold Indian Statutory Commission#! will be dispatched in [SCOPE.sJournalEntry('journal_entry').MakeScope.Var('simon_commission_timer_var').GetValue|v0] months"
+
+ sepoy_mutiny_events.11.t: "The Stalwart Raj"
+ sepoy_mutiny_events.11.d: "The [ROOT.GetCountry.GetName] has proven its ability to successfully manage the subcontinent. With native resentment placated and the immediate threat of rebellion vanquished, Colonial rule in #b India#! is now firmly cemented."
+ sepoy_mutiny_events.11.a: "A job well done by our administrators."

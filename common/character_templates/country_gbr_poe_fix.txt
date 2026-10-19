@@ -1,0 +1,123 @@
+﻿# Generated IG Leaders
+
+REPLACE:agitator_john_stuart_mill = {
+	first_name = John_Stuart
+	last_name = Mill
+	historical = yes
+	culture = cu:british
+	religion = rel:protestant
+	female = no
+	interest_group = ig_industrialists
+	ideology = ideology_utilitarian_leader
+	home_region = STATE_HOME_COUNTIES
+	birth_date = 1806.5.20
+	dna = dna_john_stuart_mill
+	role = character_role_politician
+	traits = {
+		erudite
+        basic_colonial_administrator
+		persistent
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+            OR = {
+                has_dlc_feature = voice_of_the_people_content
+                has_dlc_feature = ip2_content
+            }
+            c:BIC ?= this
+		}
+        interest_group_trigger = {
+        	ig_counts_as_marginal = no
+            is_interest_group_type = ig_industrialists
+        }
+		earliest_usage_date = 1836.1.1
+		latest_usage_date = 1865.1.1
+		#guaranteed to spawn if possible
+	}
+}
+
+REPLACE:gbr_george_curzon = { # George Curzon, 1 Marquess Curzon of Kedleston
+    first_name = George
+    last_name = Curzon
+    historical = yes
+    culture = cu:british
+    female = no
+    religion = rel:protestant
+    ideology = ideology_reformer
+    interest_group = ig_industrialists
+	home_region = STATE_MIDLANDS
+    birth_date = 1859.1.11
+	role = character_role_politician
+    dna = dna_george_curzon
+	role = character_role_magnate
+	holding_type = building_financial_district
+    traits = {
+        masterful_diplomat
+        ambitious
+        imperious
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:BIC ?= this
+            OR = {
+            	AND = {
+            		exists = c:GBR
+            		is_direct_subject_of = c:GBR
+            	}
+            	country_has_primary_culture = cu:british 
+            }
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_industrialists
+        }
+        earliest_usage_date = 1895.1.1
+        latest_usage_date = 1910.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+# Generated Agitators
+
+REPLACE:GBR_annie_besant = { # Annie Besant
+	first_name = Annie
+	last_name = Besant
+	historical = yes
+	female = yes
+	is_agitator = yes
+	culture = cu:british
+	religion = rel:hindu
+	interest_group = ig_intelligentsia
+    dna = dna_annie_besant
+	ideology = ideology_humanitarian
+	home_region = STATE_HOME_COUNTIES
+	birth_date = 1847.10.1
+	traits = {
+		persistent
+        firebrand
+	}
+    agitator_usage = {
+        country_trigger = {
+        	OR = {
+        		AND = {
+	        		c:GBR ?= this
+	        		any_scope_state = {
+	        			state_region = s:STATE_HOME_COUNTIES
+	        		}
+	        		game_date <= 1893.1.1
+	        	}
+	        	AND = {
+	        		p:x07104C.state.owner ?= this
+	        		game_date > 1893.1.1
+	        	}
+        	}
+			has_dlc_feature = ip2_content
+		}
+        interest_group_trigger = {
+			is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1888.1.1
+        latest_usage_date = 1933.1.1
+        #guaranteed to spawn if possible
+    }
+}

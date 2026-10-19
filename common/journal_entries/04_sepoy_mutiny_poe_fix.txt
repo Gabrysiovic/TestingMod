@@ -1,0 +1,535 @@
+﻿REPLACE:je_uneasy_raj = {
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	group = je_group_british_india_global
+
+	should_be_involved = {
+		c:BIC ?= this
+	}
+
+	should_show_when_not_involved = {
+		OR = {
+			is_in_geographic_region = geographic_region_india
+			c:BIC ?= {
+				is_subject_of = ROOT
+			}
+		}
+	}
+
+	is_shown_in_lobby = {
+        has_dlc_feature = ip2_content #Pivot of Empire
+        c:BIC ?= this
+    }
+
+	scripted_progress_bar = sepoy_mutiny_progress_bar_bengal
+	scripted_progress_bar = sepoy_mutiny_progress_bar_bombay
+	scripted_progress_bar = sepoy_mutiny_progress_bar_madras
+	scripted_progress_bar = sepoy_mutiny_progress_bar_indian_instability
+
+	# TODO: Remove these debugging buttons
+	#scripted_button = lower_bengal_stability_button
+	#scripted_button = increase_bengal_stability_button
+	#scripted_button = lower_bombay_stability_button
+	#scripted_button = increase_bombay_stability_button
+	#scripted_button = lower_madras_stability_button
+	#scripted_button = increase_madras_stability_button
+	#scripted_button = mutiny_effect_button
+
+	immediate = {
+		c:BIC ?= {
+			update_uneasy_raj_cached_values = yes
+			je:je_uneasy_raj = {
+				set_variable = {
+					name = num_months
+					value = 0
+				}
+				# Used for "A Matter of Taste" event chain; sepoy_mutiny_events.6-10
+				set_variable = {
+					name = bad_cartridge_choices
+					value = 0
+				}
+			}
+			save_scope_as = raj_scope
+			set_global_variable = {
+				name = bengal_presidency_stability
+				value = 165
+			}
+			set_global_variable = {
+				name = bombay_presidency_stability
+				value = 190
+			}
+			set_global_variable = {
+				name = madras_presidency_stability
+				value = 180
+			}
+		}
+		# Inform Players of the Fomenting Rebellion JE (AI countries will decline by default)
+		every_country = {
+			limit = {
+				OR = {
+		        	is_in_geographic_region = geographic_region_india
+		        	is_in_geographic_region = geographic_region_burma
+		        }
+		        OR = {
+		            has_indian_primary_culture = yes
+		            any_primary_culture = {
+		                has_discrimination_trait = heritage_burmese
+		            }
+		        }
+		        OR = {
+					is_direct_subject_of = c:BIC
+					AND = {
+						OR = {
+							trigger_if = {
+								limit = {
+									c:BIC ?= { is_subject = yes }
+								}
+								is_direct_subject_of = c:BIC.overlord
+							}
+							is_subject = no
+						}
+						has_strategic_land_adjacency = c:BIC
+					}
+				}
+			}
+			trigger_event = { id = princely_states.1 }
+		}
+		set_global_variable = {
+    		name = num_sepoy_rebel_countries
+    		value = 1
+    	}
+		set_global_variable = {
+			name = princely_states_total_produced_small_arms
+			value = 0
+		}
+		set_global_variable = {
+			name = princely_states_total_produced_artillery
+			value = 0
+		}
+		set_global_variable = {
+			name = princely_states_total_produced_ammunition
+			value = 0
+		}
+		set_global_variable = {
+			name = sepoy_rebels_small_arms_stockpile_var
+			value = 0
+		}
+		set_global_variable = {
+			name = sepoy_rebels_artillery_stockpile_var
+			value = 0
+		}
+		set_global_variable = {
+			name = sepoy_rebels_ammunition_stockpile_var
+			value = 0
+		}
+	}
+
+	custom_completion_header = je_uneasy_raj_complete_header
+
+	complete = {
+		custom_tooltip = {
+			text = je_uneasy_raj_tt_1
+			always = no
+		}
+	}
+
+	custom_failure_header = je_uneasy_raj_fail_header
+
+	fail = {
+		custom_tooltip = {
+			text = je_uneasy_raj_tt_2
+			"scope:journal_entry.scripted_bar_progress(sepoy_mutiny_progress_bar_indian_instability)" >= 600
+		}
+		# TODO: Delete below, for debugging
+		#custom_tooltip = {
+		#	text = je_uneasy_raj_tt_3
+		#}
+	}
+
+	timeout = 9125
+
+	on_timeout = {
+		hidden_effect = {
+			c:BIC ?= {
+				set_variable = company_rule_enduring
+				trigger_event = { id = sepoy_mutiny_events.11 popup = yes }
+			}
+		}
+	}
+
+	invalid = {
+		NOT = {
+			exists = c:BIC
+		}
+	}
+
+	custom_on_completion_header = je_uneasy_raj_on_complete_header
+
+	on_complete = {
+		show_as_tooltip = {
+			c:BIC ?= {
+				trigger_event = { id = sepoy_mutiny_events.11 popup = yes }
+			}
+		}
+	}
+
+	event_outcome_completed_effect_desc = {
+        header = event_effects_header_sepoy_mutiny_events_11.a
+        effect = {
+        	execute_event_option = { event = sepoy_mutiny_events.11 option = 0 }
+        }
+    }
+
+    event_outcome_completed_effect_desc = {
+        header = event_effects_header_sepoy_mutiny_events_11.b
+        effect = {
+        	execute_event_option = { event = sepoy_mutiny_events.11 option = 1 }
+        }
+    }
+
+	custom_on_failure_header = je_uneasy_raj_on_fail_header
+
+	on_fail = {
+		custom_tooltip = {
+			text = indian_uprising_triggered_tt
+			c:BIC ?= {
+				add_contextless_journal_entry = je_sepoy_mutiny
+			}
+		}
+		if = {
+			limit = {
+				c:BIC ?= {
+					is_subject = yes
+					is_subject_type = subject_type_chartered_company
+				}
+			}
+			custom_tooltip = british_raj_later_tt
+		}
+		if = {
+			limit = {
+				c:BIC ?= {
+					NOR = {
+						has_variable = utilitarianism_done
+						has_variable = rejected_imperialism_of_promise
+					}
+				}
+			}
+			custom_tooltip = no_more_utilitarianism_tt
+		}
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			scope:journal_entry ?= {
+				change_variable = {
+					name = num_months
+					add = 1
+				}
+				update_indian_instability = yes
+			}
+			c:BIC ?= {
+				update_uneasy_raj_cached_values = yes
+				# Begin "A Matter of Taste" Event Chain once Rifling Researched or we hit 1857
+				if = {
+					limit = {
+						NOT = {
+							has_variable = sepoy_mutiny_cartridge_event_var
+						}
+						OR = {
+							has_technology_researched = rifling
+							game_date >= 1857.1.1 # Ensfield rifle-musket was issued in January 1857
+						}
+					}
+					trigger_event = { id = sepoy_mutiny_events.6 popup = yes }
+				}
+				set_global_variable = { name = bengal_presidency_stability value = "scope:journal_entry.scripted_bar_progress(sepoy_mutiny_progress_bar_bengal)" }
+				set_global_variable = { name = bombay_presidency_stability value = "scope:journal_entry.scripted_bar_progress(sepoy_mutiny_progress_bar_bombay)" }
+				set_global_variable = { name = madras_presidency_stability value = "scope:journal_entry.scripted_bar_progress(sepoy_mutiny_progress_bar_madras)" }
+				random_list = {
+					100 = { }
+					50 = { trigger_event = sepoy_mutiny_events.7 }
+					50 = { trigger_event = sepoy_mutiny_events.8 }
+					50 = { trigger_event = sepoy_mutiny_events.9 }
+					10 = { trigger_event = raj.4 }
+					10 = { trigger_event = raj.5 }
+				}
+			}
+			# Update stockpile values for rebelling princely states (from je_princely_states buttons)
+			# First estimate the number of countries that would rebel
+			scope:journal_entry ?= {
+				set_local_variable = {
+					name = new_num_rebels
+					value = 0
+				}
+				every_in_list = {
+	                variable = fomenting_rebellion_countries
+	                limit = {
+	                    exists = this
+	                    this ?= {
+	                        has_journal_entry = je_princely_states
+	                    }
+	                }
+	                change_local_variable = {
+	                	name = new_num_rebels
+	                	add = 1
+	                }
+	            }
+			}
+            c:BIC ?= {
+            	every_direct_subject = {
+            		limit = {
+            			is_princely_state = yes
+            			# Don't double-count
+            			NOT = {
+            				has_journal_entry = je_princely_states
+            			}
+            			OR = {
+							has_attitude = {
+								who = c:BIC
+								attitude = defiant
+							}
+							has_attitude = {
+								who = c:BIC
+								attitude = rebellious
+							}
+						}
+            		}
+            		scope:journal_entry ?= {
+            			change_local_variable = {
+		                	name = new_num_rebels
+		                	add = 1
+		                }
+            		}
+            	}
+            }
+            scope:journal_entry ?= {
+            	set_global_variable = {
+            		name = num_sepoy_rebel_countries
+            		value = {
+            			add = local_var:new_num_rebels
+            			min = 1
+            		}
+            	}
+            }
+			set_global_variable = {
+				name = sepoy_rebels_small_arms_stockpile_var
+				value = {
+					value = global_var:princely_states_total_produced_small_arms
+					divide = 30.5 # 5 years (60 months) decaying, so 60/60 + 59/60 + 58/60 + ...
+					divide = global_var:num_sepoy_rebel_countries
+				}
+			}
+			set_global_variable = {
+				name = sepoy_rebels_artillery_stockpile_var
+				value = {
+					value = global_var:princely_states_total_produced_artillery
+					divide = 30.5  # 5 years (60 months) decaying, so 60/60 + 59/60 + 58/60 + ...
+					divide = global_var:num_sepoy_rebel_countries
+				}
+			}
+			set_global_variable = {
+				name = sepoy_rebels_ammunition_stockpile_var
+				value = {
+					value = global_var:princely_states_total_produced_ammunition
+					divide = 30.5  # 5 years (60 months) decaying, so 60/60 + 59/60 + 58/60 + ...
+					divide = global_var:num_sepoy_rebel_countries
+				}
+			}
+
+		}
+	}
+
+	weight = 100
+	should_be_pinned_by_default_involved = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+REPLACE:je_sepoy_mutiny = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	group = je_group_british_india_global
+
+	should_be_involved = {
+		OR = {
+			c:BIC ?= this
+			c:BIC ?= {
+				is_subject_of = ROOT
+			}
+		}
+	}
+
+	should_show_when_not_involved = {
+		OR = {
+			c:BIC ?= ROOT
+			c:BIC ?= {
+				is_subject_of = ROOT
+			}
+			AND = {
+				exists = c:BIC
+				is_subject_of = c:BIC
+			}
+		}
+	}
+
+	is_shown_when_inactive = {
+		has_dlc_feature = ip2_content #Pivot of Empire
+		c:BIC ?= {
+			has_journal_entry = je_uneasy_raj
+		}
+	}
+
+	possible = {
+		# Triggered manually by failing je_uneasy_raj
+		custom_tooltip = {
+			text = unstable_raj_failed_tt
+			always = no
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			c:BIC ?= {
+				save_scope_as = india_scope
+				sepoy_mutiny_immediate_effects = yes
+				sepoy_mutiny_run_all_effects = yes
+			}
+		}
+		# Trigger the event for all BIC / Britain princely state subjects and those with the Instigating Rebellion JE
+		hidden_effect = {
+			every_country = {
+				# Trigger the event for anyone else with the Instigating Rebellion Journal Entry
+				limit = {
+					OR = {
+						has_variable = sepoy_mutiny_instigator
+						AND = {
+							is_princely_state = yes
+							OR = {
+								is_direct_subject_of = c:BIC
+								AND = {
+									c:BIC ?= {
+										is_subject = yes
+									}
+									is_direct_subject_of = c:BIC.overlord
+								}
+							}
+						}
+					}
+				}
+				trigger_event = { id = sepoy_mutiny_events.4 popup = yes }
+			}
+		}
+		c:BIC ?= {
+			trigger_event = { id = sepoy_mutiny_events.3 popup = yes }
+			overlord ?= {
+				trigger_event = { id = sepoy_mutiny_events.3 popup = yes }
+			}
+		}
+	}
+
+	custom_completion_header = je_sepoy_mutiny_complete_header
+
+	complete = {
+		custom_tooltip = {
+			text = sepoy_mutiny_defeated_tt
+			NOT = {
+				exists = scope:sepoy_mutiny_dp
+			}
+			NOT = {
+				# Given by sepoy_mutiny wargoal
+				c:BIC ?= {
+					has_variable = sepoy_mutiny_failed
+				}
+			}
+		}
+	}
+
+	custom_on_completion_header = je_sepoy_mutiny_on_complete_header
+
+	on_complete = {
+		hidden_effect = {
+			c:BIC ?= {
+				sepoy_mutiny_after_effects = yes
+				# Reward every Princely State that sided with BIC with no subject payments
+				every_direct_subject = {
+					limit = {
+						has_variable = loyal_in_sepoy_mutiny
+					}
+					remove_variable = loyal_in_sepoy_mutiny
+					add_modifier = indian_loyalty_rewarded
+				}
+				overlord ?= {
+					every_direct_subject = {
+						limit = {
+							has_variable = loyal_in_sepoy_mutiny
+						}
+						remove_variable = loyal_in_sepoy_mutiny
+						add_modifier = indian_loyalty_rewarded
+					}
+				}
+				# Reincorporate incorporated states that rebelled
+				every_scope_state = {
+					limit = {
+						has_variable = bic_incorporated_state
+					}
+					remove_variable = bic_incorporated_state
+					set_state_type = incorporated
+				}
+			}
+		}
+		c:BIC ?= {
+			if = {
+				limit = {
+					is_subject = yes
+					is_subject_type = subject_type_chartered_company
+				}
+				custom_tooltip = {
+					text = british_raj_now_tt
+					overlord ?= {
+						trigger_event = { id = raj.1 popup = yes }
+					}
+				}
+			}
+		}
+	}
+
+	custom_failure_header = je_sepoy_mutiny_fail_header
+
+	fail = {
+		custom_tooltip = {
+			text = sepoy_mutiny_won_tt
+			NOT = {
+				exists = scope:sepoy_mutiny_dp
+			}
+			# Given by sepoy_mutiny wargoal
+			c:BIC ?= {
+				has_variable = sepoy_mutiny_failed
+			}
+		}
+	}
+
+	custom_on_failure_header = je_sepoy_mutiny_on_fail_header
+
+	on_fail = {
+		c:BIC ?= {
+			hidden_effect = {
+				sepoy_mutiny_after_effects = yes
+			}
+			custom_tooltip = {
+				text = colonial_administration_expelled_from_india_tt
+				trigger_event = { id = sepoy_mutiny_events.2 popup = yes }
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_variable = sepoy_mutiny_revolter_var
+				}
+				trigger_event = { id = sepoy_mutiny_events.12 popup = yes }
+			}
+		}
+	}
+
+	weight = 100
+	should_be_pinned_by_default_involved = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}

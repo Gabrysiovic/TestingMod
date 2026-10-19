@@ -1,0 +1,32 @@
+BIC_sepoy = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	color2 = "white"
+	color3 = "yellow"
+	textured_emblem = {
+		texture = "te_star_india.dds"
+		instance = { scale = { 0.75 0.75 } position = { 0.5 0.5 } }
+	}
+	sub = {
+        parent = "default_revolutionary_canton"
+    }
+}
+
+BIC_republic_sepoy = {
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+	color2 = "red"
+	color3 = "blue"
+    sub = {
+        parent = "sub_BIC_cypher"
+        instance = { scale = { 0.5 0.5 }  } # top left
+    }
+    sub = {
+        parent = "default_revolutionary_canton"
+    }
+	colored_emblem = {
+		texture = "ce_stripes_10.dds"
+		color1 = color2
+		color2 = color2
+	}
+}

@@ -1,0 +1,1372 @@
+﻿namespace = indian_reform_request_events
+
+indian_reform_request_events.1 = { # BIC chooses which reform to request
+	type = country_event
+	placement = ROOT
+
+	duration = 3
+
+	title = indian_reform_request_events.1.t
+	desc = indian_reform_request_events.1.d
+	flavor = indian_reform_request_events.1.f
+
+	event_image = {
+		video = "ip2_telegraph_dictate"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	immediate = {
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_national_movement
+		}
+	}
+
+	# Triggered by button in je_india_home_rule
+	trigger = { }
+
+	option = {
+		name = indian_reform_request_events.1.a
+		ai_chance = 1
+		default_option = yes
+		trigger = {
+			je:je_india_home_rule = {
+				"scripted_bar_progress(je_india_home_rule_progressbar)" >= 100
+			}
+			NOT = {
+				has_law_or_variant = law_type:law_elected_bureaucrats
+			}
+		}
+		overlord = {
+			trigger_event = { id = indian_reform_request_events.2 popup = yes }
+		}
+	}
+
+	option = {
+		name = indian_reform_request_events.1.b
+		ai_chance = 1000000
+		trigger = {
+			je:je_india_home_rule = {
+				"scripted_bar_progress(je_india_home_rule_progressbar)" >= 200
+			}
+			NOT = {
+				has_variable = britain_granted_dop_permission
+			}
+		}
+		overlord = {
+			trigger_event = { id = india_home_rule_events.2 popup = yes }
+		}
+	}
+
+
+	option = {
+		name = indian_reform_request_events.1.c
+		ai_chance = 1
+		trigger = {
+			je:je_india_home_rule = {
+				"scripted_bar_progress(je_india_home_rule_progressbar)" >= 300
+			}
+			c:BIC ?= {
+				NOR = {
+					has_law_or_variant = law_type:law_multicultural
+					active_law:lawgroup_citizenship ?= {
+						has_amendment = amendment_type:amendment_government_of_india_act
+					}
+				}
+			}
+		}
+		overlord = {
+			trigger_event = { id = indian_reform_request_events.3 popup = yes }
+		}
+	}
+
+	option = {
+		name = indian_reform_request_events.1.e
+		ai_chance = 1
+		trigger = {
+			je:je_india_home_rule = {
+				"scripted_bar_progress(je_india_home_rule_progressbar)" >= 400
+			}
+			NOR = {
+				is_subject_type = subject_type_dominion
+				is_subject_type = subject_type_protectorate
+			}
+		}
+		overlord = {
+			trigger_event = { id = indian_reform_request_events.4 popup = yes }
+		}
+	}
+}
+
+indian_reform_request_events.2 = { # GBR Receives Request for BIC Elected Bureaucrats
+	type = country_event
+	placement = ROOT
+
+	duration = 3
+
+	title = indian_reform_request_events.2.t
+	desc = indian_reform_request_events.2.d
+	flavor = indian_reform_request_events.2.f
+
+	event_image = {
+		video = "ip2_telegraph_dictate"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	# Triggered by indian_reform_request_events.1
+	trigger = { }
+
+	cancellation_trigger = {
+		c:BIC ?= {
+			has_law_or_variant = law_type:law_elected_bureaucrats
+		}
+	}
+
+	immediate = {
+		save_scope_as = overlord_scope
+		c:BIC ?= {
+			save_scope_as = india_scope
+			random_political_lobby = {
+				limit = {
+					is_political_lobby_type = lobby_indian_national_congress
+				}
+				save_scope_as = inc_scope
+			}
+			random_political_movement = {
+				limit = {
+					is_political_movement_type = movement_india_pan_national
+				}
+				save_scope_as = indian_national_movement
+			}
+		}
+		set_local_variable = {
+			name = india_national_activity
+			value = {
+				add = scope:indian_national_movement.political_movement_support
+				add = scope:indian_national_movement.political_movement_radicalism
+			}
+		}
+	}
+
+	option = {
+		name = indian_reform_request_events.2.a
+		ai_chance = {
+			base = 50
+			modifier = {
+				trigger = {
+					local_var:india_national_activity >= 0.70
+				}
+				add = -50
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_reformist = yes
+					}
+				}
+				add = -25
+			}
+			modifier = {
+				trigger = {
+
+				}
+				any_interest_group = {
+					is_in_government = yes
+					ig_is_indian_imperialist = yes
+				}
+				add = 25
+			}
+		}
+		c:BIC = {
+			indian_reform_denied_effect = yes
+			post_notification = overlord_government_reform_denied
+		}
+		every_interest_group = {
+			limit = {
+				ig_is_indian_imperialist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+    			name = rejected_indian_government_reform_good
+    			days = short_modifier_time
+    		}
+		}
+		every_interest_group = {
+			limit = {
+				ig_is_indian_reformist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+    			name = rejected_indian_government_reform_bad
+    			days = short_modifier_time
+    		}
+		}
+		if = {
+			limit = {
+				c:BIC = {
+					NOT = {
+						has_variable = india_home_rule_failed
+					}
+				}
+				je:je_india_home_rule ?= {
+					var:overlord_rejected_reforms < 2
+				}
+			}
+			custom_tooltip = {
+				text = indian_national_movement_moves_towards_independence_tt
+				je:je_india_home_rule ?= {
+					change_variable = {
+						name = overlord_rejected_reforms
+						add = 1
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = indian_reform_request_events.2.b
+		default_option = yes
+		ai_chance = {
+			base = 50
+			modifier = {
+				trigger = {
+					local_var:india_national_activity >= 0.70
+				}
+				add = 50
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_reformist = yes
+					}
+				}
+				add = 25
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_imperialist = yes
+					}
+				}
+				add = -25
+			}
+		}
+		c:BIC = {
+			activate_law = law_type:law_elected_bureaucrats
+			indian_reform_passed_effect = yes
+			post_notification = overlord_government_reform_accepted
+		}
+		every_interest_group = {
+			limit = {
+				ig_is_indian_reformist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+    			name = approved_indian_government_reform_good
+    			days = short_modifier_time
+    		}
+		}
+		every_interest_group = {
+			limit = {
+				ig_is_indian_imperialist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+    			name = approved_indian_government_reform_bad
+    			days = short_modifier_time
+    		}
+		}
+		custom_tooltip = indian_nationalism_increase_0_1_per_month_tt
+	}
+}
+
+indian_reform_request_events.3 = { # GBR Receives Request for BIC Multiculturalism
+	type = country_event
+	placement = ROOT
+
+	duration = 3
+
+	title = indian_reform_request_events.3.t
+	desc = indian_reform_request_events.3.d
+	flavor = indian_reform_request_events.3.f
+
+	event_image = {
+		video = "ip2_telegraph_dictate"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	# Triggered by indian_reform_request_events.1
+	trigger = {
+
+	}
+
+	cancellation_trigger = {
+		c:BIC ?= {
+			OR = {
+				has_law_or_variant = law_type:law_multicultural
+				active_law:lawgroup_citizenship ?= {
+					has_amendment = amendment_type:amendment_government_of_india_act
+				}
+			}
+		}
+	}
+
+	immediate = {
+		save_scope_as = overlord_scope
+		c:BIC ?= {
+			save_scope_as = india_scope
+			random_political_lobby = {
+				limit = {
+					is_political_lobby_type = lobby_indian_national_congress
+				}
+				save_scope_as = inc_scope
+			}
+			random_political_movement = {
+				limit = {
+					is_political_movement_type = movement_india_pan_national
+				}
+				save_scope_as = indian_national_movement
+			}
+		}
+		set_local_variable = {
+			name = india_national_activity
+			value = {
+				add = scope:indian_national_movement.political_movement_support
+				add = scope:indian_national_movement.political_movement_radicalism
+			}
+		}
+	}
+
+	option = {
+		name = indian_reform_request_events.3.a
+		ai_chance = {
+			base = 50
+			modifier = {
+				trigger = {
+					local_var:india_national_activity >= 0.70
+				}
+				add = -50
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_reformist = yes
+					}
+				}
+				add = -25
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_imperialist = yes
+					}
+				}
+				add = 25
+			}
+		}
+		c:BIC = {
+			indian_reform_denied_effect = yes
+			post_notification = overlord_government_reform_denied
+		}
+		every_interest_group = {
+			limit = {
+				ig_is_indian_imperialist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+    			name = rejected_indian_government_reform_good
+    			days = short_modifier_time
+    		}
+		}
+		every_interest_group = {
+			limit = {
+				ig_is_indian_reformist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+    			name = rejected_indian_government_reform_bad
+    			days = short_modifier_time
+    		}
+		}
+		if = {
+			limit = {
+				c:BIC = {
+					NOT = {
+						has_variable = india_home_rule_failed
+					}
+				}
+				je:je_india_home_rule = {
+					var:overlord_rejected_reforms < 2
+				}
+			}
+			custom_tooltip = {
+				text = indian_national_movement_moves_towards_independence_tt
+				je:je_india_home_rule = {
+					change_variable = {
+						name = overlord_rejected_reforms
+						add = 1
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = indian_reform_request_events.3.b
+		default_option = yes
+		ai_chance = {
+			base = 50
+			modifier = {
+				trigger = {
+					local_var:india_national_activity >= 0.70
+				}
+				add = 50
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_reformist = yes
+					}
+				}
+				add = 25
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_imperialist = yes
+					}
+				}
+				add = -25
+			}
+		}
+		c:BIC ?= {
+			active_law:lawgroup_citizenship ?= {
+				add_amendment = {
+					type = amendment_government_of_india_act
+					sponsor = prev.ig:ig_petty_bourgeoisie
+				}
+			}
+			indian_reform_passed_effect = yes
+			post_notification = overlord_government_reform_accepted
+		}
+		every_interest_group = {
+			limit = {
+				ig_is_indian_reformist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+    			name = approved_indian_government_reform_good
+    			days = short_modifier_time
+    		}
+		}
+		every_interest_group = {
+			limit = {
+				ig_is_indian_imperialist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+    			name = approved_indian_government_reform_bad
+    			days = short_modifier_time
+    		}
+		}
+		custom_tooltip = indian_nationalism_increase_0_1_per_month_tt
+	}
+}
+
+indian_reform_request_events.4 = { # GBR Receives Request for Dominion Status for BIC
+	type = country_event
+	placement = ROOT
+
+	duration = 3
+
+	title = indian_reform_request_events.4.t
+	desc = indian_reform_request_events.4.d
+	flavor = indian_reform_request_events.4.f
+
+	event_image = {
+		video = "ip2_telegraph_dictate"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	# Triggered by indian_reform_request_events.1
+	trigger = { }
+
+	cancellation_trigger = {
+		c:BIC ?= {
+			OR = {
+				is_subject_type = subject_type_dominion
+				is_subject_type = subject_type_protectorate
+			}
+		}
+	}
+
+	immediate = {
+		save_scope_as = overlord_scope
+		c:BIC ?= {
+			save_scope_as = india_scope
+			random_political_lobby = {
+				limit = {
+					is_political_lobby_type = lobby_indian_national_congress
+				}
+				save_scope_as = inc_scope
+			}
+			random_political_movement = {
+				limit = {
+					is_political_movement_type = movement_india_pan_national
+				}
+				save_scope_as = indian_national_movement
+			}
+		}
+		set_local_variable = {
+			name = india_national_activity
+			value = {
+				add = scope:indian_national_movement.political_movement_support
+				add = scope:indian_national_movement.political_movement_radicalism
+			}
+		}
+	}
+
+	option = {
+		name = indian_reform_request_events.4.a
+		ai_chance = {
+			base = 50
+			modifier = {
+				trigger = {
+					local_var:india_national_activity >= 0.70
+				}
+				add = -50
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_reformist = yes
+					}
+				}
+				add = -25
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_imperialist = yes
+					}
+				}
+				add = 25
+			}
+		}
+		c:BIC = {
+			indian_reform_denied_effect = yes
+			post_notification = overlord_government_reform_denied
+		}
+		every_interest_group = {
+			limit = {
+				ig_is_indian_imperialist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+    			name = rejected_indian_government_reform_good
+    			days = short_modifier_time
+    		}
+		}
+		every_interest_group = {
+			limit = {
+				ig_is_indian_reformist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+    			name = rejected_indian_government_reform_bad
+    			days = short_modifier_time
+    		}
+		}
+		if = {
+			limit = {
+				c:BIC = {
+					NOT = {
+						has_variable = india_home_rule_failed
+					}
+				}
+				je:je_india_home_rule = {
+					var:overlord_rejected_reforms < 2
+				}
+			}
+			custom_tooltip = {
+				text = indian_national_movement_moves_towards_independence_tt
+				je:je_india_home_rule = {
+					change_variable = {
+						name = overlord_rejected_reforms
+						add = 1
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = indian_reform_request_events.4.b
+		default_option = yes
+		ai_chance = {
+			base = 50
+			modifier = {
+				trigger = {
+					local_var:india_national_activity >= 0.70
+				}
+				add = 50
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_reformist = yes
+					}
+				}
+				add = 25
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_imperialist = yes
+					}
+				}
+				add = -25
+			}
+		}
+		c:BIC = {
+			change_subject_type = subject_type_dominion
+			indian_reform_passed_effect = yes
+			post_notification = overlord_government_reform_accepted
+		}
+		every_interest_group = {
+			limit = {
+				ig_is_indian_reformist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+    			name = approved_indian_government_reform_good
+    			days = short_modifier_time
+    		}
+		}
+		every_interest_group = {
+			limit = {
+				ig_is_indian_imperialist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+    			name = approved_indian_government_reform_bad
+    			days = short_modifier_time
+    		}
+		}
+		custom_tooltip = indian_nationalism_increase_0_1_per_month_tt
+	}
+}
+
+indian_reform_request_events.5 = { # GBR Receives Request for Sovereign Home Rule
+	type = country_event
+	placement = ROOT
+
+	duration = 3
+
+	title = indian_reform_request_events.5.t
+	desc = indian_reform_request_events.5.d
+	flavor = indian_reform_request_events.5.f
+
+	event_image = {
+		video = "ip2_telegraph_dictate"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	# Triggered by button in je_india_home_rule
+	trigger = { }
+
+	cancellation_trigger = {
+		c:BIC ?= {
+			is_subject = no
+		}
+	}
+
+	immediate = {
+		save_scope_as = overlord_scope
+		c:BIC ?= {
+			random_political_lobby = {
+				limit = {
+					is_political_lobby_type = lobby_indian_national_congress
+				}
+				save_scope_as = inc_scope
+			}
+			random_political_movement = {
+				limit = {
+					is_political_movement_type = movement_india_pan_national
+				}
+				save_scope_as = indian_national_movement
+			}
+		}
+		set_local_variable = {
+			name = india_national_activity
+			value = {
+				add = scope:indian_national_movement.political_movement_support
+				add = scope:indian_national_movement.political_movement_radicalism
+			}
+		}
+	}
+
+	option = {
+		name = indian_reform_request_events.5.a
+		ai_chance = {
+			base = 25
+			modifier = {
+				trigger = {
+					local_var:india_national_activity >= 0.70
+				}
+				add = -25
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_reformist = yes
+					}
+				}
+				add = -25
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_imperialist = yes
+					}
+				}
+				add = 25
+			}
+		}
+		c:BIC = {
+			add_large_indian_radicals = yes
+			post_notification = overlord_home_rule_denied
+		}
+		scope:inc_scope = {
+			change_appeasement = {
+				amount = -4
+				factor = appeasement_indian_sovereignty_demand_rejected
+			}
+		}
+		scope:indian_national_movement = {
+			add_modifier = {
+				name = indian_sovereignty_denied
+				days = normal_modifier_time
+			}
+		}
+		every_interest_group = {
+			limit = {
+				ig_is_indian_imperialist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+    			name = rejected_indian_sovereignty_good
+    			days = short_modifier_time
+    		}
+		}
+		every_interest_group = {
+			limit = {
+				ig_is_indian_reformist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+    			name = rejected_indian_sovereignty_bad
+    			days = short_modifier_time
+    			multiplier = 3
+    		}
+		}
+		if = {
+			limit = {
+				c:BIC = {
+					NOT = {
+						has_variable = india_home_rule_failed
+					}
+				}
+				je:je_india_home_rule = {
+					NOT = {
+						has_variable = overlord_denied_home_rule
+					}
+				}
+			}
+			custom_tooltip = {
+				text = indian_national_movement_moves_towards_independence_tt
+				je:je_india_home_rule = {
+					set_variable = {
+						name = overlord_denied_home_rule
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = indian_reform_request_events.5.b
+		default_option = yes
+		ai_chance = {
+			base = 75
+			modifier = {
+				trigger = {
+					local_var:india_national_activity >= 0.70
+				}
+				add = 25
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_reformist = yes
+					}
+				}
+				add = 25
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_imperialist = yes
+					}
+				}
+				add = -25
+			}
+		}
+		custom_tooltip = {
+			text = india_granted_home_rule_tt
+			c:BIC = {
+				set_variable = indian_sovereignty_granted
+			}
+		}
+		every_interest_group = {
+			limit = {
+				ig_is_indian_reformist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+    			name = approved_indian_sovereignty_good
+    			days = normal_modifier_time
+    		}
+		}
+		every_interest_group = {
+			limit = {
+				ig_is_indian_imperialist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+    			name = approved_indian_sovereignty_bad
+    			days = normal_modifier_time
+    		}
+		}
+	}
+}
+
+indian_reform_request_events.6 = { # GBR Receives Demand for Indian Independence
+	type = country_event
+	placement = ROOT
+
+	duration = 3
+
+	title = indian_reform_request_events.6.t
+	desc = indian_reform_request_events.6.d
+	flavor = indian_reform_request_events.6.f
+
+	event_image = {
+		video = "ip2_telegraph_dictate"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	# Triggered by button in je_india_home_rule
+	trigger = { }
+
+	cancellation_trigger = {
+		c:BIC ?= {
+			is_subject = no
+		}
+	}
+
+	immediate = {
+		save_scope_as = overlord_scope
+		c:BIC ?= {
+			random_political_lobby = {
+				limit = {
+					is_political_lobby_type = lobby_indian_national_congress
+				}
+				save_scope_as = inc_scope
+			}
+			random_political_movement = {
+				limit = {
+					is_political_movement_type = movement_india_pan_national
+				}
+				save_scope_as = indian_national_movement
+			}
+		}
+		set_local_variable = {
+			name = india_national_activity
+			value = {
+				add = scope:indian_national_movement.political_movement_support
+				add = scope:indian_national_movement.political_movement_radicalism
+			}
+		}
+		set_local_variable = {
+			name = num_indian_reforms
+			value = 0
+		}
+		if = {
+			limit = {
+				c:BIC = {
+					has_law_or_variant = law_type:law_elected_bureaucrats
+				}
+			}
+			change_local_variable = {
+				name = num_indian_reforms
+				add = 1
+			}
+		}
+		if = {
+			limit = {
+				c:BIC = {
+					country_has_voting_franchise = yes
+				}
+			}
+			change_local_variable = {
+				name = num_indian_reforms
+				add = 1
+			}
+		}
+		if = {
+			limit = {
+				c:BIC = {
+					OR = {
+						has_law_or_variant = law_type:law_multicultural
+						active_law:lawgroup_citizenship ?= {
+							has_amendment = amendment_type:amendment_government_of_india_act
+						}
+					}
+				}
+			}
+			change_local_variable = {
+				name = num_indian_reforms
+				add = 1
+			}
+		}
+		if = {
+			limit = {
+				c:BIC = {
+					OR = {
+						is_subject_type = subject_type_dominion
+						is_subject_type = subject_type_protectorate
+					}
+				}
+			}
+			change_local_variable = {
+				name = num_indian_reforms
+				add = 1
+			}
+		}
+	}
+
+	option = {
+		name = indian_reform_request_events.6.a
+		ai_chance = {
+			base = 200
+			modifier = {
+				trigger = {
+					local_var:num_indian_reforms >= 1
+				}
+				add = -40
+			}
+			modifier = {
+				trigger = {
+					local_var:num_indian_reforms >= 2
+				}
+				add = -40
+			}
+			modifier = {
+				trigger = {
+					local_var:num_indian_reforms >= 3
+				}
+				add = -40
+			}
+			modifier = {
+				trigger = {
+					local_var:num_indian_reforms >= 4
+				}
+				add = -40
+			}
+			modifier = {
+				trigger = {
+					local_var:india_national_activity >= 0.70
+				}
+				add = -40
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_reformist = yes
+					}
+				}
+				add = -40
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_imperialist = yes
+					}
+				}
+				add = 40
+			}
+		}
+		c:BIC = {
+			add_large_indian_radicals = yes
+			post_notification = overlord_independence_denied
+		}
+		scope:inc_scope = {
+			change_appeasement = {
+				amount = -6
+				factor = appeasement_indian_sovereignty_demand_rejected
+			}
+		}
+		scope:indian_national_movement = {
+			add_modifier = {
+				name = indian_sovereignty_denied
+				days = normal_modifier_time
+				multiplier = 2
+			}
+		}
+		every_interest_group = {
+			limit = {
+				ig_is_indian_imperialist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+    			name = rejected_indian_sovereignty_good
+    			days = short_modifier_time
+    		}
+		}
+		every_interest_group = {
+			limit = {
+				ig_is_indian_reformist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+    			name = rejected_indian_sovereignty_bad
+    			days = short_modifier_time
+    			multiplier = {
+    				value = 1
+    				if = {
+    					limit = {
+    						local_var:num_indian_reforms >= 3
+    					}
+    					add = 1
+    				}
+    				if = {
+    					limit = {
+    						local_var:num_indian_reforms >= 4
+    					}
+    					add = 1
+    				}
+    			}
+    		}
+		}
+	}
+
+	option = {
+		name = indian_reform_request_events.6.b
+		default_option = yes
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = {
+					local_var:num_indian_reforms >= 1
+				}
+				add = 40
+			}
+			modifier = {
+				trigger = {
+					local_var:num_indian_reforms >= 2
+				}
+				add = 40
+			}
+			modifier = {
+				trigger = {
+					local_var:num_indian_reforms >= 3
+				}
+				add = 40
+			}
+			modifier = {
+				trigger = {
+					local_var:num_indian_reforms >= 4
+				}
+				add = 40
+			}
+			modifier = {
+				trigger = {
+					local_var:india_national_activity >= 0.70
+				}
+				add = 40
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_reformist = yes
+					}
+				}
+				add = 40
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_imperialist = yes
+					}
+				}
+				add = -40
+			}
+		}
+		custom_tooltip = {
+			text = india_granted_independence_tt
+			c:BIC = {
+				set_variable = indian_sovereignty_granted
+			}
+		}
+		every_interest_group = {
+			limit = {
+				ig_is_indian_reformist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+    			name = approved_indian_sovereignty_good
+    			days = normal_modifier_time
+    		}
+		}
+		every_interest_group = {
+			limit = {
+				ig_is_indian_imperialist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+    			name = approved_indian_sovereignty_bad
+    			days = normal_modifier_time
+    			multiplier = {
+    				value = 1
+    				if = {
+    					limit = {
+    						local_var:num_indian_reforms <= 1
+    					}
+    					add = 1
+    				}
+    				if = {
+    					limit = {
+    						local_var:num_indian_reforms <= 0
+    					}
+    					add = 1
+    				}
+    			}
+    		}
+		}
+		add_modifier = {
+			name = pivot_of_empire_lost
+			days = long_modifier_time
+			is_decaying = yes
+			multiplier = 0.50
+		}
+	}
+}
+
+namespace = indian_reform_request_events
+
+indian_reform_request_events.7 = { # GBR Chooses a Reform to Authorize
+	type = country_event
+	placement = ROOT
+
+	duration = 3
+
+	title = indian_reform_request_events.7.t
+	desc = indian_reform_request_events.7.d
+	flavor = indian_reform_request_events.7.f
+
+	event_image = {
+		video = "ip2_telegraph_dictate"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	immediate = {
+		c:BIC ?= {
+			save_scope_as = india_scope
+			random_political_movement = {
+				limit = {
+					is_political_movement_type = movement_india_pan_national
+				}
+				save_scope_as = indian_national_movement
+			}
+		}
+	}
+
+	# Triggered by button in je_india_home_rule
+	trigger = { }
+
+	option = {
+		name = indian_reform_request_events.7.a
+		ai_chance = 1
+		default_option = yes
+		trigger = {
+			je:je_india_home_rule = {
+				"scripted_bar_progress(je_india_home_rule_progressbar)" >= 100
+			}
+			c:BIC ?= {
+				NOT = {
+					has_law_or_variant = law_type:law_elected_bureaucrats
+				}
+			}
+		}
+		c:BIC = {
+			activate_law = law_type:law_elected_bureaucrats
+			indian_reform_passed_effect = yes
+		}
+	}
+
+	option = {
+		name = indian_reform_request_events.7.b
+		ai_chance = 1000000
+		trigger = {
+			je:je_india_home_rule = {
+				"scripted_bar_progress(je_india_home_rule_progressbar)" >= 200
+			}
+			c:BIC ?= {
+				NOT = {
+					has_variable = britain_granted_dop_permission
+				}
+			}
+		}
+		custom_tooltip = {
+			text = india_can_change_governance_principles_tt
+			c:BIC ?= {
+				trigger_event = { id = india_home_rule_events.9 popup = yes }
+			}
+		}
+		custom_tooltip = authorise_indian_self_governance_tt
+		custom_tooltip = simon_commission_in_ten_years_tt
+		show_as_tooltip = {
+			c:BIC ?= {
+				indian_reform_passed_effect = yes
+			}
+		}
+	}
+
+	option = {
+		name = indian_reform_request_events.7.c
+		ai_chance = 1
+		trigger = {
+			je:je_india_home_rule = {
+				"scripted_bar_progress(je_india_home_rule_progressbar)" >= 300
+			}
+			c:BIC ?= {
+				NOR = {
+					has_law_or_variant = law_type:law_multicultural
+					active_law:lawgroup_citizenship ?= {
+						has_amendment = amendment_type:amendment_government_of_india_act
+					}
+				}
+			}
+		}
+		c:BIC = {
+			active_law:lawgroup_citizenship ?= {
+				add_amendment = {
+					type = amendment_government_of_india_act
+					sponsor = prev.ig:ig_petty_bourgeoisie
+				}
+			}
+		}
+	}
+
+	option = {
+		name = indian_reform_request_events.7.e
+		ai_chance = 1
+		trigger = {
+			je:je_india_home_rule = {
+				"scripted_bar_progress(je_india_home_rule_progressbar)" >= 400
+			}
+			c:BIC ?= {
+				NOR = {
+					is_subject_type = subject_type_dominion
+					is_subject_type = subject_type_protectorate
+				}
+			}
+		}
+		c:BIC = {
+			change_subject_type = subject_type_dominion
+			indian_reform_passed_effect = yes
+		}
+	}
+
+	after = {
+		every_interest_group = {
+			limit = {
+				ig_is_indian_reformist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+    			name = approved_indian_government_reform_good
+    			days = short_modifier_time
+    		}
+		}
+		every_interest_group = {
+			limit = {
+				ig_is_indian_imperialist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+    			name = approved_indian_government_reform_bad
+    			days = short_modifier_time
+    		}
+		}
+		custom_tooltip = indian_nationalism_increase_0_1_per_month_tt
+	}
+}

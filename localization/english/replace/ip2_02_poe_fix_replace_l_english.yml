@@ -1,0 +1,134 @@
+﻿l_english:
+sepoy_mutiny_events.1.d:1 "Ruling as the hereditary prime ministers of the Maratha Empire, the Bhat family were second only to the Chhatrapati in prestige and power. Now [SCOPE.sCharacter('nana_saheb_scope').GetFirstName], the adopted son of the last Peshwa comes offering his sword, promising to expel the foreigners and restore the Empire."
+# NO LOC (minor formatting)
+sepoy_mutiny_events.1.f:1 "The soldier cleared his throat but it did nothing to dislodge the lump stuck in there. His forebears had been the thorn in Aurangzeb's side, a mighty force that the Chhatrapati had led to freedom against the Mughal's tyranny.\n\nBut it seemed it had all been for naught, for here they were, preparing to fight another fierce foe. Would he make his ancestors proud, or would his actions fall short? The thought fell from his mind as his captain yelled, 'FORWARD MARCH.'"
+
+sepoy_mutiny_events.2.d:1 "The catastrophic victory of the Indian mutineers has spurred heated debates within the offices of the colonial administration. [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] must now decide whether to abandon India altogether, or to focus dwindling resources on maintaining a foothold on the continent."
+sepoy_mutiny_events.2.f:1 "The [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] paced the length of his office, the walls barely containing his wrath. His aide stood perfectly still. He did not wish to end up like contents of the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]'s tea tray, plastered across the map of India.\n\nIndia, the golden goose they had pinned by the wings, the head, and the tail had imploded on them and all their options reeked. If it were up to him, he would take Calcutta, their first foothold, and leave the rest. Then again, Bombay had cost them dearly, and Madras had much left to offer. A tough choice -BANG!\nThe aide flinched; the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] had fired his pistol into the wall. Perhaps it was time he went to see if there were more messages..."
+sepoy_mutiny_events.2.a:1 "India is lost. Report back to [ROOT.GetCountry.GetOverlord.GetCapital.GetCityHubName]."
+india_retreat_to_bengal_tt:1 "All [concept_princely_state] [Concept('concept_subject', '$concept_subjects$')] outside of [GetGeographicRegion('geographic_region_bengal_old').GetName] will become independent. All of our [GetGeographicRegion('geographic_region_india').GetName] states outside of [GetGeographicRegion('geographic_region_bengal_old').GetName] will be divided among the princes."
+india_retreat_to_bombay_tt:1 "All [concept_princely_state] [Concept('concept_subject', '$concept_subjects$')] outside of [GetGeographicRegion('geographic_region_bombay_old').GetName] will become independent. All of our [GetGeographicRegion('geographic_region_india').GetName] states outside of [GetGeographicRegion('geographic_region_bombay_old').GetName] will be divided among the princes."
+india_retreat_to_madras_tt:1 "All [concept_princely_state] [Concept('concept_subject', '$concept_subjects$')] outside of [GetGeographicRegion('geographic_region_madras_old').GetName] will become independent. All of our [GetGeographicRegion('geographic_region_india').GetName] states outside of [GetGeographicRegion('geographic_region_madras_old').GetName] will be divided among the princes."
+
+sepoy_mutiny_events.3.d:1 "The breaking point has been reached. Across India, sepoys are striking their regimental colors and taking up arms against the [SCOPE.sCountry('india_scope').GetName]. Joined by seditious [Concept('concept_princely_state', '$concept_princely_states$')] and disaffected locals of all ranks, they have seized power in cities across the continent."
+# NO LOC (fix typo)
+sepoy_mutiny_events.3.f:1 "As the sepoy from Poona fires at his captain, a Muslim lad hands him more bullets. A Sikh sepoy, bleeding out from his wounds, takes in the sight. What would their forefathers say if they saw them fighting together instead of against each other? And then, as the life leaves him, a more pressing thought occurs to him; what will their grandchildren say of their actions today? Waheguru, will they be proud? Ashamed? Will they even remember?"
+sepoy_mutiny_events.3.tt_1:1 "Rebellious [Concept('concept_princely_state', '$concept_princely_states$')] will declare [concept_war] on the [ROOT.GetCountry.GetName]"
+
+sepoy_mutiny_events.4.d:1 "Sepoys in the employ of the [SCOPE.sCountry('eic_scope').GetName] have mutinied against their old masters, throwing the subcontinent into disarray. Hawkish members of the [ROOT.GetCountry.GetAdjective] court loudly argue for us to join the rebel cause, so we may oust the foreigners from India together."
+sepoy_mutiny_events.4.e:1 "Stay out of this and let the cards fall where they may."
+
+sepoy_mutiny_events.6.d:1 "Ever since the adoption of the new standard-issue Enfield rifle-musket and its bite-and-tear cartridges, rumors have been spreading among the sepoy of the presidency armies. Many believe the strange new taste is due to pork or cow fat, a grave religious violation for the [GetReligion('sunni').GetReligiousTraitsDesc] and [GetReligion('hindu').GetNameNoIcon] [GetPopType('soldiers').GetName]."
+sepoy_mutiny_events.6.f:1 ""Something isn't right I tell you. What was wrong with the old cartridges? They certainly didn't taste this way."\n\n"But the officers assure us it's nothing. They wouldn't lie to us... would they?""
+sepoy_mutiny_events.6.a:1 "Could something so trivial spark a rebellion?"
+
+sepoy_mutiny_events.7.d:1 "Many sepoys continue to believe their new cartridges have been greased with pork or cow fat. Officers insist that the only elements used are beeswax and mutton tallow, but most soldiers remain skeptical.\n\nSome have proposed a compromise: letting the men make their own cartridges with vegetable oil."
+sepoy_mutiny_events.7.f:1 ""I heard some of the officers were letting their men make their own cartridges to replace the new ones."\n\n"That only begs the question: what was wrong with #b these#! ones?""
+sepoy_mutiny_events.7.a:1 "We paid good money for these cartridges and they will use them."
+sepoy_mutiny_events.7.b:1 "If it eases their minds they can make their own cartridges."
+sepoy_mutiny_cartridge_grease_exploration:1 "New Cartridge Making"
+
+sepoy_mutiny_events.8.t:1 "New Cartridges, Old Drills"
+sepoy_mutiny_events.8.d:1 "As the rumors continue to spread among the sepoy, many are refusing to practice the standard drill of biting open the cartridges to free the gunpowder inside. A few officers have suggested letting the suspicious soldiers tear the cartridges with their hands instead, but others argue it will degrade combat efficiency."
+sepoy_mutiny_events.8.f:1 ""As if letting us use our hands was a reasonble compromise anyway. Many of us have drilled by biting for years. All it takes is one lapse into old habit before a grievous sin has been committed.""
+sepoy_mutiny_events.8.a:1 "The drills will remain as is."
+sepoy_mutiny_events.8.b:1 "Permit hand-tearing of cartridges."
+
+sepoy_mutiny_events.9.t:1 "Forced Conversion?"
+sepoy_mutiny_events.9.d:1 "Some sepoy now believe the allegedly pork and cow fat-greased cartridges are an attempt at forced religious conversion. With the theory spreading quickly, more and more men are refusing to follow orders to use the new cartridges."
+sepoy_mutiny_events.9.f:1 ""It all makes sense now. Hadn't they been trying this for years - taking our rights and giving them to converts? This is just the next step, a dirty trick to make us violate our beliefs in the hope we join theirs instead.""
+sepoy_mutiny_events.9.a:1 "Punish anyone spreading such rumors."
+sepoy_mutiny_events.9.b:1 "If we react it'll only make them more suspicious."
+
+sepoy_mutiny_events.10.t:1 "Begrudging Acquiescence"
+sepoy_mutiny_events.10.d:1 "The sepoys have begrudgingly accepted the situation regarding the new cartridges, though many still view them and the [ROOT.GetCountry.GetName] with suspicion."
+sepoy_mutiny_events.10.f:1 ""You see, Mason? I told you there was nothing to worry about."\n\n"I wouldn't put my guard down just yet, sir. It only takes a small spark to light a fire, and we both know India may as well be a box of kindling right now.""
+sepoy_mutiny_events.10.a:1 "We've managed this debacle as best we could."
+
+sepoy_mutiny_progress_bar_bengal_desc: "[GetGeographicRegion('geographic_region_bengal_presidency').GetName][JournalEntry.GetCustom('get_sepoy_mutiny_progress_bengal')]"
+sepoy_mutiny_progress_bar_bombay_desc: "[GetGeographicRegion('geographic_region_bombay_presidency').GetName][JournalEntry.GetCustom('get_sepoy_mutiny_progress_bombay')]"
+sepoy_mutiny_progress_bar_madras_desc: "[GetGeographicRegion('geographic_region_madras_presidency').GetName][JournalEntry.GetCustom('get_sepoy_mutiny_progress_madras')]"
+
+# NO LOC (adding a "The")
+je_sepoy_mutiny:1 "The Sepoy Mutiny"
+je_sepoy_mutiny_reason:1 "Mutiny and rebellion has broken out against colonial authority in #b India#!. If the [SCOPE.sCountry('india_scope').GetNameNoFormatting] is to maintain control of the subcontinent, the rebellion must be crushed completely."
+
+je_uneasy_raj_tt_1:1 "Time has ran out without #red Instability#! reaching #v 600#!"
+je_uneasy_raj_tt_2:1 "#red Indian Instability#! has reached #v 600#!"
+je_uneasy_raj_tt_3:1 "Debug Values: [SCOPE.sCountry('raj_scope').MakeScope.Var('bengal_population').GetValue] [SCOPE.sJournalEntry('journal_entry').MakeScope.Var('num_months').GetValue]"
+je_uneasy_raj_tt_4:2 "The severity of the revolt will be decided by the [Concept('concept_presidency_stability','$concept_presidency_stability_short$')] of each of the three [Concept('concept_presidency', '$concept_presidencies$')], ranging from minor unrest and defections to a total collapse of colonial authority.\n\nWhen the revolt breaks out, the [concept_attitude] of each [concept_princely_state] will impact which side it chooses to take, or if it chooses to stay neutral. $concept_princely_states$ and neighboring countries with the #b $je_princely_states$#! [concept_journal_entry] will always join the rebellion."
+je_uneasy_raj_reason:1 "@information! Various factors will affect the [Concept('concept_presidency_stability','$concept_presidency_stability_short$')] of the three [Concept('concept_presidency', '$concept_presidencies$')], which in turn affects the overall #red Instability#! of the subcontinent. If #red Instability#! reaches #v 600#! before time has run out, an #tooltippable;tooltip:[GetPlayer.GetTooltipTag],je_uneasy_raj_tt_4 #b Indian Rebellion#!#! will break out within the [SCOPE.sCountry('raj_scope').GetName].\n\n#red Instability#! will also increase on its own by #v 1.5#! each month, increasing the risk of rebellion over time but also lessening its potential severity.\n\n@warning! Any [Concept('concept_subject', '$concept_subjects$')] of the [SCOPE.sCountry('raj_scope').GetName] with the #b $je_princely_states$#! [concept_journal_entry] will lower the $concept_presidency_stability_short$ of their $concept_presidency$. Countries with the #b $je_princely_states$#! $concept_journal_entry$ will also attempt to spread it to other [Concept('concept_princely_state', '$concept_princely_states$')].\n\n$FOMENTING_REBELLION_COUNTRIES$\n$TOOLTIP_DELIMITER$\n#lore Unrest is brewing in the [SCOPE.sCountry('raj_scope').GetNameNoFormatting]. Troubled by harsh taxation regimes, increasing disrespect for local customs, and territorial expansion at the expense of native princes, Indian opposition to foreign rule has been mounting in recent years.\n\nWorse still, discord can be found even within the proud ranks of the native sepoy regiments, who resent any challenge to their traditional status and privileges.#!"
+
+sepoy_mutiny_very_low_key:2 " [Concept('concept_presidency_stability','$concept_presidency_stability_short$')]: #bold Critical#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/200.0)"
+sepoy_mutiny_low_key:2 " [Concept('concept_presidency_stability','$concept_presidency_stability_short$')]: #bold Low#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/200.0)"
+sepoy_mutiny_medium_key:2 " [Concept('concept_presidency_stability','$concept_presidency_stability_short$')]: #bold Medium#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/200.0)"
+sepoy_mutiny_high_key:2 " [Concept('concept_presidency_stability','$concept_presidency_stability_short$')]: #bold High#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/200.0)"
+
+bengal_progress_from_radicals_tt:1 "[Concept('concept_radical', '$concept_radicals$')] in the #bold Bengal [concept_presidency]#!"
+bengal_progress_from_loyalists_tt:1 "[Concept('concept_loyalist','$concept_loyalists$')] in the #bold Bengal [concept_presidency]#!"
+
+bombay_progress_from_radicals_tt:1 "[Concept('concept_radical', '$concept_radicals$')] in the #bold Bombay [concept_presidency]#!"
+bombay_progress_from_loyalists_tt:1 "[Concept('concept_loyalist','$concept_loyalists$')] in the #bold Bombay [concept_presidency]#!"
+
+madras_progress_from_radicals_tt:1 "[Concept('concept_radical', '$concept_radicals$')] in the #bold Madras [concept_presidency]#!"
+madras_progress_from_loyalists_tt:1 "[Concept('concept_loyalist','$concept_loyalists$')] in the #bold Madras [concept_presidency]#!"
+
+sepoy_mutiny_events_10_result_tt:1 "Sepoy Cartridge Debacle"
+# NO LOC (Capitalization)
+raj_4_result_tt:1 "Required Overseas Service"
+# NO LOC (Capitalization)
+raj_5_result_tt:1 "Permitted Missionary Activities"
+presidencies_progress_from_indian_igs_in_government_tt:1 "[concept_clout] of Native #b Indian#! [Concept('concept_interest_group', '$concept_interest_groups$')] [concept_in_government]"
+
+# NO LOC (minor rewording)
+je_uneasy_raj_fail_header:1 "#title Will trigger an #b Indian Rebellion#! if:#!\n"
+# NO LOC (minor rewording)
+je_uneasy_raj_on_fail_header:1 "#title If the #b Indian Rebellion#! occurs:#!\n$EFFECT$"
+# NO LOC (minor rewording)
+je_uneasy_raj_complete_header:1 "#title Will avert the #b Indian Rebellion#! if:#!\n"
+# NO LOC (minor rewording)
+je_uneasy_raj_on_complete_header:1 "#title If the #b Rebellion#! was averted:#!\n$EFFECT$"
+
+british_raj_later_tt:1 "If it survives the #b Indian Rebellion#!, the [SCOPE.sCountry('raj_scope').GetName] will be reorganized into the #b [SCOPE.sCountry('raj_scope').GetOverlord.GetAdjectiveNoFormatting] Raj#!"
+
+indian_uprising_triggered_tt:1 "#tooltippable;tooltip:[GetPlayer.GetTooltipTag],je_uneasy_raj_tt_4 #b Rebellion#!#! against Colonial Rule will break out in the [SCOPE.sCountry('raj_scope').GetName]"
+
+je_communal_divides_reason:2 "@information! #b $hindu$#! and #b $muslim$#! #b #blue Unity#!#! will #tooltippable;tooltip:[GetPlayer.GetTooltipTag],je_communal_divides_unity_advance_reasons_tt advance#! or #tooltippable;tooltip:[GetPlayer.GetTooltipTag],je_communal_divides_unity_retreat_reasons_tt retreat#! based on the [Concept('concept_political_movement_support', '$concept_political_movement_support_short$')] and [Concept('concept_activism','$concept_activism_short$')] of [SCOPE.sPoliticalMovement('hindu_mahasabha_scope').GetNameNoIcon] and the [SCOPE.sPoliticalMovement('muslim_league_scope').GetNameNoIcon] respectively. The rate of change will increase every five years.\n\nYearly events will allow the [ROOT.GetCountry.GetNameNoFormatting] to influence the $concept_political_movement_support_short$ and $concept_activism_short$ of one or both movements. If #b $hindu$#! or #b $muslim$#! #b #red Separatism#!#! reaches #v #red 100%#!#!, the differences between both sides will become irreconcilable and the [ROOT.GetCountry.GetAdjectiveNoFormatting] government will promise partition into separate #b $hindu$#! and #b $muslim$#! nations.#!\n$TOOLTIP_DELIMITER$\n#lore "#italic Is it possible that two nations — the Mahomedans and the Hindoos — could sit on the same throne and remain equal in power?"#!\n\nThe history of #bold Hindu-Muslim#! relations in India is both storied and complex, with episodes of collaboration and coexistence interwoven with ones of intolerance and cruelty. Nonetheless, for centuries, the two communities hobbled along under the auspices of their feudal masters.\n\nHowever, with the emergence of new, #bold national identities#! and the increasing spread of #bold ethno-religious nationalism#!, it is clear that the old ways must make way for the new. Few voices, however, agree upon what such new ways should entail. Some strive for a united #b India#!, while proponents of the #b Two-Nation Theory#! argue that until $hindus$ and $muslims$ are given separate nations, disunity and inter-communal violence will remain inevitable.#!"
+create_indusstan_bangla_tt:1 "New #b $muslim$ nation(s)#! will be established from our territory as semi-autonomous [Concept('concept_dominion','$concept_dominions$')] within the framework of a confederal system."
+religious_nationalist_groups_tt:1 "The [Concept('concept_political_movement_support', '$concept_political_movement_support_short$')] and [Concept('concept_activism','$concept_activism_short$')] of [SCOPE.sPoliticalMovement('hindu_mahasabha_scope').GetNameNoIcon] and the [SCOPE.sPoliticalMovement('muslim_league_scope').GetNameNoIcon] will be increased for the duration of the Journal Entry"
+
+make_delhi_capital_desc:1 "Our current capital has served its role well, but a relocation to Delhi may be opportune. With its central location and historical importance as the Mughal seat of power, the government apparatus would be well served there, and may better temper ethno-religious nationalism."
+
+communal_divides_events.1.d:1 "Speaking from [ROOT.GetCountry.GetCapital.GetCityHubName], representatives of the [SCOPE.sPoliticalMovement('hindu_mahasabha_scope').GetNameNoIcon] and [SCOPE.sPoliticalMovement('muslim_league_scope').GetNameNoIcon] have formally repudiated the so-called Two-Nation theory, pledging instead eternal brotherhood between all Indians, regardless of creed or conviction."
+communal_divides_events.1_tt:1 "[SCOPE.sPoliticalMovement('hindu_mahasabha_scope').GetNameNoIcon] and the [SCOPE.sPoliticalMovement('muslim_league_scope').GetNameNoIcon] will receive substantial attraction maluses."
+
+communal_divides_events.2.d:1 "Division between [GetReligion('hindu').GetNameNoIcon] and [GetReligion('sunni').GetReligiousTraitsDesc] Indians has reached a breaking point. Separatists and adherents of the Two-Nation theory seem triumphant, exclaiming that the only solution is for the $hindu$-$muslim$ populations is to separate entirely."
+
+communal_divides_events.3.t:1 "Sectarian Division"
+communal_divides_events.3.d:1 "[GetReligion('hindu').GetNameNoIcon] members of the [SCOPE.sPoliticalMovement('indian_national_movement').GetName] have spoken out over the seemingly outsized influence of its muslim members and how it may threaten the interests of hindus. Meanwhile, [GetReligion('sunni').GetReligiousTraitsDesc] members fear the opposite - hindu domination that threatens the interests of muslims.\n\n[SCOPE.sPoliticalMovement('hindu_mahasabha_scope').GetNameNoIcon] and [SCOPE.sPoliticalMovement('muslim_league_scope').GetNameNoIcon] hope to exploit the internal division, but perhaps we can take advantage of the situation as well."
+communal_divides_events.3.f:1 "Muhammad Khan couldn’t believe the audacity of the speaker. The man had dared to say, "I am glad to see Mr. Khan here, representing the Muslim branch of our party." He was here before him! He had fought the [ROOT.GetCountry.GetNameNoFormatting] in court! And won! And now he was just a representative of the Muslim Branch?\n\nAnd then the upstart had dared suggest a Hindu nation. What did he think all the Muslims and Sikhs would do when they heard that? Convert?"
+communal_divides_events.3.a:1 "They are right to be concerned."
+communal_divides_events.3.b:1 "Announce that the government will consult directly with [SCOPE.sPoliticalMovement('hindu_mahasabha_scope').GetNameNoFormatting] and [SCOPE.sPoliticalMovement('muslim_league_scope').GetNameNoFormatting] to address hindu and muslim concerns."
+communal_divides_events.3.c:1 "Refuse to recognize the legitimacy of the [SCOPE.sPoliticalMovement('hindu_mahasabha_scope').GetNameNoFormatting] and [SCOPE.sPoliticalMovement('muslim_league_scope').GetNameNoFormatting]."
+
+# NO LOC (Remove a space at the end because it was sitting there... menacingly)
+communal_divides_events.4.d:1 "The [SCOPE.sPoliticalMovement('hindu_mahasabha_scope').GetName] led a large and loud religious procession in [SCOPE.sState('relevant_state').GetName], stopping to perform in front of a mosque. Muslim youths responded to the taunts with a procession of their own. Matters escalated between the two groups leading to riots and violence."
+communal_divides_events.4.c:1 "Both sides are at fault."
+
+communal_divides_events.5.t:1 "Breaking Ground, Holy Ground"
+communal_divides_events.5.d:1 "A new mosque is to be built on the grounds of an ancient but abandoned hindu temple. [SCOPE.sPoliticalMovement('hindu_mahasabha_scope').GetNameNoIcon] is leading a protest against the construction, arguing that the affair is another example of the government's muslim-oriented favoritism. [SCOPE.sPoliticalMovement('muslim_league_scope').GetNameNoIcon] is leading counter-protests, demanding construction be permitted as was already approved."
+communal_divides_events.5.f:1 "#bold Local conflict reaches new heights!#!\nYesterday saw the third day of communal violence in [SCOPE.sState('relevant_state').GetCityHubName], as Hindoos and Mohammedans fought over the construction of a mosque in what the Hindoos believe is their area."
+communal_divides_events.5.a:1 "Revoke the permits. They'll have to build somewhere else."
+communal_divides_events.5.b:1 "We've already granted permission; it would be unfair to change our minds now."
+communal_divides_events.5.c:1 "Just tear down some other buildings and put it up there."
+
+communal_divides_events.6.d:1 "Despite the population of [SCOPE.sState('relevant_state').GetCityHubName] in [SCOPE.sState('relevant_state').GetName] consisting of a [GetReligion('hindu').GetNameNoIcon] majority, most of its administrators are [GetReligion('sunni').GetReligiousTraitsDesc]. This has sparked protest from Hindus who feel like their needs are being ignored."
+communal_divides_events.6.b:1 "Things are fine as they are."
+communal_divides_events.6.c:1 "Best we just take over administration ourselves."
+# === FIX LINE ===
+
+sepoy_mutiny_progress_from_events_tt: "[concept_presidency_stability] will #bold decrease#! in all the #b three [Concept('concept_presidency', '$concept_presidencies$')]#! by #variable [SCOPE.GetLocalVariable('stability_decrease_amount').GetValue|+|1]#! every month for #variable 5#! years"
+
+ granted_home_rule_tt: "#b India#! has been granted #b sovereign home rule#! or #b full independence#!"
+
+ break_confederation_promise_tt: "#bold End of the Confederacy#!: If we were to break our promise and forcefully reintegrate our new #b confederal members#!, we can expect #bold massive unrest#! from our $muslim$ [Concept('concept_pop','$concept_pops$')]."

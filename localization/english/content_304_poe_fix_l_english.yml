@@ -1,0 +1,4 @@
+﻿l_english:
+ belongs_to_colonial_india_tt: "Belongs to #v $BIC$#!"
+ not_belongs_to_colonial_india_tt: "Does #b not#! belong to #v $BIC$#!"
+ has_south_asian_trait_group_tt: "Has trait group [GetCulture('bengali').GetHeritageTrait.GetTraitGroup.GetName]"

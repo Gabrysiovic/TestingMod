@@ -1,0 +1,64 @@
+﻿REPLACE:get_special_colonial_trait = {
+	type = character
+	text = {
+		trigger = {
+			has_trait = special_character_colonial_plantation
+			owner ?= {
+				ruler = {
+					has_trait = special_character_colonial_plantation
+				}
+			}
+		}
+		localization_key = special_character_colonial_plantation_loc
+	}
+	text = {
+		trigger = {
+			has_trait = special_character_colonial_local
+			owner ?= {
+				ruler = {
+					has_trait = special_character_colonial_local
+				}
+			}
+		}
+		localization_key = special_character_colonial_local_loc
+	}
+	text = {
+		trigger = {
+			has_trait = special_character_colonial_extraction
+			owner ?= {
+				ruler = {
+					has_trait = special_character_colonial_extraction
+				}
+			}
+		}
+		localization_key = special_character_colonial_extraction_loc
+	}
+	text = {
+		trigger = {
+			has_trait = special_character_colonial_business
+			owner ?= {
+				ruler = {
+					has_trait = special_character_colonial_business
+				}
+			}
+		}
+		localization_key = special_character_colonial_business_loc
+	}
+	text = {
+		trigger = {
+			has_trait = special_character_colonial_military
+			owner ?= {
+				ruler = {
+					has_trait = special_character_colonial_military
+				}
+			}
+		}
+		localization_key = special_character_colonial_military_loc
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = special_character_colonial_fallback_loc
+	}
+}

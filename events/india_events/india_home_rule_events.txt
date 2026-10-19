@@ -1,0 +1,1539 @@
+﻿namespace = india_home_rule_events
+
+india_home_rule_events.1 = { # The Indian Home Rule Act / Purni Swaraj / Freedom Secured
+	type = country_event
+	placement = ROOT
+
+	duration = 3
+
+	title = {
+		triggered_desc = {
+			desc = india_home_rule_events.1.t_self_government
+			trigger = {
+				NOR = {
+					OR = {
+						exists = scope:overlord_scope
+						is_subject = yes
+					}
+					has_variable = indian_war_of_independence
+				}
+			}
+		}
+		triggered_desc = {
+			desc = india_home_rule_events.1.t
+			trigger = {
+				OR = {
+					exists = scope:overlord_scope
+					is_subject = yes
+				}
+				NOR = {
+					has_variable = indian_war_of_independence
+					has_variable = india_home_rule_failed
+				}
+			}
+		}
+		triggered_desc = {
+			desc = india_home_rule_events.1.t_peaceful_independence
+			trigger = {
+				OR = {
+					exists = scope:overlord_scope
+					is_subject = yes
+				}
+				NOT = {
+					has_variable = indian_war_of_independence
+				}
+				has_variable = india_home_rule_failed
+			}
+		}
+		triggered_desc = {
+			desc = india_home_rule_events.1.t_war_of_independence
+			trigger = {
+				has_variable = indian_war_of_independence
+			}
+		}
+	}
+	desc = {
+		triggered_desc = {
+			desc = india_home_rule_events.1.d_self_government
+			trigger = {
+				NOR = {
+					OR = {
+						exists = scope:overlord_scope
+						is_subject = yes
+					}
+					has_variable = indian_war_of_independence
+				}
+			}
+		}
+		triggered_desc = {
+			desc = india_home_rule_events.1.d
+			trigger = {
+				OR = {
+					exists = scope:overlord_scope
+					is_subject = yes
+				}
+				NOR = {
+					has_variable = indian_war_of_independence
+					has_variable = india_home_rule_failed
+				}
+			}
+		}
+		triggered_desc = {
+			desc = india_home_rule_events.1.d_peaceful_independence
+			trigger = {
+				OR = {
+					exists = scope:overlord_scope
+					is_subject = yes
+				}
+				NOT = {
+					has_variable = indian_war_of_independence
+				}
+				has_variable = india_home_rule_failed
+			}
+		}
+		triggered_desc = {
+			desc = india_home_rule_events.1.d_war_of_independence
+			trigger = {
+				has_variable = indian_war_of_independence
+			}
+		}
+	}
+	flavor= {
+		triggered_desc = {
+			desc = india_home_rule_events.1.f
+			trigger = {
+				NOR = {
+					has_variable = indian_war_of_independence
+					has_variable = india_home_rule_failed
+				}
+			}
+		}
+		triggered_desc = {
+			desc = india_home_rule_events.1.f_independence
+			trigger = {
+				OR = {
+					# Also set if Colonial India was already independent
+					has_variable = india_home_rule_failed
+					has_variable = indian_war_of_independence
+				}
+			}
+		}
+	}
+
+	event_image = {
+		video = "ip2_cross_cultural_festival"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	cooldown = { days = normal_modifier_time }
+
+	immediate = {}
+
+	option = {
+		name = {
+	        trigger = {
+	        	NOR = {
+					has_variable = indian_war_of_independence
+					has_variable = india_home_rule_failed
+				}
+	        }
+	        text = india_home_rule_events.1.a
+	    }
+	    name = {
+	        trigger = {
+	        	OR = {
+	        		# Also set if Colonial India was already independent
+					has_variable = indian_war_of_independence
+					has_variable = india_home_rule_failed
+				}
+	        }
+	        text = india_home_rule_events.1.a_independence
+	    }
+		default_option = yes
+		if = {
+			limit = {
+				NOR = {
+					# Also set if Colonial India was already independent
+					has_variable = indian_war_of_independence
+					has_variable = india_home_rule_failed
+				}
+			}
+			custom_tooltip = india_achieved_home_rule_tt
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_variable = indian_war_of_independence
+					exists = scope:overlord_scope
+				}
+			}
+			custom_tooltip = india_achieved_independence_tt
+		}
+		else = {
+			custom_tooltip = india_achieved_self_government_tt
+		}
+		add_large_indian_loyalists = yes
+	}
+}
+
+india_home_rule_events.2 = { # Permission for Democritisation
+	type = country_event
+	placement = ROOT
+
+	duration = 3
+
+	title = india_home_rule_events.2.t
+	desc = india_home_rule_events.2.d
+	flavor = india_home_rule_events.2.f
+
+	event_image = {
+		video = "ip2_telegraph_dictate"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	# Triggered by indian_reform_request_events.1
+	trigger = { }
+
+	immediate = {
+		save_scope_as = overlord_scope
+		c:BIC ?= {
+			save_scope_as = india_scope
+			random_political_lobby = {
+				limit = {
+					is_political_lobby_type = lobby_indian_national_congress
+				}
+				save_scope_as = inc_scope
+			}
+			random_political_movement = {
+				limit = {
+					is_political_movement_type = movement_india_pan_national
+				}
+				save_scope_as = indian_national_movement
+			}
+		}
+		set_local_variable = {
+			name = india_national_activity
+			value = {
+				add = scope:indian_national_movement.political_movement_support
+				add = scope:indian_national_movement.political_movement_radicalism
+			}
+		}
+	}
+
+	option = {
+		name = india_home_rule_events.2.a
+		ai_chance = {
+			base = 50
+			modifier = {
+				trigger = {
+					local_var:india_national_activity >= 0.70
+				}
+				add = -50
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_reformist = yes
+					}
+				}
+				add = -25
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_imperialist = yes
+					}
+				}
+				add = 25
+			}
+		}
+		c:BIC = {
+			indian_reform_denied_effect = yes
+			post_notification = overlord_government_reform_denied
+		}
+		every_interest_group = {
+			limit = {
+				ig_is_indian_imperialist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+    			name = rejected_indian_government_reform_good
+    			days = short_modifier_time
+    		}
+		}
+		every_interest_group = {
+			limit = {
+				ig_is_indian_reformist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+    			name = rejected_indian_government_reform_bad
+    			days = short_modifier_time
+    		}
+		}
+		if = {
+			limit = {
+				c:BIC = {
+					NOT = {
+						has_variable = india_home_rule_failed
+					}
+				}
+				je:je_india_home_rule ?= {
+					var:overlord_rejected_reforms < 2
+				}
+			}
+			custom_tooltip = {
+				text = indian_national_movement_moves_towards_independence_tt
+				je:je_india_home_rule ?= {
+					change_variable = {
+						name = overlord_rejected_reforms
+						add = 1
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = india_home_rule_events.2.b
+		default_option = yes
+		ai_chance = {
+			base = 50
+			modifier = {
+				trigger = {
+					local_var:india_national_activity >= 0.70
+				}
+				add = 50
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_reformist = yes
+					}
+				}
+				add = 25
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_imperialist = yes
+					}
+				}
+				add = -25
+			}
+		}
+		custom_tooltip = {
+			text = india_can_change_governance_principles_tt
+			c:BIC ?= {
+				trigger_event = { id = india_home_rule_events.9 popup = yes }
+			}
+		}
+		custom_tooltip = authorise_indian_self_governance_tt
+		custom_tooltip = simon_commission_in_ten_years_tt
+		show_as_tooltip = {
+			c:BIC ?= {
+				indian_reform_passed_effect = yes
+			}
+		}
+		every_interest_group = {
+			limit = {
+				ig_is_indian_reformist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+    			name = approved_indian_government_reform_good
+    			days = short_modifier_time
+    		}
+		}
+		every_interest_group = {
+			limit = {
+				ig_is_indian_imperialist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+    			name = approved_indian_government_reform_bad
+    			days = short_modifier_time
+    		}
+		}
+		custom_tooltip = indian_nationalism_increase_0_1_per_month_tt
+	}
+}
+
+india_home_rule_events.3 = { # Jallianwala Bagh Massacre
+	type = country_event
+	placement = scope:jallianwala_bagh_state
+
+	duration = 3
+
+	title = india_home_rule_events.3.t
+	desc = india_home_rule_events.3.d
+	flavor = india_home_rule_events.3.f
+
+	event_image = {
+		video = "ep1_redcoats"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	cooldown = { days = normal_modifier_time }
+
+	# Triggered by JE
+
+	immediate = {
+		je:je_india_home_rule ?= {
+			set_variable = jallianwala_massacre
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_region = s:STATE_HILL_PUNJAB
+				}
+			}
+			random_scope_state = {
+				limit = {
+					state_region = s:STATE_HILL_PUNJAB
+				}
+				save_scope_as = jallianwala_bagh_state
+				random_scope_culture = {
+					limit = {
+						has_homeland = prev
+					}
+					save_scope_as = relevant_culture
+				}
+			}
+		}
+		else = {
+			random_scope_state = {
+				limit = {
+					is_in_geographic_region = geographic_region_india
+				}
+				save_scope_as = jallianwala_bagh_state
+				random_scope_culture = {
+					limit = {
+						has_homeland = prev
+					}
+					save_scope_as = relevant_culture
+				}
+			}
+		}
+		if = {
+			limit = {
+				game_date > 1900.1.1
+				game_date < 1924.1.1
+				OR = {
+					country_has_primary_culture = cu:british
+					overlord ?= {
+						country_has_primary_culture = cu:british
+					}
+				}
+			}
+			create_character = {
+				template = BIC_reginald_dyer
+				on_created = {
+					set_character_busy_and_immortal = yes
+					place_character_in_void = 2400
+					set_variable = dyer_variable
+				}
+			}
+		}
+		else = {
+			create_character = {
+				is_general = yes
+				interest_group = ig_armed_forces
+				ideology = ideology_authoritarian
+				traits = {
+					war_criminal
+					cruel
+					plains_commander
+				}
+				on_created = {
+					set_character_busy_and_immortal = yes
+					place_character_in_void = 2400
+					set_variable = dyer_variable
+				}
+			}
+		}
+		random_character_in_void = {
+			limit = {
+				has_variable = dyer_variable
+			}
+			save_scope_as = dyer_scope
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_national_movement
+		}
+	}
+
+	option = {
+		name = india_home_rule_events.3.a
+		default_option = yes
+		scope:jallianwala_bagh_state ?= {
+			kill_population_in_state = {
+				value = 500
+				culture = scope:relevant_culture
+			}
+			add_radicals_in_state = {
+				value = large_radicals
+				culture = scope:relevant_culture
+			}
+		}
+		add_modifier = {
+			name = modifier_india_massacred_protesters
+			days = long_modifier_time
+			is_decaying = yes
+		}
+		random_political_lobby = {
+			limit = {
+				is_political_lobby_type = lobby_indian_national_congress
+			}
+			change_appeasement = {
+				amount = -3
+				factor = appeasement_indian_hostile_action
+			}
+		}
+		trigger_event = { id = india_home_rule_events.4 days = 2 }
+		if = {
+			limit = {
+				is_subject = yes
+				NOT = {
+					has_variable = india_home_rule_failed
+				}
+			}
+			custom_tooltip = indian_national_movement_moves_towards_independence_tt
+			overlord ?= {
+				post_notification = jallianwala_massacre
+			}
+		}
+	}
+}
+
+india_home_rule_events.4 = { # Gujranwala Riots
+	type = country_event
+	placement = scope:jallianwala_bagh_state
+
+	duration = 3
+
+	title = india_home_rule_events.4.t
+	desc = india_home_rule_events.4.d
+	flavor = india_home_rule_events.4.f
+
+	event_image = {
+		video = "ip2_india_protest"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	cooldown = { days = normal_modifier_time }
+
+	# Triggered by india_home_rule_events.3
+	trigger = { }
+
+	immediate = {
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			overlord = {
+				save_scope_as = overlord_scope
+			}
+		}
+		else = {
+			ROOT = {
+				save_scope_as = overlord_scope
+			}
+		}
+	}
+
+	option = {
+		name = india_home_rule_events.4.a
+		default_option = yes
+		scope:jallianwala_bagh_state = {
+			add_devastation = 5
+		}
+		add_medium_heritage_trait_group_radicals = yes
+		if = {
+			limit = {
+				has_modifier = modifier_india_massacred_protesters
+			}
+			remove_modifier = modifier_india_massacred_protesters
+		}
+		# Local Variables are bugged and always get set when an event loads
+		set_variable = {
+			name = promised_dyer_justice
+			years = 1
+		}
+		trigger_event = { id = india_home_rule_events.5 months = 3 }
+	}
+
+	option = {
+		name = india_home_rule_events.4.b
+		scope:jallianwala_bagh_state = {
+			add_devastation = 10
+		}
+		trigger_event = { id = india_home_rule_events.5 months = 3 }
+	}
+
+	option = {
+		name = india_home_rule_events.4.c
+		trigger = {
+			OR = {
+				has_technology_researched = military_aviation
+				overlord = {
+					has_technology_researched = military_aviation
+				}
+			}
+		}
+		scope:jallianwala_bagh_state.state_region = {
+			add_devastation = 15
+		}
+		add_small_heritage_trait_group_loyalists = yes
+		trigger_event = { id = india_home_rule_events.5 months = 3 }
+	}
+}
+
+india_home_rule_events.5 = { # Hunter Commission
+	type = country_event
+	placement = scope:jallianwala_bagh_state
+
+	duration = 3
+
+	title = india_home_rule_events.5.t
+	desc = india_home_rule_events.5.d
+	flavor = india_home_rule_events.5.f
+
+	event_image = {
+		video = "unspecific_politicians_arguing"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	cooldown = { days = normal_modifier_time }
+
+	# Triggered by event
+
+	immediate = {
+		ig:ig_armed_forces ?= {
+			save_scope_as = army_ig
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			overlord = {
+				save_scope_as = overlord_scope
+			}
+		}
+		else = {
+			ROOT = {
+				save_scope_as = overlord_scope
+			}
+		}
+	}
+
+	option = {
+		name = india_home_rule_events.5.a
+		default_option = yes
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			custom_tooltip = dyer_returns_home_tt
+		}
+		else = {
+			custom_tooltip = {
+				text = dyer_retire_into_obscurity_tt
+				scope:dyer_scope = {
+					kill_character = {
+						hidden = yes
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				# Local Variables are bugged and always get set when an event loads
+				has_variable = promised_dyer_justice
+			}
+			add_modifier = {
+				name = modifier_india_massacred_protesters
+				days = long_modifier_time
+				multiplier = 1.25
+				is_decaying = yes
+			}
+		}
+		random_political_lobby = {
+			limit = {
+				is_political_lobby_type = lobby_indian_national_congress
+			}
+			change_appeasement = {
+				amount = -1
+				factor = appeasement_indian_hostile_action
+			}
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			overlord ?= {
+				trigger_event = { id = india_home_rule_events.6 months = 1 }
+			}
+		}
+	}
+
+	option = {
+		name = india_home_rule_events.5.b
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			custom_tooltip = dyer_disgraced_tt
+			scope:dyer_scope ?= {
+				set_variable = dyer_disciplined
+			}
+		}
+		else = {
+			hidden_effect = {
+				scope:dyer_scope = {
+					kill_character = {
+						hidden = yes
+					}
+				}
+			}
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			add_modifier = {
+				name = indian_war_criminal_punished
+				days = normal_modifier_time
+			}
+		}
+		scope:army_ig = {
+			add_modifier = {
+				name = modifier_disciplined_war_criminal
+				days = normal_modifier_time
+			}
+		}
+		add_radicals = {
+			value = medium_radicals
+			interest_group = ig:ig_armed_forces
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			overlord ?= {
+				trigger_event = { id = india_home_rule_events.6 months = 1 }
+			}
+		}
+	}
+}
+
+india_home_rule_events.6 = { # Dyer's Homecoming
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	title = india_home_rule_events.6.t
+	desc = india_home_rule_events.6.d
+	flavor = india_home_rule_events.6.f
+
+	event_image = {
+		video = "votp_hostile_court"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	cooldown = { days = normal_modifier_time }
+
+	# Triggered by india_home_rule_events.5
+	trigger = { }
+
+	immediate = {
+
+	}
+
+	option = {
+		name = india_home_rule_events.6.a
+		default_option = yes
+		if = {
+			limit = {
+				scope:dyer_scope = {
+					has_variable = dyer_disciplined
+				}
+			}
+			custom_tooltip = {
+				text = dyer_retire_into_obscurity_tt
+			}
+		}
+		else = {
+			every_interest_group = {
+				limit = {
+					OR = {
+						ig_is_indian_imperialist = yes
+						AND = {
+							has_ideology = ideology:ideology_patriotic
+							ig_is_indian_reformist = no
+						}
+					}
+				}
+				add_modifier = {
+					name = modifier_the_man_who_saved_india
+					days = normal_modifier_time
+				}
+			}
+			every_interest_group = {
+				limit = {
+					ig_is_indian_reformist = yes
+				}
+				add_modifier = {
+					name = modifier_disgrace_in_india
+					days = normal_modifier_time
+				}
+			}
+		}
+		hidden_effect = {
+			scope:dyer_scope = {
+				kill_character = {
+					hidden = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		name = india_home_rule_events.6.b
+		trigger = {
+			scope:dyer_scope = {
+				NOT = {
+					has_variable = dyer_disciplined
+				}
+			}
+		}
+		add_loyalists = {
+			value = small_radicals
+			pop_type = academics
+		}
+		hidden_effect = {
+			scope:dyer_scope = {
+				kill_character = {
+					hidden = yes
+				}
+			}
+		}
+	}
+}
+
+india_home_rule_events.7 = { # Indian Home Rule movement
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	title = india_home_rule_events.7.t
+	desc = india_home_rule_events.7.d
+	flavor = india_home_rule_events.7.f
+
+	event_image = {
+		video = "ip2_india_protest"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	cooldown = { days = normal_modifier_time }
+
+	# Triggered by je_india_home_rule
+	trigger = { }
+
+	immediate = {
+		ig:ig_petty_bourgeoisie ?= {
+			save_scope_as = petty_bourgeoisie_ig
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_national_movement
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			overlord ?= {
+				save_scope_as = overlord_scope
+			}
+		}
+		else = {
+			save_scope_as = overlord_scope
+		}
+	}
+
+	option = {
+		name = india_home_rule_events.7.a
+		default_option = yes
+		custom_tooltip = indian_nation_je_activated_tt
+		custom_tooltip = india_protest_events_tt
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			custom_tooltip = india_request_reforms_tt
+		}
+	}
+}
+
+# POE_FIX: As part of the rehaul, remove one of the options here since the progress bar now starts at 0
+india_home_rule_events.8 = { # Indian Home Rule movement for Britain
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	title = india_home_rule_events.8.t
+	desc = india_home_rule_events.8.d
+	flavor = india_home_rule_events.8.f
+
+	event_image = {
+		video = "ip2_india_protest"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	cooldown = { days = normal_modifier_time }
+
+	# Triggered by je_india_home_rule
+	trigger = { }
+
+	immediate = {
+		c:BIC ?= {
+			ig:ig_intelligentsia ?= {
+				save_scope_as = intelligentsia_ig
+			}
+			ig:ig_petty_bourgeoisie ?= {
+				save_scope_as = petty_bourgeoisie_ig
+			}
+		}
+		c:BIC ?= {
+			save_scope_as = india_scope
+		}
+	}
+
+	option = {
+		name = india_home_rule_events.8.a
+		default_option = yes
+		custom_tooltip = indian_nation_je_activated_tt
+		custom_tooltip = affect_bar_india_policies_tt
+	}
+}
+
+
+india_home_rule_events.9 = { # Montagu-Chelmsford Reforms
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	title = india_home_rule_events.9.t
+	desc = india_home_rule_events.9.d
+	flavor = india_home_rule_events.9.f
+
+	event_image = {
+		video = "ip2_india_urban_scene"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+
+	# Triggered by india_home_rule_events.2
+	trigger = { }
+
+	immediate = {
+		set_variable = britain_granted_dop_permission
+		je:je_india_home_rule = {
+			set_variable = {
+				name = simon_commission_timer_var
+				value = 120
+			}
+			set_variable = {
+				name = simon_commission_timer_early_var
+				value = 72
+			}
+		}
+		overlord = {
+			random_interest_group = {
+				limit = {
+					is_in_government = yes
+				}
+				leader = {
+					save_scope_as = montagu_scope
+				}
+			}
+			save_scope_as = overlord_scope
+		}
+		ruler = {
+			save_scope_as = chelmsford_scope
+		}
+		random_political_lobby = {
+			limit = {
+				is_political_lobby_type = lobby_indian_national_congress
+			}
+			save_scope_as = inc_scope
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_national_movement
+		}
+	}
+
+	option = {
+		name = india_home_rule_events.9.a
+		default_option = yes
+		activate_law = law_type:law_wealth_voting
+		custom_tooltip = {
+			text = india_can_change_governance_principles_tt
+		}
+		custom_tooltip = {
+			text = simon_commission_in_ten_years_tt
+		}
+		indian_reform_passed_effect = yes
+		custom_tooltip = indian_nationalism_increase_0_1_per_month_tt
+	}
+}
+
+india_home_rule_events.10 = { # Simon Commission setup
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	title = india_home_rule_events.10.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = india_home_rule_events.10.d_1 # Ahead of time
+				trigger = {
+					je:je_india_home_rule = {
+						has_variable = simon_commission_timer_var
+					}
+				}
+			}
+			triggered_desc = {
+				desc = india_home_rule_events.10.d_2 # On time
+				trigger = {
+					always = yes
+				}
+			}
+		}
+	}
+	flavor = india_home_rule_events.10.f
+
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	cooldown = { days = normal_modifier_time }
+
+	# Triggered by je_india_home_rule timer var counting down, or overlord using Journal Button
+	trigger = {
+		je:je_india_home_rule = {
+			NOT = {
+				has_variable = simon_commission_var
+			}
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = {
+			c:BIC ?= {
+				has_journal_entry = je_india_home_rule
+			}
+		}
+	}
+
+	immediate = {
+		je:je_india_home_rule = {
+			set_variable = simon_commission_var
+			if = {
+				limit = {
+					has_variable = simon_commission_timer_var
+				}
+				remove_variable = simon_commission_timer_var
+			}
+		}
+		c:BIC ?= {
+			save_scope_as = india_scope
+			random_political_movement = {
+				limit = {
+					is_political_movement_type = movement_india_pan_national
+				}
+				save_scope_as = indian_national_movement
+			}
+		}
+	}
+
+	option = {
+		name = india_home_rule_events.10.a
+		default_option = yes
+		ai_chance = {
+			base = 50
+		}
+		trigger = {
+			OR = {
+				any_interest_group = {
+					is_in_government = yes
+					ig_is_indian_imperialist = yes
+				}
+				NOT = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_reformist = yes
+					}
+				}
+			}
+		}
+		je:je_india_home_rule = {
+			set_variable = simon_commission_conservative
+		}
+		custom_tooltip = {
+			text = commission_sent_conservative_tt
+			scope:india_scope ?= {
+				trigger_event = {
+					id = india_home_rule_events.11
+				}
+			}
+		}
+		custom_tooltip = {
+			text = simon_commission_retreat_likely
+		}
+		if = {
+			limit = {
+				c:BIC = {
+					NOT = {
+						has_variable = india_home_rule_failed
+					}
+				}
+			}
+			custom_tooltip = {
+				text = simon_commission_retreat_makes_indian_national_movement_move_towards_independence_tt
+			}
+		}
+	}
+
+	option = {
+		name = india_home_rule_events.10.b
+		ai_chance = {
+			base = 50
+		}
+		trigger = {
+			OR = {
+				any_interest_group = {
+					is_in_government = yes
+					ig_is_indian_reformist = yes
+				}
+				NOT = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_imperialist = yes
+					}
+				}
+			}
+		}
+		je:je_india_home_rule = {
+			set_variable = simon_commission_liberal
+		}
+		custom_tooltip = {
+			text = commission_sent_liberal_tt
+			scope:india_scope ?= {
+				trigger_event = {
+					id = india_home_rule_events.11
+				}
+			}
+		}
+		custom_tooltip = {
+			text = simon_commission_progress_likely
+		}
+	}
+}
+
+india_home_rule_events.11 = { # Simon Commission
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	title = india_home_rule_events.11.t
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = india_home_rule_events.11.d_1 # Liberal Commission
+				trigger = {
+					je:je_india_home_rule = {
+						has_variable = simon_commission_liberal
+					}
+				}
+			}
+			triggered_desc = {
+				desc = india_home_rule_events.11.d_2 # Conservative Commission
+				trigger = {
+					je:je_india_home_rule = {
+						has_variable = simon_commission_conservative
+					}
+				}
+			}
+		}
+	}
+
+	flavor = {
+		first_valid = {
+			triggered_desc = {
+				desc = india_home_rule_events.11.f_1 # Liberal Commission
+				trigger = {
+					je:je_india_home_rule = {
+						has_variable = simon_commission_liberal
+					}
+				}
+			}
+			triggered_desc = {
+				desc = india_home_rule_events.11.f_2 # Conservative Commission
+				trigger = {
+					je:je_india_home_rule = {
+						has_variable = simon_commission_conservative
+					}
+				}
+			}
+		}
+	}
+
+	event_image = {
+		video = "ip2_india_urban_scene"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	cooldown = { days = normal_modifier_time }
+
+	# Triggered by india_home_rule_events.10
+	trigger = { }
+
+	cancellation_trigger = {
+		NOT = {
+			c:BIC ?= {
+				has_journal_entry = je_india_home_rule
+			}
+		}
+	}
+
+	immediate = {
+		overlord = {
+			save_scope_as = overlord_scope
+		}
+		if = {
+			limit = {
+				je:je_india_home_rule = {
+					has_variable = simon_commission_liberal
+				}
+				overlord = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_reformist = yes
+					}
+				}
+			}
+			overlord = {
+				random_interest_group = {
+					limit = {
+						is_in_government = yes
+						ig_is_indian_reformist = yes
+					}
+					leader = {
+						set_variable = simon_var
+						save_scope_as = simon_scope
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				je:je_india_home_rule = {
+					has_variable = simon_commission_conservative
+				}
+				overlord = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_imperialist = yes
+					}
+				}
+			}
+			overlord = {
+				random_interest_group = {
+					limit = {
+						is_in_government = yes
+						ig_is_indian_imperialist = yes
+					}
+					leader = {
+						set_variable = simon_var
+						save_scope_as = simon_scope
+					}
+				}
+			}
+		}
+		else = {
+			overlord = {
+				random_interest_group = {
+					limit = {
+						is_in_government = yes
+					}
+					leader = {
+						set_variable = simon_var
+						save_scope_as = simon_scope
+					}
+				}
+			}
+		}
+		random_political_lobby = {
+			limit = {
+				is_political_lobby_type = lobby_indian_national_congress
+			}
+			save_scope_as = inc_scope
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_independence_movement
+		}
+	}
+
+	option = {
+		name = india_home_rule_events.11.a
+		trigger = {
+			je:je_india_home_rule = {
+				has_variable = simon_commission_conservative
+			}
+		}
+		add_modifier = {
+			name = modifier_simon_commission_embraced
+			days = normal_modifier_time
+		}
+		add_small_indian_radicals = yes
+		scope:inc_scope ?= {
+			change_appeasement = {
+				amount = -1
+				factor = appeasement_indian_hostile_action
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					game_date > 1928.1.1
+				}
+				trigger_event = {
+					id = india_events.11
+					days = 30
+				}
+			}
+		}
+	}
+
+	option = {
+		name = india_home_rule_events.11.b
+		trigger = {
+			je:je_india_home_rule = {
+				has_variable = simon_commission_conservative
+			}
+		}
+		default_option = yes
+		add_medium_indian_radicals = yes
+		scope:inc_scope ?= {
+			change_appeasement = {
+				amount = -3
+				factor = appeasement_indian_hostile_action
+			}
+		}
+		scope:indian_independence_movement = {
+			add_modifier = {
+				name = modifier_simon_commission_boycott
+				days = normal_modifier_time
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					game_date > 1928.1.1
+				}
+				# TODO: Confirm if we also want this to fire on G. Will have to look at the event.
+				trigger_event = {
+					id = india_events.11
+					days = 30
+				}
+			}
+		}
+	}
+
+	option = {
+		name = india_home_rule_events.11.c
+		trigger = {
+			je:je_india_home_rule = {
+				has_variable = simon_commission_liberal
+			}
+		}
+		default_option = yes
+		add_modifier = {
+			name = modifier_simon_commission_embraced
+			days = normal_modifier_time
+		}
+		add_medium_indian_loyalists = yes
+		scope:inc_scope ?= {
+			change_appeasement = {
+				amount = 3
+				factor = appeasement_lobby_gain
+			}
+		}
+	}
+
+	option = {
+		name = india_home_rule_events.11.g
+		trigger = {
+			c:BIC = {
+				has_variable = india_home_rule_failed
+			}
+			je:je_india_home_rule = {
+				has_variable = simon_commission_liberal
+			}
+		}
+		add_medium_indian_radicals = yes
+		scope:indian_independence_movement = {
+			add_modifier = {
+				name = modifier_simon_commission_boycott
+				days = normal_modifier_time
+			}
+		}
+	}
+
+	after = {
+		je:je_india_home_rule = {
+			set_variable = simon_commission_complete
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					je:je_india_home_rule = {
+						has_variable = simon_commission_liberal
+					}
+				}
+				random_list = {
+					7 = {
+						post_notification = simon_commission_advance
+						overlord ?= {
+							post_notification = simon_commission_advance
+						}
+						je:je_india_home_rule ?= {
+							add_progress = { value = 50 name = je_india_home_rule_progressbar }
+						}
+					}
+					3 = {
+						post_notification = simon_commission_nothing
+						overlord ?= {
+							post_notification = simon_commission_nothing
+						}
+					}
+				}
+			}
+			else = {
+				random_list = {
+					7 = {
+						if = {
+							limit = {
+								NOT = {
+									has_variable = india_home_rule_failed
+								}
+							}
+							post_notification = simon_commission_retreat_towards_independence
+							overlord = {
+								post_notification = simon_commission_retreat_towards_independence
+							}
+						}
+						else = {
+							post_notification = simon_commission_retreat
+							overlord = {
+								post_notification = simon_commission_retreat
+							}
+						}
+						je:je_india_home_rule ?= {
+							add_progress = { value = -50 name = je_india_home_rule_progressbar }
+							set_variable = {
+								name = simon_commission_rejects_sovereignty
+							}
+						}
+					}
+					3 = {
+						post_notification = simon_commission_nothing
+						overlord = {
+							post_notification = simon_commission_nothing
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,43 @@
+﻿l_english:
+  je_mughal_hindustan_reason:1 "The lords of [SCOPE.sCountry('mughal_scope').GetName] once ruled from Kabul to the Carnatic coast, but that golden age has long since passed. The [SCOPE.sCountry('eic_scope').GetName]'s power steadily grows, each year asserting new prerogatives of its own and denying our court more and more of the authority, prestige, and traditions it once enjoyed. Now the great scions of Timur scarcely wield any power beyond the walls of the Red Fort of Delhi!\n\n#N #bold We must act to save [SCOPE.sCountry('mughal_scope').GetNameNoFormatting], lest it slide into oblivion.#!#!"
+
+  mughal.1.d:1 "In 1835, British agents insisted that [SCOPE.sCharacter('akbar_ii').GetPrimaryRoleTitle] [SCOPE.sCharacter('akbar_ii').GetFirstName] recognize [SCOPE.sCharacter('bahadur_ii').GetPrimaryRoleTitle] [SCOPE.sCharacter('bahadur_ii').GetFirstName] as [SCOPE.sCharacter('akbar_ii').GetHerHis|l] heir, despite the [SCOPE.sCharacter('akbar_ii').GetPrimaryRoleTitle]'s wish to name Mirza [SCOPE.sCharacter('mirza_salim_scope').GetFirstName], [SCOPE.sCharacter('akbar_ii').GetHerHis|l] sickly eighth son, as heir apparent. Elements within the court have urged [SCOPE.sCharacter('akbar_ii').GetFirstNameNoFormatting] to contest the decision one last time."
+  mughal.1.a:1 "[SCOPE.sCountry('probably_east_india_company_scope').GetNameNoFormatting]'s decision is final."
+  belated_british_interference:1 "Retaliatory Interference"
+
+  # NO LOC (rewording)
+  mughal.4.d:1 "Delays in the passage of [SCOPE.sLaw('current_law_scope').GetName] have caused immense frustration within the court. It is possible to ask for the intercession of [SCOPE.sCountry('probably_east_india_company_scope').GetName] for aid, but that would essentially mean ceding them more lawmaking powers."
+
+  mughal.5.f:1 ""Taxes!" [SCOPE.sCharacter('hindustan_ruler').GetPrimaryRoleTitle] [SCOPE.sCharacter('hindustan_ruler').GetFirstNameNoFormatting] laughed, "Taxes!" [SCOPE.sCharacter('hindustan_ruler').GetSheHe|U] rocked on [SCOPE.sCharacter('hindustan_ruler').GetHerHis] throne, chuckling for a moment more.\n\n[SCOPE.sCharacter('hindustan_ruler').GetSheHe|U] waved at the marble walls around [SCOPE.sCharacter('hindustan_ruler').GetHerHim|l]. "What have we got to tax? Stones?" [SCOPE.sCharacter('hindustan_ruler').GetSheHe|U] shook [SCOPE.sCharacter('hindustan_ruler').GetHerHis|l] head. "No, things here turn to dust, not gold. We need to look elsewhere." [SCOPE.sCharacter('hindustan').GetSheHe|U] gestured for a scribe. Was it time for [ROOT.GetCountry.GetNameNoFormatting] to debase itself before [SCOPE.sCountry('probably_east_india_company_scope').GetNameNoFormatting] again?"
+
+  mughal.7.d:1 "Through politicking, intrigue, and intervention from on high, [SCOPE.sCountry('mughal_scope').GetName] has won its freedom. [SCOPE.sCountry('mughal_scope').GetCapital.GetCityHubName] is awhirl with festivities, celebrating [SCOPE.sCharacter('hindustan_ruler').GetPrimaryRoleTitle] [SCOPE.sCharacter('hindustan_ruler').GetFirstName]'s rule."
+  mughal.7.dd:1 "Now is the time to fix all that our oppressors left to rot."
+  mughal_7_annex_up_to_3_immediate_neighbors:1 "Up to #bold #green 3#!#! neighboring countries with a shared [concept_discrimination_trait_group] and #green #bold cordial#!#! relations or better will be annexed by [SCOPE.sCountry('mughal_scope').GetNameNoFormatting]."
+  mughal_7_annex_up_to_2_immediate_neighbors:1 "Up to #bold #green 2#!#! neighboring countries with a shared [concept_discrimination_trait_group] and #green #bold cordial#!#! relations or better will be annexed by [SCOPE.sCountry('mughal_scope').GetNameNoFormatting]."
+
+  je_india_non_cooperation_movement_reason:1 "As the [SCOPE.sPoliticalMovement('indian_national_movement').GetName] continues to grow, its leaders have adopted a new strategy of #b satyagraha#! - peaceful resistance and civil disobedience. If the movement can demonstrate its strength and resolve through peaceful protest, and avoid resorting to violent methods, then the momentum towards #b Indian#! sovereignty may become unstoppable."
+
+  india_non_cooperation.1.d:1 "The [SCOPE.sPoliticalMovement('indian_national_movement').GetName] has launched its next campaign - organized civil disobedience they call "#b satyagraha#!". Hoping to unite the Indian people behind peaceful protest against [SCOPE.sCountry('probably_britain_scope').GetAdjectiveNoFlag] rule, this effort will either unite the #b Indian#! cause or devolve it into violent chaos."
+  india_non_cooperation.1.f:1 "The meeting hall was packed tight with men, and so cramped it seemed amazing that the speaker could stand upright without hitting the ceiling. Despite the awful conditions, his voice cut through the muggy air like a knife:\n\n"Through peaceful resistance, we can gain our autonomy, and our independence. Our goals are simple: We will defy this unjust rule, and show the world the true nature of our oppressor.""
+  india_non_cooperation.1.b:1 "Perhaps some jail time will help [SCOPE.sCharacter('prisoner_scope').GetFullName] reconsider this movement."
+
+  india_non_cooperation.2.t:1 "Swadeshi Movement in the [SCOPE.sCountry('india_scope').GetNameNoFormatting]"
+  india_non_cooperation.2.d:1 "Nationalist agitators in the [SCOPE.sCountry('india_scope').GetName] have embarked on a new campaign, encouraging the local population to consume locally produced [SCOPE.sGoods('clothes_scope').GetName], [SCOPE.sGoods('furniture_scope').GetName], and [SCOPE.sGoods('liquor_scope').GetName] instead of our own. What impact could this have on the broader economy and the [SCOPE.sPoliticalMovement('indian_independence_movement').GetName] movement as a whole?"
+
+  india_non_cooperation.3.d:1 "Moved to action by the agitation of the [SCOPE.sPoliticalMovement('indian_independence_movement').GetName], workers in [SCOPE.sState('hartal_state').GetName] and other states have put down their tools and left their workplaces. Whole regions are on strike!"
+  india_non_cooperation.3.a:1 "How long do they think this will last?"
+  india_non_cooperation.3.b:1 "The work will go on with or without them."
+
+  india_non_cooperation.4.t:1 "The Swadeshi Movement"
+  india_non_cooperation.4.d:1 "Leaders of the [SCOPE.sPoliticalMovement('indian_national_movement').GetName] have begun a new campaign. They are encouraging people to produce their own goods and consume only locally-made products, hoping to cripple the sale of foreign [SCOPE.sGoods('clothes_scope').GetName], [SCOPE.sGoods('furniture_scope').GetName], and [SCOPE.sGoods('liquor_scope').GetName] to the Indian subcontinent."
+  india_non_cooperation.4.f:1 ""My nationalism is as broad as my self-reliance!" thumped the speaker. "I want #b India's#! spirit to rise so that the whole world may benefit.""
+  india_non_cooperation.4.a:1 "This action is insignificant."
+  india_non_cooperation.4.b:1 "Suppress this at once!"
+
+  india_non_cooperation.5.d:1 "Rising [Concept('concept_activism', '$concept_activism_short$')] has sparked a clash between supporters of the [SCOPE.sPoliticalMovement('indian_national_movement').GetName] and the local police in [SCOPE.sState('chauri_chaura_state').GetName]. Protesters were fired on, and in response a mob burned down the local police station. Representatives of the [SCOPE.sPoliticalMovement('indian_national_movement').GetNameNoFormatting] appear visibly shaken by the reports of violence."
+  india_non_cooperation.5.a:1 "The actions of a few have sullied the entire movement."
+
+  india_non_cooperation.6.d:2 "The [SCOPE.sPoliticalMovement('indian_national_movement').GetName]'s efforts to break the foreign stranglehold on Indian trade has fizzled out, with no resounding successes."
+
+  india_non_cooperation.7.d:1 "The [SCOPE.sPoliticalMovement('indian_national_movement').GetName] has proclaimed a great victory today, praising their members for their peaceful actions against [SCOPE.sCountry('overlord_scope').GetAdjectiveNoFlag] rule, and taking a monumental step forward together as a nation and a movement."
+  india_non_cooperation.7.f:1 "Mr. Pitt was at a loss of what to do. The jails were full, the factories were empty, half the civil-servants had resigned and tax collection was at an all-time low. Perhaps he had understimated the indians' resolve, and perhaps they had all overestimated the [SCOPE.sCountry('overlord_scope').GetAdjectiveNoFormatting] grip on the subcontinent..."

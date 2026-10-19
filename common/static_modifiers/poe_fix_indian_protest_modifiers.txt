@@ -1,0 +1,88 @@
+﻿REPLACE_OR_CREATE:indian_farmers_on_strike = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	building_group_bg_plantations_throughput_add = -0.33
+}
+
+REPLACE_OR_CREATE:civil_servants_resign = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	building_government_administration_throughput_add = -0.33
+}
+
+REPLACE_OR_CREATE:indian_tax_protest = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	state_tax_collection_mult = -0.33
+}
+
+REPLACE_OR_CREATE:indian_civil_disobedience = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	country_institution_cost_institution_police_mult = 0.20
+}
+
+REPLACE_OR_CREATE:prati_sarkar_schools = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_institution_cost_institution_schools_mult = 0.20
+}
+
+REPLACE_OR_CREATE:prati_sarkar_health_system = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_institution_cost_institution_health_system_mult = 0.20
+}
+
+REPLACE_OR_CREATE:ahimsa_accepted = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	political_movement_radicalism_add = -0.2
+	political_movement_pop_attraction_mult = -0.2
+}
+
+REPLACE_OR_CREATE:ahimsa_rejected = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	political_movement_radicalism_add = 0.2
+	political_movement_pop_attraction_mult = 0.2
+}
+
+REPLACE_OR_CREATE:indian_riots = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	state_turmoil_effects_mult = 0.20
+}
+
+REPLACE_OR_CREATE:indian_armory_raids = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	building_group_bg_military_industry_throughput_add = -0.5
+}
+
+REPLACE_OR_CREATE:indian_mill_strike = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	building_textile_mill_throughput_add = -0.8
+}
+
+REPLACE_OR_CREATE:indian_mill_strike_successful = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	building_minimum_wage_mult = 0.20
+}
+
+REPLACE_OR_CREATE:modifier_indian_mill_strike_leader = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	character_popularity_add = 20
+}
+
+REPLACE_OR_CREATE:indian_farm_tax_protest = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	building_group_bg_agriculture_tax_mult = -0.8
+}
+
+REPLACE_OR_CREATE:indian_farm_tax_protest_successful = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	building_group_bg_agriculture_tax_mult = -0.6
+	building_group_bg_agriculture_standard_of_living_add = 1.0
+}
+
+REPLACE_OR_CREATE:modifier_indian_farm_tax_protest_leader = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	building_minimum_wage_mult = 0.20
+}
+
+REPLACE_OR_CREATE:indian_royal_heir_riots = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	state_turmoil_effects_mult = 0.30
+	state_radicals_from_political_movements_mult = 0.15
+}

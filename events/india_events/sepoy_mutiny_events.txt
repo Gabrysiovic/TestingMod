@@ -1,0 +1,2217 @@
+﻿namespace = sepoy_mutiny_events
+
+sepoy_mutiny_events.1 = {
+	type = country_event
+	placement = root
+	event_image = {
+		video = "ep1_redcoats"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	title = sepoy_mutiny_events.1.t
+	desc = sepoy_mutiny_events.1.d
+	flavor = sepoy_mutiny_events.1.f
+
+	duration = 3
+
+	immediate = {
+		create_character = {
+			template = SAT_nana_saheb_template
+			save_scope_as = nana_saheb_scope
+		}
+		if = {
+			limit = {
+				any_country = {
+					has_variable = sepoy_mutiny_revolter_var
+					NOT = {
+						root ?= this
+					}
+				}
+			}
+			random_country = {
+				limit = {
+					has_variable = sepoy_mutiny_revolter_var
+					NOT = {
+						root ?= this
+					}
+				}
+				save_scope_as = other_revolter_nation_scope
+			}
+		}
+	}
+
+	# Triggered by sepoy_mutiny_events.4
+	trigger = {
+	}
+
+	option = {
+		name = sepoy_mutiny_events.1.a
+		default_option = yes
+		show_as_tooltip = {
+			create_character = {
+				template = SAT_nana_saheb_template
+			}
+		}
+		random_scope_character = {
+			limit = {
+				has_template = SAT_nana_saheb_template
+			}
+			set_as_interest_group_leader = yes
+		}
+		add_modifier = {
+			name = sepoy_mutiny_peshwa_power
+			days = normal_modifier_time
+		}
+		ig:ig_landowners ?= {
+			add_modifier = {
+				name = sepoy_mutiny_reinstated_peshwa
+				days = long_modifier_time
+			}
+		}
+	}
+
+	option = {
+		name = sepoy_mutiny_events.1.b
+		show_as_tooltip = {
+			create_character = {
+				template = SAT_nana_saheb_template
+			}
+		}
+		add_modifier = {
+			name = sepoy_mutiny_bhat_family_generals
+			days = normal_modifier_time
+		}
+	}
+
+	option = {
+		name = sepoy_mutiny_events.1.c
+		ig:ig_landowners ?= {
+			add_modifier = {
+				name = sepoy_mutiny_turned_away_peshwa
+				days = normal_modifier_time
+			}
+		}
+		if = {
+			limit = {
+				exists = scope:other_revolter_nation_scope
+			}
+			random_scope_character = {
+				limit = {
+					has_template = SAT_nana_saheb_template
+				}
+				transfer_character = scope:other_revolter_nation_scope
+			}
+		}
+		else = {
+			random_scope_character = {
+				limit = {
+					has_template = SAT_nana_saheb_template
+				}
+				kill_character = {
+					hidden = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		trigger = {
+			game_date < 1851.1.28
+		}
+		name = sepoy_mutiny_events.1.e
+		create_character = {
+			template = SAT_baji_rao_template
+		}
+		show_as_tooltip = {
+			create_character = {
+				template = SAT_nana_saheb_template
+			}
+		}
+		add_modifier = {
+			name = sepoy_mutiny_peshwa_power
+			days = normal_modifier_time
+			multiplier = 1.5
+		}
+		ig:ig_landowners ?= {
+			add_modifier = {
+				name = sepoy_mutiny_reinstated_peshwa
+				days = long_modifier_time
+				multiplier = 1.5
+			}
+		}
+	}
+}
+
+sepoy_mutiny_events.2 = {
+	type = country_event
+	placement = root
+
+	title = sepoy_mutiny_events.2.t
+	desc = sepoy_mutiny_events.2.d
+	flavor = sepoy_mutiny_events.2.f
+
+	event_image = {
+		video = "middleeast_police_breaking_door"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 3
+
+	# Triggered by je_sepoy_mutiny
+	trigger = {
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = sepoy_mutiny_country
+			}
+			save_scope_as = sepoy_scope
+			every_country = {
+				limit = {
+					has_variable = sepoy_mutiny_country
+					NOT = {
+						scope:sepoy_scope ?= this
+					}
+				}
+				scope:sepoy_scope ?= {
+					annex = prev
+				}
+			}
+		}
+	}
+
+	option = {
+		name = sepoy_mutiny_events.2.a
+		default_option = yes
+		ai_chance = 5
+		trigger = {
+			is_subject = yes
+			overlord ?= {
+				is_player = no
+			}
+		}
+		hidden_effect = {
+			every_direct_subject = {
+				limit = {
+					is_princely_state = yes
+				}
+				sepoy_mutiny_remove_puppet_effect = yes
+			}
+		}
+		if = {
+			limit = {
+				is_player = yes
+			}
+			play_as = overlord
+		}
+		hidden_effect = {
+			every_scope_state = {
+				limit = {
+					# TODO: For every one of these in this event (including setting subjects free), should be an OR and the second condition should be if the state/subject is in Burma *and* Burma joined the sepoy mutiny
+					OR = {
+						is_in_geographic_region = geographic_region_india
+						AND = {
+							c:BUR ?= {
+								has_variable = sepoy_mutiny_revolter_var
+							}
+							state_is_homeland_of_burmese_cultures = yes
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							exists = scope:sepoy_scope
+						}
+					}
+					create_sepoy_mutiny_country = yes
+				}
+				else = {
+					set_state_owner = scope:sepoy_scope
+				}
+			}
+			every_direct_subject = {
+				limit = {
+					has_variable = sepoy_mutiny_revolter_var
+				}
+				sepoy_mutiny_remove_puppet_effect = yes
+			}
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				# For Burma or British subjects in India
+				overlord ?= {
+					every_direct_subject = {
+						limit = {
+							has_variable = sepoy_mutiny_revolter_var
+						}
+						sepoy_mutiny_remove_puppet_effect = yes
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			text = overlord_annexes_non_indian_states_tt
+			overlord ?= {
+				annex = ROOT
+			}
+		}
+		custom_tooltip = {
+			text = india_princes_independent_tt
+			scope:sepoy_scope ?= {
+				collapse_india_effect = yes
+			}
+		}
+	}
+
+	option = {
+		name = sepoy_mutiny_events.2.g
+		default_option = yes
+		ai_chance = 0
+		hidden_effect = {
+			capital = {
+				# This is for the later call to collapse_india_effect
+				state_region = {
+					save_scope_as = former_capital
+				}
+			}
+		}
+		hidden_effect = {
+			every_direct_subject = {
+				limit = {
+					is_princely_state = yes
+				}
+				sepoy_mutiny_remove_puppet_effect = yes
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					is_player = yes
+					exists = scope:sepoy_scope
+				}
+				play_as = scope:sepoy_scope
+			}
+		}
+		hidden_effect = {
+			every_scope_state = {
+				limit = {
+					OR = {
+						is_in_geographic_region = geographic_region_india
+						AND = {
+							c:BUR ?= {
+								has_variable = sepoy_mutiny_revolter_var
+							}
+							state_is_homeland_of_burmese_cultures = yes
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							exists = scope:sepoy_scope
+						}
+					}
+					create_sepoy_mutiny_country = yes
+					if = {
+						limit = {
+							ROOT = {
+								is_player = yes
+							}
+						}
+						ROOT = {
+							play_as = scope:sepoy_scope
+						}
+					}
+				}
+				else = {
+					set_state_owner = scope:sepoy_scope
+				}
+			}
+			every_direct_subject = {
+				limit = {
+					has_variable = sepoy_mutiny_revolter_var
+				}
+				sepoy_mutiny_remove_puppet_effect = yes
+			}
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				# For Burma or British subjects in India
+				overlord ?= {
+					every_direct_subject = {
+						limit = {
+							has_variable = sepoy_mutiny_revolter_var
+						}
+						sepoy_mutiny_remove_puppet_effect = yes
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			custom_tooltip = {
+				text = overlord_annexes_non_indian_states_tt
+				overlord ?= {
+					annex = ROOT
+				}
+			}
+		}
+		else = {
+			hidden_effect = {
+				scope:sepoy_scope ?= {
+					annex = ROOT
+				}
+			}
+		}
+		# TODO: In this effect, let anyone who was an instigator (had the JE, this will be marked with a var) get 4 states intead of just 2
+		custom_tooltip = {
+			text = india_princes_independent_tt
+			scope:sepoy_scope ?= {
+				collapse_india_effect = yes
+			}
+		}
+		custom_tooltip = continue_as_princely_state_tt
+	}
+
+	option = {
+		name = sepoy_mutiny_events.2.b
+		highlighted_option = yes
+		ai_chance = 0
+		trigger = {
+			any_scope_state = {
+				is_in_geographic_region = geographic_region_bengal_old
+				is_coastal = yes
+				has_port_state = yes
+			}
+		}
+		custom_tooltip = {
+			text = india_retreat_to_bengal_tt
+			every_scope_state = {
+				limit = {
+					OR = {
+						is_in_geographic_region = geographic_region_india
+						AND = {
+							c:BUR ?= {
+								has_variable = sepoy_mutiny_revolter_var
+							}
+							state_is_homeland_of_burmese_cultures = yes
+						}
+					}
+					OR = {
+						NOT = {
+							is_in_geographic_region = geographic_region_bengal_old
+						}
+						is_isolated_from_market = yes
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							exists = scope:sepoy_scope
+						}
+					}
+					create_sepoy_mutiny_country = yes
+				}
+				else = {
+					set_state_owner = scope:sepoy_scope
+				}
+			}
+			every_direct_subject = {
+				limit = {
+					is_in_geographic_region = geographic_region_india
+					capital = {
+						OR = {
+							NOT = {
+								is_in_geographic_region = geographic_region_bengal_old
+							}
+							is_isolated_from_market = yes
+						}
+					}
+				}
+				sepoy_mutiny_remove_puppet_effect = yes
+			}
+			every_direct_subject = {
+				limit = {
+					has_variable = sepoy_mutiny_revolter_var
+				}
+				sepoy_mutiny_remove_puppet_effect = yes
+			}
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				# For Burma or British subjects in India
+				overlord ?= {
+					every_direct_subject = {
+						limit = {
+							has_variable = sepoy_mutiny_revolter_var
+						}
+						sepoy_mutiny_remove_puppet_effect = yes
+					}
+				}
+			}
+		}
+		scope:sepoy_scope ?= {
+			collapse_india_effect = yes
+		}
+		add_large_indian_radicals = yes
+	}
+
+	option = {
+		name = sepoy_mutiny_events.2.c
+		highlighted_option = yes
+		ai_chance = 0
+		trigger = {
+			any_scope_state = {
+				is_in_geographic_region = geographic_region_madras_old
+				is_coastal = yes
+				has_port_state = yes
+			}
+		}
+		custom_tooltip = {
+			text = india_retreat_to_madras_tt
+			every_scope_state = {
+				limit = {
+					OR = {
+						is_in_geographic_region = geographic_region_india
+						AND = {
+							c:BUR ?= {
+								has_variable = sepoy_mutiny_revolter_var
+							}
+							state_is_homeland_of_burmese_cultures = yes
+						}
+					}
+					OR = {
+						NOT = {
+							is_in_geographic_region = geographic_region_madras_old
+						}
+						is_isolated_from_market = yes
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							exists = scope:sepoy_scope
+						}
+					}
+					create_sepoy_mutiny_country = yes
+				}
+				else = {
+					set_state_owner = scope:sepoy_scope
+				}
+			}
+			every_direct_subject = {
+				limit = {
+					is_in_geographic_region = geographic_region_india
+					capital = {
+						OR = {
+							NOT = {
+								is_in_geographic_region = geographic_region_madras_old
+							}
+							is_isolated_from_market = yes
+						}
+					}
+				}
+				sepoy_mutiny_remove_puppet_effect = yes
+			}
+			every_direct_subject = {
+				limit = {
+					has_variable = sepoy_mutiny_revolter_var
+				}
+				sepoy_mutiny_remove_puppet_effect = yes
+			}
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				# For Burma or British subjects in India
+				overlord ?= {
+					every_direct_subject = {
+						limit = {
+							has_variable = sepoy_mutiny_revolter_var
+						}
+						sepoy_mutiny_remove_puppet_effect = yes
+					}
+				}
+			}
+		}
+		scope:sepoy_scope ?= {
+			collapse_india_effect = yes
+		}
+		add_large_indian_radicals = yes
+	}
+
+	option = {
+		name = sepoy_mutiny_events.2.e
+		highlighted_option = yes
+		ai_chance = 0
+		trigger = {
+			any_scope_state = {
+				is_in_geographic_region = geographic_region_bombay_old
+				is_coastal = yes
+				has_port_state = yes
+			}
+		}
+		custom_tooltip = {
+			text = india_retreat_to_bombay_tt
+			every_scope_state = {
+				limit = {
+					OR = {
+						is_in_geographic_region = geographic_region_india
+						AND = {
+							c:BUR ?= {
+								has_variable = sepoy_mutiny_revolter_var
+							}
+							state_is_homeland_of_burmese_cultures = yes
+						}
+					}
+					OR = {
+						NOT = {
+							is_in_geographic_region = geographic_region_bombay_old
+						}
+						is_isolated_from_market = yes
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							exists = scope:sepoy_scope
+						}
+					}
+					create_sepoy_mutiny_country = yes
+				}
+				else = {
+					set_state_owner = scope:sepoy_scope
+				}
+			}
+			every_direct_subject = {
+				limit = {
+					is_in_geographic_region = geographic_region_india
+					capital = {
+						OR = {
+							NOT = {
+								is_in_geographic_region = geographic_region_bombay_old
+							}
+							is_isolated_from_market = yes
+						}
+					}
+				}
+				sepoy_mutiny_remove_puppet_effect = yes
+			}
+			every_direct_subject = {
+				limit = {
+					has_variable = sepoy_mutiny_revolter_var
+				}
+				sepoy_mutiny_remove_puppet_effect = yes
+			}
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				# For Burma or British subjects in India
+				overlord ?= {
+					every_direct_subject = {
+						limit = {
+							has_variable = sepoy_mutiny_revolter_var
+						}
+						sepoy_mutiny_remove_puppet_effect = yes
+					}
+				}
+			}
+		}
+		scope:sepoy_scope ?= {
+			collapse_india_effect = yes
+		}
+		add_large_indian_radicals = yes
+	}
+
+	after = {
+		# GBR should get "Pivot of Empire Lost" event even if EIC still exists as a remnant
+		# in one of the presidencies
+		c:GBR ?= {
+			trigger_event = { id = bic_breakup.7 popup = yes }
+		}
+	}
+}
+
+sepoy_mutiny_events.3 = {
+	type = country_event
+	placement = root
+	event_image = {
+		video = "asia_sepoy_mutiny"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	title = sepoy_mutiny_events.3.t
+	desc = sepoy_mutiny_events.3.d
+	flavor = sepoy_mutiny_events.3.f
+
+	duration = 3
+
+	immediate = {
+		c:MUG ?= {
+			save_scope_as = mughals_scope
+		}
+		random_country = {
+			limit = {
+				has_variable = sepoy_mutiny_country
+			}
+			save_scope_as = sepoy_scope
+		}
+	}
+
+	# Triggered by je_sepoy_mutiny
+	trigger = {
+	}
+
+	option = {
+		name = sepoy_mutiny_events.3.a
+		default_option = yes
+		custom_tooltip = sepoy_mutiny_begins_tt
+		custom_tooltip = sepoy_mutiny_events.3.tt_1
+		custom_tooltip = sepoy_mutiny_events.3.tt_2
+	}
+	option = {
+		name = sepoy_mutiny_events.3.b
+		trigger = {
+			c:MUG ?= {
+				has_variable = sepoy_mutiny_revolter_var
+				is_player = no
+			}
+		}
+		custom_tooltip = sepoy_mutiny_begins_tt
+		custom_tooltip = sepoy_mutiny_events.3.tt_1
+		custom_tooltip = sepoy_mutiny_events.3.tt_2
+		if = {
+			limit = {
+				is_player = yes
+			}
+			play_as = c:MUG
+			c:BIC ?= {
+				every_scope_state = {
+					limit = {
+						is_homeland_of_country_cultures = c:MUG
+						is_capital = no
+					}
+					set_state_owner = c:MUG
+				}
+			}
+			scope:sepoy_scope ?= {
+				every_scope_state = {
+					limit = {
+						is_homeland_of_country_cultures = c:MUG
+					}
+					set_state_owner = c:MUG
+				}
+			}
+		}
+	}
+	option = {
+		name = sepoy_mutiny_events.3.c
+		trigger = {
+			c:SAT ?= {
+				has_variable = sepoy_mutiny_revolter_var
+				is_player = no
+			}
+		}
+		custom_tooltip = sepoy_mutiny_begins_tt
+		custom_tooltip = sepoy_mutiny_events.3.tt_1
+		custom_tooltip = sepoy_mutiny_events.3.tt_2
+		if = {
+			limit = {
+				is_player = yes
+			}
+			play_as = c:SAT
+			c:BIC ?= {
+				every_scope_state = {
+					limit = {
+						is_homeland_of_country_cultures = c:SAT
+						is_capital = no
+					}
+					set_state_owner = c:SAT
+				}
+			}
+			scope:sepoy_scope ?= {
+				every_scope_state = {
+					limit = {
+						is_homeland_of_country_cultures = c:SAT
+					}
+					set_state_owner = c:SAT
+				}
+			}
+		}
+	}
+	option = {
+		name = sepoy_mutiny_events.3.e
+		trigger = {
+			c:COO ?= {
+				has_variable = sepoy_mutiny_revolter_var
+				is_player = no
+			}
+		}
+		custom_tooltip = sepoy_mutiny_begins_tt
+		custom_tooltip = sepoy_mutiny_events.3.tt_1
+		custom_tooltip = sepoy_mutiny_events.3.tt_2
+		if = {
+			limit = {
+				is_player = yes
+			}
+			play_as = c:COO
+			c:BIC ?= {
+				every_scope_state = {
+					limit = {
+						is_homeland_of_country_cultures = c:COO
+						is_capital = no
+					}
+					set_state_owner = c:COO
+				}
+			}
+			scope:sepoy_scope ?= {
+				every_scope_state = {
+					limit = {
+						is_homeland_of_country_cultures = c:COO
+					}
+					set_state_owner = c:COO
+				}
+			}
+		}
+	}
+	option = {
+		name = sepoy_mutiny_events.3.g
+		trigger = {
+			c:PAN ?= {
+				has_variable = sepoy_mutiny_revolter_var
+				is_player = no
+			}
+		}
+		custom_tooltip = sepoy_mutiny_begins_tt
+		custom_tooltip = sepoy_mutiny_events.3.tt_1
+		custom_tooltip = sepoy_mutiny_events.3.tt_2
+		if = {
+			limit = {
+				is_player = yes
+			}
+			play_as = c:PAN
+			c:BIC ?= {
+				every_scope_state = {
+					limit = {
+						is_homeland_of_country_cultures = c:PAN
+						is_capital = no
+					}
+					set_state_owner = c:PAN
+				}
+			}
+			scope:sepoy_scope ?= {
+				every_scope_state = {
+					limit = {
+						is_homeland_of_country_cultures = c:PAN
+					}
+					set_state_owner = c:PAN
+				}
+			}
+		}
+	}
+	option = {
+		name = sepoy_mutiny_events.3.h
+		trigger = {
+			c:KNO ?= {
+				has_variable = sepoy_mutiny_revolter_var
+				is_player = no
+			}
+		}
+		custom_tooltip = sepoy_mutiny_begins_tt
+		custom_tooltip = sepoy_mutiny_events.3.tt_1
+		custom_tooltip = sepoy_mutiny_events.3.tt_2
+		if = {
+			limit = {
+				is_player = yes
+			}
+			play_as = c:KNO
+			c:BIC ?= {
+				every_scope_state = {
+					limit = {
+						is_capital = no
+						state_region = {
+							is_homeland = telegu
+						}
+					}
+					set_state_owner = c:KNO
+				}
+			}
+			scope:sepoy_scope ?= {
+				every_scope_state = {
+					limit = {
+						state_region = {
+							is_homeland = telegu
+						}
+					}
+					set_state_owner = c:KNO
+				}
+			}
+		}
+	}
+}
+
+sepoy_mutiny_events.4 = {
+	type = country_event
+	placement = root
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = sepoy_mutiny_events.4.t_mug
+				trigger = {
+					c:MUG ?= this
+				}
+			}
+			triggered_desc = {
+				desc = sepoy_mutiny_events.4.t_instigator
+				trigger = {
+					has_variable = sepoy_mutiny_instigator
+				}
+			}
+			triggered_desc = {
+				desc = sepoy_mutiny_events.4.t
+				trigger = {
+					always = yes
+				}
+			}
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = sepoy_mutiny_events.4.d_mug
+				trigger = {
+					c:MUG ?= this
+				}
+			}
+			triggered_desc = {
+				desc = sepoy_mutiny_events.4.d_instigator
+				trigger = {
+					has_variable = sepoy_mutiny_instigator
+				}
+			}
+			triggered_desc = {
+				desc = sepoy_mutiny_events.4.d
+				trigger = {
+					always = yes
+				}
+			}
+		}
+	}
+	flavor = {
+		first_valid = {
+			triggered_desc = {
+				desc = sepoy_mutiny_events.4.f_mug
+				trigger = {
+					c:MUG ?= this
+				}
+			}
+			triggered_desc = {
+				desc = sepoy_mutiny_events.4.f_instigator
+				trigger = {
+					has_variable = sepoy_mutiny_instigator
+				}
+			}
+			triggered_desc = {
+				desc = sepoy_mutiny_events.4.f
+				trigger = {
+					always = yes
+				}
+			}
+		}
+	}
+	event_image = {
+		trigger = {
+			c:MUG ?= this
+		}
+		video = "votp_agitator_speaking"
+	}
+	event_image = {
+		trigger = {
+			NOT = {
+				c:MUG ?= this
+			}
+		}
+		video = "asia_sepoy_mutiny"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	duration = 3
+
+	# Triggered by je_sepoy_mutiny
+	trigger = {}
+
+	immediate = {
+		c:BIC ?= {
+			save_scope_as = eic_scope
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				overlord ?= {
+					save_scope_as = eic_overlord_scope
+				}
+			}
+			else = {
+				save_scope_as = eic_overlord_scope
+			}
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			overlord ?= {
+				save_scope_as = attitude_checker_scope
+			}
+		}
+		else = {
+			c:BIC ?= {
+				save_scope_as = attitude_checker_scope
+			}
+		}
+	}
+
+	option = {
+		name = {
+	        trigger = {
+	        	c:MUG ?= this
+	        }
+	        text = sepoy_mutiny_events.4.a_mug
+	    }
+	    name = {
+	        trigger = {
+	        	NOT = {
+	        		c:MUG ?= this
+	        	}
+	        }
+	        text = sepoy_mutiny_events.4.a
+	    }
+		default_option = yes
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = {
+					OR = {
+						c:MUG ?= this
+						AND = {
+							c:SAT ?= this
+							OR = {
+								has_attitude = {
+									who = scope:attitude_checker_scope
+									attitude = defiant
+								}
+								has_attitude = {
+									who = scope:attitude_checker_scope
+									attitude = rebellious
+								}
+							}
+						}
+						AND = {
+							OR = {
+								has_attitude = {
+									who = scope:attitude_checker_scope
+									attitude = defiant
+								}
+								has_attitude = {
+									who = scope:attitude_checker_scope
+									attitude = rebellious
+								}
+							}
+							NOR = {
+								# Muslim AI Countries will always pick Option B and submit to MUG
+								# (but this will only happen if they are land adjacent)
+								OR = {
+									country_has_state_religion = rel:sunni
+									country_has_state_religion = rel:shiite
+								}
+								# Marathi AI Countires will always pick Option C and submit to SAT
+								# (but this will only happen if they are land adjacent)
+								country_has_primary_culture = cu:marathi
+							}
+						}
+					}
+				}
+				add = 1
+			}
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			sepoy_mutiny_remove_puppet_effect = yes
+		}
+		if = {
+			limit = {
+				OR = {
+					c:MUG ?= this
+					c:SAT ?= this
+				}
+			}
+			every_state_in_india = {
+				limit = {
+					is_homeland_of_country_cultures = ROOT
+					owner ?= {
+						OR = {
+							c:BIC ?= this
+							has_variable = sepoy_mutiny_country
+						}
+					}
+				}
+				hidden_effect = {
+					add_sepoy_cache_modifiers = yes
+					if = {
+						limit = {
+							has_modifier = sepoy_mutiny_barracks_destruction_modifier
+						}
+						remove_modifier = sepoy_mutiny_barracks_destruction_modifier
+					}
+					if = {
+						limit = {
+							has_modifier = sepoy_mutiny_barracks_unrest_modifier
+						}
+						remove_modifier = sepoy_mutiny_barracks_unrest_modifier
+					}
+				}
+				set_state_owner = ROOT
+			}
+			custom_tooltip = {
+				text = mug_sat_princely_states_swear_fealty_tt
+				c:BIC ?= {
+					every_country = {
+						limit = {
+							trigger_if = {
+								limit = {
+									c:MUG ?= ROOT
+								}
+								has_variable = mug_swear_loyalty
+							}
+							trigger_else_if = {
+								limit = {
+									c:SAT ?= ROOT
+								}
+								has_variable = sat_swear_loyalty
+							}
+							has_strategic_land_adjacency = ROOT
+						}
+						ROOT ?= {
+							create_diplomatic_pact = {
+								country = prev
+								type = vassal
+							}
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			text = princely_state_joins_rebellion_tt
+			scope:sepoy_mutiny_dp ?= {
+				add_initiator_backers = {
+					prev
+				}
+				add_war_goal = {
+					holder = prev
+					type = sepoy_mutiny
+					target_country = c:BIC
+					primary_demand = yes
+				}
+				add_war_goal = {
+					holder = c:BIC
+					type = annex_country
+					target_country = prev
+					primary_demand = yes
+				}
+			}
+			c:BIC ?= {
+				je:je_sepoy_mutiny ?= {
+					add_involved_country = ROOT
+				}
+			}
+		}
+		add_modifier = {
+			name = war_for_independence
+			days = normal_modifier_time
+		}
+		capital ?= {
+			if = {
+				limit = {
+					global_var:sepoy_rebels_small_arms_stockpile_var > 0
+				}
+				add_modifier = {
+					name = princely_state_small_arms_stockpile
+					multiplier = global_var:sepoy_rebels_small_arms_stockpile_var
+					years = 5
+					is_decaying = yes
+				}
+			}
+			if = {
+				limit = {
+					global_var:sepoy_rebels_artillery_stockpile_var > 0
+				}
+				add_modifier = {
+					name = princely_state_artillery_stockpile
+					multiplier = global_var:sepoy_rebels_artillery_stockpile_var
+					years = 5
+					is_decaying = yes
+				}
+			}
+			if = {
+				limit = {
+					global_var:sepoy_rebels_ammunition_stockpile_var > 0
+				}
+				add_modifier = {
+					name = princely_state_ammunition_stockpile
+					multiplier = global_var:sepoy_rebels_ammunition_stockpile_var
+					years = 5
+					is_decaying = yes
+				}
+			}
+		}
+		set_variable = sepoy_mutiny_revolter_var
+		if = {
+			limit = {
+				c:SAT ?= this
+			}
+			trigger_event = { id = sepoy_mutiny_events.1 }
+		}
+	}
+
+	option = {
+		name = sepoy_mutiny_events.4.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				# This will be the only option for disloyal Muslim AI countries and 1/2 for all other non-marathi
+				# But they will only end up vassalized by Mughal if they are land adjacent
+				trigger = {
+					OR = {
+						has_attitude = {
+							who = scope:attitude_checker_scope
+							attitude = defiant
+						}
+						has_attitude = {
+							who = scope:attitude_checker_scope
+							attitude = rebellious
+						}
+					}
+					NOT = {
+						country_has_primary_culture = cu:marathi
+					}
+				}
+				add = 1
+			}
+		}
+		trigger = {
+			# To prevent race conditions, AI can always select this option and later become a vassal of MUG
+			# But a player should never be able to select this unless MUG has revolted, but if MUG's an AI 
+			# then it should do it right away before the human has the chance to choose an option or pause
+			NOR = {
+				c:MUG ?= this
+				c:SAT ?= this
+			}
+			trigger_if = {
+				limit = {
+					is_player = yes
+				}
+				exists = c:MUG
+				c:MUG ?= {
+					has_variable = sepoy_mutiny_revolter_var
+				}
+				has_strategic_land_adjacency = c:MUG
+			}
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			sepoy_mutiny_remove_puppet_effect = yes
+		}
+		set_variable = {
+			name = mug_swear_loyalty
+			years = 1
+		}
+		if = {
+			limit = {
+				c:MUG ?= {
+					has_variable = sepoy_mutiny_revolter_var
+					has_strategic_land_adjacency = ROOT
+				}
+			}
+			c:MUG ?= {
+				create_diplomatic_pact = {
+					country = ROOT
+					type = vassal
+				}
+			}
+		}
+		custom_tooltip = {
+			text = princely_state_joins_rebellion_tt
+			scope:sepoy_mutiny_dp ?= {
+				add_initiator_backers = {
+					prev
+				}
+				add_war_goal = {
+					holder = prev
+					type = sepoy_mutiny
+					target_country = c:BIC
+					primary_demand = yes
+				}
+				add_war_goal = {
+					holder = c:BIC
+					type = annex_country
+					target_country = prev
+					primary_demand = yes
+				}
+			}
+			c:BIC ?= {
+				je:je_sepoy_mutiny ?= {
+					add_involved_country = ROOT
+				}
+			}
+		}
+		add_modifier = {
+			name = war_for_independence
+			days = normal_modifier_time
+		}
+		capital ?= {
+			if = {
+				limit = {
+					global_var:sepoy_rebels_small_arms_stockpile_var > 0
+				}
+				add_modifier = {
+					name = princely_state_small_arms_stockpile
+					multiplier = global_var:sepoy_rebels_small_arms_stockpile_var
+					years = 5
+					is_decaying = yes
+				}
+			}
+			if = {
+				limit = {
+					global_var:sepoy_rebels_artillery_stockpile_var > 0
+				}
+				add_modifier = {
+					name = princely_state_artillery_stockpile
+					multiplier = global_var:sepoy_rebels_artillery_stockpile_var
+					years = 5
+					is_decaying = yes
+				}
+			}
+			if = {
+				limit = {
+					global_var:sepoy_rebels_ammunition_stockpile_var > 0
+				}
+				add_modifier = {
+					name = princely_state_ammunition_stockpile
+					multiplier = global_var:sepoy_rebels_ammunition_stockpile_var
+					years = 5
+					is_decaying = yes
+				}
+			}
+		}
+		set_variable = sepoy_mutiny_revolter_var
+	}
+
+	option = {
+		name = sepoy_mutiny_events.4.c
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = {
+					OR = {
+						has_attitude = {
+							who = scope:attitude_checker_scope
+							attitude = defiant
+						}
+						has_attitude = {
+							who = scope:attitude_checker_scope
+							attitude = rebellious
+						}
+					}
+					# This will always be the option selected for AI non-SAT marathi countries, but they'll only end up vassalized if
+					# SAT revolts and it's land adjacent
+					country_has_primary_culture = cu:marathi
+				}
+				add = 1
+			}
+		}
+		trigger = {
+			NOR = {
+				c:MUG ?= this
+				c:SAT ?= this
+			}
+			# To prevent race conditions, AI can always select this option and later become a puppet of SAT
+			# But a player should never be able to select this unless SAT has revolted, but if SAT's an AI 
+			# then it should do it right away before the human has the chance to choose an option or pause
+			trigger_if = {
+				limit = {
+					is_player = yes
+				}
+				exists = c:SAT
+				c:SAT ?= {
+					has_variable = sepoy_mutiny_revolter_var
+				}
+				has_strategic_land_adjacency = c:SAT
+			}
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			sepoy_mutiny_remove_puppet_effect = yes
+		}
+		set_variable = {
+			name = sat_swear_loyalty
+			years = 1
+		}
+		if = {
+			limit = {
+				c:SAT ?= {
+					has_variable = sepoy_mutiny_revolter_var
+					has_strategic_land_adjacency = ROOT
+				}
+			}
+			c:SAT ?= {
+				create_diplomatic_pact = {
+					country = ROOT
+					type = vassal
+				}
+			}
+		}
+		custom_tooltip = {
+			text = princely_state_joins_rebellion_tt
+			scope:sepoy_mutiny_dp ?= {
+				add_initiator_backers = {
+					prev
+				}
+				add_war_goal = {
+					holder = prev
+					type = sepoy_mutiny
+					target_country = c:BIC
+					primary_demand = yes
+				}
+				add_war_goal = {
+					holder = c:BIC
+					type = annex_country
+					target_country = prev
+					primary_demand = yes
+				}
+			}
+			c:BIC ?= {
+				je:je_sepoy_mutiny ?= {
+					add_involved_country = ROOT
+				}
+			}
+		}
+		add_modifier = {
+			name = war_for_independence
+			days = normal_modifier_time
+		}
+		capital ?= {
+			if = {
+				limit = {
+					global_var:sepoy_rebels_small_arms_stockpile_var > 0
+				}
+				add_modifier = {
+					name = princely_state_small_arms_stockpile
+					multiplier = global_var:sepoy_rebels_small_arms_stockpile_var
+					years = 5
+					is_decaying = yes
+				}
+			}
+			if = {
+				limit = {
+					global_var:sepoy_rebels_artillery_stockpile_var > 0
+				}
+				add_modifier = {
+					name = princely_state_artillery_stockpile
+					multiplier = global_var:sepoy_rebels_artillery_stockpile_var
+					years = 5
+					is_decaying = yes
+				}
+			}
+			if = {
+				limit = {
+					global_var:sepoy_rebels_ammunition_stockpile_var > 0
+				}
+				add_modifier = {
+					name = princely_state_ammunition_stockpile
+					multiplier = global_var:sepoy_rebels_ammunition_stockpile_var
+					years = 5
+					is_decaying = yes
+				}
+			}
+		}
+		set_variable = sepoy_mutiny_revolter_var
+	}
+
+	option = {
+		name = {
+	        trigger = {
+	        	c:MUG ?= this
+	        }
+	        text = sepoy_mutiny_events.4.e_mug
+	    }
+	    name = {
+	        trigger = {
+	        	NOT = {
+	        		c:MUG ?= this
+	        	}
+	        }
+	        text = sepoy_mutiny_events.4.e
+	    }
+		default_option = yes
+		trigger = {
+			NOT = {
+				has_variable = sepoy_mutiny_instigator
+			}
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = {
+					NOT = {
+						c:MUG ?= this
+					}
+					has_attitude = {
+						who = scope:attitude_checker_scope
+						attitude = aloof
+					}
+				}
+				add = 1
+			}
+		}
+		custom_tooltip = {
+			text = princely_state_remains_neutral_tt
+			c:BIC ?= {
+				if = {
+					limit = {
+						NOT = {
+							has_diplomatic_pact = {
+								who = prev
+								type = exempt_from_service
+							}
+						}
+					}
+				}
+				# We use this variable to track Princely States that need exempt_from_service removed after the Sepoy Mutiny
+				set_variable = sepoy_mutiny_princely_state_medium_loyalty_var
+				create_diplomatic_pact = {
+					country = prev
+					type = exempt_from_service
+				}
+			}
+		}
+	}
+
+	option = {
+		name = {
+	        trigger = {
+	        	c:MUG ?= this
+	        }
+	        text = sepoy_mutiny_events.4.g_mug
+	    }
+	    name = {
+	        trigger = {
+	        	NOT = {
+	        		c:MUG ?= this
+	        	}
+	        }
+	        text = sepoy_mutiny_events.4.g
+	    }
+	    trigger = {
+			NOT = {
+				has_variable = sepoy_mutiny_instigator
+			}
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = {
+					NOT = {
+						c:MUG ?= this
+					}
+					has_attitude = {
+						who = scope:attitude_checker_scope
+						attitude = loyal
+					}
+				}
+				add = 1
+			}
+		}
+		custom_tooltip = {
+			text = princely_state_sides_with_eic_tt
+			scope:sepoy_mutiny_dp ?= {
+				if = {
+					limit = {
+						NOT = {
+							any_scope_target_ally = {
+								this ?= ROOT
+							}
+						}
+					}
+					add_target_backers = {
+						prev
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			text = after_sepoy_mutiny_reduce_subject_payments_tt
+			set_variable = {
+				name = loyal_in_sepoy_mutiny
+				years = 5
+			}
+		}
+		custom_tooltip = no_territory_after_sepoy_mutiny_tt
+	}
+}
+
+sepoy_mutiny_events.6 = {
+	type = country_event
+	placement = root
+	event_image = {
+		video = "ip2_unruly_soldiers"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	title = sepoy_mutiny_events.6.t
+	desc = sepoy_mutiny_events.6.d
+	flavor = sepoy_mutiny_events.6.f
+
+	duration = 3
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	# Triggered by je_uneasy_raj
+	trigger = {
+		NOT = {
+			has_variable = sepoy_mutiny_cartridge_event_var
+		}
+		OR = {
+			has_technology_researched = rifling
+			game_date >= 1857.1.1 # Ensfield rifle-musket was issued in January 1857
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = {
+			has_journal_entry = je_uneasy_raj
+		}
+	}
+
+	immediate = {
+		set_variable = sepoy_mutiny_cartridge_event_var
+	}
+
+	option = {
+		name = sepoy_mutiny_events.6.a
+		default_option = yes
+		custom_tooltip = begin_receiving_sepoy_cartridge_events_tt
+	}
+}
+
+sepoy_mutiny_events.7 = {
+	type = country_event
+	placement = root
+	event_image = {
+		video = "ip2_unruly_soldiers"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	title = sepoy_mutiny_events.7.t
+	desc = sepoy_mutiny_events.7.d
+	flavor = sepoy_mutiny_events.7.f
+
+	duration = 3
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	# Triggered by je_uneasy_raj
+	trigger = {
+		has_variable = sepoy_mutiny_cartridge_event_var
+		je:je_uneasy_raj ?= {
+			NOT = {
+				has_variable = cartridge_event_custom_cartridges
+			}
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = {
+			has_journal_entry = je_uneasy_raj
+		}
+	}
+
+	option = {
+		name = sepoy_mutiny_events.7.a
+		default_option = yes
+		custom_tooltip = {
+			text = sepoy_cartridge_effect_worsened_tt
+			je:je_uneasy_raj ?= {
+				change_variable = {
+					name = bad_cartridge_choices
+					add = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = sepoy_mutiny_events.7.b
+		custom_tooltip = sepoy_cartridge_effect_lessened_tt
+		add_modifier = {
+			name = sepoy_mutiny_cartridge_grease_exploration
+			multiplier = money_amount_multiplier_medium
+			days = normal_modifier_time
+		}
+	}
+
+	after = {
+		je:je_uneasy_raj ?= {
+			set_variable = cartridge_event_custom_cartridges
+		}
+		if = {
+			limit = {
+				je:je_uneasy_raj ?= {
+					has_variable = cartridge_event_custom_cartridges
+					has_variable = cartridge_event_hand_tear
+					has_variable = cartridge_event_forced_conversion
+				}
+			}
+			hidden_effect = {
+				trigger_event = { id = sepoy_mutiny_events.10 popup = yes }
+			}
+		}
+	}
+}
+
+sepoy_mutiny_events.8 = {
+	type = country_event
+	placement = root
+	event_image = {
+		video = "ip2_unruly_soldiers"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	title = sepoy_mutiny_events.8.t
+	desc = sepoy_mutiny_events.8.d
+	flavor = sepoy_mutiny_events.8.f
+
+	duration = 3
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	# Triggered by je_uneasy_raj
+	trigger = {
+		has_variable = sepoy_mutiny_cartridge_event_var
+		je:je_uneasy_raj ?= {
+			NOT = {
+				has_variable = cartridge_event_hand_tear
+			}
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = {
+			has_journal_entry = je_uneasy_raj
+		}
+	}
+
+	option = {
+		name = sepoy_mutiny_events.8.a
+		default_option = yes
+		custom_tooltip = {
+			text = sepoy_cartridge_effect_worsened_tt
+			je:je_uneasy_raj ?= {
+				change_variable = {
+					name = bad_cartridge_choices
+					add = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = sepoy_mutiny_events.8.b
+		custom_tooltip = sepoy_cartridge_effect_lessened_tt
+		add_modifier = {
+			name = sepoy_mutiny_alternative_cartridge_handling
+			days = normal_modifier_time
+		}
+		add_modifier = {
+			name = sepoy_mutiny_alternative_cartridge_debacle
+			days = normal_modifier_time
+		}
+	}
+
+	after = {
+		je:je_uneasy_raj ?= {
+			set_variable = cartridge_event_hand_tear
+		}
+		if = {
+			limit = {
+				je:je_uneasy_raj ?= {
+					has_variable = cartridge_event_custom_cartridges
+					has_variable = cartridge_event_hand_tear
+					has_variable = cartridge_event_forced_conversion
+				}
+			}
+			hidden_effect = {
+				trigger_event = { id = sepoy_mutiny_events.10 popup = yes }
+			}
+		}
+	}
+}
+
+sepoy_mutiny_events.9 = {
+	type = country_event
+	placement = root
+	event_image = {
+		video = "ip2_unruly_soldiers"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	title = sepoy_mutiny_events.9.t
+	desc = sepoy_mutiny_events.9.d
+	flavor = sepoy_mutiny_events.9.f
+
+	duration = 3
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	# Triggered by je_uneasy_raj
+	trigger = {
+		has_variable = sepoy_mutiny_cartridge_event_var
+		je:je_uneasy_raj ?= {
+			NOT = {
+				has_variable = cartridge_event_forced_conversion
+			}
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = {
+			has_journal_entry = je_uneasy_raj
+		}
+	}
+
+	option = {
+		name = sepoy_mutiny_events.9.a
+		default_option = yes
+		custom_tooltip = {
+			text = sepoy_cartridge_effect_worsened_tt
+			je:je_uneasy_raj ?= {
+				change_variable = {
+					name = bad_cartridge_choices
+					add = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = sepoy_mutiny_events.9.b
+		custom_tooltip = sepoy_cartridge_effect_lessened_tt
+		add_modifier = {
+			name = sepoy_mutiny_breakdown_of_morale
+			days = normal_modifier_time
+		}
+		add_modifier = {
+			name = sepoy_mutiny_loss_of_authority
+			days = normal_modifier_time
+		}
+	}
+
+	after = {
+		je:je_uneasy_raj ?= {
+			set_variable = cartridge_event_forced_conversion
+		}
+		if = {
+			limit = {
+				je:je_uneasy_raj ?= {
+					has_variable = cartridge_event_custom_cartridges
+					has_variable = cartridge_event_hand_tear
+					has_variable = cartridge_event_forced_conversion
+				}
+			}
+			hidden_effect = {
+				trigger_event = { id = sepoy_mutiny_events.10 popup = yes }
+			}
+		}
+	}
+}
+
+sepoy_mutiny_events.10 = {
+	type = country_event
+	placement = root
+	event_image = {
+		video = "ip2_unruly_soldiers"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	title = {
+		triggered_desc = {
+			desc = sepoy_mutiny_events.10.t
+			trigger = {
+				je:je_uneasy_raj ?= {
+					var:bad_cartridge_choices <= 1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = sepoy_mutiny_events.10.t_severe
+			trigger = {
+				je:je_uneasy_raj ?= {
+					var:bad_cartridge_choices > 1
+				}
+			}
+		}
+	}
+	desc = {
+		triggered_desc = {
+			desc = sepoy_mutiny_events.10.d
+			trigger = {
+				je:je_uneasy_raj ?= {
+					var:bad_cartridge_choices <= 1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = sepoy_mutiny_events.10.d_severe
+			trigger = {
+				je:je_uneasy_raj ?= {
+					var:bad_cartridge_choices > 1
+				}
+			}
+		}
+	}
+	flavor = {
+		triggered_desc = {
+			desc = sepoy_mutiny_events.10.f
+			trigger = {
+				je:je_uneasy_raj ?= {
+					var:bad_cartridge_choices <= 1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = sepoy_mutiny_events.10.f_severe
+			trigger = {
+				je:je_uneasy_raj ?= {
+					var:bad_cartridge_choices > 1
+				}
+			}
+		}
+	}
+
+	duration = 3
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	# Triggered by sepoy_mutiny_events.7/8/9
+	trigger = {
+		je:je_uneasy_raj ?= {
+			has_variable = cartridge_event_forced_conversion
+			has_variable = cartridge_event_hand_tear
+			has_variable = cartridge_event_custom_cartridges
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = {
+			has_journal_entry = je_uneasy_raj
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				je:je_uneasy_raj ?= {
+					var:bad_cartridge_choices <= 0
+				}
+			}
+			set_local_variable = {
+				name = stability_decrease_amount
+				value = -0.5
+			}
+			set_local_variable = {
+				name = radical_amount
+				value = small_radicals
+			}
+		}
+		else_if = {
+			limit = {
+				je:je_uneasy_raj ?= {
+					var:bad_cartridge_choices <= 1
+				}
+			}
+			set_local_variable = {
+				name = stability_decrease_amount
+				value = -1
+			}
+			set_local_variable = {
+				name = radical_amount
+				value = medium_radicals
+			}
+		}
+		else_if = {
+			limit = {
+				je:je_uneasy_raj ?= {
+					var:bad_cartridge_choices <= 2
+				}
+			}
+			set_local_variable = {
+				name = stability_decrease_amount
+				value = -1.5
+			}
+			set_local_variable = {
+				name = radical_amount
+				value = large_radicals
+			}
+		}
+		else = {
+			set_local_variable = {
+				name = stability_decrease_amount
+				value = -2
+			}
+			set_local_variable = {
+				name = radical_amount
+				value = very_large_radicals
+			}
+		}
+	}
+
+	option = {
+		name = {
+	        trigger = {
+	        	je:je_uneasy_raj ?= {
+					var:bad_cartridge_choices <= 1
+				}
+	        }
+	        text = sepoy_mutiny_events.10.a
+	    }
+	    name = {
+	        trigger = {
+				je:je_uneasy_raj ?= {
+					var:bad_cartridge_choices > 1
+				}
+			}
+	        text = sepoy_mutiny_events.10.a_severe
+	    }
+		default_option = yes
+		custom_tooltip = {
+			text = sepoy_mutiny_progress_from_events_tt
+			set_variable = {
+				name = bengal_progress_from_events_var_add_4
+				value = local_var:stability_decrease_amount
+				days = normal_modifier_time
+			}
+			set_variable = {
+				name = bombay_progress_from_events_var_add_4
+				value = local_var:stability_decrease_amount
+				days = normal_modifier_time
+			}
+			set_variable = {
+				name = madras_progress_from_events_var_add_4
+				value = local_var:stability_decrease_amount
+				days = normal_modifier_time
+			}
+		}
+		add_radicals = {
+			pop_type = soldiers
+			religion = rel:hindu
+			value = local_var:radical_amount
+		}
+		add_radicals = {
+			pop_type = soldiers
+			religion = rel:sunni
+			value = local_var:radical_amount
+		}
+	}
+}
+
+sepoy_mutiny_events.11 = {
+	type = country_event
+	placement = root
+	title = sepoy_mutiny_events.11.t
+	desc = sepoy_mutiny_events.11.d
+	flavor = sepoy_mutiny_events.11.f
+
+	duration = 3
+
+	event_image = {
+		video = "ip2_india_urban_scene"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	trigger = {
+		# triggered by je_uneasy_raj
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = sepoy_mutiny_events.11.a
+		default_option = yes
+		c:BIC ?= {
+			if = {
+				limit = {
+					is_subject_type = subject_type_chartered_company
+				}
+				custom_tooltip = end_company_rule_made_available_tt
+				custom_tooltip = {
+					text = upgrade_company_rule_modifier_tt
+					remove_modifier = modifier_india_company_rule
+					add_modifier = modifier_india_company_rule_upgraded
+				}
+			}
+			else = {
+				add_modifier = {
+					name = indian_colonial_authority
+					days = very_long_modifier_time
+				}
+			}
+			add_large_heritage_trait_group_loyalists = yes
+		}
+	}
+
+	option = {
+		name = sepoy_mutiny_events.11.b
+		c:BIC ?= {
+			if = {
+				limit = {
+					is_subject_type = subject_type_chartered_company
+				}
+				custom_tooltip = end_company_rule_made_available_tt
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_technology_researched = central_archives
+					}
+				}
+				add_technology_researched = central_archives
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_law = law_type:law_secret_police
+					}
+				}
+				activate_law = law_type:law_secret_police
+			}
+			add_modifier = modifier_indian_imperial_police
+			add_large_heritage_trait_group_loyalists = yes
+		}
+	}
+}
+
+sepoy_mutiny_events.12 = {
+	type = country_event
+	placement = root
+	title = sepoy_mutiny_events.12.t
+	desc = sepoy_mutiny_events.12.d
+	flavor = sepoy_mutiny_events.12.f
+
+	duration = 3
+
+	event_image = {
+		video = "ip2_cross_cultural_festival"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	# Triggered by je_sepoy_mutiny
+	trigger = {
+		NOT = {
+			# If MUG has this JE, they will get event mughal.7 for completing
+			has_journal_entry = je_mughal_hindustan
+		}
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = sepoy_mutiny_events.12.a
+		default_option = yes
+		if = {
+			limit = {
+				has_variable = sepoy_mutiny_instigator
+			}
+			add_loyalists = {
+				value = large_radicals
+			}
+		}
+		else = {
+			add_loyalists = {
+				value = medium_radicals
+			}
+		}
+	}
+}

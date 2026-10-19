@@ -1,0 +1,94 @@
+﻿l_english:
+ # NO LOC (addeed a missing "the")
+ je_imperialism_of_promise_status:1 "Oversee a [GetIdeology('ideology_utilitarian_millian').GetName] approach to colonial administration in the [JournalEntry.GetCountry.GetName]."
+ # NO LOC (addeed a missing "the")
+ utilitarian_character_trigger:1 "Any [concept_agitator] or [concept_leader] has the [GetIdeology('ideology_utilitarian_leader').GetName] [concept_ideology]."
+
+ utilitarian.3.f:1 "The administration's commitment to Utilitarianism has wavered as the project has lost momentum. For a quiet moment, [SCOPE.sCharacter('relevant_character').GetLastNameNoFormatting] reflects on the lessons of the whole endeavor. "Perhaps we must be more practical with how our principles inform our policymaking," [SCOPE.sCharacter('relevant_character').GetSheHe] muses."
+ utilitarian.3.f2:1 "The administration's commitment to Utilitarianism has wavered as the project has lost its staunchest supporters. For a quiet moment, one man reflects on the lessons of the whole endeavor. "Perhaps we must be more practical with how our principles inform our policymaking," he muses."
+
+ # NO LOC (simplifying wording)
+ utilitarian.5.f:1 "An official attested to recent reports of violence towards [SCOPE.sCulture('discriminated_culture').GetNameNoFormatting] people in [SCOPE.sState('relevant_state').GetNameNoFormatting]:\n\n"The unrestrained behavior of [SCOPE.sCulture('not_discriminated_culture').GetNameNoFormatting] fortune seekers undermines the efforts of our [GetIdeology('ideology_utilitarian_leader').GetNameNoFormatting] mission. The [SCOPE.sCulture('discriminated_culture').GetNameNoFormatting] people are in need of protection from the injustices perpetrated on them by these men.""
+ restrained_fortune_seekers:1 "Passive Aggressive Bureaucrats"
+
+ utilitarian.6.f:1 "The portrait of [SCOPE.sCountry('relevant_lobby_country').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('relevant_lobby_country').GetRuler.GetFullNameNoFormatting] looms large over the two distinguished figures as they argue late into the evening.\n\n"We are all loyal subjects of the Empire. No policy will change that. But while we work to aid all subjects, you wish to aid only your prospects."\n\n"If the [SCOPE.sCountry('relevant_lobby_country').GetRuler.GetPrimaryRoleTitle] trusts me, I will be able to call for [SCOPE.sCountry('relevant_lobby_country').GetRuler.GetHerHis] aid."\n\n"If the people trust you, then you will never want for aid.""
+ 
+ utilitarian.7.d:1 "Letters from [ROOT.GetCountry.GetCapital.GetCityHubName] have been sent to regional administrators, providing new guidance for local officers and officials."
+ utilitarian.7.f:1 "Often, the day-to-day actions of this [SCOPE.sCulture('not_discriminated_culture').GetNameNoFormatting] official have little oversight in his corner of [SCOPE.sState('relevant_state').GetNameNoFormatting]. His actions have long been unchecked. The letters from [ROOT.GetCountry.GetCapital.GetCityHubName] outline new guidance on reporting paperwork discrepancies.\n\n"What a nuisance. My officers work hard. A discrepancy here and there can surely be overlooked.""
+ utilitarian.7.a:1 "Ensure the new orders are followed."
+
+ utilitarian.8.d:1 "The [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] has received a formal dispatch from a government commission recommending the expansion of education in the [ROOT.GetCountry.GetName]."
+
+ india_railway.5.f:1 "With the completion of this station, India's future is secure. Our network of trains will be the backbone of our trade, our military, our very government. Steam and Coal will run in the veins of the empire."
+
+ je_victoria_terminus_reason:1 "Affiliates of the [SCOPE.gsInterestGroup('relevant_terminus_ig').GetName] have raised funds for the creation of a grand Terminus in [SCOPE.sState('relevant_bombay_state').GetName]. This elegant Terminus with additional railway platforms and adminstrative offices promises to elevate public opinion of India."
+ je_victoria_terminus_status:1 "Build the [GetBuildingType('building_victoria_terminus').GetName] in the $concept_state$ of $STATE_BOMBAY$."
+
+ victoria_terminus_complete_tt:1 "[ROOT.GetCountry.GetNameNoFormatting] has built [GetBuildingType('building_victoria_terminus').GetName] in the [Concept('concept_state_region','$concept_state_region$')] of [SCOPE.sState('relevant_bombay_state').GetName]"
+ victoria_terminus_populated_tt:1 "[GetBuildingType('building_victoria_terminus').GetName] workforce [concept_occupancy] is greater or equal to #variable 50%#!"
+
+ victoria_terminus_construct_tt:1 "The [GetBuildingType('building_victoria_terminus').GetName] may be constructed in [SCOPE.sState('relevant_bombay_state').GetName]."
+
+ victoria_terminus.2.d:1 "The completed [GetBuildingType('building_victoria_terminus').GetName] is a fusion of architectural influences and marks a new chapter for both [SCOPE.sState('relevant_bombay_state').GetName] and India as a whole."
+ victoria_terminus.2.f:1 "Two men in suits stand outside the newly built terminus while a coolie carries their luggage.\n\n"Well if it wasn't for the months long ship ride, I would have thought we were back in [ROOT.GetCountry.GetOverlord.GetCapital.GetCityHubName]."\n\n"And therein lies the genius of its design. Our fellow countrymen see it as an expansion of [ROOT.GetCountry.GetOverlord.GetAdjectiveNoFormatting] culture. While the locals see it as a respectful continuation of their Mughal heritage. Everyone is happy and no one is offended and business, above all, booms.""
+
+ # Princely States
+ princely_state_decision:1 "Foment Rebellion"
+ princely_state_decision_desc:1 "With dissent against colonial rule spreading across India, we see an opportunity to spark and lead a rebellion to expel the foreigners from the subcontinent once and for all."
+
+ je_princely_states:1 "Fomenting Rebellion"
+ je_princely_states_reason:1 "@information! Various factors will #tooltippable;tooltip:[GetPlayer.GetTooltipTag],fomenting_rebellion_dissent_factors_tt advance#! the #b Dissent#! progress bar. Dissent will decay on its own, but decrease [concept_presidency_stability] if we are a [concept_subject] of the [SCOPE.sCountry('overlord_scope').GetName] within one of the three [Concept('concept_presidency', '$concept_presidencies$')]. Dissent can also be spent to spread the #b $je_princely_states$#! [concept_journal_entry] to other [Concept('concept_princely_state', '$concept_princely_states$')].\n\nIf #red Instability#! reaches #v 600#! in the #b $je_uneasy_raj$#! $concept_journal_entry$, we will join an #tooltippable;tooltip:[GetPlayer.GetTooltipTag],je_uneasy_raj_tt_4 #b Indian Rebellion#!#! to expel the [SCOPE.sCountry('overlord_scope').GetName] from India.\n$TOOLTIP_DELIMITER$\n#lore Colonial expansion and domination threaten the [SCOPE.sCountry('overlord_scope').GetNameNoFormatting]'s subjects and neighbors. With unrest spreading throughout the subcontinent, we are presented with a rare opportunity to spark a grand rebellion against the colonialists and liberate India from their grasp.#!"
+ je_princely_states_status:1 "Spark a rebellion in the [SCOPE.sCountry('overlord_scope').GetNameNoFormatting]."
+
+ modifier_increase_autonomy:1 "Fomenting Rebellion"
+
+ notification_struggle_for_sovereignty_message_name:1 "[SCOPE.sCountry('princely_state_scope').GetName] Fomenting Rebellion"
+ notification_struggle_for_sovereignty_message_desc:1 "[SCOPE.sCountry('princely_state_scope').GetName] has begun fomenting rebellion against our rule in India."
+
+ princely_states.1.t:1 "A Match for the Kindling"
+ princely_states.1.d:1 "The [SCOPE.sCountry('overlord_scope').GetName]'s domination of [GetGeographicRegion('geographic_region_india').GetName] remains a threat to its [Concept('concept_subject', '$concept_subjects$')] and neighbors, but their grip on the subcontinent is tenuous.\n\nWith discontent spreading among the [Concept('concept_princely_state', '$concept_princely_states$')] and the [SCOPE.sCountry('overlord_scope').GetNameNoFormatting]'s own native sepoy regiments, we may have an opportunity to spark a rebellion and expel these foreigners from India for good..."
+ princely_states.1.f:1 "There is a disquiet across India, from the beggars to the princes. Taxes, expansion, disregard for local tradition. All spell the same thing: a rising distrust and distaste for the [SCOPE.sCountry('overlord_scope').GetNameNoFormatting].\n\nPerhaps it's time that rule of India return to the princes..."
+ princely_states.1.a:1 "We will one day be rid of the [SCOPE.sCountry('overlord_scope').GetNameNoFormatting]."
+ princely_states.1.b:1 "To resist is futile."
+
+ princely_states.2.t:1 "The Rebellion That Never Was"
+ princely_states.2.d:1 "The [SCOPE.sCountry('overlord_scope').GetName] has managed to weather its period of uncertain rule, its firm hold of India now all but assured. Our efforts to incite rebellion have fizzled out, and [ROOT.GetCountry.GetNameNoFormatting] now seems forever trapped in the shadow of the [SCOPE.sCountry('top_overlord_scope').GetAdjectiveNoFormatting] Empire."
+ princely_states.2.f:1 ""Did we underestimate their grip on India? Or overestimate the others' will to fight?""
+ princely_states.2.a:1 "The [SCOPE.sCountry('overlord_scope').GetRuler.GetPrimaryRoleTitle] now eyes us with increasing suspicion."
+
+ princely_states.3.d:1 "The [SCOPE.sCountry('overlord_scope').GetName] has sent us a requisition for some of our camels, requesting them as pack animals to aid in their war efforts. The [SCOPE.sCountry('overlord_scope').GetAdjectiveNoFormatting] administration promises payment in return."
+ princely_states.3.f:1 "The court had spent hours debating the matter. The [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] listened quietly, putting on a somber expression and nodding along to [ROOT.GetCountry.GetRuler.GetHerHis] advisors' arguments. To refuse the order would be strong show of defiance, but the offer of [SCOPE.sCountry('top_overlord_scope').GetAdjectiveNoFormatting] coin could not be so easily dismissed either. Much could be done with that money..."
+ princely_states.3.b:1 "Our camels will stay right where they are."
+
+ princely_states.4.d:1 "[SCOPE.sCountry('top_overlord_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('top_overlord_scope').GetRuler.GetFullNameNoFormatting] has offered to honor [SCOPE.sCharacter('award_winner_scope').GetFullName] by appointing [SCOPE.sCharacter('award_winner_scope').GetHerHim] Knight Grand Commander of the Order of the Indian Empire."
+ princely_states.4.f:1 "The [SCOPE.sCharacter('award_winner_scope').GetPrimaryRoleTitle] strolled the halls of [ROOT.GetCountry.GetRuler.GetHerHis] family palace. Paintings of [ROOT.GetCountry.GetRuler.GetHerHis] ancestors loomed around [ROOT.GetCountry.GetRuler.GetHerHim]. What would they do if they were in [ROOT.GetCountry.GetRuler.GetHerHis] stead? These fierce men and women who recognized no authority but that of the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]? Would they tell [ROOT.GetCountry.GetRuler.GetHerHim] to bow? Or would they remind [ROOT.GetCountry.GetRuler.GetHerHim] that somebody has to start. Somebody has to step forward and say no."
+
+ princely_states.5.t:1 "[SCOPE.sCountry('bic_scope').GetNameNoFormatting] Annexes a Princely State"
+ princely_states.5.d:1 "Invoking the Doctrine of Lapse, the [SCOPE.sCountry('bic_scope').GetName] has taken over another [concept_princely_state]."
+ # NO LOC (capitalization and missing 'the')
+ princely_states.5.f:1 "Growing up, [ROOT.GetCountry.GetRuler.GetHerHis] tutors had encouraged [ROOT.GetCountry.GetRuler.GetHerHim] to play chess. Looking back, the game captured one aspect of being a ruler well. The ruler never got to move more than a step at a time. And yet, if [ROOT.GetCountry.GetRuler.GetSheHe] fell, no one else would matter. Today, as another one of [ROOT.GetCountry.GetRuler.GetHerHis] neighbors fell to the [SCOPE.sCountry('bic_scope').GetNameNoFormatting], the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] felt like the king on the chessboard, surrounded by enemies but unable to do much. But even then, [ROOT.GetCountry.GetRuler.GetSheHe] had one move left. [ROOT.GetCountry.GetRuler.GetSheHe|U] just had to make sure it was the right one."
+ princely_states.5.b:1  "[SCOPE.sCountry('next_victim_scope').GetNameNoFormatting] will be next if they don't join our efforts."
+
+ # NO LOC (Just adding 'The' to the front)
+ je_dravidian_movement:1 "The Dravidian Movement"
+ je_dravidian_movement_reason:1 "@information! The #b Anti-Caste Pressure#! progress bar will #tooltippable;tooltip:[GetPlayer.GetTooltipTag],je_dravidian_movement_advance_reasons_tt advance#! and #tooltippable;tooltip:[GetPlayer.GetTooltipTag],je_dravidian_movement_retreat_reasons_tt retreat#! based on our [Concept('concept_interest_group', '$concept_interest_groups$')] and their stance on the [GetLawType('law_hindu_caste_discrimination_outlawed').GetName] [concept_law]. Once #b Anti-Caste Pressure#! has reached #v 50#!, the government will be sufficiently pressured and [GetLawType('law_hindu_caste_discrimination_outlawed').GetName] or [GetLawType('law_affirmative_action').GetName] may be enacted to complete the $concept_journal_entry$.\n$TOOLTIP_DELIMITER$\n#lore The common people of [ROOT.GetCountry.GetNameNoFormatting] have responded to the disproportionate representation and political power of Brahmins. After a series of anti-Brahmin conferences, the Dravidian Movement has formed and set a new agenda to oppose Brahmin dominance. They seek to remove caste distinctions from law and government administration.#!"
+
+ caste_conflict.1.d:1 "Tension between castes has been more pronounced since a recent census revealed the disproportionate representation of Brahmins in government jobs and highlighted the limited qualifications for Non-Brahmins. The [SCOPE.gsInterestGroup('rural_folk_ig_scope').GetName] have begun a movement to end caste discrimination and ensure their proper representation in government."
+ # NO LOC (Just adding accents to résumé)
+ caste_conflict.1.f:1 "Praveen's résumé, his two masters in economics and law, crumpled in his hands as he stormed away furiously from another rejection.\n\nHe knew he shouldn't be so angry or so surprised. He knew that when he moved to [ROOT.GetCountry.GetCapital.GetCityHubName], he would be far from the support of his forward-thinking university, and yet the blatant segregation shocked him. Despite his qualifications he was struggling to feed himself, while others, equally educated, enjoyed chai in manors. What infuriated him most was how the guards barred the way for him. As if they were any better than him in the eyes of the lords they so dearly guarded."
+ caste_conflict.1.a:1 "The [SCOPE.gsInterestGroup('rural_folk_ig_scope').GetNameNoFormatting] will champion for change."
+ caste_conflict.1.b:1 "We have our reasons to support the current system."
+
+ caste_conflict.2.a:1 "The [SCOPE.gsInterestGroup('rural_folk_ig').GetNameNoFormatting] has proven their competence."
+ # === FIX LINE ===
+
+ india_railway.2.t: "Train Robbery Trial"
+ india_railway.2.f: "The roar of the crowd gathered outside the courtroom warms the hearts of the defendants. The same roar makes it hard to hear the prosecutor. Relentless, he strives on.\n\n"Hijacking, possession of illegal firearms, and murder. These in itself are a terrible act your honor. But these shameless men did them all, only to commit an even more heinous crime. They tried to steal from the very government that cares for them. The crowd outside would call them heroes, I believe the law would call them traitors.""
+
+ india_railway.4.b: "Order the railways to lessen restrictions."
+
+ caste_conflict.4.f: "The two party leaders sat across from each other, and their aides listened intently as the two minds battled for the second hour now.\n\n"Please, you must see reason," [SCOPE.sCharacter('intelligentsia_leader_scope').GetFullNameNoFormatting] pleaded. "We must fight together, or we will fail!"\n\n"You will have us face the firangi by your side, but tell me, when tomorrow comes, will you also have us govern by your side? They have done me no more wrong than you have. Indeed, much of their deeds have been guided by your hands.""
+ caste_conflict.4.a: "We must stand united."
+
+ # Remove a space at the end because it was sitting there... menacingly
+ caste_conflict.5.d: "To assert their rights, the Dalit community drank from a public water tank that they had been denied access to. This nonviolent protest was led by [SCOPE.sCharacter('character_scope').GetFullName] and, in turn, met with a protest by Brahmin priests."

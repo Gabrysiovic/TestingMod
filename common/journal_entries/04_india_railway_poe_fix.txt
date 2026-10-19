@@ -1,0 +1,198 @@
+﻿# Purveyor of Progress JE
+REPLACE:je_india_railway = {
+	should_be_pinned_by_default_uninvolved_or_context = yes
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	group = je_group_british_india
+
+	is_shown_when_inactive = {
+		has_dlc_feature = ip2_content
+		is_player = yes
+		NOT = { has_global_variable = india_railway_done }
+		is_in_geographic_region = geographic_region_india
+	}
+
+	possible = {
+		has_technology_researched = railways
+		any_state_region_in_delhi_calcutta_line = {
+			any_scope_country = {
+				OR = {
+					this = ROOT
+					is_subject_of = ROOT
+				}
+			}
+			count = all
+		}
+		any_state_region_in_allahabad_bombay_line = {
+			any_scope_country = {
+				OR = {
+					this = ROOT
+					is_subject_of = ROOT
+				}
+			}
+			count = all
+		}
+		any_state_region_in_bombay_madras_line = {
+			any_scope_country = {
+				OR = {
+					this = ROOT
+					is_subject_of = ROOT
+				}
+			}
+			count = all
+		}
+		any_state_region_in_gujarat_bombay_line = {
+			any_scope_country = {
+				OR = {
+					this = ROOT
+					is_subject_of = ROOT
+				}
+			}
+			count = all
+		}
+	}
+
+	complete = {
+		# Completed the line. Now it doesn't matter who owns the railway.
+		AND = {
+			trigger_if = {
+				limit = {
+					any_state_region_in_delhi_calcutta_line = {
+						has_building = building_railway
+						count = all
+					}
+				}
+				custom_tooltip = {
+					text = delhi_calcutta_line_complete_tt
+					any_state_region_in_delhi_calcutta_line = {
+						has_building = building_railway
+						count = all
+					}
+				}
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = delhi_calcutta_line_status_tt
+					any_state_region_in_delhi_calcutta_line = {
+						has_building = building_railway
+						count = all
+					}
+				}
+			}
+			trigger_if = {
+				limit = {
+					any_state_region_in_allahabad_bombay_line = {
+						has_building = building_railway
+						count = all
+					}
+				}
+				custom_tooltip = {
+					text = allahabad_bombay_line_complete_tt
+					any_state_region_in_allahabad_bombay_line = {
+						has_building = building_railway
+						count = all
+					}
+				}
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = allahabad_bombay_line_status_tt
+					any_state_region_in_allahabad_bombay_line = {
+						has_building = building_railway
+						count = all
+					}
+				}
+			}
+			trigger_if = {
+				limit = {
+					any_state_region_in_bombay_madras_line = {
+						has_building = building_railway
+						count = all
+					}
+				}
+				custom_tooltip = {
+					text = bombay_madras_line_complete_tt
+					any_state_region_in_bombay_madras_line = {
+						has_building = building_railway
+						count = all
+					}
+				}
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = bombay_madras_line_status_tt
+					any_state_region_in_bombay_madras_line = {
+						has_building = building_railway
+						count = all
+					}
+				}
+			}
+			trigger_if = {
+				limit = {
+					any_state_region_in_gujarat_bombay_line = {
+						has_building = building_railway
+						count = all
+					}
+				}
+				custom_tooltip = {
+					text = gujarat_bombay_line_complete_tt
+					any_state_region_in_gujarat_bombay_line = {
+						has_building = building_railway
+						count = all
+					}
+				}
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = gujarat_bombay_line_status_tt
+					any_state_region_in_gujarat_bombay_line = {
+						has_building = building_railway
+						count = all
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_BOMBAY
+			}
+			save_scope_as = bombay_scope #for loc
+		}
+	}
+
+	on_complete = {
+		set_global_variable = india_railway_done
+		hidden_effect = {
+			trigger_event = { id = india_railway.5 }
+		}
+		show_as_tooltip = {
+            execute_event_option = { event = india_railway.5 option = 0 }
+        }
+	}
+
+	invalid = {
+		NOT = {
+			any_scope_state = {
+				is_in_geographic_region = geographic_region_india
+			}
+		}
+	}
+
+	on_yearly_pulse = {
+		effect = {
+
+		}
+		random_events = {
+			100 = 0
+			10 = india_railway.1
+			10 = india_railway.2
+			10 = india_railway.3
+			10 = india_railway.4
+		}
+	}
+
+	weight = 50
+}

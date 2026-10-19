@@ -1,0 +1,601 @@
+﻿REPLACE_OR_CREATE:indian_clothes = {
+    usage = game
+    selection_behavior = weighted_random
+
+    emperor_of_india_drip = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = european_top_layer
+                accessory = male_top_layer_european_royal_01
+            }
+            accessory = {
+                mode = add
+                gene = coats
+                template = european_uniform_coats
+                range = { 0.15 0.35 } # limiting the set to single-breasted coats, so aiguillettes work
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000000
+                scope:character ?= {
+                    c:BIC ?= owner
+                    is_ruler_of_own_country = yes
+                    owner ?= {
+                        country_has_monarchy_law = yes
+                    }
+                    culture ?= {
+                        has_discrimination_trait_group = heritage_group_european
+                    }
+                }
+            }
+        }
+    }
+
+    british_empire_soldier_clothes_bic_poe_fix_early = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = coats
+                template = british_indian_uniform_coats
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = brazilian_white_legwear
+                accessory = male_legwear_south_american_01_brazilian
+            }
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = indian_clergy_top_layer
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = shirt
+                template = no_shirts
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = outfits
+                template = no_outfit
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = epaulettes
+                template = no_epaulette
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = belts
+                template = no_belt
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = aiguillettes
+                template = no_aiguillettes
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 420000
+                OR = {
+                    has_dlc_feature = ep1_cosmetics
+                    has_dlc_feature = ip2_cosmetics
+                }
+                OR = {
+                    AND = {
+                        OR = {
+                            soldier_clothes_pop_trigger = yes
+                            officers_clothes_pop_trigger = yes
+                        }
+                        scope:pop ?= {
+                            OR = {
+                                AND = {
+                                    owner ?= {
+                                        country_definition ?= cd:BIC
+                                    }
+                                    culture = {
+                                        OR = {
+                                            has_discrimination_trait_group = heritage_group_south_asian
+                                            has_discrimination_trait_group = heritage_group_middle_eastern
+                                            has_discrimination_trait_group = heritage_group_southeast_asian
+                                        }
+                                    }
+                                }
+                                owner ?= {
+                                    NOR = {
+                                        is_country_type = unrecognized
+                                        is_country_type = decentralized
+                                    }
+                                    any_primary_culture = {
+                                        has_discrimination_trait_group = heritage_group_south_asian
+                                    }
+                                }
+                            }
+                            owner ?= {
+                                NOT = { has_technology_researched = repeaters }
+                            }
+                        }
+                    }
+                    scope:character ?= {
+                        has_role_of_type = general
+                        owner ?= {
+                            NOT = { has_technology_researched = repeaters }
+                        }
+                        OR = {
+                            AND = {
+                                owner ?= {
+                                    country_definition ?= cd:BIC
+                                }
+                                culture = {
+                                    OR = {
+                                        has_discrimination_trait_group = heritage_group_south_asian
+                                        has_discrimination_trait_group = heritage_group_middle_eastern
+                                        has_discrimination_trait_group = heritage_group_southeast_asian
+                                    }
+                                }
+                            }
+                            owner ?= {
+                                NOR = {
+                                    is_country_type = unrecognized
+                                    is_country_type = decentralized
+                                }
+                                any_primary_culture = {
+                                    has_discrimination_trait_group = heritage_group_south_asian
+                                }
+                            }
+                        }
+                        always = yes
+                    }
+                    # Everyone in the Sepoy Mutiny gets a soldier's outfit
+                    scope:character ?= {
+                        owner ?= {
+                            has_variable = sepoy_mutiny_country
+                            country_definition ?= cd:BIC
+                            NOT = { has_technology_researched = repeaters }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    british_empire_soldier_clothes_bic_mid = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = coats
+                template = british_indian_uniform_coats_mid
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = epaulettes
+                template = all_epaulettes
+                accessory = male_epaulettes_02
+            }
+            accessory = {
+                mode = add
+                gene = belts
+                template = late_military_belts
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_late_military_legwear
+                accessory = male_legwear_british_late_military_01
+            }
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = indian_clergy_top_layer
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = shirt
+                template = no_shirts
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = outfits
+                template = no_outfit
+                range = { 0 1 }
+            }
+            # No Aiguillettes; just to prevent awkward switching when going from BIC subject to independent
+            accessory = {
+                mode = add
+                gene = aiguillettes
+                template = no_aiguillettes
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 520000
+                OR = {
+                    has_dlc_feature = ep1_cosmetics
+                    has_dlc_feature = ip2_cosmetics
+                }
+                OR = {
+                    AND = {
+                       OR = {
+                            soldier_clothes_pop_trigger = yes
+                            officers_clothes_pop_trigger = yes
+                        }
+                        scope:pop ?= {
+                            OR = {
+                                AND = {
+                                    owner ?= {
+                                        country_definition ?= cd:BIC
+                                    }
+                                    culture = {
+                                        OR = {
+                                            has_discrimination_trait_group = heritage_group_south_asian
+                                            has_discrimination_trait_group = heritage_group_middle_eastern
+                                            has_discrimination_trait_group = heritage_group_southeast_asian
+                                        }
+                                    }
+                                }
+                                owner ?= {
+                                    NOR = {
+                                        is_country_type = unrecognized
+                                        is_country_type = decentralized
+                                    }
+                                    any_primary_culture = {
+                                        has_discrimination_trait_group = heritage_group_south_asian
+                                    }
+                                }
+                            }
+                            owner ?= {
+                                has_technology_researched = repeaters
+                                NOT = { has_technology_researched = bolt_action_rifles }
+                            }
+                        } 
+                    }
+                    scope:character ?= {
+                        OR = {
+                            AND = {
+                                has_role_of_type = general
+                                owner ?= {
+                                    has_technology_researched = repeaters
+                                    NOT = { has_technology_researched = bolt_action_rifles }
+                                }
+                            }
+                            # Admirals always wear midgame uniforms (no per-era uniform for British admirals)
+                            has_role_of_type = admiral
+                        }
+                        OR = {
+                            AND = {
+                                owner ?= {
+                                    country_definition ?= cd:BIC
+                                }
+                                culture = {
+                                    OR = {
+                                        has_discrimination_trait_group = heritage_group_south_asian
+                                        has_discrimination_trait_group = heritage_group_middle_eastern
+                                        has_discrimination_trait_group = heritage_group_southeast_asian
+                                    }
+                                }
+                            }
+                            owner ?= {
+                                NOR = {
+                                    is_country_type = unrecognized
+                                    is_country_type = decentralized
+                                }
+                                any_primary_culture = {
+                                    has_discrimination_trait_group = heritage_group_south_asian
+                                }
+                            }
+                        }
+                    }
+                    # Everyone in the Sepoy Mutiny gets a soldier's outfit
+                    scope:character ?= {
+                        owner ?= {
+                            has_variable = sepoy_mutiny_country
+                            has_technology_researched = repeaters
+                            NOT = { has_technology_researched = bolt_action_rifles }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    british_empire_soldier_clothes_bic_late = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = coats
+                template = british_indian_uniform_coats_late
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = epaulettes
+                template = late_military_epaulettes
+                accessory = male_epaulettes_late_british_military_01
+            }
+            accessory = {
+                mode = add
+                gene = aiguillettes
+                template = no_aiguillettes
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = belts
+                template = late_military_belts
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_late_military_legwear
+                accessory = male_legwear_british_late_military_01
+            }
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = indian_clergy_top_layer
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = shirt
+                template = no_shirts
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = outfits
+                template = no_outfit
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 620000
+                OR = {
+                    has_dlc_feature = ep1_cosmetics
+                    has_dlc_feature = ip2_cosmetics
+                }
+                OR = {
+                    AND = {
+                        OR = {
+                            soldier_clothes_pop_trigger = yes
+                            officers_clothes_pop_trigger = yes
+                        }
+                        scope:pop ?= {
+                            OR = {
+                                AND = {
+                                    owner ?= {
+                                        country_definition ?= cd:BIC
+                                    }
+                                    culture = {
+                                        OR = {
+                                            has_discrimination_trait_group = heritage_group_south_asian
+                                            has_discrimination_trait_group = heritage_group_middle_eastern
+                                            has_discrimination_trait_group = heritage_group_southeast_asian
+                                        }
+                                    }
+                                }
+                                owner ?= {
+                                    NOR = {
+                                        is_country_type = unrecognized
+                                        is_country_type = decentralized
+                                    }
+                                    any_primary_culture = {
+                                        has_discrimination_trait_group = heritage_group_south_asian
+                                    }
+                                }
+                            }
+                            owner ?= {
+                                has_technology_researched = bolt_action_rifles
+                            }
+                        }
+                    }
+                    scope:character ?= {
+                        has_role_of_type = general
+                        owner ?= {
+                            has_technology_researched = bolt_action_rifles
+                        }
+                        OR = {
+                            AND = {
+                                owner ?= {
+                                    country_definition ?= cd:BIC
+                                }
+                                culture = {
+                                    OR = {
+                                        has_discrimination_trait_group = heritage_group_south_asian
+                                        has_discrimination_trait_group = heritage_group_middle_eastern
+                                        has_discrimination_trait_group = heritage_group_southeast_asian
+                                    }
+                                }
+                            }
+                            owner ?= {
+                                NOR = {
+                                    is_country_type = unrecognized
+                                    is_country_type = decentralized
+                                }
+                                any_primary_culture = {
+                                    has_discrimination_trait_group = heritage_group_south_asian
+                                }
+                            }
+                        }
+                    }
+                    # Everyone in the Sepoy Mutiny gets a soldier's outfit
+                    scope:character ?= {
+                        owner ?= {
+                            has_variable = sepoy_mutiny_country
+                            has_technology_researched = bolt_action_rifles
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    historical_john_stuart_mill_clothes = {
+        dna_modifiers = {
+            accessory = {
+               mode = add
+               gene = waistcoats
+               template = historical_waistcoats_dickens
+               range = { 0 0.1 }
+            }
+            accessory = {
+                mode = add
+                gene = civilian_coats
+                template = european_civilian_coats
+                accessory = male_civilian_coat_european_02_black
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = south_american_legwear
+                range = { 0 0.1 }
+            }
+            accessory = {
+                mode = add
+                gene = coats
+                template = no_coat
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 900000
+                scope:character ?= {
+                    has_template = agitator_john_stuart_mill
+                    NOR = {
+                        has_role_of_type = general
+                        has_role_of_type = admiral
+                    }
+                }
+            }
+        }
+    }
+
+    historical_jiddu_krishnamurti_clothes = {
+        dna_modifiers = {
+            accessory = {
+               mode = add
+               gene = waistcoats
+               template = black_waistcoat
+               range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = civilian_coats
+                template = european_civilian_coats
+                accessory = male_civilian_coat_european_01
+            }
+            accessory = {
+               mode = add
+               gene = legwear
+               template = male_legwear_greybrown
+               range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = outfits
+                template = no_outfit
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 900000
+                scope:character ?= {
+                    has_variable = krishnamurti_var
+                    age >= 16
+                    NOR = {
+                        has_role_of_type = general
+                        has_role_of_type = admiral
+                    }
+                }
+            }
+        }
+    }
+
+    bic_government_of_india = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = civilian_coats
+                template = no_civilian_coat
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = no_top_layer
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+               mode = add
+               gene = waistcoats
+               template = european_waistcoats
+               range = { 0 0.66 }
+            }
+            accessory = {
+                mode = add
+                gene = civilian_coats
+                template = european_civilian_coats
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100000
+                always = yes
+                scope:character ?= {
+                    is_interest_group_type = ig_industrialists
+                    owner ?= {
+                        country_definition ?= cd:BIC
+                    }
+                    has_role_of_type = politician
+                    NOT = {
+                        has_role_of_type = general
+                    }
+                    NOR = {
+                        is_ruler_of_own_country = yes
+                        is_heir_of_own_country = yes
+                    }
+                }
+            }
+        }
+    }
+}

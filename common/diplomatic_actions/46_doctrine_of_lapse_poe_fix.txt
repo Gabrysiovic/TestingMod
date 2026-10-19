@@ -1,0 +1,155 @@
+﻿REPLACE:invoke_doctrine_of_lapse = {
+	groups = {
+		overlord
+	}
+
+	texture = "gfx/interface/icons/diplomatic_action_icons/doctrine_of_lapse.dds"
+
+	requires_approval = no
+	should_notify_third_parties = yes
+	show_effect_in_tooltip = yes
+	can_use_obligations = no
+
+	selectable = {
+		NOT = { has_variable = doctrine_of_lapse_ended }
+		c:BIC ?= this
+	}
+
+	possible = {
+		is_at_war = no
+		custom_tooltip = {
+			text = doctrine_of_lapse_cooldown_tt
+			NOT = { has_variable = doctrine_of_lapse_cooldown }
+		}
+		scope:target_country = {
+			is_subject_of = ROOT
+			custom_tooltip = {
+				text = is_princely_state_tt
+				is_princely_state = yes
+			}
+			country_has_monarchy_law = yes
+			NOT = {
+				country_tier = empire
+			}
+			is_player = no
+		}
+	}
+
+	accept_effect = {
+		set_variable = { name = doctrine_of_lapse_cooldown years = 2 }
+		create_incident = {
+			country = scope:target_country
+			value = {
+				value = scope:target_country.prestige
+				multiply = 1.5
+			}
+		}
+		custom_tooltip = {
+			text = upset_every_princely_state_relations_tt
+			every_princely_state = {
+				change_relations = {
+					country = ROOT
+					value = basic_princely_state_relations_change
+				}
+			}
+		}
+		custom_tooltip = {
+			text = upset_every_princely_state_variable_liberty_desire_tt
+			every_princely_state = {
+				add_liberty_desire = {
+					value = variable_princely_state_liberty_desire_change
+				}
+			}
+		}
+		custom_tooltip = {
+			text = princely_state_lapsed_tt
+			scope:target_country = {
+				trigger_event = { id = raj.2 popup = yes }
+			}
+		}
+		show_as_tooltip = {
+			custom_tooltip = if_accepted_by_target_country_tt
+			custom_tooltip = {
+				text = transfers_treasury_to_eic_diplo_tt
+			}
+			annex = scope:target_country
+		}
+	}
+
+	ai = {
+		evaluation_chance = {
+			value = 0.0
+
+			if = {
+				limit = { NOT = { has_variable = doctrine_of_lapse_cooldown } }
+				add = 0.25
+			}
+		}
+
+		propose_score = {
+			value = 15
+			subtract = infamy
+		}
+
+		will_propose = {
+			OR = {
+				scope:target_country ?= {
+					country_has_monarchy_law = yes
+					OR = {
+						AND = {
+							has_gov_regency = no
+							OR = {
+								NOT = {
+									exists = heir
+								}	
+								heir ?= {
+									is_female = yes # I don't even get this policy; isn't your monarch female?
+								}
+							}
+							ruler ?= {
+								OR = {
+									age >= define:NCharacters|OLD_AGE
+									has_trait = psychological_affliction
+									has_trait = cancer
+									has_trait = senile
+									has_trait = wounded
+								}
+							}
+						}
+						AND = {
+							has_gov_regency = yes
+							heir ?= {
+								is_female = yes
+							}
+						}
+					}
+				}
+				AND = {
+					ruler = {
+						# Lord Dalhousie, is that you?
+						OR = {
+							has_trait = ambitious
+							has_trait = imperious
+							has_trait = imposing
+							has_trait = ruthless
+						}
+					}
+					scope:target_country ?= {
+						OR = {
+							# TODO: Add a special event for Oudh instead with lower infamy cost. Make it part of Unstable Raj JE and only after certain date, certain conditions, or whatever.
+							# c:AWA ?= this # RIP Oudh; we need your fertile land and tax revenue.
+							capital ?= {
+								turmoil >= 0.25
+							}
+							ruler ?= {
+								has_trait = grifter
+								has_trait = expensive_tastes
+								has_trait = inept
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

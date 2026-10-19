@@ -1,0 +1,16 @@
+﻿l_english:
+ dp_sepoy_mutiny_new: "$dp_sepoy_mutiny$"
+ dp_sepoy_mutiny_new_tooltip: "$dp_sepoy_mutiny_tooltip$"
+ dp_sepoy_mutiny_new_desc: "$dp_sepoy_mutiny_desc$"
+
+ war_goal_unify_india_type_name:0 "Unify India"
+ war_goal_unify_india_type_desc:0 "Conquer a [concept_state] in [GetGeographicRegion('geographic_region_india').GetName] from another [concept_country]"
+ war_goal_unify_india:0 "Unify India - [WAR_GOAL_DRAFT.GetTargetState.GetCountry.GetFlagTextIcon] [WAR_GOAL_DRAFT.GetTargetState.GetName]"
+ war_goal_unify_india_desc:0 "[WAR_GOAL_DRAFT.GetHolder.GetName] conquers the [concept_state] of [WAR_GOAL_DRAFT.GetTargetState.GetName] from [WAR_GOAL_DRAFT.GetTarget.GetName]"
+ war_goal_unify_india_sway_desc:0 "Try to convince [WAR_GOAL_DRAFT.GetHolder.GetName] to join your side by forcing [WAR_GOAL_DRAFT.GetWarGoalStakeholder.GetName] to cede them [WAR_GOAL_DRAFT.GetTargetState.GetName]"
+
+ war_goal_sepoy_mutiny_type_name:0 "$sepoy_mutiny$"
+ war_goal_sepoy_mutiny_type_desc:0 "Expel the #b Colonial Administration#! from #b India#!"
+ war_goal_sepoy_mutiny:0 "$sepoy_mutiny$"
+ war_goal_sepoy_mutiny_desc:0 "Expel the [WAR_GOAL_DRAFT.GetTarget.GetName] from #b India#!."
+ war_goal_sepoy_mutiny_sway_desc:0 "Try to convince [WAR_GOAL_DRAFT.GetHolder.GetName] to join expelling [WAR_GOAL_DRAFT.GetTarget.GetName] from #b India#!."

@@ -1,0 +1,693 @@
+﻿namespace = princely_states
+
+
+princely_states.1 = {
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	title = princely_states.1.t
+	desc = princely_states.1.d
+	flavor = princely_states.1.f
+
+	event_image = {
+		video = "ep1_clandestine_meeting"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	trigger = {
+		has_dlc_feature = ip2_content
+	}
+
+	immediate = {
+        c:BIC ?= {
+        	save_scope_as = overlord_scope
+        }
+	}
+
+	cancellation_trigger = {
+		has_variable = sepoy_mutiny_instigator
+	}
+
+	option = {
+		name = princely_states.1.a
+		# AI should never start with the JE
+		ai_chance = 0
+		custom_tooltip = {
+			text = activates_fomenting_rebellion_tt
+			set_variable = sepoy_mutiny_instigator
+			if = {
+				# This allows a country to restart the JE if it was made invalid due to gaining independence
+				# (only humans will do this)
+				limit = {
+					NOR = {
+						has_journal_entry = je_princely_states
+						has_inactive_journal_entry = je_princely_states
+					}
+				}
+				add_journal_entry = {
+					type = je_princely_states
+				}
+			}
+		}
+		custom_tooltip = commit_to_indian_rebellion_tt
+	}
+
+	option = {
+		name = princely_states.1.b
+		default_option = yes
+		# AI should never start with the JE
+		ai_chance = 1
+		custom_tooltip = fomenting_rebellion_later_tt
+	}
+}
+
+
+princely_states.2 = {
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	title = princely_states.2.t
+	desc = princely_states.2.d
+	flavor = princely_states.2.f
+
+	event_image = {
+		video = "votp_cops_march"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	trigger = {
+		# Triggered by JE
+	}
+
+	immediate = {
+		scope:overlord_scope ?= {
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				overlord ?= {
+					save_scope_as = top_overlord_scope
+				}
+			}
+			else = {
+				save_scope_as = top_overlord_scope
+			}
+		}
+	}
+
+	cancellation_trigger = {
+
+	}
+
+	option = {
+		name = princely_states.2.a
+		default_option = yes
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			add_modifier = {
+				name = india_eyed_with_suspicion
+				days = long_modifier_time
+			}
+		}
+	}
+}
+
+# Pack Animal Loan
+princely_states.3 = {
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	title = princely_states.3.t
+	desc = princely_states.3.d
+	flavor = princely_states.3.f
+
+	event_image = {
+		video = "middleeast_jungle_expedition"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	trigger = {
+		has_dlc_feature = ip2_content
+		is_princely_state = yes
+    	is_subject_of = c:BIC
+    	# Hindustan would not realistically have camels and they have their own stipend event
+    	NOT = {
+    		c:MUG ?= this
+    	}
+	}
+
+	immediate = {
+		ruler = { save_scope_as = ruler_scope }
+		c:BIC ?= {
+			save_scope_as = overlord_scope
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				overlord ?= {
+					save_scope_as = top_overlord_scope
+				}
+			}
+			else = {
+				save_scope_as = top_overlord_scope
+			}
+		}
+	}
+
+	cancellation_trigger = {
+        OR = {
+        	is_princely_state = no
+        	NOT = {
+        		exists = c:BIC
+        	}
+        	NOT = {
+        		is_subject_of = c:BIC
+        	}
+        }
+	}
+
+	option = {
+		name = princely_states.3.a
+		scope:ruler_scope = {
+			add_modifier = {
+				name = prince_negative_popularity
+				days = normal_modifier_time
+			}
+		}
+		add_modifier = {
+			name = princely_states_camel_stipend
+			days = short_modifier_time
+		}
+		scope:overlord_scope = {
+			create_diplomatic_catalyst = {
+				type = catalyst_event_positive
+				target = root
+			}
+		}
+	}
+
+	option = {
+		name = princely_states.3.b
+		default_option = yes
+		scope:ruler_scope = {
+			add_modifier = {
+				name = prince_positive_popularity
+				days = normal_modifier_time
+			}
+		}
+		add_modifier = {
+			name = princely_states_ld_action
+			days = normal_modifier_time
+		}
+		custom_tooltip = {
+			text = dissent_increases_20_tt
+			je:je_princely_states ?= {
+				add_progress = { value = 20 name = je_princely_states_dissent_progress_bar }
+			}
+		}
+	}
+}
+
+# The Most Exalted Order of the Star of India
+princely_states.4 = {
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	title = princely_states.4.t
+	desc = princely_states.4.d
+	flavor = princely_states.4.f
+
+	event_image = {
+		video = "ep1_transfer_of_authority"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	trigger = {
+		has_dlc_feature = ip2_content
+		any_scope_character = {
+			OR = {
+				is_ruler_of_own_country = yes
+				has_role_of_type = general
+			}
+		}
+		OR = {
+			is_subject_of = c:BIC
+			is_subject_of = c:BIC.overlord
+		}
+		c:BIC.overlord ?= {
+			country_has_monarchy_law = yes
+		}
+	}
+
+	immediate = {
+		random_scope_character = {
+			limit = {
+				OR = {
+					is_ruler_of_own_country = yes
+					has_role_of_type = general
+				}
+			}
+			save_scope_as = award_winner_scope
+		}
+		c:BIC.overlord ?= {
+			save_scope_as = top_overlord_scope
+		}
+
+	}
+
+	cancellation_trigger = {
+		NOT = {
+    		exists = c:BIC
+    	}
+	}
+
+	option = {
+		name = princely_states.4.a
+		default_option = yes
+		change_relations = {
+			country = scope:top_overlord_scope
+			value = 10
+		}
+		if = {
+			limit = {
+				has_dlc_feature = lobbies
+				any_political_lobby = {
+					is_political_lobby_type = lobby_anti_overlord
+				}
+			}
+			random_political_lobby = {
+				limit = { is_political_lobby_type = lobby_anti_overlord }
+				change_appeasement = {
+					amount = -1
+					factor = appeasement_lobby_loss
+				}
+			}
+		}
+		scope:award_winner_scope ?= {
+			add_modifier = {
+				name = indian_knight_grand_commander
+				days = normal_modifier_time
+			}
+			add_modifier = {
+				name = prince_negative_popularity
+				days = normal_modifier_time
+			}
+		}
+		add_modifier = {
+			name = order_of_the_indian_empire
+			days = normal_modifier_time
+		}
+	}
+
+	option = {
+		name = princely_states.4.b
+		scope:award_winner_scope = {
+			add_modifier = {
+				name = prince_positive_popularity
+				days = normal_modifier_time
+			}
+		}
+		add_modifier = {
+			name = rejected_overlord_gesture
+			days = normal_modifier_time
+		}
+		change_relations = {
+			country = scope:top_overlord_scope
+			value = -10
+		}
+		custom_tooltip = {
+			text = dissent_increases_20_tt
+			je:je_princely_states ?= {
+				add_progress = { value = 20 name = je_princely_states_dissent_progress_bar }
+			}
+		}
+	}
+}
+
+princely_states.5 = {
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	title = princely_states.5.t
+	desc = princely_states.5.d
+	flavor = princely_states.5.f
+
+	event_image = {
+		video = "ip2_india_countryside"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	cooldown = { days = very_long_modifier_time }
+
+	trigger = {
+		has_dlc_feature = ip2_content
+		is_princely_state = yes
+		c:BIC ?= {
+			has_variable = doctrine_of_lapse_cooldown
+		}
+	}
+
+	immediate = {
+		ruler = {
+			save_scope_as = ruler_scope
+		}
+		c:BIC ?= {
+			save_scope_as = bic_scope
+			random_direct_subject = {
+				limit = {
+					is_princely_state = yes
+					NOT = {
+						has_journal_entry = je_princely_states
+					}
+				}
+				save_scope_as = next_victim_scope
+			}
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = {
+			exists = c:BIC
+		}
+	}
+
+	option = {
+		name = princely_states.5.a
+		default_option = yes
+		ai_chance = 1
+		post_notification = doctrine_of_lapse_reaction_message
+		scope:bic_scope = {
+			create_diplomatic_catalyst = {
+				type = catalyst_event_negative
+				target = root
+			}
+		}
+		add_modifier = {
+			name = doctrine_of_lapse_upset
+			days = normal_modifier_time
+		}
+		custom_tooltip = {
+			text = dissent_increases_20_tt
+			je:je_princely_states ?= {
+				add_progress = { value = 20 name = je_princely_states_dissent_progress_bar }
+			}
+		}
+	}
+
+	option = {
+		name = princely_states.5.b
+		trigger = {
+			ruler = {
+				OR = {
+					has_trait = direct
+					has_trait = persistent
+					has_trait = tactful
+					has_trait = ambitious
+					has_trait = meticulous
+					has_trait = brave
+					has_trait = innovative
+				}
+			}
+			exists = scope:next_victim_scope
+		}
+		ai_chance = 0 # Player-only option
+		highlighted_option = yes
+		custom_tooltip = {
+			text = next_victim_activates_je_princely_states_tt
+			scope:next_victim_scope ?= {
+				set_variable = sepoy_mutiny_instigator
+				if = {
+					# This allows a country to restart the JE if it was made invalid due to gaining independence
+					# (only humans will do this)
+					limit = {
+						NOR = {
+							has_journal_entry = je_princely_states
+							has_inactive_journal_entry = je_princely_states
+						}
+					}
+					add_journal_entry = {
+						type = je_princely_states
+					}
+				}
+			}
+		}
+	}
+}
+
+princely_states.6 = {
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	title = princely_states.6.t
+	desc = princely_states.6.d
+	flavor = princely_states.6.f
+
+	event_image = {
+		video = "africa_diplomats_negotiating"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	trigger = {
+		has_dlc_feature = ip2_content
+	}
+
+	immediate = {
+		c:BIC ?= {
+			save_scope_as = overlord_scope
+			random_direct_subject = {
+				limit = {
+					is_princely_state = yes
+					has_indian_primary_culture = yes
+					is_in_bengal_presidency = yes
+					NOT = {
+						has_journal_entry = je_princely_states
+					}
+					is_player = no
+				}
+				save_scope_as = bengal_candidate
+			}
+			random_direct_subject = {
+				limit = {
+					is_princely_state = yes
+					has_indian_primary_culture = yes
+					is_in_bombay_presidency = yes
+					NOT = {
+						has_journal_entry = je_princely_states
+					}
+					is_player = no
+				}
+				save_scope_as = bombay_candidate
+			}
+			random_direct_subject = {
+				limit = {
+					is_princely_state = yes
+					has_indian_primary_culture = yes
+					is_in_madras_presidency = yes
+					NOT = {
+						has_journal_entry = je_princely_states
+					}
+					is_player = no
+				}
+				save_scope_as = madras_candidate
+			}
+		}
+	}
+
+	cancellation_trigger = {
+		OR = {
+			NOT = {
+				exists = c:BIC
+			}
+			NOR = {
+				exists = scope:bengal_candidate
+				exists = scope:bombay_candidate
+				exists = scope:madras_candidate
+			}
+		}
+	}
+
+	option = {
+		name = princely_states.6.a
+		default_option = yes
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = {
+					is_in_bengal_presidency = yes
+				}
+				add = 1
+			}
+		}
+		trigger = {
+			exists = scope:bengal_candidate
+			NOT = {
+				scope:bengal_candidate ?= {
+					has_journal_entry = je_princely_states
+				}
+			}
+			scope:bengal_candidate ?= {
+				is_direct_subject_of = c:BIC
+			}
+		}
+		custom_tooltip = {
+			text = bengal_candidate_activates_je_princely_states_tt
+			scope:bengal_candidate ?= {
+				set_variable = sepoy_mutiny_instigator
+				if = {
+					# This allows a country to restart the JE if it was made invalid due to gaining independence
+					# (only humans will do this)
+					limit = {
+						NOR = {
+							has_journal_entry = je_princely_states
+							has_inactive_journal_entry = je_princely_states
+						}
+					}
+					add_journal_entry = {
+						type = je_princely_states
+					}
+				}
+			}
+		}
+		custom_tooltip = bengal_candidate_focus_tt
+	}
+
+	option = {
+		name = princely_states.6.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = {
+					is_in_bombay_presidency = yes
+				}
+				add = 1
+			}
+		}
+		trigger = {
+			exists = scope:bombay_candidate
+			NOT = {
+				scope:bombay_candidate ?= {
+					has_journal_entry = je_princely_states
+				}
+			}
+			scope:bombay_candidate ?= {
+				is_direct_subject_of = c:BIC
+			}
+		}
+		custom_tooltip = {
+			text = bombay_candidate_activates_je_princely_states_tt
+			scope:bombay_candidate ?= {
+				set_variable = sepoy_mutiny_instigator
+				if = {
+					# This allows a country to restart the JE if it was made invalid due to gaining independence
+					# (only humans will do this)
+					limit = {
+						NOR = {
+							has_journal_entry = je_princely_states
+							has_inactive_journal_entry = je_princely_states
+						}
+					}
+					add_journal_entry = {
+						type = je_princely_states
+					}
+				}
+			}
+		}
+		custom_tooltip = bombay_candidate_focus_tt
+	}
+
+	option = {
+		name = princely_states.6.c
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = {
+					is_in_madras_presidency = yes
+				}
+				add = 1
+			}
+		}
+		trigger = {
+			exists = scope:madras_candidate
+			NOT = {
+				scope:madras_candidate ?= {
+					has_journal_entry = je_princely_states
+				}
+			}
+			scope:madras_candidate ?= {
+				is_direct_subject_of = c:BIC
+			}
+		}
+		custom_tooltip = {
+			text = madras_candidate_activates_je_princely_states_tt
+			scope:madras_candidate ?= {
+				set_variable = sepoy_mutiny_instigator
+				if = {
+					# This allows a country to restart the JE if it was made invalid due to gaining independence
+					# (only humans will do this)
+					limit = {
+						NOR = {
+							has_journal_entry = je_princely_states
+							has_inactive_journal_entry = je_princely_states
+						}
+					}
+					add_journal_entry = {
+						type = je_princely_states
+					}
+				}
+			}
+		}
+		custom_tooltip = madras_candidate_focus_tt
+	}
+}

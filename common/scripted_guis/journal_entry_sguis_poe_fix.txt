@@ -1,0 +1,31 @@
+﻿REPLACE_OR_CREATE:je_fomenting_rebellion_countries = {
+    scope = country
+
+    effect = {
+        if = {
+            limit = {
+                has_variable_list = fomenting_rebellion_countries
+                any_in_list = {
+                    variable = fomenting_rebellion_countries
+                    exists = this
+                    this ?= {
+                        has_journal_entry = je_princely_states
+                    }
+                }
+            }
+            every_in_list = {
+                variable = fomenting_rebellion_countries
+                limit = {
+                    exists = this
+                    this ?= {
+                        has_journal_entry = je_princely_states
+                    }
+                }
+                custom_tooltip = "FOMENTING_REBELLION_COUNTRIES_LIST_ENTRY" # for each print a line
+            }
+        }
+        else = {
+            custom_tooltip = "FOMENTING_REBELLION_COUNTRIES_LIST_EMPTY" # no countries
+        }
+    }
+}

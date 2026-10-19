@@ -1,0 +1,114 @@
+﻿REPLACE:belated_british_interference = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_law_enactment_speed_mult = -0.25
+	country_authority_mult = -0.25
+	country_influence_mult = -0.25
+	country_overlord_income_transfer_mult = 0.25
+}
+
+REPLACE_OR_CREATE:mughal_rejected_foreign_support = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_legitimacy_base_add = 10
+	country_authority_mult = 0.20
+}
+
+REPLACE_OR_CREATE:mughal_an_empire_restored = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_legitimacy_base_add = 10
+	country_authority_mult = 0.10
+	country_prestige_mult = 0.10
+}
+
+REPLACE:hartal_action = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	building_group_bg_manufacturing_throughput_add = -0.33
+}
+
+# === FIX LINE ===
+# This is the one that everything got dumped into
+
+listening_to_indian_congress = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+	interest_group_approval_add = -2
+}
+
+REPLACE:swadeshi_agitation = { #
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+  	political_movement_pop_attraction_mult = 0.2
+	political_movement_radicalism_add = 0.2
+}
+
+successful_swadeshi = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	political_movement_pop_attraction_mult = 0.2
+}
+
+unsuccessful_swadeshi = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	political_movement_pop_attraction_mult = -0.2
+}
+
+peaceful_non_cooperation = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+  	political_movement_pop_attraction_mult = 0.15
+	political_movement_radicalism_add = -0.15
+}
+
+rowlatt_act_used_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	political_movement_pop_attraction_mult = 0.10
+	political_movement_radicalism_add = -0.10
+}
+
+indian_divisions_mended = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	political_movement_radicalism_add = -0.20
+}
+
+indian_promised_partition = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	political_movement_radicalism_add = -0.20
+}
+
+REPLACE:current_system_supported = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_influence_mult = 0.05
+	interest_group_ig_rural_folk_approval_add = -2
+}
+
+REPLACE:not_control_the_press = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_prestige_mult = -0.05
+}
+
+REPLACE:rising_intracommunal_tension = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	country_radicalism_increases_violent_hostility_mult = 0.05
+	country_radicalism_increases_cultural_erasure_mult = 0.05
+	country_radicalism_increases_open_prejudice_mult = 0.05
+}
+
+indian_colonial_authority = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_legitimacy_headofstate_add = 10
+	country_aristocrats_pol_str_mult = -0.10
+}
+
+REPLACE:rural_folk_pol_str_gain = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	interest_group_ig_rural_folk_approval_add = 2
+	interest_group_ig_intelligentsia_approval_add = -2
+	interest_group_ig_devout_approval_add = -2
+}
+
+REPLACE:current_system_supported = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	interest_group_ig_rural_folk_approval_add = -2
+	interest_group_ig_intelligentsia_approval_add = 2
+	interest_group_ig_devout_approval_add = 2
+}
+
+ryots_agitating = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_rural_folk_pol_str_mult = 0.10
+}

@@ -1,0 +1,12 @@
+﻿l_english:
+ lobby_indian_national_congress_name: "Indian National Congress"
+ lobby_indian_national_congress_icon: "@lobby_anti_overlord!"
+
+ appeasement_indian_democratic_reform_passed: "Democratic Reform Passed"
+ appeasement_indian_democratic_reform_passed_desc: "Passing a #tooltippable;tooltip:[GetPlayer.GetTooltipTag],indian_democratic_reforms_tt Democratic Reform#!"
+ appeasement_indian_democratic_reform_rejected: "Democratic Reform Rejected"
+ appeasement_indian_democratic_reform_rejected_desc: "[concept_overlord] Rejecting a #tooltippable;tooltip:[GetPlayer.GetTooltipTag],indian_democratic_reforms_tt Democratic Reform#!"
+ appeasement_indian_sovereignty_demand_rejected: "Sovereignty Rejected"
+ appeasement_indian_sovereignty_demand_rejected_desc: "This Lobby's Demands for Sovereignty were Rejected"
+ appeasement_indian_hostile_action: "Hostile Action Taken"
+ appeasement_indian_hostile_action_desc: "#tooltippable;tooltip:[GetPlayer.GetTooltipTag],je_india_home_rule_hostile_actions_tt Hostile Action#! Taken Against the #b $movement_india_pan_national$#!"

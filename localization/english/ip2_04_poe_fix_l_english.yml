@@ -1,0 +1,325 @@
+﻿l_english:
+  british_dictates.5.t: "Orders from [SCOPE.sCountry('overlord_scope').GetCapital.GetCityHubName]"
+  british_dictates.5.d: "With the period of instability behind us, officials within the [SCOPE.sCountry('overlord_scope').GetAdjectiveNoFormatting] government have brought forth ambitious plans for the [ROOT.GetCountry.GetName]. Through a sweeping series of reforms and objectives, officials hope to elevate India into the model of a colonial empire."
+  british_dictates.5.f: ""A hundred years of rule and we've only begun to scratch the surface. Gentemen, if India is truly the #italic Jewel in the Crown#!, then our plans shall cut that rough diamond into the shape of unmatched beauty, wealth, and splendor. We shall become the envy of the colonized world and the utmost military, economic, and administrative power in all of Asia."\n\n"Here here," the room replied.\n\n"Then let us begin at once. Dispatch the dictates posthaste.""
+  british_dictates.5.a: "We shall commence our efforts at once."
+  je_british_dictates_activated_tt: "#b $je_british_dictates$#! [concept_journal_entry] has been activated."
+
+  british_dictates.6.t: "A Model Colony"
+  british_dictates.6.d: "[ROOT.GetCountry.GetAdjectiveNoFormatting] administrators meet to celebrate the completion of their ambitious agenda for the subcontinent. With the agricultural economy, military, and education system now stronger than ever before, the colonial might of the [ROOT.GetCountry.GetName] is now unquestioned and unrivaled."
+  british_dictates.6.f: "India was now everything they could have dreamed of. The fieldworkers harvesting fields of dye and opium; the disciplined soldiers and sailors filling the ranks of the colonial military; the aspirant civil servants now lined up for their yearly examinations. All were emblematic of the [ROOT.GetCountry.GetNameNoFormatting]'s newfound wealth and propserity."
+  british_dictates.6.a: "India now shines like never before."
+  india_model_colony: "A Model Colony"
+
+  british_dictates.7.t: "An Incomplete Agenda"
+  british_dictates.7.d: "After twenty years, the grand plan for the [ROOT.GetCountry.GetName] has not come to fruition. Deadlines have been missed, objectives are incomplete, and some officials now doubt the feasibility of the effort. The [SCOPE.sCountry('overlord_scope').GetAdjectiveNoFormatting] goverment has decided to move on to more pressing matters, leaving our efforts a footnote among many other failed government initiatives."
+  british_dictates.7.f: ""It may have simply been a hopeless cause to begin with. Too many people, too much land, too many problems...""
+  british_dictates.7.a: "Perhaps we were a bit too ambitious."
+  india_incomplete_dictates: "An Incomplete Agenda"
+
+  british_dictates.8.t: "The Agricutural Economy"
+  british_dictates.8.d: "Large swathes of India's fertile farmland have been converted to cash crop plantations. [SCOPE.sGoods('opium_scope').GetName], [SCOPE.sGoods('dye_scope').GetName], [SCOPE.sGoods('tea_scope').GetName] and more flow in abundance from the ports of the subcontinent to the world market."
+  british_dictates.8.d_plantation_construction: "With our concentrated efforts to expand the number of plantations across India, our agricultural exports now dominate the global market, bringing abundant wealth to the [ROOT.GetCountry.GetName]."
+  british_dictates.8.d_plantation_productivity: "By carefully reallocating the most fertile lands to our country's plantations, we have maximized their output and ensured our agricultural domination on the global market. Proponents are calling it a victory for agricultural efficiency, and all it took was a few relocated peasants."
+  british_dictates.8.f: ""The wealth of India is in its agriculture, and as the crops flow out the cash shall flow in.""
+  british_dictates.8.a: "The wealth of India: sown and harvested."
+
+  british_dictates.9.t: "The Colonial Military"
+  british_dictates.9.d: "The colonial army and navy have been given all the men and resources they need to secure the [ROOT.GetCountry.GetName] from all foreign threats. The military is now the pride of our empire and the envy of colonial nations the world over."
+  british_dictates.9.d_army: "The strength and power of the Colonial Army has burgeoned it into an indomitable fighting force. Soldiers patrol the entire subcontinent, and the borders are safe and secure from hostile invasion."
+  british_dictates.9.d_navy: "Large investments in ships and sailors has brought us a colonial navy to match the might of our land-based forces. Our coasts and ports now stand safe in the event of piracy or warfare."
+  british_dictates.9.f: ""No longer do we station a token colonial garrison, but a mighty military powerful in its own right. The burden of our defense is now fully in our own hands.""
+  british_dictates.9.a: "A military worthy of the great [ROOT.GetCountry.GetNameNoFormatting]."
+
+  british_dictates.10.t: "Indian Education"
+  british_dictates.10.d: "With our eforts to increase literacy and higher learning in the [ROOT.GetCountry.GetName], we now have sufficient civil servants to serve our growing colonial apparatus."
+  british_dictates.10.d_higher_education: "By focusing on the construction of new Universities, we have ensured our future civil servants are well-educated and up to the tasks our colonial administration assigns them. This few but highly educated elite shall serve the [ROOT.GetCountry.GetName] well."
+  british_dictates.10.d_public_schools: "Rates of literacy and primary education have improved throughout the [ROOT.GetCountry.GetName]. By increasing access to education at all levels, our subjects will be all the more capable of serving our needs."
+  british_dictates.10.f: ""Never before has the native Indian population been so well educated, and so fit to serve our administrative functions.""
+  british_dictates.10.a: "A shining achievement for the [ROOT.GetCountry.GetNameNoFormatting]."
+
+  je_british_dictates: "The Colonial Dictates"
+  je_british_dictates_reason: "@information! Each dictate will offer differing strategies for achieving its objectives. Adopting a strategy will cost @aut! [concept_authority], but modify active [Concept('concept_modifier', '$concept_modifiers$')], completion conditions, and the final rewards for completing all dictates.\n$TOOLTIP_DELIMITER$\n#lore An ambitious plan has been laid out to turn the [ROOT.GetCountry.GetNameNoFormatting] into the model of a proper colonial empire. Growth in agricultural extraction, strengthening the education system, and increasing the might of the colonial military are all components of this bold new agenda.\n\nWhile officials debate the proper strategy to achieve these varied objectives, all agree upon the desired outcome: unlocking the true colonial might of the Indian subcontinent.#!"
+  british_dictates_officials_put_forth_plan_tt: "Government officials have put forth a plan to unlock the power of Colonial India."
+  je_british_dictate_plantations_complete_tt: "We have completed the #b $je_british_dictate_plantations$#! [concept_journal_entry]"
+  je_british_dictate_military_complete_tt: "We have completed the #b $je_british_dictate_military$#! [concept_journal_entry]"
+  je_british_dictate_universities_complete_tt: "We have completed the #b $je_british_dictate_universities$#! [concept_journal_entry]"
+  je_british_dictates_consequences_scaled_tt: "These consequences will be reduced depending on the number of completed Dictates"
+
+  british_dictates_time_run_out_tt: "Time has run out on #b $je_british_dictates$#! [concept_journal_entry]"
+  dictate_no_prioritization_cooldown_tt: "It has been at least #v 5 years#! since we prioritized this strategy for this dictate"
+  dictate_not_prioritizing_other_strategy_tt: "We are not prioritizing another strategy for this dictate"
+
+  british_dictate_successful: "Successful Dictate"
+  british_dictate_prioritization: "Dictate Administrative Focus"
+
+  colonial_dictates_timer_tt: "This [concept_journal_entry] has been active for at least #v 2 years#!"
+
+  je_british_dictate_plantations_completion_condition_tt: "#v [ROOT.Var('arable_land_percent_goal').GetValue|%0]#! of all [concept_arable_land] across [ROOT.GetCountry.GetAdjective] [GetGeographicRegion('geographic_region_india').GetName] and its [Concept('concept_subject', '$concept_subjects$')] has been developed into [GetBuildingGroup('bg_plantations').GetName] (Currently #v [ROOT.Var('num_plantations').GetValue]/[ROOT.Var('target_plantations').GetValue]#!)"
+
+  british_dictate_plantations_prioritizing_construction: "Prioritizing Plantation Construction"
+  colonial_prosperity_plantation_construction: "Colonial Prosperity - Plantation Construction"
+  colonial_prosperity_plantation_construction_tt: "[GetStaticModifier('colonial_prosperity_plantation_construction').GetName|v]\n[GetStaticModifier('colonial_prosperity_plantation_construction').GetDesc]"
+  british_dictate_plantations_prioritizing_productivity: "Prioritizing Plantation Productivity"
+  colonial_prosperity_plantation_productivity: "Colonial Prosperity - Plantation Productivity"
+  colonial_prosperity_plantation_productivity_tt: "[GetStaticModifier('colonial_prosperity_plantation_productivity').GetName|v]\n[GetStaticModifier('colonial_prosperity_plantation_productivity').GetDesc]"
+
+  je_british_dictate_plantations_prioritize_construction: "Prioritize Plantation Construction"
+  je_british_dictate_plantations_prioritize_construction_desc: "The construction of new plantations must be prioritized over all else. Quantity is a quality all its own, and by turning India into a landscape of plantations, we shall dominate the global cash crop market."
+  je_british_dictate_plantations_prioritize_construction_new_goal_tt: "Our goal will shift from #v 30%#! of [concept_arable_land] to #v 40%#! and from being a lead producer of #v 3#! plantation goods to #v 2#!"
+  je_british_dictate_plantations_prioritize_construction_new_reward_tt: "#tooltippable;tooltip:[GetPlayer.GetTooltipTag],colonial_prosperity_plantation_construction_tt $colonial_prosperity_plantation_construction$#! becomes a #v permanent#! reward for completing #b $je_british_dictates$#! [concept_journal_entry]"
+  je_british_dictate_plantations_deprioritize_construction: "Deprioritize Plantation Construction"
+  je_british_dictate_plantations_deprioritize_construction_desc: "We will deprioritize our efforts to increase plantation construction."
+  je_british_dictate_plantations_prioritize_construction_old_goal_tt: "Our goal will shift back from #v 40%#! of [concept_arable_land] to #v 30%#! and from being a lead producer of #v 2#! plantation goods to #v 3#!"
+  je_british_dictate_plantations_prioritize_construction_lose_reward_tt: "#tooltippable;tooltip:[GetPlayer.GetTooltipTag],colonial_prosperity_plantation_construction_tt $colonial_prosperity_plantation_construction$#! will no longer be a reward for completing #b $je_british_dictates$#! [concept_journal_entry]"
+
+  je_british_dictate_plantations_prioritize_productivity: "Prioritize Increasing Productivity"
+  je_british_dictate_plantations_prioritize_productivity_desc: "The right way to increase our output is to focus on quality over quantity. Relocating subsistence farmers and taking their more fertile lands for ourselves will offer better yields for less effort."
+  je_british_dictate_plantations_prioritize_productivity_new_goal_tt: "Our goal will shift from #v 30%#! of [concept_arable_land] to #v 20%#! and from being a lead producer of #v 3#! plantation goods to #v 4#!"
+  je_british_dictate_plantations_prioritize_productivity_new_reward_tt: "#tooltippable;tooltip:[GetPlayer.GetTooltipTag],colonial_prosperity_plantation_productivity_tt $colonial_prosperity_plantation_productivity$#! becomes a #v permanent#! reward for completing #b $je_british_dictates$#! [concept_journal_entry]"
+  je_british_dictate_plantations_deprioritize_productivity: "Deprioritize Increasing Productivity"
+  je_british_dictate_plantations_deprioritize_productivity_desc: "We will deprioritize our efforts to increase the productivity of our plantations."
+  je_british_dictate_plantations_prioritize_productivity_old_goal_tt: "Our goal will shift back from #v 20%#! of [concept_arable_land] to #v 30%#! and from being a lead producer of #v 4#! plantation goods to #v 3#!"
+  je_british_dictate_plantations_prioritize_productivity_lose_reward_tt: "#tooltippable;tooltip:[GetPlayer.GetTooltipTag],colonial_prosperity_plantation_productivity_tt $colonial_prosperity_plantation_productivity$#! will no longer be a reward for completing #b $je_british_dictates$#! [concept_journal_entry]"
+
+  british_dictate_military_prioritizing_army: "Prioritizing Colonial Army"
+  colonial_prosperity_army: "Colonial Prosperity - Army"
+  colonial_prosperity_army_tt: "[GetStaticModifier('colonial_prosperity_army').GetName|v]\n[GetStaticModifier('colonial_prosperity_army').GetDesc]"
+  british_dictate_military_prioritizing_navy: "Prioritizing Colonial Navy"
+  colonial_prosperity_navy: "Colonial Prosperity - Navy"
+  colonial_prosperity_navy_tt: "[GetStaticModifier('colonial_prosperity_navy').GetName|v]\n[GetStaticModifier('colonial_prosperity_navy').GetDesc]"
+
+  je_british_dictate_military_prioritize_army: "Prioritize Colonial Army"
+  je_british_dictate_military_prioritize_army_desc: "Our army must not only be a dominant force in Southeast Asia but among the best in the world. Through training, recruitment, and strength of arms we can not only protect India but expand our reach beyond the subcontinent into neighboring countries."
+  je_british_dictate_military_prioritize_army_new_goal_tt: "Our goal will shift from #v 6500.00#! army [concept_power_projection] to #v 8000.00#! and from #v 6500.00#! naval [concept_power_projection] to #v 5000.00#!"
+  je_british_dictate_military_prioritize_army_new_reward_tt: "#tooltippable;tooltip:[GetPlayer.GetTooltipTag],colonial_prosperity_army_tt $colonial_prosperity_army$#! becomes a #v permanent#! reward for completing #b $je_british_dictates$#! [concept_journal_entry]"
+  je_british_dictate_military_deprioritize_army: "Deprioritize Colonial Army"
+  je_british_dictate_military_deprioritize_army_desc: "We will deprioritize our efforts to bolster the Colonial Army."
+  je_british_dictate_military_prioritize_army_old_goal_tt: "Our goal will shift back from #v 8000.00#! army [concept_power_projection] to #v 6500.00#! and from #v 5000.00#! naval [concept_power_projection] to #v 6500.00#!"
+  je_british_dictate_military_prioritize_army_lose_reward_tt: "#tooltippable;tooltip:[GetPlayer.GetTooltipTag],colonial_prosperity_army_tt $colonial_prosperity_army$#! will no longer be a reward for completing #b $je_british_dictates$#! [concept_journal_entry]"
+
+  je_british_dictate_military_prioritize_navy: "Prioritize Colonial Navy"
+  je_british_dictate_military_prioritize_navy_desc: "A sufficient navy is necessary to protect our coasts and deploy our army where needed. What good are our other efforts if we can't ensure the safe transportation of our soldiers and exports in times of war?"
+  je_british_dictate_military_prioritize_navy_new_goal_tt: "Our goal will shift from #v 6500.00#! army [concept_power_projection] to #v 5000.00#! and from #v 6500.00#! naval [concept_power_projection] to #v 8000.00#!"
+  je_british_dictate_military_prioritize_navy_new_reward_tt: "#tooltippable;tooltip:[GetPlayer.GetTooltipTag],colonial_prosperity_navy_tt $colonial_prosperity_navy$#! becomes a #v permanent#! reward for completing #b $je_british_dictates$#! [concept_journal_entry]"
+  je_british_dictate_military_deprioritize_navy: "Deprioritize Colonial Navy"
+  je_british_dictate_military_deprioritize_navy_desc: "We will deprioritize our efforts to bolster the Colonial Navy."
+  je_british_dictate_military_prioritize_navy_old_goal_tt: "Our goal will shift back from #v 5000.00#! army [concept_power_projection] to #v 6500.00#! and from #v 8000.00#! naval [concept_power_projection] to #v 6500.00#!"
+  je_british_dictate_military_prioritize_navy_lose_reward_tt: "#tooltippable;tooltip:[GetPlayer.GetTooltipTag],colonial_prosperity_navy_tt $colonial_prosperity_navy$#! will no longer be a reward for completing #b $je_british_dictates$#! [concept_journal_entry]"
+
+  british_dictate_universities_prioritizing_higher_education: "Prioritizing Higher Education"
+  colonial_prosperity_higher_education: "Colonial Prosperity - Higher Education"
+  colonial_prosperity_higher_education_tt: "[GetStaticModifier('colonial_prosperity_higher_education').GetName|v]\n[GetStaticModifier('colonial_prosperity_higher_education').GetDesc]"
+  british_dictate_universities_prioritizing_public_schools: "Prioritizing Public Schooling"
+  colonial_prosperity_public_schools: "Colonial Prosperity - Public Schooling"
+  colonial_prosperity_public_schools_tt: "[GetStaticModifier('colonial_prosperity_public_schools').GetName|v]\n[GetStaticModifier('colonial_prosperity_public_schools').GetDesc]"
+
+  je_british_dictate_universities_prioritize_higher_education: "Prioritize Higher Education"
+  je_british_dictate_universities_prioritize_higher_education_desc: "We must rely on a highly skilled elite of Indian civil servants to both fill out our bureaucracy and act as intermediaries with the native population. To fully educate the masses is an exercise in futility. Focusing our efforts on training promising prospects for civil administration is where we'll find success."
+  je_british_dictate_universities_prioritize_higher_education_new_goal_tt: "Our goal will shift from #v 25#! [GetBuildingType('building_university').GetName] buildings to #v 40#! and from #v 40%#! [concept_literacy] to #v 30%#!"
+  je_british_dictate_universities_prioritize_higher_education_new_reward_tt: "#tooltippable;tooltip:[GetPlayer.GetTooltipTag],colonial_prosperity_higher_education_tt $colonial_prosperity_higher_education$#! becomes a #v permanent#! reward for completing #b $je_british_dictates$#! [concept_journal_entry]"
+  je_british_dictate_universities_deprioritize_higher_education: "Deprioritize Higher Education"
+  je_british_dictate_universities_deprioritize_higher_education_desc: "We will deprioritize our efforts to expand Higher Education."
+  je_british_dictate_universities_prioritize_higher_education_old_goal_tt: "Our goal will shift back from #v 40#! [GetBuildingType('building_university').GetName] buildings to #v 25#! and from #v 30%#! [concept_literacy] to #v 40%#!"
+  je_british_dictate_universities_prioritize_higher_education_lose_reward_tt: "#tooltippable;tooltip:[GetPlayer.GetTooltipTag],colonial_prosperity_higher_education_tt $colonial_prosperity_higher_education$#! will no longer be a reward for completing #b $je_british_dictates$#! [concept_journal_entry]"
+
+  je_british_dictate_universities_prioritize_public_schools: "Prioritize Public Schooling"
+  je_british_dictate_universities_prioritize_public_schools_desc: "We must improve education at all levels throughout India, starting with primary and secondary schooling. A comprehensive education system will ensure a stable pipeline of our future civil servants."
+  je_british_dictate_universities_prioritize_public_schools_new_goal_tt: "Our goal will shift from #v 25#! [GetBuildingType('building_university').GetName] buildings to #v 12#! and from #v 40%#! [concept_literacy] to #v 50%#!"
+  je_british_dictate_universities_prioritize_public_schools_new_reward_tt: "#tooltippable;tooltip:[GetPlayer.GetTooltipTag],colonial_prosperity_public_schools_tt $colonial_prosperity_public_schools$#! becomes a #v permanent#! reward for completing #b $je_british_dictates$#! [concept_journal_entry]"
+  je_british_dictate_universities_deprioritize_public_schools: "Deprioritize Public Schooling"
+  je_british_dictate_universities_deprioritize_public_schools_desc: "We will deprioritize our efforts to expand Public Schooling."
+  je_british_dictate_universities_prioritize_public_schools_old_goal_tt: "Our goal will shift back from #v 12#! [GetBuildingType('building_university').GetName] buildings to #v 25#! and from #v 50%#! [concept_literacy] to #v 40%#!"
+  je_british_dictate_universities_prioritize_public_schools_lose_reward_tt: "#tooltippable;tooltip:[GetPlayer.GetTooltipTag],colonial_prosperity_public_schools_tt $colonial_prosperity_public_schools$#! will no longer be a reward for completing #b $je_british_dictates$#! [concept_journal_entry]"
+
+  # india_events.1
+  modifier_crowned_monarch_of_india_good: "Crowned Monarch of India"
+  modifier_crowned_monarch_of_india_bad: "Crowned Monarch of India"
+  modifier_refused_to_crown_monarch_of_india_good: "Refused to Crown Monarch of India"
+  modifier_refused_to_crown_monarch_of_india_bad: "Refused to Crown Monarch of India"
+
+  # india_events.4
+  modifier_koh_i_noor_hoarded: "Koh-i-Noor Hoarded"
+
+  # india_events.6
+  modifier_indian_enemy_conspiracy: "Enemy Conspiracy"
+
+  india_events.8.e: "A wonderful display of Hindu and Muslim unity."
+
+  india_events.12.d_exile:  "[SCOPE.sCharacter('besant_scope').GetFullName], a former socialist activist turned Theosophist, has announced her intention to depart for India. She will soon join her Theosophist colleagues at their headquarters in [SCOPE.sState('madras_state').GetName]."
+
+  india_events.13.d_no_annie: "Members of the Theosophical Society in [SCOPE.sState('madras_state').GetName] have declared the young [SCOPE.sCharacter('krishnamurti_scope').GetFullName] to be the likely future vessel of the divine entity Lord Maitreya. Theosophist activists seek to adopt the boy."
+
+  # india_events.17
+  indian_lax_punishment_for_terrorists: "Lax on Terrorists"
+
+  add_small_heritage_trait_group_radicals_tt: "[SCOPE.ScriptValue('small_radicals')|-=1%] of [Concept('concept_pop', '$concept_pops$')] in [ROOT.GetCountry.GetNameNoFlag] sharing a [concept_discrimination_trait_group] with one of our [Concept('concept_primary_cultures', '$concept_primary_cultures$')] become more [concept_radical]"
+  add_medium_heritage_trait_group_radicals_tt: "[SCOPE.ScriptValue('medium_radicals')|-=1%] of [Concept('concept_pop', '$concept_pops$')] in [ROOT.GetCountry.GetNameNoFlag] sharing a [concept_discrimination_trait_group] with one of our [Concept('concept_primary_cultures', '$concept_primary_cultures$')] become more [concept_radical]"
+  add_large_heritage_trait_group_radicals_tt: "[SCOPE.ScriptValue('large_radicals')|-=1%] of [Concept('concept_pop', '$concept_pops$')] in [ROOT.GetCountry.GetNameNoFlag] sharing a [concept_discrimination_trait_group] with one of our [Concept('concept_primary_cultures', '$concept_primary_cultures$')] become more [concept_radical]"
+  add_small_heritage_trait_group_loyalists_tt: "[SCOPE.ScriptValue('small_radicals')|+=1%] of [Concept('concept_pop', '$concept_pops$')] in [ROOT.GetCountry.GetNameNoFlag] sharing a [concept_discrimination_trait_group] with one of our [Concept('concept_primary_cultures', '$concept_primary_cultures$')] become more [concept_loyalist]"
+  add_medium_heritage_trait_group_loyalists_tt: "[SCOPE.ScriptValue('medium_radicals')|+=1%] of [Concept('concept_pop', '$concept_pops$')] in [ROOT.GetCountry.GetNameNoFlag] sharing a [concept_discrimination_trait_group] with one of our [Concept('concept_primary_cultures', '$concept_primary_cultures$')] become more [concept_loyalist]"
+  add_large_heritage_trait_group_loyalists_tt: "[SCOPE.ScriptValue('large_radicals')|+=1%] of [Concept('concept_pop', '$concept_pops$')] in [ROOT.GetCountry.GetNameNoFlag] sharing a [concept_discrimination_trait_group] with one of our [Concept('concept_primary_cultures', '$concept_primary_cultures$')] become more [concept_loyalist]"
+
+  je_india_home_rule_reason_request_reforms: "The Indian Administration will also be given opportunities to request #tooltippable;tooltip:[GetPlayer.GetTooltipTag],indian_democratic_reforms_tt reforms#! from its [concept_overlord], which will temporarily appease the $movement_india_pan_national$."
+  je_india_home_rule_reason_remainder_home_rule: "$je_india_home_rule_reason_request_reforms$ Once Indian Nationalism has reached #b 500#! and the proper reforms have been enacted, the colonial administration can petition its overlord to enact #b sovereign home rule#! for India.\n\n@warning! If the colonial government or its overlord take #v 3#! or more #tooltippable;tooltip:[GetPlayer.GetTooltipTag],je_india_home_rule_hostile_actions_tt hostile actions#! against the $movement_india_pan_national$, the movement will shifts its goal from sovereign home rule within the overlord's empire to full independence from their colonial masters.\n$TOOLTIP_DELIMITER$\n#lore Across India, national consciousness is rising amongst the native population. Native Indians educated in foreign schools and employed by the colonial government have begun to agitate for equal status within imperial institutions, greater economic opportunity, and the eventual establishment of home rule for all of India.#!"
+  je_india_home_rule_reason_remainder_full_independence: "$je_india_home_rule_reason_request_reforms$ Once Indian Nationalism has reached #b 500#!, the $movement_india_pan_national$ can issue its demand for independence and national self-governance.\n$TOOLTIP_DELIMITER$\n#lore With growing frustration towards their overlord's obstinance and the treatment of its Indian subjects, leaders of the $movement_india_pan_national$ now seek a new objective: full independence from their colonial masters and freedom and self-government for all of India!#!"
+  je_india_home_rule_reason_remainder_self_government: "Once Indian Nationalism has reached #b 500#!, the $movement_india_pan_national$ can issue its demand for sovereign self-government.\n$TOOLTIP_DELIMITER$\n#lore Though India is technically free of its former master, its government, laws, and institutions are still dominated by and favored towards its non-native population. The $movement_india_pan_national$ fights onward for true self-determination and freedom for India!"
+
+  je_india_home_rule_not_started_status: "An #b Indian#! sovereignty movement is yet to emerge."
+  je_india_home_rule_home_rule_status: "The [SCOPE.sPoliticalMovement('indian_national_movement').GetNameNoIcon] is seeking sovereign home rule within the [SCOPE.sCountry('india_scope').GetOverlord.GetAdjectiveNoFlag] Empire."
+  je_india_home_rule_full_independence_status: "The [SCOPE.sPoliticalMovement('indian_national_movement').GetNameNoIcon] is agitating for full independence from [SCOPE.sCountry('india_scope').GetOverlord.GetNameNoFlag]."
+  je_india_home_rule_self_government_status: "The [SCOPE.sPoliticalMovement('indian_national_movement').GetNameNoIcon] is seeking a sovereign, representative government."
+
+  ig_indian_imperialist_tt: "[GetIdeology('ideology_jingoist').GetName], [GetIdeology('ideology_reactionary').GetName], #tooltippable;tooltip:[GetPlayer.GetTooltipTag],conservative_ideologies_list_tt Conservative#!, #tooltippable;tooltip:[GetPlayer.GetTooltipTag],reactionary_ideologies_list_tt Reactionary#!"
+  ig_indian_reformist_tt: "[GetIdeology('ideology_socialist').GetName], [GetIdeology('ideology_pacifist').GetName], #tooltippable;tooltip:[GetPlayer.GetTooltipTag],progressive_ideologies_list_tt Progressive#!, #tooltippable;tooltip:[GetPlayer.GetTooltipTag],socialist_ideologies_list_tt Socialist#!"
+
+  simon_commission_complete_tt: "India's [concept_overlord] has completed its statutory commission 10 years after granting permission for local elections."
+  indian_self_governance_has_been_granted_tt: "The demands for #b Indian#! self-governance have been granted."
+
+  all_indian_national_movement_agitators_freed_tt: "All imprisoned [Concept('concept_agitator', '$concept_agitators$')] supporting the #b $movement_india_pan_national$#! will be set free."
+  all_indian_states_transferred_from_overlord_tt: "All [Concept('concept_state', '$concept_states$')] in [GetGeographicRegion('geographic_region_india').GetName] owned by [SCOPE.sCountry('overlord_scope').GetName], [SCOPE.sCountry('india_scope').GetName], or their non-[concept_princely_state] [Concept('concept_subject', '$concept_subjects$')] will be transferred to the new #b Indian#! nation. All [concept_princely_state] [Concept('concept_subject', '$concept_subjects$')] will be transferred as well."
+  india_loses_crown_rule_tt: "[SCOPE.sCountry('india_scope').GetName] loses #tooltippable;tooltip:[GetPlayer.GetTooltipTag],modifier_india_crown_rule_tt $modifier_india_crown_rule$#!"
+  india_loses_company_rule_tt: "[SCOPE.sCountry('india_scope').GetName] loses #tooltippable;tooltip:[GetPlayer.GetTooltipTag],modifier_india_company_rule_tt $modifier_india_company_rule$#!"
+  india_loses_company_rule_upgraded_tt: "[SCOPE.sCountry('india_scope').GetName] loses #tooltippable;tooltip:[GetPlayer.GetTooltipTag],modifier_india_company_rule_upgraded_tt $modifier_india_company_rule_upgraded$#!"
+  india_loses_indian_imperial_police_tt: "[SCOPE.sCountry('india_scope').GetName] loses #tooltippable;tooltip:[GetPlayer.GetTooltipTag],modifier_indian_imperial_police_tt $modifier_indian_imperial_police$#!"
+
+  je_india_home_rule_india_end_company_status: "\n\n@warning! We can end our status as a #b $subject_type_chartered_company$#! using the #b $bic_end_company_rule$#! [concept_decision]."
+  je_india_home_rule_britain_end_company_status: "\n\n@warning! We can end the #b $dyn_c_east_india_company$#!'s status as a #b $subject_type_chartered_company$#! using the #b $british_raj_decision$#! [concept_decision]."
+
+  britain_not_granted_dop_permission_tt: "We have #b not#! granted the [SCOPE.sCountry('india_scope').GetName] permission to change its #b Distribution of Power#! laws."
+  britain_requested_dop_permission_tt: "A reform has not been requested or enacted in the last #v 2#! years"
+
+  begin_indian_war_of_independence_tt: "The [SCOPE.sPoliticalMovement('indian_national_movement').GetNameNoIcon] will begin a war of independence."
+
+  bic_does_not_exist_tt: "[SCOPE.sCountry('india_scope').GetName] does not exist"
+  no_indian_homeland_states_tt: "[SCOPE.sCountry('india_scope').GetName] posssess no states with [GetCulture('bengali').GetHeritageTrait.GetTraitGroup.GetName] [Concept('concept_homeland', '$concept_homelands$')]"
+  another_country_formed_india_tt: "Another country has formed #v India#!"
+
+  indian_nationalism_above_500_tt: "[concept_indian_nationalism] has reached #v 500#!"
+
+  indian_nationalism_advance_5_tt: "[concept_indian_nationalism] will advance by #v 5#!"
+  indian_nationalism_advance_7_5_tt: "[concept_indian_nationalism] will advance by #v 7.5#!"
+  indian_nationalism_advance_10_tt: "[concept_indian_nationalism] will advance by #v 10#!"
+  indian_nationalism_advance_15_tt: "[concept_indian_nationalism] will advance by #v 15#!"
+
+  indian_national_movement_moves_towards_independence_tt: "The [SCOPE.sPoliticalMovement('indian_national_movement').GetName] will move closer to seeking full independence."
+
+  je_india_nationalism_complete_header: "#title Will result in an #b Indian Nationalist#! victory if:#!\n"
+  je_india_nationalism_on_complete_header: "#title On an #b Indian Nationalist#! victory:#!\n$EFFECT$"
+  je_india_nationalism_fail_header: "#title Will result in a #b Colonial Administration#! victory if:#!\n"
+  je_india_nationalism_on_fail_header: "#title On a #b Colonial Administration#! victory:#!\n$EFFECT$"
+
+  india_wins_war_of_independence_tt: "#b India#! has won its war of independence."
+  india_loses_war_of_independence_tt: "#b India#! has lost its war of independence."
+
+  india_emerges_free_tt: "#b India#! will emerge a free, independent nation."
+  british_rule_secured_indefinitely_tt: "Colonial rule in #b India#! will be secured indefinitely."
+  all_indian_national_movement_agitators_imprisoned_forever_tt: "All imprisoned [Concept('concept_agitator', '$concept_agitators$')] supporting the #b $movement_india_pan_national$#! will remain imprisoned permanently."
+
+  india_home_rule_events.1.t_peaceful_independence: "Purna Swaraj"
+  india_home_rule_events.1.t_war_of_independence: "Freedom Secured"
+  india_home_rule_events.1.t_self_government: "A Sovereign India"
+  india_home_rule_events.1.d_peaceful_independence: "The day has finally come. Seeing little other choice against the tide of #b Indian Nationalism#!, [SCOPE.sCountry('overlord_scope').GetName] has announced that it is relinquishing its grip on the Indian subcontinent. Authority and administration will be transferred to the new Indian government, while [SCOPE.sCountry('overlord_scope').GetAdjectiveNoFormatting] authorities will withdraw back to their homeland. #b India#! is finally a free nation."
+  india_home_rule_events.1.d_war_of_independence: "After a long and bloody war, #b India#! has emerged victorious and free. There will be time for mourning those who fought and died, but for now, people celebrate across the subcontinent. Already sovereign leaders have taken over government instutitions, ready to chart a new course for the new nation."
+  india_home_rule_events.1.d_self_government: "The day has finally come. Seeing little other choice against the tide of #b Indian Nationalism#!, leaders of the colonial government have announced a series of sweeping reforms. The government of India will now represent #italic all#! of its people, including the many native Indians who fought long and hard for sovereignty, freedom, and representative self-government."
+  india_home_rule_events.1.f_independence: "It had been a long, hard-fought struggle, but all that hardship had paid off. His people were free. His country was free. India was free for now and forever."
+  india_home_rule_events.1.a_independence: "Long live free India!"
+  india_achieved_home_rule_tt: "The #b $movement_india_pan_national$#! has achieved sovereign home rule for #b India#!."
+  india_achieved_independence_tt: "#b India#! is now free of [SCOPE.sCountry('overlord_scope').GetAdjective] rule."
+  india_achieved_self_government_tt: "#b India#! has been reformed into a sovereign, representative government."
+
+  indian_war_criminal_punished: "A Sliver of Justice"
+
+  notification_simon_commission_advance_name: "Commission Advocates Self-Rule"
+  notification_simon_commission_advance_desc: "The commission has agreed that Indian sovereignty is necessary, advancing the [concept_indian_nationalism] progress bar."
+  notification_simon_commission_advance_tooltip: "#header $notification_simon_commission_advance_name$#!\n$TOOLTIP_DELIMITER$\n$notification_simon_commission_advance_desc$"
+  notification_simon_commission_nothing_name: "Commission Inconclusive"
+  notification_simon_commission_nothing_desc: "The commission has decided the current rate of reform is appropriate. The [concept_indian_nationalism] progress bar is unaffected."
+  notification_simon_commission_nothing_tooltip: "#header $notification_simon_commission_nothing_name$#!\n$TOOLTIP_DELIMITER$\n$notification_simon_commission_nothing_desc$"
+  notification_simon_commission_retreat_name: "Commission Rejects Self-Rule"
+  notification_simon_commission_retreat_desc: "The commission has rejected the idea of Indian sovereignty, decreasing the [concept_indian_nationalism] progress bar."
+  notification_simon_commission_retreat_tooltip: "#header $notification_simon_commission_retreat_name$#!\n$TOOLTIP_DELIMITER$\n$notification_simon_commission_retreat_desc$"
+  notification_simon_commission_retreat_towards_independence_name: "Commission Rejects Self-Rule"
+  notification_simon_commission_retreat_towards_independence_desc: "The commission has rejected the idea of Indian sovereignty, decreasing the [concept_indian_nationalism] progress bar and pushing the #b $movement_india_pan_national$#! towards seeking independence."
+  notification_simon_commission_retreat_towards_independence_tooltip: "#header $notification_simon_commission_retreat_towards_independence_name$#!\n$TOOLTIP_DELIMITER$\n$notification_simon_commission_retreat_towards_independence_desc$"
+
+  indian_nation_je_activated_tt: "#b $je_india_home_rule$#! [concept_journal_entry] has been activated."
+  india_protest_events_tt: "As #b Indian Nationalism#! continues to grow, we may receive protest events that further advance its progress."
+  india_request_reforms_tt: "As #b Indian Nationalism#! grows, we will have the ability to petition [ROOT.GetCountry.GetOverlord.GetName] for reforms." 
+
+  cannot_return_to_traditional_caste_system_tt: "A country cannot return to #b $law_hindu_caste_not_enforced$#! after it has been repealed."
+  BIC_not_able_to_pass_progressive_caste_laws_tt: "[ROOT.GetCountry.GetName] may not pass this law until it has been sufficiently pressured by #b $je_dravidian_movement$#! [concept_journal_entry]."
+
+  india_nationalism_events.1.d_subject: "$india_nationalism_events.1.d$ [SCOPE.sCountry('overlord_scope').GetName] and the [SCOPE.sCountry('india_scope').GetName] are mustering their forces to put down the insurrection. The fate of India, and an empire, hangs in the balance."
+  india_nationalism_events.1.d_independent: "$india_nationalism_events.1.d$ [SCOPE.sCountry('india_scope').GetName] is mustering its forces to put down the insurrection. The fate of India hangs in the balance."
+  india_nationalism_events.1.c: "[SCOPE.sCountry('revolution_scope').GetNameNoFormatting] will be free!"
+  indian_war_of_independence_begun_tt: "The Indian War of Independence has begun."
+
+  indian_sovereignty_movement_dead_tt: "The dream of Indian sovereignty is dead... for now..."
+
+  india_nationalism_events.3.d_arrest: "$india_nationalism_events.3.d$\n\nThe [SCOPE.sCountry('overlord_scope').GetAdjectiveNoFlag] government has ordered their immediate arrest."
+  india_nationalism_events.3.b_overlord_arrest: "On the orders of the [SCOPE.sCountry('overlord_scope').GetAdjectiveNoFormatting] government, have [SCOPE.sCharacter('prisoner_scope').GetHerHim] arrested!"
+  india_nationalism_events.3.b_bic_arrest: "[SCOPE.sCharacter('prisoner_scope').GetSheHe|U] can celebrate from a prison cell."
+  modifier_salt_march_movement: "Salt March"
+
+  india_nationalism_events.6.d: "Indian nationalists living in [ROOT.GetCountry.GetCapital.GetCityHubName] have founded the India League, an organization dedicated to advocating for Indian sovereignty. The league's members are beginning to have a notable impact on our country's politics."
+  modifier_condition_of_india_approved_bad: "Condition of India Approved"
+  modifier_condition_of_india_approved_good: "Condition of India Approved"
+  modifier_condition_of_india_rejected_good: "Condition of India Disregarded"
+
+  INDIA_SEEKING_SOVEREIGNTY: "Agitating for Indian Sovereignty"
+
+  # federation_of_india.4
+  new_privy_purse_payment_tt: "A new [concept_privy_purse] payment of [SCOPE.sCountry('relevant_princely_state').MakeScope.ScriptValue('single_privy_purse_value_potential')|D-] will be added to our #b National Expenses#!."
+  # === FIX LINE ===
+
+ india_not_granted_dop_permission_tt: "We have #b not#! been granted permission to change our #b Distribution of Power#! laws."
+
+ simon_commission_dispatch_early_tt: "We will dispatch the #bold Indian Statutory Commission#! early"
+ simon_commission_current_gov_reformist_tt: "Because we have a #tooltippable;tooltip:[GetPlayer.GetTooltipTag],ig_indian_reformist_tt reformist#! interest group in government, we will send a #b reformist#!-leaning commission."
+ simon_commission_current_gov_imperialist_tt: "Because we have an #tooltippable;tooltip:[GetPlayer.GetTooltipTag],ig_indian_imperialist_tt imperialist#! interest group in government, we will send an #b imperialist#!-leaning commission."
+ simon_commission_current_gov_both_tt: "Because we have both #tooltippable;tooltip:[GetPlayer.GetTooltipTag],ig_indian_reformist_tt reformist#! and #tooltippable;tooltip:[GetPlayer.GetTooltipTag],ig_indian_imperialist_tt imperialist#! interest groups in government, we will choose which type of commission to send."
+ simon_commission_current_gov_neither_tt: "Because we have neither #tooltippable;tooltip:[GetPlayer.GetTooltipTag],ig_indian_reformist_tt reformist#! nor #tooltippable;tooltip:[GetPlayer.GetTooltipTag],ig_indian_imperialist_tt imperialist#! interest groups in government, we will choose which type of commission to send."
+
+ simon_comission_late_enough_tt: "At least #b 6#! years have passed since we authorized local elections in the [SCOPE.sCountry('india_scope').GetName]"
+
+ simon_commission_progress_likely: "The commission will be more likely to advance the [concept_indian_nationalism] progress bar."
+ simon_commission_retreat_likely: "The commission will be more likely to retreat the [concept_indian_nationalism] progress bar."
+ simon_commission_retreat_makes_indian_national_movement_move_towards_independence_tt: "If the commission retreats the [concept_indian_nationalism] progress bar, the [SCOPE.sPoliticalMovement('indian_national_movement').GetName] will move closer to seeking full independence."
+
+ indian_nationalism_above_50_tt: "[concept_indian_nationalism] is greater than or equal to #v 50#!"
+ indian_nationalism_above_100_tt: "[concept_indian_nationalism] is greater than or equal to #v 100#!"
+ indian_nationalism_above_175_tt: "[concept_indian_nationalism] is greater than or equal to #v 175#!"
+ indian_nationalism_above_200_tt: "[concept_indian_nationalism] is greater than or equal to #v 200#!"
+ indian_nationalism_above_250_tt: "[concept_indian_nationalism] is greater than or equal to #v 250#!"
+ indian_nationalism_above_300_tt: "[concept_indian_nationalism] is greater than or equal to #v 300#!"
+ indian_nationalism_above_400_tt: "[concept_indian_nationalism] is greater than or equal to #v 400#!"
+
+ indian_nationalism_advance_25_tt: "[concept_indian_nationalism] will advance by #v 25#!"
+ indian_nationalism_retreat_2_5_tt: "[concept_indian_nationalism] will retreat by #v 2.5#!"
+ indian_nationalism_retreat_5_tt: "[concept_indian_nationalism] will retreat by #v 5#!"
+ indian_nationalism_retreat_15_tt: "[concept_indian_nationalism] will retreat by #v 15#!"
+ indian_nationalism_retreat_50_tt: "[concept_indian_nationalism] will retreat by #v 50#!"
+
+ indian_colonial_authority: "Colonial Authority"
+
+ # india_events.17
+ modifier_indian_martyr_executed: "Martyr Executed"
+
+ has_started_diplomatic_play_against_princely_state_subject_tt: "[ROOT.GetCountry.GetName] has started a [concept_diplomatic_play] against one of its [concept_princely_state] [Concept('concept_subject', '$concept_subjects$')]"
+
+ notification_rowlatt_act_passed_name: "Indian Imprisonment Act Passed"
+ notification_rowlatt_act_passed_desc: "The #b Imprisonment Act#! has been passed in India, pushing the #b $movement_india_pan_national$#! towards seeking independence."
+ notification_rowlatt_act_passed_tooltip: "#header $notification_rowlatt_act_passed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_rowlatt_act_passed_desc$"
+ notification_jallianwala_massacre_name: "Soldiers Fire on Indian Protestors"
+ notification_jallianwala_massacre_desc: "Soldiers have fired on protesters in India, pushing the #b $movement_india_pan_national$#! towards seeking independence."
+ notification_jallianwala_massacre_tooltip: "#header $notification_jallianwala_massacre_name$#!\n$TOOLTIP_DELIMITER$\n$notification_jallianwala_massacre_desc$"
+ notification_communal_divides_change_factor_increased_name: "Unity / Separatism Accelerates"
+ notification_communal_divides_change_factor_increased_desc: "The rate of change has increased for #b $hindu$#! and #b $muslim$#! #b #blue Unity#!#! / #b #red Separatism#!#!"
+ notification_communal_divides_change_factor_increased_tooltip: "#header $notification_communal_divides_change_factor_increased_name$#!\n$TOOLTIP_DELIMITER$\n$notification_communal_divides_change_factor_increased_desc$"
+ notification_inc_supporting_burmese_autonomy_name: "Indian Support for Greater Burmese Autonomy"
+ notification_inc_supporting_burmese_autonomy_desc: "The [SCOPE.sPoliticalLobby('inc_scope').GetName] has announced its support for greater [GetCulture('burmese').GetHeritageTrait.GetName] autonomy."
+ notification_inc_supporting_burmese_autonomy_name_tooltip: "#header $notification_inc_supporting_burmese_autonomy_name$#!\n$TOOLTIP_DELIMITER$\n$notification_inc_supporting_burmese_autonomy_desc$"
+ notification_inc_supporting_burmese_territorial_integrity_name: "Indian Support for Returning Burmese Territory"
+ notification_inc_supporting_burmese_territorial_integrity_desc: "The [SCOPE.sPoliticalLobby('inc_scope').GetName] has announced its support for the return of all [GetCulture('burmese').GetHeritageTrait.GetName] territory to [SCOPE.sCountry('burma_scope').GetName]."
+ notification_inc_supporting_burmese_territorial_integrity_tooltip: "#header $notification_inc_supporting_burmese_territorial_integrity_name$#!\n$TOOLTIP_DELIMITER$\n$notification_inc_supporting_burmese_territorial_integrity_desc$"

@@ -1,0 +1,319 @@
+﻿REPLACE:je_communal_divides = {
+    icon = "gfx/interface/icons/generic_icons/truce.dds"
+
+    group = je_group_british_india
+
+    scripted_progress_bar = je_communal_divides_hindu_progressbar
+    scripted_progress_bar = je_communal_divides_muslim_progressbar
+
+    scripted_button = je_communal_divides_federal_solution
+    # TODO: Add a button for 'Forsake Unity' which just force fails the JE
+
+    is_shown_in_lobby = {
+        has_dlc_feature = ip2_content #Pivot of Empire
+        c:BIC ?= this
+    }
+
+    is_shown_when_inactive = {
+    	OR = {
+            c:BIC ?= this
+    		c:BHT ?= this
+    	}
+        has_technology_researched = pan-nationalism
+        any_scope_state = {
+            state_is_homeland_of_indian_cultures = yes
+            any_scope_pop = {
+                religion = rel:hindu
+            }
+            count >= 5
+        }
+        any_scope_state = {
+            state_is_homeland_of_indian_cultures = yes
+            any_scope_pop = {
+                religion ?= {
+                    has_discrimination_trait = heritage_islamic
+                }
+            }
+            count >= 5
+        }
+        any_political_movement = {
+            is_political_movement_type = movement_hindu_nationalist
+        }
+        any_political_movement = {
+            is_political_movement_type = movement_muslim_nationalist
+        }
+        NOT = {
+            has_variable = colonial_victory_in_indian_war_of_independence
+        }
+    }
+
+    possible = {
+        any_political_movement = {
+            OR = {
+                is_political_movement_type = movement_hindu_nationalist
+                is_political_movement_type = movement_muslim_nationalist
+            }
+            OR = {
+                custom_tooltip = {
+                    text = cd_very_high_movement_identity_support
+                    political_movement_identity_support >= 0.36
+                }
+                AND = {
+                    custom_tooltip = {
+                        text = cd_high_movement_identity_support
+                        political_movement_identity_support >= 0.24
+                    }
+                    custom_tooltip = {
+                        text = cd_20_movement_activism
+                        political_movement_radicalism >= 0.20
+                    }
+                }
+                AND = {
+                    custom_tooltip = {
+                        text = cd_medium_movement_identity_support
+                        political_movement_identity_support >= 0.12
+                    }
+                    custom_tooltip = {
+                        text = cd_40_movement_activism
+                        political_movement_radicalism >= 0.40
+                    }
+                }
+                custom_tooltip = {
+                    text = cd_60_movement_activism
+                    political_movement_radicalism >= 0.60
+                }
+            }
+        }
+    }
+
+    immediate = {
+        trigger_event = { id = communal_divides_events.14 popup = yes }
+        random_political_movement = {
+            limit = {
+                is_political_movement_type = movement_hindu_nationalist
+            }
+            save_scope_as = hindu_mahasabha_scope
+        }
+        random_political_movement = {
+            limit = {
+                is_political_movement_type = movement_muslim_nationalist
+            }
+            save_scope_as = muslim_league_scope
+        }
+        je:je_communal_divides = {
+            set_variable = {
+                name = change_factor
+                value = 1
+            }
+            set_variable = {
+                name = change_increase_timer
+                years = 5
+            }
+        }
+    }
+
+    complete = {
+        OR = {
+            custom_tooltip = {
+                text = hindu_muslim_unity_150_tt
+                150 <= {
+                    value = 0
+                    scope:journal_entry = {
+                        add = "scripted_bar_progress(je_communal_divides_hindu_progressbar)"
+                        add = "scripted_bar_progress(je_communal_divides_muslim_progressbar)"
+                    }
+                }
+            }
+            AND = {
+                custom_tooltip = {
+                    text = communal_divides_10_timer_tt
+                    scope:journal_entry = {
+                        journal_entry_age > 3650
+                    }
+                }
+                custom_tooltip = {
+                    text = india_has_homerule_or_independence_tt
+                    c:BHT ?= ROOT
+                }
+                custom_tooltip = {
+                    text = je_communal_divides_goal_tt
+                    has_variable = selected_federal_solution_var
+                }
+            }
+        }
+    }
+
+    on_complete = {
+        hidden_effect = {
+            set_variable = communal_divides_completed
+        }
+        random_political_movement = {
+            limit = {
+                is_political_movement_type = movement_hindu_nationalist
+            }
+            add_modifier = {
+                name = indian_divisions_mended
+                days = long_modifier_time
+                is_decaying = yes
+            }
+        }
+        random_political_movement = {
+            limit = {
+                is_political_movement_type = movement_muslim_nationalist
+            }
+            add_modifier = {
+                name = indian_divisions_mended
+                days = long_modifier_time
+                is_decaying = yes
+            }
+        }
+        if = {
+            limit = {
+                c:BHT ?= ROOT
+            }
+            custom_tooltip = nationalist_movements_lose_support_activism_boost_from_self_rule_tt
+        } else = {
+            custom_tooltip = nationalist_movements_lose_activism_boost_from_indian_nationalism_tt
+        }
+        custom_tooltip = india_will_remain_unified_tt
+        custom_tooltip = triggers_the_federal_solution_tt
+        custom_tooltip = {
+            text = triggers_one_nation_theory_tt
+            if = {
+                limit = {
+                    NOT = {
+                        has_variable = selected_federal_solution_var
+                    }
+                }
+                trigger_event = { id = communal_divides_events.1 popup = yes }
+            }
+            else = {
+                trigger_event = { id = communal_divides_events.15 popup = yes }
+            }
+        }
+    }
+
+    event_outcome_completed_effect_desc = {
+        header = event_effects_header_communal_divides_events_15
+        effect = {
+            execute_event_option = { event = communal_divides_events.15 option = 0 }
+        }
+    }
+
+    event_outcome_completed_effect_desc = {
+        header = event_effects_header_communal_divides_events_1.a
+        effect = {
+            execute_event_option = { event = communal_divides_events.1 option = 0 }
+        }
+    }
+
+    event_outcome_completed_effect_desc = {
+        header = event_effects_header_communal_divides_events_1.b
+        effect = {
+            execute_event_option = { event = communal_divides_events.1 option = 1 }
+        }
+    }
+
+    invalid = {
+        hidden_trigger = {
+            OR = {
+                NAND = {
+                    any_political_movement = {
+                        is_political_movement_type = movement_hindu_nationalist
+                    }
+                    any_political_movement = {
+                        is_political_movement_type = movement_muslim_nationalist
+                    }
+                }
+                AND = {
+                    exists = c:BHT
+                    NOT = {
+                        c:BHT ?= this
+                    }
+                    c:BHT ?= {
+                        is_revolutionary = no
+                    }
+                }
+                has_variable = colonial_victory_in_indian_war_of_independence
+            }
+        }
+    }
+
+    fail = {
+        OR = {
+            custom_tooltip = {
+                text = hindu_separatism_100_tt
+                scope:journal_entry = {
+                    "scripted_bar_progress(je_communal_divides_hindu_progressbar)" <= 0
+                }
+            }
+            custom_tooltip = {
+                text = muslim_separatism_100_tt
+                scope:journal_entry = {
+                    "scripted_bar_progress(je_communal_divides_muslim_progressbar)" <= 0
+                }
+            }
+            any_political_movement = {
+                OR = {
+                    is_political_movement_type = movement_hindu_nationalist
+                    is_political_movement_type = movement_muslim_nationalist
+                }
+                is_insurrectionary = yes
+            }
+        }
+    }
+
+    on_fail = {
+        hidden_effect = {
+            set_variable = communal_divides_completed
+        }
+        hidden_effect = {
+            trigger_event = { id = communal_divides_events.2 popup = yes }
+        }
+        show_as_tooltip = {
+            execute_event_option = { event = communal_divides_events.2 option = 0 }
+        }
+    }
+
+    on_yearly_pulse = {
+        random_events = {
+            delay = { months = { 2 4 } }
+            10 = communal_divides_events.3
+            10 = communal_divides_events.4
+            10 = communal_divides_events.5
+            10 = communal_divides_events.6
+            10 = communal_divides_events.7
+            10 = communal_divides_events.8
+            10 = communal_divides_events.9
+            10 = communal_divides_events.10
+            10 = communal_divides_events.11
+            10 = communal_divides_events.12
+            10 = communal_divides_events.13
+        }
+        effect = {
+            if = {
+                limit = {
+                    je:je_communal_divides = {
+                        NOT = {
+                            has_variable = change_increase_timer
+                        }
+                    }
+                }
+                scope:journal_entry = {
+                    set_variable = {
+                        name = change_increase_timer
+                        years = 5
+                    }
+                    change_variable = {
+                        name = change_factor
+                        add = 1
+                    }
+                }
+                post_notification = communal_divides_change_factor_increased
+            }
+        }
+    }
+
+    weight = 1000
+    should_be_pinned_by_default_uninvolved_or_context = yes
+}

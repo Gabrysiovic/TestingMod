@@ -1,0 +1,18 @@
+﻿REPLACE:ig_trait_swaraj = {
+	icon = "gfx/interface/icons/ig_trait_icons/social_criticism.dds"
+	max_approval = unhappy
+
+	modifier = {
+		state_institution_impact_add = -0.15
+	}
+}
+
+REPLACE:ig_trait_westernisation = {
+	icon = "gfx/interface/icons/ig_trait_icons/propagandists.dds"
+	min_approval = loyal
+
+	modifier = {
+		state_radicals_from_political_movements_mult = -0.1
+		state_turmoil_effects_mult = -0.1
+	}
+}

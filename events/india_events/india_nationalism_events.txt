@@ -1,0 +1,896 @@
+﻿namespace = india_nationalism_events
+
+india_nationalism_events.1 = { # The Indian War of Independence
+	type = country_event
+	placement = ROOT
+
+	duration = 3
+
+	title = india_nationalism_events.1.t
+	desc = {
+		triggered_desc = {
+			desc = india_nationalism_events.1.d_subject
+			trigger = {
+				c:BIC ?= {
+					is_subject = yes
+				}
+			}
+		}
+		triggered_desc = {
+			desc = india_nationalism_events.1.d_independent
+			trigger = {
+				c:BIC ?= {
+					is_subject = no
+				}
+			}
+		}
+	}
+	flavor = india_nationalism_events.1.f
+
+	event_image = {
+		video = "asia_sepoy_mutiny"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	cooldown = { days = normal_modifier_time }
+
+	# Triggered by je_india_nationalism
+	trigger = { }
+
+	immediate = {
+		c:BIC ?= {
+			save_scope_as = india_scope
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				overlord ?= {
+					save_scope_as = overlord_scope
+				}
+			}
+			else = {
+				save_scope_as = overlord_scope
+			}
+		}
+		random_country = {
+			limit = {
+				civil_war_origin_country ?= c:BIC
+			}
+			save_scope_as = revolution_scope
+		}
+	}
+
+	option = {
+		name = india_nationalism_events.1.b
+		default_option = yes
+		custom_tooltip = indian_war_of_independence_begun_tt
+	}
+
+	option = {
+		name = india_nationalism_events.1.a
+		trigger = {
+			c:BIC ?= ROOT
+			is_player = yes
+		}
+		custom_tooltip = indian_war_of_independence_begun_tt
+		play_as = scope:revolution_scope
+	}
+}
+
+india_nationalism_events.2 = { # The Jewel Secured
+	type = country_event
+	placement = ROOT
+
+	duration = 3
+
+	title = india_nationalism_events.2.t
+	desc = india_nationalism_events.2.d
+	flavor = india_nationalism_events.2.f
+
+	event_image = {
+		video = "europenorthamerica_before_the_battle"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	# Triggered by je_india_nationalism
+	trigger = { }
+
+	immediate = {
+		if = {
+			limit = {
+				c:BIC = {
+					is_subject = yes
+				}
+			}
+			c:BIC = {
+				overlord = {
+					save_scope_as = overlord_scope
+				}
+			}
+		}
+		else = {
+			c:BIC = {
+				save_scope_as = overlord_scope
+			}
+		}
+	}
+
+	option = {
+		name = india_nationalism_events.2.a
+		default_option = yes
+		custom_tooltip = {
+			text = indian_sovereignty_movement_dead_tt
+		}
+	}
+}
+
+india_nationalism_events.3 = { # The Salt March
+	type = country_event
+	placement = scope:salt_march_state
+
+	duration = 3
+
+	title = india_nationalism_events.3.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = india_nationalism_events.3.d
+				trigger = {
+					NOT = {
+						has_variable = overlord_salt_march_arrest
+					}
+				}
+			}
+			triggered_desc = {
+				desc = india_nationalism_events.3.d_arrest
+			}
+		}
+	}
+	flavor = india_nationalism_events.3.f
+
+	event_image = {
+		video = "ip2_india_protest"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	cooldown = { days = stupidly_long_modifier_time }
+
+	# Triggered by indian_nation_events.3 or je_india_home_rule
+	trigger = {
+		has_dlc_feature = ip2_content
+		c:BIC ?= this
+		any_scope_state = {
+			is_coastal = yes
+			is_incorporated = yes
+			is_in_geographic_region = geographic_region_india
+		}
+		any_political_movement = {
+			is_political_movement_type = movement_india_pan_national
+			any_supporting_character = {
+				has_role_of_type = agitator
+			}
+		}
+	}
+
+	immediate = {
+		je:je_india_home_rule ?= {
+			set_variable = salt_march
+		}
+		set_variable = {
+			name = protest_event_fired
+			months = 6
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_region = s:STATE_GUJARAT
+				}
+			}
+			s:STATE_GUJARAT.region_state:BIC = {
+				save_scope_as = salt_march_state
+			}
+		}
+		else = {
+			random_scope_state = {
+				limit = {
+					is_coastal = yes
+					is_incorporated = yes
+					is_in_geographic_region = geographic_region_india
+				}
+				save_scope_as = salt_march_state
+			}
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_national_movement
+			ordered_supporting_character = {
+				limit = {
+					has_role_of_type = agitator
+				}
+				position = 0
+				order_by = popularity
+				save_scope_as = prisoner_scope
+			}
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			overlord ?= {
+				save_scope_as = overlord_scope
+			}
+		}
+		else = {
+			save_scope_as = overlord_scope
+		}
+		random_political_lobby = {
+			limit = {
+				is_political_lobby_type = lobby_indian_national_congress
+			}
+			save_scope_as = anti_overlord_lobby
+		}
+	}
+
+	option = {
+		name = india_nationalism_events.3.a
+		trigger = {
+			NOT = {
+				has_variable = overlord_salt_march_arrest
+			}
+		}
+		ai_chance = 1
+		custom_tooltip = {
+			text = indian_nationalism_advance_15_tt
+			je:je_india_home_rule ?= {
+				add_progress = { value = 15 name = je_india_home_rule_progressbar }
+			}
+		}
+		scope:indian_national_movement = {
+			add_modifier = {
+				name = modifier_salt_march_movement
+				days = normal_modifier_time
+			}
+		}
+		scope:prisoner_scope = {
+			add_modifier = {
+				name = modifier_salt_march_leader
+				days = very_long_modifier_time
+			}
+		}
+		scope:salt_march_state = {
+			add_modifier = {
+				name = modifier_salt_tax_protests
+				days = normal_modifier_time
+			}
+		}
+		add_modifier = {
+			name = salt_protest_notoriety
+			days = normal_modifier_time
+		}
+		if = {
+			limit = {
+				has_journal_entry = je_india_non_cooperation_movement
+			}
+			custom_tooltip = {
+				text = increase_peaceful_protest_action_tt
+				change_variable = {
+					name = indian_peaceful_protest_actions
+					add = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = {
+	        trigger = {
+	        	has_variable = overlord_salt_march_arrest
+	        }
+	        text = india_nationalism_events.3.b_overlord_arrest
+	    }
+	    name = {
+	        trigger = {
+	        	NOT = {
+	        		has_variable = overlord_salt_march_arrest
+	        	}
+	        }
+	        text = india_nationalism_events.3.b_bic_arrest
+	    }
+	    default_option = yes
+		ai_chance = 1
+		custom_tooltip = {
+			text = indian_nationalism_advance_15_tt
+			je:je_india_home_rule ?= {
+				add_progress = { value = 15 name = je_india_home_rule_progressbar }
+			}
+		}
+		scope:indian_national_movement = {
+			add_modifier = {
+				name = modifier_salt_march_movement
+				days = normal_modifier_time
+			}
+		}
+		scope:prisoner_scope = {
+			add_modifier = {
+				name = modifier_salt_march_leader
+				days = very_long_modifier_time
+			}
+			custom_tooltip = {
+				text = to_jail_3_tt
+				set_variable = { name = prison_time_var value = 36 }
+				set_variable = { name = prison_country value = owner }
+				set_variable = {
+					name = indian_national_movement_prisoner
+					months = 36
+				}
+				place_character_in_void = 48
+			}
+		}
+		if = {
+			limit = {
+				je:je_india_home_rule = {
+					has_variable = rowlatt_act
+				}
+			}
+			scope:indian_national_movement = {
+				add_modifier = {
+					name = rowlatt_act_used_modifier
+					days = normal_modifier_time
+				}
+			}
+		}
+		scope:anti_overlord_lobby = {
+			change_appeasement = {
+				amount = -2
+				factor = appeasement_indian_hostile_action
+			}
+		}
+		scope:salt_march_state = {
+			add_modifier = {
+				name = modifier_salt_tax_protests
+				days = normal_modifier_time
+				multiplier = 0.5
+			}
+		}
+		add_modifier = {
+			name = salt_protest_notoriety
+			days = normal_modifier_time
+			multiplier = 0.5
+		}
+		if = {
+			limit = {
+				has_journal_entry = je_india_non_cooperation_movement
+			}
+			custom_tooltip = {
+				text = increase_peaceful_protest_action_tt
+				change_variable = {
+					name = indian_peaceful_protest_actions
+					add = 1
+				}
+			}
+		}
+	}
+}
+
+india_nationalism_events.4 = { # Gandhi in Sooth Efrika
+	type = country_event
+	placement = scope:gandhi_state
+
+	duration = 3
+
+	title = india_nationalism_events.4.t
+	desc = india_nationalism_events.4.d
+	flavor = india_nationalism_events.4.f
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:gandhi_scope
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	cooldown = { days = normal_modifier_time }
+
+	# Triggered by on_yearly_events
+	trigger = {
+		has_dlc_feature = ip2_content
+		game_date >= 1893.1.1
+		# So Gandhi doesn't spend an insignificant amount of time in South Africa
+		game_date <= 1895.1.1
+		ROOT = {
+			NOT = {
+				c:BIC ?= this
+			}
+			is_subject_of = c:BIC.overlord
+			is_country_type = colonial
+		}
+		NOR = {
+			is_in_geographic_region = geographic_region_india
+			is_in_geographic_region = geographic_region_europe
+			is_in_geographic_region = geographic_region_north_america
+		}
+		any_scope_state = {
+			any_scope_pop = {
+				culture = {
+					has_discrimination_trait_group = heritage_group_south_asian
+				}
+			}
+		}
+		NOT = {
+			has_law_or_variant = law_type:law_multicultural
+		}
+		NOT = {
+			has_global_variable = gandhi_spawn
+		}
+	}
+
+	immediate = {
+		set_global_variable = gandhi_spawn
+		if = {
+			limit = {
+				any_scope_state = {
+					state_region = s:STATE_ZULULAND
+					any_scope_pop = {
+						culture = {
+							has_discrimination_trait_group = heritage_group_south_asian
+						}
+					}
+				}
+			}
+			s:STATE_ZULULAND.region_state:SAF ?= {
+				save_scope_as = gandhi_state
+			}
+		}
+		else_if = {
+			limit = {
+				any_scope_state = {
+					state_region = s:STATE_EASTERN_CAPE
+					any_scope_pop = {
+						culture = {
+							has_discrimination_trait_group = heritage_group_south_asian
+						}
+					}
+				}
+			}
+			s:STATE_EASTERN_CAPE.region_state:SAF ?= {
+				save_scope_as = gandhi_state
+			}
+		}
+		else = {
+			random_scope_state = {
+				limit = {
+					any_scope_pop = {
+						culture = {
+							has_discrimination_trait_group = heritage_group_south_asian
+						}
+					}
+				}
+				save_scope_as = gandhi_state
+			}
+		}
+		create_character = {
+			template = BIC_mohandas_karamchand_gandhi
+			on_created = {
+				set_variable = gandhi_var
+				set_variable = gandhi_south_africa
+				# We want Gandhi to be around long enough to be picked up by the Indian Independence Movement
+				set_career_length = {
+					role = agitator
+					years = 25
+					random_range = { 1.0 1.166 } # 25-30 years
+				}
+			}
+		}
+		random_scope_character = {
+			limit = {
+				has_variable = gandhi_var
+			}
+			save_scope_as = gandhi_scope
+		}
+	}
+
+	option = {
+		name = india_nationalism_events.4.a
+		default_option = yes
+		scope:gandhi_state = {
+			add_modifier = {
+				name = modifier_natal_indian_congress
+				days = long_modifier_time
+			}
+		}
+		every_interest_group = {
+			limit = {
+				law_enactment_stance = {
+					law = law_type:law_multicultural
+					value < neutral
+				}
+				is_marginal = no
+			}
+			add_modifier = {
+				name = listening_to_indian_congress
+				years = 5
+			}
+		}
+	}
+
+	option = {
+		name = india_nationalism_events.4.b
+		scope:gandhi_state = {
+			add_modifier = {
+				name = modifier_natal_indian_congress
+				days = long_modifier_time
+				multiplier = 0.5
+			}
+		}
+		scope:gandhi_scope = {
+			add_trait = scarred
+		}
+	}
+}
+
+india_nationalism_events.5 = { # Gandhi in India
+	type = country_event
+	placement = ROOT
+
+	duration = 3
+
+	title = india_nationalism_events.5.t
+	desc = india_nationalism_events.5.d
+	flavor = india_nationalism_events.5.f
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:gandhi_scope
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	cooldown = { days = stupidly_long_modifier_time }
+
+	trigger = {
+		has_dlc_feature = ip2_content
+		c:BIC ?= this
+		has_journal_entry = je_india_home_rule
+		OR = {
+			AND = {
+				# So Gandhi can spend at least some time abroad
+				game_date >= 1898.1.1
+				je:je_india_home_rule = {
+					var:gandhi_arrival_threshold <= "scripted_bar_progress(je_india_home_rule_progressbar)"
+				}
+			}
+			game_date >= 1915.1.1
+		}
+		NOT = {
+			any_country = {
+				any_scope_character = {
+					has_template = BIC_mohandas_karamchand_gandhi
+				}
+				is_enacting_law = law_type:law_multicultural
+			}
+		}
+		NOT = {
+			has_variable = gandhi_arrived
+		}
+	}
+
+	immediate = {
+		set_variable = gandhi_arrived
+		if = {
+			limit = {
+				any_country = {
+					any_scope_character = {
+						has_template = BIC_mohandas_karamchand_gandhi
+					}
+				}
+			}
+			random_country = {
+				limit = {
+					any_scope_character = {
+						has_template = BIC_mohandas_karamchand_gandhi
+					}
+				}
+				save_scope_as = gandhi_exit_scope
+				random_scope_character = {
+					limit = {
+						has_template = BIC_mohandas_karamchand_gandhi
+					}
+					transfer_character = ROOT
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				any_character_in_exile_pool = {
+					has_template = BIC_mohandas_karamchand_gandhi
+				}
+			}
+			random_character_in_exile_pool = {
+				limit = {
+					has_template = BIC_mohandas_karamchand_gandhi
+				}
+				transfer_character = ROOT
+			}
+		}
+		else_if = {
+			limit = {
+				any_character_in_jail = {
+					has_template = BIC_mohandas_karamchand_gandhi
+				}
+			}
+			random_character_in_jail = {
+				limit = {
+					has_template = BIC_mohandas_karamchand_gandhi
+				}
+				free_character_from_void = yes
+				owner ?= {
+					save_scope_as = gandhi_exit_scope
+				}
+				transfer_character = ROOT
+				remove_variable = prison_country
+				remove_variable = prison_time_var
+			}
+		}
+		else = {
+			create_character = {
+				template = BIC_mohandas_karamchand_gandhi
+				on_created = {
+					set_variable = gandhi_var
+				}
+			}
+		}
+		random_scope_character = {
+			limit = {
+				has_template = BIC_mohandas_karamchand_gandhi
+			}
+			save_scope_as = gandhi_scope
+			# We want Gandhi to be around for the entire Indian Independence Movement
+			set_career_length = {
+				role = agitator
+				years = 40
+				random_range = { 1 1.5 } # 40-60 years
+			}
+			## Drip
+			if = {
+				limit = {
+					has_variable = gandhi_south_africa
+				}
+				remove_variable = gandhi_south_africa
+			}
+			# Gandhi will change to his iconic look after 5 years in India
+			set_variable = {
+				name = gandhi_cap
+				years = 5
+			}
+			##
+		}
+		if = {
+			limit = {
+				exists = scope:gandhi_exit_scope
+			}
+			scope:gandhi_exit_scope = {
+				post_notification = gandhi_leaves
+			}
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_national_movement
+		}
+	}
+
+	option = {
+		name = india_nationalism_events.5.a
+		default_option = yes
+		scope:gandhi_scope = {
+			add_modifier = {
+				name = modifier_father_of_satyagraha
+			}
+		}
+	}
+}
+
+india_nationalism_events.6 = { # India League
+	type = country_event
+	placement = ROOT
+
+	duration = 3
+
+	title = india_nationalism_events.6.t
+	desc = india_nationalism_events.6.d
+	flavor = india_nationalism_events.6.f
+
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	cooldown = { days = stupidly_long_modifier_time }
+
+	trigger = {
+		has_dlc_feature = ip2_content
+		any_direct_subject = {
+			c:BIC ?= this
+		}
+		any_interest_group = {
+			ig_is_indian_reformist = yes
+			is_marginal = no
+		}
+		NOT = {
+			has_variable = india_league
+		}
+	}
+
+	immediate = {
+		random_subject_or_below = {
+			limit = {
+				c:BIC ?= this
+			}
+			save_scope_as = india_scope
+		}
+		set_variable = india_league
+	}
+
+	option = {
+		name = india_nationalism_events.6.a
+		default_option = yes
+		every_interest_group = {
+			limit = {
+				ig_is_indian_reformist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+				name = modifier_india_league_ig
+				days = normal_modifier_time
+			}
+		}
+	}
+
+	option = {
+		name = india_nationalism_events.6.b
+		every_interest_group = {
+			limit = {
+				ig_is_indian_reformist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+				name = modifier_india_league_ig
+				days = normal_modifier_time
+				multiplier = 0.5
+			}
+		}
+		every_primary_culture = {
+			prev = {
+				add_loyalists = {
+					value = medium_radicals
+					pop_type = officers
+					culture = prev
+				}
+			}
+		}
+	}
+}
+
+india_nationalism_events.7 = { # The Condition of India
+	type = country_event
+	placement = ROOT
+
+	duration = 3
+
+	title = india_nationalism_events.7.t
+	desc = india_nationalism_events.7.d
+	flavor = india_nationalism_events.7.f
+
+	event_image = {
+		video = "ip2_india_urban_scene"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	cooldown = { days = stupidly_long_modifier_time }
+
+	trigger = {
+		has_dlc_feature = ip2_content
+		has_variable = india_league
+		any_subject_or_below = {
+			c:BIC ?= this
+		}
+		any_interest_group = {
+			ig_is_indian_reformist = yes
+			is_marginal = no
+		}
+	}
+
+	immediate = {
+		random_subject_or_below = {
+			limit = {
+				c:BIC ?= this
+			}
+			save_scope_as = india_scope
+		}
+	}
+
+	option = {
+		name = india_nationalism_events.7.a
+		default_option = yes
+		every_interest_group = {
+			limit = {
+				ig_is_indian_imperialist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+				name = modifier_condition_of_india_approved_bad
+				days = normal_modifier_time
+			}
+		}
+		every_interest_group = {
+			limit = {
+				ig_is_indian_reformist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+				name = modifier_condition_of_india_approved_good
+				days = normal_modifier_time
+			}
+		}
+	}
+
+	option = {
+		name = india_nationalism_events.7.b
+		every_interest_group = {
+			limit = {
+				ig_is_indian_imperialist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+				name = modifier_condition_of_india_rejected_good
+				days = normal_modifier_time
+			}
+		}
+		every_interest_group = {
+			limit = {
+				ig_is_indian_reformist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+				name = modifier_condition_of_india_rejected
+				days = normal_modifier_time
+			}
+		}
+	}
+}

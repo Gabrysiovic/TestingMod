@@ -1,0 +1,35 @@
+﻿REPLACE_OR_CREATE:amendment_government_of_india_act = {
+
+	parent = law_multicultural
+
+	allowed_laws = {
+		law_subjecthood
+		law_ethnostate
+		law_national_supremacy
+		law_racial_segregation
+		law_cultural_exclusion
+	}
+
+	modifier = {
+		country_acceptance_no_shared_heritage_trait_add = 20
+	}
+
+	possible = {
+		always = yes
+	}
+
+	would_sponsor = {}
+
+	ai_will_revoke = {
+		always = no
+	}
+
+	can_repeal = { # For the tooltip
+		NOT = {
+			this.country_definition ?= cd:BIC
+		}
+		legitimacy >= legitimacy_to_repeal_amendment
+	}
+
+	amendment_activism_multiplier = 0.5
+}

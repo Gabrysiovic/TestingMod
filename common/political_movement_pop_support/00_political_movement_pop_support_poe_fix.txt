@@ -1,0 +1,22 @@
+﻿# root = political_movement
+
+## JOURNAL ENTRIES ##
+
+movement_support_indian_nationalism = {
+	name = INDIAN_NATIONALISM
+
+	visible = {
+		owner ?= { has_journal_entry = je_india_home_rule }
+	}
+}
+
+movement_support_indian_self_rule = {
+	name = INDIAN_SELF_RULE
+
+	visible = {
+		c:BHT ?= owner
+		owner ?= {
+			was_formed_from = BIC
+		}
+	}
+}

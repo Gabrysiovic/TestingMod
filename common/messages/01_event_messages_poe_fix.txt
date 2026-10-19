@@ -1,0 +1,6 @@
+﻿REPLACE:mirza_salim_has_died = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/death.dds"
+
+	notification_type = toast
+}

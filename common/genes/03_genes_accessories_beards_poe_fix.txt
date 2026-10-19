@@ -1,0 +1,23 @@
+﻿accessory_genes = {
+#####################################
+#									#
+# 			   BEARDS 			    #
+#									#
+#####################################
+	TRY_INJECT:beards = {
+
+		beard_henry_fane_poe_fix = {
+			index = 22
+			male = {
+				1 = male_beard_henry_fane
+			}
+			female = {}
+			boy = female
+			girl = female
+		}
+		
+		# The real fix is to update beard_henry_fane to use male_beard_henry_fane instead of male_hair_historical_henry_fane
+		# Btw, there is a duplicate beard_henry_fane in 03_genes_accessories_beards.txt that needs to be renamed to
+		# beard_mihailo_obrenovic
+		# Then 00_mihailo_obrenovic.txt needs to be updated to use that instead of beard_henry_fane
+}

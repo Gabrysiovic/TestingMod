@@ -1,0 +1,67 @@
+﻿REPLACE:dp_unify_india = {
+	war_goal = unify_india
+
+	texture = "gfx/interface/icons/war_goals/annex_country.dds"
+
+	selectable_in_lens = {
+		can_form_nation = BHT
+		has_indian_primary_culture = yes
+		OR = {
+			NOT = {
+				exists = c:BIC
+			}
+			c:BIC ?= {
+				has_variable = sepoy_mutiny_failed
+			}
+		}
+	}
+
+	possible = {
+		NOT = { is_country_type = decentralized }
+		aggressive_diplomatic_plays_permitted = yes
+		is_subject = no
+		has_technology_researched = pan-nationalism
+		scope:target_country = {
+			NOT = { is_country_type = decentralized }
+		}
+		this ?= {
+			is_in_geographic_region = geographic_region_india
+		}
+	}
+
+	on_weekly_pulse = {}
+
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+REPLACE_OR_CREATE:dp_sepoy_mutiny_new = {
+	war_goal = sepoy_mutiny
+
+	enable_switch_sides = no
+	allow_negotiated_peace = no
+	initiator_can_add_war_goals = no
+	target_can_add_war_goals = no
+	add_infamy_for_starting_initiator_wargoals = no
+	add_infamy_for_starting_target_wargoals = no
+	ai_acceptance_max = 0
+
+	texture = "gfx/interface/icons/war_goals/annex_country.dds"
+
+	selectable_in_lens = {
+		always = no
+	}
+
+	possible = {}
+
+	ai_acceptance_max = 75
+
+	on_weekly_pulse = {}
+
+	on_war_begins = {}
+
+	on_war_end = {
+
+	}
+}

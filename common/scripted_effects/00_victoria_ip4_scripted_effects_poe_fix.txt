@@ -1,0 +1,498 @@
+﻿REPLACE:run_colonial_governor_cycle = { # Run in character scope
+	save_scope_as = current_governor
+	if = {
+		limit = {
+			has_variable = colonial_governor_term
+		}
+		random_list = { # Average term length of 4 years
+			4 = {
+				change_variable = { name = colonial_governor_term add = 1 }
+			}
+			0 = {
+				modifier = {
+					add = {
+						value = var:colonial_governor_term
+					}
+					min = 0
+				}
+				owner = {
+					set_variable = { name = hide_ruler_change_notification days = 7 }
+					generate_governor_of_same_type = yes
+					post_notification = colonial_governor_cycle
+				}
+			}
+		}
+	}
+	else = {
+		set_variable = { name = colonial_governor_term value = 1 } # Just in case something strange has happened
+	}
+}
+
+REPLACE:generate_governor_of_same_type = { # Run in country scope
+	save_colonial_governor_generation_scopes = yes # Saving scopes for the sake of the templates
+	set_local_variable = {
+		name = bic_historical_viceroy_roll
+		value = {
+			fixed_range = {
+				min = 0
+				max = 100
+			}
+		}
+	}
+	if = {
+		limit = {
+			c:BIC ?= this
+			c:GBR ?= overlord
+			local_var:bic_historical_viceroy_roll >= 50
+			game_date >= 1841.1.1
+			game_date <= 1862.1.1
+			NOT = {
+				has_variable = canning_var
+			}
+		}
+		scope:current_governor ?= {
+			remove_variable = colonial_governor_term
+		}
+		create_character = {
+			template = BIC_charles_canning
+			on_created = {
+				set_character_as_ruler = yes
+				set_variable = { name = colonial_governor_term value = 0 }
+				owner ?= {
+		    		set_variable = canning_var
+		    	}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			c:BIC ?= this
+			c:GBR ?= overlord
+			local_var:bic_historical_viceroy_roll >= 50
+			game_date >= 1846.1.1
+			game_date <= 1879.1.1
+			NOT = {
+				has_variable = lawrence_var
+			}
+		}
+		scope:current_governor ?= {
+			remove_variable = colonial_governor_term
+		}
+		create_character = {
+			template = BIC_john_lawrence
+			on_created = {
+				set_character_as_ruler = yes
+				set_variable = { name = colonial_governor_term value = 0 }
+				owner ?= {
+		    		set_variable = lawrence_var
+		    	}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			c:BIC ?= this
+			c:GBR ?= overlord
+			local_var:bic_historical_viceroy_roll >= 50
+			game_date >= 1880.1.1
+			game_date <= 1910.1.1
+			NOT = {
+				has_variable = petty_fitzmaurice_var
+			}
+		}
+		scope:current_governor ?= {
+			remove_variable = colonial_governor_term
+		}
+		create_character = {
+			template = BIC_henry_petty-fitzmaurice
+			on_created = {
+				set_character_as_ruler = yes
+				set_variable = { name = colonial_governor_term value = 0 }
+				owner ?= {
+		    		set_variable = petty_fitzmaurice_var
+		    	}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			scope:current_governor ?= {
+				has_trait = special_character_colonial_plantation
+			}
+		}
+		scope:current_governor ?= {
+			remove_variable = colonial_governor_term
+		}
+		create_character = {
+			template = character_template_colonial_governor_plantation
+			on_created = {
+				set_character_as_ruler = yes
+				set_variable = { name = colonial_governor_term value = 0 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			scope:current_governor ?= {
+				has_trait = special_character_colonial_local
+			}
+		}
+		scope:current_governor ?= {
+			remove_variable = colonial_governor_term
+		}
+		create_character = {
+			template = character_template_colonial_governor_local
+			on_created = {
+				set_character_as_ruler = yes
+				set_variable = { name = colonial_governor_term value = 0 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			scope:current_governor ?= {
+				has_trait = special_character_colonial_extraction
+			}
+		}
+		scope:current_governor ?= {
+			remove_variable = colonial_governor_term
+		}
+		create_character = {
+			template = character_template_colonial_governor_extraction
+			on_created = {
+				set_character_as_ruler = yes
+				set_variable = { name = colonial_governor_term value = 0 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			scope:current_governor ?= {
+				has_trait = special_character_colonial_business
+			}
+		}
+		scope:current_governor ?= {
+			remove_variable = colonial_governor_term
+		}
+		create_character = {
+			template = character_template_colonial_governor_business
+			on_created = {
+				set_character_as_ruler = yes
+				set_variable = { name = colonial_governor_term value = 0 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			scope:current_governor ?= {
+				has_trait = special_character_colonial_military
+			}
+		}
+		scope:current_governor ?= {
+			remove_variable = colonial_governor_term
+		}
+		create_character = {
+			template = character_template_colonial_governor_military
+			on_created = {
+				set_character_as_ruler = yes
+				set_variable = { name = colonial_governor_term value = 0 }
+			}
+		}
+	}
+	else = { # Fallback for edge cases
+		scope:current_governor ?= {
+			remove_variable = colonial_governor_term
+		}
+		if = {
+			limit = {
+				c:BIC ?= this
+			}
+			create_character = {
+				template = character_template_colonial_governor_extraction
+				on_created = {
+					set_character_as_ruler = yes
+					set_variable = { name = colonial_governor_term value = 0 }
+				}
+			}
+		}
+		else = {
+			create_character = {
+				template = character_template_colonial_governor_military
+				on_created = {
+					set_character_as_ruler = yes
+					set_variable = { name = colonial_governor_term value = 0 }
+				}
+			}
+		}
+	}
+}
+
+REPLACE:ip4_coup_victory_government_effects = {
+	if = {
+		limit = {
+			scope:golpista_ig ?= {
+				is_insurrectionary = yes
+			}
+		}
+		scope:golpista_ig ?= {
+			abandon_revolution = yes
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_law = law_type:law_parliamentary_republic
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_council_republic
+				has_law = law_type:law_corporate_state
+				has_law = law_type:law_colonial_administration
+				has_gov_regency = yes
+			}
+			glorious_revolution_coup_trigger = no
+			dynastic_coup_trigger = no
+			### Pivot of Empire Fixes New Code
+			NOT = {
+				this.country_definition ?= cd:BIC
+			}
+			###
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_gov_regency = yes
+				}
+				if = {
+					limit = {
+						ruler = {
+							is_immortal = yes
+						}
+					}
+					ruler = {
+						set_character_immortal = no
+					}
+				}
+				scope:golpista_ig.leader ?= {
+					set_character_immortal = yes
+				}
+			}
+		}
+		set_variable = { name = keep_current_ruler_var days = 7 }
+		scope:golpista_ig.leader ?= {
+			set_character_as_ruler = yes
+		}
+	}
+	scope:golpista_ig = {
+		add_modifier = {
+			name = modifier_successful_coup
+			days = short_modifier_time
+			is_decaying = yes
+		}
+	}
+	if = {
+		limit = {
+			scope:golpista_ig ?= {
+				has_party = yes
+			}
+		}
+		scope:golpista_ig.party ?= {
+			set_ruling_party = yes
+		}
+	}
+	else = {
+		if = {
+			limit = {
+				scope:golpista_ig ?= {
+					is_in_government = no
+				}
+			}
+			scope:golpista_ig ?= {
+				add_ruling_interest_group = yes
+			}
+		}
+		every_interest_group = {
+			limit = {
+				is_in_government = yes
+				NOT = {
+					scope:golpista_ig ?= this
+				}
+			}
+			remove_ruling_interest_group = yes
+		}
+	}
+	if = {
+		limit = {
+			owner ?= {
+				country_has_voting_franchise = yes
+				in_election_campaign = no
+			}
+		}
+		owner ?= {
+			call_election = {
+				months = 3
+			}
+		}
+	}
+	add_modifier = {
+		name = modifier_government_recently_couped
+		days = short_modifier_time
+		is_decaying = yes
+	}
+}
+
+REPLACE:ip4_coup_victory_effect_interaction_display = {
+	if = {
+		limit = {
+			root.interest_group ?= {
+				is_insurrectionary = yes
+			}
+		}
+		root.interest_group ?= {
+			abandon_revolution = yes
+		}
+	}
+	if = {
+		limit = {
+			root.interest_group ?= {
+				has_party = yes
+			}
+		}
+		root.interest_group.party ?= {
+			set_ruling_party = yes
+		}
+	}
+	else = {
+		root.interest_group ?= {
+			add_ruling_interest_group = yes
+		}
+		every_interest_group = {
+			limit = {
+				is_in_government = yes
+				NOT = {
+					root.interest_group ?= this
+				}
+			}
+			remove_ruling_interest_group = yes
+		}
+	}
+	if = {
+		limit = {
+			exists = owner.currently_enacting_law
+			root.interest_group ?= {
+				law_enactment_stance = {
+					law = owner.currently_enacting_law.type
+					value < neutral
+				}
+			}
+		}
+		owner ?= {
+			cancel_enactment = yes
+		}
+	}
+	root.interest_group ?= {
+		ordered_preferred_law = {
+			limit = {
+				law_is_available = yes
+				NOT = {
+					owner = {
+						has_law = prev.type
+					}
+				}
+			}
+			position = 0
+			check_range_bounds = no
+			owner = {
+				activate_law = prev.type
+			}
+		}
+	}
+	if = {
+		limit = {
+			AND = { # To mirror the conditions of Isabella II's dethroning
+				has_journal_entry = je_the_two_spains
+				has_law = law_type:law_monarchy
+				var:two_spains_tension_current_var >= 50
+				ruler ?= { popularity <= define:NCharacters|POPULARITY_LIKED_THRESHOLD }
+				has_gov_regency = no
+			}
+		}
+		custom_tooltip = spain_current_ruler_abdicates_owner_scope_tt
+		add_modifier = modifier_regency
+		hidden_effect = {
+			heir ?= {
+				set_variable = deposed_spanish_heir
+				place_character_in_void = 500
+			}
+			ruler = {
+				set_variable = deposed_spanish_monarch
+				place_character_in_void = 500
+			}
+		}
+		scope:golpista_ig.leader ?= {
+			set_character_as_ruler = yes
+		}
+		trigger_event = { id = two_spains.4 days = 3 popup = yes }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_law = law_type:law_parliamentary_republic
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_council_republic
+				has_law = law_type:law_corporate_state
+				has_gov_regency = yes
+			}
+			### Pivot of Empire Fixes New Code
+			NOT = {
+				this.country_definition ?= cd:BIC
+			}
+			###
+		}
+		scope:golpista_ig.leader ?= {
+			set_character_as_ruler = yes
+		}
+	}
+	if = {
+		limit = {
+			owner ?= {
+				country_has_voting_franchise = yes
+				in_election_campaign = no
+			}
+		}
+		owner ?= {
+			call_election = {
+				months = 3
+			}
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_variable = coup_sponsor
+				var:coup_sponsor ?= {
+					is_country_alive = yes
+				}
+				var:coup_sponsor ?= {
+					has_diplomatic_pact = {
+						who = ROOT.owner
+						type = orchestrate_coup
+					}
+				}
+			}
+		}
+		owner = {
+			set_owes_obligation_to = {
+				country = var:coup_sponsor
+				setting = yes
+			}
+			create_diplomatic_catalyst = {
+				type = catalyst_orchestrate_coup_successful
+				target = var:coup_sponsor
+			}
+			var:coup_sponsor ?= {
+				power_bloc ?= {
+					add_leverage = { target = ROOT value = 500 }
+				}
+			}
+		}
+	}
+}

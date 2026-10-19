@@ -1,0 +1,54 @@
+﻿REPLACE_OR_CREATE:approved_indian_government_reform_good = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_approval_add = 2
+}
+
+REPLACE_OR_CREATE:approved_indian_government_reform_bad = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_approval_add = -2
+}
+
+REPLACE_OR_CREATE:rejected_indian_government_reform_good = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_approval_add = 2
+}
+
+REPLACE_OR_CREATE:rejected_indian_government_reform_bad = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_approval_add = -2
+}
+
+REPLACE_OR_CREATE:approved_indian_sovereignty_good = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_approval_add = 2
+}
+
+REPLACE_OR_CREATE:approved_indian_sovereignty_bad = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_approval_add = -2
+}
+
+REPLACE_OR_CREATE:rejected_indian_sovereignty_good = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_approval_add = 2
+}
+
+REPLACE_OR_CREATE:rejected_indian_sovereignty_bad = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_approval_add = -2
+}
+
+REPLACE_OR_CREATE:indian_reform_accepted = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	political_movement_radicalism_add = -0.1
+}
+
+REPLACE_OR_CREATE:indian_reform_denied = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	political_movement_radicalism_add = 0.1
+}
+
+REPLACE_OR_CREATE:indian_sovereignty_denied = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	political_movement_radicalism_add = 0.20
+}

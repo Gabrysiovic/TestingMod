@@ -1,0 +1,654 @@
+﻿namespace = british_dictates
+
+# These events are now just used to trigger je_british_dictates; if incorporated into the base game they can be
+# consolidated into a single event. There should curerntly be a 25% chance each year of trigger one of these
+# events (and thus the JE). They will only trigger *after* Unstable Raj / Sepoy Mutiny.
+british_dictates.1 = {
+	type = country_event
+
+	hidden = yes
+
+	trigger = {
+		has_dlc_feature = ip2_content
+		c:BIC ?= this
+		NOR = {
+			has_journal_entry = je_uneasy_raj
+			has_journal_entry = je_sepoy_mutiny
+		}
+		NOT = {
+			has_variable = british_dictates_started
+		}
+	}
+
+	immediate = {
+		set_variable = british_dictates_started
+	}
+}
+
+british_dictates.2 = {
+	type = country_event
+
+	hidden = yes
+
+	trigger = {
+		has_dlc_feature = ip2_content
+		c:BIC ?= this
+		NOR = {
+			has_journal_entry = je_uneasy_raj
+			has_journal_entry = je_sepoy_mutiny
+		}
+		NOT = {
+			has_variable = british_dictates_started
+		}
+	}
+
+	immediate = {
+		set_variable = british_dictates_started
+	}
+}
+
+british_dictates.3 = {
+	type = country_event
+
+	hidden = yes
+
+	trigger = {
+		always = no
+	}
+
+	immediate = {}
+}
+
+british_dictates.4 = {
+	type = country_event
+
+	hidden = yes
+
+	trigger = {
+		has_dlc_feature = ip2_content
+		c:BIC ?= this
+		NOR = {
+			has_journal_entry = je_uneasy_raj
+			has_journal_entry = je_sepoy_mutiny
+		}
+		NOT = {
+			has_variable = british_dictates_started
+		}
+	}
+
+	immediate = {
+		set_variable = british_dictates_started
+	}
+}
+
+# New Events for Reworked Colonial Dictates JEs
+
+british_dictates.5 = { # Opening Event for Colonial Dictates
+	type = country_event
+	placement = root
+
+	title = british_dictates.5.t
+	desc = british_dictates.5.d
+	flavor = british_dictates.5.f
+
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 3
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	# Triggered by je_british_dictates
+
+	cancellation_trigger = {
+		NOT = {
+			c:BIC ?= ROOT
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			overlord ?= {
+				save_scope_as = overlord_scope
+			}
+		}
+		else = {
+			save_scope_as = overlord_scope
+		}
+	}
+
+	option = {
+		name = british_dictates.5.a
+		default_option = yes
+		custom_tooltip = je_british_dictates_activated_tt
+	}
+}
+
+british_dictates.6 = { # Colonial Dictates Success
+	type = country_event
+	placement = root
+
+	title = british_dictates.6.t
+	desc = british_dictates.6.d
+	flavor = british_dictates.6.f
+
+	event_image = {
+		video = "unspecific_ruler_speaking_to_people"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 3
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	# Triggered by je_british_dictates
+
+	cancellation_trigger = {
+		NOT = {
+			c:BIC ?= ROOT
+		}
+	}
+
+	option = {
+		name = british_dictates.6.a
+		default_option = yes
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			change_relations = {
+				country = overlord
+				value = 30
+			}
+		}
+		add_modifier = {
+			name = india_model_colony
+			days = long_modifier_time
+		}
+		if = {
+			limit = {
+				# Keep rewards from showing in je_british_dictates until sub-jounral completed
+				NOT = {
+					has_journal_entry = je_british_dictate_plantations
+				}
+			}
+			if = {
+				limit = {
+					has_variable = plantations_prioritize_construction
+				}
+				add_modifier = colonial_prosperity_plantation_construction
+			}
+			else_if = {
+				limit = {
+					has_variable = plantations_prioritize_productivity
+				}
+				add_modifier = colonial_prosperity_plantation_productivity
+			}
+		}
+		if = {
+			limit = {
+				# Keep rewards from showing in je_british_dictates until sub-jounral completed
+				NOT = {
+					has_journal_entry = je_british_dictate_military
+				}
+			}
+			if = {
+				limit = {
+					has_variable = military_prioritize_army
+				}
+				add_modifier = colonial_prosperity_army
+			}
+			else_if = {
+				limit = {
+					has_variable = military_prioritize_navy
+				}
+				add_modifier = colonial_prosperity_navy
+			}
+		}
+		if = {
+			limit = {
+				# Keep rewards from showing in je_british_dictates until sub-jounral completed
+				NOT = {
+					has_journal_entry = je_british_dictate_universities
+				}
+			}
+			if = {
+				limit = {
+					has_variable = universities_prioritize_higher_education
+				}
+				add_modifier = colonial_prosperity_higher_education
+			}
+			else_if = {
+				limit = {
+					has_variable = universities_prioritize_public_schools
+				}
+				add_modifier = colonial_prosperity_public_schools
+			}
+		}
+	}
+}
+
+british_dictates.7 = { # Timeout Event for Colonial Dictates
+	type = country_event
+	placement = root
+
+	title = british_dictates.7.t
+	desc = british_dictates.7.d
+	flavor = british_dictates.7.f
+
+	event_image = {
+		video = "ep1_clandestine_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 3
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	# Triggered by je_british_dictates
+
+	cancellation_trigger = {
+		NOT = {
+			c:BIC ?= ROOT
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			overlord ?= {
+				save_scope_as = overlord_scope
+			}
+		}
+		else = {
+			save_scope_as = overlord_scope
+		}
+	}
+
+	option = {
+		name = british_dictates.7.a
+		default_option = yes
+		if = {
+			limit = {
+				NOR = {
+					has_variable = british_dictate_plantations_complete
+					has_variable = british_dictate_military_complete
+					has_variable = british_dictate_universities_complete
+				}
+			}
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				change_relations = {
+					country = overlord
+					value = -30
+				}
+			}
+			add_modifier = {
+				name = india_incomplete_dictates
+				days = long_modifier_time
+				multiplier = 2
+			}
+		}
+		else_if = {
+			limit = {
+				calc_true_if = {
+					amount <= 1
+					has_variable = british_dictate_plantations_complete
+					has_variable = british_dictate_military_complete
+					has_variable = british_dictate_universities_complete
+				}
+			}
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				change_relations = {
+					country = overlord
+					value = -15
+				}
+			}
+			add_modifier = {
+				name = india_incomplete_dictates
+				days = long_modifier_time
+				multiplier = 1
+			}
+		}
+	}
+}
+
+british_dictates.8 = { # je_british_dictate_plantations complete
+	type = country_event
+	placement = root
+
+	title = british_dictates.8.t
+	desc = {
+		triggered_desc = {
+			desc = british_dictates.8.d_plantation_construction
+			trigger = {
+				has_variable = plantations_prioritize_construction
+			}
+		}
+		triggered_desc = {
+			desc = british_dictates.8.d_plantation_productivity
+			trigger = {
+				has_variable = plantations_prioritize_productivity
+			}
+		}
+		triggered_desc = {
+			desc = british_dictates.8.d
+			trigger = {
+				NOR = {
+					has_variable = plantations_prioritize_construction
+					has_variable = plantations_prioritize_productivity
+				}
+			}
+		}
+	}
+	flavor = british_dictates.8.f
+
+	event_image = {
+		trigger = {
+			has_variable = plantations_prioritize_construction
+		}
+		video = "southamerica_factory_opening"
+	}
+	event_image = {
+		trigger = {
+			has_variable = plantations_prioritize_productivity
+		}
+		video = "ip4_colonial_exploitation_going_well"
+	}
+	event_image = {
+		trigger = {
+			NOR = {
+				has_variable = plantations_prioritize_construction
+				has_variable = plantations_prioritize_productivity
+			}
+		}
+		video = "southamerica_aristocrats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
+	duration = 3
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	# Triggered by je_british_dictate_plantations
+
+	cancellation_trigger = {
+		NOT = {
+			c:BIC ?= ROOT
+		}
+	}
+
+	immediate = {
+		g:opium ?= {
+			save_scope_as = opium_scope
+		}
+		g:dye ?= {
+			save_scope_as = dye_scope
+		}
+		g:tea ?= {
+			save_scope_as = tea_scope
+		}
+	}
+
+	option = {
+		name = british_dictates.8.a
+		default_option = yes
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			change_relations = {
+				country = overlord
+				value = 15
+			}
+		}
+		ig:ig_industrialists ?= {
+			add_modifier = {
+				name = british_dictate_successful
+				days = long_modifier_time
+			}
+		}
+		if = {
+			limit = {
+				has_variable = plantations_prioritize_construction
+			}
+			custom_tooltip = je_british_dictate_plantations_prioritize_construction_new_reward_tt
+		}
+		else_if = {
+			limit = {
+				has_variable = plantations_prioritize_productivity
+			}
+			custom_tooltip = je_british_dictate_plantations_prioritize_productivity_new_reward_tt
+		}
+	}
+}
+
+british_dictates.9 = { # je_british_dictate_military complete
+	type = country_event
+	placement = root
+
+	title = british_dictates.9.t
+	desc = {
+		triggered_desc = {
+			desc = british_dictates.9.d_army
+			trigger = {
+				has_variable = military_prioritize_army
+			}
+		}
+		triggered_desc = {
+			desc = british_dictates.9.d_navy
+			trigger = {
+				has_variable = military_prioritize_navy
+			}
+		}
+		triggered_desc = {
+			desc = british_dictates.9.d
+			trigger = {
+				NOR = {
+					has_variable = military_prioritize_army
+					has_variable = military_prioritize_navy
+				}
+			}
+		}
+	}
+	flavor = british_dictates.9.f
+
+	event_image = {
+		trigger = {
+			has_variable = military_prioritize_army
+		}
+		video = "unspecific_military_parade"
+	}
+	event_image = {
+		trigger = {
+			has_variable = military_prioritize_navy
+		}
+		video = "ep2_active_shipyard"
+	}
+	event_image = {
+		trigger = {
+			NOR = {
+				has_variable = military_prioritize_army
+				has_variable = military_prioritize_navy
+			}
+		}
+		video = "ep1_transfer_of_authority"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	duration = 3
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	# Triggered by je_british_dictate_military
+
+	cancellation_trigger = {
+		NOT = {
+			c:BIC ?= ROOT
+		}
+	}
+
+	immediate = {}
+
+	option = {
+		name = british_dictates.9.a
+		default_option = yes
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			change_relations = {
+				country = overlord
+				value = 15
+			}
+		}
+		ig:ig_armed_forces ?= {
+			add_modifier = {
+				name = british_dictate_successful
+				days = long_modifier_time
+			}
+		}
+		if = {
+			limit = {
+				has_variable = military_prioritize_army
+			}
+			custom_tooltip = je_british_dictate_military_prioritize_army_new_reward_tt
+		}
+		else_if = {
+			limit = {
+				has_variable = military_prioritize_navy
+			}
+			custom_tooltip = je_british_dictate_military_prioritize_navy_new_reward_tt
+		}
+	}
+}
+
+british_dictates.10 = { # je_british_dictate_universities complete
+	type = country_event
+	placement = root
+
+	title = british_dictates.10.t
+	desc = {
+		triggered_desc = {
+			desc = british_dictates.10.d_higher_education
+			trigger = {
+				has_variable = universities_prioritize_higher_education
+			}
+		}
+		triggered_desc = {
+			desc = british_dictates.10.d_public_schools
+			trigger = {
+				has_variable = universities_prioritize_public_schools
+			}
+		}
+		triggered_desc = {
+			desc = british_dictates.10.d
+			trigger = {
+				NOR = {
+					has_variable = universities_prioritize_higher_education
+					has_variable = universities_prioritize_public_schools
+				}
+			}
+		}
+	}
+	flavor = british_dictates.10.f
+
+	event_image = {
+		trigger = {
+			has_variable = universities_prioritize_higher_education
+		}
+		video = "ip4_university_lecture"
+	}
+	event_image = {
+		trigger = {
+			has_variable = universities_prioritize_public_schools
+		}
+		video = "ip3_village_school"
+	}
+	event_image = {
+		trigger = {
+			NOR = {
+				has_variable = universities_prioritize_higher_education
+				has_variable = universities_prioritize_public_schools
+			}
+		}
+		video = "ep2_intellectual_writer"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	# Triggered by je_british_dictates
+
+	cancellation_trigger = {
+		NOT = {
+			c:BIC ?= ROOT
+		}
+	}
+
+	immediate = {}
+
+	option = {
+		name = british_dictates.10.a
+		default_option = yes
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			change_relations = {
+				country = overlord
+				value = 15
+			}
+		}
+		ig:ig_intelligentsia ?= {
+			add_modifier = {
+				name = british_dictate_successful
+				days = long_modifier_time
+			}
+		}
+		if = {
+			limit = {
+				has_variable = universities_prioritize_higher_education
+			}
+			custom_tooltip = je_british_dictate_universities_prioritize_higher_education_new_reward_tt
+		}
+		else_if = {
+			limit = {
+				has_variable = universities_prioritize_public_schools
+			}
+			custom_tooltip = je_british_dictate_universities_prioritize_public_schools_new_reward_tt
+		}
+	}
+}

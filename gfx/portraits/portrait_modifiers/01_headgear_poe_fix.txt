@@ -1,0 +1,269 @@
+﻿# Note: The actual fix is to go into every indian_ headgear with is_ruler_of_own_country = yes and replace it with
+# AND = { is_ruler_of_own_country = yes owner ?= { country_has_monarchy_law = yes } }
+
+REPLACE_OR_CREATE:indian_headgear = {
+    usage = game
+    selection_behavior = weighted_random
+
+    indian_no_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 800000
+                indian_clothes_trigger = yes
+                agitator_character_trigger = no
+                scope:character = {
+                    is_ruler_of_own_country = yes
+                }
+                # Actual fix is to add monarchy_clothes_trigger = yes to indian_royal_headgear in 01_headgear.txt
+                monarchy_clothes_trigger = no
+            }
+        }
+    }
+
+    john_stuart_mill_no_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 800000
+                scope:character ?= {
+                    has_template = agitator_john_stuart_mill
+                }
+            }
+        }
+    }
+
+    bic_government_of_india = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100000
+                always = yes
+                scope:character ?= {
+                    is_interest_group_type = ig_industrialists
+                    owner ?= {
+                        country_definition ?= cd:BIC
+                    }
+                    OR = {
+                        is_ruler_of_own_country = no
+                        republic_clothes_trigger = yes
+                    }
+                    is_heir_of_own_country = no
+                }
+            }
+        }
+    }
+
+    gandhi_south_africa = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = european_hairstyles
+                accessory = male_hair_european_05
+            }
+            accessory = {
+               mode = add
+               gene = waistcoats
+               template = historical_waistcoats_dickens
+               range = { 0 0.1 }
+            }
+            accessory = {
+                mode = add
+                gene = civilian_coats
+                template = european_civilian_coats
+                accessory = male_civilian_coat_european_01
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear
+                range = { 0 1 }
+            }
+            accessory = {
+               mode = add
+               gene = top_layer
+               template = no_top_layer
+               range = { 0 1 }
+            }
+            accessory = {
+               mode = add
+               gene = belts
+               template = no_belt
+               range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = props
+                template = no_prop
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 800000
+                scope:character ?= {
+                    has_template = BIC_mohandas_karamchand_gandhi
+                    has_variable = gandhi_south_africa
+                }
+            }
+        }
+    }
+
+    gandhi_cap_outfit = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = european_hairstyles
+                accessory = male_hair_european_05
+            }
+            accessory = {
+                mode = add
+                gene = headgear
+                template = ghandi_topi_01
+                accessory = male_headgear_ghandi_topi_01
+            }
+            accessory = {
+                mode = add
+                gene = outfits
+                template = indian_amy_carmichael
+                accessory = male_civilian_coat_arabic_white_01
+            }
+            accessory = {
+               mode = add
+               gene = top_layer
+               template = no_top_layer
+               range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = no_legwear
+                range = { 0 1 }
+            }
+            accessory = {
+               mode = add
+               gene = belts
+               template = no_belt
+               range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = props
+                template = no_prop
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000000
+                scope:character ?= {
+                    has_template = BIC_mohandas_karamchand_gandhi
+                    has_variable = gandhi_cap
+                }
+            }
+        }
+    }
+
+    indian_military_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = indian_military_turban
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 900000
+                OR = {
+                    AND = {
+                        exists = scope:pop
+                        scope:pop = {
+                            religion = rel:sikh
+                            NOT = { is_pop_type = clergymen }
+                        }
+                    }
+                    AND = {
+                        exists = scope:character
+                        scope:character = {
+                            religion = rel:sikh
+                            OR = {
+                                is_ruler_of_own_country = no
+                                owner ?= {
+                                    country_has_monarchy_law = no
+                                }
+                            }
+                        }
+                    }
+                    AND = {
+                        indian_clothes_pop_trigger = yes
+                        OR = {
+                            soldier_clothes_pop_trigger = yes
+                            officers_clothes_pop_trigger = yes
+                        }
+                    }
+                    scope:character ?= {
+                        OR = {
+                            is_ruler_of_own_country = no
+                            owner ?= {
+                                country_has_monarchy_law = no
+                            }
+                        }
+                        OR = {
+                            has_role_of_type = general
+                            has_role_of_type = admiral
+                        }
+                        owner ?= {
+                            OR = {
+                                country_definition ?= cd:BIC
+                                has_indian_primary_culture = yes
+                            }
+                        }
+                        culture = {
+                            OR = {
+                                has_discrimination_trait_group = heritage_group_south_asian
+                                has_discrimination_trait_group = heritage_group_middle_eastern
+                            }
+                        }
+                    }
+                    # Everyone in the Sepoy Mutiny gets a soldier's outfit
+                    scope:character ?= {
+                        owner ?= {
+                            has_variable = sepoy_mutiny_country
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

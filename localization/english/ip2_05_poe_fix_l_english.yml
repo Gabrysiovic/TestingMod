@@ -1,0 +1,59 @@
+﻿l_english:
+  hindustan_acquires_territory_tt: "[SCOPE.sCountry('mughal_scope').GetNameNoFlag] has acquired territory outside of the #b Red Fort#!."
+
+  # mughal.6
+  mughal_rejected_foreign_support: "Rejecting Foreign Support"
+
+  # mughal.7
+  mughal_an_empire_restored: "An Empire Restored"
+
+  journal_indian_nationalism_boost_permanent_tt: "The #v 0.1#! monthly boost to [concept_indian_nationalism] becomes permanent."
+
+  je_india_swadeshi_movement: "The Swadeshi Movement"
+  je_india_swadeshi_movement_reason: "The [SCOPE.sPoliticalMovement('indian_national_movement').GetName] is gaining momentum, and its leaders have come up with a new campaign with a clear aim: economic self-sufficiency. They hope to demonstrate their movement's power by crippling the sale of foreign [SCOPE.sGoods('clothes_scope').GetName], [SCOPE.sGoods('furniture_scope').GetName], and [SCOPE.sGoods('liquor_scope').GetName] to #b India#!."
+
+  swadeshi_timer_tt: "#b $je_india_swadeshi_movement$#! has been ongoing for at least #v 2#! years."
+  indian_clothes_self_sufficient_tt: "The production of [SCOPE.sGoods('clothes_scope').GetName] in  [ROOT.GetCountry.GetAdjective] [GetGeographicRegion('geographic_region_india').GetName] (#v [ROOT.Var('indian_clothes_production').GetValue|K]#!) is #b greater than#! the consumption of [SCOPE.sGoods('clothes_scope').GetName] in [ROOT.GetCountry.GetAdjective] [GetGeographicRegion('geographic_region_india').GetName] (#v [ROOT.Var('indian_clothes_consumption').GetValue|K]#!)."
+  indian_furniture_self_sufficient_tt: "The production of [SCOPE.sGoods('furniture_scope').GetName] in [ROOT.GetCountry.GetAdjective] [GetGeographicRegion('geographic_region_india').GetName] (#v [ROOT.Var('indian_furniture_production').GetValue|K]#!) is #b greater than#! the consumption of [SCOPE.sGoods('furniture_scope').GetName] in [ROOT.GetCountry.GetAdjective] [GetGeographicRegion('geographic_region_india').GetName] (#v [ROOT.Var('indian_furniture_consumption').GetValue|K]#!)."
+  indian_liquor_self_sufficient_tt: "The production of [SCOPE.sGoods('liquor_scope').GetName] in [ROOT.GetCountry.GetAdjective] [GetGeographicRegion('geographic_region_india').GetName] (#v [ROOT.Var('indian_liquor_production').GetValue|K]#!) is #b greater than#! the consumption of [SCOPE.sGoods('liquor_scope').GetName] in [ROOT.GetCountry.GetAdjective] [GetGeographicRegion('geographic_region_india').GetName] (#v [ROOT.Var('indian_liquor_consumption').GetValue|K]#!)."
+
+  non_cooperation_movement_activated_tt: "#b $je_india_non_cooperation_movement$#! [concept_journal_entry] has been activated."
+  non_cooperation_movement_indian_nationalism_boost_tt: "While #b $je_india_non_cooperation_movement$#! is active, [concept_indian_nationalism] will increase by an additional #v 0.1#! each month."
+
+  notification_non_cooperation_movement_started_name: "Non-Cooperation Movement Started"
+  notification_non_cooperation_movement_started_desc: "#b $je_india_non_cooperation_movement$#! has started in India, boosting [concept_indian_nationalism]'s monthly progress while the movement is active."
+  notification_non_cooperation_movement_started_tooltip: "#header $notification_non_cooperation_movement_started_name$#!\n$TOOLTIP_DELIMITER$\n$notification_non_cooperation_movement_started_desc$"
+
+  swadeshi_movement_activated_tt: "#b $je_india_swadeshi_movement$#! [concept_journal_entry] has been activated."
+  swadeshi_movement_indian_nationalism_boost_tt: "While #b $je_india_swadeshi_movement$#! is active, [concept_indian_nationalism] will increase by an additional #v 0.1#! each month."
+
+  notification_non_cooperation_movement_failed_name: "Non-Cooperation Movement Failed"
+  notification_non_cooperation_movement_failed_desc: "The Indian #b Non-Cooperation Movement#! has failed, causing [concept_indian_nationalism] to retreat."
+  notification_non_cooperation_movement_failed_tooltip: "#header $notification_non_cooperation_movement_failed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_non_cooperation_movement_failed_desc$"
+
+  notification_swadeshi_movement_failed_name: "Swadeshi Movement Failed"
+  notification_swadeshi_movement_failed_desc: "The Indian #b Swadeshi Movement#! has failed, causing [concept_indian_nationalism] to retreat."
+  notification_swadeshi_movement_failed_desc_tooltip: "#header $notification_swadeshi_movement_failed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_swadeshi_movement_failed_desc$"
+
+  notification_non_cooperation_movement_successful_name: "Non-Cooperation Movement Successful"
+  notification_non_cooperation_movement_successful_desc: "The Indian #b Non-Cooperation Movement#! was successful, increasing [concept_indian_nationalism] and making the monthly boost to its progress permanent."
+  notification_non_cooperation_movement_successful_tooltip: "#header $notification_non_cooperation_movement_successful_name$#!\n$TOOLTIP_DELIMITER$\n$notification_non_cooperation_movement_successful_desc$"
+
+  india_non_cooperation.8.t: "Successful Swadeshi"
+  india_non_cooperation.8.d: "Boycotts, local production, and economic nationalism has proven triumphant. The impact of the #b Swadeshi Movement#! on the [SCOPE.sCountry('overlord_scope').GetAdjectiveNoFlag] economy cannot be ignored, nor can the calls for Indian sovereignty."
+  india_non_cooperation.8.f: "The port's warehouses stood empty now, but for once this was a good thing. [SCOPE.sCountry('overlord_scope').GetNameNoFormatting] had faced the might of the #b Indian#! nation and had #italic lost#!, with all its economic might and financial webs failing to defeat the simple strength of a united people. With the victory of self-reliance, what was next for the [SCOPE.sPoliticalMovement('indian_national_movement').GetNameNoFormatting]?"
+  india_non_cooperation.8.a: "This is just the beginning."
+  successful_swadeshi: "Successful Swadeshi"
+  unsuccessful_swadeshi: "Unsuccessful Swadeshi"
+  notification_swadeshi_movement_successful_name: "Swadeshi Movmement Successful"
+  notification_swadeshi_movement_successful_desc: "The Indian #b Swadeshi Movement#! was successful, increasing [concept_indian_nationalism] and making the monthly boost to its progress permanent."
+  notification_swadeshi_movement_successful_tooltip: "#header $notification_swadeshi_movement_successful_name$#!\n$TOOLTIP_DELIMITER$\n$notification_swadeshi_movement_successful_desc$"
+
+# === FIX LINE ===
+
+ non_cooperation_peaceful_protest_actions_tt: "#v 3#! Peaceful Protest actions have occurred since starting #b $je_india_non_cooperation_movement$#! (Currently #v [ROOT.Var('indian_peaceful_protest_actions').GetValue]#!)"
+ non_cooperation_violent_protest_actions_tt: "#v 2#! Violent Protest actions have occurred since starting #b $je_india_non_cooperation_movement$#! (Currently #v [ROOT.Var('indian_violent_protest_actions').GetValue]#!)"
+
+ # indian_non_cooperation.1
+ indian_imprisonment_act_passed_tt: "The #b Imprisonment Act#! has been passed in #b India#!"
+ peaceful_non_cooperation: "Peaceful Non-Cooperation"

@@ -1,0 +1,2120 @@
+﻿# TODO: Delete this button which is used for debugging
+lower_bengal_stability_button = {
+	name = "lower_bengal_stability_button"
+	desc = "lower_bengal_stability_button_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = 0
+
+	possible = {
+		always = yes
+	}
+
+	effect = {
+		scope:journal_entry = {
+			add_progress = { value = -25 name = sepoy_mutiny_progress_bar_bengal }
+			update_indian_instability = yes
+		}
+		set_global_variable = { name = bengal_presidency_stability value = "scope:journal_entry.scripted_bar_progress(sepoy_mutiny_progress_bar_bengal)" }
+	}
+}
+
+increase_bengal_stability_button = {
+	name = "increase_bengal_stability_button"
+	desc = "increase_bengal_stability_button_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = 0
+
+	possible = {
+		always = yes
+	}
+
+	effect = {
+		scope:journal_entry = {
+			add_progress = { value = 25 name = sepoy_mutiny_progress_bar_bengal }
+			update_indian_instability = yes
+		}
+		set_global_variable = { name = bengal_presidency_stability value = "scope:journal_entry.scripted_bar_progress(sepoy_mutiny_progress_bar_bengal)" }
+	}
+}
+
+lower_bombay_stability_button = {
+	name = "lower_bombay_stability_button"
+	desc = "lower_bombay_stability_button_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = 0
+
+	possible = {
+		always = yes
+	}
+
+	effect = {
+		scope:journal_entry = {
+			add_progress = { value = -25 name = sepoy_mutiny_progress_bar_bombay }
+			update_indian_instability = yes
+		}
+		set_global_variable = { name = bombay_presidency_stability value = "scope:journal_entry.scripted_bar_progress(sepoy_mutiny_progress_bar_bombay)" }
+	}
+}
+
+increase_bombay_stability_button = {
+	name = "increase_bombay_stability_button"
+	desc = "increase_bombay_stability_button_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = 0
+
+	possible = {
+		always = yes
+	}
+
+	effect = {
+		scope:journal_entry = {
+			add_progress = { value = 25 name = sepoy_mutiny_progress_bar_bombay }
+			update_indian_instability = yes
+		}
+		set_global_variable = { name = bombay_presidency_stability value = "scope:journal_entry.scripted_bar_progress(sepoy_mutiny_progress_bar_bombay)" }
+	}
+}
+
+lower_madras_stability_button = {
+	name = "lower_madras_stability_button"
+	desc = "lower_madras_stability_button_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = 0
+
+	possible = {
+		always = yes
+	}
+
+	effect = {
+		scope:journal_entry = {
+			add_progress = { value = -25 name = sepoy_mutiny_progress_bar_madras }
+			update_indian_instability = yes
+		}
+		set_global_variable = { name = madras_presidency_stability value = "scope:journal_entry.scripted_bar_progress(sepoy_mutiny_progress_bar_madras)" }
+	}
+}
+
+increase_madras_stability_button = {
+	name = "increase_madras_stability_button"
+	desc = "increase_madras_stability_button_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = 0
+
+	possible = {
+		always = yes
+	}
+
+	effect = {
+		scope:journal_entry = {
+			add_progress = { value = 25 name = sepoy_mutiny_progress_bar_madras }
+			update_indian_instability = yes
+		}
+		set_global_variable = { name = madras_presidency_stability value = "scope:journal_entry.scripted_bar_progress(sepoy_mutiny_progress_bar_madras)" }
+	}
+}
+
+mutiny_effect_button = {
+	name = "mutiny_effect_button"
+	desc = "mutiny_effect_button_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = 0
+
+	possible = {
+
+	}
+
+	effect = {
+		ig:ig_intelligentsia ?= {
+			save_temporary_scope_as = intelligentsia_scope
+		}
+		random_scope_character = {
+			limit = {
+				has_template = agitator_john_stuart_mill
+			}
+			set_interest_group = scope:intelligentsia_scope
+		}
+	}
+}
+
+add_indian_nationalism_button = {
+	name = "add_indian_nationalism_button"
+	desc = "add_indian_nationalism_button_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = 0
+
+	possible = {
+		always = yes
+	}
+
+	effect = {
+		ROOT = {
+			je:je_india_home_rule ?= {
+				add_progress = { value = 25 name = je_india_home_rule_progressbar }
+			}
+		}
+	}
+}
+
+###
+
+
+REPLACE:je_india_home_rule_request_democracy_permission = {
+	name = "je_india_home_rule_request_democracy_permission"
+	desc = "je_india_home_rule_request_democracy_permission_desc"
+
+	visible = {
+		c:BIC ?= this
+		is_subject = yes
+	}
+
+	ai_chance = {
+		value = 0
+		if = {
+			limit = {
+				# Not at war except for the endless princely state revolutions
+				c:BIC ?= {
+					any_scope_war = {
+						NOT = {
+							defender_warleader ?= {
+								is_princely_state = yes
+								is_direct_subject_of = ROOT
+							}
+						}
+					}
+				}
+			}
+			add = -100
+		}
+		if = {
+			limit = {
+				c:BIC ?= {
+					je:je_india_home_rule ?= {
+						var:india_national_activity >= 0.70
+					}
+				}
+			}
+			add = 100
+		}
+	}
+
+	possible = {
+		NOT = {
+			is_subject_type = subject_type_chartered_company
+		}
+		c:BIC ?= {
+			any_political_movement = {
+				is_political_movement_type = movement_india_pan_national
+				political_movement_support >= 0.10
+			}
+		}
+		OR = {
+			AND = {
+				custom_tooltip = {
+					text = indian_nationalism_above_100_tt
+					je:je_india_home_rule = {
+						"scripted_bar_progress(je_india_home_rule_progressbar)" >= 100
+					}
+				}
+				NOT = {
+					has_law_or_variant = law_type:law_elected_bureaucrats
+				}
+			}
+			AND = {
+				custom_tooltip = {
+					text = indian_nationalism_above_200_tt
+					je:je_india_home_rule = {
+						"scripted_bar_progress(je_india_home_rule_progressbar)" >= 200
+					}
+				}
+				custom_tooltip = {
+					text = india_not_granted_dop_permission_tt
+					NOT = {
+						has_variable = britain_granted_dop_permission
+					}
+				}
+			}
+			AND = {
+				custom_tooltip = {
+					text = indian_nationalism_above_300_tt
+					je:je_india_home_rule = {
+						"scripted_bar_progress(je_india_home_rule_progressbar)" >= 300
+					}
+				}
+				NOR = {
+					has_law_or_variant = law_type:law_multicultural
+					active_law:lawgroup_citizenship ?= {
+						has_amendment = amendment_type:amendment_government_of_india_act
+					}
+				}
+			}
+			AND = {
+				custom_tooltip = {
+					text = indian_nationalism_above_400_tt
+					je:je_india_home_rule = {
+						"scripted_bar_progress(je_india_home_rule_progressbar)" >= 400
+					}
+				}
+				NOR = {
+					is_subject_type = subject_type_dominion
+					is_subject_type = subject_type_protectorate
+				}
+			}
+		}
+		custom_tooltip = {
+			text = requested_dop_permission_tt
+			NOT = {
+				has_variable = requested_dop_permission
+			}
+		}
+	}
+
+	effect = {
+		set_variable = { name = requested_dop_permission years = 2 }
+		trigger_event = { id = indian_reform_request_events.1 popup = yes }
+	}
+}
+
+REPLACE_OR_CREATE:je_india_home_rule_petition_home_rule = {
+	name = "je_india_home_rule_petition_home_rule"
+	desc = "je_india_home_rule_petition_home_rule_desc"
+
+	visible = {
+		c:BIC ?= this
+		c:BIC ?= {
+			is_subject = yes
+			NOT = {
+				has_variable = india_home_rule_failed
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 0
+		if = {
+			limit = {
+				# Not at war except for the endless princely state revolutions
+				c:BIC ?= {
+					any_scope_war = {
+						NOT = {
+							defender_warleader ?= {
+								is_princely_state = yes
+								is_direct_subject_of = ROOT
+							}
+						}
+					}
+				}
+			}
+			add = -100
+		}
+		if = {
+			limit = {
+				c:BIC ?= {
+					je:je_india_home_rule ?= {
+						var:india_national_activity >= 0.70
+					}
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				c:BIC ?= {
+					overlord ?= {
+						any_interest_group = {
+							is_in_government = yes
+							ig_is_indian_reformist = yes
+						}
+						NOT = {
+							any_interest_group = {
+								is_in_government = yes
+								ig_is_indian_imperialist = yes
+							}
+						}
+					}
+				}
+			}
+			add = 100
+		}
+	}
+
+	possible = {
+		has_law_or_variant = law_type:law_elected_bureaucrats
+		country_has_voting_franchise = yes
+		custom_tooltip = {
+			text = simon_commission_complete_tt
+			je:je_india_home_rule = {
+				has_variable = simon_commission_complete
+			}
+		}
+		OR = {
+			has_law_or_variant = law_type:law_multicultural
+			active_law:lawgroup_citizenship ?= {
+				has_amendment = amendment_type:amendment_government_of_india_act
+			}
+		}
+		OR = {
+			is_subject_type = subject_type_dominion
+			is_subject_type = subject_type_protectorate
+		}
+		custom_tooltip = {
+			text = indian_nationalism_above_500_tt
+			je:je_india_home_rule = {
+				"scripted_bar_progress(je_india_home_rule_progressbar)" >= 500
+			}
+		}
+		custom_tooltip = {
+			text = requested_dop_permission_tt
+			NOT = {
+				has_variable = requested_dop_permission
+			}
+		}
+	}
+
+	effect = {
+		set_variable = { name = requested_dop_permission years = 2 }
+		overlord = {
+			trigger_event = { id = indian_reform_request_events.5 popup = yes }
+		}
+	}
+}
+
+REPLACE_OR_CREATE:je_india_home_rule_demand_independence = {
+	name = "je_india_home_rule_demand_independence"
+	desc = "je_india_home_rule_demand_independence_desc"
+
+	visible = {
+		c:BIC ?= this
+		c:BIC ?= {
+			is_subject = yes
+			has_variable = india_home_rule_failed
+		}
+	}
+
+	ai_chance = {
+		value = -500
+		if = {
+			limit = {
+				# Not at war except for the endless princely state revolutions
+				c:BIC ?= {
+					any_scope_war = {
+						NOT = {
+							defender_warleader ?= {
+								is_princely_state = yes
+								is_direct_subject_of = ROOT
+							}
+						}
+					}
+				}
+			}
+			add = -100
+		}
+		if = {
+			limit = {
+				c:BIC ?= {
+					has_law_or_variant = law_type:law_elected_bureaucrats
+					country_has_voting_franchise = yes
+					je:je_india_home_rule = {
+						has_variable = simon_commission_complete
+					}
+					OR = {
+						has_law_or_variant = law_type:law_multicultural
+						active_law:lawgroup_citizenship ?= {
+							has_amendment = amendment_type:amendment_government_of_india_act
+						}
+					}
+					OR = {
+						is_subject_type = subject_type_dominion
+						is_subject_type = subject_type_protectorate
+					}
+				}
+			}
+			add = 500
+		}
+		if = {
+			limit = {
+				c:BIC ?= {
+					je:je_india_home_rule ?= {
+						var:india_national_activity >= 0.70
+					}
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				c:BIC ?= {
+					overlord ?= {
+						any_interest_group = {
+							is_in_government = yes
+							ig_is_indian_reformist = yes
+						}
+						NOT = {
+							any_interest_group = {
+								is_in_government = yes
+								ig_is_indian_imperialist = yes
+							}
+						}
+					}
+				}
+			}
+			add = 100
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = indian_nationalism_above_500_tt
+			je:je_india_home_rule = {
+				"scripted_bar_progress(je_india_home_rule_progressbar)" >= 500
+			}
+		}
+		custom_tooltip = {
+			text = requested_dop_permission_tt
+			NOT = {
+				has_variable = requested_dop_permission
+			}
+		}
+	}
+
+	effect = {
+		# TODO: Rename this variable
+		set_variable = { name = requested_dop_permission years = 2 }
+		overlord = {
+			trigger_event = { id = indian_reform_request_events.6 popup = yes }
+		}
+	}
+}
+
+REPLACE_OR_CREATE:je_india_home_rule_sovereign_government = {
+	name = "je_india_home_rule_sovereign_government"
+	desc = "je_india_home_rule_sovereign_government_desc"
+
+	visible = {
+		c:BIC ?= this
+		c:BIC ?= {
+			is_subject = no
+		}
+	}
+
+	ai_chance = {
+		value = 100
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = indian_nationalism_above_500_tt
+			je:je_india_home_rule = {
+				"scripted_bar_progress(je_india_home_rule_progressbar)" >= 500
+			}
+		}
+		hidden_trigger = {
+			NOT = {
+				has_variable = indian_sovereignty_granted
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = india_enact_sovereign_government_tt
+			set_variable = indian_sovereignty_granted
+		}
+	}
+}
+
+REPLACE:je_india_nationalism_britain_indian_self_governance = {
+	name = "je_india_nationalism_britain_indian_self_governance"
+	desc = "je_india_nationalism_britain_indian_self_governance_desc"
+
+	ai_chance = {
+		# Only reformist-only governments will proactively initiate reforms
+		value = 0
+		if = {
+			limit = {
+				c:BIC.overlord ?= {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_reformist = yes
+					}
+					NOT = {
+						any_interest_group = {
+							is_in_government = yes
+							ig_is_indian_imperialist = yes
+						}
+					}
+				}
+			}
+			add = 100
+		}
+	}
+
+	visible = {
+		c:BIC ?= {
+			is_direct_subject_of = ROOT
+			is_player = no
+		}
+	}
+
+	possible = {
+		c:BIC ?= {
+			NOT = {
+				is_subject_type = subject_type_chartered_company
+			}
+			any_political_movement = {
+				is_political_movement_type = movement_india_pan_national
+				political_movement_support >= 0.10
+			}
+		}
+		OR = {
+			AND = {
+				custom_tooltip = {
+					text = indian_nationalism_above_100_tt
+					je:je_india_home_rule = {
+						"scripted_bar_progress(je_india_home_rule_progressbar)" >= 100
+					}
+				}
+				c:BIC ?= {
+					NOT = {
+						has_law_or_variant = law_type:law_elected_bureaucrats
+					}
+				}
+			}
+			AND = {
+				custom_tooltip = {
+					text = indian_nationalism_above_200_tt
+					je:je_india_home_rule = {
+						"scripted_bar_progress(je_india_home_rule_progressbar)" >= 200
+					}
+				}
+				custom_tooltip = {
+					text = britain_not_granted_dop_permission_tt
+					c:BIC ?= {
+						NOT = {
+							has_variable = britain_granted_dop_permission
+						}
+					}
+				}
+			}
+			AND = {
+				custom_tooltip = {
+					text = indian_nationalism_above_300_tt
+					je:je_india_home_rule = {
+						"scripted_bar_progress(je_india_home_rule_progressbar)" >= 300
+					}
+				}
+				c:BIC ?= {
+					NOR = {
+						has_law_or_variant = law_type:law_multicultural
+						active_law:lawgroup_citizenship ?= {
+							has_amendment = amendment_type:amendment_government_of_india_act
+						}
+					}
+				}
+			}
+			AND = {
+				custom_tooltip = {
+					text = indian_nationalism_above_400_tt
+					je:je_india_home_rule = {
+						"scripted_bar_progress(je_india_home_rule_progressbar)" >= 400
+					}
+				}
+				c:BIC ?= {
+					NOR = {
+						is_subject_type = subject_type_dominion
+						is_subject_type = subject_type_protectorate
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			text = britain_requested_dop_permission_tt
+			c:BIC ?= {
+				NOT = {
+					has_variable = requested_dop_permission
+				}
+			}
+		}
+	}
+
+	effect = {
+		c:BIC ?= {
+			set_variable = { name = requested_dop_permission years = 2 }
+		}
+		show_as_tooltip = {
+			c:BIC ?= {
+				indian_reform_passed_effect = yes
+			}
+			every_interest_group = {
+				limit = {
+					ig_is_indian_reformist = yes
+					is_marginal = no
+				}
+				add_modifier = {
+	    			name = approved_indian_government_reform_good
+	    			days = short_modifier_time
+	    		}
+			}
+			every_interest_group = {
+				limit = {
+					ig_is_indian_imperialist = yes
+					is_marginal = no
+				}
+				add_modifier = {
+	    			name = approved_indian_government_reform_bad
+	    			days = short_modifier_time
+	    		}
+			}
+			custom_tooltip = indian_nationalism_increase_0_1_per_month_tt
+		}
+		trigger_event = { id = indian_reform_request_events.7 popup = yes }
+	}
+}
+
+REPLACE_OR_CREATE:je_india_enact_home_rule = {
+	name = "je_india_enact_home_rule"
+	desc = "je_india_enact_home_rule_desc"
+
+	ai_chance = {
+		# Only reformist-only governments will proactively enact home rule
+		value = 0
+		if = {
+			limit = {
+				c:BIC ?= {
+						any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_reformist = yes
+					}
+					NOT = {
+						any_interest_group = {
+							is_in_government = yes
+							ig_is_indian_imperialist = yes
+						}
+					}
+				}
+			}
+			add = 100
+		}
+	}
+
+	visible = {
+		c:BIC ?= {
+			is_direct_subject_of = ROOT
+			is_player = no
+			NOT = {
+				has_variable = india_home_rule_failed
+			}
+		}
+	}
+
+	possible = {
+		c:BIC ?= {
+			has_law_or_variant = law_type:law_elected_bureaucrats
+			country_has_voting_franchise = yes
+			custom_tooltip = {
+				text = simon_commission_complete_tt
+				je:je_india_home_rule = {
+					has_variable = simon_commission_complete
+				}
+			}
+			OR = {
+				has_law_or_variant = law_type:law_multicultural
+				active_law:lawgroup_citizenship ?= {
+					has_amendment = amendment_type:amendment_government_of_india_act
+				}
+			}
+			OR = {
+				is_subject_type = subject_type_dominion
+				is_subject_type = subject_type_protectorate
+			}
+			custom_tooltip = {
+				text = indian_nationalism_above_500_tt
+				je:je_india_home_rule = {
+					"scripted_bar_progress(je_india_home_rule_progressbar)" >= 500
+				}
+			}
+		}
+		custom_tooltip = {
+			text = britain_requested_dop_permission_tt
+			c:BIC ?= {
+				NOT = {
+					has_variable = requested_dop_permission
+				}
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = india_granted_home_rule_tt
+			c:BIC = {
+				set_variable = indian_sovereignty_granted
+			}
+		}
+		every_interest_group = {
+			limit = {
+				ig_is_indian_reformist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+    			name = approved_indian_sovereignty_good
+    			days = normal_modifier_time
+    		}
+		}
+		every_interest_group = {
+			limit = {
+				ig_is_indian_imperialist = yes
+				is_marginal = no
+			}
+			add_modifier = {
+    			name = approved_indian_sovereignty_bad
+    			days = normal_modifier_time
+    		}
+		}
+	}
+}
+
+REPLACE:je_india_nationalism_britain_dispatch_simon_commission = {
+	name = "je_india_nationalism_britain_dispatch_simon_commission"
+	desc = "je_india_nationalism_britain_dispatch_simon_commission_desc"
+
+	visible = {
+		any_direct_subject = {
+			c:BIC ?= this
+		}
+		je:je_india_home_rule = {
+			has_variable = simon_commission_timer_var
+		}
+	}
+
+	ai_chance = {
+		value = 0
+		if = {
+			limit = {
+				c:BIC.overlord ?= {
+					is_at_war = yes
+				}
+			}
+			add = -500
+		}
+		if = {
+			limit = {
+				c:BIC.overlord ?= {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_reformist = yes
+					}
+					NOT = {
+						any_interest_group = {
+							is_in_government = yes
+							ig_is_indian_imperialist = yes
+						}
+					}
+					any_interest_group = {
+						is_in_government = no
+						ig_is_indian_imperialist = yes
+						is_marginal = no
+					}
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				c:BIC.overlord ?= {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_imperialist = yes
+					}
+					NOT = {
+						any_interest_group = {
+							is_in_government = yes
+							ig_is_indian_reformist = yes
+						}
+					}
+					any_interest_group = {
+						is_in_government = no
+						ig_is_indian_reformist = yes
+						is_marginal = no
+					}
+				}
+			}
+			add = 100
+		}
+	}
+
+	possible = {
+		is_at_war = no
+		custom_tooltip = {
+			text = simon_comission_late_enough_tt
+			je:je_india_home_rule = {
+				NOT = {
+					has_variable = simon_commission_timer_early_var
+				}
+			}
+		}
+		government_legitimacy >= 50
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = simon_commission_dispatch_early_tt
+			trigger_event = { id = india_home_rule_events.10 popup = yes }
+		}
+		custom_tooltip = simon_commission_dispatch_timer_tt
+		if = {
+			limit = {
+				AND = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_reformist = yes
+					}
+					NOT = {
+						any_interest_group = {
+							is_in_government = yes
+							ig_is_indian_imperialist = yes
+						}
+					}
+				}
+			}
+			custom_tooltip = simon_commission_current_gov_reformist_tt
+		}
+		else_if = {
+			limit = {
+				AND = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_imperialist = yes
+					}
+					NOT = {
+						any_interest_group = {
+							is_in_government = yes
+							ig_is_indian_reformist = yes
+						}
+					}
+				}
+			}
+			custom_tooltip = simon_commission_current_gov_imperialist_tt
+		}
+		else_if = {
+			limit = {
+				AND = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_reformist = yes
+					}
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_imperialist = yes
+					}
+				}
+			}
+			custom_tooltip = simon_commission_current_gov_both_tt
+		}
+		else = {
+			custom_tooltip = simon_commission_current_gov_neither_tt
+		}
+		if = {
+			limit = {
+				NOT = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_reformist = yes
+					}
+				}
+				c:BIC = {
+					NOT = {
+						has_variable = india_home_rule_failed
+					}
+				}
+			}
+			custom_tooltip = {
+				text = simon_commission_retreat_makes_indian_national_movement_move_towards_independence_tt
+			}
+		}
+	}
+}
+
+REPLACE:je_communal_divides_federal_solution = {
+	name = "je_communal_divides_federal_solution"
+	desc = "je_communal_divides_federal_solution_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	possible = {
+		hidden_trigger = {
+			NOT = {
+				has_variable = selected_federal_solution_var
+			}
+		}
+		is_at_war = no
+		calc_true_if = {
+			amount >= 3
+			has_state_in_state_region = STATE_PUNJAB
+			has_state_in_state_region = STATE_SINDH
+			has_state_in_state_region = STATE_KASHMIR
+			has_state_in_state_region = STATE_PASHTUNISTAN
+			has_state_in_state_region = STATE_BALUCHISTAN
+			has_state_in_state_region = STATE_QUETTA
+		}
+		NOT = {
+			has_law_or_variant = law_type:law_state_religion
+		}
+		OR = {
+			custom_tooltip = {
+				text = granted_home_rule_tt
+				c:BHT ?= ROOT
+			}
+		}
+		custom_tooltip = {
+            text = communal_divides_10_timer_tt
+            je:je_communal_divides = {
+                journal_entry_age > 3650
+            }
+        }
+	}
+
+	effect = {
+		set_variable = selected_federal_solution_var
+		custom_tooltip = confederacy_of_india
+		show_as_tooltip = {
+			if = {
+				limit = {
+					c:BHT ?= this
+					NOT = {
+						country_has_state_religion = rel:hindu
+					}
+				}
+				set_state_religion = rel:hindu
+			}
+		}
+		custom_tooltip = {
+			text = create_indusstan_bangla_tt
+			partition_india = yes
+			scope:pakistan_scope ?= {
+				set_variable = indian_federation_member
+				set_variable = federal_solution_pakistan
+				set_country_type = colonial
+				# Switch to Indusstan for Federal Solution
+				if = {
+					limit = {
+						NOT = {
+							exists = c:IDS
+						}
+					}
+					change_tag = IDS
+				}
+			}
+			create_diplomatic_pact = {
+				country = scope:pakistan_scope
+				type = dominion
+			}
+			if = {
+				limit = {
+					NOT = {
+						exists = c:BGL
+					}
+					scope:pakistan_scope ?= {
+						any_scope_state = {
+							state_region = s:STATE_EAST_BENGAL
+						}
+					}
+				}
+				scope:pakistan_scope ?= {
+					random_scope_state = {
+						limit = {
+							state_region = s:STATE_EAST_BENGAL
+						}
+						save_temporary_scope_as = bangalore_state_scope
+					}
+				}
+				create_country = {
+					origin = ROOT
+					tag = BGL
+					state = scope:bangalore_state_scope
+					on_created = {
+						set_variable = indian_federation_member
+						set_country_type = colonial
+					}
+				}
+				c:BGL ?= {
+					copy_laws = ROOT
+					activate_law = law_type:law_freedom_of_conscience
+				}
+				scope:pakistan_scope ?= {
+					# Move all Bengali characters to Bangalore
+					every_scope_character = {
+						limit = {
+							culture = cu:bengali
+						}
+						transfer_character = c:BGL
+						if = {
+							limit = {
+								has_role_of_type = politician
+							}
+							set_as_interest_group_leader = yes
+							set_variable = {
+								name = moved_to_bangalore
+								days = 7
+							}
+						}
+					}
+					# Change Pakistan's leader if they just moved to Pakistan
+					if = {
+						limit = {
+							ruler = {
+								has_variable = moved_to_bangalore
+							}
+						}
+						ordered_scope_character = {
+							limit = {
+								NOT = {
+									has_variable = moved_to_bangalore
+								}
+							}
+							min = 0
+							max = 1
+							order_by = {
+								value = popularity
+								if = {
+									limit = {
+										has_role_of_type = politician
+									}
+									add = 1000
+								}
+							}
+							set_character_as_ruler = yes
+						}
+					}
+					# Now make Bangalore's leader one of the ones that just left India
+					c:BGL ?= {
+						ordered_scope_character = {
+							limit = {
+								has_variable = moved_to_bangalore
+							}
+							min = 0
+							max = 1
+							order_by = {
+								value = popularity
+								if = {
+									limit = {
+										OR = {
+											has_role_of_type = politician
+											has_role_of_type = agitator
+										}
+									}
+									add = 1000
+								}
+							}
+							set_character_as_ruler = yes
+						}
+					}
+				}
+				create_diplomatic_pact = {
+					country = c:BGL
+					type = dominion
+				}
+			}
+		}
+		custom_tooltip = muslim_characters_move_to_federal_members_tt
+		custom_tooltip = transfer_subjects_to_federal_members_tt
+		custom_tooltip = break_confederation_promise_tt
+	}
+}
+
+REPLACE:je_federation_of_india_invite_princely_states = {
+	name = "je_federation_of_india_invite_princely_states"
+	desc = "je_federation_of_india_invite_princely_states_desc"
+
+	visible = {
+		always = yes
+	}
+
+	cooldown = { days = 365 }
+
+	ai_chance = {
+		value = 0
+	}
+
+	possible = {
+		is_at_war = no
+		any_princely_state = {
+			is_subject_of = ROOT
+			relations:ROOT >= relations_threshold:amicable
+			liberty_desire < define:NDiplomacy|WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = all_princely_states_get_invitation_tt
+			every_princely_state = {
+				limit = {
+					is_subject_of = ROOT
+					relations:ROOT >= relations_threshold:amicable
+					liberty_desire < define:NDiplomacy|WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD
+					is_player = no
+				}
+				trigger_event = { id = federation_of_india.1 }
+			}
+		}
+		if = {
+			limit = {
+				any_princely_state = {
+					is_subject_of = ROOT
+					relations:ROOT >= relations_threshold:amicable
+					liberty_desire < define:NDiplomacy|WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD
+					is_player = no
+				}
+			}
+			custom_tooltip = warning_may_cause_massive_debt_tt
+			show_as_tooltip = {
+				custom_tooltip = eligible_states_include_tt
+				ordered_princely_state = {
+					limit = {
+						is_subject_of = ROOT
+						relations:ROOT >= relations_threshold:amicable
+						liberty_desire < define:NDiplomacy|WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD
+						is_player = no
+					}
+					order_by = country_rank
+					position = 0
+					check_range_bounds = no
+					custom_tooltip = eligible_country_entry_tt
+				}
+				if = {
+					limit = {
+						any_princely_state = {
+							is_subject_of = ROOT
+							relations:ROOT >= relations_threshold:amicable
+							liberty_desire < define:NDiplomacy|WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD
+							is_player = no
+							count > 1
+						}
+					}
+					ordered_princely_state = {
+						limit = {
+							is_subject_of = ROOT
+							relations:ROOT >= relations_threshold:amicable
+							liberty_desire < define:NDiplomacy|WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD
+							is_player = no
+						}
+						order_by = country_rank
+						position = 1
+						check_range_bounds = no
+						custom_tooltip = eligible_country_entry_tt
+					}
+				}
+				if = {
+					limit = {
+						any_princely_state = {
+							is_subject_of = ROOT
+							relations:ROOT >= relations_threshold:amicable
+							liberty_desire < define:NDiplomacy|WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD
+							is_player = no
+							count > 2
+						}
+					}
+					ordered_princely_state = {
+						limit = {
+							is_subject_of = ROOT
+							relations:ROOT >= relations_threshold:amicable
+							liberty_desire < define:NDiplomacy|WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD
+							is_player = no
+						}
+						order_by = country_rank
+						position = 2
+						check_range_bounds = no
+						if = {
+							limit = {
+								ROOT.num_princely_state_subjects_eligible_for_federation_minus_three > 0
+							}
+							custom_tooltip = eligible_country_entry_last_tt
+						}
+						else = {
+							custom_tooltip = eligible_country_entry_tt
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+REPLACE_OR_CREATE:je_princely_states_spread_dissent = {
+	name = "je_princely_states_spread_dissent"
+	desc = "je_princely_states_spread_dissent_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = {
+		value = 100
+	}
+
+	possible = {
+		OR = {
+			custom_tooltip = {
+				text = dissent_over_20_tt
+				je:je_princely_states ?= {
+					"scripted_bar_progress(je_princely_states_dissent_progress_bar)" >= 20
+					NOT = {
+						has_variable = five_year_timer
+					}
+				}
+			}
+			custom_tooltip = {
+				text = dissent_over_40_tt
+				je:je_princely_states ?= {
+					"scripted_bar_progress(je_princely_states_dissent_progress_bar)" >= 40
+					NOT = {
+						has_variable = four_year_timer
+					}
+				}
+			}
+			custom_tooltip = {
+				text = dissent_over_60_tt
+				je:je_princely_states ?= {
+					"scripted_bar_progress(je_princely_states_dissent_progress_bar)" >= 60
+					NOT = {
+						has_variable = three_year_timer
+					}
+				}
+			}
+			custom_tooltip = {
+				text = dissent_over_80_tt
+				je:je_princely_states ?= {
+					"scripted_bar_progress(je_princely_states_dissent_progress_bar)" >= 80
+					NOT = {
+						has_variable = two_year_timer
+					}
+				}
+			}
+			custom_tooltip = {
+				text = dissent_over_100_tt
+				je:je_princely_states ?= {
+					"scripted_bar_progress(je_princely_states_dissent_progress_bar)" >= 100
+					NOT = {
+						has_variable = one_year_timer
+					}
+				}
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = princely_states_spread_dissent_tt
+			je:je_princely_states ?= {
+				if = {
+					limit = {
+						NOT = {
+							has_variable = five_year_timer
+						}
+					}
+					add_progress = { value = -20 name = je_princely_states_dissent_progress_bar }
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_variable = four_year_timer
+						}
+					}
+					add_progress = { value = -40 name = je_princely_states_dissent_progress_bar }
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_variable = three_year_timer
+						}
+					}
+					add_progress = { value = -60 name = je_princely_states_dissent_progress_bar }
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_variable = two_year_timer
+						}
+					}
+					add_progress = { value = -80 name = je_princely_states_dissent_progress_bar }
+				}
+				else = {
+					add_progress = { value = -100 name = je_princely_states_dissent_progress_bar }
+				}
+	            set_variable = {
+	                name = one_year_timer
+	                years = 1
+	            }
+	            set_variable = {
+	                name = two_year_timer
+	                years = 2
+	            }
+	            set_variable = {
+	                name = three_year_timer
+	                years = 3
+	            }
+	            set_variable = {
+	                name = four_year_timer
+	                years = 4
+	            }
+	            set_variable = {
+	                name = five_year_timer
+	                years = 5
+	            }
+	        }
+	        trigger_event = {
+	        	id = princely_states.6
+	        	popup = yes
+	        }
+		}
+	}
+}
+
+REPLACE_OR_CREATE:je_princely_states_stockpile_munitions = {
+	name = "je_princely_states_stockpile_munitions"
+	desc = "je_princely_states_stockpile_munitions_desc"
+
+	visible = {
+		je:je_princely_states = {
+			NOT = {
+				has_variable = stockpiling_munitions
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 0
+		if = {
+			limit = {
+				bureaucracy >= 0
+				approaching_bureaucracy_shortage = no
+			}
+			add = 100
+		}
+	}
+
+	possible = {
+		country_has_building_group_levels = {
+			type = bg_military_industry
+			value >= 1
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = princely_state_begins_stockpiling_munitions_tt
+			je:je_princely_states ?= {
+				# This will cause update_locally_produced_munitions to be called monthly from je_princely_states
+				set_variable = stockpiling_munitions
+			}
+		}
+		custom_tooltip = princely_state_pays_stockpiling_bureacuracy_cost_tt
+		set_variable = {
+			name = sepoy_stockpiling_cooldown
+			months = 6
+		}
+	}
+}
+
+REPLACE_OR_CREATE:je_princely_states_stop_stockpiling_munitions = {
+	name = "je_princely_states_stop_stockpiling_munitions"
+	desc = "je_princely_states_stockpile_status"
+
+	visible = {
+		je:je_princely_states = {
+			has_variable = stockpiling_munitions
+		}
+	}
+
+	selected = {
+		always = yes
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = sepoy_stockpiling_cooldown_tt
+			NOT = {
+				has_variable = sepoy_stockpiling_cooldown
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = princely_state_stops_stockpiling_munitions_tt
+			je:je_princely_states ?= {
+				remove_variable = stockpiling_munitions
+			}
+		}
+		je:je_princely_states ?= {
+			if = {
+				limit = {
+					has_modifier = princely_state_stockpile_coordination
+				}
+				remove_modifier = princely_state_stockpile_coordination
+			}
+		}
+	}
+}
+
+REPLACE_OR_CREATE:je_british_dictate_plantations_prioritize_construction = {
+	name = "je_british_dictate_plantations_prioritize_construction"
+	desc = "je_british_dictate_plantations_prioritize_construction_desc"
+
+	visible = {
+		NOT = {
+			has_variable = plantations_prioritize_construction
+		}
+	}
+
+	selected = {
+		always = no
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	possible = {
+		authority >= 200
+		custom_tooltip = {
+			text = dictate_not_prioritizing_other_strategy_tt
+			NOT = {
+				has_variable = plantations_prioritize_productivity
+			}
+		}
+	}
+
+	effect = {
+		set_variable = plantations_prioritize_construction
+		je:je_british_dictate_plantations ?= {
+			set_variable = {
+				name = plantations_prioritize_construction_cooldown
+				years = 5
+			}
+			add_modifier = british_dictate_prioritization
+		}
+		je:je_british_dictates ?= {
+			add_modifier = british_dictate_plantations_prioritizing_construction
+		}
+		custom_tooltip = je_british_dictate_plantations_prioritize_construction_new_goal_tt
+		custom_tooltip = je_british_dictate_plantations_prioritize_construction_new_reward_tt
+		set_variable = {
+			name = arable_land_percent_goal
+			value = 0.40
+		}
+		update_je_british_dictate_plantations_vars = yes
+	}
+}
+
+REPLACE_OR_CREATE:je_british_dictate_plantations_deprioritize_construction = {
+	name = "je_british_dictate_plantations_deprioritize_construction"
+	desc = "je_british_dictate_plantations_deprioritize_construction_desc"
+
+	visible = {
+		has_variable = plantations_prioritize_construction
+	}
+
+	selected = {
+		always = yes
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = dictate_no_prioritization_cooldown_tt
+			je:je_british_dictate_plantations ?= {
+				NOT = {
+					has_variable = plantations_prioritize_construction_cooldown
+				}
+			}
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_variable = plantations_prioritize_construction
+			}
+			remove_variable = plantations_prioritize_construction
+		}
+		je:je_british_dictate_plantations ?= {
+			if = {
+				limit = {
+					has_modifier = british_dictate_prioritization
+				}
+				remove_modifier = british_dictate_prioritization
+			}
+		}
+		je:je_british_dictates ?= {
+			if = {
+				limit = {
+					has_modifier = british_dictate_plantations_prioritizing_construction
+				}
+				remove_modifier = british_dictate_plantations_prioritizing_construction
+			}
+		}
+		custom_tooltip = je_british_dictate_plantations_prioritize_construction_old_goal_tt
+		custom_tooltip = je_british_dictate_plantations_prioritize_construction_lose_reward_tt
+		set_variable = {
+			name = arable_land_percent_goal
+			value = 0.30
+		}
+		update_je_british_dictate_plantations_vars = yes
+	}
+}
+
+REPLACE_OR_CREATE:je_british_dictate_plantations_prioritize_productivity = {
+	name = "je_british_dictate_plantations_prioritize_productivity"
+	desc = "je_british_dictate_plantations_prioritize_productivity_desc"
+
+	visible = {
+		NOT = {
+			has_variable = plantations_prioritize_productivity
+		}
+	}
+
+	selected = {
+		always = no
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	possible = {
+		authority >= 200
+		custom_tooltip = {
+			text = dictate_not_prioritizing_other_strategy_tt
+			NOT = {
+				has_variable = plantations_prioritize_construction
+			}
+		}
+	}
+
+	effect = {
+		set_variable = plantations_prioritize_productivity
+		je:je_british_dictate_plantations ?= {
+			set_variable = {
+				name = plantations_prioritize_productivity_cooldown
+				years = 5
+			}
+			add_modifier = british_dictate_prioritization
+		}
+		je:je_british_dictates ?= {
+			add_modifier = british_dictate_plantations_prioritizing_productivity
+		}
+		custom_tooltip = je_british_dictate_plantations_prioritize_productivity_new_goal_tt
+		custom_tooltip = je_british_dictate_plantations_prioritize_productivity_new_reward_tt
+		set_variable = {
+			name = arable_land_percent_goal
+			value = 0.20
+		}
+		update_je_british_dictate_plantations_vars = yes
+	}
+}
+
+REPLACE_OR_CREATE:je_british_dictate_plantations_deprioritize_productivity = {
+	name = "je_british_dictate_plantations_deprioritize_productivity"
+	desc = "je_british_dictate_plantations_deprioritize_productivity_desc"
+
+	visible = {
+		has_variable = plantations_prioritize_productivity
+	}
+
+	selected = {
+		always = yes
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = dictate_no_prioritization_cooldown_tt
+			je:je_british_dictate_plantations ?= {
+				NOT = {
+					has_variable = plantations_prioritize_productivity_cooldown
+				}
+			}
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_variable = plantations_prioritize_productivity
+			}
+			remove_variable = plantations_prioritize_productivity
+		}
+		je:je_british_dictate_plantations ?= {
+			if = {
+				limit = {
+					has_modifier = british_dictate_prioritization
+				}
+				remove_modifier = british_dictate_prioritization
+			}
+		}
+		je:je_british_dictates ?= {
+			if = {
+				limit = {
+					has_modifier = british_dictate_plantations_prioritizing_productivity
+				}
+				remove_modifier = british_dictate_plantations_prioritizing_productivity
+			}
+		}
+		custom_tooltip = je_british_dictate_plantations_prioritize_productivity_old_goal_tt
+		custom_tooltip = je_british_dictate_plantations_prioritize_productivity_lose_reward_tt
+		set_variable = {
+			name = arable_land_percent_goal
+			value = 0.30
+		}
+		update_je_british_dictate_plantations_vars = yes
+	}
+}
+
+REPLACE_OR_CREATE:je_british_dictate_military_prioritize_army = {
+	name = "je_british_dictate_military_prioritize_army"
+	desc = "je_british_dictate_military_prioritize_army_desc"
+
+	visible = {
+		NOT = {
+			has_variable = military_prioritize_army
+		}
+	}
+
+	selected = {
+		always = no
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	possible = {
+		authority >= 200
+		custom_tooltip = {
+			text = dictate_not_prioritizing_other_strategy_tt
+			NOT = {
+				has_variable = military_prioritize_navy
+			}
+		}
+	}
+
+	effect = {
+		set_variable = military_prioritize_army
+		je:je_british_dictate_military ?= {
+			set_variable = {
+				name = military_prioritize_army_cooldown
+				years = 5
+			}
+			add_modifier = british_dictate_prioritization
+		}
+		je:je_british_dictates ?= {
+			add_modifier = british_dictate_military_prioritizing_army
+		}
+		custom_tooltip = je_british_dictate_military_prioritize_army_new_goal_tt
+		custom_tooltip = je_british_dictate_military_prioritize_army_new_reward_tt
+	}
+}
+
+REPLACE_OR_CREATE:je_british_dictate_military_deprioritize_army = {
+	name = "je_british_dictate_military_deprioritize_army"
+	desc = "je_british_dictate_military_deprioritize_army_desc"
+
+	visible = {
+		has_variable = military_prioritize_army
+	}
+
+	selected = {
+		always = yes
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = dictate_no_prioritization_cooldown_tt
+			je:je_british_dictate_military ?= {
+				NOT = {
+					has_variable = military_prioritize_army_cooldown
+				}
+			}
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_variable = military_prioritize_army
+			}
+			remove_variable = military_prioritize_army
+		}
+		je:je_british_dictate_military ?= {
+			if = {
+				limit = {
+					has_modifier = british_dictate_prioritization
+				}
+				remove_modifier = british_dictate_prioritization
+			}
+		}
+		je:je_british_dictates ?= {
+			if = {
+				limit = {
+					has_modifier = british_dictate_military_prioritizing_army
+				}
+				remove_modifier = british_dictate_military_prioritizing_army
+			}
+		}
+		custom_tooltip = je_british_dictate_military_prioritize_army_old_goal_tt
+		custom_tooltip = je_british_dictate_military_prioritize_army_lose_reward_tt
+	}
+}
+
+REPLACE_OR_CREATE:je_british_dictate_military_prioritize_navy = {
+	name = "je_british_dictate_military_prioritize_navy"
+	desc = "je_british_dictate_military_prioritize_navy_desc"
+
+	visible = {
+		NOT = {
+			has_variable = military_prioritize_navy
+		}
+	}
+
+	selected = {
+		always = no
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	possible = {
+		authority >= 200
+		custom_tooltip = {
+			text = dictate_not_prioritizing_other_strategy_tt
+			NOT = {
+				has_variable = military_prioritize_army
+			}
+		}
+	}
+
+	effect = {
+		set_variable = military_prioritize_navy
+		je:je_british_dictate_military ?= {
+			set_variable = {
+				name = military_prioritize_navy_cooldown
+				years = 5
+			}
+			add_modifier = british_dictate_prioritization
+		}
+		je:je_british_dictates ?= {
+			add_modifier = british_dictate_military_prioritizing_navy
+		}
+		custom_tooltip = je_british_dictate_military_prioritize_navy_new_goal_tt
+		custom_tooltip = je_british_dictate_military_prioritize_navy_new_reward_tt
+	}
+}
+
+REPLACE_OR_CREATE:je_british_dictate_military_deprioritize_navy = {
+	name = "je_british_dictate_military_deprioritize_navy"
+	desc = "je_british_dictate_military_deprioritize_navy_desc"
+
+	visible = {
+		has_variable = military_prioritize_navy
+	}
+
+	selected = {
+		always = yes
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = dictate_no_prioritization_cooldown_tt
+			je:je_british_dictate_military ?= {
+				NOT = {
+					has_variable = military_prioritize_navy_cooldown
+				}
+			}
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_variable = military_prioritize_navy
+			}
+			remove_variable = military_prioritize_navy
+		}
+		je:je_british_dictate_military ?= {
+			if = {
+				limit = {
+					has_modifier = british_dictate_prioritization
+				}
+				remove_modifier = british_dictate_prioritization
+			}
+		}
+		je:je_british_dictates ?= {
+			if = {
+				limit = {
+					has_modifier = british_dictate_military_prioritizing_navy
+				}
+				remove_modifier = british_dictate_military_prioritizing_navy
+			}
+		}
+		custom_tooltip = je_british_dictate_military_prioritize_navy_old_goal_tt
+		custom_tooltip = je_british_dictate_military_prioritize_navy_lose_reward_tt
+	}
+}
+
+REPLACE_OR_CREATE:je_british_dictate_universities_prioritize_higher_education = {
+	name = "je_british_dictate_universities_prioritize_higher_education"
+	desc = "je_british_dictate_universities_prioritize_higher_education_desc"
+
+	visible = {
+		NOT = {
+			has_variable = universities_prioritize_higher_education
+		}
+	}
+
+	selected = {
+		always = no
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	possible = {
+		authority >= 200
+		custom_tooltip = {
+			text = dictate_not_prioritizing_other_strategy_tt
+			NOT = {
+				has_variable = universities_prioritize_public_schools
+			}
+		}
+	}
+
+	effect = {
+		set_variable = universities_prioritize_higher_education
+		je:je_british_dictate_universities ?= {
+			set_variable = {
+				name = universities_prioritize_higher_education_cooldown
+				years = 5
+			}
+			add_modifier = british_dictate_prioritization
+		}
+		je:je_british_dictates ?= {
+			add_modifier = british_dictate_universities_prioritizing_higher_education
+		}
+		custom_tooltip = je_british_dictate_universities_prioritize_higher_education_new_goal_tt
+		custom_tooltip = je_british_dictate_universities_prioritize_higher_education_new_reward_tt
+	}
+}
+
+REPLACE_OR_CREATE:je_british_dictate_universities_deprioritize_higher_education = {
+	name = "je_british_dictate_universities_deprioritize_higher_education"
+	desc = "je_british_dictate_universities_deprioritize_higher_education_desc"
+
+	visible = {
+		has_variable = universities_prioritize_higher_education
+	}
+
+	selected = {
+		always = yes
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = dictate_no_prioritization_cooldown_tt
+			je:je_british_dictate_universities ?= {
+				NOT = {
+					has_variable = universities_prioritize_higher_education_cooldown
+				}
+			}
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_variable = universities_prioritize_higher_education
+			}
+			remove_variable = universities_prioritize_higher_education
+		}
+		je:je_british_dictate_universities ?= {
+			if = {
+				limit = {
+					has_modifier = british_dictate_prioritization
+				}
+				remove_modifier = british_dictate_prioritization
+			}
+		}
+		je:je_british_dictates ?= {
+			if = {
+				limit = {
+					has_modifier = british_dictate_universities_prioritizing_higher_education
+				}
+				remove_modifier = british_dictate_universities_prioritizing_higher_education
+			}
+		}
+		custom_tooltip = je_british_dictate_universities_prioritize_higher_education_old_goal_tt
+		custom_tooltip = je_british_dictate_universities_prioritize_higher_education_lose_reward_tt
+	}
+}
+
+REPLACE_OR_CREATE:je_british_dictate_universities_prioritize_public_schools = {
+	name = "je_british_dictate_universities_prioritize_public_schools"
+	desc = "je_british_dictate_universities_prioritize_public_schools_desc"
+
+	visible = {
+		NOT = {
+			has_variable = universities_prioritize_public_schools
+		}
+	}
+
+	selected = {
+		always = no
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	possible = {
+		authority >= 200
+		custom_tooltip = {
+			text = dictate_not_prioritizing_other_strategy_tt
+			NOT = {
+				has_variable = universities_prioritize_higher_education
+			}
+		}
+	}
+
+	effect = {
+		set_variable = universities_prioritize_public_schools
+		je:je_british_dictate_universities ?= {
+			set_variable = {
+				name = universities_prioritize_public_schools_cooldown
+				years = 5
+			}
+			add_modifier = british_dictate_prioritization
+		}
+		je:je_british_dictates ?= {
+			add_modifier = british_dictate_universities_prioritizing_public_schools
+		}
+		custom_tooltip = je_british_dictate_universities_prioritize_public_schools_new_goal_tt
+		custom_tooltip = je_british_dictate_universities_prioritize_public_schools_new_reward_tt
+	}
+}
+
+REPLACE_OR_CREATE:je_british_dictate_universities_deprioritize_public_schools = {
+	name = "je_british_dictate_universities_deprioritize_public_schools"
+	desc = "je_british_dictate_universities_deprioritize_public_schools_desc"
+
+	visible = {
+		has_variable = universities_prioritize_public_schools
+	}
+
+	selected = {
+		always = yes
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = dictate_no_prioritization_cooldown_tt
+			je:je_british_dictate_universities ?= {
+				NOT = {
+					has_variable = universities_prioritize_public_schools_cooldown
+				}
+			}
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_variable = universities_prioritize_public_schools
+			}
+			remove_variable = universities_prioritize_public_schools
+		}
+		je:je_british_dictate_universities ?= {
+			if = {
+				limit = {
+					has_modifier = british_dictate_prioritization
+				}
+				remove_modifier = british_dictate_prioritization
+			}
+		}
+		je:je_british_dictates ?= {
+			if = {
+				limit = {
+					has_modifier = british_dictate_universities_prioritizing_public_schools
+				}
+				remove_modifier = british_dictate_universities_prioritizing_public_schools
+			}
+		}
+		custom_tooltip = je_british_dictate_universities_prioritize_public_schools_old_goal_tt
+		custom_tooltip = je_british_dictate_universities_prioritize_public_schools_lose_reward_tt
+	}
+}

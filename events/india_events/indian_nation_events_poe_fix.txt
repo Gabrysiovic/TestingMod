@@ -1,0 +1,2104 @@
+﻿namespace = indian_nation_events
+
+indian_nation_events.1 = { # Indian National Congress Founded
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	title = indian_nation_events.1.t
+	desc = indian_nation_events.1.d
+	flavor = indian_nation_events.1.f
+
+	event_image = {
+		video = "ip2_india_urban_scene"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	cooldown = { days = stupidly_long_modifier_time }
+
+	# Triggered by Indian Nation JE
+
+	immediate = {
+		je:je_india_home_rule = {
+			set_variable = inc_founded
+		}
+		ig:ig_intelligentsia ?= {
+			save_scope_as = intelligentsia_ig
+		}
+		ig:ig_petty_bourgeoisie ?= {
+			save_scope_as = petty_bourgeoisie_ig
+		}
+		if = {
+			limit = {
+				NOT = {
+					any_political_lobby = {
+						is_political_lobby_type = lobby_indian_national_congress
+					}
+				}
+			}
+			create_political_lobby = {
+				type = lobby_indian_national_congress
+				target = ROOT
+				add_interest_group = ig:ig_intelligentsia
+				add_interest_group = ig:ig_petty_bourgeoisie
+				lobby_formation_reason = diplomacy
+			}
+		}
+		else = {
+			random_political_lobby = {
+				limit = {
+					is_political_lobby_type = lobby_indian_national_congress
+				}
+				if = {
+					limit = {
+						NOT = {
+							any_lobby_member = {
+								is_interest_group_type = ig_intelligentsia
+							}
+						}
+					}
+					add_lobby_member = ig:ig_intelligentsia
+				}
+				if = {
+					limit = {
+						NOT = {
+							any_lobby_member = {
+								is_interest_group_type = ig_petty_bourgeoisie
+							}
+						}
+					}
+					add_lobby_member = ig:ig_petty_bourgeoisie
+				}
+			}
+		}
+		random_political_lobby = {
+			limit = {
+				is_political_lobby_type = lobby_indian_national_congress
+			}
+			save_scope_as = relevant_lobby
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_national_movement
+		}
+	}
+
+	option = {
+		name = indian_nation_events.1.a
+		default_option = yes
+		custom_tooltip = independence_lobby_formed_tt
+		scope:intelligentsia_ig = {
+			add_modifier = {
+				name = modifier_indian_national_movement_ig
+				days = normal_modifier_time
+			}
+		}
+		scope:petty_bourgeoisie_ig = {
+			add_modifier = {
+				name = modifier_indian_national_movement_ig
+				days = normal_modifier_time
+			}
+		}
+	}
+
+	option = {
+		name = indian_nation_events.1.b
+		custom_tooltip = independence_lobby_formed_tt
+		scope:intelligentsia_ig = {
+			add_modifier = {
+				name = modifier_indian_national_movement_ig
+				days = normal_modifier_time
+				multiplier = 2
+			}
+		}
+		scope:petty_bourgeoisie_ig = {
+			add_modifier = {
+				name = modifier_indian_national_movement_ig
+				days = normal_modifier_time
+				multiplier = 2
+			}
+		}
+		scope:relevant_lobby = {
+			change_appeasement = {
+				amount = 1
+				factor = appeasement_lobby_gain
+			}
+		}
+		every_interest_group = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_industrialists
+					is_interest_group_type = ig_armed_forces
+				}
+			}
+			add_modifier = {
+				name = listening_to_indian_congress
+				days = normal_modifier_time
+			}
+		}
+	}
+}
+
+indian_nation_events.2 = { # Rowlatt Act
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	title = indian_nation_events.2.t
+	desc = indian_nation_events.2.d
+	flavor = indian_nation_events.2.f
+
+	event_image = {
+		video = "votp_hostile_court"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	cooldown = { days = stupidly_long_modifier_time }
+
+	# Triggered by Indian Nation JE
+
+	immediate = {
+		je:je_india_home_rule = {
+			set_variable = rowlatt_act
+		}
+		ig:ig_industrialists ?= {
+			save_scope_as = industrialists_ig
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_national_movement
+		}
+		random_political_lobby = {
+			limit = {
+				is_political_lobby_type = lobby_indian_national_congress
+			}
+			save_scope_as = relevant_lobby
+		}
+	}
+
+	option = {
+		name = indian_nation_events.2.a
+		default_option = yes
+		scope:indian_national_movement ?= {
+			add_modifier = {
+				name = protesting_imprisonment_act
+				days = normal_modifier_time
+				is_decaying = yes
+			}
+		}
+		scope:relevant_lobby ?= {
+			change_appeasement = {
+				amount = -3
+				factor = appeasement_indian_hostile_action
+			}
+		}
+		custom_tooltip = rowlatt_act_in_effect_tt
+		if = {
+			limit = {
+				c:BIC = {
+					is_subject = yes
+					NOT = {
+						has_variable = india_home_rule_failed
+					}
+				}
+			}
+			custom_tooltip = indian_national_movement_moves_towards_independence_tt
+			overlord ?= {
+				post_notification = rowlatt_act_passed
+			}
+		}
+	}
+
+	option = {
+		name = indian_nation_events.2.b
+		scope:indian_national_movement = {
+			add_modifier = {
+				name = reigning_in_radicalism
+				days = normal_modifier_time
+				is_decaying = yes
+			}
+		}
+		scope:relevant_lobby = {
+			change_appeasement = {
+				amount = -3
+				factor = appeasement_indian_hostile_action
+			}
+		}
+		custom_tooltip = {
+			text = rowlatt_act_in_effect_tt
+		}
+		hidden_effect = {
+			set_variable = {
+				name = rowlatt_act
+			}
+		}
+		if = {
+			limit = {
+				c:BIC = {
+					is_subject = yes
+					NOT = {
+						has_variable = india_home_rule_failed
+					}
+				}
+			}
+			custom_tooltip = indian_national_movement_moves_towards_independence_tt
+			overlord ?= {
+				post_notification = rowlatt_act_passed
+			}
+		}
+	}
+}
+
+indian_nation_events.3 = { # The Salt March (for Britain)
+	type = country_event
+	placement = c:BIC
+
+	duration = 3
+
+	title = indian_nation_events.3.t
+	desc = indian_nation_events.3.d
+	flavor = indian_nation_events.3.f
+
+	event_image = {
+		video = "ip2_india_protest"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	minor_left_icon = ROOT
+	minor_right_icon = c:BIC
+
+	cooldown = { days = stupidly_long_modifier_time }
+
+	trigger = {
+		has_dlc_feature = ip2_content
+		c:BIC ?= {
+			any_scope_state = {
+				is_coastal = yes
+				is_incorporated = yes
+				is_in_geographic_region = geographic_region_india
+			}
+			any_political_movement = {
+				is_political_movement_type = movement_india_pan_national
+				any_supporting_character = {
+					has_role_of_type = agitator
+				}
+			}
+		}
+	}
+
+	immediate = {
+		c:BIC ?= {
+			save_scope_as = india_scope
+			set_variable = {
+				name = protest_event_fired
+				months = 6
+			}
+			random_political_movement = {
+				limit = {
+					is_political_movement_type = movement_india_pan_national
+				}
+				ordered_supporting_character = {
+					limit = {
+						has_role_of_type = agitator
+					}
+					position = 0
+					order_by = popularity
+					save_scope_as = prisoner_scope
+				}
+			}
+		}
+	}
+
+	option = {
+		name = indian_nation_events.3.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_reformist = yes
+					}
+				}
+				add = 1
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_imperialist = yes
+					}
+				}
+				add = -1
+			}
+		}
+		custom_tooltip = {
+			text = indian_nationalism_advance_15_tt
+		}
+		add_modifier = {
+			name = salt_protest_notoriety
+			days = normal_modifier_time
+		}
+		c:BIC ?= {
+			trigger_event = { id = india_nationalism_events.3 popup = yes }
+		}
+	}
+
+	option = {
+		name = indian_nation_events.3.b
+		default_option = yes
+		ai_chance = {
+			base = 1
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_reformist = yes
+					}
+				}
+				add = -1
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_imperialist = yes
+					}
+				}
+				add = 1
+			}
+		}
+		custom_tooltip = {
+			text = indian_nationalism_advance_15_tt
+		}
+		custom_tooltip = {
+			text = salt_protest_order_arrest_tt
+		}
+		add_modifier = {
+			name = salt_protest_notoriety
+			days = normal_modifier_time
+			multiplier = 0.5
+		}
+		c:BIC = {
+			# Local Variables are bugged and always get set when an event loads
+			set_variable = {
+				name = overlord_salt_march_arrest
+				years = 1
+			}
+			trigger_event = { id = india_nationalism_events.3 popup = yes }
+		}
+	}
+}
+
+indian_nation_events.4 = { # Quit India Movement (for Britain)
+	type = country_event
+	placement = c:BIC
+
+	duration = 3
+
+	title = indian_nation_events.4.t
+	desc = indian_nation_events.4.d
+	flavor = indian_nation_events.4.f
+
+	event_image = {
+		video = "ip2_india_protest"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	minor_left_icon = ROOT
+	minor_right_icon = c:BIC
+
+	cooldown = { days = stupidly_long_modifier_time }
+
+	trigger = {
+		has_dlc_feature = ip2_content
+		c:BIC = {
+			any_political_movement = {
+				is_political_movement_type = movement_india_pan_national
+				any_supporting_character = {
+					has_role_of_type = agitator
+				}
+			}
+		}
+	}
+
+	immediate = {
+		je:je_india_home_rule = {
+			set_variable = quit_india_movement_started
+		}
+		c:BIC = {
+			save_scope_as = india_scope
+			random_political_movement = {
+				limit = {
+					is_political_movement_type = movement_india_pan_national
+				}
+				save_scope_as = indian_national_movement
+				ordered_supporting_character = {
+					limit = {
+						has_role_of_type = agitator
+					}
+					position = 0
+					order_by = popularity
+					save_scope_as = lead_agitator_scope
+				}
+			}
+			random_political_lobby = {
+				limit ={
+					is_political_lobby_type = lobby_indian_national_congress
+				}
+				save_scope_as = inc_scope
+			}
+		}
+	}
+
+	option = {
+		name = indian_nation_events.4.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_reformist = yes
+					}
+				}
+				add = -1
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_imperialist = yes
+					}
+				}
+				add = 1
+			}
+		}
+		default_option = yes
+		custom_tooltip = {
+			text = indian_nationalism_retreat_50_tt
+		}
+		custom_tooltip = {
+			text = quit_india_order_arrest_tt
+		}
+		custom_tooltip = {
+			text = quit_india_monthly_indian_nationalism_increase_tt
+		}
+		c:BIC = {
+			# Local Variables are bugged and always get set when an event loads
+			set_variable = {
+				name = overlord_quit_india_arrest
+				years = 1
+			}
+			trigger_event = { id = indian_nation_events.5 popup = yes }
+		}
+	}
+
+	option = {
+		name = indian_nation_events.4.b
+		default_option = yes
+		ai_chance = {
+			base = 1
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_reformist = yes
+					}
+				}
+				add = 1
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_in_government = yes
+						ig_is_indian_imperialist = yes
+					}
+				}
+				add = -1
+			}
+		}
+		custom_tooltip = {
+			text = quit_india_monthly_indian_nationalism_increase_tt
+		}
+		c:BIC = {
+			trigger_event = { id = indian_nation_events.5 popup = yes }
+		}
+	}
+}
+
+indian_nation_events.5 = { # The Quit India Movement
+	type = country_event
+	placement = ROOT
+
+	duration = 3
+
+	title = indian_nation_events.5.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = indian_nation_events.5.d1
+				trigger = {
+					NOT = {
+						has_variable = overlord_quit_india_arrest
+					}
+				}
+			}
+			triggered_desc = {
+				desc = indian_nation_events.5.d2
+			}
+		}
+	}
+	flavor = indian_nation_events.5.f
+
+	event_image = {
+		video = "ip2_india_protest"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	minor_left_icon = ROOT.overlord
+	minor_right_icon = ROOT
+
+	cooldown = { days = stupidly_long_modifier_time }
+
+	trigger = {
+		has_dlc_feature = ip2_content
+		c:BIC ?= this
+	}
+
+	immediate = {
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_national_movement
+			ordered_supporting_character = {
+				limit = {
+					has_role_of_type = agitator
+				}
+				position = 0
+				order_by = popularity
+				save_scope_as = lead_agitator_scope
+			}
+		}
+		random_political_lobby = {
+			limit = {
+				is_political_lobby_type = lobby_indian_national_congress
+			}
+			save_scope_as = inc_scope
+		}
+		overlord = {
+			save_scope_as = overlord_scope
+		}
+	}
+
+	option = {
+		name = {
+	        trigger = {
+	        	has_variable = overlord_quit_india_arrest
+	        }
+	        text = indian_nation_events.5.a_overlord_arrest
+	    }
+	    name = {
+	        trigger = {
+	        	NOT = {
+	        		has_variable = overlord_quit_india_arrest
+	        	}
+	        }
+	        text = indian_nation_events.5.a_bic_arrest
+	    }
+		trigger = {
+			OR = {
+				has_variable = overlord_quit_india_arrest
+				NOT = {
+					has_law_or_variant = law_type:law_guaranteed_liberties
+				}
+			}
+		}
+		ai_chance = 1
+		custom_tooltip = {
+			text = indian_nationalism_retreat_50_tt
+			je:je_india_nationalism_britain ?= {
+				add_progress = { value = -50 name = je_india_home_rule_progressbar }
+			}
+		}
+		custom_tooltip = {
+			text = quit_india_arrests_tt
+			scope:indian_national_movement = {
+				every_supporting_character = {
+					limit = {
+						has_role_of_type = agitator
+					}
+					set_variable = { name = prison_time_var value = 36 }
+					set_variable = { name = prison_country value = owner }
+					set_variable = {
+						name = indian_national_movement_prisoner
+						months = 36
+					}
+					place_character_in_void = 48
+				}
+			}
+		}
+		scope:indian_national_movement = {
+			add_modifier = {
+				name = modifier_quit_india_movement
+				days = -1 # Permanent
+				multiplier = 0.5
+			}
+		}
+		scope:indian_national_movement = {
+			add_modifier = {
+				name = modifier_indian_independence_leaders_arrested
+				days = normal_modifier_time
+				is_decaying = no
+			}
+		}
+		scope:inc_scope = {
+			change_appeasement = {
+				amount = -5
+				factor = appeasement_indian_hostile_action
+			}
+		}
+		custom_tooltip = {
+			text = quit_india_monthly_indian_nationalism_increase_tt
+		}
+		add_large_heritage_trait_group_loyalists = yes
+	}
+
+	option = {
+		name =  indian_nation_events.5.b
+		default_option = yes
+		ai_chance = 1
+		trigger = {
+			NOT = {
+        		has_variable = overlord_quit_india_arrest
+        	}
+		}
+		scope:indian_national_movement = {
+			add_modifier = {
+				name = modifier_quit_india_movement
+				days = -1 # Permanent
+			}
+		}
+		custom_tooltip = {
+			text = quit_india_monthly_indian_nationalism_increase_tt
+		}
+	}
+}
+
+indian_nation_events.6 = { # Indian National Congress seeking Full Independence
+	type = country_event
+	placement = ROOT
+
+	duration = 3
+
+	title = indian_nation_events.6.t
+	desc = indian_nation_events.6.d
+	flavor = indian_nation_events.6.f
+
+	event_image = {
+		video = "unspecific_politicians_arguing"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	minor_left_icon = c:BIC.overlord
+	minor_right_icon = c:BIC
+
+	cooldown = { days = stupidly_long_modifier_time }
+
+	trigger = {
+		has_dlc_feature = ip2_content
+	}
+
+	immediate = {
+		c:BIC = {
+			set_variable = india_home_rule_failed
+			random_political_movement = {
+				limit = {
+					is_political_movement_type = movement_india_pan_national
+				}
+				save_scope_as = indian_national_movement
+			}
+			random_political_lobby = {
+				limit = {
+					is_political_lobby_type = lobby_indian_national_congress
+				}
+				save_scope_as = inc_scope
+			}
+			overlord = {
+				save_scope_as = overlord_scope
+			}
+		}
+	}
+
+	option = {
+		name = indian_nation_events.6.a
+		default_option = yes
+		if = {
+			limit = {
+				c:BIC ?= this
+			}
+			custom_tooltip = india_home_rule_failed_tt
+		}
+		# Overlord
+		else = {
+			custom_tooltip = india_home_rule_not_accepted_tt
+		}
+	}
+}
+
+indian_nation_events.7 = { # Partition of India
+	type = country_event
+	placement = ROOT
+
+	duration = 3
+
+	title = indian_nation_events.7.t
+	desc = indian_nation_events.7.d
+	flavor = indian_nation_events.7.f
+
+	event_image = {
+		video = "asia_poor_people_moving"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	minor_left_icon = ROOT
+	minor_right_icon = scope:pakistan_scope
+
+	cooldown = { days = stupidly_long_modifier_time }
+
+	trigger = {
+		has_dlc_feature = ip2_content
+		this = {
+			OR = {
+				has_state_in_state_region = STATE_PUNJAB
+				has_state_in_state_region = STATE_SINDH
+				has_state_in_state_region = STATE_KASHMIR
+				has_state_in_state_region = STATE_PASHTUNISTAN
+				has_state_in_state_region = STATE_BALUCHISTAN
+				has_state_in_state_region = STATE_QUETTA
+				has_state_in_state_region = STATE_EAST_BENGAL
+			}
+		}
+	}
+
+	immediate = {
+		save_scope_as = india_scope
+		partition_india = yes
+		# TODO: Investigate if we just move this into the message
+		scope:pakistan_scope ?= {
+			set_variable = partitioned_pakistan
+		}
+		# Make Pakistan a Dominion of Britain if India is also a British subject still
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			overlord ?= {
+				scope:pakistan_scope = {
+					set_country_type = colonial
+				}
+				create_diplomatic_pact = {
+					country = scope:pakistan_scope
+					type = dominion
+				}
+			}
+		}
+		# Partition Migration (India->Pakistan)
+		every_scope_state = {
+			kill_population_percent_in_state = {
+				religion = rel:sunni
+				percent = 0.02
+			}
+			kill_population_percent_in_state = {
+				religion = rel:shiite
+				percent = 0.02
+			}
+			kill_population_percent_in_state = {
+				religion = rel:ibadi
+				percent = 0.02
+			}
+			every_scope_pop = {
+				limit = {
+					OR = {
+						religion = rel:sunni
+						religion = rel:shiite
+						religion = rel:ibadi
+					}
+				}
+				random_list = {
+					82 = {}
+					18 = {
+						scope:pakistan_scope = {
+							random_scope_state = {
+								limit = {
+									NOT = {
+										state_region = s:STATE_EAST_BENGAL
+									}
+								}
+								save_scope_as = migration_state
+							}
+						}
+						move_pop = scope:migration_state
+					}
+				}
+			}
+		}
+		# Partition Migration (Pakistan->India)
+		scope:pakistan_scope = {
+			every_scope_state = {
+				limit = {
+					NOT = {
+						state_region = s:STATE_EAST_BENGAL
+					}
+				}
+				kill_population_percent_in_state = {
+					religion = rel:hindu
+					percent = 0.10
+				}
+				kill_population_percent_in_state = {
+					religion = rel:sikh
+					percent = 0.10
+				}
+				every_scope_pop = {
+					limit = {
+						OR = {
+							religion = rel:hindu
+							religion = rel:sikh
+						}
+					}
+					ROOT = {
+						random_scope_state = {
+							save_scope_as = migration_state
+						}
+					}
+					move_pop = scope:migration_state
+				}
+			}
+			every_scope_state = {
+				limit = {
+					state_region = s:STATE_EAST_BENGAL
+				}
+				every_scope_pop = {
+					limit = {
+						OR = {
+							religion = rel:hindu
+							religion = rel:sikh
+						}
+					}
+					random_list = {
+						80 = {}
+						20 = {
+							scope:india_scope = {
+								random_scope_state = {
+									save_scope_as = migration_state
+								}
+							}
+							move_pop = scope:migration_state
+						}
+					}
+				}
+			}
+		}
+		# Diplomatic Relations w/ India
+		create_diplomatic_catalyst = {
+			type = catalyst_event_negative
+			target = scope:pakistan_scope
+		}
+		set_relations = {
+			country = scope:pakistan_scope
+			value = -50
+		}
+		# Diplomatic Relations and truce w/ Former/Current Overlord
+		if = {
+			limit = {
+				NOT = {
+					# This is set by je_india_home_rule if it calls this event
+					exists = scope:bic_overlord_scope
+				}
+				# But if this event was called from Communal Divides after India gained sovereignty, we need to check
+				# if it's still a subject and has an overlord for us to set relations with
+				is_subject = yes
+			}
+			overlord = {
+				save_temporary_scope_as = bic_overlord_scope
+			}
+		}
+		if = {
+			limit = {
+				exists = scope:bic_overlord_scope
+			}
+			scope:bic_overlord_scope = {
+				set_local_variable = {
+					name = relations_set
+					value = 0
+				}
+				if = {
+					limit = {
+						any_interest_group = {
+							is_in_government = yes
+							ig_is_indian_imperialist = yes
+						}
+					}
+					change_local_variable = {
+						name = relations_set
+						subtract = 30
+					}
+				}
+				if = {
+					limit = {
+						any_interest_group = {
+							is_in_government = yes
+							ig_is_indian_reformist = yes
+						}
+					}
+					change_local_variable = {
+						name = relations_set
+						add = 30
+					}
+				}
+				set_relations = {
+					country = scope:pakistan_scope
+					value = local_var:relations_set
+				}
+				create_bidirectional_truce = {
+					country = scope:pakistan_scope
+					months = 60
+				}
+			}
+		}
+	}
+
+	option = {
+		name = indian_nation_events.7.a
+		default_option = yes
+		custom_tooltip = {
+			text = pakistan_is_created_tt
+		}
+		show_as_tooltip = {
+			if = {
+				limit = {
+					has_local_variable = updated_religion
+				}
+				set_state_religion = rel:hindu
+			}
+		}
+		custom_tooltip = muslim_characters_move_to_pakistan_tt
+		custom_tooltip = transfer_subjects_to_pakistan_tt
+		custom_tooltip = partition_migration_tt
+		show_as_tooltip = {
+			create_diplomatic_catalyst = {
+				type = catalyst_event_negative
+				target = scope:pakistan_scope
+			}
+			set_relations = {
+				country = scope:pakistan_scope
+				value = -50
+			}
+		}
+	}
+
+	option = {
+		name = indian_nation_events.7.b
+		custom_tooltip = {
+			text = pakistan_is_created_tt
+		}
+		show_as_tooltip = {
+			if = {
+				limit = {
+					has_local_variable = updated_religion
+				}
+				set_state_religion = rel:hindu
+			}
+		}
+		custom_tooltip = muslim_characters_move_to_pakistan_tt
+		custom_tooltip = transfer_subjects_to_pakistan_tt
+		custom_tooltip = partition_migration_tt
+		show_as_tooltip = {
+			create_diplomatic_catalyst = {
+				type = catalyst_event_negative
+				target = scope:pakistan_scope
+			}
+			set_relations = {
+				country = scope:pakistan_scope
+				value = -50
+			}
+		}
+		if = {
+			limit = {
+				is_player = yes
+			}
+			play_as = scope:pakistan_scope
+		}
+	}
+}
+
+indian_nation_events.8 = { # Signs of Division
+	type = country_event
+	placement = ROOT
+
+	duration = 3
+
+	title = indian_nation_events.8.t
+	desc = indian_nation_events.8.d
+	flavor = indian_nation_events.8.f
+
+	event_image = {
+		video = "ip2_intercommunal_tensions"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	trigger = {
+		has_dlc_feature = ip2_content
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_hindu_nationalist
+					}
+				}
+			}
+			create_political_movement = { type = movement_hindu_nationalist }
+		}
+		if = {
+			limit = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_muslim_nationalist
+					}
+				}
+			}
+			create_political_movement = { type = movement_muslim_nationalist }
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_muslim_nationalist
+			}
+			save_scope_as = muslim_league_scope
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_hindu_nationalist
+			}
+			save_scope_as = hindu_mahasabha_scope
+		}
+		random_political_lobby = {
+			limit ={
+				is_political_lobby_type = lobby_indian_national_congress
+			}
+			save_scope_as = inc_scope
+		}
+	}
+
+	option = {
+		name = indian_nation_events.8.a
+		default_option = yes
+		custom_tooltip = {
+			text = indian_religious_nationalist_movements_founded_tt
+		}
+		custom_tooltip = {
+			text = indian_nationalism_increases_support_activism_of_religious_nationalist_movements_tt
+		}
+		custom_tooltip = {
+			text = indian_religious_nationalist_support_activism_triggers_communal_divides_tt
+		}
+	}
+}
+
+indian_nation_events.9 = { # The Headless Master
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	title = indian_nation_events.9.t
+	desc = indian_nation_events.9.d
+	flavor = indian_nation_events.9.f
+
+	event_image = {
+		video = "ip2_india_protest"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	cooldown = { days = stupidly_long_modifier_time }
+
+	# Triggered by bic_breakup.1
+
+	immediate = {
+		# Remove overlord from je_india_home_rule
+		every_country = {
+			limit = {
+				is_involved_in_journal_entry = je_india_home_rule
+				NOT = {
+					c:BIC ?= this
+				}
+			}
+			save_temporary_scope_as = former_overlord_scope
+			prev = {
+				je:je_india_home_rule = {
+					remove_involved_country = scope:former_overlord_scope
+				}
+			}
+		}
+		# Just in case India becomes a subject again, Indian National Movement should then seek full independence
+		set_variable = india_home_rule_failed
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_national_movement
+		}
+	}
+
+	option = {
+		name = indian_nation_events.9.a
+		default_option = yes
+		custom_tooltip = fight_for_indian_sovereignty_continues_tt
+		custom_tooltip = indian_nationalism_increase_0_2_per_month_tt
+		random_political_lobby = {
+			limit = {
+				is_political_lobby_type = lobby_indian_national_congress
+			}
+			change_appeasement = {
+				amount = 4
+				factor = appeasement_gained_independence
+			}
+		}
+	}
+}
+
+indian_nation_events.10 = { # Burmese Freedom Fighters (for BIC)
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	title = indian_nation_events.10.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = indian_nation_events.10.d_independent_burma
+				trigger = {
+					c:BUR ?= {
+						NOT = {
+							is_subject_of = ROOT.overlord
+						}
+					}
+				}
+			}
+			triggered_desc = {
+				desc = indian_nation_events.10.d
+				trigger = {
+					always = yes
+				}
+			}
+		}
+	}
+	flavor = indian_nation_events.10.f
+
+	event_image = {
+		video = "votp_conspiring"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	# Triggered by je_india_home_rule
+	trigger = {
+		# This event can only fire if we own Burmese territory or Burma is our subject whose situation could be improved
+		# Use "this" instead of "ROOT" because we call can_trigger_event from a contextless JE
+		this ?= {
+			OR = {
+				any_scope_state = {
+					state_is_homeland_of_burmese_cultures = yes
+				}
+				any_direct_subject = {
+					c:BUR ?= this
+				}
+				AND = {
+					is_subject = yes
+					overlord = {
+						any_direct_subject = {
+							c:BUR ?= this
+						}
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		ROOT = {
+			save_scope_as = india_scope
+			overlord ?= {
+				save_scope_as = overlord_scope
+			}
+		}
+		c:BUR ?= {
+			save_scope_as = burma_scope
+		}
+		random_political_lobby = {
+			limit = {
+				is_political_lobby_type = lobby_indian_national_congress
+			}
+			save_scope_as = inc_scope
+		}
+		# Determine if overlord or a (non-BIC) subject owns Burmese territory
+		if = {
+			limit = {
+				is_subject = yes
+				overlord = {
+					OR = {
+						any_scope_state = {
+    						state_is_homeland_of_burmese_cultures = yes
+    					}
+    					any_subject_or_below = {
+    						is_player = no
+    						NOT = {
+    							this = scope:india_scope
+    						}
+    						any_scope_state = {
+			    				state_is_homeland_of_burmese_cultures = yes
+			    			}
+    					}
+					}
+				}
+			}
+			set_local_variable = overlord_owns_burmese_territory
+		}
+		# Determine if BIC or its overlord have Burmese territory
+		if = {
+	    	limit = {
+	    		# BIC or its overlord own Burmese territory
+	    		OR = {
+	    			any_scope_state = {
+	    				state_is_homeland_of_burmese_cultures = yes
+	    			}
+	    			has_local_variable = overlord_owns_burmese_territory
+	    		}
+	    	}
+	    	set_local_variable = bic_or_overlord_owns_burmese_territory
+	    }
+	}
+
+	option = {
+		name = {
+	        trigger = {
+	        	c:BUR ?= {
+					is_subject_of = ROOT
+				}
+	        }
+	        text = indian_nation_events.10.a_burma_subject
+	    }
+	    name = {
+	        trigger = {
+	        	# (This means BUR is not a subject of BIC or overlord, but BIC owns Burmese territory)
+	        	NOT = {
+	        		c:BUR ?= {
+						is_subject_of = ROOT
+					}
+	        	}
+	        }
+	        text = indian_nation_events.10.a
+	    }
+	    ai_chance = 0
+	    set_variable = opposing_burmese_independence
+	    custom_tooltip = indian_nationalism_decrease_0_3_per_month_tt
+	}
+
+	option = {
+		name = indian_nation_events.10.b
+		ai_chance = 0
+		trigger = {
+			OR = {
+				# BUR does not exist, we're offering to form a dominion from BIC's territory
+				NOT = {
+					exists = c:BUR
+				}
+				# Or it is a non-protectorate, non-dominion subject of India (or it's overlord) that we're offering to upgrade to a dominion
+				c:BUR ?= {
+					is_subject_of = scope:india_scope.overlord
+					NOR = {
+						is_subject_type = subject_type_protectorate
+						is_subject_type = subject_type_dominion
+					}
+				}
+			}
+		}
+		set_variable = supporting_burmese_subject
+		if = {
+	    	limit = {
+	    		has_local_variable = bic_or_overlord_owns_burmese_territory
+	    	}
+	    	if = {
+	    		limit = {
+	    			exists = c:BUR
+	    		}
+	    		if = {
+	    			limit = {
+	    				is_subject = yes
+	    			}
+	    			custom_tooltip = indian_burmese_territory_returned_subject_tt
+	    		}
+	    		else = {
+	    			custom_tooltip = indian_burmese_territory_returned_independent_tt
+	    		}
+	    	}
+	    	else = {
+	    		if = {
+	    			limit = {
+	    				is_subject = yes
+	    			}
+	    			custom_tooltip = indian_burma_released_subject_tt
+	    		}
+	    		else = {
+	    			custom_tooltip = indian_burma_released_independent_tt
+	    		}
+	    	}
+	    }
+	    custom_tooltip = indian_burma_made_indian_dominion_tt
+		custom_tooltip = indian_nationalism_decrease_0_1_per_month_tt
+		hidden_effect = {
+			c:BUR ?= {
+				trigger_event = {
+					id = indian_nation_events.11
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_local_variable = overlord_owns_burmese_territory
+			}
+			overlord = {
+				post_notification = inc_supporting_burmese_autonomy
+			}
+		}
+	}
+
+	option = {
+		name = indian_nation_events.10.c
+		default_option = yes
+		ai_chance = 1
+		trigger = {
+			OR = {
+				# BUR doesn't exist, we're forming an independent Burma from Burmese territory
+				NOT = {
+					exists = c:BUR
+				}
+				# Or if Burma exists...
+				c:BUR ?= {
+					# It is a subject of BIC or its Overlord
+					is_subject_of = scope:india_scope.overlord
+					# And...
+					OR = {
+						# Either it is not a Protectorate or Dominion (because we're going to upgrade it to a British Dominion)
+						NOR = {
+							is_subject_type = subject_type_protectorate
+							is_subject_type = subject_type_dominion
+						}
+						# Or would go independent alongside India
+						scope:india_scope = {
+							OR = {
+				    			is_subject = no
+				    			has_variable = india_home_rule_failed
+				    		}
+						}
+					}
+				}
+			}
+		}
+		set_variable = supporting_burmese_independence
+		if = {
+	    	limit = {
+	    		has_local_variable = bic_or_overlord_owns_burmese_territory
+	    	}
+	    	if = {
+	    		limit = {
+	    			exists = c:BUR
+	    		}
+	    		if = {
+	    			limit = {
+	    				is_subject = yes
+	    			}
+	    			custom_tooltip = indian_burmese_territory_returned_subject_tt
+	    		}
+	    		else = {
+	    			custom_tooltip = indian_burmese_territory_returned_independent_tt
+	    		}
+	    	}
+	    	else = {
+	    		if = {
+	    			limit = {
+	    				is_subject = yes
+	    			}
+	    			custom_tooltip = indian_burma_released_subject_tt
+	    		}
+	    		else = {
+	    			custom_tooltip = indian_burma_released_independent_tt
+	    		}
+	    	}
+	    }
+	    if = {
+	    	limit = {
+	    		OR = {
+	    			is_subject = no
+	    			has_variable = india_home_rule_failed
+	    		}
+	    	}
+	    	custom_tooltip = indian_burma_made_independent_tt
+	    }
+	    else = {
+	    	custom_tooltip = indian_burma_made_british_dominion_tt
+	    }
+		custom_tooltip = indian_nationalism_increase_0_1_per_month_tt
+		hidden_effect = {
+			c:BUR ?= {
+				trigger_event = {
+					id = indian_nation_events.11
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_local_variable = overlord_owns_burmese_territory
+					AND = {
+						is_subject = yes
+						overlord = {
+							any_direct_subject = {
+								c:BUR ?= this
+							}
+						}
+					}
+				}
+			}
+			overlord = {
+				post_notification = inc_supporting_burmese_autonomy
+			}
+		}
+	}
+
+	option = {
+		name = indian_nation_events.10.e
+		default_option = yes
+		ai_chance = 1
+		trigger = {
+			exists = c:BUR
+			c:BUR ?= {
+				OR = {
+					# Burma is either not a subject of BIC or its overlord
+					NOR = {
+						is_subject_of = scope:india_scope
+						is_subject_of = scope:overlord_scope
+					}
+					# Or...
+					AND = {
+						# It's already a Dominion or Protectorate
+						OR = {
+							is_subject_type = subject_type_protectorate
+							is_subject_type = subject_type_dominion
+						}
+						# And it would not become independent alongside BIC
+						scope:india_scope = {
+							NOR = {
+				    			is_subject = no
+				    			has_variable = india_home_rule_failed
+				    		}
+						}
+					}
+				}
+			}
+		}
+		set_variable = supporting_burmese_independence
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			custom_tooltip = indian_burmese_territory_returned_subject_tt
+		}
+		else = {
+			custom_tooltip = indian_burmese_territory_returned_independent_tt
+		}
+		custom_tooltip = indian_nationalism_increase_0_1_per_month_tt
+		hidden_effect = {
+			c:BUR ?= {
+				trigger_event = {
+					id = indian_nation_events.11
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_local_variable = overlord_owns_burmese_territory
+			}
+			overlord = {
+				post_notification = inc_supporting_burmese_territorial_integrity
+			}
+		}
+	}
+}
+
+indian_nation_events.11 = { # Burmese Freedom Fighters (for Burma)
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	title = indian_nation_events.10.t
+	desc = indian_nation_events.11.d
+	flavor = indian_nation_events.11.f
+
+	event_image = {
+		video = "votp_conspiring"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	minor_left_icon = c:BIC
+	minor_right_icon = c:BUR
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	# Triggered by indian_nation_events.10
+
+	immediate = {
+		c:BIC ?= {
+			save_scope_as = india_scope
+			random_political_lobby = {
+				limit = {
+					is_political_lobby_type = lobby_indian_national_congress
+				}
+				save_scope_as = inc_scope
+			}
+			random_political_movement = {
+				limit = {
+					is_political_movement_type = movement_india_pan_national
+				}
+				save_scope_as = indian_national_movement
+			}
+		}
+	}
+
+	option = {
+		name = indian_nation_events.11.a
+		scope:india_scope ?= {
+			if = {
+				limit = {
+					# BIC or its overlord own Burmese territory (from indian_nation_events.10)
+					has_local_variable = bic_or_overlord_owns_burmese_territory
+				}
+				if = {
+	    			limit = {
+	    				is_subject = yes
+	    			}
+	    			custom_tooltip = indian_burmese_territory_returned_subject_tt
+	    		}
+	    		else = {
+	    			custom_tooltip = indian_burmese_territory_returned_independent_tt
+	    		}
+			}
+		}
+		if = {
+			limit = {
+				scope:india_scope ?= {
+					# BIC would get this event and this var would be set only if BUR is BIC (or overlord)'s
+					# non-protectorate, non-dominion subject
+					has_variable = supporting_burmese_subject
+				}
+			}
+			custom_tooltip = indian_burma_made_indian_dominion_tt
+		}
+		if = {
+			# If Burma supporting BUR as a dominion and BUR is a subject of BIC or its overlord
+			limit = {
+				scope:india_scope ?= {
+					has_variable = supporting_burmese_independence
+				}
+				is_subject_of = scope:india_scope.overlord
+			}
+			if = {
+				# If BIC would release Burma
+				limit = {
+					scope:india_scope ?= {
+						OR = {
+							is_subject = no
+							has_variable = india_home_rule_failed
+						}
+					}
+				}
+				custom_tooltip = indian_burma_made_independent_tt
+			}
+			else_if = {
+				# BIC could be upgraded to a protectorate
+				limit = {
+					NOR = {
+						is_subject_type = subject_type_protectorate
+						is_subject_type = subject_type_dominion
+					}
+				}
+				custom_tooltip = indian_burma_made_british_dominion_tt
+			}
+		}
+	}
+}
+
+indian_nation_events.12 = { # Demands for Home Rule / Independence
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	cancellation_trigger = {
+		NOR = {
+			c:BIC ?= this
+			has_journal_entry = je_india_home_rule
+			je:je_india_home_rule = {
+				"scripted_bar_progress(je_india_home_rule_progressbar)" >= 500
+			}
+			NOT = {
+				has_variable = requested_dop_permission
+			}
+		}
+	}
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = indian_nation_events.12.t_home_rule
+				trigger = {
+					is_subject = yes
+					NOT = {
+						has_variable = india_home_rule_failed
+					}
+				}
+			}
+			triggered_desc = {
+				desc = indian_nation_events.12.t_independence
+				trigger = {
+					is_subject = yes
+				}
+			}
+			triggered_desc = {
+				desc = indian_nation_events.12.t_self_governance
+			}
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = indian_nation_events.12.d_home_rule
+				trigger = {
+					is_subject = yes
+					NOT = {
+						has_variable = india_home_rule_failed
+					}
+				}
+			}
+			triggered_desc = {
+				desc = indian_nation_events.12.d_independence
+				trigger = {
+					is_subject = yes
+				}
+			}
+			triggered_desc = {
+				desc = indian_nation_events.12.d_self_governance
+			}
+		}
+	}
+	flavor = indian_nation_events.12.f
+
+	event_image = {
+		video = "ip2_india_protest"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	# Triggered by je_indian_home_rule
+	trigger = {
+		c:BIC ?= this
+		has_journal_entry = je_india_home_rule
+		je:je_india_home_rule = {
+			"scripted_bar_progress(je_india_home_rule_progressbar)" >= 500
+			NOT = {
+				has_variable = sovereignty_reminder_cooldown
+			}
+		}
+		NOT = {
+			has_variable = requested_dop_permission
+		}
+		OR = {
+			is_subject = no
+			has_variable = india_home_rule_failed
+			AND = {
+				has_law_or_variant = law_type:law_elected_bureaucrats
+				country_has_voting_franchise = yes
+				custom_tooltip = {
+					text = simon_commission_complete_tt
+					je:je_india_home_rule = {
+						has_variable = simon_commission_complete
+					}
+				}
+				OR = {
+					has_law_or_variant = law_type:law_multicultural
+					active_law:lawgroup_citizenship ?= {
+						has_amendment = amendment_type:amendment_government_of_india_act
+					}
+				}
+				OR = {
+					is_subject_type = subject_type_dominion
+					is_subject_type = subject_type_protectorate
+				}
+			}
+		}
+	}
+
+	immediate = {
+		save_scope_as = india_scope
+		je:je_india_home_rule = {
+			set_variable = {
+				name = sovereignty_reminder_cooldown
+				years = 2
+			}
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_national_movement
+		}
+		random_political_lobby = {
+			limit = {
+				is_political_lobby_type = lobby_indian_national_congress
+			}
+			save_scope_as = inc_scope
+		}
+	}
+
+	option = {
+		name = indian_nation_events.12.a
+		default_option = yes
+		ai_chance = 1
+		set_variable = { name = requested_dop_permission years = 2 }
+		if = {
+			limit = {
+				is_subject = yes
+				NOT = {
+					has_variable = india_home_rule_failed
+				}
+			}
+			custom_tooltip = {
+				text = india_petition_home_rule_tt
+				overlord = {
+					trigger_event = { id = indian_reform_request_events.5 popup = yes }
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_subject = yes
+				# has_variable = india_home_rule_failed
+			}
+			custom_tooltip = {
+				text = india_demand_independence_tt
+				overlord = {
+					trigger_event = { id = indian_reform_request_events.6 popup = yes }
+				}
+			}
+		}
+		else = {
+			# is_subject = no
+			custom_tooltip = {
+				text = india_enact_sovereign_government_tt
+				set_variable = indian_sovereignty_granted
+			}
+		}
+	}
+
+	option = {
+		name = indian_nation_events.12.b
+		ai_chance = 0
+		if = {
+			limit = {
+				OR = {
+					NOT = {
+						has_variable = india_home_rule_failed
+					}
+					is_subject = no
+				}
+			}
+			add_large_indian_radicals = yes
+			scope:inc_scope = {
+				change_appeasement = {
+					amount = -4
+					factor = appeasement_indian_sovereignty_demand_rejected
+				}
+			}
+			scope:indian_national_movement = {
+				add_modifier = {
+					name = indian_sovereignty_denied
+					days = normal_modifier_time
+				}
+			}
+		}
+		else = {
+			add_large_indian_radicals = yes
+			scope:inc_scope = {
+				change_appeasement = {
+					amount = -6
+					factor = appeasement_indian_sovereignty_demand_rejected
+				}
+			}
+			scope:indian_national_movement = {
+				add_modifier = {
+					name = indian_sovereignty_denied
+					days = normal_modifier_time
+					multiplier = 2
+				}
+			}
+		}
+	}
+}
+
+indian_nation_events.13 = { # New Overlord notification for The Indian Nation
+	type = country_event
+	placement = c:BIC.capital
+
+	duration = 3
+
+	title = indian_nation_events.13.t
+	desc = indian_nation_events.13.d
+	flavor = indian_nation_events.13.f
+
+	event_image = {
+		video = "ip2_telegraph_dictate"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	minor_left_icon = ROOT
+	minor_right_icon = c:BIC
+
+	# Triggered by je_india_home_rule
+
+	immediate = {
+		c:BIC ?= {
+			save_scope_as = india_scope
+		}
+	}
+
+	option = {
+		name = indian_nation_events.13.a
+		default_option = yes
+		custom_tooltip = added_to_indian_nation_je_tt
+		custom_tooltip = affect_bar_india_policies_tt
+	}
+}
+
+indian_nation_events.14 = { # BIC Notification for new Overlord
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	title = indian_nation_events.14.t
+	desc = indian_nation_events.14.d
+	flavor = indian_nation_events.14.f
+
+	event_image = {
+		video = "ip2_india_protest"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	minor_left_icon = c:BIC.overlord
+	minor_right_icon = c:BIC
+
+	# Triggered by je_india_home_rule
+
+	immediate = {
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_national_movement
+		}
+	}
+
+	option = {
+		name = indian_nation_events.14.a
+		default_option = yes
+		custom_tooltip = india_new_subject_tt
+		custom_tooltip = fight_for_indian_sovereignty_continues_tt
+	}
+}
+
+indian_nation_events.15 = { # Burmese Notification for Indian War of Independence (and option to join)
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	title = india_nationalism_events.1.t
+	desc = indian_nation_events.15.d
+	flavor = indian_nation_events.15.f
+
+	event_image = {
+		video = "asia_sepoy_mutiny"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	minor_left_icon = scope:revolutionary_india_scope
+	minor_right_icon = c:BUR
+
+	# Triggered by je_india_home_rule
+
+	immediate = {
+		save_scope_as = burma_scope
+		c:BIC ?= {
+			save_scope_as = india_scope
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				overlord = {
+					save_scope_as = overlord_scope
+				}
+			}
+		}
+		c:BHT ?= {
+			if = {
+				limit = {
+					is_revolutionary = yes
+				}
+			}
+			save_scope_as = revolutionary_india_scope
+		}
+	}
+
+	option = {
+		name = indian_nation_events.15.a
+		default_option = yes
+		# Unfortunately Burma seems to always abandon India, and I can't seem to find a non-hacky way
+		# (like immediately starting the war) of making it not do this. Otherwise I would make it always join the rebels.
+		ai_chance = 1
+		show_as_tooltip = {
+			c:BIC ?= {
+				indian_sovereignty_je_burma_effects = yes
+			}
+		}
+	}
+
+	option = {
+		name = indian_nation_events.15.b
+		ai_chance = 0
+		show_as_tooltip = {
+			c:BIC ?= {
+				indian_sovereignty_je_burma_effects = yes
+			}
+		}
+		custom_tooltip = {
+			text = join_indian_war_of_independence_tt
+			random_diplomatic_play = {
+				limit = {
+					initiator ?= {
+						c:BHT ?= this
+						is_revolutionary = yes
+					}
+					target ?= {
+						c:BIC ?= this
+					}
+				}
+				add_initiator_backers = {
+					scope:burma_scope
+				}
+			}
+			c:BIC ?= {
+				je:je_india_nationalism ?= {
+					add_involved_country = scope:burma_scope
+				}
+			}
+		}
+	}
+}

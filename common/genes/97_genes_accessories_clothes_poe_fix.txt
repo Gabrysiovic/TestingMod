@@ -1,0 +1,40 @@
+﻿special_genes = {
+	accessory_genes = {
+	#####################################
+	#									#
+	# 			   COATS 			    #
+	#									#
+	#####################################
+
+		TRY_INJECT:coats = {
+
+			british_indian_uniform_coats_mid = {
+				index = 61
+				male = {
+					1 = male_coat_british_01
+				}
+
+				female = {
+					1 = female_outfit_indian_low_01
+					1 = female_outfit_indian_common_01
+				}
+				boy = male
+				girl = female
+			}
+
+			british_indian_uniform_coats_late = {
+				index = 62
+				male = {
+					1 = male_coat_late_british_military_01
+				}
+
+				female = {
+					1 = female_outfit_indian_low_01
+					1 = female_outfit_indian_common_01
+				}
+				boy = male
+				girl = female
+			}
+		}
+	}
+}

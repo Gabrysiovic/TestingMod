@@ -1,0 +1,97 @@
+﻿gov_colonial_republic = {
+	transfer_of_power = dictatorial
+	new_leader_on_reform_government = no
+
+	male_ruler = "RULER_TITLE_GOVERNOR_GENERAL"
+	female_ruler = "RULER_TITLE_GOVERNOR_GENERAL"
+
+	possible = {
+		this.country_definition ?= cd:BIC
+		NOT = {
+			has_law = law_type:law_colonial_administration
+		}
+		country_has_monarchy_law = no
+		NOT = {
+			has_variable = sepoy_mutiny_country
+		}
+	}
+
+	on_government_type_change = {
+		change_to_dictatorial = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_dictatorial = yes
+	}
+}
+
+gov_colonial_empire = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_EMPEROR"
+	female_ruler = "RULER_TITLE_EMPRESS"
+
+	male_heir = "RULER_TITLE_PRINCE"
+	female_heir = "RULER_TITLE_PRINCESS"
+
+	possible = {
+		this.country_definition ?= cd:BIC
+		country_has_monarchy_law = yes
+		has_gov_regency = no
+		NOT = {
+			has_variable = sepoy_mutiny_country
+		}
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+gov_regency_colonial_empire = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_REGENT"
+	female_ruler = "RULER_TITLE_REGENT"
+
+	male_heir = "RULER_TITLE_EMPEROR"
+	female_heir = "RULER_TITLE_EMPRESS"
+
+	possible = {
+		this.country_definition ?= cd:BIC
+		country_has_monarchy_law = yes
+		has_gov_regency = yes
+		NOT = {
+			has_variable = sepoy_mutiny_country
+		}
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+gov_sepoy_rebellion = {
+	transfer_of_power = dictatorial
+	new_leader_on_reform_government = no
+
+	male_ruler = "RULER_TITLE_GENERAL"
+	female_ruler = "RULER_TITLE_GENERAL"
+
+	possible = {
+		this.country_definition ?= cd:BIC
+		has_variable = sepoy_mutiny_country
+	}
+
+	on_government_type_change = {
+		change_to_dictatorial = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_dictatorial = yes
+	}
+}

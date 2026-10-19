@@ -1,0 +1,150 @@
+﻿variable_princely_state_liberty_desire_change = {
+	scope:target_country ?= {
+		add = {
+			add = prestige
+			desc = DOCTRINE_OF_LAPSE_PRESTIGE
+			divide = 1.5
+		}
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						has_gov_regency = no
+						ruler ?= {
+							is_female = yes
+						}
+					}
+					AND = {
+						has_gov_regency = yes
+						heir ?= {
+							is_female = yes
+						}
+					}
+				}
+			}
+			multiply = {
+				add = 0.5
+				desc = DOCTRINE_OF_LAPSE_NO_MALE_RULER
+			}
+		}
+		if = {
+			limit = {
+				ruler ?= {
+					is_female = no
+				}
+				AND = {
+					ruler = {
+						age >= define:NCharacters|OLD_AGE
+					}
+					OR = {
+						NOT = { exists = heir }
+						heir ?= {
+							is_female = yes
+						}
+					}
+				}
+			}
+			multiply = {
+				add = 0.5
+				desc = DOCTRINE_OF_LAPSE_OLD_WITH_NO_MALE_HEIR
+			}
+		}
+		divide = {
+			add = {
+				add = radical_population_fraction
+				multiply = 5	# e.g. if the country has 20 Prestige and up to 20% Radicals, the LD gain is 20; if it's 25% Radicals, the LD gain is 16; if it's 50% Radicals, the LD gain is 8
+				min = 1
+			}
+			desc = DOCTRINE_OF_LAPSE_RADICALS
+		}
+	}
+	round = yes
+	min = 5
+	max = 20
+}
+
+uneasy_raj_stability_critical_lower_bound = 0
+uneasy_raj_stability_critical_upper_bound = 50
+uneasy_raj_stability_low_lower_bound = 50
+uneasy_raj_stability_low_upper_bound = 100
+uneasy_raj_stability_medium_lower_bound = 100
+uneasy_raj_stability_medium_upper_bound = 150
+uneasy_raj_stability_high_lower_bound = 150
+uneasy_raj_stability_high_upper_bound = 200
+
+indian_uprising_baseline_drift_target = 150
+
+num_princely_state_subjects = { # every_princely_state regrettably doesn't work here.
+	value = 0
+	every_direct_subject = {
+		limit = {
+			is_princely_state = yes
+			is_player = no
+		}
+		add = 1
+	}
+}
+
+num_princely_state_subjects_eligible_for_federation = {
+	value = 0
+	every_direct_subject = {
+		limit = {
+			is_princely_state = yes
+			relations:ROOT >= relations_threshold:amicable
+			liberty_desire < define:NDiplomacy|WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD
+			is_player = no
+		}
+		add = 1
+	}
+}
+
+num_princely_state_subjects_eligible_for_federation_minus_three = {
+	value = 0
+	every_direct_subject = {
+		limit = {
+			is_princely_state = yes
+			relations:ROOT >= relations_threshold:amicable
+			liberty_desire < define:NDiplomacy|WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD
+			is_player = no
+		}
+		add = 1
+	}
+	subtract = 3
+	min = 0
+}
+
+# Delete Me
+privy_purse_multiplier_base = {
+	value = 0
+}
+
+# Delete Me
+privy_purse_value = {
+	value = 0
+}
+
+privy_purse_value_potential = {
+	value = 0
+	every_direct_subject = {
+		limit = {
+			is_princely_state = yes
+			country_has_monarchy_law = yes
+			relations:ROOT >= relations_threshold:amicable
+			liberty_desire < define:NDiplomacy|WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD
+			is_player = no
+		}
+		add = {
+			value = gdp
+			# Target 10% of Revenue for historicty and balance
+			# Assume average revenue is 0.5% of GDP (gdp * 0.005); 10% of this is gdp * 0.0005
+			multiply = 0.0005
+			round = yes
+		}
+	}
+}
+
+single_privy_purse_value_potential = {
+	value = gdp
+	multiply = 0.0005
+	round = yes
+}

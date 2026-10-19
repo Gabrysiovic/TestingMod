@@ -1,0 +1,86 @@
+﻿# Colonial Dictate Modifiers
+REPLACE_OR_CREATE:india_model_colony = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_legitimacy_base_add = 10
+}
+
+REPLACE_OR_CREATE:india_incomplete_dictates = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	country_legitimacy_base_add = -5
+}
+
+REPLACE_OR_CREATE:british_dictate_successful = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	interest_group_approval_add = 3
+}
+
+REPLACE_OR_CREATE:british_dictate_prioritization = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_authority_add = -200
+}
+
+REPLACE_OR_CREATE:british_dictate_plantations_prioritizing_construction = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	building_group_bg_plantations_construction_efficiency_add = 0.10
+	country_construction_goods_cost_mult = 0.05
+}
+
+REPLACE_OR_CREATE:colonial_prosperity_plantation_construction = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	building_group_bg_plantations_construction_efficiency_add = 0.05
+}
+
+REPLACE_OR_CREATE:british_dictate_plantations_prioritizing_productivity = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	building_group_bg_plantations_throughput_add = 0.10
+	building_group_bg_subsistence_agriculture_peasants_standard_of_living_add = -1.0
+}
+
+REPLACE_OR_CREATE:colonial_prosperity_plantation_productivity = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	building_group_bg_plantations_throughput_add = 0.05
+}
+
+REPLACE_OR_CREATE:british_dictate_military_prioritizing_army = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	building_training_rate_mult = 0.10
+	country_military_goods_cost_mult = 0.10
+}
+
+REPLACE_OR_CREATE:colonial_prosperity_army = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	building_training_rate_mult = 0.05
+}
+
+REPLACE_OR_CREATE:british_dictate_military_prioritizing_navy = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	country_ship_construction_efficiency_add = 0.10
+	country_ship_construction_goods_cost_mult = 0.10
+}
+
+REPLACE_OR_CREATE:colonial_prosperity_navy = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	country_ship_construction_efficiency_add = 0.05
+}
+
+REPLACE_OR_CREATE:british_dictate_universities_prioritizing_higher_education = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	building_university_throughput_add = 0.10
+	country_government_wages_mult = 0.10
+}
+
+REPLACE_OR_CREATE:colonial_prosperity_higher_education = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	building_university_throughput_add = 0.05
+}
+
+REPLACE_OR_CREATE:british_dictate_universities_prioritizing_public_schools = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_education_access_add = 0.10
+	country_institution_cost_institution_schools_mult = 0.10
+}
+
+REPLACE_OR_CREATE:colonial_prosperity_public_schools = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_education_access_add = 0.05
+}

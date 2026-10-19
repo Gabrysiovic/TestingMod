@@ -1,0 +1,103 @@
+﻿REPLACE:gov_colonial_administration = {
+	transfer_of_power = dictatorial
+	new_leader_on_reform_government = no
+
+	male_ruler = "RULER_TITLE_GOVERNOR_GENERAL"
+	female_ruler = "RULER_TITLE_GOVERNOR_GENERAL"
+
+	possible = {
+		has_law = law_type:law_colonial_administration
+		OR = {
+			is_subject_type = subject_type_colony
+			is_subject_type = subject_type_dominion
+		}
+		OR = {
+			AND = {
+				AND = { exists = c:NET is_subject_of = c:NET }
+				AND = { exists = c:DEI c:DEI = ROOT }
+				is_subject_type = subject_type_dominion
+			}
+			NOT = { #handled in gov_colonial_administration_spa
+				overlord ?= {
+					c:SPA ?= this
+				}
+				is_subject_type = subject_type_colony
+				is_country_type = colonial
+				top_overlord = { NOT = { is_country_type = colonial } }
+				any_primary_culture = {
+					has_discrimination_trait_group = heritage_group_european
+				}
+				is_not_in_geographic_region = geographic_region_europe
+				is_not_in_geographic_region = geographic_region_africa
+			}
+			NOT = { #handled in gov_colonial_administration_spa
+				is_subject_type = subject_type_colony
+				is_country_type = colonial
+				top_overlord = { NOT = { is_country_type = colonial } }
+				top_overlord = {
+					was_formed_from = SPA
+				}
+				any_primary_culture = {
+					has_discrimination_trait_group = heritage_group_european
+				}
+				is_not_in_geographic_region = geographic_region_europe
+				is_not_in_geographic_region = geographic_region_africa
+			}
+			AND = {
+				has_variable = senegal_subject_var
+				is_subject = yes
+			}
+			AND = {
+				has_variable = zanj_subject_var
+				is_subject = yes
+			}
+			AND = {
+				has_variable = congo_subject_var
+				is_subject = yes
+			}
+			AND = {
+				country_definition ?= cd:BIC # Colonial India should always use dictatorial transfer
+				NAND = {
+					exists = c:GBR
+					is_subject_of = c:GBR
+					c:GBR ?= {
+						country_has_monarchy_law = yes
+					}
+				}
+			}
+		}
+	}
+
+	on_government_type_change = {
+		change_to_dictatorial = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_dictatorial = yes
+	}
+}
+
+REPLACE:gov_crown_colony_india = {
+	transfer_of_power = dictatorial
+	new_leader_on_reform_government = no
+
+	male_ruler = "RULER_TITLE_VICEROY"
+	female_ruler = "RULER_TITLE_VICEROY"
+
+	possible = {
+		has_law = law_type:law_colonial_administration
+		exists = c:GBR
+		is_subject_of = c:GBR
+		c:GBR ?= {
+			country_has_monarchy_law = yes
+		}
+		is_country_type = colonial
+		country_definition ?= cd:BIC
+	}
+
+	on_government_type_change = {
+		change_to_dictatorial = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_dictatorial = yes
+	}
+}

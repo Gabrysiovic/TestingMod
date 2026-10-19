@@ -1,0 +1,8 @@
+﻿# We always use this color for BIC now. See country_definitions/
+REPLACE:bengal_free_state = {
+	color = "bengal_free_state_colour"
+
+	possible = {
+		always = no
+	}
+}

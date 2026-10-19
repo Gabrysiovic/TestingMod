@@ -1,0 +1,1130 @@
+﻿# Used for both BIC Company->Raj and Company/Raj->Independent
+REPLACE_OR_CREATE:make_bic_raj = {
+	if = {
+		limit = {
+			is_subject = yes
+			overlord ?= {
+				NOT = {
+					has_diplomatic_pact = {
+						who = prev
+						type = colony
+						is_initiator = yes
+					}
+				}
+			}
+		}
+		decrease_autonomy = yes
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_variable = doctrine_of_lapse_ended
+			}
+		}
+		custom_tooltip = {
+			text = doctrine_of_lapse_disabled
+			set_variable = doctrine_of_lapse_ended
+		}
+	}
+	if = {
+		limit = {
+			has_modifier = modifier_india_company_rule
+		}
+		remove_modifier = modifier_india_company_rule
+	}
+	if = {
+		limit = {
+			has_modifier = modifier_india_company_rule_upgraded
+		}
+		remove_modifier = modifier_india_company_rule_upgraded
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_modifier = modifier_india_crown_rule
+			}
+		}
+		add_modifier = modifier_india_crown_rule
+	}
+	if = {
+		limit = {
+			is_subject = yes
+			NOT = {
+				has_law_or_variant = law_type:law_appointed_bureaucrats
+			}
+		}
+		activate_law = law_type:law_appointed_bureaucrats
+	}
+	if = {
+		limit = {
+			is_subject = yes
+			NOT = {
+				has_law_or_variant = law_type:law_autocracy
+			}
+		}
+		activate_law = law_type:law_autocracy
+	}
+	if = {
+		limit = {
+			NOR = {
+				has_law_or_variant = law_type:law_hindu_caste_enforced
+				has_law_or_variant = law_type:law_hindu_caste_codified
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_technology_researched = central_archives
+				}
+			}
+			add_technology_researched = central_archives
+		}
+		custom_tooltip = {
+			text = bic_activates_caste_system_enforced_tt
+			activate_law = law_type:law_hindu_caste_codified
+			je:je_imperialism_of_promise ?= {
+				# Ensures we don't punish the player in this JE for forcing Caste System Codified
+				set_variable = caste_system_codified_compelled
+			}
+		}
+	}
+	hidden_effect = {
+		ig:ig_industrialists ?= {
+			set_interest_group_name = ig_government_of_india
+		}
+		if = {
+			limit = {
+				is_subject = no
+			}
+			ig:ig_armed_forces ?= {
+				set_interest_group_name = ig_indian_army
+			}
+		}
+	}
+	# Switching off of Chartered Company puts the largest IG leader in charge and removes them as IG leader.
+	# This just puts them back before we properly set our new leader.
+	hidden_effect = {
+		ruler ?= {
+			set_as_interest_group_leader = yes
+		}
+	}
+	if = {
+		limit = {
+			is_subject = yes
+		}
+		# Generates a colonial governor; possibly a historical one owo
+		hidden_effect = {
+			generate_governor_of_same_type = yes
+		}
+	}
+	else = {
+		ig:ig_industrialists ?= {
+			leader = {
+				set_character_as_ruler = yes
+				remove_as_interest_group_leader = yes
+			}
+		}
+	}
+	if = {
+		limit = {
+			is_subject = yes
+			any_character = {
+				has_template = agitator_john_stuart_mill
+				c:BIC ?= owner
+			}
+			OR = {
+				exists = c:GBR
+				exists = c:ENG
+			}
+		}
+		custom_tooltip = {
+			text = john_stuart_mill_returns_tt
+			c:GBR ?= {
+				save_temporary_scope_as = gbr_scope
+			}
+			if = {
+				limit = {
+					NOT = {
+						exists = scope:gbr_scope
+					}
+				}
+				c:ENG ?= {
+					save_temporary_scope_as = gbr_scope
+				}
+			}
+			scope:gbr_scope ?= {
+				ig:ig_intelligentsia ?= {
+					save_temporary_scope_as = intelligentsia_scope
+				}
+			}
+			random_character = {
+				limit = {
+					has_template = agitator_john_stuart_mill
+				}
+				save_temporary_scope_as = john_stuart_mill_scope
+				if = {
+					limit = {
+						is_in_void = yes
+					}
+					free_character_from_void = yes
+				}
+				transfer_character = scope:gbr_scope
+				if = {
+					limit = {
+						NOT = {
+							has_role = character_role_politician
+						}
+					}
+					add_character_role = character_role_politician
+				}
+				set_interest_group = scope:intelligentsia_scope
+				# Reset to standard politician career length
+				set_career_length = {
+					years = 5
+					random_range = { 1.0 2.0 } # 5-10 years
+				}
+			}
+		}
+	}
+}
+
+# Should be called within c:BIC country scope
+REPLACE_OR_CREATE:indian_reform_denied_effect = {
+	add_medium_indian_radicals = yes
+	random_political_lobby = {
+		limit = {
+			is_political_lobby_type = lobby_indian_national_congress
+		}
+		change_appeasement = {
+			amount = -2
+			factor = appeasement_indian_democratic_reform_rejected
+		}
+	}
+	random_political_movement = {
+		limit = {
+			is_political_movement_type = movement_india_pan_national
+		}
+		add_modifier = {
+			name = indian_reform_denied
+			days = short_modifier_time
+		}
+	}
+}
+
+# Should be called within c:BIC country scope
+REPLACE_OR_CREATE:indian_reform_passed_effect = {
+	add_medium_indian_loyalists = yes
+	random_political_lobby = {
+		limit = {
+			is_political_lobby_type = lobby_indian_national_congress
+		}
+		change_appeasement = {
+			amount = 2
+			factor = appeasement_indian_democratic_reform_passed
+		}
+	}
+	random_political_movement = {
+		limit = {
+			is_political_movement_type = movement_india_pan_national
+		}
+		add_modifier = {
+			name = indian_reform_accepted
+			days = normal_modifier_time
+			is_decaying = yes
+		}
+	}
+}
+
+REPLACE_OR_CREATE:remove_non_indian_cultures = {
+	every_primary_culture = {
+		limit = {
+			NOT = {
+				has_discrimination_trait_group = heritage_group_south_asian
+			}
+		}
+		prev = {
+			remove_primary_culture = prev
+		}
+	}
+}
+
+REPLACE_OR_CREATE:change_indian_state_religion = {
+	religion = {
+		save_temporary_scope_as = previous_religion
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_law_or_variant = law_type:law_state_atheism
+			}
+		}
+		if = {
+			limit = {
+				religion_percent_country = {
+					target = rel:hindu
+					value >= 0.5
+				}
+			}
+			set_state_religion = rel:hindu
+		}
+		else_if = {
+			limit = {
+				religion_percent_country = {
+					target = rel:sunni
+					value >= 0.5
+				}
+			}
+			set_state_religion = rel:sunni
+		}
+		else = {
+			set_state_religion = rel:hindu
+		}
+	}
+	if = {
+		# If rebelling country no longer has the same religion as the original
+		limit = {
+			NOT = {
+				country_has_state_religion = scope:previous_religion
+			}
+		}
+		# Remove every interest group leader / ruler with the old religion. This keeps a rebelling India
+		# from having Protestant interest group leaders after we change religion. We only get rid of
+		# ones with the old state religion so we don't disappear minorities like Sikhs and Sunnis.
+		every_scope_character = {
+			limit = {
+				OR = {
+					is_ruler_of_own_country = yes
+					has_role_of_type = politician
+				}
+				# has_religion = scope:previous_religion doesn't seem to work
+				religion = scope:previous_religion
+			}
+			kill_character = {
+				hidden = yes
+			}
+		}
+	}
+}
+
+REPLACE_OR_CREATE:remove_bic_modifiers = {
+	# Custom tooltips to reduce length of description in Journal Entries
+	if = {
+		limit = {
+			has_modifier = modifier_india_crown_rule
+		}
+		custom_tooltip = {
+			text = india_loses_crown_rule_tt
+			remove_modifier = modifier_india_crown_rule
+		}
+	}
+	if = {
+		limit = {
+			has_modifier = modifier_india_company_rule
+		}
+		custom_tooltip = {
+			text = india_loses_company_rule_tt
+			remove_modifier = modifier_india_company_rule
+		}
+	}
+	if = {
+		limit = {
+			has_modifier = modifier_india_company_rule_upgraded
+		}
+		custom_tooltip = {
+			text = india_loses_company_rule_upgraded_tt
+			remove_modifier = modifier_india_company_rule_upgraded
+		}
+	}
+	if = {
+		limit = {
+			has_modifier = modifier_indian_imperial_police
+		}
+		custom_tooltip = {
+			text = india_loses_indian_imperial_police_tt
+			remove_modifier = modifier_indian_imperial_police
+		}
+	}
+}
+
+REPLACE_OR_CREATE:remove_non_indian_politicians = {
+	every_scope_character = {
+		limit = {
+			OR = {
+				is_ruler_of_own_country = yes
+				is_heir_of_own_country = yes
+				has_role_of_type = politician
+			}
+			culture = {
+				NOT = {
+					has_discrimination_trait_group = heritage_group_south_asian
+				}
+			}
+		}
+		retire_character = yes
+	}
+}
+
+REPLACE_OR_CREATE:remove_non_indian_characters = {
+	# every_scope_character does not cover unrecruited generals/admirals
+	every_character = {
+		limit = {
+			owner ?= prev
+			culture = {
+				NOT = {
+					has_discrimination_trait_group = heritage_group_south_asian
+				}
+			}
+			# Annie's cool; the rest of you get out.
+			NOT = {
+				has_template = GBR_annie_besant
+			}
+		}
+		retire_character = yes
+	}
+}
+
+REPLACE_OR_CREATE:remove_indian_peaceful_protest_effects = {
+	hidden_effect = {
+		every_scope_state = {
+			remove_modifier = hartal_action
+			remove_modifier = indian_farmers_on_strike
+			remove_modifier = civil_servants_resign
+			remove_modifier = indian_tax_protest
+		}
+		remove_modifier = indian_civil_disobedience
+		remove_modifier = prati_sarkar_schools
+		remove_modifier = prati_sarkar_health_system
+	}
+}
+
+REPLACE_OR_CREATE:transfer_all_indian_states_from_overlord = {
+	save_temporary_scope_as = caller_scope
+	if = {
+		limit = {
+			exists = scope:overlord_scope
+		}
+		scope:overlord_scope = {
+			every_scope_state = {
+				limit = {
+					is_in_geographic_region = geographic_region_india
+					# Don't transfer BIOT to Independent India
+					NOT = {
+						state_region = s:STATE_CEYLON
+					}
+				}
+				set_state_owner = scope:caller_scope
+			}
+			every_subject_or_below = {
+				limit = {
+					is_princely_state = no
+					is_player = no
+					NOT = {
+						this = scope:caller_scope
+					}
+				}
+				every_scope_state = {
+					limit = {
+						is_in_geographic_region = geographic_region_india
+						NOT = {
+							state_region = s:STATE_CEYLON
+						}
+					}
+					set_state_owner = scope:caller_scope
+				}
+			}
+		}
+	}
+}
+
+REPLACE_OR_CREATE:transfer_all_princely_state_subjects_from_overlord = {
+	save_temporary_scope_as = caller_scope
+	if = {
+		limit = {
+			exists = scope:overlord_scope
+		}
+		scope:overlord_scope = {
+			every_subject_or_below = {
+				limit = {
+					is_princely_state = yes
+					NOT = {
+						is_subject_of = scope:caller_scope
+					}
+				}
+				scope:caller_scope = {
+					transfer_subject = prev
+				}
+			}
+		}
+	}
+}
+
+REPLACE_OR_CREATE:transfer_all_burmese_states_from_overlord_and_subjects = {
+	save_temporary_scope_as = caller_scope
+	if = {
+		limit = {
+			exists = scope:overlord_scope
+		}
+		scope:overlord_scope = {
+			every_scope_state = {
+				limit = {
+					state_is_homeland_of_burmese_cultures = yes
+				}
+				set_state_owner = scope:caller_scope
+			}
+			every_subject_or_below = {
+				limit = {
+					is_princely_state = no
+					is_player = no
+					NOR = {
+						c:BUR ?= this
+						c:SHS ?= this
+					}
+					NOT = {
+						this = scope:caller_scope
+					}
+				}
+				every_scope_state = {
+					limit = {
+						state_is_homeland_of_burmese_cultures = yes
+						# To keep from stealing the entire Tenasserim peninsula if Siam is also a subject
+						NOT = {
+							is_homeland_of_country_cultures = prev
+						}
+					}
+					set_state_owner = scope:caller_scope
+				}
+			}
+		}
+	}
+	else = {
+		every_subject_or_below = {
+			limit = {
+				is_princely_state = no
+				is_player = no
+				NOR = {
+					c:BUR ?= this
+					c:SHS ?= this
+				}
+			}
+			every_scope_state = {
+				limit = {
+					state_is_homeland_of_burmese_cultures = yes
+					# To keep from stealing the entire Tenasserim peninsula if Siam is also a subject
+					NOT = {
+						is_homeland_of_country_cultures = prev
+					}
+				}
+				set_state_owner = scope:caller_scope
+			}
+		}
+	}
+}
+
+REPLACE_OR_CREATE:give_burmese_territory_to_burma = {
+	if = {
+		limit = {
+			any_scope_state = {
+				state_is_homeland_of_burmese_cultures = yes
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = c:BUR
+				}
+			}
+			if = {
+				limit = {
+					any_scope_state = {
+						state_region = s:STATE_MANDALAY
+					}
+				}
+				random_scope_state = {
+					limit = {
+						state_region = s:STATE_MANDALAY
+					}
+					save_temporary_scope_as = burma_capital
+				}
+			}
+			else_if = {
+				limit = {
+					any_scope_state = {
+						state_region = {
+							is_homeland = cu:burmese
+						}
+					}
+				}
+				ordered_scope_state = {
+					limit = {
+						state_region = {
+							is_homeland = cu:burmese
+						}
+					}
+					min = 0
+					max = 1
+					order_by = gdp
+					save_temporary_scope_as = burma_capital
+				}
+			}
+			else = {
+				ordered_scope_state = {
+					limit = {
+						state_is_homeland_of_burmese_cultures = yes
+					}
+					min = 0
+					max = 1
+					order_by = gdp
+					save_temporary_scope_as = burma_capital
+				}
+			}
+			create_country = {
+				tag = BUR
+				origin = this
+				state = scope:burma_capital
+			}
+		}
+		every_scope_state = {
+			limit = {
+				state_is_homeland_of_burmese_cultures = yes
+			}
+			set_state_owner = c:BUR
+			set_state_type = incorporated
+		}
+	}
+}
+
+REPLACE_OR_CREATE:indian_sovereignty_je_burma_effects = {
+	c:BUR ?= {
+		# Used for tooltips and tracks whether Burma already existed
+		save_temporary_scope_as = burma_scope
+	}
+	# First take all burmese territory from overlord and their subjects
+	if = {
+		limit = {
+			OR = {
+				has_variable = supporting_burmese_subject
+				has_variable = supporting_burmese_independence
+			}
+		}
+		hidden_effect = {
+			transfer_all_burmese_states_from_overlord_and_subjects = yes
+		}
+	}
+	# Give Burmese territory to Burma
+	if = {
+		limit = {
+			OR = {
+				has_variable = supporting_burmese_subject
+				has_variable = supporting_burmese_independence
+			}
+			OR = {
+				any_scope_state = {
+	    			state_is_homeland_of_burmese_cultures = yes
+	    		}
+	    		c:BHT ?= {
+	    			is_revolutionary = yes
+	    			any_scope_state = {
+		    			state_is_homeland_of_burmese_cultures = yes
+		    		}
+	    		}
+			}
+		}
+		if = {
+			limit = {
+				exists = c:BUR
+			}
+			if = {
+				limit = {
+					exists = scope:overlord_scope
+				}
+				custom_tooltip = indian_burmese_territory_returned_subject_tt
+			}
+			else = {
+				custom_tooltip = indian_burmese_territory_returned_independent_tt
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					exists = scope:overlord_scope
+				}
+				custom_tooltip = indian_burma_released_subject_tt
+			}
+			else = {
+				custom_tooltip = indian_burma_released_independent_tt
+			}
+		}
+		hidden_effect = {
+			give_burmese_territory_to_burma = yes
+		}
+	}
+	# Make Burma an Indian Dominion
+	if = {
+		limit = {
+			has_variable = supporting_burmese_subject
+			OR = {
+				# Burma was created from held territory
+				NOT = {
+					exists = scope:burma_scope
+				}
+				c:BUR ?= {
+					# Burma is a subject of BIC or its overlord
+					OR = {
+						is_subject_of = scope:india_scope
+						AND = {
+							exists = scope:overlord_scope
+							is_subject_of = scope:overlord_scope
+						}
+					}
+					# It is a worse subject than Protectorate of Dominion
+					NOR = {
+						is_subject_type = subject_type_protectorate
+						is_subject_type = subject_type_dominion
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			text = indian_burma_made_indian_dominion_tt
+			c:BUR ?= {
+				make_independent = yes
+				set_country_type = colonial
+			}
+			create_diplomatic_pact = {
+				country = c:BUR
+				type = dominion
+			}
+		}
+	}
+	# Make Burma a British Dominion
+	else_if = {
+		limit = {
+			has_variable = supporting_burmese_independence
+			is_subject = yes
+			NOT = {
+				has_variable = india_home_rule_failed
+			}
+			OR = {
+				# Burma was created from held territory
+				NOT = {
+					exists = scope:burma_scope
+				}
+				c:BUR ?= {
+					# Burma is a subject of BIC or its overlord
+					OR = {
+						is_subject_of = scope:india_scope
+						AND = {
+							exists = scope:overlord_scope
+							is_subject_of = scope:overlord_scope
+						}
+					}
+					# And is a worse subject than a Dominion
+					NOR = {
+						is_subject_type = subject_type_protectorate
+						is_subject_type = subject_type_dominion
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			text = indian_burma_made_british_dominion_tt
+			c:BUR ?= {
+				set_country_type = colonial
+			}
+			scope:india_scope.overlord = {
+				create_diplomatic_pact = {
+					country = c:BUR
+					type = dominion
+				}
+			}
+		}
+	}
+	# Make Burma Independent
+	else_if = {
+		limit = {
+			has_variable = supporting_burmese_independence
+			OR = {
+				is_subject = no
+				has_variable = india_home_rule_failed
+			}
+			OR = {
+				# Burma was created from held territory
+				NOT = {
+					exists = scope:burma_scope
+				}
+				# Burma is a subject of BIC or its overlord
+				c:BUR ?= {
+					OR = {
+						is_subject_of = scope:india_scope
+						AND = {
+							exists = scope:overlord_scope
+							is_subject_of = scope:overlord_scope
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			text = indian_burma_made_independent_tt
+			c:BUR ?= {
+				if = {
+					limit = {
+						is_subject = yes
+					}
+					make_independent = yes
+				}
+				set_country_type = recognized
+			}
+		}
+	}
+	# Transfer Shan States to Burma
+	if = {
+		limit = {
+			OR = {
+				has_variable = supporting_burmese_subject
+				has_variable = supporting_burmese_independence
+			}
+			c:SHS ?= {
+				OR = {
+					is_direct_subject_of = scope:india_scope
+					is_indirect_subject_of = scope:india_scope
+					AND = {
+						exists = scope:overlord_scope
+						OR = {
+							is_direct_subject_of = scope:overlord_scope
+							is_indirect_subject_of = scope:overlord_scope
+						}
+					}
+				}
+			}
+		}
+		c:BUR ?= {
+			transfer_subject = c:SHS
+		}
+	}
+	# Copy Burma's Laws from India if it's newly created
+	if = {
+		limit = {
+			# Burma was created from held territory
+			NOT = {
+				exists = scope:burma_scope
+			}
+		}
+		hidden_effect = {
+			c:BUR ?= {
+				copy_laws = prev
+			}
+		}
+	}
+}
+
+REPLACE_OR_CREATE:partition_india = {
+	# Update India's State Religion if Necessary
+	if = {
+		limit = {
+			NOT = {
+				country_has_state_religion = rel:hindu
+			}
+		}
+		# So we know whether to show this in an event option
+		set_local_variable = updated_religion
+		set_state_religion = rel:hindu
+	}
+	# Annex all non-princely state subjects' states in Pakistan Territory
+	every_subject_or_below = {
+		limit = {
+			NOR = {
+				is_princely_state = yes
+				is_player = no
+			}
+		}
+		every_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_PUNJAB
+					state_region = s:STATE_SINDH
+					state_region = s:STATE_KASHMIR
+					state_region = s:STATE_PASHTUNISTAN
+					state_region = s:STATE_BALUCHISTAN
+					state_region = s:STATE_QUETTA
+					state_region = s:STATE_EAST_BENGAL
+				}
+			}
+			set_state_owner = ROOT
+		}
+	}
+	# Pick a capital
+	if = {
+		limit = {
+			has_state_in_state_region = STATE_SINDH
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_SINDH
+			}
+			save_scope_as = capital_scope
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_state_in_state_region = STATE_PUNJAB
+				has_state_in_state_region = STATE_KASHMIR
+				has_state_in_state_region = STATE_PASHTUNISTAN
+				has_state_in_state_region = STATE_BALUCHISTAN
+				has_state_in_state_region = STATE_QUETTA
+			}
+		}
+		ordered_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_PUNJAB
+					state_region = s:STATE_KASHMIR
+					state_region = s:STATE_PASHTUNISTAN
+					state_region = s:STATE_BALUCHISTAN
+					state_region = s:STATE_QUETTA
+				}
+			}
+			order_by = {
+				value = 0
+				every_scope_building = {
+					limit = {
+						is_building_group = bg_urban_facilities
+					}
+					prev = {
+						add = prev.level
+					}
+				}
+			}
+			save_scope_as = capital_scope
+		}
+	}
+	else = {
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_EAST_BENGAL
+			}
+			save_scope_as = capital_scope
+		}
+	}
+	# Create Pakistan in the capital
+	if = {
+		limit = {
+			NOT = {
+				exists = c:BGL
+			}
+			scope:capital_scope.state_region = s:STATE_EAST_BENGAL
+		}
+		create_country = {
+			origin = root
+			tag = BGL
+			state = scope:capital_scope
+			on_created = {
+				set_country_type = recognized
+			}
+		}
+		c:BGL ?= {
+			save_scope_as = pakistan_scope
+		}
+	}
+	else_if = {
+		limit = {
+			exists = c:PAK
+		}
+		create_country = {
+			origin = root
+			tag = IDS
+			state = scope:capital_scope
+			on_created = {
+				set_country_type = recognized
+			}
+		}
+		c:IDS ?= {
+			save_scope_as = pakistan_scope
+		}
+	}
+	else = {
+		create_country = {
+			origin = root
+			tag = PAK
+			state = scope:capital_scope
+			on_created = {
+				set_country_type = recognized
+			}
+		}
+		c:PAK ?= {
+			save_scope_as = pakistan_scope
+		}
+	}
+	# Copy laws from India (except religious law)
+	scope:pakistan_scope ?= {
+		copy_laws = ROOT
+		activate_law = law_type:law_freedom_of_conscience
+	}
+	# Transfer all remaining Pakistan states to Pakistan
+	every_scope_state = {
+		limit = {
+			OR = {
+				state_region = s:STATE_PUNJAB
+				state_region = s:STATE_SINDH
+				state_region = s:STATE_KASHMIR
+				state_region = s:STATE_PASHTUNISTAN
+				state_region = s:STATE_BALUCHISTAN
+				state_region = s:STATE_QUETTA
+				state_region = s:STATE_EAST_BENGAL
+			}
+		}
+		set_state_owner = scope:pakistan_scope
+		set_state_type = incorporated
+	}
+	# Transfer all subjects in Pakistan Territory to Pakistan
+	every_direct_subject = {
+		limit = {
+			any_scope_state = {
+				is_capital = yes
+				OR = {
+					state_region = s:STATE_PUNJAB
+					state_region = s:STATE_SINDH
+					state_region = s:STATE_KASHMIR
+					state_region = s:STATE_PASHTUNISTAN
+					state_region = s:STATE_BALUCHISTAN
+					state_region = s:STATE_QUETTA
+					state_region = s:STATE_EAST_BENGAL
+				}
+			}
+		}
+		scope:pakistan_scope ?= {
+			transfer_subject = prev
+		}
+	}
+	# Move all Muslim characters to Pakistan
+	every_scope_character = {
+		limit = {
+			religion ?= {
+                has_discrimination_trait = heritage_islamic
+            }
+		}
+		transfer_character = scope:pakistan_scope
+		if = {
+			limit = {
+				has_role_of_type = politician
+			}
+			set_as_interest_group_leader = yes
+			set_variable = {
+				name = moved_to_pakistan
+				days = 7
+			}
+		}
+	}
+	# Change India's leader if they just moved to Pakistan
+	if = {
+		limit = {
+			ruler = {
+				has_variable = moved_to_pakistan
+			}
+		}
+		ordered_scope_character = {
+			limit = {
+				NOT = {
+					has_variable = moved_to_pakistan
+				}
+			}
+			min = 0
+			max = 1
+			order_by = {
+				value = prominence
+				if = {
+					limit = {
+						has_role_of_type = politician
+					}
+					add = 1000
+				}
+			}
+			set_character_as_ruler = yes
+		}
+	}
+	# Now make Pakistan's leader one of the ones that just left India
+	scope:pakistan_scope ?= {
+		ordered_scope_character = {
+			limit = {
+				has_variable = moved_to_pakistan
+			}
+			min = 0
+			max = 1
+			order_by = {
+				value = popularity
+				if = {
+					limit = {
+						OR = {
+							has_role_of_type = politician
+							has_role_of_type = agitator
+						}
+					}
+					add = 1000
+				}
+			}
+			set_character_as_ruler = yes
+		}
+	}
+	# Give Union of Pakistan JE
+	scope:pakistan_scope ?= {
+		if = {
+			limit = {
+				any_direct_subject = {
+					is_princely_state = yes
+				}
+			}
+			hidden_effect = {
+				add_journal_entry = {
+					type = je_federation_of_india
+				}
+			}
+		}
+	}
+}
+
+update_je_british_dictate_plantations_vars = {
+	set_variable = {
+		name = num_plantations
+		value = 0
+	}
+	set_local_variable = {
+		name = total_arable_land
+		value = 0
+	}
+	every_state_in_india = {
+		limit = {
+			owner = {
+				OR = {
+					c:BIC ?= this
+					is_direct_subject_of = c:BIC
+				}
+			}
+		}
+		ROOT ?= {
+			change_local_variable = {
+				name = total_arable_land
+				add = prev.arable_land
+			}
+		}
+		every_scope_building = {
+			limit = {
+				is_building_group = bg_plantations
+			}
+			ROOT ?= {
+				change_variable = {
+					name = num_plantations
+					add = prev.level
+				}
+			}
+		}
+	}
+	set_variable = {
+		name = target_plantations
+		value = {
+			add = local_var:total_arable_land
+			multiply = var:arable_land_percent_goal
+			round = yes
+		}
+	}
+}

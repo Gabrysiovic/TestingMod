@@ -1,0 +1,1933 @@
+﻿namespace = india_protest
+
+# (india_protest.1 is india_non_cooperation.3)
+
+india_protest.2 = { # Farmers on Strike
+	type = country_event
+	placement = scope:farmer_strike_state
+
+	duration = 3
+
+	title = india_protest.2.t
+	desc = india_protest.2.d
+	flavor = india_protest.2.f
+
+	event_image = {
+		video = "gfx/event_pictures/ip2_india_countryside.bk2"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	# Generic peaceful protest event for je_india_home_rule
+	trigger = {
+		any_scope_state = {
+			NOT = { has_modifier = indian_farmers_on_strike }
+			is_in_geographic_region = geographic_region_india
+			state_has_building_group_levels = {
+ 				type = bg_plantations
+ 				value >= 10
+			}
+		}
+	}
+
+	immediate = {
+		ordered_scope_state = {
+			limit = {
+				NOT = { has_modifier = indian_farmers_on_strike }
+				is_in_geographic_region = geographic_region_india
+				state_has_building_group_levels = {
+ 					type = bg_plantations
+ 					value >= 10
+				}
+			}
+			position = 0
+			order_by = {
+				value = 0
+				every_scope_building = {
+					limit = {
+						is_building_group = bg_plantations
+					}
+					prev = {
+						add = prev.level
+					}
+				}
+			}
+			save_scope_as = farmer_strike_state
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_independence_movement
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			overlord ?= {
+				save_scope_as = overlord_scope
+			}
+		}
+		else = {
+			save_scope_as = overlord_scope
+		}
+		g:dye = {
+			save_scope_as = dye_scope
+		}
+		g:fabric = {
+			save_scope_as = fabric_scope
+		}
+		g:opium = {
+			save_scope_as = opium_scope
+		}
+	}
+
+	option = {
+		name = india_protest.2.a
+		default_option = yes
+		ai_chance = 5
+		ordered_scope_state = {
+			limit = {
+				NOT = { has_modifier = indian_farmers_on_strike }
+				is_in_geographic_region = geographic_region_india
+				state_has_building_group_levels = {
+ 					type = bg_plantations
+ 					value >= 10
+				}
+			}
+			min = 0
+			max = 3
+			check_range_bounds = no
+			order_by = {
+				value = 0
+				every_scope_building = {
+					limit = {
+						is_building_group = bg_plantations
+					}
+					prev = {
+						add = prev.level
+					}
+				}
+			}
+			add_modifier = {
+				name = indian_farmers_on_strike
+				days = normal_modifier_time
+				is_decaying = yes
+			}
+		}
+		custom_tooltip = {
+			text = indian_nationalism_advance_5_tt
+			je:je_india_home_rule ?= {
+				add_progress = { value = 5 name = je_india_home_rule_progressbar }
+			}
+		}
+		if = {
+			limit = {
+				has_journal_entry = je_india_non_cooperation_movement
+			}
+			custom_tooltip = {
+				text = increase_peaceful_protest_action_tt
+				change_variable = {
+					name = indian_peaceful_protest_actions
+					add = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = india_protest.2.b
+		ai_chance = 0
+		add_small_indian_radicals = yes
+	}
+}
+
+india_protest.3 = { # Civil Servants Resign
+	type = country_event
+	placement = scope:civil_servants_state_scope
+
+	duration = 3
+
+	title = india_protest.3.t
+	desc = india_protest.3.d
+	flavor = india_protest.3.f
+
+	event_image = {
+		video = "gfx/event_pictures/ip2_unruly_soldiers.bk2"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	# Generic peaceful protest event for je_india_home_rule
+	trigger = {
+		any_scope_state = {
+			NOT = { has_modifier = civil_servants_resign }
+			is_in_geographic_region = geographic_region_india
+			state_has_building_group_levels = {
+ 				type = bg_bureaucracy
+ 				value >= 6
+			}
+		}
+	}
+
+	immediate = {
+		ordered_scope_state = {
+			limit = {
+				NOT = { has_modifier = civil_servants_resign }
+				is_in_geographic_region = geographic_region_india
+				state_has_building_group_levels = {
+ 					type = bg_bureaucracy
+ 					value >= 6
+				}
+			}
+			position = 0
+			order_by = {
+				value = 0
+				every_scope_building = {
+					limit = {
+						is_building_group = bg_bureaucracy
+					}
+					prev = {
+						add = prev.level
+					}
+				}
+			}
+			save_scope_as = civil_servants_state_scope
+		}
+	}
+
+	option = {
+		name = india_protest.3.a
+		default_option = yes
+		ai_chance = 5
+		ordered_scope_state = {
+			limit = {
+				NOT = { has_modifier = civil_servants_resign }
+				is_in_geographic_region = geographic_region_india
+				state_has_building_group_levels = {
+ 					type = bg_bureaucracy
+ 					value >= 6
+				}
+			}
+			min = 0
+			max = 3
+			check_range_bounds = no
+			order_by = {
+				value = 0
+				every_scope_building = {
+					limit = {
+						is_building_group = bg_bureaucracy
+					}
+					prev = {
+						add = prev.level
+					}
+				}
+			}
+			add_modifier = {
+				name = civil_servants_resign
+				days = normal_modifier_time
+				is_decaying = yes
+			}
+		}
+		custom_tooltip = {
+			text = indian_nationalism_advance_5_tt
+			je:je_india_home_rule ?= {
+				add_progress = { value = 5 name = je_india_home_rule_progressbar }
+			}
+		}
+		if = {
+			limit = {
+				has_journal_entry = je_india_non_cooperation_movement
+			}
+			custom_tooltip = {
+				text = increase_peaceful_protest_action_tt
+				change_variable = {
+					name = indian_peaceful_protest_actions
+					add = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = india_protest.3.b
+		ai_chance = 0
+		add_small_indian_radicals = yes
+	}
+}
+
+india_protest.4 = { # Tax Protest
+	type = country_event
+	placement = scope:tax_protest_state
+
+	duration = 3
+
+	title = india_protest.4.t
+	desc = india_protest.4.d
+	flavor = india_protest.4.f
+
+	event_image = {
+		video = "gfx/event_pictures/ip2_india_protest.bk2"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
+	# Generic peaceful protest event for je_india_home_rule
+	trigger = {
+		any_scope_state = {
+			NOT = { has_modifier = indian_tax_protest }
+			is_in_geographic_region = geographic_region_india
+			is_incorporated = yes
+		}
+	}
+
+	immediate = {
+		ordered_scope_state = {
+			limit = {
+				NOT = { has_modifier = indian_tax_protest }
+				is_in_geographic_region = geographic_region_india
+				is_incorporated = yes
+			}
+			position = 0
+			order_by = gdp
+			save_scope_as = tax_protest_state
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_independence_movement
+		}
+	}
+
+	option = {
+		name = india_protest.4.a
+		default_option = yes
+		ai_chance = 5
+		ordered_scope_state = {
+			limit = {
+				NOT = { has_modifier = indian_tax_protest }
+				is_in_geographic_region = geographic_region_india
+				is_incorporated = yes
+			}
+			min = 0
+			max = 3
+			check_range_bounds = no
+			order_by = gdp
+			add_modifier = {
+				name = indian_tax_protest
+				days = normal_modifier_time
+				is_decaying = yes
+			}
+		}
+		custom_tooltip = {
+			text = indian_nationalism_advance_5_tt
+			je:je_india_home_rule ?= {
+				add_progress = { value = 5 name = je_india_home_rule_progressbar }
+			}
+		}
+		if = {
+			limit = {
+				has_journal_entry = je_india_non_cooperation_movement
+			}
+			custom_tooltip = {
+				text = increase_peaceful_protest_action_tt
+				change_variable = {
+					name = indian_peaceful_protest_actions
+					add = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = india_protest.4.b
+		ai_chance = 0
+		add_small_indian_radicals = yes
+	}
+}
+
+india_protest.5 = { # Civil Disobedience / Prati Sarkar
+	type = country_event
+	placement = ROOT
+
+	duration = 3
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = india_protest.5.t_civil_disobedience
+				trigger = {
+					NOT = {
+						has_modifier = indian_civil_disobedience
+					}
+					institution_investment_level = {
+						institution = institution_police
+						value >= 3
+					}
+				}
+			}
+			triggered_desc = {
+				desc = india_protest.5.t_prati_sarkar
+				trigger = {
+					always = yes
+				}
+			}
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = india_protest.5.d_civil_disobedience
+				trigger = {
+					NOT = {
+						has_modifier = indian_civil_disobedience
+					}
+					institution_investment_level = {
+						institution = institution_police
+						value >= 3
+					}
+				}
+			}
+			triggered_desc = {
+				desc = india_protest.5.d_prati_sarkar
+				trigger = {
+					always = yes
+				}
+			}
+		}
+	}
+	flavor = {
+		first_valid = {
+			triggered_desc = {
+				desc = india_protest.5.f_civil_disobedience
+				trigger = {
+					NOT = {
+						has_modifier = indian_civil_disobedience
+					}
+					institution_investment_level = {
+						institution = institution_police
+						value >= 3
+					}
+				}
+			}
+			triggered_desc = {
+				desc = india_protest.5.f_prati_sarkar
+				trigger = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	event_image = {
+		trigger = {
+			NOT = {
+				has_modifier = indian_civil_disobedience
+			}
+			institution_investment_level = {
+				institution = institution_police
+				value >= 3
+			}
+		}
+		video = "africa_soldiers_breaking_protest"
+	}
+	event_image = {
+		trigger = {
+			OR = {
+				has_modifier = indian_civil_disobedience
+				institution_investment_level = {
+					institution = institution_police
+					value < 3
+				}
+			}
+		}
+		video = "ip3_village_school"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	# Generic peaceful protest event for je_india_home_rule
+	trigger = {
+		OR = {
+			AND = {
+				NOT = {
+					has_modifier = indian_civil_disobedience
+				}
+				institution_investment_level = {
+					institution = institution_police
+					value >= 3
+				}
+			}
+			AND = {
+				NOT = {
+					has_modifier = prati_sarkar_schools
+				}
+				institution_investment_level = {
+					institution = institution_schools
+					value >= 3
+				}
+			}
+			AND = {
+				NOT = {
+					has_modifier = prati_sarkar_health_system
+				}
+				institution_investment_level = {
+					institution = institution_health_system
+					value >= 3
+				}
+			}
+		}
+	}
+
+	immediate = {
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_independence_movement
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			overlord ?= {
+				save_scope_as = overlord_scope
+			}
+		}
+		else = {
+			save_scope_as = overlord_scope
+		}
+	}
+
+	option = {
+		name = {
+	        trigger = {
+	        	NOT = {
+					has_modifier = indian_civil_disobedience
+				}
+				institution_investment_level = {
+					institution = institution_police
+					value >= 3
+				}
+	        }
+	        text = india_protest.5.a_civil_disobedience
+	    }
+	    name = {
+	        trigger = {
+	        	OR = {
+					has_modifier = indian_civil_disobedience
+					institution_investment_level = {
+						institution = institution_police
+						value < 3
+					}
+				}
+	        }
+	        text = india_protest.5.a_prati_sarkar
+	    }
+		default_option = yes
+		ai_chance = 5
+		if = {
+			limit = {
+				NOT = {
+					has_modifier = indian_civil_disobedience
+				}
+				institution_investment_level = {
+					institution = institution_police
+					value >= 3
+				}
+			}
+			add_modifier = {
+				name = indian_civil_disobedience
+				days = normal_modifier_time
+				is_decaying = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_modifier = prati_sarkar_schools
+				}
+				institution_investment_level = {
+					institution = institution_schools
+					value >= 3
+				}
+			}
+			ROOT = {
+				add_modifier = {
+					name = prati_sarkar_schools
+					days = normal_modifier_time
+					is_decaying = yes
+				}
+			}
+		}
+		else = {
+			ROOT = {
+				add_modifier = {
+					name = prati_sarkar_health_system
+					days = normal_modifier_time
+					is_decaying = yes
+				}
+			}
+		}
+		custom_tooltip = {
+			text = indian_nationalism_advance_5_tt
+			je:je_india_home_rule ?= {
+				add_progress = { value = 5 name = je_india_home_rule_progressbar }
+			}
+		}
+		if = {
+			limit = {
+				has_journal_entry = je_india_non_cooperation_movement
+			}
+			custom_tooltip = {
+				text = increase_peaceful_protest_action_tt
+				change_variable = {
+					name = indian_peaceful_protest_actions
+					add = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = {
+	        trigger = {
+	        	NOT = {
+					has_modifier = indian_civil_disobedience
+				}
+				institution_investment_level = {
+					institution = institution_police
+					value >= 3
+				}
+	        }
+	        text = india_protest.5.b_civil_disobedience
+	    }
+	    name = {
+	        trigger = {
+	        	OR = {
+					has_modifier = indian_civil_disobedience
+					institution_investment_level = {
+						institution = institution_police
+						value < 3
+					}
+				}
+	        }
+	        text = india_protest.5.b_prati_sarkar
+	    }
+	    ai_chance = 0
+		add_small_indian_radicals = yes
+	}
+}
+
+india_protest.6 = { # Calls for Ahimsa
+	type = country_event
+	placement = ROOT
+
+	duration = 3
+
+	title = india_protest.6.t
+	desc = india_protest.6.d
+	flavor = india_protest.6.f
+
+	event_image = {
+		video = "gfx/event_pictures/ip2_intercommunal_tension.bk2"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	# Generic violent protest event for je_india_home_rule
+	trigger = {
+		NOT = {
+			any_political_movement = {
+				is_political_movement_type = movement_india_pan_national
+				OR = {
+					has_modifier = ahimsa_accepted
+					has_modifier = ahimsa_rejected
+				}
+			}
+		}
+	}
+
+	immediate = {
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_independence_movement
+		}
+	}
+
+	option = {
+		name = india_protest.6.a
+		default_option = yes
+		ai_chance = 5
+		scope:indian_independence_movement = {
+			add_modifier = {
+				name = ahimsa_accepted
+				days = normal_modifier_time
+				is_decaying = yes
+			}
+		}
+	}
+
+	option = {
+		name = india_protest.6.b
+		ai_chance = 0
+		scope:indian_independence_movement = {
+			add_modifier = {
+				name = ahimsa_rejected
+				days = normal_modifier_time
+				is_decaying = yes
+			}
+		}
+	}
+}
+
+india_protest.7 = { # Riots
+	type = country_event
+	placement = scope:riot_state
+
+	duration = 3
+
+	title = india_protest.7.t
+	desc = india_protest.7.d
+	flavor = india_protest.7.f
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	# Generic violent protest event for je_india_home_rule
+	trigger = {
+		any_scope_state = {
+			NOT = { has_modifier = indian_riots }
+			is_in_geographic_region = geographic_region_india
+			state_has_building_group_levels = {
+ 				type = bg_urban_facilities
+ 				value >= 10
+			}
+		}
+	}
+
+	immediate = {
+		ordered_scope_state = {
+			limit = {
+				NOT = { has_modifier = indian_riots }
+				is_in_geographic_region = geographic_region_india
+				state_has_building_group_levels = {
+ 					type = bg_urban_facilities
+ 					value >= 10
+				}
+			}
+			position = 0
+			order_by = {
+				value = 0
+				every_scope_building = {
+					limit = {
+						is_building_group = bg_urban_facilities
+					}
+					prev = {
+						add = prev.level
+					}
+				}
+			}
+			save_scope_as = riot_state
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			overlord ?= {
+				save_scope_as = overlord_scope
+			}
+		}
+		else = {
+			save_scope_as = overlord_scope
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_independence_movement
+		}
+	}
+
+	option = {
+		name = india_protest.7.a
+		default_option = yes
+		ordered_scope_state = {
+			limit = {
+				NOT = { has_modifier = indian_riots }
+				is_in_geographic_region = geographic_region_india
+				state_has_building_group_levels = {
+ 					type = bg_urban_facilities
+ 					value >= 10
+				}
+			}
+			min = 0
+			max = 3
+			check_range_bounds = no
+			order_by = {
+				value = 0
+				every_scope_building = {
+					limit = {
+						is_building_group = bg_urban_facilities
+					}
+					prev = {
+						add = prev.level
+					}
+				}
+			}
+			add_modifier = {
+				name = indian_riots
+				days = normal_modifier_time
+				is_decaying = yes
+			}
+			add_devastation = 10
+		}
+		if = {
+			limit = {
+				has_journal_entry = je_india_non_cooperation_movement
+			}
+			custom_tooltip = {
+				text = increase_violent_protest_action_tt
+				change_variable = {
+					name = indian_violent_protest_actions
+					add = 1
+				}
+			}
+		}
+	}
+}
+
+india_protest.8 = { # Armory Raids
+	type = country_event
+	placement = scope:armory_raid_state
+
+	duration = 3
+
+	title = india_protest.8.t
+	desc = india_protest.8.d
+	flavor = india_protest.8.f
+
+	event_image = {
+		video = "gfx/event_pictures/middleeast_battlefield_trenches.bk2"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	# Generic violent protest event for je_india_home_rule
+	trigger = {
+		any_scope_state = {
+			NOT = { has_modifier = indian_armory_raids }
+			is_in_geographic_region = geographic_region_india
+			state_has_building_group_levels = {
+ 				type = bg_military_industry
+ 				value >= 6
+			}
+		}
+	}
+
+	immediate = {
+		ordered_scope_state = {
+			limit = {
+				NOT = { has_modifier = indian_armory_raids }
+				is_in_geographic_region = geographic_region_india
+				state_has_building_group_levels = {
+ 					type = bg_military_industry
+ 					value >= 6
+				}
+			}
+			position = 0
+			order_by = {
+				value = 0
+				every_scope_building = {
+					limit = {
+						is_building_group = bg_military_industry
+					}
+					prev = {
+						add = prev.level
+					}
+				}
+			}
+			save_scope_as = armory_raid_state
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_independence_movement
+		}
+	}
+
+	option = {
+		name = india_protest.8.a
+		default_option = yes
+		ordered_scope_state = {
+			limit = {
+				NOT = { has_modifier = indian_armory_raids }
+				is_in_geographic_region = geographic_region_india
+				state_has_building_group_levels = {
+ 					type = bg_military_industry
+ 					value >= 6
+				}
+			}
+			min = 0
+			max = 3
+			check_range_bounds = no
+			order_by = {
+				value = 0
+				every_scope_building = {
+					limit = {
+						is_building_group = bg_military_industry
+					}
+					prev = {
+						add = prev.level
+					}
+				}
+			}
+			add_modifier = {
+				name = indian_armory_raids
+				days = normal_modifier_time
+				is_decaying = yes
+			}
+		}
+		if = {
+			limit = {
+				has_journal_entry = je_india_non_cooperation_movement
+			}
+			custom_tooltip = {
+				text = increase_violent_protest_action_tt
+				change_variable = {
+					name = indian_violent_protest_actions
+					add = 1
+				}
+			}
+		}
+	}
+}
+
+india_protest.9 = { # Peasant Revolt
+	type = country_event
+	placement = scope:peasant_revolt_state
+
+	duration = 3
+
+	title = india_protest.9.t
+	desc = india_protest.9.d
+	flavor = india_protest.9.f
+
+	event_image = {
+		video = "africa_public_protest"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	# Generic violent protest event for je_india_home_rule
+	trigger = {
+		any_scope_state = {
+			is_in_geographic_region = geographic_region_india
+			NOT = {
+				has_variable = indian_peasant_revolt
+			}
+			any_scope_pop = {
+				is_pop_type = peasants
+				total_size > 5000
+			}
+		}
+	}
+
+	immediate = {
+		ordered_scope_state = {
+			limit = {
+				is_in_geographic_region = geographic_region_india
+				NOT = {
+					has_variable = indian_peasant_revolt
+				}
+				any_scope_pop = {
+					is_pop_type = peasants
+					total_size > 5000
+				}
+			}
+			position = 0
+			order_by = {
+				value = 0
+				every_scope_pop = {
+					limit = {
+						is_pop_type = peasants
+					}
+					prev = {
+						add = prev.total_size
+					}
+				}
+			}
+			save_scope_as = peasant_revolt_state
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			overlord ?= {
+				save_scope_as = overlord_scope
+			}
+		}
+		else = {
+			save_scope_as = overlord_scope
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_independence_movement
+		}
+	}
+
+	option = {
+		name = india_protest.9.a
+		default_option = yes
+		ordered_scope_state = {
+			limit = {
+				is_in_geographic_region = geographic_region_india
+				NOT = {
+					has_variable = indian_peasant_revolt
+				}
+				any_scope_pop = {
+					is_pop_type = peasants
+					total_size > 5000
+				}
+			}
+			min = 0
+			max = 3
+			check_range_bounds = no
+			order_by = {
+				value = 0
+				every_scope_pop = {
+					limit = {
+						is_pop_type = peasants
+					}
+					prev = {
+						add = prev.total_size
+					}
+				}
+			}
+			add_radicals_in_state = {
+				pop_type = peasants
+				value = medium_radicals
+			}
+			set_variable = {
+				name = indian_peasant_revolt
+				years = 5
+			}
+		}
+		if = {
+			limit = {
+				has_journal_entry = je_india_non_cooperation_movement
+			}
+			custom_tooltip = {
+				text = increase_violent_protest_action_tt
+				change_variable = {
+					name = indian_violent_protest_actions
+					add = 1
+				}
+			}
+		}
+	}
+}
+
+india_protest.10 = { # Assassination Attempt
+	type = country_event
+	placement = ROOT
+
+	duration = 3
+
+	title = india_protest.10.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = india_protest.10.d1
+				trigger = {
+					local_var:indian_assassination_roll <= 2
+				}
+			}
+			triggered_desc = {
+				desc = india_protest.10.d2
+				trigger = {
+					local_var:indian_assassination_roll <= 3
+				}
+			}
+			triggered_desc = {
+				desc = india_protest.10.d3
+				trigger = {
+					local_var:indian_assassination_roll <= 4
+				}
+			}
+		}
+	}
+	flavor = india_protest.10.f
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_public_figure_assassination.bk2"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	# Generic violent protest event for je_india_home_rule
+	trigger = {}
+
+	immediate = {
+		random_scope_character = {
+			limit = {
+				OR = {
+					is_ruler_of_own_country = yes
+					has_role_of_type = politician
+					has_role_of_type = agitator
+				}
+				OR = {
+					is_interest_group_type = ig_industrialists
+					is_interest_group_type = ig_armed_forces
+				}
+			}
+			save_scope_as = victim_scope
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_independence_movement
+		}
+		set_local_variable = {
+			name = indian_assassination_roll
+			value = {
+				fixed_range = {
+					min = 0
+					max = 4
+				}
+			}
+		}
+	}
+
+	option = {
+		name = india_protest.10.a
+		default_option = yes
+		if = {
+			limit = {
+				local_var:indian_assassination_roll > 3
+			}
+			scope:victim_scope = {
+				kill_character = yes
+			}
+		}
+		else_if = {
+			limit = {
+				local_var:indian_assassination_roll > 2
+			}
+			scope:victim_scope = {
+				add_trait = scarred
+			}
+		}
+		if = {
+			limit = {
+				has_journal_entry = je_india_non_cooperation_movement
+			}
+			custom_tooltip = {
+				text = increase_violent_protest_action_tt
+				change_variable = {
+					name = indian_violent_protest_actions
+					add = 1
+				}
+			}
+		}
+	}
+}
+
+india_protest.11 = { # Mill Strike
+	type = country_event
+	placement = scope:mill_strike_state
+
+	duration = 3
+
+	title = india_protest.11.t
+	desc = india_protest.11.d
+	flavor = india_protest.11.f
+
+	event_image = {
+		video = "gfx/event_pictures/ip2_india_factory.bk2"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	# Bespoke peaceful protest event for je_india_home_rule
+	trigger = {
+		NOT = {
+			has_journal_entry = je_india_swadeshi_movement
+		}
+		any_scope_state = {
+			NOT = { has_modifier = hartal_action }
+			is_in_geographic_region = geographic_region_india
+			state_has_building_type_levels = {
+ 				target = bt:building_textile_mill
+ 				value >= 8
+			}
+		}
+		any_political_movement = {
+			is_political_movement_type = movement_india_pan_national
+			any_supporting_character = {
+				has_role_of_type = agitator
+			}
+		}
+	}
+
+	immediate = {
+		je:je_india_home_rule ?= {
+			set_variable = mill_strike_started
+		}
+		set_variable = {
+			name = protest_event_fired
+			months = 6
+		}
+		ordered_scope_state = {
+			limit = {
+				NOT = { has_modifier = hartal_action }
+				is_in_geographic_region = geographic_region_india
+				state_has_building_type_levels = {
+ 					target = bt:building_textile_mill
+ 					value >= 8
+				}
+			}
+			position = 0
+			order_by = {
+				value = 0
+				every_scope_building = {
+					limit = {
+						is_building_type = building_textile_mill
+					}
+					prev = {
+						add = prev.level
+					}
+				}
+			}
+			save_scope_as = mill_strike_state
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			ordered_supporting_character = {
+				limit = {
+					has_role_of_type = agitator
+				}
+				position = 0
+				order_by = popularity
+				save_scope_as = mill_strike_leader
+			}
+		}
+	}
+
+	option = {
+		name = india_protest.11.a
+		default_option = yes
+		scope:mill_strike_state = {
+			add_modifier = {
+				name = indian_mill_strike
+				days = short_modifier_time
+				is_decaying = no
+			}
+		}
+		custom_tooltip = {
+			text = indian_mill_strike_result_in_two_months_tt
+		}
+		hidden_effect = {
+			random_list = {
+				# Local Variables are bugged and always get set when an event loads
+				7 = {
+					set_variable = {
+						name = mill_strike_successful 
+						years = 1
+					}
+				}
+				3 = { }
+			}
+			trigger_event = {
+				id = india_protest.12
+				months = 2
+			}
+		}
+	}
+}
+
+india_protest.12 = { # Mill Strike Concludes
+	type = country_event
+	placement = scope:mill_strike_state
+
+	duration = 3
+
+	title = {
+		triggered_desc = {
+			desc = india_protest.12.t1
+			trigger = {
+				has_variable = mill_strike_successful
+			}
+		}
+		triggered_desc = {
+			desc = india_protest.12.t2
+			trigger = {
+				NOT = {
+					has_variable = mill_strike_successful
+				}
+			}
+		}
+	}
+	desc = {
+		triggered_desc = {
+			desc = india_protest.12.d1
+			trigger = {
+				has_variable = mill_strike_successful
+			}
+		}
+		triggered_desc = {
+			desc = india_protest.12.d2
+			trigger = {
+				NOT = {
+					has_variable = mill_strike_successful
+				}
+			}
+		}
+	}
+	flavor = {
+		triggered_desc = {
+			desc = india_protest.12.f1
+			trigger = {
+				has_variable = mill_strike_successful
+			}
+		}
+		triggered_desc = {
+			desc = india_protest.12.f2
+			trigger = {
+				NOT = {
+					has_variable = mill_strike_successful
+				}
+			}
+		}
+	}
+
+	event_image = {
+		video = "gfx/event_pictures/ip2_india_factory.bk2"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	# Triggered by india_protest.11
+	trigger = {}
+
+	immediate = {
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_national_movement
+		}
+	}
+
+	option = {
+		name = india_protest.12.a
+		default_option = yes
+		ai_chance = 5
+		trigger = {
+			has_variable = mill_strike_successful
+		}
+		scope:mill_strike_state = {
+			remove_modifier = indian_mill_strike
+			every_scope_building = {
+				limit = {
+					type = bt:building_textile_mill
+				}
+				add_modifier = {
+					name = indian_mill_strike_successful
+					days = normal_modifier_time
+					is_decaying = no
+				}
+			}
+		}
+		custom_tooltip = {
+			text = indian_nationalism_advance_7_5_tt
+			je:je_india_home_rule ?= {
+				add_progress = { value = 7.5 name = je_india_home_rule_progressbar }
+			}
+		}
+		scope:mill_strike_leader = {
+			add_modifier = {
+				name = modifier_indian_mill_strike_leader
+				days = normal_modifier_time
+				is_decaying = no
+			}
+		}
+		if = {
+			limit = {
+				has_journal_entry = je_india_non_cooperation_movement
+			}
+			custom_tooltip = {
+				text = increase_peaceful_protest_action_tt
+				change_variable = {
+					name = indian_peaceful_protest_actions
+					add = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = india_protest.12.b
+		default_option = yes
+		ai_chance = 5
+		trigger = {
+			NOT = {
+				has_variable = mill_strike_successful
+			}
+		}
+		custom_tooltip = {
+			text = indian_mill_strike_continues_tt
+		}
+		custom_tooltip = {
+			text = indian_nationalism_advance_7_5_tt
+			je:je_india_home_rule ?= {
+				add_progress = { value = 7.5 name = je_india_home_rule_progressbar }
+			}
+		}
+		if = {
+			limit = {
+				has_journal_entry = je_india_non_cooperation_movement
+			}
+			custom_tooltip = {
+				text = increase_peaceful_protest_action_tt
+				change_variable = {
+					name = indian_peaceful_protest_actions
+					add = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = india_protest.12.c
+		ai_chance = 0
+		trigger = {
+			NOT = {
+				has_variable = mill_strike_successful
+			}
+		}
+		scope:mill_strike_state = {
+			remove_modifier = indian_mill_strike
+		}
+	}
+}
+
+india_protest.13 = { # Farmer's Tax Protest (Kheda Satyagraha)
+	type = country_event
+	placement = scope:farm_tax_protest_state
+
+	duration = 3
+
+	title = india_protest.13.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = india_protest.13.d1
+				trigger = {
+					scope:farm_tax_protest_state = {
+						has_famine = yes
+					}
+				}
+			}
+			triggered_desc = {
+				desc = india_protest.13.d2
+				trigger = {
+					scope:farm_tax_protest_state = {
+						state_region = {
+							has_harvest_condition = disease_outbreak
+						}
+					}
+				}
+			}
+			triggered_desc = {
+				desc = india_protest.13.d3
+				trigger = {
+					scope:farm_tax_protest_state = {
+						state_region = {
+							has_harvest_condition = drought
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	flavor = india_protest.13.f
+
+	event_image = {
+		video = "gfx/event_pictures/ip2_india_countryside.bk2"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	# Bespoke peaceful protest event for je_india_home_rule
+	trigger = {
+		any_scope_state = {
+			NOT = { has_modifier = indian_farmers_on_strike }
+			is_in_geographic_region = geographic_region_india
+			OR = {
+				has_famine = yes
+				state_region = {
+					has_harvest_condition = disease_outbreak
+				}
+				state_region = {
+					has_harvest_condition = drought
+				}
+			}
+			state_has_building_group_levels = {
+ 				type = bg_agriculture
+ 				value >= 10
+			}
+		}
+		any_political_movement = {
+			is_political_movement_type = movement_india_pan_national
+			any_supporting_character = {
+				has_role_of_type = agitator
+			}
+		}
+	}
+
+	immediate = {
+		je:je_india_home_rule ?= {
+			set_variable = farm_tax_protest_started
+		}
+		set_variable = {
+			name = protest_event_fired
+			months = 6
+		}
+		ordered_scope_state = {
+			limit = {
+				NOT = { has_modifier = indian_farmers_on_strike }
+				is_in_geographic_region = geographic_region_india
+				OR = {
+					has_famine = yes
+					state_region = {
+						has_harvest_condition = disease_outbreak
+					}
+					state_region = {
+						has_harvest_condition = drought
+					}
+				}
+				state_has_building_group_levels = {
+	 				type = bg_agriculture
+	 				value >= 10
+				}
+			}
+			position = 0
+			order_by = {
+				value = 0
+				every_scope_building = {
+					limit = {
+						is_building_group = bg_plantations
+					}
+					prev = {
+						add = prev.level
+					}
+				}
+			}
+			save_scope_as = farm_tax_protest_state
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			ordered_supporting_character = {
+				limit = {
+					has_role_of_type = agitator
+				}
+				position = 0
+				order_by = popularity
+				save_scope_as = farm_tax_protest_leader
+			}
+		}
+	}
+
+	option = {
+		name = india_protest.13.a
+		default_option = yes
+		scope:farm_tax_protest_state = {
+			add_modifier = {
+				name = indian_farm_tax_protest
+				days = short_modifier_time
+				is_decaying = no
+			}
+		}
+		custom_tooltip = {
+			text = indian_farm_tax_protest_result_in_two_months_tt
+		}
+		hidden_effect = {
+			random_list = {
+				7 = {
+					# Local Variables are bugged and always get set when an event loads
+					set_variable = {
+						name = farm_tax_protest_successful
+						years = 1
+					}
+				}
+				3 = { }
+			}
+			trigger_event = {
+				id = india_protest.14
+				months = 2
+			}
+		}
+	}
+}
+
+india_protest.14 = { # Farmer's Tax Protest Concludes
+	type = country_event
+	placement = scope:mill_strike_state
+
+	duration = 3
+
+	title = {
+		triggered_desc = {
+			desc = india_protest.14.t1
+			trigger = {
+				has_variable = farm_tax_protest_successful
+			}
+		}
+		triggered_desc = {
+			desc = india_protest.14.t2
+			trigger = {
+				NOT = {
+					has_variable = farm_tax_protest_successful
+				}
+			}
+		}
+	}
+	desc = {
+		triggered_desc = {
+			desc = india_protest.14.d1
+			trigger = {
+				has_variable = farm_tax_protest_successful
+			}
+		}
+		triggered_desc = {
+			desc = india_protest.14.d2
+			trigger = {
+				NOT = {
+					has_variable = farm_tax_protest_successful
+				}
+			}
+		}
+	}
+	flavor = {
+		triggered_desc = {
+			desc = india_protest.14.f1
+			trigger = {
+				has_variable = farm_tax_protest_successful
+			}
+		}
+		triggered_desc = {
+			desc = india_protest.14.f2
+			trigger = {
+				NOT = {
+					has_variable = farm_tax_protest_successful
+				}
+			}
+		}
+	}
+
+	event_image = {
+		video = "gfx/event_pictures/ip2_india_countryside.bk2"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	# Triggered by india_protest.13
+	trigger = {}
+
+	immediate = {
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_national_movement
+		}
+	}
+
+	option = {
+		name = india_protest.14.a
+		default_option = yes
+		ai_chance = 5
+		trigger = {
+			has_variable = farm_tax_protest_successful
+		}
+		scope:farm_tax_protest_state = {
+			remove_modifier = indian_farm_tax_protest
+			add_modifier = {
+				name = indian_farm_tax_protest_successful
+				days = normal_modifier_time
+				is_decaying = no
+			}
+		}
+		custom_tooltip = {
+			text = indian_nationalism_advance_7_5_tt
+			je:je_india_home_rule ?= {
+				add_progress = { value = 7.5 name = je_india_home_rule_progressbar }
+			}
+		}
+		scope:mill_strike_leader = {
+			add_modifier = {
+				name = modifier_indian_farm_tax_protest_leader
+				days = normal_modifier_time
+				is_decaying = no
+			}
+		}
+		if = {
+			limit = {
+				has_journal_entry = je_india_non_cooperation_movement
+			}
+			custom_tooltip = {
+				text = increase_peaceful_protest_action_tt
+				change_variable = {
+					name = indian_peaceful_protest_actions
+					add = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = india_protest.14.b
+		default_option = yes
+		ai_chance = 5
+		trigger = {
+			NOT = {
+				has_variable = farm_tax_protest_successful
+			}
+		}
+		custom_tooltip = {
+			text = indian_farm_tax_protest_continues_tt
+		}
+		custom_tooltip = {
+			text = indian_nationalism_advance_7_5_tt
+			je:je_india_home_rule ?= {
+				add_progress = { value = 7.5 name = je_india_home_rule_progressbar }
+			}
+		}
+		if = {
+			limit = {
+				has_journal_entry = je_india_non_cooperation_movement
+			}
+			custom_tooltip = {
+				text = increase_peaceful_protest_action_tt
+				change_variable = {
+					name = indian_peaceful_protest_actions
+					add = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = india_protest.14.c
+		ai_chance = 0
+		trigger = {
+			NOT = {
+				has_variable = farm_tax_protest_successful
+			}
+		}
+		scope:farm_tax_protest_state = {
+			remove_modifier = indian_farm_tax_protest
+		}
+	}
+}
+
+india_protest.15 = { # Prince of Wales Riots
+	type = country_event
+	placement = scope:prince_riot_state
+
+	duration = 3
+
+	title = india_protest.15.t
+	desc = india_protest.15.d
+	flavor = india_protest.15.f
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_political_extremism.bk2"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	# Bespoke violent protest event for je_india_home_rule
+	trigger = {
+		overlord = {
+			any_scope_character = {
+				is_heir_of_own_country = yes
+				age >= 16
+			}
+		}
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_BOMBAY
+				AND = {
+					NOT = { has_modifier = indian_riots }
+					is_in_geographic_region = geographic_region_india
+					state_has_building_group_levels = {
+		 				type = bg_urban_facilities
+		 				value >= 10
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		je:je_india_home_rule ?= {
+			set_variable = royal_heir_riots_started
+		}
+		set_variable = {
+			name = protest_event_fired
+			months = 6
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			overlord ?= {
+				save_scope_as = overlord_scope
+			}
+		}
+		else = {
+			save_scope_as = overlord_scope
+		}
+		scope:overlord_scope = {
+			random_scope_character = {
+				limit = {
+					is_heir_of_own_country = yes
+				}
+				save_scope_as = overlord_heir_scope
+			}
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_region = s:STATE_BOMBAY
+				}
+			}
+			s:STATE_BOMBAY.region_state:BIC = {
+				save_scope_as = prince_riot_state
+			}
+		}
+		else = {
+			ordered_scope_state = {
+				limit = {
+					NOT = { has_modifier = indian_riots }
+					is_in_geographic_region = geographic_region_india
+					state_has_building_group_levels = {
+	 					type = bg_urban_facilities
+	 					value >= 10
+					}
+				}
+				position = 0
+				order_by = {
+					value = 0
+					every_scope_building = {
+						limit = {
+							is_building_group = bg_urban_facilities
+						}
+						prev = {
+							add = prev.level
+						}
+					}
+				}
+				save_scope_as = prince_riot_state
+			}
+		}
+	}
+
+	option = {
+		name = india_protest.15.a
+		default_option = yes
+		scope:prince_riot_state = {
+			add_modifier = {
+				name = indian_royal_heir_riots
+				days = short_modifier_time
+				is_decaying = no
+			}
+			add_devastation = 15
+		}
+		if = {
+			limit = {
+				has_journal_entry = je_india_non_cooperation_movement
+			}
+			custom_tooltip = {
+				text = increase_violent_protest_action_tt
+				change_variable = {
+					name = indian_violent_protest_actions
+					add = 1
+				}
+			}
+		}
+	}
+}

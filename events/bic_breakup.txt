@@ -1,0 +1,570 @@
+﻿namespace = bic_breakup
+
+# BIC is now independent
+bic_breakup.1 = {
+	type = country_event
+	placement = root
+
+	title = {
+		triggered_desc = {
+			desc = bic_breakup.1.t
+			trigger = {
+				any_primary_culture = {
+					has_discrimination_trait_group = heritage_group_south_asian
+				}
+			}
+		}
+		triggered_desc = {
+			desc = bic_breakup.1.t_colonial
+			trigger = {
+				NOT = {
+					any_primary_culture = {
+						has_discrimination_trait_group = heritage_group_south_asian
+					}
+				}
+			}
+		}
+	}
+	desc = {
+		triggered_desc = {
+			desc = bic_breakup.1.d
+			trigger = {
+				any_primary_culture = {
+					has_discrimination_trait_group = heritage_group_south_asian
+				}
+			}
+		}
+		triggered_desc = {
+			desc = bic_breakup.1.d_colonial
+			trigger = {
+				NOT = {
+					any_primary_culture = {
+						has_discrimination_trait_group = heritage_group_south_asian
+					}
+				}
+			}
+		}
+	}
+	flavor = {
+		triggered_desc = {
+			desc = bic_breakup.1.f
+			trigger = {
+				any_primary_culture = {
+					has_discrimination_trait_group = heritage_group_south_asian
+				}
+			}
+		}
+		triggered_desc = {
+			desc = bic_breakup.1.f_colonial
+			trigger = {
+				NOT = {
+					any_primary_culture = {
+						has_discrimination_trait_group = heritage_group_south_asian
+					}
+				}
+			}
+		}
+	}
+
+	event_image = {
+		trigger = {
+			any_primary_culture = {
+				has_discrimination_trait_group = heritage_group_south_asian
+			}
+		}
+		video = "asia_sepoy_mutiny"
+	}
+	event_image = {
+		trigger = {
+			NOT = {
+				any_primary_culture = {
+					has_discrimination_trait_group = heritage_group_south_asian
+				}
+			}
+		}
+		video = "southamerica_aristocrats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	duration = 3
+
+	trigger = {
+		c:BIC ?= this
+		is_subject = no
+		is_revolutionary = no
+		NOT = {
+			# From je_india_nationalism (Indian War of Independence). JE will automatically make this country BHT
+			has_variable = revolutionary_india
+		}
+		OR = {
+			# For a liberated or newly independent "British" India
+			AND = {
+				NOR = {
+					any_primary_culture = {
+						has_discrimination_trait_group = heritage_group_south_asian
+					}
+					has_variable = indian_colonial_formed_by_revolution
+				}
+			}
+			# For a successful Indian revolution
+			AND = {
+				any_primary_culture = {
+					has_discrimination_trait_group = heritage_group_south_asian
+				}
+				NOT = {
+					has_variable = indian_native_formed_by_revolution
+				}
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					any_primary_culture = {
+						has_discrimination_trait_group = heritage_group_south_asian
+					}
+				}
+			}
+			set_variable = indian_colonial_formed_by_revolution
+		}
+		else_if = {
+			limit = {
+				has_technology_researched = pan-nationalism
+			}
+			set_variable = indian_native_formed_by_revolution
+		}
+		# Trigger "The Jewel is Lost" for GBR (will only ever trigger once per game)
+		c:GBR ?= {
+			trigger_event = {
+				id = bic_breakup.7
+				popup = yes
+			}
+		}
+	}
+
+	option = {
+		name = bic_breakup.1.a
+		trigger = {
+			# Result of Indian Revolution
+			any_primary_culture = {
+				has_discrimination_trait_group = heritage_group_south_asian
+			}
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				trigger = {
+					has_technology_researched = pan-nationalism
+					NOT = {
+						exists = c:BHT
+					}
+				}
+				add = -1
+			}
+		}
+		hidden_effect = {
+			every_direct_subject = {
+				limit = {
+					has_modifier = indian_loyalty_rewarded
+				}
+				# Remove the modifier that removes subject payments for being loyal in the Sepoy Mutiny
+				# (in case this country becomes a subject again)
+				remove_modifier = indian_loyalty_rewarded
+			}
+		}
+		custom_tooltip = {
+			text = india_princes_independent_tt
+			collapse_india_effect = yes
+		}
+		custom_tooltip = continue_as_princely_state_tt
+	}
+
+	option = {
+		name = bic_breakup.1.b
+		trigger = {
+			# Result of an Indian Revolution, but has Pan-Nationalism
+			hidden_trigger = {
+				any_primary_culture = {
+					has_discrimination_trait_group = heritage_group_south_asian
+				}
+			}
+			has_technology_researched = pan-nationalism
+			NOT = {
+				exists = c:BHT
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+		default_option = yes
+		# Revolutionary India will already have Indian Religion, Cultures, IGs, etc.
+		change_tag = BHT
+		# Give Union of India JE
+		if = {
+			limit = {
+				has_dlc_feature = ip2_content #Pivot of Empire
+				any_direct_subject = {
+					is_princely_state = yes
+				}
+			}
+			hidden_effect = {
+				add_journal_entry = {
+					type = je_federation_of_india
+				}
+			}
+		}
+		# Partition India if Communal Divides failed
+		if = {
+			limit = {
+				has_variable = indian_partition_promised
+				 # Has the necessary land to create Pakistan
+				can_trigger_event = indian_nation_events.7
+			}
+			custom_tooltip = {
+				text = india_will_partition_tt
+				trigger_event = {
+					id = indian_nation_events.7
+				}
+			}
+		}
+	}
+
+	option = {
+		name = bic_breakup.1.c
+		# For a liberated or newly independent "British" India
+		trigger = {
+			NOT = {
+				any_primary_culture = {
+					has_discrimination_trait_group = heritage_group_south_asian
+				}
+			}
+		}
+		# In case another country liberated BIC and it's no longer a chartered company
+		if = {
+			limit = {
+				OR = {
+					has_modifier = modifier_india_company_rule
+					has_modifier = modifier_india_company_rule_upgraded
+				}
+			}
+			make_bic_raj = yes
+		}
+		else = {
+			# Get rid of the overlord's colonial governor
+			ruler ?= {
+				retire_character = yes
+			}
+			ig:ig_industrialists ?= {
+				leader = {
+					set_character_as_ruler = yes
+					remove_as_interest_group_leader = yes
+				}
+			}
+		}
+		trigger_event = { id = independence.2 days = 1 }
+		if = {
+			limit = {
+				has_journal_entry = je_india_home_rule
+			}
+			trigger_event = { id = indian_nation_events.9 days = 1 }
+		}	
+	}
+}
+
+bic_breakup.2 = { # Flavor event for Princely States on BIC breakup
+	type = country_event
+	placement = root
+
+	title = bic_breakup.2.t
+	desc = bic_breakup.2.d
+	flavor = bic_breakup.2.f
+
+	event_image = {
+		video = "asia_poor_people_moving"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	duration = 3
+
+	trigger = {
+		# Triggered by collapse_india_effect
+	}
+
+	option = {
+		name = bic_breakup.2.a
+		default_option = yes
+		custom_tooltip = {
+			text = india_now_divided_tt
+		}
+		if = {
+			limit = {
+				can_form_nation = BHT
+				has_indian_primary_culture = yes
+				has_technology_researched = pan-nationalism
+				is_subject = no
+			}
+			custom_tooltip = can_one_unite_india_tt
+			custom_tooltip = unify_india_now_available_tt
+		}
+	}
+}
+
+bic_breakup.3 = { # Event for when BIC Chartered Company is taken over by another country
+	type = country_event
+	placement = root
+
+	title = bic_breakup.3.t
+	desc = bic_breakup.3.d
+	flavor = bic_breakup.3.f
+
+	event_image = {
+		video = "ep1_transfer_of_authority"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	duration = 3
+
+	immediate = {
+		save_scope_as = company_country
+	}
+
+	# Triggered by bic_breakup.5, which is triggered on a monthly pulse if GBR isn't BIC's overlord
+	trigger = {
+		is_subject = yes
+		NOT = {
+			overlord ?= {
+				has_diplomatic_pact = {
+					who = ROOT
+					type = chartered_company
+					is_initiator = yes
+				}
+			}
+		}
+		OR = {
+			has_modifier = modifier_india_company_rule
+			has_modifier = modifier_india_company_rule_upgraded
+		}
+	}
+
+	option = {
+		name = bic_breakup.3.a
+		default_option = yes
+		custom_tooltip = activate_british_raj
+		make_bic_raj = yes
+	}
+}
+
+bic_breakup.4 = { # Disbanding the East India Company Company
+	type = country_event
+	placement = root
+
+	title = bic_breakup.4.t
+	desc = bic_breakup.4.d
+	flavor = bic_breakup.4.f
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:eic_executive_scope
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	duration = 3
+
+	trigger = {
+		# Triggered by bic_breakup.7
+		any_company = {
+			is_company_type = company_type:company_east_india_company
+		}
+		OR = {
+			NOT = {
+				exists = c:BIC
+			}
+			c:BIC ?= {
+				NAND = {
+					is_subject_of = ROOT
+					is_subject_type = subject_type_chartered_company
+				}
+			}
+		}
+	}
+
+	immediate = {
+		random_company = {
+			limit = {
+				is_company_type = company_type:company_east_india_company
+			}
+			executive = {
+				save_scope_as = eic_executive_scope
+			}
+			save_scope_as = eic_scope
+		}
+	}
+
+	option = {
+		name = bic_breakup.4.a
+		default_option = yes
+		scope:eic_scope = {
+			owner ?= {
+				remove_company = prev.type
+			}
+		}
+	}
+}
+
+bic_breakup.5 = { # Hidden event that fires other relevant events when GBR loses India
+	type = country_event
+
+	hidden = yes
+
+	cooldown = { days = never_fire_again_modifier_time }
+	
+	trigger = {
+		c:GBR ?= this
+		NOR = {
+			ROOT = {
+				c:BIC ?= {
+					is_subject_of = ROOT
+				}
+			}
+			ROOT = {
+				c:BHT ?= {
+					is_subject_of = ROOT
+				}
+			}
+		}
+	}
+
+	immediate = {
+		trigger_event = {
+			# GBR is shamed for losing India
+			id = bic_breakup.7
+		}
+		c:BIC ?= {
+			trigger_event = {
+				# BIC switches from Company to Colony
+				id = bic_breakup.3
+			}
+		}
+	}
+}
+
+bic_breakup.6 = { # Notification for Unify India DP being unlocked
+	type = country_event
+	placement = root
+
+	title = bic_breakup.6.t
+	desc = bic_breakup.6.d
+	flavor = bic_breakup.6.f
+
+	event_image = {
+		video = "ip2_india_countryside"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	duration = 3
+
+	# Triggered by on_acquired_technology
+	trigger = {
+		can_form_nation = BHT
+		has_indian_primary_culture = yes
+		has_technology_researched = pan-nationalism
+		is_subject = no
+		OR = {
+			NOT = {
+				exists = c:BIC
+			}
+			c:BIC ?= {
+				has_variable = sepoy_mutiny_failed
+			}
+		}
+	}
+
+	option = {
+		name = bic_breakup.6.a
+		default_option = yes
+		custom_tooltip = unify_india_now_available_tt
+	}
+}
+
+bic_breakup.7 = { # The Jewel Lost
+	type = country_event
+	placement = ROOT
+
+	duration = 3
+
+	trigger = {
+		c:GBR ?= this
+		NOT = {
+			# GBR will get a lesser impactful version of this if it willfully gives up India
+			has_modifier = pivot_of_empire_lost
+		}
+	}
+
+	title = bic_breakup.7.t
+	desc = bic_breakup.7.d
+	flavor = bic_breakup.7.f
+
+	event_image = {
+		video = "ip4_abdication"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	immediate = {
+		# Disband EIC Company (if BIC no longer exists or is not GBR's subject)
+		if = {
+			limit = {
+				any_company = {
+					is_company_type = company_type:company_east_india_company
+				}
+			}
+			ROOT = {
+				trigger_event = {
+					id = bic_breakup.4
+				}
+			}
+		}
+	}
+
+	option = {
+		name = bic_breakup.7.a
+		default_option = yes
+		custom_tooltip = {
+			text = indian_empire_lost_tt
+		}
+		add_modifier = {
+			name = pivot_of_empire_lost
+			days = very_long_modifier_time
+			is_decaying = yes
+		}
+	}
+}

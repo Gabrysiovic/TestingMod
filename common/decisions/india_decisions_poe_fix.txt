@@ -1,0 +1,320 @@
+﻿REPLACE:demand_return_of_koh_i_noor = {
+	is_shown = {
+		has_dlc_feature = ip2_content
+		c:BHT ?= this
+		was_formed_from = BIC
+		any_scope_state = {
+			state_region = s:STATE_PUNJAB
+		}
+		is_subject = no
+		country_rank >= rank_value:unrecognized_major_power
+		any_diplomatically_relevant_country = {
+			has_variable = koh_i_noor
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = koh_i_noor_in_europe_tt
+			any_diplomatically_relevant_country = {
+				has_variable = koh_i_noor
+			}
+		}
+		custom_tooltip = {
+			text = not_at_war_with_koh_i_noor_owner_tt
+			NOT = {
+				any_diplomatically_relevant_country = {
+					custom_tooltip = {
+						text = owns_koh_i_noor_tt
+						has_variable = koh_i_noor
+					}
+					has_war_with = ROOT
+				}
+			}
+		}
+		custom_tooltip = {
+			text = koh_i_noor_return_requested_too_recently_tt
+			NOT = {
+				has_global_variable = koh_i_noor_decision_return_demanded
+			}
+		}
+	}
+
+	when_taken = {
+		set_global_variable = { name = koh_i_noor_decision_return_demanded years = 10 }
+		random_country = {
+			limit = {
+				has_variable = koh_i_noor
+			}
+			save_scope_as = diamond_country
+			set_variable = { name = koh_i_noor_decision_user value = prev days = 180 }
+			custom_tooltip = {
+				text = demand_return_of_diamond_tt
+				trigger_event = { id = india_events.4 }
+			}
+		}
+		custom_tooltip = if_they_accept_tt
+		show_as_tooltip = {
+			add_loyalists = {
+				value = medium_radicals
+				culture = cu:panjabi
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 0
+		if = {
+			limit = {
+				any_diplomatically_relevant_country = {
+					has_variable = koh_i_noor
+					relations:root <= relations_threshold:cordial
+				}
+			}
+			add = 10
+		}
+		if = {
+			limit = {
+				has_strategy = ai_strategy_armed_isolationism
+			}
+			multiply = 0
+		}
+	}
+}
+
+REPLACE:make_delhi_capital = {
+	is_shown = {
+		OR = {
+			c:BIC ?= this
+			c:BHT ?= this
+		}
+		NOT = {
+			has_variable = made_delhi_capital_var
+		}
+		OR = {
+			p:xE0EFA0.state.owner = root
+			any_direct_subject = {
+				p:xE0EFA0.state.owner = this
+			}
+		}
+		s:STATE_DELHI ?= {
+			any_scope_state ?= {
+				owner ?= root
+			}
+		}
+		NOT = {
+			capital = {
+				state_region = s:STATE_DELHI
+			}
+		}
+		OR = {
+		    any_political_movement = {
+		        is_political_movement_type = movement_muslim_nationalist
+		    }
+		    any_political_movement = {
+		        is_political_movement_type = movement_hindu_nationalist
+		    }
+		    has_technology_researched = political_agitation
+		}
+	}
+
+	possible = {
+		is_at_war = no
+		any_scope_state = {
+			state_region = s:STATE_DELHI
+			any_scope_building = {
+				is_building_type = building_urban_center
+				level >= 5
+			}
+		}
+		OR = {
+		    any_political_movement = {
+		        is_political_movement_type = movement_muslim_nationalist
+		        political_movement_radicalism >= 0.1
+		    }
+		    any_political_movement = {
+		        is_political_movement_type = movement_hindu_nationalist
+		        political_movement_radicalism >= 0.1
+		    }
+		    has_technology_researched = political_agitation
+		}
+	}
+
+	when_taken = {
+		if = {
+			limit = {
+				NOT = {
+					capital = {
+						state_region = s:STATE_DELHI
+					}
+				}
+			}
+			set_capital = STATE_DELHI
+		}
+		set_variable = made_delhi_capital_var
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_DELHI
+			}
+			add_modifier = {
+				name = new_delhi_modifier
+			}
+		}
+		add_modifier = {
+			name = new_delhi_cost_modifier
+			days = normal_modifier_time
+			multiplier = money_amount_multiplier_small
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_muslim_nationalist
+						is_political_movement_type = movement_hindu_nationalist
+					}
+				}
+			}
+			every_political_movement = {
+				limit = {
+					OR = {
+						is_political_movement_type = movement_muslim_nationalist
+						is_political_movement_type = movement_hindu_nationalist
+					}
+				}
+				add_modifier = {
+					name = delhi_made_capital_modifier
+					days = normal_modifier_time
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 100
+		if = {
+			limit = {
+				has_strategy = ai_strategy_armed_isolationism
+			}
+			multiply = 0
+		}
+	}
+}
+
+REPLACE:bic_end_company_rule = {
+	is_shown = {
+		c:BIC ?= this
+		is_subject = yes
+		is_subject_type = subject_type_chartered_company
+		has_variable = company_rule_enduring
+	}
+
+	possible = {
+		has_technology_researched = civilizing_mission
+		trigger_if = {
+			limit = {
+				has_journal_entry = je_imperialism_of_promise
+			}
+			NOT = {
+				has_journal_entry = je_imperialism_of_promise
+			}
+		}
+	}
+
+	when_taken = {
+		hidden_effect = {
+			overlord = {
+				# Triggers different event text
+				set_local_variable = bic_triggered_raj
+				trigger_event = { id = raj.1 }
+			}
+		}
+		save_scope_as = company_country
+		custom_tooltip = activate_british_raj
+		show_as_tooltip = {
+			make_bic_raj = yes
+		}
+		remove_variable = company_rule_enduring
+	}
+
+	ai_chance = {
+		value = 100
+		if = {
+			limit = {
+				overlord = {
+					is_player = yes
+				}
+			}
+			multiply = 0
+		}
+	}
+}
+
+REPLACE:bht_end_privy_purse_payments = {
+	is_shown = {
+		has_modifier = modifier_privy_purse_payments
+	}
+
+	possible = {
+		ig:ig_landowners ?= {
+			is_in_government = no
+		}
+		trigger_if = {
+			limit = {
+				is_subject = yes
+			}
+			custom_tooltip = {
+				text = no_federation_je_tt
+				NOT = {
+					has_journal_entry = je_federation_of_india
+				}
+			}
+		}
+		trigger_else = {
+			custom_tooltip = {
+				text = no_union_je_tt
+				NOT = {
+					has_journal_entry = je_federation_of_india
+				}
+			}
+		}
+	}
+
+	when_taken = {
+		remove_modifier = modifier_privy_purse_payments
+		add_radicals = {
+			value = large_radicals
+			pop_type = aristocrats
+		}
+		ig:ig_landowners ?= {
+			add_modifier = {
+				name = modifier_ended_privy_purse_payments
+				days = normal_modifier_time
+			}
+		}
+	}
+
+	ai_chance = {
+		value = -10
+		if = {
+			limit = {
+				taking_loans = yes
+			}
+			add = 5
+		}
+		if = {
+			limit = {
+				is_at_war = yes
+			}
+			add = 3
+		}
+		if = {
+			limit = {
+				scaled_debt >= 0
+			}
+			add = {
+				value = scaled_debt
+				multiply = 10
+			}
+		}
+	}
+}

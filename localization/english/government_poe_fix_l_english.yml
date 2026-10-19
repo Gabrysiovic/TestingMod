@@ -1,0 +1,10 @@
+﻿l_english:
+ # Colonial Republics
+ gov_colonial_republic: "Colonial Republic"
+ gov_colonial_republic_desc: "This is a [concept_government_type] formed by a colony that has replaced the colonial administration with another form of government. A small population of foreigners continue to dominate the government and rule over the native population.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ gov_colonial_empire: "Colonial Empire"
+ gov_colonial_empire_desc: "This is a [concept_government_type] formed by a colony that has established a monarchy to rule over the native population.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ gov_regency_colonial_empire: "Colonial Regency"
+ gov_regency_colonial_empire_desc: "This is a [concept_government_type] formed by a colony that has established a monarchy to rule over the native population. Power rests with a [Concept('concept_ruler','$RULER_TITLE_REGENT$')] who rules on behalf of a [Concept('concept_ruler','$RULER_TITLE_EMPEROR$')] or [Concept('concept_ruler','$RULER_TITLE_EMPRESS$')] who is not yet able to take the throne.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ gov_sepoy_rebellion: "Sepoy Rebellion"
+ gov_sepoy_rebellion_desc: "This is a [concept_government_type] formed by a rebellion of Indian sepoys revolting against colonial rule in India.\n\n$TRANSFER_OF_POWER_NAME_DESC$"

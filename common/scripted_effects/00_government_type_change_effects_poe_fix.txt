@@ -1,0 +1,12 @@
+﻿REPLACE:post_change_to_dictatorial = {
+	if = {
+		limit = {
+			NOT = {
+				has_variable = keep_current_ruler_var
+			}
+		}
+		get_ruler_for:dictatorial = {
+			set_character_as_ruler = yes
+		}
+	}
+}

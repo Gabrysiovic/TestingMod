@@ -1,0 +1,3 @@
+﻿REPLACE_OR_CREATE:concept_indian_nationalism = {
+	texture = "gfx/interface/icons/event_icons/waving_flag.dds"
+}

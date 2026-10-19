@@ -1,0 +1,57 @@
+﻿REPLACE_OR_CREATE:ig_is_indian_imperialist = {
+	ig_is_indian_reformist = no
+	OR = {
+		has_ideology = ideology:ideology_jingoist
+		has_ideology = ideology:ideology_reactionary
+		leader = {
+			has_ideology = ideology:ideology_jingoist_leader
+		}
+		interest_group_has_conservative_ideology = yes
+		interest_group_has_reactionary_ideology = yes
+	}
+}
+
+REPLACE_OR_CREATE:ig_is_indian_reformist = {
+	OR = {
+		has_ideology = ideology:ideology_socialist
+		leader = {
+			has_ideology = ideology:ideology_pacifist
+		}
+		interest_group_has_progressive_ideology = yes
+		interest_group_has_socialist_ideology = yes
+	}
+}
+
+# State or Country Scope
+REPLACE_OR_CREATE:is_in_bengal_presidency = {
+	is_in_geographic_region = geographic_region_bengal_presidency
+}
+
+# State or Country Scope
+REPLACE_OR_CREATE:is_in_bombay_presidency = {
+	is_in_geographic_region = geographic_region_bombay_presidency
+}
+
+# State or Country Scope
+REPLACE_OR_CREATE:is_in_madras_presidency = {
+	is_in_geographic_region = geographic_region_madras_presidency
+}
+
+# TODO: Replace with Burma geopgraphic region
+REPLACE_OR_CREATE:state_is_homeland_of_burmese_cultures = {
+	state_region = {
+		OR = {
+			is_homeland = cu:burmese
+			is_homeland = cu:kachin
+			is_homeland = cu:karen
+			is_homeland = cu:mon
+		}
+	}
+}
+
+# TODO: Replace with Burma geographic region
+REPLACE_OR_CREATE:country_is_in_burma = {
+	capital = {
+		state_is_homeland_of_burmese_cultures = yes
+	}
+}

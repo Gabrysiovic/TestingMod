@@ -1,0 +1,52 @@
+﻿l_english:
+ je_communal_divides_unity_advance_reasons_tt: "• #v #blue +0.25#!#! if $cd_0_movement_activism$\n• #v #blue +0.50#!#! if $cd_0_both_movement_activism$\n• #v #blue +0.25#!#! if $cd_low_movement_identity_support$\n• #v #blue +0.50#!#! if $cd_low_both_movement_identity_support$"
+ je_communal_divides_unity_retreat_reasons_tt: "• #v #red -0.25#!#! if $cd_40_movement_activism$\n• #v #red -0.50#!#! if $cd_60_movement_activism$\n• #v #red -0.25#!#! if $cd_high_movement_identity_support$\n• #v #red -0.50#!#! if $cd_very_high_movement_identity_support$"
+
+ hindu_muslim_unity_150_tt: "The sum of #b $hindu$#! and #b $muslim$#! #b #blue Unity#!#! has reached #v 150%#!"
+ india_has_homerule_or_independence_tt: "#b India#! has gained either #b sovereign home rule#! or #b full independence #!"
+ communal_divides_10_timer_tt: "#b $je_communal_divides$#! has been ongoing for at least #v 10#! years."
+ hindu_separatism_100_tt: "#b $hindu$ #red Separatism#!#! has reached #v 100%#!"
+ muslim_separatism_100_tt: "#b $muslim$ #red Separatism#!#! has reached #v 100%#!"
+
+ triggers_the_federal_solution_tt: "If we enacted a #b confederal system#!, triggrs the event #v $communal_divides_events.15.t$#!"
+ triggers_one_nation_theory_tt: "Otherwise, triggers the event #v $communal_divides_events.1.t$#!"
+ muslim_characters_move_to_federal_members_tt: "All [GetReligion('sunni').GetReligiousTraitsDesc] [Concept('concept_character', 'characters')] will move to our new confederal members."
+ transfer_subjects_to_federal_members_tt: "All of our [concept_princely_state] [Concept('concept_subject', 'subjects')] with [Concept('concept_capital_state', 'capitals')] in the new $muslim$ territory will be transferred to our new confederal members."
+
+ cd_very_high_movement_identity_support: "More than #v 36%#! of #b $hindus$#!/#b $muslims$#! support the movement"
+ cd_very_high_hindu_movement_identity_support: "More than #v 36%#! of #b $hindus$#! support the movement"
+ cd_very_high_muslim_movement_identity_support: "More than #v 36%#! of #b $muslims$#! support the movement"
+ cd_high_movement_identity_support: "More than #v 24%#! of #b $hindus$#!/#b $muslims$#! support the movement"
+ cd_high_hindu_movement_identity_support: "More than #v 24%#! of #b $hindus$#! support the movement"
+ cd_high_muslim_movement_identity_support: "More than #v 24%#! of #b $muslims$#! support the movement"
+ cd_medium_movement_identity_support: "More than #v 12%#! of #b $hindus$#!/#b $muslims$#! support the movement"
+ cd_medium_hindu_movement_identity_support: "More than #v 12%#! of #b $hindus$#! support the movement"
+ cd_medium_muslim_movement_identity_support: "More than #v 12%#! of #b $muslims$#! support the movement"
+ cd_low_movement_identity_support: "Less than #v 12%#! of #b $hindus$#!/#b $muslims$#! support the movement"
+ cd_low_hindu_movement_identity_support: "Less than #v 12%#! of #b $hindus$#! support the movement"
+ cd_low_muslim_movement_identity_support: "Less than #v 12%#! of #b $muslims$#! support the movement"
+ cd_low_both_movement_identity_support: "Less than #v 12%#! of #b $hindus$#!/#b $muslims$#! support #b both#! movements"
+ cd_60_movement_activism: "The [Concept('concept_activism', '$concept_activism_short$')] of the movement is over #v 60%#!"
+ cd_40_movement_activism: "The [Concept('concept_activism', '$concept_activism_short$')] of the movement is over #v 40%#!"
+ cd_20_movement_activism: "The [Concept('concept_activism', '$concept_activism_short$')] of the movement is over #v 20%#!"
+ cd_0_movement_activism: "The [Concept('concept_activism', '$concept_activism_short$')] of the movement is less than #v 20%#!"
+ cd_0_both_movement_activism: "The [Concept('concept_activism', '$concept_activism_short$')] of #b both#! movements is less than #v 20%#!"
+
+ je_communal_divides_hindu_progressbar: "$hindu$ Unity / Separatism"
+ je_communal_divides_hindu_progressbar_left_desc: "$hindu$ Unity - #v [GetPlayer.MakeScope.ScriptValue('communal_divides_hindu_unity_progress')|%]#!"
+ je_communal_divides_hindu_progressbar_right_desc: "#v [GetPlayer.MakeScope.ScriptValue('communal_divides_hindu_separatism_progress')|%]#! - $hindu$ Separatism"
+
+ je_communal_divides_muslim_progressbar: "$muslim$ Unity / Separatism"
+ je_communal_divides_muslim_progressbar_left_desc: "$muslim$ Unity - #v [GetPlayer.MakeScope.ScriptValue('communal_divides_muslim_unity_progress')|%]#!"
+ je_communal_divides_muslim_progressbar_right_desc: "#v [GetPlayer.MakeScope.ScriptValue('communal_divides_muslim_separatism_progress')|%]#! - $muslim$ Separatism"
+
+ hindu_muslim_nationalists_passive: "Both #b $movement_hindu_nationalist_name$#! and #b $movement_muslim_nationalist_name$#! are $ACTIVISM_ICON$ $RADICALISM_PASSIVE$"
+ hindu_muslim_nationalist_0_identity_support: "Less than #v 10%#! of Hindus/Muslims support both #b $movement_hindu_nationalist_name$#! and #b $movement_muslim_nationalist_name$#!"
+
+ hindu_unity_increase_5_tt: "#b $hindu$ #blue Unity#!#! will increase by #v 5%#!"
+ hindu_unity_increase_10_tt: "#b $hindu$ #blue Unity#!#! will increase by #v 10%#!"
+ muslim_unity_increase_5_tt: "#b $muslim$ #blue Unity#!#! will increase by #v 5%#!"
+ muslim_unity_increase_10_tt: "#b $muslim$ #blue Unity#!#! will increase by #v 10%#!"
+
+india_will_remain_unified_tt: "#b India#! will remain unified"
+indian_divisions_mended: "Divisions Mended"

@@ -1,0 +1,4 @@
+﻿REPLACE_OR_CREATE:pivot_of_empire_lost = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	country_prestige_mult = -0.2
+}

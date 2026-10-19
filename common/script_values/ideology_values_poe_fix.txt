@@ -1,0 +1,26 @@
+﻿REPLACE:ideology_nihilist_favoured_laws = {
+	# Laws that ideology_nihilist likes the most.
+	# Maximum value = 3
+	value = 0
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_council_republic
+		}
+		add = 1
+	}
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_state_atheism
+		}
+		add = 1
+	}
+	if = {
+		limit = {
+			OR = {
+				has_law_or_variant = law_type:law_hindu_caste_discrimination_outlawed
+				has_law_or_variant = law_type:law_affirmative_action
+			}
+		}
+		add = 1
+	}
+}

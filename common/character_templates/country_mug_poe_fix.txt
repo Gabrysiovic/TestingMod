@@ -1,0 +1,36 @@
+﻿# MUG - Hindustan
+
+### Generals
+
+# Generated Generals
+
+# Sergeant-Major Gordon Easter Egg
+REPLACE_OR_CREATE:mug_robert_gordon = {
+    first_name = Robert
+    last_name = Gordon
+    historical = yes
+    culture = cu:scottish
+    female = no
+    is_general = yes
+    religion = rel:sunni
+    commander_rank = default
+    interest_group = ig_armed_forces
+    # ideology is randomly generated
+    home_region = STATE_LOWLANDS
+    # birth_date is unknown, but the generated one will usually be plausible
+    traits = {
+        compliant
+        experienced_artillery_commander
+    }
+    commander_usage = {
+        country_trigger = {
+           c:MUG ?= THIS
+           has_dlc_feature = ip2_content
+           has_journal_entry = je_sepoy_mutiny
+        }
+        role = general
+        earliest_usage_date = 1852.1.1 # Year he was promoted to Sergeant Major
+        latest_usage_date = 1865.1.1 # Approximate latest date the Sepoy Mutiny may be ongoing
+        #guaranteed to spawn if possible
+    }
+}

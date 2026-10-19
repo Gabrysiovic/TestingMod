@@ -1,0 +1,287 @@
+﻿REPLACE_OR_CREATE:modifier_india_sepoy_rebellion = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	interest_group_ig_armed_forces_pol_str_mult = 2
+	country_soldiers_pol_str_mult = 2.50
+	country_officers_pol_str_mult = 2.50
+	country_aristocrats_pol_str_mult = -0.90
+	country_legitimacy_base_add = -35
+	country_legitimacy_headofstate_add = 50
+}
+
+REPLACE:sepoy_mutiny_barracks_destruction_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+	state_building_barrack_max_level_add = -100
+	building_training_rate_mult = 0
+	state_conscription_rate_mult = 0
+	state_turmoil_effects_mult = 0.1
+}
+
+REPLACE:sepoy_mutiny_barracks_unrest_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+	building_training_rate_mult = -0.25
+	state_conscription_rate_mult = -0.25
+	state_turmoil_effects_mult = 0.1
+}
+
+REPLACE_OR_CREATE:indian_loyalty_rewarded = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	country_overlord_income_transfer_mult = 0
+}
+
+REPLACE:new_delhi_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	building_government_administration_throughput_add = 0.15
+	state_pop_pol_str_mult = 0.15
+}
+
+REPLACE_OR_CREATE:united_in_diversity_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_authority_mult = 0.1
+}
+
+REPLACE_OR_CREATE:marching_as_one_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	unit_morale_loss_mult = -0.1
+	unit_morale_recovery_mult = 0.05
+}
+
+REPLACE:sectarian_infighting_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	political_movement_pop_attraction_mult = -0.1
+}
+
+REPLACE:exploiting_sectarian_divisions = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	political_movement_pop_attraction_mult = 0.05
+	political_movement_radicalism_add = -0.05
+}
+
+REPLACE_OR_CREATE:indian_spurned_by_government = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+	political_movement_pop_attraction_mult = -0.2
+	political_movement_radicalism_add = 0.1
+}
+
+REPLACE_OR_CREATE:indian_government_consultation = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	political_movement_pop_attraction_mult = 0.15
+	political_movement_radicalism_add = -0.15
+}
+
+REPLACE_OR_CREATE:indian_recognition_refused = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+	political_movement_pop_attraction_mult = -0.10
+}
+
+REPLACE_OR_CREATE:indian_admonished_by_government = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	political_movement_pop_attraction_mult = -0.20
+	political_movement_radicalism_add = 0.10
+}
+
+REPLACE_OR_CREATE:indian_rivals_admonished = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	political_movement_radicalism_add = -0.10
+}
+
+REPLACE_OR_CREATE:indian_shared_blame = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	political_movement_pop_attraction_mult = -0.10
+}
+
+REPLACE:governmental_overreach_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	political_movement_radicalism_add = 0.05
+}
+
+REPLACE_OR_CREATE:indian_temple_saved = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	political_movement_radicalism_add = -0.15
+}
+
+REPLACE:outraged_over_favouritism = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	political_movement_radicalism_add = 0.05
+}
+
+REPLACE_OR_CREATE:indian_mosque_construction_permitted = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	political_movement_radicalism_add = -0.15
+}
+
+REPLACE_OR_CREATE:indian_temple_compromise_found = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	political_movement_radicalism_add = -0.05
+}
+
+REPLACE_OR_CREATE:indian_buildings_torn_down = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	building_urban_center_throughput_add = -0.10
+}
+
+REPLACE_OR_CREATE:indian_businesses_destroyed_for_mosque = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	interest_group_approval_add = -2
+}
+
+REPLACE_OR_CREATE:indian_gaining_local_representation = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	political_movement_pop_attraction_mult = 0.10
+	political_movement_radicalism_add = -0.15
+}
+
+REPLACE:losing_grip_over_urban_administrations = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	political_movement_pop_attraction_mult = -0.20
+	political_movement_radicalism_add = 0.10
+}
+
+REPLACE_OR_CREATE:indian_no_local_representation = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	political_movement_pop_attraction_mult = -0.20
+	political_movement_radicalism_add = 0.10
+}
+
+REPLACE_OR_CREATE:indian_maintaining_grip_on_urban_administrations = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	political_movement_pop_attraction_mult = 0.10
+	political_movement_radicalism_add = -0.15
+}
+
+REPLACE_OR_CREATE:indian_government_seized_local_administration = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+    political_movement_pop_attraction_mult = -0.20
+}
+
+REPLACE:unsatisfactory_compromises_over_city_administrations = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	political_movement_radicalism_add = 0.05
+}
+
+REPLACE_OR_CREATE:indian_granted_greater_influence = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	interest_group_approval_add = 3
+	interest_group_pol_str_mult = 0.15
+}
+
+REPLACE_OR_CREATE:indian_restricted_influence = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	interest_group_approval_add = -3
+	interest_group_pol_str_mult = -0.15
+}
+
+REPLACE_OR_CREATE:indian_less_influential_priesthood_good = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	political_movement_radicalism_add = -0.10
+}
+
+REPLACE_OR_CREATE:indian_less_influential_priesthood_bad = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	political_movement_pop_attraction_mult = -0.20
+	political_movement_radicalism_add = 0.10
+}
+
+REPLACE_OR_CREATE:indian_more_influential_priesthood_good = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	political_movement_radicalism_add = -0.10
+}
+
+REPLACE_OR_CREATE:indian_more_influential_priesthood_bad = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	political_movement_pop_attraction_mult = -0.20
+	political_movement_radicalism_add = 0.10
+}
+
+REPLACE_OR_CREATE:indian_greater_say_in_government = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	political_movement_pop_attraction_mult = 0.05
+	political_movement_radicalism_add = -0.05
+}
+
+REPLACE_OR_CREATE:indian_preaching_tolerance = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	political_movement_pop_attraction_mult = 0.10
+	political_movement_radicalism_add = -0.10
+}
+
+REPLACE_OR_CREATE:indian_religious_leader_arrested = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	political_movement_pop_attraction_mult = -0.20
+	political_movement_radicalism_add = 0.05
+}
+
+REPLACE_OR_CREATE:indian_sated_by_land_redistribution = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	political_movement_pop_attraction_mult = -0.20
+	political_movement_radicalism_add = -0.1
+}
+
+REPLACE_OR_CREATE:indian_fended_off_land_redistribution = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	political_movement_pop_attraction_mult = -0.20
+	political_movement_radicalism_add = -0.1
+}
+
+REPLACE_OR_CREATE:indian_agitating_over_land_distribution = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	political_movement_radicalism_add = 0.1
+}
+
+REPLACE_OR_CREATE:indian_upset_over_land_redistribution = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_approval_add = -2
+}
+
+REPLACE_OR_CREATE:indian_prevented_land_redistribution = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_approval_add = 2
+}
+
+REPLACE_OR_CREATE:indian_land_redistribution = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	building_group_bg_agriculture_allowed_collectivization_add = 0.2
+}
+
+REPLACE_OR_CREATE:indian_scandal = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	political_movement_pop_attraction_mult = -0.2
+}
+
+REPLACE_OR_CREATE:indian_shielded_from_scandal = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	political_movement_pop_attraction_mult = -0.1
+	political_movement_radicalism_add = -0.1
+}
+
+REPLACE_OR_CREATE:indian_cooperative_dialog = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	political_movement_radicalism_add = -0.05
+}
+
+REPLACE_OR_CREATE:indian_embarassing_display = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	political_movement_pop_attraction_mult = -0.20
+	political_movement_radicalism_add = 0.05
+}
+
+REPLACE_OR_CREATE:indian_influx_of_members = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	political_movement_pop_attraction_mult = 0.10
+}
+
+REPLACE_OR_CREATE:indian_radical_newcomers = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	political_movement_pop_attraction_mult = 0.05
+	political_movement_radicalism_add = 0.05
+}
+
+REPLACE_OR_CREATE:indian_moderate_newcomers = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	political_movement_pop_attraction_mult = 0.05
+	political_movement_radicalism_add = -0.05
+}
+
+REPLACE_OR_CREATE:indian_losing_members = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	political_movement_pop_attraction_mult = -0.10
+}

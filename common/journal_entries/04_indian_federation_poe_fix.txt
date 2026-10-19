@@ -1,0 +1,89 @@
+﻿REPLACE:je_federation_of_india = {
+	icon = "gfx/interface/icons/invention_icons/pan_nationalism.dds"
+
+	group = je_group_british_india
+
+	scripted_button = je_federation_of_india_invite_princely_states
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = blank_tt
+				trigger = {
+					NOT = {
+						has_modifier = modifier_privy_purse_payments
+					}
+				}
+			}
+			triggered_desc = {
+				desc = privy_purse_payments_total_tt
+				trigger = {
+					has_modifier = modifier_privy_purse_payments
+				}
+			}
+		}
+	}
+
+	immediate = {
+		ROOT = {
+			save_scope_as = india_scope
+			set_variable = { name = privy_purse_multiplier value = 0 }
+		}
+	}
+
+	on_yearly_pulse = {
+		random_events = {
+			1 = 0
+			1 = federation_of_india.4 #Princely State joins willingly
+		}
+	}
+
+	complete = {
+		custom_tooltip = {
+			text = all_princely_states_have_acceded_to_the_federation_tt
+			NOT = {
+				any_direct_subject = {
+					is_princely_state = yes
+					is_player = no
+				}
+			}
+		}
+	}
+
+	on_complete = {
+		hidden_effect = {
+			trigger_event = { id = federation_of_india.2 popup = yes }
+		}
+		show_as_tooltip = {
+            execute_event_option = { event = federation_of_india.2 option = 0 }
+        }
+	}
+
+
+	fail = {
+		custom_tooltip = {
+			text = has_started_diplomatic_play_against_princely_state_subject_tt
+			any_diplomatic_play = {
+				initiator_is = ROOT
+				target = {
+					is_subject_of = ROOT
+					is_princely_state = yes
+				}
+			}
+		}
+	}
+
+	on_fail = {
+		hidden_effect = {
+			trigger_event = { id = federation_of_india.3 popup = yes }
+		}
+		show_as_tooltip = {
+            execute_event_option = { event = federation_of_india.3 option = 0 }
+        }
+	}
+
+	weight = 100
+
+	should_be_pinned_by_default_uninvolved_or_context = yes
+
+}

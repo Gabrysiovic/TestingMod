@@ -1,0 +1,337 @@
+﻿REPLACE_OR_CREATE:je_british_dictates = {
+	should_be_pinned_by_default_uninvolved_or_context = yes
+	icon = "gfx/interface/icons/invention_icons/corporate_charters.dds"
+
+	group = je_group_british_india
+
+	is_shown_when_inactive = {
+		has_dlc_feature = ip2_content
+		c:BIC ?= this
+		NOR = {
+			has_journal_entry = je_uneasy_raj
+			has_journal_entry = je_sepoy_mutiny
+			has_variable = sepoy_mutiny_failed
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = british_dictates_officials_put_forth_plan_tt
+			has_variable = british_dictates_started
+		}
+	}
+
+	timeout = 7300
+
+	immediate = {
+		trigger_event = { id = british_dictates.5 popup = yes }
+		add_journal_entry = { type = je_british_dictate_plantations }
+		add_journal_entry = { type = je_british_dictate_military }
+		add_journal_entry = { type = je_british_dictate_universities }
+	}
+
+	complete = {
+		custom_tooltip = {
+			text = je_british_dictate_plantations_complete_tt
+			has_variable = british_dictate_plantations_complete
+		}
+		custom_tooltip = {
+			text = je_british_dictate_military_complete_tt
+			has_variable = british_dictate_military_complete
+		}
+		custom_tooltip = {
+			text = je_british_dictate_universities_complete_tt
+			has_variable = british_dictate_universities_complete
+		}
+	}
+
+	on_complete = {
+		hidden_effect = {
+			trigger_event = { id = british_dictates.6 popup = yes }
+		}
+		show_as_tooltip = {
+			execute_event_option = { event = british_dictates.6 option = 0 }
+		}
+	}
+
+	on_timeout = {
+		hidden_effect = {
+			trigger_event = { id = british_dictates.7 popup = yes }
+		}
+		show_as_tooltip = {
+			execute_event_option = { event = british_dictates.7 option = 0 }
+		}
+		if = {
+			limit = {
+				calc_true_if = {
+					amount <= 1
+					has_variable = british_dictate_plantations_complete
+					has_variable = british_dictate_military_complete
+					has_variable = british_dictate_universities_complete
+				}
+			}
+			custom_tooltip = je_british_dictates_consequences_scaled_tt
+		}
+	}
+
+	invalid = {
+		NOT = {
+			c:BIC ?= this
+		}
+	}
+
+	weight = 904
+}
+
+REPLACE:je_british_dictate_plantations = {
+		
+	should_be_pinned_by_default_uninvolved_or_context = yes
+	icon = "gfx/interface/icons/invention_icons/intensive_agriculture.dds"
+
+	group = je_group_british_india
+
+	scripted_button = je_british_dictate_plantations_prioritize_construction
+	scripted_button = je_british_dictate_plantations_deprioritize_construction
+	scripted_button = je_british_dictate_plantations_prioritize_productivity
+	scripted_button = je_british_dictate_plantations_deprioritize_productivity
+
+	immediate = {
+		set_variable = {
+			name = arable_land_percent_goal
+			value = 0.30
+		}
+		update_je_british_dictate_plantations_vars = yes
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			update_je_british_dictate_plantations_vars = yes
+		}
+	}
+
+	complete = {
+		custom_tooltip = {
+			text = je_british_dictate_plantations_completion_condition_tt
+			var:num_plantations >= var:target_plantations
+		}
+		trigger_if = {
+			limit = {
+				has_variable = plantations_prioritize_construction
+			}
+			calc_true_if = {
+				amount >= 2
+				leading_producer_of = g:opium
+				leading_producer_of = g:tea
+				leading_producer_of = g:dye
+				leading_producer_of = g:fabric
+				leading_producer_of = g:silk
+			}
+		}
+		trigger_else_if = {
+			limit = {
+				has_variable = plantations_prioritize_productivity
+			}
+			calc_true_if = {
+				amount >= 4
+				leading_producer_of = g:opium
+				leading_producer_of = g:tea
+				leading_producer_of = g:dye
+				leading_producer_of = g:fabric
+				leading_producer_of = g:silk
+			}
+		}
+		trigger_else = {
+			calc_true_if = {
+			amount >= 3
+				leading_producer_of = g:opium
+				leading_producer_of = g:tea
+				leading_producer_of = g:dye
+				leading_producer_of = g:fabric
+				leading_producer_of = g:silk
+			}
+		}
+		custom_tooltip = {
+			text = colonial_dictates_timer_tt
+			scope:journal_entry ?= {
+				journal_entry_age > 730
+			}
+		}
+	}
+
+	on_complete = {
+		set_variable = british_dictate_plantations_complete
+		hidden_effect = {
+			trigger_event = { id = british_dictates.8 }
+		}
+		show_as_tooltip = {
+			execute_event_option = { event = british_dictates.8 option = 0 }
+		}
+	}
+
+	fail = {
+		custom_tooltip = {
+			text = british_dictates_time_run_out_tt
+			NOT = {
+				has_journal_entry = je_british_dictates
+			}
+		}
+	}
+
+	invalid = {
+		NOT = {
+			c:BIC ?= this
+		}
+	}
+
+	weight = 903
+}
+
+REPLACE:je_british_dictate_military = {
+		
+	should_be_pinned_by_default_uninvolved_or_context = yes
+	icon = "gfx/interface/icons/invention_icons/line_infantry.dds"
+
+	group = je_group_british_india
+
+	scripted_button = je_british_dictate_military_prioritize_army
+	scripted_button = je_british_dictate_military_deprioritize_army
+	scripted_button = je_british_dictate_military_prioritize_navy
+	scripted_button = je_british_dictate_military_deprioritize_navy
+
+	complete = {
+		trigger_if = {
+			limit = {
+				has_variable = military_prioritize_army
+			}
+			army_power_projection >= 8000
+			naval_power_projection >= 5000
+		}
+		trigger_else_if = {
+			limit = {
+				has_variable = military_prioritize_navy
+			}
+			army_power_projection >= 5000
+			naval_power_projection >= 8000
+		}
+		trigger_else = {
+			army_power_projection >= 6500
+			naval_power_projection >= 6500
+		}
+		custom_tooltip = {
+			text = colonial_dictates_timer_tt
+			scope:journal_entry ?= {
+				journal_entry_age > 730
+			}
+		}
+	}
+
+	on_complete = {
+		set_variable = british_dictate_military_complete
+		hidden_effect = {
+			trigger_event = { id = british_dictates.9 }
+		}
+		show_as_tooltip = {
+			execute_event_option = { event = british_dictates.9 option = 0 }
+		}
+	}
+
+	fail = {
+		custom_tooltip = {
+			text = british_dictates_time_run_out_tt
+			NOT = {
+				has_journal_entry = je_british_dictates
+			}
+		}
+	}
+
+	invalid = {
+		NOT = {
+			c:BIC ?= this
+		}
+	}
+
+	weight = 902
+}
+
+# Get rid of this one
+REPLACE:je_british_dictate_law = {
+    icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	group = je_group_british_india
+}
+
+REPLACE:je_british_dictate_universities = {
+		
+	should_be_pinned_by_default_uninvolved_or_context = yes
+	icon = "gfx/interface/icons/invention_icons/academia.dds"
+
+	group = je_group_british_india
+
+	scripted_button = je_british_dictate_universities_prioritize_higher_education
+	scripted_button = je_british_dictate_universities_deprioritize_higher_education
+	scripted_button = je_british_dictate_universities_prioritize_public_schools
+	scripted_button = je_british_dictate_universities_deprioritize_public_schools
+
+	complete = {
+		trigger_if = {
+			limit = {
+				has_variable = universities_prioritize_higher_education
+			}
+			country_has_building_type_levels = {
+				target = bt:building_university
+				value >= 40
+			}
+			literacy_rate >= 0.30
+		}
+		trigger_else_if = {
+			limit = {
+				has_variable = universities_prioritize_public_schools
+			}
+			country_has_building_type_levels = {
+				target = bt:building_university
+				value >= 12
+			}
+			literacy_rate >= 0.50
+		}
+		trigger_else = {
+			country_has_building_type_levels = {
+				target = bt:building_university
+				value >= 25
+			}
+			literacy_rate >= 0.40
+		}
+		custom_tooltip = {
+			text = colonial_dictates_timer_tt
+			scope:journal_entry ?= {
+				journal_entry_age > 730
+			}
+		}
+	}
+
+	on_complete = {
+		set_variable = british_dictate_universities_complete
+		hidden_effect = {
+			trigger_event = { id = british_dictates.10 }
+		}
+		show_as_tooltip = {
+			execute_event_option = { event = british_dictates.10 option = 0 }
+		}
+	}
+
+	fail = {
+		custom_tooltip = {
+			text = british_dictates_time_run_out_tt
+			NOT = {
+				has_journal_entry = je_british_dictates
+			}
+		}
+	}
+
+	invalid = {
+		NOT = {
+			c:BIC ?= this
+		}
+	}
+
+	weight = 901
+}

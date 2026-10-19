@@ -1,0 +1,55 @@
+﻿REPLACE_OR_CREATE:get_je_india_home_rule_reason = {
+	type = journal_entry
+
+	text = {
+		trigger = {
+			c:BIC ?= {
+				is_subject = yes
+				NOT = {
+					has_variable = india_home_rule_failed
+				}
+			}
+		}
+		localization_key = je_india_home_rule_reason_remainder_home_rule
+	}
+	text = {
+		trigger = {
+			c:BIC ?= {
+				is_subject = yes
+				has_variable = india_home_rule_failed
+			}
+		}
+		localization_key = je_india_home_rule_reason_remainder_full_independence
+	}
+	text = {
+		trigger = {
+			c:BIC ?= {
+				is_subject = no
+			}
+		}
+		localization_key = je_india_home_rule_reason_remainder_self_government
+	}
+}
+
+REPLACE_OR_CREATE:get_je_india_home_rule_switch_from_chartered_company_notice = {
+	type = country
+
+	text = {
+		trigger = {
+			c:BIC ?= this
+			c:BIC ?= {
+				is_subject_type = subject_type_chartered_company
+			}
+		}
+		localization_key = je_india_home_rule_india_end_company_status
+	}
+	text = {
+		trigger = {
+			c:BIC ?= {
+				is_subject_type = subject_type_chartered_company
+				is_direct_subject_of = prev
+			}
+		}
+		localization_key = je_india_home_rule_britain_end_company_status
+	}
+}

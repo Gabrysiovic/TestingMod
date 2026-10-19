@@ -1,0 +1,86 @@
+﻿REPLACE_OR_CREATE:unify_india = {
+	icon = "gfx/interface/icons/war_goals/annex_country.dds"
+
+	kind = conquer_state
+
+	settings = {
+		require_target_be_part_of_war
+		annexes_entire_state
+		can_add_for_other_country
+		requires_interest
+
+		# Validation
+		validate_target_not_treaty_port
+		validate_conflicts_conquer_state
+
+		conflicts_with_country_creation
+		conflicts_with_annex_state
+	}
+
+	execution_priority = 69
+
+	contestion_type = control_target_state
+
+	target_type = state
+
+	possible = {
+		# trigger to determine if a goal with its target data is listed when selecting a war goal in the diplo play panel
+		# scopes: root = holder, creator_country, diplomatic_play, target_country, target_state, stakeholder, target_region, article_options
+		can_form_nation = BHT
+		has_indian_primary_culture = yes
+		OR = {
+			NOT = {
+				exists = c:BIC
+			}
+			c:BIC ?= {
+				has_variable = sepoy_mutiny_failed
+			}
+		}
+	}
+
+	valid = {
+		# trigger in addition to some basic validation code-side
+		# scopes: root = holder, creator_country, diplomatic_play, target_country, target_state, stakeholder, target_region, article_options
+		NOT = { is_country_type = decentralized }
+		has_technology_researched = pan-nationalism
+		is_subject = no
+		scope:target_state = {
+			is_in_geographic_region = geographic_region_india
+			owner = scope:target_country
+		}
+	}
+
+	maneuvers = {
+		value = 0
+
+		add = {
+			desc = "MANEUVERS_BASE_VALUE"
+			value = 10
+		}
+	}
+
+	infamy = {
+		value = 0
+
+		add = {
+			desc = "INFAMY_BASE_VALUE"
+			value = 5
+		}
+
+		multiply = {
+			desc = "NUM_PROVINCES"
+			value = scope:target_state.num_provinces
+			divide = scope:target_state.state_region.num_provinces
+		}
+		
+
+	}
+
+	on_enforced = {
+		# script effect on top of the predefined code effect
+	}
+
+	ai = {
+		is_significant_demand = yes
+	}
+}

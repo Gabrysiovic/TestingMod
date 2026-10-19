@@ -1,0 +1,1091 @@
+﻿# POE_FIX: Rehaul this journal entry as well as all associated events, buttons, and scripted progress bars
+REPLACE:je_india_home_rule = {
+	should_be_pinned_by_default_involved = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	group = je_group_british_india_global
+
+	scripted_progress_bar = je_india_home_rule_progressbar
+
+	scripted_button = je_india_home_rule_request_democracy_permission
+	scripted_button = je_india_home_rule_petition_home_rule
+	scripted_button = je_india_home_rule_demand_independence
+	scripted_button = je_india_home_rule_sovereign_government
+	scripted_button = je_india_nationalism_britain_indian_self_governance
+	scripted_button = je_india_enact_home_rule
+	scripted_button = je_india_nationalism_britain_dispatch_simon_commission
+	# TODO: Remove this debugging button
+	#scripted_button = add_indian_nationalism_button
+
+	should_be_involved = {
+		OR = {
+			c:BIC ?= this
+			c:BIC ?= {
+				is_subject_of = ROOT
+			}
+		}
+	}
+
+	should_show_when_not_involved = {
+		OR = {
+			c:BIC ?= ROOT
+			c:BIC ?= {
+				is_subject_of = ROOT
+			}
+			AND = {
+				exists = c:BIC
+				is_subject_of = c:BIC
+			}
+			AND = {
+				c:BUR ?= {
+					this = ROOT
+				}
+				c:BIC ?= {
+					OR = {
+						has_variable = supporting_burmese_subject
+						has_variable = supporting_burmese_independence
+					}
+				}
+			}
+		}
+	}
+
+	is_shown_in_lobby = {
+		has_dlc_feature = ip2_content #Pivot of Empire
+		c:BIC ?= this
+	}
+
+	is_shown_when_inactive = {
+		has_dlc_feature = ip2_content #Pivot of Empire
+		c:BIC ?= {
+			NOR = {
+				has_journal_entry = je_uneasy_raj
+				has_journal_entry = je_sepoy_mutiny
+				# Cannot activate this JE if the Sepoy Mutiny failed. At that point BIC would just be a remnant state
+				# in Bengal, Bombay, or Madras (also only players will take that option)
+				has_variable = sepoy_mutiny_failed
+			}
+		}
+	}
+
+	possible = {
+		c:BIC ?= {
+			has_technology_researched = pan-nationalism
+			any_political_movement = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			custom_tooltip = {
+				text = no_south_asian_primary_cultures_tt
+				NOT = {
+					any_primary_culture = {
+						has_discrimination_trait_group = heritage_group_south_asian
+					}
+				}
+			}
+		}
+	}
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = je_india_home_rule_not_started_status
+				trigger = {
+					c:BIC ?= {
+						NOT = {
+							has_journal_entry = je_india_home_rule
+						}
+					}
+				}
+			}
+			triggered_desc = {
+				desc = je_india_home_rule_self_government_status
+				trigger = {
+					c:BIC ?= {
+						is_subject = no
+					}
+				}
+			}
+			triggered_desc = {
+				desc = je_india_home_rule_home_rule_status
+				trigger = {
+					c:BIC ?= {
+						NOT = {
+							has_variable = india_home_rule_failed
+						}
+					}
+				}
+			}
+			triggered_desc = {
+				desc = je_india_home_rule_full_independence_status
+				trigger = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	immediate = {
+		c:BIC = {
+			save_scope_as = india_scope
+			random_political_movement = {
+				limit = {
+					is_political_movement_type = movement_india_pan_national
+				}
+				save_scope_as = indian_national_movement
+			}
+			if = {
+				limit = {
+					is_subject = no
+				}
+				# If we started this JE independent, automatically set this. Technically this only
+				# matters for the triggered flavor text on the success event and in the minute chance we
+				# become a subject again.
+				set_variable = india_home_rule_failed
+			}
+			# Used for calculating AI willingness to request reforms; Will be updated monthly
+			je:je_india_home_rule ?= {
+				set_variable = {
+					name = india_national_activity
+					value = 0
+				}
+			}
+			trigger_event = { id = india_home_rule_events.7 popup = yes }
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				overlord ?= {
+					trigger_event = { id = india_home_rule_events.8 popup = yes }
+				}
+			}
+			je:je_india_home_rule = {
+				set_variable = {
+					name = overlord_rejected_reforms
+					value = 0
+				}
+				set_variable = {
+					name = imperialist_blocked_progress
+					value = 0
+				}
+				# Determine how high Indian Nationalism needs to be for Gandhi to arrive from South Africa
+				set_variable = {
+					name = gandhi_arrival_threshold
+					value = {
+						fixed_range = {
+							min = 100
+							max = 150
+						}
+					}
+				}
+			}
+			# Set up for je_india_non_cooperation_movement to prevent unset variable errors when viewing inactive JE
+			set_variable = {
+				name = indian_peaceful_protest_actions
+				value = 0
+			}
+			set_variable = {
+				name = indian_violent_protest_actions
+				value = 0
+			}
+		}
+	}
+
+	complete = {
+		c:BIC ?= {
+			trigger_if = {
+				limit = {
+					is_subject = yes
+					NOT = {
+						has_variable = india_home_rule_failed
+					}
+				}
+				has_law_or_variant = law_type:law_elected_bureaucrats
+				country_has_voting_franchise = yes
+				custom_tooltip = {
+					text = simon_commission_complete_tt
+					scope:journal_entry = {
+						has_variable = simon_commission_complete
+					}
+				}
+				OR = {
+					has_law_or_variant = law_type:law_multicultural
+					active_law:lawgroup_citizenship ?= {
+						has_amendment = amendment_type:amendment_government_of_india_act
+					}
+				}
+				OR = {
+					is_subject_type = subject_type_dominion
+					is_subject_type = subject_type_protectorate
+				}
+			}
+			custom_tooltip = {
+				text = indian_nationalism_above_500_tt
+				scope:journal_entry = {
+					"scripted_bar_progress(je_india_home_rule_progressbar)" >= 500
+				}
+			}
+			custom_tooltip = {
+				text = indian_self_governance_has_been_granted_tt
+				has_variable = indian_sovereignty_granted
+			}
+		}
+	}
+
+	on_complete = {
+		c:BIC ?= {
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				overlord = {
+					# Used for scripted effects
+					save_scope_as = overlord_scope
+				}
+			}
+			# Free from jail all Indian National Movement agitators
+			if = {
+				limit = {
+					any_character_in_jail = {
+						has_variable = indian_national_movement_prisoner
+					}
+				}
+				custom_tooltip = {
+					text = all_indian_national_movement_agitators_freed_tt
+					every_character_in_jail = {
+						limit = {
+							has_variable = indian_national_movement_prisoner
+						}
+						free_character_from_void = yes
+						remove_variable = prison_country
+						remove_variable = prison_time_var
+					}
+				}
+			}
+			# Make India
+			change_tag = BHT
+			# Take Indian states and any princely states owned by overlord
+			if = {
+				limit = {
+					exists = scope:overlord_scope
+				}
+				custom_tooltip = {
+					text = all_indian_states_transferred_from_overlord_tt
+					transfer_all_indian_states_from_overlord = yes
+					transfer_all_princely_state_subjects_from_overlord = yes
+				}
+			}
+			# Change Cultures
+			custom_tooltip = {
+				text = south_asian_primary_cultures_tt
+				grant_indian_regional_cultures = yes
+			}
+			if = {
+				limit = {
+					has_variable = india_home_rule_failed
+					is_subject = yes
+				}
+				remove_non_indian_cultures = yes
+			}
+			# Update Religion
+			if = {
+				limit = {
+					has_variable = indian_partition_promised
+					 # Has the necessary land to create Pakistan
+					OR = {
+						has_state_in_state_region = STATE_PUNJAB
+						has_state_in_state_region = STATE_SINDH
+						has_state_in_state_region = STATE_KASHMIR
+						has_state_in_state_region = STATE_PASHTUNISTAN
+						has_state_in_state_region = STATE_BALUCHISTAN
+						has_state_in_state_region = STATE_QUETTA
+						has_state_in_state_region = STATE_EAST_BENGAL
+					}
+				}
+				set_state_religion = rel:hindu
+			} else = {
+				change_indian_state_religion = yes
+			}
+			# Other Effects
+			india_independence_ig_effects = yes
+			remove_bic_modifiers = yes
+			remove_indian_peaceful_protest_effects = yes
+			# Get rid of the East India Company in the off-chance it still exists
+			scope:overlord_scope ?= {
+				if = {
+					limit = {
+						any_company = {
+							is_company_type = company_type:company_east_india_company
+						}
+					}
+					remove_company = company_type:company_east_india_company
+				}
+			}
+			# Change country type if applicable
+			if = {
+				limit = {
+					OR = {
+						is_subject = no
+						has_variable = india_home_rule_failed
+					}
+				}
+				hidden_effect = {
+					set_country_type = recognized
+				}
+			}
+			# Make independent if seeking independence
+			if = {
+				limit = {
+					has_variable = india_home_rule_failed
+					is_subject = yes
+				}
+				make_independent = yes
+			}
+			# Don't go from Monarchy/Theocracy -> Monarchy/Theocracy
+			if = {
+				limit = {
+					OR = {
+						# Includes Colonial Administration
+						has_law_or_variant = law_type:law_monarchy
+						has_law_or_variant = law_type:law_social_monarchy
+						has_law_or_variant = law_type:law_theocracy
+					}
+				}
+				activate_law = law_type:law_parliamentary_republic
+			}
+			# Remove some/all non-Indian characters
+			hidden_effect = {
+				if = {
+					limit = {
+						has_variable = india_home_rule_failed
+						is_subject = yes
+					}
+					remove_non_indian_characters = yes
+				}
+				else = {
+					remove_non_indian_politicians = yes
+				}
+			}
+			hidden_effect = {
+				every_political_lobby = {
+					limit = {
+						OR = {
+							is_political_lobby_type = lobby_pro_overlord
+							is_political_lobby_type = lobby_indian_national_congress
+						}
+					}
+					disband_political_lobby = yes
+				}
+			}
+			# Recalc IG support and call election
+			hidden_effect = {
+				recalculate_pop_ig_support = yes
+				if = {
+					limit = {
+						country_has_voting_franchise = yes
+					}
+					call_election = {
+						months = 6
+					}
+				}
+			}
+			# Diplomatic Relations and Truce w/ Former Overlord
+			if = {
+				limit = {
+					exists = scope:overlord_scope
+				}
+				hidden_effect = {
+					scope:overlord_scope = {
+						set_local_variable = {
+							name = relations_set
+							value = 0
+						}
+						if = {
+							limit = {
+								any_interest_group = {
+									is_in_government = yes
+									ig_is_indian_imperialist = yes
+								}
+							}
+							change_local_variable = {
+								name = relations_set
+								subtract = 30
+							}
+						}
+						if = {
+							limit = {
+								any_interest_group = {
+									is_in_government = yes
+									ig_is_indian_reformist = yes
+								}
+							}
+							change_local_variable = {
+								name = relations_set
+								add = 30
+							}
+						}
+						set_relations = {
+							country = scope:india_scope
+							value = local_var:relations_set
+						}
+						create_bidirectional_truce = {
+							country = scope:india_scope
+							months = 60
+						}
+					}
+				}
+			}
+			# Give Union of India JE
+			if = {
+				limit = {
+					any_direct_subject = {
+						is_princely_state = yes
+					}
+				}
+				hidden_effect = {
+					add_journal_entry = {
+						type = je_federation_of_india
+					}
+				}
+			}
+			# Burmese Sovereignty Effects
+			indian_sovereignty_je_burma_effects = yes
+			# Partition India if Communal Divides failed
+			if = {
+				limit = {
+					has_variable = indian_partition_promised
+					# Has the necessary land to create Pakistan
+					OR = {
+						has_state_in_state_region = STATE_PUNJAB
+						has_state_in_state_region = STATE_SINDH
+						has_state_in_state_region = STATE_KASHMIR
+						has_state_in_state_region = STATE_PASHTUNISTAN
+						has_state_in_state_region = STATE_BALUCHISTAN
+						has_state_in_state_region = STATE_QUETTA
+						has_state_in_state_region = STATE_EAST_BENGAL
+					}
+				}
+				custom_tooltip = {
+					text = india_will_partition_tt
+					trigger_event = { id = indian_nation_events.7 }
+				}
+			}
+			trigger_event = { id = india_home_rule_events.1 popup = yes }
+		}
+	}
+
+	fail = {
+		c:BIC ?= {
+			has_civil_war_from_movement_type = movement_type:movement_india_pan_national
+		}
+	}
+
+	on_fail = {
+		# The Indian War of Independence JE should automatically trigger
+		custom_tooltip = {
+			text = begin_indian_war_of_independence_tt
+			c:BIC ?= {
+				# So that Burma becomes independent for Indian War of Independence
+				set_variable = india_home_rule_failed
+			}
+		}
+	}
+
+	invalid = {
+		OR = {
+			custom_tooltip = {
+				text = bic_does_not_exist_tt
+				NOT = {
+					exists = c:BIC
+				}
+			}
+			custom_tooltip = {
+				text = no_indian_homeland_states_tt
+				c:BIC ?= {
+					NOT = {
+						any_scope_state = {
+							state_is_homeland_of_indian_cultures = yes
+						}
+					}
+				}
+			}
+			custom_tooltip = {
+				text = another_country_formed_india_tt
+				AND = {
+					exists = c:BHT
+					c:BHT ?= {
+						is_revolutionary = no
+					}
+				}
+			}
+		}
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			scope:indian_national_movement ?= {
+				# Used for calculating AI willingness to request reforms
+				scope:journal_entry ?= {
+					set_variable = {
+						name = india_national_activity
+						value = {
+							add = prev.political_movement_support
+							add = prev.political_movement_radicalism
+						}
+					}
+				}
+			}
+			c:BIC ?= {
+				# Check if India has changed overlord, take appropriate action
+				if = {
+					limit = {
+						is_subject = yes
+						overlord = {
+							NOT = {
+								is_involved_in_journal_entry = je_india_home_rule
+							}
+						}
+					}
+					# Remove previous overlord
+					every_country = {
+						limit = {
+							is_involved_in_journal_entry = je_india_home_rule
+							NOT = {
+								c:BIC ?= this
+							}
+						}
+						scope:journal_entry = {
+							remove_involved_country = prev
+						}
+					}
+					# Add new overlord
+					scope:journal_entry = {
+						add_involved_country = prev.overlord
+					}
+					# Notification Events
+					trigger_event = { id = indian_nation_events.14 }
+					overlord = {
+						trigger_event = { id = indian_nation_events.13 }
+					}
+				}
+				# Track progress blocked by Imperialist overlord government
+				if = {
+					limit = {
+						is_subject = yes
+						NOT = {
+							has_variable = india_home_rule_failed
+						}
+						scope:journal_entry = {
+							var:imperialist_blocked_progress < 30
+						}
+						overlord ?= {
+							any_interest_group = {
+								is_in_government = yes
+								ig_is_indian_imperialist = yes
+							}
+							NOT = {
+								any_interest_group = {
+									is_in_government = yes
+									ig_is_indian_reformist = yes
+								}
+							}
+						}
+					}
+					scope:journal_entry = {
+						change_variable = {
+							name = imperialist_blocked_progress
+							add = {
+								value = "scripted_bar_progress(je_india_home_rule_progressbar)"
+								multiply = 0.001
+							}
+						}
+					}
+				}
+				# Indian National Congress Founded
+				if = {
+					limit = {
+						scope:journal_entry = {
+							NOT = {
+								has_variable = inc_founded
+							}
+							"scripted_bar_progress(je_india_home_rule_progressbar)" >= 10
+						}
+					}
+					trigger_event = { id = indian_nation_events.1 popup = yes }
+				}
+				# Founding of All-India Muslim League and Hindu Mahasabha
+				if = {
+					limit = {
+						NOT = {
+							has_variable = hindu_muslim_nationalist_movements_founded
+						}
+						je:je_india_home_rule = {
+							"scripted_bar_progress(je_india_home_rule_progressbar)" >= 125
+						}
+					}
+					set_variable = hindu_muslim_nationalist_movements_founded
+					trigger_event = { id = indian_nation_events.8 popup = no }
+				}
+				# Rowlatt Act Passed
+				if = {
+					limit = {
+						scope:journal_entry = {
+							NOT = {
+								has_variable = rowlatt_act
+							}
+							"scripted_bar_progress(je_india_home_rule_progressbar)" >= 150
+						}
+						scope:indian_national_movement ?= {
+							political_movement_radicalism >= 0.50
+						}
+					}
+					trigger_event = { id = indian_nation_events.2 popup = yes }
+				}
+				# Jallianwala Massacre
+				if = {
+					limit = {
+						je:je_india_home_rule = {
+							has_variable = rowlatt_act
+							NOT = {
+								has_variable = jallianwala_massacre
+							}
+						}
+						scope:indian_national_movement ?= {
+							political_movement_radicalism >= 0.65
+						}
+					}
+					trigger_event = { id = india_home_rule_events.3 popup = yes }
+				}
+				# Quit India Movement
+				if = {
+					limit = {
+						is_subject = yes
+						has_variable = india_home_rule_failed
+						scope:journal_entry ?= {
+							NOT = {
+								has_variable = quit_india_movement_started
+							}
+							"scripted_bar_progress(je_india_home_rule_progressbar)" >= 450
+							"scripted_bar_progress(je_india_home_rule_progressbar)" <= 485
+						}
+					}
+					overlord ?= {
+						trigger_event = { id = indian_nation_events.4 popup = yes }
+					}
+				}
+				# INC Declares that it's seeking full independence
+				if = {
+					limit = {
+						is_subject = yes
+						NOT = {
+							has_variable = india_home_rule_failed
+						}
+						calc_true_if = {
+							amount >= 3
+							scope:journal_entry ?= {
+								var:overlord_rejected_reforms >= 2
+							}
+							scope:journal_entry ?= {
+								var:imperialist_blocked_progress >= 30
+							}
+							scope:journal_entry ?= {
+								has_variable = rowlatt_act
+							}
+							scope:journal_entry ?= {
+								has_variable = jallianwala_massacre
+							}
+							scope:journal_entry ?= {
+								has_variable = simon_commission_rejects_sovereignty
+							}
+							scope:journal_entry ?= {
+								has_variable = overlord_denied_home_rule
+							}
+						}
+					}
+					trigger_event = { id = indian_nation_events.6 months = 3 popup = yes }
+					if = {
+						limit = {
+							is_subject = yes
+						}
+						overlord ?= {
+							trigger_event = { id = indian_nation_events.6 months = 3 popup = yes }
+						}
+					}
+				}
+				# Simon Commission Countdown to earliest dispatch date
+				if = {
+					limit = {
+						scope:journal_entry = {
+							has_variable = simon_commission_timer_early_var
+						}
+					}
+					scope:journal_entry = {
+						change_variable = { name = simon_commission_timer_early_var subtract = 1 }
+						if = {
+							limit = {
+								var:simon_commission_timer_early_var <= 0
+							}
+							remove_variable = simon_commission_timer_early_var
+						}
+					}
+				}
+				# Simon Commission Countdown to forced commission
+				if = {
+					limit = {
+						scope:journal_entry = {
+							has_variable = simon_commission_timer_var
+						}
+					}
+					scope:journal_entry = {
+						change_variable = { name = simon_commission_timer_var subtract = 1 }
+					}
+					if = {
+						limit = {
+							scope:journal_entry = {
+								var:simon_commission_timer_var <= 0
+							}
+						}
+						scope:journal_entry = {
+							remove_variable = simon_commission_timer_var
+						}
+						if = {
+							limit = {
+								is_subject = yes
+							}
+							overlord ?= {
+								trigger_event = { id = india_home_rule_events.10 popup = yes }
+							}
+						}
+					}
+				}
+				# Burmese Freedom Fighters
+				if = {
+					limit = {
+						NOR = {
+							has_variable = opposing_burmese_independence
+							has_variable = supporting_burmese_subject
+							has_variable = supporting_burmese_independence
+						}
+						scope:journal_entry = {
+							has_variable = inc_founded
+						}
+					}
+					# (If all fervor at 100, triggers at 100 Indian nationalism; at all 50 triggers at 300, etc.)
+					set_local_variable = {
+						name = burmese_fervor_threshold
+						value = {
+							value = 500
+							subtract = cu:burmese.culture_current_fervor
+							subtract = cu:kachin.culture_current_fervor
+							subtract = cu:karen.culture_current_fervor
+							subtract = cu:mon.culture_current_fervor
+						}
+					}
+					if = {
+						limit = {
+							scope:journal_entry = {
+								"scripted_bar_progress(je_india_home_rule_progressbar)" >= local_var:burmese_fervor_threshold
+							}
+						}
+						trigger_event = {
+							id = indian_nation_events.10
+						}
+					}
+				}
+				# "Reminder" to petition/demand Indian Home Rule / Independence
+				if = {
+					limit = {
+						scope:journal_entry = {
+							"scripted_bar_progress(je_india_home_rule_progressbar)" >= 500
+							NOT = {
+								has_variable = sovereignty_reminder_cooldown
+							}
+						}
+					}
+					trigger_event = {
+						id = indian_nation_events.12
+						popup = yes
+						months = 6
+					}
+				}
+				# Overlord Random Events
+				if = {
+					limit = {
+						is_subject = yes
+					}
+					overlord ?= {
+						random_list = {
+							400 = { }
+							10 = { trigger_event = india_nationalism_events.6 }
+							10 = { trigger_event = india_nationalism_events.7 }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	on_yearly_pulse = {
+		effect = {
+			# Roll for Indian Protest
+			c:BIC = {
+				set_local_variable = {
+					name = protest_roll
+					value = {
+						fixed_range = {
+							min = 0
+							max = 500
+						}
+					}
+				}
+				if = {
+					limit = {
+						scope:journal_entry = {
+							local_var:protest_roll <= "scripted_bar_progress(je_india_home_rule_progressbar)"
+						}
+					}
+					set_local_variable = {
+						name = violent_protest_roll
+						value = {
+							fixed_range = {
+								min = 0
+								max = 100
+							}
+						}
+					}
+					set_local_variable = {
+						name = activism_value
+						value = {
+							value = scope:indian_national_movement.political_movement_radicalism
+							multiply = 100
+							subtract = 25
+							multiply = 2
+						}
+					}
+					# Rolled Violent Protest
+					if = {
+						limit = {
+							local_var:violent_protest_roll <= local_var:activism_value
+						}
+						# Prince of Wales Riots
+						if = {
+							limit = {
+								scope:journal_entry = {
+									NOT = {
+										has_variable = royal_heir_riots_started
+									}
+									"scripted_bar_progress(je_india_home_rule_progressbar)" >= 175
+								}
+							}
+							trigger_event = { id = india_protest.15 popup = yes }
+						}
+						# Violent Protest Events
+						if  = {
+							limit = {
+								NOT = {
+									# Temp var set by bespoke protests above to prevent double-firing a protest
+									has_variable = protest_event_fired
+								}
+							}
+							random_list = {
+								1 = { trigger_event = india_protest.6 }
+								1 = { trigger_event = india_protest.7 }
+								1 = { trigger_event = india_protest.8 }
+								1 = { trigger_event = india_protest.9 }
+								1 = { trigger_event = india_protest.10 }
+							}
+						}
+					}
+					# Rolled Peaceful Protest
+					else = {
+						# Salt March
+						if = {
+							limit = {
+								scope:journal_entry = {
+									NOT = {
+										# Set by india_nationalism_events.3
+										has_variable = salt_march
+									}
+									"scripted_bar_progress(je_india_home_rule_progressbar)" >= 350
+								}
+							}
+							if = {
+								limit = {
+									is_subject = yes
+								}
+								overlord ?= {
+									# Overlord event; triggers india_nationalism_events.3 in BIC
+									trigger_event = { id = indian_nation_events.3 popup = yes }
+								}
+							}
+							else = {
+								# "Subject" event triggered directly
+								trigger_event = { id = india_nationalism_events.3 popup = yes }
+							}
+						}
+						# Mill Strike
+						if = {
+							limit = {
+								scope:journal_entry = {
+									NOT = {
+										has_variable = mill_strike_started
+									}
+								}
+								NOT = {
+									# Temp var set by bespoke protests above to prevent double-firing a protest
+									has_variable = protest_event_fired
+								}
+								OR = {
+									has_variable = gandhi_arrived
+									scope:journal_entry = {
+										"scripted_bar_progress(je_india_home_rule_progressbar)" >= 150
+									}
+								}
+							}
+							trigger_event = { id = india_protest.11 popup = yes }
+						}
+						# Farmer's Tax Protest
+						if = {
+							limit = {
+								scope:journal_entry = {
+									NOT = {
+										has_variable = farm_tax_protest_started
+									}
+								}
+								NOT = {
+									# Temp var set by bespoke protests above to prevent double-firing a protest
+									has_variable = protest_event_fired
+								}
+								OR = {
+									has_variable = gandhi_arrived
+									scope:journal_entry = {
+										"scripted_bar_progress(je_india_home_rule_progressbar)" >= 150
+									}
+								}
+							}
+							trigger_event = { id = india_protest.13 popup = yes }
+						}
+						# Peaceful Protest Events
+						if = {
+							limit = {
+								NOT = {
+									# Temp var set by bespoke protests above to prevent double-firing a protest
+									has_variable = protest_event_fired
+								}
+							}
+							random_list = {
+								1 = { trigger_event = india_non_cooperation.3 }
+								1 = { trigger_event = india_protest.2 }
+								1 = { trigger_event = india_protest.3 }
+								1 = { trigger_event = india_protest.4 }
+								1 = { trigger_event = india_protest.5 }
+							}
+						}
+					}
+				}
+			}
+			# Gandhi arrives in South Africa
+			if = {
+				limit = {
+					NOT = {
+						has_global_variable = gandhi_spawn
+					}
+					game_date >= 1893.1.1
+					# So Gandhi doesn't spend an insignificant amount of time in South Africa
+					game_date <= 1895.1.1
+				}
+				c:SAF ?= {
+					# (This will only fire when event's trigger is met; will set global_var gandhi_spawn)
+					# india_nationalism_events.4 can now be removed from historical_agitators_yearly_events
+					trigger_event = { id = india_nationalism_events.4 }
+				}
+			}
+			# Pick another country if SAF wasn't eligible
+			if = {
+				limit = {
+					NOT = {
+						has_global_variable = gandhi_spawn
+					}
+					game_date >= 1893.1.1
+					# So Gandhi doesn't spend an insignificant amount of time abroad
+					game_date <= 1895.1.1
+				}
+				c:BIC.overlord ?= {
+					every_direct_subject ?= {
+						# (This will only fire when event's trigger is met; will set global_var gandhi_spawn)
+						# india_nationalism_events.4 can now be removed from historical_agitators_yearly_events
+						trigger_event = { id = india_nationalism_events.4 }
+					}
+				}
+			}
+			# Gandhi returns to India
+			if = {
+				limit = {
+					NOT = {
+						c:BIC ?= { has_variable = gandhi_arrived }
+					}
+					OR = {
+						AND = {
+							# So Gandhi can spend at least some time abroad
+							game_date >= 1898.1.1
+							scope:journal_entry = {
+								var:gandhi_arrival_threshold <= "scripted_bar_progress(je_india_home_rule_progressbar)"
+							}
+						}
+						game_date >= 1915.1.1
+					}
+				}
+				c:BIC ?= {
+					# (This will only fire when event's trigger is met; will set var:gandhi_arrived)
+					# This can now be removed from historical_agitators_yearly_events
+					trigger_event = { id = india_nationalism_events.5 }
+				}
+			}
+		}
+	}
+
+	weight = 1000
+}
+
+# Delete this journal as it's been replaced by the Contextless JE above
+REPLACE:je_india_nationalism_britain = {
+	should_be_pinned_by_default_uninvolved_or_context = yes
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	group = je_group_british_india
+
+	immediate = {
+		# Dumping all these variables into this now-unused Journal Entry
+		# These variables aren't set or used anywhere in the code anymore but they still throw errors on load 
+		# and every time you save a file, which can result in huge error log spam
+		if = {
+			limit = {
+				has_local_variable = sepoy_mutiny_bengal_effect_medium
+				has_local_variable = sepoy_mutiny_bengal_effect_low
+				has_local_variable = sepoy_mutiny_bengal_effect_critical
+				has_local_variable = sepoy_mutiny_bengal_effect_high
+				has_local_variable = sepoy_mutiny_bombay_effect_high
+				has_local_variable = sepoy_mutiny_bombay_effect_medium
+				has_local_variable = sepoy_mutiny_bombay_effect_low
+				has_local_variable = sepoy_mutiny_bombay_effect_critical
+				has_local_variable = sepoy_mutiny_madras_effect_high
+				has_local_variable = sepoy_mutiny_madras_effect_medium
+				has_local_variable = sepoy_mutiny_madras_effect_low
+				has_local_variable = sepoy_mutiny_madras_effect_critical
+			}
+			set_local_variable = east_indies_revolt_var
+			set_local_variable = bengal_progress_from_events_var_add_1
+			set_local_variable = bengal_progress_from_events_var_add_2
+			set_local_variable = bengal_progress_from_events_var_add_3
+			set_local_variable = bombay_progress_from_events_var_add_1
+			set_local_variable = bombay_progress_from_events_var_add_3
+			set_local_variable = madras_progress_from_events_var_add_1
+			set_local_variable = madras_progress_from_events_var_add_3
+			set_local_variable = bengal_free_state
+			set_local_variable = update_privy_purse
+			set_local_variable = dictate_plantation_type
+		}
+		# This event should be deleted
+		trigger_event = { id = caste_conflict.3 }
+	}
+}

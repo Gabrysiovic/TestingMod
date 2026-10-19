@@ -1,0 +1,1291 @@
+﻿# add_small_indian_radicals is already working correctly
+
+REPLACE:add_medium_indian_radicals = {
+	if = {
+		limit = {
+			c:BIC ?= ROOT
+		}
+		custom_tooltip = add_medium_indian_radicals_tt
+	}
+	else = {
+		custom_tooltip = add_medium_indian_radicals_third_tt
+	}
+	hidden_effect = {
+		every_scope_culture = {
+			limit = {
+				has_discrimination_trait_group = heritage_group_south_asian
+			}
+			PREV = { # Should always be a country scope
+				add_radicals = {
+					value = medium_radicals
+					culture = prev
+				}
+			}
+		}
+	}
+}
+
+REPLACE:add_large_indian_radicals = {
+	if = {
+		limit = {
+			c:BIC ?= ROOT
+		}
+		custom_tooltip = add_large_indian_radicals_tt
+	}
+	else = {
+		custom_tooltip = add_large_indian_radicals_third_tt
+	}
+	hidden_effect = {
+		every_scope_culture = {
+			limit = {
+				has_discrimination_trait_group = heritage_group_south_asian
+			}
+			PREV = { # Should always be a country scope
+				add_radicals = {
+					value = large_radicals
+					culture = prev
+				}
+			}
+		}
+	}
+}
+
+REPLACE:add_small_indian_loyalists = {
+	if = {
+		limit = {
+			c:BIC ?= ROOT
+		}
+		custom_tooltip = add_small_indian_loyalists_tt
+	}
+	else = {
+		custom_tooltip = add_small_indian_loyalists_third_tt
+	}
+	hidden_effect = {
+		every_scope_culture = {
+			limit = {
+				has_discrimination_trait_group = heritage_group_south_asian
+			}
+			PREV = { # Should always be a country scope
+				add_loyalists = {
+					value = small_radicals
+					culture = prev
+				}
+			}
+		}
+	}
+}
+
+REPLACE:add_medium_indian_loyalists = {
+	if = {
+		limit = {
+			c:BIC ?= ROOT
+		}
+		custom_tooltip = add_medium_indian_loyalists_tt
+	}
+	else = {
+		custom_tooltip = add_medium_indian_loyalists_third_tt
+	}
+	hidden_effect = {
+		every_scope_culture = {
+			limit = {
+				has_discrimination_trait_group = heritage_group_south_asian
+			}
+			PREV = { # Should always be a country scope
+				add_loyalists = {
+					value = medium_radicals
+					culture = prev
+				}
+			}
+		}
+	}
+}
+
+REPLACE:add_large_indian_loyalists = {
+	if = {
+		limit = {
+			c:BIC ?= ROOT
+		}
+		custom_tooltip = add_large_indian_loyalists_tt
+	}
+	else = {
+		custom_tooltip = add_large_indian_loyalists_third_tt
+	}
+	hidden_effect = {
+		every_scope_culture = {
+			limit = {
+				has_discrimination_trait_group = heritage_group_south_asian
+			}
+			PREV = { # Should always be a country scope
+				add_loyalists = {
+					value = large_radicals
+					culture = prev
+				}
+			}
+		}
+	}
+}
+
+REPLACE:add_small_european_radicals = {
+	custom_tooltip = add_small_european_radicals_tt
+	hidden_effect = {
+		every_scope_culture = {
+			limit = {
+				has_discrimination_trait_group = heritage_group_european
+			}
+			PREV = { # Should always be a country scope
+				add_radicals = {
+					value = small_radicals
+					culture = prev
+				}
+			}
+		}
+	}
+}
+
+REPLACE:add_medium_european_radicals = {
+	custom_tooltip = add_medium_european_radicals_tt
+	hidden_effect = {
+		every_scope_culture = {
+			limit = {
+				has_discrimination_trait_group = heritage_group_european
+			}
+			PREV = { # Should always be a country scope
+				add_radicals = {
+					value = medium_radicals
+					culture = prev
+				}
+			}
+		}
+	}
+}
+
+REPLACE:add_large_european_radicals = {
+	custom_tooltip = add_large_european_radicals_tt
+	hidden_effect = {
+		every_scope_culture = {
+			limit = {
+				has_discrimination_trait_group = heritage_group_european
+			}
+			PREV = { # Should always be a country scope
+				add_radicals = {
+					value = large_radicals
+					culture = prev
+				}
+			}
+		}
+	}
+}
+
+REPLACE:add_small_european_loyalists = {
+	custom_tooltip = add_small_european_loyalists_tt
+	hidden_effect = {
+		every_scope_culture = {
+			limit = {
+				has_discrimination_trait_group = heritage_group_european
+			}
+			PREV = { # Should always be a country scope
+				add_loyalists = {
+					value = small_radicals
+					culture = prev
+				}
+			}
+		}
+	}
+}
+
+REPLACE:add_medium_european_loyalists = {
+	custom_tooltip = add_medium_european_loyalists_tt
+	hidden_effect = {
+		every_scope_culture = {
+			limit = {
+				has_discrimination_trait_group = heritage_group_european
+			}
+			PREV = { # Should always be a country scope
+				add_loyalists = {
+					value = medium_radicals
+					culture = prev
+				}
+			}
+		}
+	}
+}
+
+REPLACE:add_large_european_loyalists = {
+	custom_tooltip = add_large_european_loyalists_tt
+	hidden_effect = {
+		every_scope_culture = {
+			limit = {
+				has_discrimination_trait_group = heritage_group_european
+			}
+			PREV = { # Should always be a country scope
+				add_loyalists = {
+					value = large_radicals
+					culture = prev
+				}
+			}
+		}
+	}
+}
+
+REPLACE_OR_CREATE:add_small_heritage_trait_group_radicals = {
+	if = {
+		limit = {
+			any_primary_culture = {
+				has_discrimination_trait_group = heritage_group_european
+			}
+		}
+		add_small_european_radicals = yes
+	}
+	else = {
+		custom_tooltip = add_small_heritage_trait_group_radicals_tt
+		hidden_effect = {
+			every_scope_culture = {
+				limit = {
+					shares_heritage_trait_group_with_any_primary_culture = prev
+				}
+				prev = {
+					add_radicals = {
+						value = small_radicals
+						culture = prev
+					}
+				}
+			}
+		}
+	}
+}
+
+REPLACE_OR_CREATE:add_medium_heritage_trait_group_radicals = {
+	if = {
+		limit = {
+			any_primary_culture = {
+				has_discrimination_trait_group = heritage_group_european
+			}
+		}
+		add_medium_european_radicals = yes
+	}
+	else = {
+		custom_tooltip = add_medium_heritage_trait_group_radicals_tt
+		hidden_effect = {
+			every_scope_culture = {
+				limit = {
+					shares_heritage_trait_group_with_any_primary_culture = prev
+				}
+				prev = {
+					add_radicals = {
+						value = medium_radicals
+						culture = prev
+					}
+				}
+			}
+		}
+	}
+}
+
+REPLACE_OR_CREATE:add_large_heritage_trait_group_radicals = {
+	if = {
+		limit = {
+			any_primary_culture = {
+				has_discrimination_trait_group = heritage_group_european
+			}
+		}
+		add_large_european_radicals = yes
+	}
+	else = {
+		custom_tooltip = add_large_heritage_trait_group_radicals_tt
+		hidden_effect = {
+			every_scope_culture = {
+				limit = {
+					shares_heritage_trait_group_with_any_primary_culture = prev
+				}
+				prev = {
+					add_radicals = {
+						value = large_radicals
+						culture = prev
+					}
+				}
+			}
+		}
+	}
+}
+
+REPLACE_OR_CREATE:add_small_heritage_trait_group_loyalists = {
+	if = {
+		limit = {
+			any_primary_culture = {
+				has_discrimination_trait_group = heritage_group_european
+			}
+		}
+		add_small_european_loyalists = yes
+	}
+	else = {
+		custom_tooltip = add_small_heritage_trait_group_loyalists_tt
+		hidden_effect = {
+			every_scope_culture = {
+				limit = {
+					shares_heritage_trait_group_with_any_primary_culture = prev
+				}
+				prev = {
+					add_loyalists = {
+						value = small_radicals
+						culture = prev
+					}
+				}
+			}
+		}
+	}
+}
+
+REPLACE_OR_CREATE:add_medium_heritage_trait_group_loyalists = {
+	if = {
+		limit = {
+			any_primary_culture = {
+				has_discrimination_trait_group = heritage_group_european
+			}
+		}
+		add_medium_european_loyalists = yes
+	}
+	else = {
+		custom_tooltip = add_medium_heritage_trait_group_loyalists_tt
+		hidden_effect = {
+			every_scope_culture = {
+				limit = {
+					shares_heritage_trait_group_with_any_primary_culture = prev
+				}
+				prev = {
+					add_loyalists = {
+						value = medium_radicals
+						culture = prev
+					}
+				}
+			}
+		}
+	}
+}
+
+REPLACE_OR_CREATE:add_large_heritage_trait_group_loyalists = {
+	if = {
+		limit = {
+			any_primary_culture = {
+				has_discrimination_trait_group = heritage_group_european
+			}
+		}
+		add_large_european_loyalists = yes
+	}
+	else = {
+		custom_tooltip = add_large_heritage_trait_group_loyalists_tt
+		hidden_effect = {
+			every_scope_culture = {
+				limit = {
+					shares_heritage_trait_group_with_any_primary_culture = prev
+				}
+				prev = {
+					add_loyalists = {
+						value = large_radicals
+						culture = prev
+					}
+				}
+			}
+		}
+	}
+}
+
+REPLACE:collapse_india_effect = {
+	save_temporary_scope_as = collapse_caller_scope
+	if = {
+		# Caller can optionally set this scope
+		limit = {
+			NOT = {
+				exists = scope:former_capital
+			}
+		}
+		capital.state_region = {
+			save_temporary_scope_as = former_capital
+		}
+	}
+	# Hop out of BIC so we can hop back into the successor nation
+	hidden_effect = {
+		if = {
+			limit = {
+				is_player = yes
+			}
+			random_country = {
+				limit = {
+					is_player = no
+					# To avoid India division favoring a temporary host
+					NOT = {
+						any_primary_culture = {
+							OR = {
+								has_discrimination_trait_group = heritage_group_south_asian
+								this = cu:baluchi
+								this = cu:pashtun
+							}
+						}
+					}
+				}
+				save_temporary_scope_as = temporary_player_country
+				scope:collapse_caller_scope = {
+					play_as = prev
+				}
+			}
+		}
+	}
+	hidden_effect = {
+		every_direct_subject = {
+			limit = {
+				is_princely_state = yes
+			}
+			sepoy_mutiny_remove_puppet_effect = yes
+		}
+	}
+	hidden_effect = {
+		give_burmese_territory_to_burma = yes
+	}
+	
+	hidden_effect = {
+		# Let player rebels grab states first
+		ordered_country = {
+			limit = {
+				is_player = yes
+				is_subject = no
+				NOT = {
+					has_variable = loyal_in_sepoy_mutiny
+				}
+				NOT = {
+					has_variable = sepoy_mutiny_country
+				}
+				is_in_geographic_region = geographic_region_india
+				OR = {
+					has_indian_primary_culture = yes
+					country_has_primary_culture = cu:baluchi
+					country_has_primary_culture = cu:pashtun
+				}
+			}
+			order_by = {
+				value = prestige
+				if = {
+					limit = {
+						has_variable = sepoy_mutiny_instigator
+					}
+					add = 100000
+				}
+			}
+			# Everyone gets 2 by default
+			set_local_variable = {
+				name = max_grab_states
+				value = 2
+			}
+			if = {
+				limit = {
+					has_variable = sepoy_mutiny_instigator
+					is_player = yes
+				}
+				# But instigators get 2 *more*
+				change_local_variable = {
+					name = max_grab_states
+					add = num_states
+				}
+			}
+			while = {
+				limit = {
+					exists = scope:collapse_caller_scope
+					num_states < local_var:max_grab_states
+					any_scope_state = {
+						any_neighbouring_state = {
+							owner = scope:collapse_caller_scope
+						}
+					}
+				}
+				eat_collapsing_bic_state = yes
+			}
+		}
+		# Then Mughals
+		c:MUG ?= {
+			while = {
+				limit = {
+					is_player = no
+					is_subject = no
+					NOT = {
+						has_variable = loyal_in_sepoy_mutiny
+					}
+					exists = scope:collapse_caller_scope
+					num_states < 4
+					any_scope_state = {
+						any_neighbouring_state = {
+							owner = scope:collapse_caller_scope
+						}
+					}
+				}
+				eat_collapsing_bic_state = yes
+			}
+		}
+		# Then Satara
+		c:SAT ?= {
+			while = {
+				limit = {
+					is_player = no
+					is_subject = no
+					NOT = {
+						has_variable = loyal_in_sepoy_mutiny
+					}
+					exists = scope:collapse_caller_scope
+					num_states < 2
+					any_scope_state = {
+						any_neighbouring_state = {
+							owner = scope:collapse_caller_scope
+						}
+					}
+				}
+				eat_collapsing_bic_state = yes
+			}
+		}
+		# Then the rest try to grab cultural homelands
+		ordered_country = {
+			limit = {
+				is_player = no
+				NOR = {
+					c:MUG ?= this
+					c:SAT ?= this
+				}
+				is_subject = no
+				OR = {
+					NOT = {
+						has_variable = loyal_in_sepoy_mutiny
+					}
+					# Cooch Behar gets an exception so it can try to form Bangalore
+					c:COO ?= this
+				}
+				NOT = {
+					has_variable = sepoy_mutiny_country
+				}
+				is_in_geographic_region = geographic_region_india
+				OR = {
+					has_indian_primary_culture = yes
+					country_has_primary_culture = cu:baluchi
+					country_has_primary_culture = cu:pashtun
+				}
+			}
+			save_temporary_scope_as = temp_prince_scope
+			# Not sure this actually works
+			order_by = prestige
+			while = {
+				limit = {
+					exists = scope:collapse_caller_scope
+					num_states < 2
+					any_scope_state = {
+						any_neighbouring_state = {
+							owner = scope:collapse_caller_scope
+							is_homeland_of_country_cultures = scope:temp_prince_scope
+						}
+					}
+				}
+				eat_collapsing_bic_state = yes
+			}
+		}
+	}
+
+
+	hidden_effect = {
+		# Spawn Indian Nations from the remaining unoccupied states
+		# TODO: Switch this back to being every_direct_state with if-blocks. Test afterward with bic_breakup
+		# Bombay Strategic Region
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_BALUCHISTAN
+				NOT = {
+					exists = c:KAL
+				}
+			}
+			create_country = {
+				tag = KAL
+				origin = scope:collapse_caller_scope
+				state = this
+			}
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_SINDH
+				NOT = {
+					exists = c:SIN
+				}
+			}
+			create_country = {
+				tag = SIN
+				origin = scope:collapse_caller_scope
+				state = this
+			}
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_GUJARAT
+				NOT = {
+					exists = c:BER
+				}
+			}
+			create_country = {
+				tag = BER
+				origin = scope:collapse_caller_scope
+				state = this
+			}
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_BOMBAY
+				NOT = {
+					exists = c:SAT
+				}
+			}
+			create_country = {
+				tag = SAT
+				origin = scope:collapse_caller_scope
+				state = this
+			}
+		}
+		# Delhi Strategic Region
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_PUNJAB
+				NOT = {
+					exists = c:PAN
+				}
+			}
+			create_country = {
+				tag = PAN
+				origin = scope:collapse_caller_scope
+				state = this
+			}
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_HILL_PUNJAB
+				NOT = {
+					exists = c:PTA
+				}
+			}
+			create_country = {
+				tag = PTA
+				origin = scope:collapse_caller_scope
+				state = this
+			}
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_DELHI
+				NOT = {
+					exists = c:MUG
+				}
+			}
+			create_country = {
+				tag = MUG
+				origin = scope:collapse_caller_scope
+				state = this
+			}
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_RAJPUTANA
+				NOT = {
+					exists = c:JOD
+				}
+			}
+			create_country = {
+				tag = JOD
+				origin = scope:collapse_caller_scope
+				state = this
+			}
+		}
+		# Central India Strategic Region
+		# (Nothing for STATE_AGRA; no good local fit with homeland culture; someone else can just pick it up)
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_AWADH
+				NOT = {
+					exists = c:AWA
+				}
+			}
+			create_country = {
+				tag = AWA
+				origin = scope:collapse_caller_scope
+				state = this
+			}
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_MALWA
+				NOT = {
+					exists = c:GWA
+				}
+			}
+			create_country = {
+				tag = GWA
+				origin = scope:collapse_caller_scope
+				state = this
+			}
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_BUNDELKHAND
+				NOT = {
+					exists = c:BAG
+				}
+			}
+			create_country = {
+				tag = BAG
+				origin = scope:collapse_caller_scope
+				state = this
+			}
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_CENTRAL_PROVINCES
+				NOT = {
+					exists = c:NAG
+				}
+			}
+			create_country = {
+				tag = NAG
+				origin = scope:collapse_caller_scope
+				state = this
+			}
+		}
+		# Madra Strategic Region
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_HYDERABAD
+				NOT = {
+					exists = c:HYD
+				}
+			}
+			create_country = {
+				tag = HYD
+				origin = scope:collapse_caller_scope
+				state = this
+			}
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_CIRCARS
+				NOT = {
+					exists = c:JEY
+				}
+			}
+			create_country = {
+				tag = JEY
+				origin = scope:collapse_caller_scope
+				state = this
+			}
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_KURNOOL
+				NOT = {
+					exists = c:KNO
+				}
+			}
+			create_country = {
+				tag = KNO
+				origin = scope:collapse_caller_scope
+				state = this
+			}
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_MYSORE
+				NOT = {
+					exists = c:MYS
+				}
+			}
+			create_country = {
+				tag = MYS
+				origin = scope:collapse_caller_scope
+				state = this
+			}
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_TRAVANCORE
+				NOT = {
+					exists = c:COC
+				}
+			}
+			create_country = {
+				tag = COC
+				origin = scope:collapse_caller_scope
+				state = this
+			}
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_MADRAS
+				NOT = {
+					exists = c:PUD
+				}
+			}
+			create_country = {
+				tag = PUD
+				origin = scope:collapse_caller_scope
+				state = this
+			}
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_CEYLON
+				NOT = {
+					exists = c:CEY
+				}
+			}
+			create_country = {
+				tag = CEY
+				origin = scope:collapse_caller_scope
+				state = this
+			}
+		}
+		# Bengal Strategic Region
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_ORISSA
+				NOT = {
+					exists = c:ORI
+				}
+			}
+			create_country = {
+				tag = ORI
+				origin = scope:collapse_caller_scope
+				state = this
+			}
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_BIHAR
+				NOT = {
+					exists = c:BIH
+				}
+			}
+			create_country = {
+				tag = BIH
+				origin = scope:collapse_caller_scope
+				state = this
+			}
+		}
+		# Note: COO will form BGL if it gets East and West Bengal
+		# We use BGL instead if COO is a subject to prevent weirdness like Sindh annexing East Bengal
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_WEST_BENGAL
+			}
+			if = {
+				limit = {
+					NOT = { exists = c:COO }
+				}
+				create_country = {
+					tag = COO
+					origin = scope:collapse_caller_scope
+					state = this
+				}
+			}
+			else_if = {
+				limit = {
+					c:COO ?= { is_subject = yes }
+					NOT = { exists = c:BGL }
+				}
+				create_country = {
+					tag = BGL
+					origin = scope:collapse_caller_scope
+					state = this
+				}
+			}
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_EAST_BENGAL
+			}
+			if = {
+				limit = {
+					NOT = { exists = c:COO }
+				}
+				create_country = {
+					tag = COO
+					origin = scope:collapse_caller_scope
+					state = this
+				}
+			}
+			else_if = {
+				limit = {
+					c:COO ?= { is_subject = yes }
+					NOT = { exists = c:BGL }
+				}
+				create_country = {
+					tag = BGL
+					origin = scope:collapse_caller_scope
+					state = this
+				}
+			}
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_ASSAM
+				NOT = {
+					exists = c:ASM
+				}
+			}
+			create_country = {
+				tag = ASM
+				origin = scope:collapse_caller_scope
+				state = this
+			}
+		}
+		# Other
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_KASHMIR
+				NOT = {
+					exists = c:KAS
+				}
+			}
+			create_country = {
+				tag = KAS
+				origin = scope:collapse_caller_scope
+				state = this
+			}
+		}
+		# Skip STATE_QUETTA because no good candidates
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_PASHTUNISTAN
+				NOT = {
+					exists = c:DIR
+				}
+			}
+			create_country = {
+				tag = DIR
+				origin = scope:collapse_caller_scope
+				state = this
+			}
+		}
+	}
+
+	# Free for all on all remaining land-reachable states
+	hidden_effect = {
+		ordered_country = {
+			limit = {
+				is_subject = no
+				NOT = {
+					has_variable = loyal_in_sepoy_mutiny
+				}
+				NOT = {
+					has_variable = sepoy_mutiny_country
+				}
+				is_in_geographic_region = geographic_region_india
+				OR = {
+					has_indian_primary_culture = yes
+					country_has_primary_culture = cu:baluchi
+					country_has_primary_culture = cu:pashtun
+				}
+			}
+			order_by = prestige
+			while = {
+				limit = {
+					exists = scope:collapse_caller_scope
+					any_scope_state = {
+						any_neighbouring_state = {
+							owner = scope:collapse_caller_scope
+						}
+					}
+				}
+				eat_collapsing_bic_state = yes
+			}
+		}
+	}
+
+	# Make AI COO automatically become BGL if it has East and West Bengal
+	hidden_effect = {
+		if = {
+			limit = {
+				NOT = {
+					exists = c:BGL
+				}
+				c:COO ?= {
+					owns_entire_state_region = STATE_WEST_BENGAL
+					owns_entire_state_region = STATE_EAST_BENGAL
+					is_player = no
+				}
+			}
+			c:COO ?= {
+				change_tag = BGL
+			}
+		}
+	}
+
+	# Find a successor state for taking any remaining (overseas) territory (and player-swapping)
+	hidden_effect = {
+		ordered_country = {
+			limit = {
+				is_in_geographic_region = geographic_region_india
+				OR = {
+					has_indian_primary_culture = yes
+					country_has_primary_culture = cu:baluchi
+					country_has_primary_culture = cu:pashtun
+				}
+				NOT = {
+					has_variable = sepoy_mutiny_country
+				}
+				NOT = {
+					this ?= scope:collapse_caller_scope
+				}
+			}
+			order_by = {
+				value = prestige
+				if = {
+					# Overseas states that still need to be taken over
+					limit = {
+						scope:collapse_caller_scope ?= {
+							any_scope_state = {
+								is_coastal = yes
+							}
+						}
+						any_scope_state = {
+							is_coastal = yes
+						}
+					}
+					add = 700000
+				}
+				if = {
+					# Occupies former capital
+					limit = {
+						any_scope_state = {
+							state_region = scope:former_capital
+						}
+					}
+					add = 500000
+				}
+				if = {
+					# The caller was a player and this country is a player
+					# Only do as a last resort
+					limit = {
+						is_player = yes
+						exists = scope:temporary_player_country
+					}
+					add = -8000000
+				}
+			}
+			position = 0
+			if = {
+				limit = {
+					exists = scope:collapse_caller_scope
+				}
+				annex = scope:collapse_caller_scope
+			}
+			# If the candiate is not a player, player plays as this country
+			if = {
+				limit = {
+					is_player = no
+					exists = scope:temporary_player_country
+				}
+				scope:temporary_player_country = {
+					play_as = prev
+				}
+			}
+			# If the candidate is a player, game over
+			else_if = {
+				limit = {
+					exists = scope:temporary_player_country
+				}
+				scope:temporary_player_country = {
+					play_as = ROOT
+				}
+			}
+		}
+	}
+	# Event notifying Indian nations of BIC breakup
+	hidden_effect = {
+		every_country = {
+			limit = {
+				is_in_geographic_region = geographic_region_india
+				OR = {
+					has_indian_primary_culture = yes
+					country_has_primary_culture = cu:baluchi
+					country_has_primary_culture = cu:pashtun
+				}
+			}
+			trigger_event = {
+				id = bic_breakup.2
+			}
+		}
+	}
+}
+
+REPLACE_OR_CREATE:eat_collapsing_bic_state = {
+	save_temporary_scope_as = state_eater_scope
+	scope:collapse_caller_scope ?= {
+		ordered_scope_state = {
+			limit = {
+				any_neighbouring_state = {
+					owner = scope:state_eater_scope
+				}
+			}
+			order_by = {
+				value = gdp
+				multiply = 0.0001
+				# Try to eat split states first
+				if = {
+					limit = {
+						state_region ?= {
+							any_scope_state = {
+								owner ?= scope:state_eater_scope
+							}
+						}
+					}
+					add = 100000
+				}
+				# Then prioritze states in India
+				if = {
+					limit = {
+						is_in_geographic_region = geographic_region_india
+					}
+					add = 70000
+				}
+				# Then ones with homelands of your culture
+				if = {
+					limit = {
+						is_homeland_of_country_cultures = scope:state_eater_scope
+					}
+					add = 50000
+				}
+			}
+			position = 0
+			set_state_owner = scope:state_eater_scope
+			if = {
+				limit = {
+					is_homeland_of_country_cultures = scope:state_eater_scope
+				}
+				set_state_type = incorporated
+			}
+		}
+	}
+}
+
+REPLACE:india_independence_ig_effects = {
+	show_as_tooltip = {
+		ig:ig_industrialists ?= {
+			set_interest_group_name = ig_industrialists
+		}
+		ig:ig_armed_forces ?= {
+			set_interest_group_name = ig_armed_forces
+		}
+	}
+	custom_tooltip = {
+		text = indian_igs_change_ideologies_tt
+		ig:ig_industrialists ?= {
+			set_interest_group_name = ig_industrialists
+			if = {
+				limit = {
+					has_ideology = ideology:ideology_colonialist
+				}
+				remove_ideology = ideology_colonialist
+				add_ideology = ideology_laissez_faire
+			}
+			if = {
+				limit = {
+					has_ideology = ideology:ideology_malthusian
+				}
+				remove_ideology = ideology_malthusian
+				add_ideology = ideology_individualist
+			}
+			else_if = {
+				limit = {
+					has_ideology = ideology:ideology_utilitarian_millian
+				}
+				remove_ideology = ideology_utilitarian_millian
+				add_ideology = ideology_individualist
+			}
+			if = {
+				limit = {
+					has_ideology = ideology:ideology_enclavist
+				}
+				remove_ideology = ideology_enclavist
+				add_ideology = ideology_plutocratic
+			}
+		}
+		ig:ig_armed_forces ?= {
+			set_interest_group_name = ig_armed_forces
+		}
+		ig:ig_petty_bourgeoisie ?= {
+			if = {
+				limit = {
+					has_ideology = ideology:ideology_sovereignist
+				}
+				remove_ideology = ideology_sovereignist
+				add_ideology = ideology_patriotic
+			}
+		}
+		ig:ig_devout ?= {
+			if = {
+				limit = {
+					owner = {
+						country_has_state_religion = rel:sunni
+					}
+				}
+				set_interest_group_name = ig_sunni_madrasahs
+				if = {
+					limit = {
+						has_ideology = ideology:ideology_hindu_moralist
+					}
+					remove_ideology = ideology_hindu_moralist
+				}
+				if = {
+					limit = {
+						has_ideology = ideology:ideology_hindu_moralist_british_india
+					}
+					remove_ideology = ideology_hindu_moralist_british_india
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_ideology = ideology:ideology_moralist
+						}
+					}
+					add_ideology = ideology_moralist
+				}
+			}
+			else_if = {
+				limit = {
+					owner = {
+						country_has_state_religion = rel:hindu
+					}
+				}
+				set_interest_group_name = ig_hindu_priesthood
+				if = {
+					limit = {
+						has_ideology = ideology:ideology_moralist
+					}
+					remove_ideology = ideology_moralist
+				}
+				if = {
+					limit = {
+						has_ideology = ideology:ideology_hindu_moralist_british_india
+					}
+					remove_ideology = ideology_hindu_moralist_british_india
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_ideology = ideology:ideology_hindu_moralist
+						}
+					}
+					add_ideology = ideology_hindu_moralist
+				}
+			}
+		}
+		state_religion_switch_effect = yes
+		ig:ig_landowners = {
+			set_interest_group_name = ig_zamindars
+			set_ig_trait = ig_trait:ig_trait_famine_reserves
+			set_ig_trait = ig_trait:ig_trait_profitable_estates
+		}
+		ig:ig_rural_folk = {
+			set_interest_group_name = ig_ryots
+			set_ig_trait = ig_trait:ig_trait_of_the_sovereign_alone
+			set_ig_trait = ig_trait:ig_trait_imandari
+			set_ig_trait = ig_trait:ig_trait_bazaar_bargains
+		}
+	}
+}

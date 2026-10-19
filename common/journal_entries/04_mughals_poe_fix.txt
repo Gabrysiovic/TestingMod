@@ -1,0 +1,86 @@
+﻿REPLACE:je_mughal_hindustan = {
+    icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	group = je_group_historical_content
+
+    is_shown_in_lobby = {
+        has_dlc_feature = ip2_content #Pivot of Empire
+        c:MUG ?= this
+    }
+
+    immediate = {
+        c:MUG ?= {
+            save_scope_as = mughal_scope
+        }
+        c:BIC ?= {
+            save_scope_as = eic_scope
+        }
+        # For use in mughal.1
+        create_character = {
+            template = mug_mirza_salim
+            on_created = {
+                place_character_in_void = 360
+            }
+        }
+    }
+    complete = {
+        custom_tooltip = {
+            text = hindustan_acquires_territory_tt
+            OR = {
+                num_states >= 2
+                any_scope_state = {
+                    num_provinces >= 2
+                }
+            }
+        }
+        is_subject = no
+        is_at_war = no
+        hidden_trigger = {
+            NOT = {
+                has_journal_entry = je_sepoy_mutiny
+            }
+        }
+    }
+
+    on_complete = {
+        trigger_event = { id = mughal.7 popup = yes }
+        set_variable = completed_mughal_hindustan_je
+    }
+
+    event_outcome_completed_effect_desc = {
+        header = event_effects_header_mughal.7.a
+        effect = {
+            execute_event_option = { event = mughal.7 option = 0 }
+        }
+    }
+
+    event_outcome_completed_effect_desc = {
+        header = event_effects_header_mughal.7.b
+        effect = {
+            execute_event_option = { event = mughal.7 option = 1 }
+        }
+    }
+
+    fail = {
+        OR = {
+            country_has_monarchy_law = no
+        }
+    }
+
+    on_monthly_pulse = {
+        random_events = {
+            200 = 0
+            50 = mughal.1 # Heiring Grievances
+            50 = mughal.2 # Mirza Salim dies (requires mughal.1 fire first and not chosuing Salim as heir)
+            100 = mughal.4 # An Appeal to Interlopers (law enactment)
+            10 = mughal.5 # Stipend
+            10 = mughal.6 # The British India Society
+        }
+    }
+
+    weight = 1000
+
+    can_revolution_inherit = no
+    	
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}

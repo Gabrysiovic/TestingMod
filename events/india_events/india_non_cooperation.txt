@@ -1,0 +1,687 @@
+﻿
+namespace = india_non_cooperation
+
+india_non_cooperation.1 = { # The Non-Cooperation Movement
+	type = country_event
+	placement = ROOT
+
+	duration = 3
+
+	title = india_non_cooperation.1.t
+	desc = india_non_cooperation.1.d
+	flavor = india_non_cooperation.1.f
+
+	event_image = {
+		video = "gfx/event_pictures/ip2_india_protest.bk2"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	immediate = {
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			overlord ?= {
+				save_scope_as = probably_britain_scope
+			}
+		}
+		else = {
+			save_scope_as = probably_britain_scope
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_national_movement
+
+			if = {
+				limit = {
+					any_supporting_character = {
+						# repeating the requirements for sending someone to jail
+						is_in_exile_pool = no
+						is_in_void = no
+						is_ruler_of_own_country = no
+						is_heir_of_own_country = no
+						has_role_of_type = agitator
+						is_immortal = no
+					}
+				}
+				random_supporting_character = {
+					limit = {
+						is_in_exile_pool = no
+						is_in_void = no
+						is_ruler_of_own_country = no
+						is_heir_of_own_country = no
+						has_role_of_type = agitator
+						is_immortal = no
+					}
+					save_scope_as = prisoner_scope
+				}
+			}
+		}
+	}
+
+	option = {
+		name = india_non_cooperation.1.a
+		default_option = yes
+		custom_tooltip = non_cooperation_movement_activated_tt
+		custom_tooltip = non_cooperation_movement_indian_nationalism_boost_tt
+		scope:indian_national_movement = {
+			add_modifier = {
+				name = peaceful_non_cooperation
+				days = normal_modifier_time
+				is_decaying = yes
+			}
+		}
+	}
+
+	option = {
+		name = india_non_cooperation.1.b
+		highlighted_option = yes
+
+		trigger = {
+			NOT = { has_law_or_variant = law_type:law_guaranteed_liberties }
+			custom_tooltip = {
+				text = indian_imprisonment_act_passed_tt
+				je:je_india_home_rule = {
+					has_variable = rowlatt_act
+				}
+			}
+			exists = scope:prisoner_scope
+		}
+
+		custom_tooltip = non_cooperation_movement_activated_tt
+		custom_tooltip = non_cooperation_movement_indian_nationalism_boost_tt
+		scope:indian_national_movement = {
+			add_modifier = {
+				name = peaceful_non_cooperation
+				days = normal_modifier_time
+				is_decaying = yes
+			}
+		}
+		scope:prisoner_scope = {
+			custom_tooltip = {
+				text = to_jail_3_tt
+				set_variable = { name = prison_time_var value = 36 }
+				set_variable = { name = prison_country value = owner }
+				set_variable = {
+					name = indian_national_movement_prisoner
+					months = 36
+				}
+				place_character_in_void = 48
+			}
+		}
+		if = {
+			limit = {
+				je:je_india_home_rule = {
+					has_variable = rowlatt_act
+				}
+			}
+			scope:indian_national_movement = {
+				add_modifier = {
+					name = rowlatt_act_used_modifier
+					days = normal_modifier_time
+				}
+			}
+		}
+	}
+}
+
+india_non_cooperation.2 = { # overlord alert of The Swadeshi Movement
+	type = country_event
+	placement = c:BIC
+
+	duration = 3
+
+	title = india_non_cooperation.2.t
+	desc = india_non_cooperation.2.d
+	flavor = india_non_cooperation.2.f
+
+	event_image = {
+		video = "gfx/event_pictures/ip2_telegraph_dictate.bk2"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	minor_left_icon = ROOT
+	minor_right_icon = c:BIC
+
+	immediate = {
+		c:BIC ?= {
+			save_scope_as = india_scope
+			random_political_movement = {
+				limit = {
+					is_political_movement_type = movement_india_pan_national
+				}
+				save_scope_as = indian_independence_movement
+			}
+		}
+		g:clothes = {
+			save_scope_as = clothes_scope
+		}
+		g:furniture = {
+			save_scope_as = furniture_scope
+		}
+		g:liquor = {
+			save_scope_as = liquor_scope
+		}
+	}
+
+	option = {
+		name = india_non_cooperation.2.a
+		default_option = yes
+		custom_tooltip = {
+			text = swadeshi_movement_indian_nationalism_boost_tt
+		}
+	}
+}
+
+india_non_cooperation.3 = { # Hartal! (Now a Protest Event for je_india_home_rule)
+	type = country_event
+	placement = scope:hartal_state
+
+	duration = 3
+
+	title = india_non_cooperation.3.t
+	desc = india_non_cooperation.3.d
+	flavor = india_non_cooperation.3.f
+
+	event_image = {
+		video = "gfx/event_pictures/ip2_india_factory.bk2"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	# Generic peaceful protest event for je_india_home_rule
+	trigger = {
+		NOT = {
+			has_journal_entry = je_india_swadeshi_movement
+		}
+		any_scope_state = {
+			NOT = { has_modifier = hartal_action }
+			is_in_geographic_region = geographic_region_india
+			state_has_building_group_levels = {
+ 				type = bg_manufacturing
+ 				value >= 10
+			}
+		}
+	}
+
+	immediate = {
+		ordered_scope_state = {
+			limit = {
+				NOT = { has_modifier = hartal_action }
+				is_in_geographic_region = geographic_region_india
+				state_has_building_group_levels = {
+ 					type = bg_manufacturing
+ 					value >= 10
+				}
+			}
+			position = 0
+			order_by = {
+				value = 0
+				every_scope_building = {
+					limit = {
+						is_building_group = bg_manufacturing
+					}
+					prev = {
+						add = prev.level
+					}
+				}
+			}
+			save_scope_as = hartal_state
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_independence_movement
+		}
+	}
+
+	option = {
+		name = india_non_cooperation.3.a
+		default_option = yes
+		ai_chance = 5
+		ordered_scope_state = {
+			limit = {
+				NOT = { has_modifier = hartal_action }
+				is_in_geographic_region = geographic_region_india
+				state_has_building_group_levels = {
+ 					type = bg_manufacturing
+ 					value >= 10
+				}
+			}
+			min = 0
+			max = 3
+			check_range_bounds = no
+			order_by = {
+				value = 0
+				every_scope_building = {
+					limit = {
+						is_building_group = bg_manufacturing
+					}
+					prev = {
+						add = prev.level
+					}
+				}
+			}
+			add_modifier = {
+				name = hartal_action
+				days = normal_modifier_time
+				is_decaying = yes
+			}
+		}
+		custom_tooltip = {
+			text = indian_nationalism_advance_5_tt
+			je:je_india_home_rule ?= {
+				add_progress = { value = 5 name = je_india_home_rule_progressbar }
+			}
+		}
+		if = {
+			limit = {
+				has_journal_entry = je_india_non_cooperation_movement
+			}
+			custom_tooltip = {
+				text = increase_peaceful_protest_action_tt
+				change_variable = {
+					name = indian_peaceful_protest_actions
+					add = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = india_non_cooperation.3.b
+		ai_chance = 0
+		add_small_indian_radicals = yes
+	}
+}
+
+india_non_cooperation.4 = { # The Swadeshi Movement
+	type = country_event
+	placement = ROOT
+
+	duration = 3
+
+	title = india_non_cooperation.4.t
+	desc = india_non_cooperation.4.d
+	flavor = india_non_cooperation.4.f
+
+	event_image = {
+		video = "gfx/event_pictures/ip2_india_protest.bk2"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	cooldown = { days = normal_modifier_time }
+
+	immediate = {
+		ROOT = {
+			save_scope_as = india_scope
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			overlord ?= {
+				trigger_event = { id = india_non_cooperation.2 }
+			}
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_national_movement
+		}
+		g:clothes = {
+			save_scope_as = clothes_scope
+		}
+		g:furniture = {
+			save_scope_as = furniture_scope
+		}
+		g:liquor = {
+			save_scope_as = liquor_scope
+		}
+	}
+
+	option = {
+		name = india_non_cooperation.4.a
+		# Minimize likelihood AI fails the JE with too much activism
+		ai_chance = 0
+		default_option = yes
+		custom_tooltip = swadeshi_movement_activated_tt
+		custom_tooltip = swadeshi_movement_indian_nationalism_boost_tt
+		scope:indian_national_movement = {
+			add_modifier = {
+				name = swadeshi_agitation
+				days = normal_modifier_time
+			}
+		}
+	}
+
+
+	option = {
+		name = india_non_cooperation.4.b
+		ai_chance = 5
+		custom_tooltip = swadeshi_movement_activated_tt
+		custom_tooltip = swadeshi_movement_indian_nationalism_boost_tt
+		scope:indian_national_movement = {
+			add_modifier = {
+				name = swadeshi_agitation
+				days = normal_modifier_time
+				multiplier = 0.5
+			}
+		}
+	}
+}
+
+india_non_cooperation.5 = { # The Chauri Chaura Incident / The Blazing Chowki
+	type = country_event
+	placement = scope:chauri_chaura_state
+
+	duration = 3
+
+	title = india_non_cooperation.5.t
+	desc = india_non_cooperation.5.d
+	flavor = india_non_cooperation.5.f
+
+	event_image = {
+		video = "gfx/event_pictures/ip3_angry_mob_raiding_minorities.bk2"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	# triggered by failing Non-Cooperation Movement JE
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				is_in_geographic_region = geographic_region_india
+			}
+			save_scope_as = chauri_chaura_state
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_national_movement
+		}
+	}
+
+	option = {
+		name = india_non_cooperation.5.a
+		default_option = yes
+
+		scope:indian_national_movement ?= {
+			if = {
+				limit = {
+					has_modifier = peaceful_non_cooperation
+				}
+				remove_modifier = peaceful_non_cooperation
+			}
+			add_modifier = {
+				name = failure_of_non_cooperation
+				days = long_modifier_time
+				is_decaying = yes
+			}
+		}
+		scope:chauri_chaura_state ?= {
+			state_region = {
+				add_devastation = 10
+			}
+		}
+		custom_tooltip = {
+			text = indian_nationalism_retreat_15_tt
+			je:je_india_home_rule ?= {
+				add_progress = { value = -15 name = je_india_home_rule_progressbar }
+			}
+		}
+	}
+}
+
+india_non_cooperation.6 = { # Insufficient Self-Sufficiency
+	type = country_event
+	placement = ROOT
+
+	duration = 3
+
+	title = india_non_cooperation.6.t
+	desc = india_non_cooperation.6.d
+	flavor = india_non_cooperation.6.f
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_factory_closed.bk2"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	# triggered by timeout failure of JE
+
+	immediate = {
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_national_movement
+		}
+	}
+
+	option = {
+		name = india_non_cooperation.6.a
+		default_option = yes
+		scope:indian_national_movement = {
+			if = {
+				limit = {
+					has_modifier = swadeshi_agitation
+				}
+				remove_modifier = swadeshi_agitation
+			}
+			add_modifier = {
+				name = unsuccessful_swadeshi
+				days = long_modifier_time
+				is_decaying = yes
+			}
+		}
+		custom_tooltip = {
+			text = indian_nationalism_retreat_15_tt
+			je:je_india_home_rule ?= {
+				add_progress = { value = -15 name = je_india_home_rule_progressbar }
+			}
+		}
+	}
+}
+
+india_non_cooperation.7 = { # The Victory of Satyagraha
+	type = country_event
+	placement = ROOT
+
+	duration = 3
+
+	title = india_non_cooperation.7.t
+	desc = india_non_cooperation.7.d
+	flavor = india_non_cooperation.7.f
+
+	event_image = {
+		video = "gfx/event_pictures/ip2_crosscultural_festival.bk2"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	# triggered by completion of JE
+
+	immediate = {
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			overlord = {
+				save_scope_as = overlord_scope
+			}
+		}
+		else = {
+			save_scope_as = overlord_scope
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_national_movement
+		}
+	}
+
+	option = {
+		name = india_non_cooperation.7.a
+		default_option = yes
+
+		scope:indian_national_movement = {
+			add_modifier = {
+				name = satyagraha_triumphant
+				days = long_modifier_time
+				is_decaying = yes
+			}
+
+			every_supporting_character = {
+				limit = {
+					OR = {
+						has_ideology = ideology:ideology_humanitarian
+						has_ideology = ideology:ideology_pacifist
+					}
+				}
+				add_modifier = {
+					name = satyagrahi
+					months = -1		# permanent bonus. Well done!
+				}
+			}
+		}
+		# Don't forget anyone in jail
+		every_character_in_void = {
+			limit = {
+				has_variable = indian_national_movement_prisoner
+				OR = {
+					has_ideology = ideology:ideology_humanitarian
+					has_ideology = ideology:ideology_pacifist
+				}
+			}
+			add_modifier = {
+				name = satyagrahi
+				months = -1		# permanent bonus. Well done!
+			}
+		}
+		custom_tooltip = {
+			text = journal_indian_nationalism_boost_permanent_tt
+			set_variable = {
+				name = non_cooperation_je_successful
+			}
+		}
+		custom_tooltip = {
+			text = indian_nationalism_advance_25_tt
+			je:je_india_home_rule ?= {
+				add_progress = { value = 25 name = je_india_home_rule_progressbar }
+			}
+		}
+	}
+}
+
+india_non_cooperation.8 = { # Successful Swadeshi
+	type = country_event
+	placement = ROOT
+
+	duration = 3
+
+	title = india_non_cooperation.8.t
+	desc = india_non_cooperation.8.d
+	flavor = india_non_cooperation.8.f
+
+	event_image = {
+		video = "gfx/event_pictures/ip2_india_urban.bk2"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	# triggered by completion of JE
+
+	immediate = {
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_national_movement
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			overlord ?= {
+				save_scope_as = overlord_scope
+			}
+		}
+		else = {
+			save_scope_as = overlord_scope
+		}
+	}
+
+	option = {
+		name = india_non_cooperation.8.a
+		default_option = yes
+
+		scope:indian_national_movement ?= {
+			if = {
+				limit = {
+					has_modifier = swadeshi_agitation
+				}
+				remove_modifier = swadeshi_agitation
+			}
+			add_modifier = {
+				name = successful_swadeshi
+				days = long_modifier_time
+			}
+		}
+		custom_tooltip = {
+			text = journal_indian_nationalism_boost_permanent_tt
+			set_variable = {
+				name = swadeshi_je_successful
+			}
+		}
+		custom_tooltip = {
+			text = indian_nationalism_advance_25_tt
+			je:je_india_home_rule ?= {
+				add_progress = { value = 25 name = je_india_home_rule_progressbar }
+			}
+		}
+	}
+}

@@ -1,0 +1,767 @@
+﻿namespace = raj
+
+# The Jewel in the Crown
+raj.1 = {
+	type = country_event
+	placement = ROOT
+
+	title = raj.1.t
+	desc = {
+		triggered_desc = {
+			desc = raj.1.d
+			trigger = {
+				NOT = {
+					has_local_variable = bic_triggered_raj
+				}
+			}
+		}
+		triggered_desc = {
+			desc = raj.1.d_company
+			trigger = {
+				has_local_variable = bic_triggered_raj
+			}
+		}
+	}
+	flavor = raj.1.f
+
+	duration = 3
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	event_image = {
+		video = "ep1_transfer_of_authority"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	minor_left_icon = c:GBR
+	minor_right_icon = c:BIC
+
+	# Triggered by completing je_sepoy_mutiny or by BIC or overlord taking decision to end company rule
+	trigger = {
+	}
+
+	immediate = {
+		c:BIC ?= {
+			save_scope_as = company_country
+		}
+		# TODO: This seems like it's used to affect GBR AI strategy and to control whether the Company->Raj decision is. After we look at those things, see if this is necessary or not.
+		# Probably don't need it for Decision but maybe we'll keep for AI strategy
+		set_variable = {
+			name = british_raj_var
+		}
+	}
+
+	option = {
+		name = raj.1.a
+		default_option = yes
+		custom_tooltip = activate_british_raj
+		# Remove the East India Company's ownership of the BIC country and then disband the company
+		c:GBR ?= {
+			if = {
+				limit = {
+					any_company = {
+						is_company_type = company_type:company_east_india_company
+					}
+				}
+				hidden_effect = {
+					if = {
+						limit = {
+							c:BIC ?= {
+								is_subject_type = subject_type_chartered_company
+							}
+						}
+						random_company = {
+							limit = {
+								is_company_type = company_type:company_east_india_company
+							}
+							remove_owned_country = c:BIC
+						}
+					}
+				}
+				remove_company = company_type:company_east_india_company
+			}
+		}
+		show_as_tooltip = {
+			c:BIC ?= {
+				make_bic_raj = yes
+			}
+		}
+		hidden_effect = {
+			c:BIC ?= {
+				trigger_event = { id = raj.7 popup = yes }
+			}
+		}
+	}
+}
+
+# The Doctrine of Lapse
+raj.2 = {
+	type = country_event
+	placement = ROOT
+
+	title = raj.2.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = raj.2.d1
+				trigger = {
+					ruler = {
+						age > 60
+					}
+					NOT = {
+						exists = heir
+					}
+				}
+			}
+			triggered_desc = {
+				desc = raj.2.d2
+				trigger = {
+					always = yes
+				}
+			}
+		}
+	}
+	flavor = raj.2.f
+
+	duration = 3
+
+	event_image = {
+		video = "ep1_persian_court"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	minor_left_icon = c:BIC
+
+	immediate = {
+		c:BIC ?= {
+			save_scope_as = overlord_scope
+		}
+	}
+
+	option = {
+		name = raj.2.a
+		default_option = yes
+		ai_chance = {
+			base = 100
+			modifier = {
+				trigger = {
+					liberty_desire > 25
+				}
+				add = -25
+			}
+			modifier = {
+				trigger = {
+					liberty_desire > 75
+				}
+				add = -75
+			}
+			modifier = {
+				trigger = {
+					any_country = {
+						any_scope_treaty = {
+							binds = ROOT
+							any_scope_article = {
+								has_type = guarantee_independence
+							}
+						}
+					}
+				}
+				add = -100
+			}
+		}
+		if = {
+			limit = { # Should never happen, but just to be sure.
+				is_player = yes
+			}
+			play_as = scope:overlord_scope
+		}
+		if = {
+			limit = {
+				gold_reserves > 0
+			}
+			custom_tooltip = {
+				text = transfers_treasury_to_eic_tt
+				scope:overlord_scope ?= {
+					add_treasury = {
+						value = prev.gold_reserves
+					}
+				}
+			}
+		}
+		scope:overlord_scope ?= {
+			annex = ROOT
+		}
+	}
+
+	option = {
+		name = raj.2.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = {
+					liberty_desire > 25
+				}
+				add = 25
+			}
+			modifier = {
+				trigger = {
+					liberty_desire > 75
+				}
+				add = 75
+			}
+			modifier = {
+				trigger = {
+					any_country = {
+						any_scope_treaty = {
+							binds = ROOT
+							any_scope_article = {
+								has_type = guarantee_independence
+							}
+						}
+					}
+				}
+				add = 100
+			}
+		}
+		create_diplomatic_play = {
+			target_country = scope:overlord_scope
+			type = dp_independence
+			add_war_goal = { holder = scope:overlord_scope target_country = ROOT type = annex_country }
+		}
+	}
+}
+
+# Overseas Service
+raj.4 = {
+	type = country_event
+	placement = ROOT
+
+	title = raj.4.t
+	desc = raj.4.d
+	flavor = raj.4.f
+
+	duration = 3
+
+	event_image = {
+		video = "middleeast_battlefield_trenches"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	# Random event for je_uneasy_raj
+	trigger = {
+		NOT = { has_variable = kala_pani_event }
+		is_at_war = yes
+		# No war enemies are adjacent or in India
+		NOT = {
+			any_enemy_in_war = {
+				OR = {
+					has_strategic_land_adjacency = ROOT
+					is_in_geographic_region = geographic_region_india
+				}
+			}
+		}
+		any_scope_pop = {
+			is_pop_type = soldiers
+			religion = rel:hindu
+		}
+	}
+
+	immediate = {
+		set_variable = {
+			name = kala_pani_event
+			years = 12.5
+		}
+		rel:hindu = { save_scope_as = hindu_pop }
+	}
+
+	option = {
+		name = raj.4.a
+		ai_chance = 1
+		ig:ig_armed_forces ?= {
+			add_modifier = {
+				name = hindu_overseas_exemption
+				days = normal_modifier_time
+			}
+		}
+		add_modifier = {
+			name = kala_pani_logistics_difficulties
+			days = normal_modifier_time
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			change_relations = {
+				country = overlord
+				value = -20
+			}
+		}
+	}
+
+	option = {
+		name = raj.4.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				trigger = {
+					calc_true_if = {
+						amount >= 2
+						je:je_uneasy_raj ?= {
+							"scripted_bar_progress(sepoy_mutiny_progress_bar_indian_instability)" >= 400
+						}
+						je:je_uneasy_raj ?= {
+							"scripted_bar_progress(sepoy_mutiny_progress_bar_indian_instability)" >= 200
+						}
+						# Suspected Conversion
+						has_variable = bengal_progress_from_events_var_add_6
+						# Cartridge Debacle
+						has_variable = bengal_progress_from_events_var_add_4
+					}
+				}
+				add = -1
+			}
+		}
+		default_option = yes
+		add_radicals = {
+			pop_type = officers
+			religion = rel:hindu
+			value = small_radicals
+		}
+		add_radicals = {
+			pop_type = soldiers
+			religion = rel:hindu
+			value = small_radicals
+		}
+
+		set_local_variable = {
+			name = stability_decrease_amount
+			value = -1
+		}
+		custom_tooltip = {
+			text = sepoy_mutiny_progress_from_events_tt
+			set_variable = {
+				name = bengal_progress_from_events_var_add_5
+				value = local_var:stability_decrease_amount
+				days = normal_modifier_time
+			}
+			set_variable = {
+				name = bombay_progress_from_events_var_add_5
+				value = local_var:stability_decrease_amount
+				days = normal_modifier_time
+			}
+			set_variable = {
+				name = madras_progress_from_events_var_add_5
+				value = local_var:stability_decrease_amount
+				days = normal_modifier_time
+			}
+		}
+	}
+
+	option = {
+		name = raj.4.c
+		ai_chance = {
+			base = 1
+			modifier = {
+				trigger = {
+					calc_true_if = {
+						amount >= 3
+						je:je_uneasy_raj ?= {
+							"scripted_bar_progress(sepoy_mutiny_progress_bar_indian_instability)" >= 400
+						}
+						je:je_uneasy_raj ?= {
+							"scripted_bar_progress(sepoy_mutiny_progress_bar_indian_instability)" >= 200
+						}
+						# Suspected Conversion
+						has_variable = bengal_progress_from_events_var_add_6
+						# Cartridge Debacle
+						has_variable = bengal_progress_from_events_var_add_4
+					}
+				}
+				add = -1
+			}
+		}
+		ig:ig_armed_forces ?= {
+			add_modifier = {
+				name = hindu_overseas_exemption
+				days = normal_modifier_time
+				multiplier = 0.5
+			}
+		}
+		add_modifier = {
+			name = kala_pani_logistics_difficulties
+			days = normal_modifier_time
+			multiplier = 0.5
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			change_relations = {
+				country = overlord
+				value = -10
+			}
+		}
+		add_radicals = {
+			pop_type = officers
+			religion = rel:hindu
+			value = very_small_radicals
+		}
+		add_radicals = {
+			pop_type = soldiers
+			religion = rel:hindu
+			value = very_small_radicals
+		}
+
+		set_local_variable = {
+			name = stability_decrease_amount
+			value = -0.5
+		}
+		custom_tooltip = {
+			text = sepoy_mutiny_progress_from_events_tt
+			set_variable = {
+				name = bengal_progress_from_events_var_add_5
+				value = local_var:stability_decrease_amount
+				days = normal_modifier_time
+			}
+			set_variable = {
+				name = bombay_progress_from_events_var_add_5
+				value = local_var:stability_decrease_amount
+				days = normal_modifier_time
+			}
+			set_variable = {
+				name = madras_progress_from_events_var_add_5
+				value = local_var:stability_decrease_amount
+				days = normal_modifier_time
+			}
+		}
+	}
+}
+
+# Suspected Conversion Project
+raj.5 = {
+	type = country_event
+	placement = scope:missionaries_suspicion_state
+
+	title = raj.5.t
+	desc = raj.5.d
+	flavor = raj.5.f
+
+	duration = 3
+
+	event_image = {
+		video = "southamerica_christianity"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	# Random event for je_uneasy_raj
+	trigger = {
+		NOT = { has_variable = suspected_conversions }
+		any_scope_state = {
+			any_scope_pop = {
+				OR = {
+					religion = rel:hindu
+					religion = rel:sunni
+					religion = rel:shiite
+				}
+				NOT = {
+					religion = { shares_heritage_trait_with_state_religion = prev.owner }
+				}
+			}
+			any_scope_pop = {
+				is_pop_type = clergymen
+				religion = { shares_heritage_trait_with_state_religion = prev.owner }
+			}
+		}
+	}
+
+	immediate = {
+		set_variable = {
+			name = suspected_conversions
+			years = 12.5
+		}
+		random_scope_state = {
+			limit = {
+				any_scope_pop = {
+					OR = {
+						religion = rel:hindu
+						religion = rel:sunni
+						religion = rel:shiite
+					}
+					NOT = {
+						religion = { shares_heritage_trait_with_state_religion = prev.owner }
+					}
+				}
+				any_scope_pop = {
+					is_pop_type = clergymen
+					religion = { shares_heritage_trait_with_state_religion = prev.owner }
+				}
+			}
+			save_scope_as = missionaries_suspicion_state
+			random_scope_pop = {
+				limit = {
+					OR = {
+						religion = rel:hindu
+						religion = rel:sunni
+						religion = rel:shiite
+					}
+					NOT = {
+						religion = { shares_heritage_trait_with_state_religion = prev.owner }
+					}
+				}
+				save_scope_as = not_suspected_missionaries_pop
+			}
+			random_scope_pop = {
+				limit = {
+					is_pop_type = clergymen
+					religion = { shares_heritage_trait_with_state_religion = prev.owner }
+				}
+				religion = { save_scope_as = suspected_missionaries }
+				save_scope_as = suspected_missionaries_pop
+			}
+		}
+	}
+
+	option = {
+		name = raj.5.a
+		ai_chance = 1
+		scope:missionaries_suspicion_state = {
+			# state_conversion_mult
+			add_modifier = {
+				name = promised_no_proselytization
+				days = normal_modifier_time
+			}
+		}
+		if = {
+			ig:ig_devout ?= {
+				add_modifier = {
+					name = promised_no_missionaries
+					days = normal_modifier_time
+				}
+			}
+		}
+		scope:missionaries_suspicion_state = {
+			add_radicals_in_state = {
+				religion = scope:suspected_missionaries_pop.religion
+				value = medium_radicals
+			}
+		}
+		add_modifier = {
+			name = enforcing_conversino_ban
+			days = normal_modifier_time
+		}
+	}
+
+	option = {
+		name = raj.5.b
+		default_option = yes
+		ai_chance = {
+			base = 1
+			modifier = {
+				trigger = {
+					calc_true_if = {
+						amount >= 2
+						je:je_uneasy_raj ?= {
+							"scripted_bar_progress(sepoy_mutiny_progress_bar_indian_instability)" >= 400
+						}
+						je:je_uneasy_raj ?= {
+							"scripted_bar_progress(sepoy_mutiny_progress_bar_indian_instability)" >= 200
+						}
+						# Overseas Service
+						has_variable = bengal_progress_from_events_var_add_5
+						# Cartridge Debacle
+						has_variable = bengal_progress_from_events_var_add_4
+					}
+				}
+				add = -1
+			}
+		}
+		scope:missionaries_suspicion_state = {
+			add_radicals_in_state = {
+				religion = scope:not_suspected_missionaries_pop.religion
+				value = small_radicals
+			}
+			add_loyalists_in_state = {
+				religion = scope:suspected_missionaries_pop.religion
+				value = medium_radicals
+			}
+		}
+		set_local_variable = {
+			name = stability_decrease_amount
+			value = -1
+		}
+		custom_tooltip = {
+			text = sepoy_mutiny_progress_from_events_tt
+			set_variable = {
+				name = bengal_progress_from_events_var_add_6
+				value = local_var:stability_decrease_amount
+				days = normal_modifier_time
+			}
+			set_variable = {
+				name = bombay_progress_from_events_var_add_6
+				value = local_var:stability_decrease_amount
+				days = normal_modifier_time
+			}
+			set_variable = {
+				name = madras_progress_from_events_var_add_6
+				value = local_var:stability_decrease_amount
+				days = normal_modifier_time
+			}
+		}
+	}
+
+	option = {
+		name = raj.5.c
+		ai_chance = {
+			base = 1
+			modifier = {
+				trigger = {
+					calc_true_if = {
+						amount >= 3
+						je:je_uneasy_raj ?= {
+							"scripted_bar_progress(sepoy_mutiny_progress_bar_indian_instability)" >= 400
+						}
+						je:je_uneasy_raj ?= {
+							"scripted_bar_progress(sepoy_mutiny_progress_bar_indian_instability)" >= 200
+						}
+						# Overseas Service
+						has_variable = bengal_progress_from_events_var_add_5
+						# Cartridge Debacle
+						has_variable = bengal_progress_from_events_var_add_4
+					}
+				}
+				add = -1
+			}
+		}
+		scope:missionaries_suspicion_state = {
+			# state_conversion_mult
+			add_modifier = {
+				name = promised_no_proselytization
+				days = normal_modifier_time
+				multiplier = 0.5
+			}
+		}
+		if = {
+			ig:ig_devout ?= {
+				add_modifier = {
+					name = promised_no_missionaries
+					days = normal_modifier_time
+					multiplier = 0.5
+				}
+			}
+		}
+		add_modifier = {
+			name = enforcing_conversino_ban
+			days = normal_modifier_time
+			multiplier = 0.5
+		}
+		scope:missionaries_suspicion_state = {
+			add_radicals_in_state = {
+				religion = scope:suspected_missionaries_pop.religion
+				value = small_radicals
+			}
+			add_radicals_in_state = {
+				religion = scope:not_suspected_missionaries_pop.religion
+				value = very_small_radicals
+			}
+		}
+		set_local_variable = {
+			name = stability_decrease_amount
+			value = -0.5
+		}
+		custom_tooltip = {
+			text = sepoy_mutiny_progress_from_events_tt
+			set_variable = {
+				name = bengal_progress_from_events_var_add_6
+				value = local_var:stability_decrease_amount
+				days = normal_modifier_time
+			}
+			set_variable = {
+				name = bombay_progress_from_events_var_add_6
+				value = local_var:stability_decrease_amount
+				days = normal_modifier_time
+			}
+			set_variable = {
+				name = madras_progress_from_events_var_add_6
+				value = local_var:stability_decrease_amount
+				days = normal_modifier_time
+			}
+		}
+	}
+}
+
+# End of the Company
+raj.7 = {
+	type = country_event
+	placement = ROOT
+
+	title = raj.7.t
+	desc = {
+		triggered_desc = {
+			desc = raj.1.d
+			trigger = {
+				overlord ?= {
+					NOT = {
+						has_local_variable = bic_triggered_raj
+					}
+				}
+			}
+		}
+		triggered_desc = {
+			desc = raj.1.d_company
+			trigger = {
+				overlord ?= {
+					has_local_variable = bic_triggered_raj
+				}
+			}
+		}
+	}
+	flavor = raj.1.f
+
+	duration = 3
+
+	event_image = {
+		video = "ep1_transfer_of_authority"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	minor_left_icon = c:GBR
+	minor_right_icon = c:BIC
+
+	trigger = {
+	}
+
+	immediate = {
+		c:BIC ?= {
+			save_scope_as = company_country
+		}
+		c:GBR ?= {
+			save_scope_as = british_raj_country
+		}
+	}
+
+	option = {
+		name = raj.7.a
+		default_option = yes
+		custom_tooltip = activate_british_raj
+		make_bic_raj = yes
+	}
+}

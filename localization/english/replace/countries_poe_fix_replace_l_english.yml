@@ -1,0 +1,6 @@
+﻿l_english:
+ BIC:1 "Colonial India"
+ BIC_ADJ:1 "Colonial Indian"
+ # We hardcode this because use_overlord_prefix does not work with Chartered Companies
+ # (Only Britain can own/found the company so this is safe).
+ dyn_c_east_india_company_adj:1 "$GBR_ADJ$ Indian"

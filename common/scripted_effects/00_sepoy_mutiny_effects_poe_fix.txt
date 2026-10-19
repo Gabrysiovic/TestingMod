@@ -1,0 +1,1971 @@
+﻿REPLACE_OR_CREATE:update_indian_instability = {
+	set_bar_progress = {
+		value = {
+			value = 600
+			subtract = "scope:journal_entry.scripted_bar_progress(sepoy_mutiny_progress_bar_bengal)"
+			subtract = "scope:journal_entry.scripted_bar_progress(sepoy_mutiny_progress_bar_bombay)"
+			subtract = "scope:journal_entry.scripted_bar_progress(sepoy_mutiny_progress_bar_madras)"
+			add = {
+				value = var:num_months
+				multiply = 1.5
+			}
+			max = 600
+		}
+		name = sepoy_mutiny_progress_bar_indian_instability
+	}
+}
+
+# Helper method for monthly caching of average Radicals, Loyalists, SOL, and Liberty Desire of the Presidencies
+# Should be called within c:BIC scope
+REPLACE_OR_CREATE:update_uneasy_raj_cached_values = {
+	je:je_uneasy_raj ?= {
+		save_temporary_scope_as = je_uneasy_raj_scope
+		set_variable = {
+			name = bengal_population
+			value = 0
+		}
+		set_variable = {
+			name = bombay_population
+			value = 0
+		}
+		set_variable = {
+			name = madras_population
+			value = 0
+		}
+		set_variable = {
+			name = bengal_num_radicals
+			value = 0
+		}
+		set_variable = {
+			name = bombay_num_radicals
+			value = 0
+		}
+		set_variable = {
+			name = madras_num_radicals
+			value = 0
+		}
+		set_variable = {
+			name = bengal_num_loyalists
+			value = 0
+		}
+		set_variable = {
+			name = bombay_num_loyalists
+			value = 0
+		}
+		set_variable = {
+			name = madras_num_loyalists
+			value = 0
+		}
+		set_variable = {
+			name = bengal_running_sol
+			value = 0
+		}
+		set_variable = {
+			name = bombay_running_sol
+			value = 0
+		}
+		set_variable = {
+			name = madras_running_sol
+			value = 0
+		}
+		set_variable = {
+			name = bengal_num_subjects
+			value = 0
+		}
+		set_variable = {
+			name = bombay_num_subjects
+			value = 0
+		}
+		set_variable = {
+			name = madras_num_subjects
+			value = 0
+		}
+		set_variable = {
+			name = bengal_running_subject_liberty_desire
+			value = 0
+		}
+		set_variable = {
+			name = bombay_running_subject_liberty_desire
+			value = 0
+		}
+		set_variable = {
+			name = madras_running_subject_liberty_desire
+			value = 0
+		}
+		set_variable = {
+			name = bengal_fomenting_rebellion_progress
+			value = 0
+		}
+		set_variable = {
+			name = bombay_fomenting_rebellion_progress
+			value = 0
+		}
+		set_variable = {
+			name = madras_fomenting_rebellion_progress
+			value = 0
+		}
+	}
+	every_scope_state = {
+		if = {
+			limit = {
+				is_in_bengal_presidency = yes
+			}
+			scope:je_uneasy_raj_scope ?= {
+				change_variable = {
+					name = bengal_population
+					add = prev.state_population
+				}
+				change_variable = {
+					name = bengal_num_radicals
+					add = {
+						value = prev.radical_fraction
+						multiply = prev.state_population
+					}
+				}
+				change_variable = {
+					name = bengal_num_loyalists
+					add = {
+						value = prev.loyalist_fraction
+						multiply = prev.state_population
+					}
+				}
+				change_variable = {
+					name = bengal_running_sol
+					add = {
+						value = prev.average_sol
+						multiply = prev.state_population
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_in_bombay_presidency = yes
+			}
+			scope:je_uneasy_raj_scope ?= {
+				change_variable = {
+					name = bombay_population
+					add = prev.state_population
+				}
+				change_variable = {
+					name = bombay_num_radicals
+					add = {
+						value = prev.radical_fraction
+						multiply = prev.state_population
+					}
+				}
+				change_variable = {
+					name = bombay_num_loyalists
+					add = {
+						value = prev.loyalist_fraction
+						multiply = prev.state_population
+					}
+				}
+				change_variable = {
+					name = bombay_running_sol
+					add = {
+						value = prev.average_sol
+						multiply = prev.state_population
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_in_madras_presidency = yes
+			}
+			scope:je_uneasy_raj_scope ?= {
+				change_variable = {
+					name = madras_population
+					add = prev.state_population
+				}
+				change_variable = {
+					name = madras_num_radicals
+					add = {
+						value = prev.radical_fraction
+						multiply = prev.state_population
+					}
+				}
+				change_variable = {
+					name = madras_num_loyalists
+					add = {
+						value = prev.loyalist_fraction
+						multiply = prev.state_population
+					}
+				}
+				change_variable = {
+					name = madras_running_sol
+					add = {
+						value = prev.average_sol
+						multiply = prev.state_population
+					}
+				}
+			}
+		}
+	}
+	scope:je_uneasy_raj_scope ?= {
+		set_variable = {
+			name = bengal_avg_radicals
+			value = {
+				add = var:bengal_num_radicals
+				divide = {
+					add = var:bengal_population
+					min = 1
+				}
+			}
+		}
+		set_variable = {
+			name = bengal_avg_loyalists
+			value = {
+				add = var:bengal_num_loyalists
+				divide = {
+					add = var:bengal_population
+					min = 1
+				}
+			}
+		}
+		set_variable = {
+			name = bengal_avg_sol
+			value = {
+				add = var:bengal_running_sol
+				divide = {
+					add = var:bengal_population
+					min = 1
+				}
+			}
+		}
+		set_variable = {
+			name = bombay_avg_radicals
+			value = {
+				add = var:bombay_num_radicals
+				divide = {
+					add = var:bombay_population
+					min = 1
+				}
+			}
+		}
+		set_variable = {
+			name = bombay_avg_loyalists
+			value = {
+				add = var:bombay_num_loyalists
+				divide = {
+					add = var:bombay_population
+					min = 1
+				}
+			}
+		}
+		set_variable = {
+			name = bombay_avg_sol
+			value = {
+				add = var:bombay_running_sol
+				divide = {
+					add = var:bombay_population
+					min = 1
+				}
+			}
+		}
+		set_variable = {
+			name = madras_avg_radicals
+			value = {
+				add = var:madras_num_radicals
+				divide = {
+					add = var:madras_population
+					min = 1
+				}
+			}
+		}
+		set_variable = {
+			name = madras_avg_loyalists
+			value = {
+				add = var:madras_num_loyalists
+				divide = {
+					add = var:madras_population
+					min = 1
+				}
+			}
+		}
+		set_variable = {
+			name = madras_avg_sol
+			value = {
+				add = var:madras_running_sol
+				divide = {
+					add = var:madras_population
+					min = 1
+				}
+			}
+		}
+	}
+	every_direct_subject = {
+		limit = {
+			is_princely_state = yes
+		}
+		if = {
+			limit = {
+				is_in_bengal_presidency = yes
+			}
+			scope:je_uneasy_raj_scope ?= {
+				change_variable = {
+					name = bengal_num_subjects
+					add = 1
+				}
+				change_variable = {
+					name = bengal_running_subject_liberty_desire
+					add = prev.liberty_desire
+				}
+			}
+			je:je_princely_states ?= {
+				save_temporary_scope_as = fomenting_rebellion_je
+				scope:je_uneasy_raj_scope ?= {
+					change_variable = {
+						name = bengal_fomenting_rebellion_progress
+						add = {
+							scope:fomenting_rebellion_je ?= {
+								add = "scripted_bar_progress(je_princely_states_dissent_progress_bar)"
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_in_bombay_presidency = yes
+			}
+			scope:je_uneasy_raj_scope ?= {
+				change_variable = {
+					name = bombay_num_subjects
+					add = 1
+				}
+				change_variable = {
+					name = bombay_running_subject_liberty_desire
+					add = prev.liberty_desire
+				}
+			}
+			je:je_princely_states ?= {
+				save_temporary_scope_as = fomenting_rebellion_je
+				scope:je_uneasy_raj_scope ?= {
+					change_variable = {
+						name = bombay_fomenting_rebellion_progress
+						add = {
+							scope:fomenting_rebellion_je ?= {
+								add = "scripted_bar_progress(je_princely_states_dissent_progress_bar)"
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_in_madras_presidency = yes
+			}
+			scope:je_uneasy_raj_scope ?= {
+				change_variable = {
+					name = madras_num_subjects
+					add = 1
+				}
+				change_variable = {
+					name = madras_running_subject_liberty_desire
+					add = prev.liberty_desire
+				}
+			}
+			je:je_princely_states ?= {
+				save_temporary_scope_as = fomenting_rebellion_je
+				scope:je_uneasy_raj_scope ?= {
+					change_variable = {
+						name = madras_fomenting_rebellion_progress
+						add = {
+							scope:fomenting_rebellion_je ?= {
+								add = "scripted_bar_progress(je_princely_states_dissent_progress_bar)"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	scope:je_uneasy_raj_scope ?= {
+		set_variable = {
+			name = bengal_avg_liberty_desire
+			value = {
+				add = var:bengal_running_subject_liberty_desire
+				divide = {
+					add = var:bengal_num_subjects
+					min = 1
+				}
+			}
+		}
+		set_variable = {
+			name = bombay_avg_liberty_desire
+			value = {
+				add = var:bombay_running_subject_liberty_desire
+				divide = {
+					add = var:bombay_num_subjects
+					min = 1
+				}
+			}
+		}
+		set_variable = {
+			name = madras_avg_liberty_desire
+			value = {
+				add = var:madras_running_subject_liberty_desire
+				divide = {
+					add = var:madras_num_subjects
+					min = 1
+				}
+			}
+		}
+	}
+}
+
+# Create Sepoy Rebellion Countries; call within c:BIC
+REPLACE:sepoy_mutiny_immediate_effects = {
+	# We will re-incorporate these states if BIC crushes the rebellion
+	every_scope_state = {
+		limit = {
+			is_incorporated = yes
+		}
+		set_variable = bic_incorporated_state
+	}
+
+	# Player Instigators get to grab up to 2 states
+	ordered_country = {
+		limit = {
+			is_player = yes
+			has_variable = sepoy_mutiny_instigator
+			is_in_geographic_region = geographic_region_india
+			has_indian_primary_culture = yes
+		}
+		order_by = {
+			value = prestige
+			if = {
+				limit = {
+					has_variable = sepoy_mutiny_revolter_var
+				}
+				add = 50000
+			}
+			if = {
+				limit = {
+					has_variable = sepoy_mutiny_instigator
+				}
+				add = 100000
+			}
+		}
+		while = {
+			limit = {
+				exists = c:BIC
+				num_states < 2
+				any_scope_state = {
+					any_neighbouring_state = {
+						owner = c:BIC
+					}
+				}
+			}
+			save_temporary_scope_as = state_eater_scope
+			# Variant of eat_collapsing_bic_state that doesn't eat BIC's capital
+			c:BIC ?= {
+				ordered_scope_state = {
+					limit = {
+						any_neighbouring_state = {
+							owner = scope:state_eater_scope
+						}
+						is_capital = no
+					}
+					order_by = {
+						value = gdp
+						multiply = 0.0001
+						# Try to eat split states first
+						if = {
+							limit = {
+								state_region ?= {
+									any_scope_state = {
+										owner ?= scope:state_eater_scope
+									}
+								}
+							}
+							add = 100000
+						}
+						# Then prioritze states in India
+						if = {
+							limit = {
+								is_in_geographic_region = geographic_region_india
+							}
+							add = 70000
+						}
+						# Then ones with homelands of your culture
+						if = {
+							limit = {
+								is_homeland_of_country_cultures = scope:state_eater_scope
+							}
+							add = 50000
+						}
+					}
+					position = 0
+					set_state_owner = scope:state_eater_scope
+				}
+			}
+		}
+	}
+	set_local_variable = {
+		name = bengal_num_soldiers
+		value = 0
+	}
+	set_local_variable = {
+		name = bengal_num_states
+		value = 0
+	}
+	set_local_variable = {
+		name = bombay_num_soldiers
+		value = 0
+	}
+	set_local_variable = {
+		name = bombay_num_states
+		value = 0
+	}
+	set_local_variable = {
+		name = madras_num_soldiers
+		value = 0
+	}
+	set_local_variable = {
+		name = madras_num_states
+		value = 0
+	}
+	every_scope_state = {
+		if = {
+			limit = {
+				is_in_bengal_presidency = yes
+			}
+			random_scope_building = {
+				limit = {
+					is_building_type = building_barrack
+				}
+				change_local_variable = {
+					name = bengal_num_soldiers
+					add = level
+				}
+			}
+			change_local_variable = {
+				name = bengal_num_states
+				add = 1
+			}
+		}
+		else_if = {
+			limit = {
+				is_in_bombay_presidency = yes
+			}
+			random_scope_building = {
+				limit = {
+					is_building_type = building_barrack
+				}
+				change_local_variable = {
+					name = bombay_num_soldiers
+					add = level
+				}
+			}
+			change_local_variable = {
+				name = bombay_num_states
+				add = 1
+			}
+		}
+		else_if = {
+			limit = {
+				is_in_madras_presidency = yes
+			}
+			random_scope_building = {
+				limit = {
+					is_building_type = building_barrack
+				}
+				change_local_variable = {
+					name = madras_num_soldiers
+					add = level
+				}
+			}
+			change_local_variable = {
+				name = madras_num_states
+				add = 1
+			}
+		}
+	}
+	set_local_variable = {
+		name = desired_bengal_rebelling_soldiers
+		value = {
+			value = local_var:bengal_num_soldiers
+			multiply = {
+				value = uneasy_raj_stability_medium_upper_bound
+				subtract = global_var:bengal_presidency_stability
+				divide = uneasy_raj_stability_medium_upper_bound
+			}
+		}
+	}
+	set_local_variable = {
+		name = desired_bengal_states
+		value = {
+			value = local_var:bengal_num_states
+			multiply = {
+				value = uneasy_raj_stability_medium_upper_bound
+				subtract = global_var:bengal_presidency_stability
+				divide = uneasy_raj_stability_medium_upper_bound
+			}
+			min = 1
+		}
+	}
+	set_local_variable = {
+		name = desired_bombay_rebelling_soldiers
+		value = {
+			value = local_var:bombay_num_soldiers
+			multiply = {
+				value = uneasy_raj_stability_medium_upper_bound
+				subtract = global_var:bombay_presidency_stability
+				divide = uneasy_raj_stability_medium_upper_bound
+			}
+		}
+	}
+	set_local_variable = {
+		name = desired_bombay_states
+		value = {
+			value = local_var:bombay_num_states
+			multiply = {
+				value = uneasy_raj_stability_medium_upper_bound
+				subtract = global_var:bombay_presidency_stability
+				divide = uneasy_raj_stability_medium_upper_bound
+			}
+			min = 1
+		}
+	}
+	set_local_variable = {
+		name = desired_madras_rebelling_soldiers
+		value = {
+			value = local_var:madras_num_soldiers
+			multiply = {
+				value = uneasy_raj_stability_medium_upper_bound
+				subtract = global_var:madras_presidency_stability
+				divide = uneasy_raj_stability_medium_upper_bound
+			}
+		}
+	}
+	set_local_variable = {
+		name = desired_madras_states
+		value = {
+			value = local_var:madras_num_states
+			multiply = {
+				value = uneasy_raj_stability_medium_upper_bound
+				subtract = global_var:madras_presidency_stability
+				divide = uneasy_raj_stability_medium_upper_bound
+			}
+			min = 1
+		}
+	}
+	while = {
+		limit = {
+			global_var:bengal_presidency_stability < uneasy_raj_stability_high_lower_bound
+			local_var:desired_bengal_rebelling_soldiers > 0
+			local_var:desired_bengal_states > 0
+			c:BIC ?= {
+				any_scope_state = {
+					is_capital = no
+					is_in_bengal_presidency = yes
+				}
+			}
+		}
+		ordered_scope_state = {
+			limit = {
+				is_capital = no
+				is_in_bengal_presidency = yes
+			}
+			position = 0
+			order_by = {
+				value = radical_fraction
+				if = {
+					limit = {
+						state_has_building_type_levels = {
+			 				target = bt:building_barrack
+			 				value >= local_var:desired_bengal_rebelling_soldiers
+						}
+					}
+					add = 400
+				}
+				else_if = {
+					limit = {
+						state_has_building_type_levels = {
+			 				target = bt:building_barrack
+			 				value >= 20
+						}
+					}
+					add = 300
+				}
+				else_if = {
+					limit = {
+						state_has_building_type_levels = {
+			 				target = bt:building_barrack
+			 				value >= 10
+						}
+					}
+					add = 200
+				}
+				else_if = {
+					limit = {
+						state_has_building_type_levels = {
+			 				target = bt:building_barrack
+			 				value >= 5
+						}
+					}
+					add = 100
+				}
+				scope:sepoy_scope ?= {
+					if = {
+						limit = {
+							has_strategic_land_adjacency = prev
+						}
+						add = 1000
+					}
+					else_if = {
+						limit = {
+							has_strategic_adjacency = prev
+						}
+						add = 500
+					}
+				}
+			}
+			random_scope_building = {
+				limit = {
+					is_building_type = building_barrack
+				}
+				change_local_variable = {
+					name = desired_bengal_rebelling_soldiers
+					subtract = level
+				}
+			}
+			change_local_variable = {
+				name = desired_bengal_states
+				subtract = 1
+			}
+			add_sepoy_cache_modifiers = yes
+			if = {
+				limit = {
+					NOT = {
+						exists = scope:sepoy_scope
+					}
+				}
+				# Country gets saved to scope:sepoy_scope
+				create_sepoy_mutiny_country = yes
+				scope:sepoy_scope ?= {
+					set_variable = bengal_mutiny
+				}
+			}
+			else = {
+				set_state_owner = scope:sepoy_scope
+			}
+		}
+	}
+	if = {
+		limit = {
+			exists = scope:sepoy_scope
+		}
+		c:BIC ?= {
+			je:je_sepoy_mutiny ?= {
+				add_involved_country = scope:sepoy_scope
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:sepoy_mutiny_dp
+				}
+			}
+			scope:sepoy_scope ?= {
+				create_diplomatic_play = {
+					name = sepoy_mutiny
+					type = dp_sepoy_mutiny_new
+					target_country = c:BIC
+				}
+			}
+			random_diplomatic_play = {
+				limit = {
+					is_diplomatic_play_type = dp_sepoy_mutiny_new
+				}
+				save_scope_as = sepoy_mutiny_dp
+			}
+		}
+		scope:sepoy_mutiny_dp ?= {
+			add_war_goal = {
+				holder = c:BIC
+				type = annex_country
+				target_country = scope:sepoy_scope
+				primary_demand = yes
+			}
+		}
+	}
+	clear_saved_scope = sepoy_scope
+	while = {
+		limit = {
+			global_var:bombay_presidency_stability < uneasy_raj_stability_high_lower_bound
+			local_var:desired_bombay_rebelling_soldiers > 0
+			local_var:desired_bombay_states > 0
+			c:BIC ?= {
+				any_scope_state = {
+					is_capital = no
+					is_in_bombay_presidency = yes
+				}
+			}
+		}
+		ordered_scope_state = {
+			limit = {
+				is_capital = no
+				is_in_bombay_presidency = yes
+			}
+			position = 0
+			order_by = {
+				value = radical_fraction
+				if = {
+					limit = {
+						state_has_building_type_levels = {
+			 				target = bt:building_barrack
+			 				value >= local_var:desired_bombay_rebelling_soldiers
+						}
+					}
+					add = 400
+				}
+				else_if = {
+					limit = {
+						state_has_building_type_levels = {
+			 				target = bt:building_barrack
+			 				value >= 20
+						}
+					}
+					add = 300
+				}
+				else_if = {
+					limit = {
+						state_has_building_type_levels = {
+			 				target = bt:building_barrack
+			 				value >= 10
+						}
+					}
+					add = 200
+				}
+				else_if = {
+					limit = {
+						state_has_building_type_levels = {
+			 				target = bt:building_barrack
+			 				value >= 5
+						}
+					}
+					add = 100
+				}
+				scope:sepoy_scope ?= {
+					if = {
+						limit = {
+							has_strategic_land_adjacency = prev
+						}
+						add = 1000
+					}
+					else_if = {
+						limit = {
+							has_strategic_adjacency = prev
+						}
+						add = 500
+					}
+				}
+			}
+			random_scope_building = {
+				limit = {
+					is_building_type = building_barrack
+				}
+				change_local_variable = {
+					name = desired_bombay_rebelling_soldiers
+					subtract = level
+				}
+			}
+			change_local_variable = {
+				name = desired_bombay_states
+				subtract = 1
+			}
+			add_sepoy_cache_modifiers = yes
+			if = {
+				limit = {
+					NOT = {
+						exists = scope:sepoy_scope
+					}
+				}
+				# Country gets saved to scope:sepoy_scope
+				create_sepoy_mutiny_country = yes
+				scope:sepoy_scope ?= {
+					set_variable = bombay_mutiny
+				}
+			}
+			else = {
+				set_state_owner = scope:sepoy_scope
+			}
+		}
+	}
+	if = {
+		limit = {
+			exists = scope:sepoy_scope
+		}
+		c:BIC ?= {
+			je:je_sepoy_mutiny ?= {
+				add_involved_country = scope:sepoy_scope
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:sepoy_mutiny_dp
+				}
+			}
+			scope:sepoy_scope ?= {
+				create_diplomatic_play = {
+					name = sepoy_mutiny
+					type = dp_sepoy_mutiny_new
+					target_country = c:BIC
+				}
+			}
+			random_diplomatic_play = {
+				limit = {
+					is_diplomatic_play_type = dp_sepoy_mutiny_new
+				}
+				save_scope_as = sepoy_mutiny_dp
+			}
+		}
+		else = {
+			scope:sepoy_mutiny_dp ?= {
+				add_war_goal = {
+					holder = scope:sepoy_scope
+					type = sepoy_mutiny
+					target_country = c:BIC
+					primary_demand = yes
+				}
+			}
+		}
+		scope:sepoy_mutiny_dp ?= {
+			add_war_goal = {
+				holder = c:BIC
+				type = annex_country
+				target_country = scope:sepoy_scope
+				primary_demand = yes
+			}
+		}
+	}
+	clear_saved_scope = sepoy_scope
+	while = {
+		limit = {
+			global_var:madras_presidency_stability < uneasy_raj_stability_high_lower_bound
+			local_var:desired_madras_rebelling_soldiers > 0
+			local_var:desired_madras_states > 0
+			c:BIC ?= {
+				any_scope_state = {
+					is_capital = no
+					is_in_madras_presidency = yes
+				}
+			}
+		}
+		ordered_scope_state = {
+			limit = {
+				is_capital = no
+				is_in_madras_presidency = yes
+			}
+			position = 0
+			order_by = {
+				value = radical_fraction
+				if = {
+					limit = {
+						state_has_building_type_levels = {
+			 				target = bt:building_barrack
+			 				value >= local_var:desired_madras_rebelling_soldiers
+						}
+					}
+					add = 400
+				}
+				else_if = {
+					limit = {
+						state_has_building_type_levels = {
+			 				target = bt:building_barrack
+			 				value >= 20
+						}
+					}
+					add = 300
+				}
+				else_if = {
+					limit = {
+						state_has_building_type_levels = {
+			 				target = bt:building_barrack
+			 				value >= 10
+						}
+					}
+					add = 200
+				}
+				else_if = {
+					limit = {
+						state_has_building_type_levels = {
+			 				target = bt:building_barrack
+			 				value >= 5
+						}
+					}
+					add = 100
+				}
+				scope:sepoy_scope ?= {
+					if = {
+						limit = {
+							has_strategic_land_adjacency = prev
+						}
+						add = 1000
+					}
+					else_if = {
+						limit = {
+							has_strategic_adjacency = prev
+						}
+						add = 500
+					}
+				}
+			}
+			random_scope_building = {
+				limit = {
+					is_building_type = building_barrack
+				}
+				change_local_variable = {
+					name = desired_madras_rebelling_soldiers
+					subtract = level
+				}
+			}
+			change_local_variable = {
+				name = desired_madras_states
+				subtract = 1
+			}
+			add_sepoy_cache_modifiers = yes
+			if = {
+				limit = {
+					NOT = {
+						exists = scope:sepoy_scope
+					}
+				}
+				# Country gets saved to scope:sepoy_scope
+				create_sepoy_mutiny_country = yes
+				scope:sepoy_scope ?= {
+					set_variable = madras_mutiny
+				}
+			}
+			else = {
+				set_state_owner = scope:sepoy_scope
+			}
+		}
+	}
+	if = {
+		limit = {
+			exists = scope:sepoy_scope
+		}
+		c:BIC ?= {
+			je:je_sepoy_mutiny ?= {
+				add_involved_country = scope:sepoy_scope
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:sepoy_mutiny_dp
+				}
+			}
+			scope:sepoy_scope ?= {
+				create_diplomatic_play = {
+					name = sepoy_mutiny
+					type = dp_sepoy_mutiny_new
+					target_country = c:BIC
+				}
+			}
+			random_diplomatic_play = {
+				limit = {
+					is_diplomatic_play_type = dp_sepoy_mutiny_new
+				}
+				save_scope_as = sepoy_mutiny_dp
+			}
+		}
+		else = {
+			scope:sepoy_mutiny_dp ?= {
+				add_war_goal = {
+					holder = scope:sepoy_scope
+					type = sepoy_mutiny
+					target_country = c:BIC
+					primary_demand = yes
+				}
+			}
+		}
+		scope:sepoy_mutiny_dp ?= {
+			add_war_goal = {
+				holder = c:BIC
+				type = annex_country
+				target_country = scope:sepoy_scope
+				primary_demand = yes
+			}
+		}
+	}
+	clear_saved_scope = sepoy_scope
+}
+
+# Called within a State scope
+REPLACE_OR_CREATE:add_sepoy_cache_modifiers = {
+	set_local_variable = {
+		name = barracks_level
+		value = 0
+	}
+	if = {
+		limit = {
+			any_scope_building = {
+				is_building_type = building_barrack
+			}
+		}
+		random_scope_building = {
+			limit = {
+				is_building_type = building_barrack
+			}
+			set_local_variable = {
+				name = barracks_level
+				value = {
+					value = level
+					multiply = 2
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			local_var:barracks_level > 0
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_modifier = uprising_arms_cache_small_arms
+				}
+			}
+			add_modifier = {
+				name = uprising_arms_cache_small_arms
+				multiplier = local_var:barracks_level
+				years = 5
+				is_decaying = yes
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_modifier = uprising_arms_cache_ammunition
+				}
+			}
+			add_modifier = {
+				name = uprising_arms_cache_ammunition
+				multiplier = local_var:barracks_level
+				years = 5
+				is_decaying = yes
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_modifier = uprising_arms_cache_artillery 
+				}
+			}
+			add_modifier = {
+				name = uprising_arms_cache_artillery
+				multiplier = local_var:barracks_level
+				years = 5
+				is_decaying = yes
+			}
+		}
+	}
+}
+
+# Called within a State scope
+REPLACE_OR_CREATE:create_sepoy_mutiny_country = {
+	create_country = {
+		origin = c:BIC
+		state = this
+		on_created = {
+			set_variable = sepoy_mutiny_country
+			set_variable = sepoy_identifier_var
+			set_immune_to_revolutions = yes
+			activate_law = law_type:law_presidential_republic
+			activate_law = law_type:law_autocracy
+			remove_non_indian_cultures = yes
+			grant_indian_cultures = yes
+			change_indian_state_religion = yes
+			india_independence_ig_effects = yes
+			remove_non_indian_characters = yes
+			add_modifier = war_for_independence
+			add_modifier = uprising
+			add_modifier = modifier_india_sepoy_rebellion
+			recalculate_pop_ig_support = yes
+		}
+	}
+	random_country = {
+		limit = {
+			has_variable = sepoy_identifier_var
+		}
+		save_scope_as = sepoy_scope
+		remove_variable = sepoy_identifier_var
+		ig:ig_armed_forces = {
+			leader = {
+				set_character_as_ruler = yes
+			}
+			add_ruling_interest_group = yes
+		}
+		every_interest_group = {
+			if = {
+				limit = {
+					NOT = {
+						is_interest_group_type = ig_armed_forces
+					}
+					is_in_government = yes
+				}
+				remove_ruling_interest_group = yes
+			}
+		}
+	}
+}
+
+REPLACE:sepoy_mutiny_run_all_effects = {
+	# Bengal Presidency
+	if = {
+		limit = {
+			global_var:bengal_presidency_stability <= uneasy_raj_stability_low_lower_bound
+		}
+		sepoy_mutiny_bengal_effect_critical = yes
+	}
+	else_if = {
+		limit = {
+			global_var:bengal_presidency_stability <= uneasy_raj_stability_medium_lower_bound
+		}
+		sepoy_mutiny_bengal_effect_low = yes
+	}
+	else_if = {
+		limit = {
+			global_var:bengal_presidency_stability <= uneasy_raj_stability_high_lower_bound
+		}
+		sepoy_mutiny_bengal_effect_medium = yes
+	}
+	# Bombay Presidency
+	if = {
+		limit = {
+			global_var:bombay_presidency_stability <= uneasy_raj_stability_low_lower_bound
+		}
+		sepoy_mutiny_bombay_effect_critical = yes
+	}
+	else_if = {
+		limit = {
+			global_var:bombay_presidency_stability <= uneasy_raj_stability_medium_lower_bound
+		}
+		sepoy_mutiny_bombay_effect_low = yes
+	}
+	else_if = {
+		limit = {
+			global_var:bombay_presidency_stability <= uneasy_raj_stability_high_lower_bound
+		}
+		sepoy_mutiny_bombay_effect_medium = yes
+	}
+	# Madras Presidency
+	if = {
+		limit = {
+			global_var:madras_presidency_stability <= uneasy_raj_stability_low_lower_bound
+		}
+		sepoy_mutiny_madras_effect_critical = yes
+	}
+	else_if = {
+		limit = {
+			global_var:madras_presidency_stability <= uneasy_raj_stability_medium_lower_bound
+		}
+		sepoy_mutiny_madras_effect_low = yes
+	}
+	else_if = {
+		limit = {
+			global_var:madras_presidency_stability <= uneasy_raj_stability_high_lower_bound
+		}
+		sepoy_mutiny_madras_effect_medium = yes
+	}
+}
+
+REPLACE:sepoy_mutiny_bengal_effect_critical = {
+	# Destroy a random non-capital barracks
+	random_scope_state = {
+		limit = {
+			is_in_bengal_presidency = yes
+			NOT = {
+				is_capital = yes
+			}
+			any_scope_building = {
+				is_building_type = building_barrack
+			}
+		}
+		remove_building = building_barrack
+		add_modifier = {
+			name = sepoy_mutiny_barracks_destruction_modifier
+			days = normal_modifier_time
+			multiplier = 3
+		}
+		add_radicals_in_state = {
+			value = large_radicals
+		}
+		save_temporary_scope_as = destroyed_barracks_state
+	}
+	# Add negative modifiers to every other barracks
+	every_scope_state = {
+		limit = {
+			is_in_bengal_presidency = yes
+			NOT = {
+				scope:destroyed_barracks_state ?= this
+			}
+		}
+		add_modifier = {
+			name = sepoy_mutiny_barracks_unrest_modifier
+			days = normal_modifier_time
+			multiplier = 3
+		}
+		add_radicals_in_state = {
+			value = large_radicals
+		}
+	}
+}
+
+
+REPLACE:sepoy_mutiny_bengal_effect_low = {
+	# Destroy a random non-capital barracks
+	random_scope_state = {
+		limit = {
+			is_in_bengal_presidency = yes
+			NOT = {
+				is_capital = yes
+			}
+			any_scope_building = {
+				is_building_type = building_barrack
+			}
+		}
+		remove_building = building_barrack
+		add_modifier = {
+			name = sepoy_mutiny_barracks_destruction_modifier
+			days = normal_modifier_time
+			multiplier = 2
+		}
+		add_radicals_in_state = {
+			value = medium_radicals
+		}
+		save_temporary_scope_as = destroyed_barracks_state
+	}
+	# Add negative modifiers to every other barracks
+	every_scope_state = {
+		limit = {
+			is_in_bengal_presidency = yes
+			NOT = {
+				scope:destroyed_barracks_state ?= this
+			}
+		}
+		add_modifier = {
+			name = sepoy_mutiny_barracks_unrest_modifier
+			days = normal_modifier_time
+			multiplier = 2
+		}
+		add_radicals_in_state = {
+			value = medium_radicals
+		}
+	}
+}
+
+REPLACE:sepoy_mutiny_bengal_effect_medium = {
+	# Destroy a random non-capital barracks
+	random_scope_state = {
+		limit = {
+			is_in_bengal_presidency = yes
+			NOT = {
+				is_capital = yes
+			}
+			any_scope_building = {
+				is_building_type = building_barrack
+			}
+		}
+		remove_building = building_barrack
+		add_modifier = {
+			name = sepoy_mutiny_barracks_destruction_modifier
+			days = normal_modifier_time
+			multiplier = 1
+		}
+		add_radicals_in_state = {
+			value = small_radicals
+		}
+		save_temporary_scope_as = destroyed_barracks_state
+	}
+	# Add negative modifiers to every other barracks
+	every_scope_state = {
+		limit = {
+			is_in_bengal_presidency = yes
+			NOT = {
+				scope:destroyed_barracks_state ?= this
+			}
+		}
+		add_modifier = {
+			name = sepoy_mutiny_barracks_unrest_modifier
+			days = normal_modifier_time
+			multiplier = 1
+		}
+		add_radicals_in_state = {
+			value = small_radicals
+		}
+	}
+}
+
+REPLACE:sepoy_mutiny_bengal_effect_high = {
+	# No longer used. Delete.
+}
+
+REPLACE:sepoy_mutiny_bombay_effect_critical = {
+	# Destroy a random non-capital barracks
+	random_scope_state = {
+		limit = {
+			is_in_bombay_presidency = yes
+			NOT = {
+				is_capital = yes
+			}
+			any_scope_building = {
+				is_building_type = building_barrack
+			}
+		}
+		remove_building = building_barrack
+		add_modifier = {
+			name = sepoy_mutiny_barracks_destruction_modifier
+			days = normal_modifier_time
+			multiplier = 3
+		}
+		add_radicals_in_state = {
+			value = large_radicals
+		}
+		save_temporary_scope_as = destroyed_barracks_state
+	}
+	# Add negative modifiers to every other barracks
+	every_scope_state = {
+		limit = {
+			is_in_bombay_presidency = yes
+			NOT = {
+				scope:destroyed_barracks_state ?= this
+			}
+		}
+		add_modifier = {
+			name = sepoy_mutiny_barracks_unrest_modifier
+			days = normal_modifier_time
+			multiplier = 3
+		}
+		add_radicals_in_state = {
+			value = large_radicals
+		}
+	}
+}
+
+
+REPLACE:sepoy_mutiny_bombay_effect_low = {
+	# Destroy a random non-capital barracks
+	random_scope_state = {
+		limit = {
+			is_in_bombay_presidency = yes
+			NOT = {
+				is_capital = yes
+			}
+			any_scope_building = {
+				is_building_type = building_barrack
+			}
+		}
+		remove_building = building_barrack
+		add_modifier = {
+			name = sepoy_mutiny_barracks_destruction_modifier
+			days = normal_modifier_time
+			multiplier = 2
+		}
+		add_radicals_in_state = {
+			value = medium_radicals
+		}
+		save_temporary_scope_as = destroyed_barracks_state
+	}
+	# Add negative modifiers to every other barracks
+	every_scope_state = {
+		limit = {
+			is_in_bombay_presidency = yes
+			NOT = {
+				scope:destroyed_barracks_state ?= this
+			}
+		}
+		add_modifier = {
+			name = sepoy_mutiny_barracks_unrest_modifier
+			days = normal_modifier_time
+			multiplier = 2
+		}
+		add_radicals_in_state = {
+			value = medium_radicals
+		}
+	}
+}
+
+REPLACE:sepoy_mutiny_bombay_effect_medium = {
+	# Destroy a random non-capital barracks
+	random_scope_state = {
+		limit = {
+			is_in_bombay_presidency = yes
+			NOT = {
+				is_capital = yes
+			}
+			any_scope_building = {
+				is_building_type = building_barrack
+			}
+		}
+		remove_building = building_barrack
+		add_modifier = {
+			name = sepoy_mutiny_barracks_destruction_modifier
+			days = normal_modifier_time
+			multiplier = 1
+		}
+		add_radicals_in_state = {
+			value = small_radicals
+		}
+		save_temporary_scope_as = destroyed_barracks_state
+	}
+	# Add negative modifiers to every other barracks
+	every_scope_state = {
+		limit = {
+			is_in_bombay_presidency = yes
+			NOT = {
+				scope:destroyed_barracks_state ?= this
+			}
+		}
+		add_modifier = {
+			name = sepoy_mutiny_barracks_unrest_modifier
+			days = normal_modifier_time
+			multiplier = 1
+		}
+		add_radicals_in_state = {
+			value = small_radicals
+		}
+	}
+}
+
+REPLACE:sepoy_mutiny_bombay_effect_high = {
+	# No longer used. Delete.
+}
+
+REPLACE:sepoy_mutiny_madras_effect_critical = {
+	# Destroy a random non-capital barracks
+	random_scope_state = {
+		limit = {
+			is_in_madras_presidency = yes
+			NOT = {
+				is_capital = yes
+			}
+			any_scope_building = {
+				is_building_type = building_barrack
+			}
+		}
+		remove_building = building_barrack
+		add_modifier = {
+			name = sepoy_mutiny_barracks_destruction_modifier
+			days = normal_modifier_time
+			multiplier = 3
+		}
+		add_radicals_in_state = {
+			value = large_radicals
+		}
+		save_temporary_scope_as = destroyed_barracks_state
+	}
+	# Add negative modifiers to every other barracks
+	every_scope_state = {
+		limit = {
+			is_in_madras_presidency = yes
+			NOT = {
+				scope:destroyed_barracks_state ?= this
+			}
+		}
+		add_modifier = {
+			name = sepoy_mutiny_barracks_unrest_modifier
+			days = normal_modifier_time
+			multiplier = 3
+		}
+		add_radicals_in_state = {
+			value = large_radicals
+		}
+	}
+}
+
+
+REPLACE:sepoy_mutiny_madras_effect_low = {
+	# Destroy a random non-capital barracks
+	random_scope_state = {
+		limit = {
+			is_in_madras_presidency = yes
+			NOT = {
+				is_capital = yes
+			}
+			any_scope_building = {
+				is_building_type = building_barrack
+			}
+		}
+		remove_building = building_barrack
+		add_modifier = {
+			name = sepoy_mutiny_barracks_destruction_modifier
+			days = normal_modifier_time
+			multiplier = 2
+		}
+		add_radicals_in_state = {
+			value = medium_radicals
+		}
+		save_temporary_scope_as = destroyed_barracks_state
+	}
+	# Add negative modifiers to every other barracks
+	every_scope_state = {
+		limit = {
+			is_in_madras_presidency = yes
+			NOT = {
+				scope:destroyed_barracks_state ?= this
+			}
+		}
+		add_modifier = {
+			name = sepoy_mutiny_barracks_unrest_modifier
+			days = normal_modifier_time
+			multiplier = 2
+		}
+		add_radicals_in_state = {
+			value = medium_radicals
+		}
+	}
+}
+
+REPLACE:sepoy_mutiny_madras_effect_medium = {
+	# Destroy a random non-capital barracks
+	random_scope_state = {
+		limit = {
+			is_in_madras_presidency = yes
+			NOT = {
+				is_capital = yes
+			}
+			any_scope_building = {
+				is_building_type = building_barrack
+			}
+		}
+		remove_building = building_barrack
+		add_modifier = {
+			name = sepoy_mutiny_barracks_destruction_modifier
+			days = normal_modifier_time
+			multiplier = 1
+		}
+		add_radicals_in_state = {
+			value = small_radicals
+		}
+		save_temporary_scope_as = destroyed_barracks_state
+	}
+	# Add negative modifiers to every other barracks
+	every_scope_state = {
+		limit = {
+			is_in_madras_presidency = yes
+			NOT = {
+				scope:destroyed_barracks_state ?= this
+			}
+		}
+		add_modifier = {
+			name = sepoy_mutiny_barracks_unrest_modifier
+			days = normal_modifier_time
+			multiplier = 1
+		}
+		add_radicals_in_state = {
+			value = small_radicals
+		}
+	}
+}
+
+REPLACE:sepoy_mutiny_madras_effect_high = {
+	# No longer used. Delete.
+}
+
+REPLACE:sepoy_mutiny_remove_puppet_effect = {
+	hidden_effect = {
+		overlord.power_bloc ?= {
+			add_leverage = { target = PREV value = -500 }
+		}
+	}
+	make_independent = yes
+}
+
+REPLACE_OR_CREATE:sepoy_mutiny_after_effects = {
+	# Remove exempt_from_service to every Princely State that lost it because they sat out of the Sepoy Mutiny
+	every_direct_subject = {
+		limit = {
+			has_variable = sepoy_mutiny_princely_state_medium_loyalty_var
+		}
+		remove_variable = sepoy_mutiny_princely_state_medium_loyalty_var
+		if = {
+			limit = {
+				prev ?= {
+					has_diplomatic_pact = {
+						who = prev
+						type = exempt_from_service
+					}
+				}
+			}
+			prev ?= {
+				remove_diplomatic_pact = {
+					country = prev
+					type = exempt_from_service
+				}
+			}
+		}
+	}
+	overlord ?= {
+		every_direct_subject = {
+			limit = {
+				has_variable = sepoy_mutiny_princely_state_medium_loyalty_var
+			}
+			remove_variable = sepoy_mutiny_princely_state_medium_loyalty_var
+			if = {
+				limit = {
+					prev ?= {
+						has_diplomatic_pact = {
+							who = prev
+							type = exempt_from_service
+						}
+					}
+				}
+				prev ?= {
+					remove_diplomatic_pact = {
+						country = prev
+						type = exempt_from_service
+					}
+				}
+			}
+		}
+	}
+	every_state = {
+		limit = {
+			is_in_geographic_region = geographic_region_india
+		}
+		# Remove Sepoy Cache Modifiers
+		if = {
+			limit = {
+				owner ?= {
+					is_revolutionary = no
+					is_secessionist = no
+				}
+			}
+			if = {
+				limit = {
+					has_modifier = uprising_arms_cache_small_arms
+				}
+				remove_modifier = uprising_arms_cache_small_arms
+			}
+			if = {
+				limit = {
+					has_modifier = uprising_arms_cache_ammunition
+				}
+				remove_modifier = uprising_arms_cache_ammunition
+			}
+			if = {
+				limit = {
+					has_modifier = uprising_arms_cache_artillery 
+				}
+				remove_modifier = uprising_arms_cache_artillery 
+			}
+		}
+		# Remove Barracks Unrest Modifiers
+		if = {
+			limit = {
+				has_modifier = sepoy_mutiny_barracks_destruction_modifier
+			}
+			remove_modifier = sepoy_mutiny_barracks_destruction_modifier
+		}
+		if = {
+			limit = {
+				has_modifier = sepoy_mutiny_barracks_unrest_modifier
+			}
+			remove_modifier = sepoy_mutiny_barracks_unrest_modifier
+		}
+	}
+	every_country = {
+		limit = {
+			has_variable = sepoy_mutiny_revolter_var
+		}
+		every_scope_state ?= {
+			if = {
+				limit = {
+					has_modifier = princely_state_small_arms_stockpile
+				}
+				remove_modifier = princely_state_small_arms_stockpile
+			}
+			if = {
+				limit = {
+					has_modifier = princely_state_artillery_stockpile
+				}
+				remove_modifier = princely_state_artillery_stockpile
+			}
+			if = {
+				limit = {
+					has_modifier = princely_state_ammunition_stockpile
+				}
+				remove_modifier = princely_state_ammunition_stockpile
+			}
+		}
+	}
+	#remove_global_variable = bengal_presidency_stability
+	#remove_global_variable = bombay_presidency_stability
+	#remove_global_variable = madras_presidency_stability
+}
+
+REPLACE:sepoy_mutiny_tag_specific_war_goals = {
+	# No longer used. Delete.
+}
+
+REPLACE:sepoy_mutiny_apply_laws_effect = {
+	# No longer used. Delete.
+}
+
+REPLACE:sepoy_mutiny_princely_states_stance_effect = {
+	# No longer used. Delete.
+}
+
+### Fomenting Rebellion Effects
+
+REPLACE_OR_CREATE:update_locally_produced_munitions = {
+	set_local_variable = {
+		name = total_goods_stockpiled
+		value = 0
+	}
+	every_scope_state = {
+		set_local_variable = {
+			name = state_small_arms_production
+			value = {
+				sg:small_arms = {
+					add = state_goods_production
+					divide = 2
+				}
+			}
+		}
+		if = {
+			limit = {
+				local_var:state_small_arms_production > 0
+			}
+			if = {
+				limit = {
+					has_modifier = princely_state_stockpiling_small_arms
+				}
+				remove_modifier = princely_state_stockpiling_small_arms
+			}
+			add_modifier = {
+				name = princely_state_stockpiling_small_arms
+				multiplier = local_var:state_small_arms_production
+				months = 1
+			}
+			change_global_variable = {
+				name = princely_states_total_produced_small_arms
+				add = {
+					add = local_var:state_small_arms_production
+					round = yes
+				}
+			}
+			ROOT = {
+				change_local_variable = {
+					name = total_goods_stockpiled
+					add = {
+						prev = {
+							add = local_var:state_small_arms_production
+						}
+					}
+				}
+			}
+		}
+		set_local_variable = {
+			name = state_artillery_production
+			value = {
+				sg:artillery = {
+					add = state_goods_production
+					divide = 2
+				}
+			}
+		}
+		if = {
+			limit = {
+				local_var:state_artillery_production > 0
+			}
+			if = {
+				limit = {
+					has_modifier = princely_state_stockpiling_artillery
+				}
+				remove_modifier = princely_state_stockpiling_artillery
+			}
+			add_modifier = {
+				name = princely_state_stockpiling_artillery
+				multiplier = local_var:state_artillery_production
+				months = 1
+			}
+			change_global_variable = {
+				name = princely_states_total_produced_artillery
+				add = {
+					add = local_var:state_artillery_production
+					round = yes
+				}
+			}
+			ROOT = {
+				change_local_variable = {
+					name = total_goods_stockpiled
+					add = {
+						prev = {
+							add = local_var:state_artillery_production
+						}
+					}
+				}
+			}
+		}
+		set_local_variable = {
+			name = state_ammunition_production
+			value = {
+				sg:ammunition = {
+					add = state_goods_production
+					divide = 2
+				}
+			}
+		}
+		if = {
+			limit = {
+				local_var:state_ammunition_production > 0
+			}
+			if = {
+				limit = {
+					has_modifier = princely_state_stockpiling_ammunition
+				}
+				remove_modifier = princely_state_stockpiling_ammunition
+			}
+			add_modifier = {
+				name = princely_state_stockpiling_ammunition
+				multiplier = local_var:state_ammunition_production
+				months = 1
+			}
+			change_global_variable = {
+				name = princely_states_total_produced_ammunition
+				add = {
+					add = local_var:state_ammunition_production
+					round = yes
+				}
+			}
+			ROOT = {
+				change_local_variable = {
+					name = total_goods_stockpiled
+					add = {
+						prev = {
+							add = local_var:state_ammunition_production
+						}
+					}
+				}
+			}
+		}
+	}
+	je:je_princely_states ?= {
+		if = {
+			limit = {
+				has_modifier = princely_state_stockpile_coordination
+			}
+			remove_modifier = princely_state_stockpile_coordination
+		}
+		add_modifier = {
+			name = princely_state_stockpile_coordination
+			multiplier = {
+				ROOT = {
+					add = local_var:total_goods_stockpiled
+				}
+				round = yes
+			}
+		}
+	}
+}

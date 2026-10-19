@@ -1,0 +1,396 @@
+﻿REPLACE:je_india_non_cooperation_movement = {
+	should_be_pinned_by_default_uninvolved_or_context = yes
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	group = je_group_british_india
+
+	is_shown_when_inactive = {
+		has_dlc_feature = ip2_content
+		c:BIC ?= this
+		has_journal_entry = je_india_home_rule
+	}
+
+	possible = {
+		has_journal_entry = je_india_home_rule
+		custom_tooltip = {
+			text = indian_nationalism_above_175_tt
+			je:je_india_home_rule = {
+				"scripted_bar_progress(je_india_home_rule_progressbar)" >= 175
+			}
+		}
+	}
+
+	immediate = {
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_national_movement
+		}
+		set_variable = {
+			name = indian_peaceful_protest_actions
+			value = 0
+		}
+		set_variable = {
+			name = indian_violent_protest_actions
+			value = 0
+		}
+		trigger_event = { id = india_non_cooperation.1 popup = yes }
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			overlord ?= {
+				post_notification = non_cooperation_movement_started
+			}
+		}
+	}
+
+	complete = {
+		custom_tooltip = {
+			text = non_cooperation_peaceful_protest_actions_tt
+			var:indian_peaceful_protest_actions >= 3
+		}
+	}
+
+	on_complete = {
+		hidden_effect = {
+			trigger_event = { id = india_non_cooperation.7 popup = yes }
+		}
+		show_as_tooltip = {
+			execute_event_option = { event = india_non_cooperation.7 option = 0 }
+		}
+		overlord = {
+			post_notification = non_cooperation_movement_successful
+		}
+	}
+
+	#event_outcome_completed_desc = event_effects_india_non_cooperation.7_tt
+
+	fail = {
+		custom_tooltip = {
+			text = non_cooperation_violent_protest_actions_tt
+			var:indian_violent_protest_actions >= 2
+		}
+	}
+
+	on_fail = {
+		hidden_effect = {
+			trigger_event = { id = india_non_cooperation.5 popup = yes }
+		}
+		show_as_tooltip = {
+			execute_event_option = { event = india_non_cooperation.5 option = 0 }
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			overlord = {
+				post_notification = non_cooperation_movement_failed
+			}
+		}
+	}
+
+	invalid = {
+		NOT = {
+			has_journal_entry = je_india_home_rule
+		}
+	}
+}
+
+je_india_swadeshi_movement = {
+	should_be_pinned_by_default_uninvolved_or_context = yes
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
+	group = je_group_british_india
+
+	is_shown_when_inactive = {
+		has_dlc_feature = ip2_content
+		c:BIC ?= this
+		has_journal_entry = je_india_home_rule
+	}
+
+	possible = {
+		has_journal_entry = je_india_home_rule
+		custom_tooltip = {
+			text = indian_nationalism_above_50_tt
+			je:je_india_home_rule = {
+				"scripted_bar_progress(je_india_home_rule_progressbar)" >= 50
+			}
+		}
+	}
+
+	immediate = {
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_india_pan_national
+			}
+			save_scope_as = indian_national_movement
+		}
+		g:clothes = {
+			save_scope_as = clothes_scope
+		}
+		g:furniture = {
+			save_scope_as = furniture_scope
+		}
+		g:liquor = {
+			save_scope_as = liquor_scope
+		}
+		set_variable = {
+			name = indian_clothes_production
+			value = {
+				ROOT = {
+					every_scope_state = {
+						limit = {
+							is_in_geographic_region = geographic_region_india
+						}
+						sg:clothes = {
+							add = state_goods_production
+						}
+					}
+				}
+			}
+		}
+		set_variable = {
+			name = indian_clothes_consumption
+			value = {
+				ROOT = {
+					every_scope_state = {
+						limit = {
+							is_in_geographic_region = geographic_region_india
+						}
+						sg:clothes = {
+							add = state_goods_consumption
+						}
+					}
+				}
+			}
+		}
+		set_variable = {
+			name = indian_furniture_production
+			value = {
+				ROOT = {
+					every_scope_state = {
+						limit = {
+							is_in_geographic_region = geographic_region_india
+						}
+						sg:furniture = {
+							add = state_goods_production
+						}
+					}
+				}
+			}
+		}
+		set_variable = {
+			name = indian_furniture_consumption
+			value = {
+				ROOT = {
+					every_scope_state = {
+						limit = {
+							is_in_geographic_region = geographic_region_india
+						}
+						sg:furniture = {
+							add = state_goods_consumption
+						}
+					}
+				}
+			}
+		}
+		set_variable = {
+			name = indian_liquor_production
+			value = {
+				ROOT = {
+					every_scope_state = {
+						limit = {
+							is_in_geographic_region = geographic_region_india
+						}
+						sg:liquor = {
+							add = state_goods_production
+						}
+					}
+				}
+			}
+		}
+		set_variable = {
+			name = indian_liquor_consumption
+			value = {
+				ROOT = {
+					every_scope_state = {
+						limit = {
+							is_in_geographic_region = geographic_region_india
+						}
+						sg:liquor = {
+							add = state_goods_consumption
+						}
+					}
+				}
+			}
+		}
+		trigger_event = { id = india_non_cooperation.4 popup = yes }
+	}
+
+	timeout = 3650 # ten years
+
+	on_monthly_pulse = {
+		effect = {
+			set_variable = {
+				name = indian_clothes_production
+				value = {
+					ROOT = {
+						every_scope_state = {
+							limit = {
+								is_in_geographic_region = geographic_region_india
+							}
+							sg:clothes = {
+								add = state_goods_production
+							}
+						}
+					}
+				}
+			}
+			set_variable = {
+				name = indian_clothes_consumption
+				value = {
+					ROOT = {
+						every_scope_state = {
+							limit = {
+								is_in_geographic_region = geographic_region_india
+							}
+							sg:clothes = {
+								add = state_goods_consumption
+							}
+						}
+					}
+				}
+			}
+			set_variable = {
+				name = indian_furniture_production
+				value = {
+					ROOT = {
+						every_scope_state = {
+							limit = {
+								is_in_geographic_region = geographic_region_india
+							}
+							sg:furniture = {
+								add = state_goods_production
+							}
+						}
+					}
+				}
+			}
+			set_variable = {
+				name = indian_furniture_consumption
+				value = {
+					ROOT = {
+						every_scope_state = {
+							limit = {
+								is_in_geographic_region = geographic_region_india
+							}
+							sg:furniture = {
+								add = state_goods_consumption
+							}
+						}
+					}
+				}
+			}
+			set_variable = {
+				name = indian_liquor_production
+				value = {
+					ROOT = {
+						every_scope_state = {
+							limit = {
+								is_in_geographic_region = geographic_region_india
+							}
+							sg:liquor = {
+								add = state_goods_production
+							}
+						}
+					}
+				}
+			}
+			set_variable = {
+				name = indian_liquor_consumption
+				value = {
+					ROOT = {
+						every_scope_state = {
+							limit = {
+								is_in_geographic_region = geographic_region_india
+							}
+							sg:liquor = {
+								add = state_goods_consumption
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	complete = {
+		custom_tooltip = {
+			text = indian_clothes_self_sufficient_tt
+			has_variable = indian_clothes_production
+			has_variable = indian_clothes_consumption
+			var:indian_clothes_production > var:indian_clothes_consumption
+		}
+		custom_tooltip = {
+			text = indian_furniture_self_sufficient_tt
+			has_variable = indian_furniture_production
+			has_variable = indian_furniture_consumption
+			var:indian_furniture_production > var:indian_furniture_consumption
+		}
+		custom_tooltip = {
+			text = indian_liquor_self_sufficient_tt
+			has_variable = indian_liquor_production
+			has_variable = indian_liquor_consumption
+			var:indian_liquor_production > var:indian_liquor_consumption
+		}
+		custom_tooltip = {
+			text = swadeshi_timer_tt
+			scope:journal_entry ?= {
+				journal_entry_age > 730
+			}
+		}
+		has_revolution = no
+	}
+
+	on_complete = {
+		hidden_effect = {
+			trigger_event = { id = india_non_cooperation.8 popup = yes }
+		}
+		show_as_tooltip = {
+			execute_event_option = { event = india_non_cooperation.8 option = 0 }
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			overlord ?= {
+				post_notification = swadeshi_movement_successful
+			}
+		}
+	}
+
+	on_timeout = {
+		hidden_effect = {
+			trigger_event = { id = india_non_cooperation.6 popup = yes }
+		}
+		show_as_tooltip = {
+			execute_event_option = { event = india_non_cooperation.6 option = 0 }
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			overlord ?= {
+				post_notification = swadeshi_movement_failed
+			}
+		}
+	}
+
+	invalid = {
+		NOT = {
+			has_journal_entry = je_india_home_rule
+		}
+	}
+}

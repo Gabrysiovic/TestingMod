@@ -1,0 +1,2 @@
+﻿l_english:
+ dp_unify_india_desc:1 "Sets the initiating [concept_war_goal] to force the targeted [concept_country] to cede a [concept_state] in [GetGeographicRegion('geographic_region_india').GetName]"

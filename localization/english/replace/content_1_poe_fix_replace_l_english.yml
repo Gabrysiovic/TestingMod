@@ -1,0 +1,10 @@
+﻿l_english:
+ # The British Raj
+ raj.1.d:2 "Unconvinced of the $company_east_india_company$'s ability to govern India, the [SCOPE.sCountry('company_country').GetOverlord.GetAdjective] government has made the decision to reorganize the colonial administration into a more directly managed colony. History shall mark this day as the inception of the [SCOPE.sCountry('company_country').GetOverlord.GetAdjectiveNoFormatting] Raj."
+ activate_british_raj:2 "The East India Company will be reformed into the #b [SCOPE.sCountry('company_country').GetOverlord.GetAdjectiveNoFormatting] Raj#!"
+
+ bic_breakup.1.t:1 "The End of Colonial Rule"
+ bic_breakup.1.d:1 "Indian revolutionaries have succeeded in expelling their colonial rulers from the subcontinent. With the dust settled, the question now arises: what is to become of India and its people?"
+ bic_breakup.1.f:1 "Much debate ensued among the revolution's leaders. Should India be re-divided among its disparate people, or could a unified nation emerge from the colonial ashes?"
+ bic_breakup.1.c:1 "Colonial rule shall be maintained. Long live the [ROOT.GetCountry.GetNameNoFormatting]."
+ india_princes_independent_tt:0 "All of our [concept_princely_state] subjects will become independent, and our [Concept('concept_state', '$concept_states$')] will be divided between them."

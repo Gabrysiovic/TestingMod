@@ -1,0 +1,84 @@
+﻿REPLACE:je_dravidian_movement = {
+    icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	group = je_group_british_india
+
+    scripted_progress_bar = je_dravidian_movement_anti_caste_pressure_progressbar
+
+    is_shown_when_inactive = {
+        has_dlc_feature = ip2_content
+        has_social_hierarchy = british_indian_caste_system
+        OR = {
+            c:BIC ?= this
+            was_formed_from = BIC
+        }
+        NOT = {
+            has_variable = sepoy_mutiny_failed
+        }
+    	NOR = {
+    		has_law_or_variant = law_type:law_hindu_caste_discrimination_outlawed
+    		has_law_or_variant = law_type:law_affirmative_action
+    	}
+        has_technology_researched = human_rights
+    }
+
+    possible = {
+        has_technology_researched = human_rights
+        has_technology_researched = political_agitation
+        NOR = {
+    		has_law_or_variant = law_type:law_hindu_caste_discrimination_outlawed
+    		has_law_or_variant = law_type:law_affirmative_action
+        }
+    }
+
+    immediate = {
+        ig:ig_rural_folk ?= {
+            save_scope_as = rural_folk_ig
+        }
+        trigger_event = { id = caste_conflict.1 popup = yes }
+    }
+
+    complete = {
+        OR = {
+            has_law_or_variant = law_type:law_hindu_caste_discrimination_outlawed
+            has_law_or_variant = law_type:law_affirmative_action
+        }
+    }
+
+    on_complete = {
+        trigger_event = { id = caste_conflict.2 popup = yes }
+        set_variable = dravidian_movement_completed
+    }
+
+    event_outcome_completed_effect_desc = {
+        header = event_effects_header_caste_conflict_2.a
+        effect = {
+            execute_event_option = { event = caste_conflict.2 option = 0 }
+        }
+    }
+
+    event_outcome_completed_effect_desc = {
+        header = event_effects_header_caste_conflict_2.b
+        effect = {
+            execute_event_option = { event = caste_conflict.2 option = 1 }
+        }
+    }
+
+    invalid = {
+        NOT = {
+            has_social_hierarchy = british_indian_caste_system
+        }
+    }
+
+    on_monthly_pulse = {
+        random_events = {
+            200 = 0
+            10 = caste_conflict.4 # The Non-Brahmin Manifesto
+            10 = caste_conflict.5 # Untouchables and Outcasts
+        }
+    }
+
+    weight = 1000
+
+    should_be_pinned_by_default_uninvolved_or_context = yes
+}

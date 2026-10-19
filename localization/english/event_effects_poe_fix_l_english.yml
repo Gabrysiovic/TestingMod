@@ -1,0 +1,34 @@
+﻿l_english:
+event_effects_header_east_indies.1.a: "#b $east_indies.1.t$#! - $east_indies.1.a$"
+event_effects_header_east_indies.1.b: "#b $east_indies.1.t$#! - $east_indies.1.b$"
+
+event_effects_header_sepoy_mutiny_events_11.a: "#b $sepoy_mutiny_events.11.t$#! - $sepoy_mutiny_events.11.a$"
+event_effects_header_sepoy_mutiny_events_11.b: "#b $sepoy_mutiny_events.11.t$#! - $sepoy_mutiny_events.11.b$"
+
+event_effects_victoria_terminus.2.a: "#b $victoria_terminus.2.t$#! - $victoria_terminus.2.a$"
+event_effects_victoria_terminus.2.b: "#b $victoria_terminus.2.t$#! - $victoria_terminus.2.b$"
+
+event_effects_header_caste_conflict_2.a: "#b $caste_conflict.2.t$#! - $caste_conflict.2.a$"
+event_effects_header_caste_conflict_2.b: "#b $caste_conflict.2.t$#! - $caste_conflict.2.b$"
+
+event_effects_header_communal_divides_events_1.a: "#b $communal_divides_events.1.t$#! - $communal_divides_events.1.a$"
+event_effects_header_communal_divides_events_1.b: "#b $communal_divides_events.1.t$#! - $communal_divides_events.1.b$"
+event_effects_header_communal_divides_events_15: "#b $communal_divides_events.15.t$#!"
+
+event_effects_header_mughal.7.a: "#b $mughal.7.t$#! - $mughal.7.a$"
+event_effects_header_mughal.7.b: "#b $mughal.7.t$#! - $mughal.7.b$"
+# === FIX LINE ===
+
+ # je_commuanl_divides
+ event_effects_communal_divides_events.1_bht_tt: "• [SCOPE.sPoliticalMovement('hindu_mahasabha_scope').GetName] gets #tooltippable;tooltip:[GetPlayer.GetTooltipTag],indian_divisions_mended_tt $indian_divisions_mended$#! ([Concept('concept_decay','$concept_decaying$')]) for #v 10 years#!\n• [SCOPE.sPoliticalMovement('muslim_league_scope').GetName] gets #tooltippable;tooltip:[GetPlayer.GetTooltipTag],indian_divisions_mended_tt $indian_divisions_mended$#! ([Concept('concept_decay','$concept_decaying$')]) for #v 10 years#!\n• $nationalist_movements_lose_support_activism_boost_from_self_rule_tt$\n• $india_will_remain_unified_tt$\n$event_effect_choose_one$ #indent_newline:3 \n$event_effect_all_of_the_following$ #indent_newline:3 \n• [ROOT.GetCountry.GetName] gets #tooltippable;tooltip:[GetPlayer.GetTooltipTag],united_in_diversity_modifier_tt $united_in_diversity_modifier$#!\n• $communal_divides_events.1_tt$#!\n• [ROOT.GetCountry.GetName] gets #tooltippable;tooltip:[GetPlayer.GetTooltipTag],marching_as_one_modifier_tt $marching_as_one_modifier$#!"
+ event_effects_communal_divides_events.1_bic_tt: "• [SCOPE.sPoliticalMovement('hindu_mahasabha_scope').GetName] gets #tooltippable;tooltip:[GetPlayer.GetTooltipTag],indian_divisions_mended_tt $indian_divisions_mended$#! ([Concept('concept_decay','$concept_decaying$')]) for #v 10 years#!\n• [SCOPE.sPoliticalMovement('muslim_league_scope').GetName] gets #tooltippable;tooltip:[GetPlayer.GetTooltipTag],indian_divisions_mended_tt $indian_divisions_mended$#! ([Concept('concept_decay','$concept_decaying$')]) for #v 10 years#!\n• $nationalist_movements_lose_activism_boost_from_indian_nationalism_tt$\n• $india_will_remain_unified_tt$\n$event_effect_choose_one$ #indent_newline:3 \n$event_effect_all_of_the_following$ #indent_newline:3 \n• [ROOT.GetCountry.GetName] gets #tooltippable;tooltip:[GetPlayer.GetTooltipTag],united_in_diversity_modifier_tt $united_in_diversity_modifier$#!\n• $communal_divides_events.1_tt$#!\n• [ROOT.GetCountry.GetName] gets #tooltippable;tooltip:[GetPlayer.GetTooltipTag],marching_as_one_modifier_tt $marching_as_one_modifier$#!"
+ event_effects_communal_divides_events.2_bht_tt: "• [SCOPE.sPoliticalMovement('hindu_mahasabha_scope').GetName] gets #tooltippable;tooltip:[GetPlayer.GetTooltipTag],indian_promised_partition_tt $indian_promised_partition$#! ([Concept('concept_decay','$concept_decaying$')]) for #v 10 years#!\n• [SCOPE.sPoliticalMovement('muslim_league_scope').GetName] gets #tooltippable;tooltip:[GetPlayer.GetTooltipTag],indian_promised_partition_tt $indian_promised_partition$#! ([Concept('concept_decay','$concept_decaying$')]) for #v 10 years#!\n• $nationalist_movements_lose_support_activism_boost_from_self_rule_tt$\n• $india_will_partition_tt$"
+ event_effects_communal_divides_events.2_bic_tt: "• [SCOPE.sPoliticalMovement('hindu_mahasabha_scope').GetName] gets #tooltippable;tooltip:[GetPlayer.GetTooltipTag],indian_promised_partition_tt $indian_promised_partition$#! ([Concept('concept_decay','$concept_decaying$')]) for #v 10 years#!\n• [SCOPE.sPoliticalMovement('muslim_league_scope').GetName] gets #tooltippable;tooltip:[GetPlayer.GetTooltipTag],indian_promised_partition_tt $indian_promised_partition$#! ([Concept('concept_decay','$concept_decaying$')]) for #v 10 years#!\n• $nationalist_movements_lose_activism_boost_from_indian_nationalism_tt$\n• $india_will_partition_on_sovereignty_tt$"
+
+ event_effects_india_non_cooperation.8_tt: "• [SCOPE.sPoliticalMovement('indian_national_movement').GetName] loses #tooltippable;tooltip:[GetPlayer.GetTooltipTag],swadeshi_agitation_tt $swadeshi_agitation$#!\n• [SCOPE.sPoliticalMovement('indian_national_movement').GetName] gets #tooltippable;tooltip:[GetPlayer.GetTooltipTag],successful_swadeshi_tt $successful_swadeshi$#! ([Concept('concept_decay','$concept_decaying$')]) for #v 10 years#!\n• $journal_indian_nationalism_boost_permanent_tt$\n• $indian_nationalism_advance_25_tt$"
+
+ indian_divisions_mended_tt: "[GetStaticModifier('indian_divisions_mended').GetName|v]\n[GetStaticModifier('indian_divisions_mended').GetDesc]"
+ indian_promised_partition_tt: "[GetStaticModifier('indian_promised_partition').GetName|v]\n[GetStaticModifier('indian_promised_partition').GetDesc]"
+ swadeshi_agitation_tt: "[GetStaticModifier('swadeshi_agitation').GetName|v]\n[GetStaticModifier('swadeshi_agitation').GetDesc]"
+ successful_swadeshi_tt: "[GetStaticModifier('successful_swadeshi').GetName|v]\n[GetStaticModifier('successful_swadeshi').GetDesc]"
+ unsuccessful_swadeshi_tt: "[GetStaticModifier('unsuccessful_swadeshi').GetName|v]\n[GetStaticModifier('unsuccessful_swadeshi').GetDesc]"

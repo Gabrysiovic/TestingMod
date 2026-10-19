@@ -1,0 +1,43 @@
+﻿REPLACE_OR_CREATE:communal_divides_hindu_unity_progress = {
+	value = 0
+	if = {
+		limit = {
+			has_journal_entry = je_communal_divides
+		}
+	    value = "je:je_communal_divides.scripted_bar_progress(je_communal_divides_hindu_progressbar)"
+        divide = 100
+	}
+}
+
+REPLACE_OR_CREATE:communal_divides_hindu_separatism_progress = {
+	value = 100
+	if = {
+		limit = {
+			has_journal_entry = je_communal_divides
+		}
+		subtract = "je:je_communal_divides.scripted_bar_progress(je_communal_divides_hindu_progressbar)"
+        divide = 100
+	}
+}
+
+REPLACE_OR_CREATE:communal_divides_muslim_unity_progress = {
+	value = 0
+	if = {
+		limit = {
+			has_journal_entry = je_communal_divides
+		}
+	    value = "je:je_communal_divides.scripted_bar_progress(je_communal_divides_muslim_progressbar)"
+        divide = 100
+	}
+}
+
+REPLACE_OR_CREATE:communal_divides_muslim_separatism_progress = {
+	value = 100
+	if = {
+		limit = {
+			has_journal_entry = je_communal_divides
+		}
+		subtract = "je:je_communal_divides.scripted_bar_progress(je_communal_divides_muslim_progressbar)"
+        divide = 100
+	}
+}

@@ -1,0 +1,5 @@
+﻿l_english:
+#hierarchy: british_indian_caste_system
+ british_indian_caste_system: "Caste System"
+ british_indian_caste_system_desc: "An ancient, hierarchial system that originated in the [GetReligion('hindu').GetNameNoIcon] religion and has become ingrained in [GetCulture('bengali').GetHeritageTrait.GetTraitGroup.GetName] cultures. Rights, privileges, and social status are inherited and fixed. Discriminatory and oppressive by nature, a government could simplify and codify this complex system for administrative purposes, and in doing so amplify its worst qualities."
+ british_indian_caste_system_trigger_desc: "Belongs to a [concept_culture] that has the [GetCulture('bengali').GetHeritageTrait.GetTraitGroup.GetName] [Concept('concept_discrimination_trait_group', '$concept_discrimination_trait_group_short$')]"

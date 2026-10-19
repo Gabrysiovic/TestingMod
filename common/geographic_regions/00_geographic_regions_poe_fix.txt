@@ -1,0 +1,23 @@
+﻿REPLACE_OR_CREATE:geographic_region_bengal_presidency = {
+	short_key = "bengal_presidency"
+	state_regions = {
+		# bengal_old
+		STATE_BIHAR STATE_EAST_BENGAL STATE_WEST_BENGAL STATE_ASSAM STATE_ORISSA
+		# central_india_old
+		STATE_CENTRAL_PROVINCES STATE_AWADH STATE_MALWA STATE_AGRA STATE_BUNDELKHAND
+		# punjab_old
+		STATE_PUNJAB STATE_HILL_PUNJAB STATE_DELHI STATE_RAJPUTANA
+	}
+}
+
+# bombay_old
+REPLACE_OR_CREATE:geographic_region_bombay_presidency = {
+	short_key = "bombay_presidency"
+	state_regions = { STATE_BOMBAY STATE_GUJARAT STATE_SINDH STATE_BALUCHISTAN }
+}
+
+# madras_old
+REPLACE_OR_CREATE:geographic_region_madras_presidency = {
+	short_key = "madras_presidency"
+	state_regions = { STATE_CEYLON STATE_CIRCARS STATE_MYSORE STATE_TRAVANCORE STATE_MADRAS STATE_HYDERABAD STATE_KURNOOL }
+}
