@@ -59,7 +59,6 @@ PER_mozaffar_ad_din_shah_qajar = { # Mozaffar ad-Din Shah Qajar
 		kidney_stones
 		inexperienced
 		expensive_tastes
-		aesthete
 	}
 	on_created = {
 		set_variable = is_married
@@ -98,7 +97,6 @@ PER_ahmad_shah_qajar = { # Ahmad Shah Qajar
 	ideology = ideology_royalist
 	home_region = STATE_IRAKAJEMI
 	traits = {
-		ambitious
 		persistent
 		hedonist
 		inexperienced
@@ -138,7 +136,6 @@ REPLACE:PER_reza_pahlavi = {
 	home_region = STATE_MAZANDARAN
 	dna = dna_reza_shah_pahlavi
 	traits = {
-		ambitious
 		direct
 		popular_commander
 		basic_diplomat
@@ -184,7 +181,6 @@ PER_mohammad_reza_pahlavi = { # Mohammad Reza Shah Pahlavi
 	home_region = STATE_IRAKAJEMI
 	traits = {
 		persistent
-		imperious
 		tactful
 		arrogant
 		pious

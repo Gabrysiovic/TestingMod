@@ -35,8 +35,6 @@ NET_willem_iii = {
 	traits = {
 		arrogant
 		hedonist
-		imposing
-		imperious
 		cruel
 		wrathful
 	}
