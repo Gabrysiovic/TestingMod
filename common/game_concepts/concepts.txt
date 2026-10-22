@@ -1,9 +1,0 @@
-concept_direct_current = {
-	texture = "gfx/interface/icons/goods_icons/electricity.dds"
-	is_loading_tip = yes
-}
-
-concept_alternating_current = {
-	texture = "gfx/interface/icons/goods_icons/electricity_market.dds"
-	is_loading_tip = yes
-}
