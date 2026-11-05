@@ -1,0 +1,2 @@
+﻿l_french:
+    MDF_MOD_DLC_BUTTON_TOOLTIP: "#T [Dlc.GetName]#!\n[Dlc.GetDesc]\n\n#low;emphasis @information! Ce DLC a été ajouté par un #blue;bold mod#!#!"
