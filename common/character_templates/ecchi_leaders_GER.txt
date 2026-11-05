@@ -50,93 +50,93 @@ ecchi_ger_hitler = {
 
 # Germany - Industrialists
 
-ecchi_ger_hugenberg = {
-	first_name = Alfred
-	last_name = ecchi_Hugenberg
-	culture = cu:north_german
-	female = no
-	religion = rel:protestant
-	ideology = ideology_jingoist_leader
-	interest_group = ig_industrialists
-	dna = ecchi_dna_alfred_hugenberg
-	birth_date = 1865.6.19
-	traits = { ambitious bigoted imperious }
-	interest_group_leader_usage = {
-		country_trigger = {
-			OR = {
-				AND = {
-					exists = c:GER
-					this = c:GER
-					NOT = {
-						exists = c:PRU
-						exists = c:NGF
-					}
-				}
-				 AND = {
-					exists = c:NGF
-					this = c:NGF
-					NOT = { exists = c:PRU }
-				}
-				AND = {
-					exists = c:PRU
-					this = c:PRU
-				}
-			}
-		}
-		interest_group_trigger = {
-			is_interest_group_type = ig_industrialists
-		}
-		earliest_usage_date = 1909.1.1
-		latest_usage_date = 1951.3.12
-		chance = 65
-	}
-}
+#ecchi_ger_hugenberg = {
+#	first_name = Alfred
+#	last_name = ecchi_Hugenberg
+#	culture = cu:north_german
+#	female = no
+#	religion = rel:protestant
+#	ideology = ideology_jingoist_leader
+#	interest_group = ig_industrialists
+#	dna = ecchi_dna_alfred_hugenberg
+#	birth_date = 1865.6.19
+#	traits = { ambitious bigoted imperious }
+#	interest_group_leader_usage = {
+#		country_trigger = {
+#			OR = {
+#				AND = {
+#					exists = c:GER
+#					this = c:GER
+#					NOT = {
+#						exists = c:PRU
+#						exists = c:NGF
+#					}
+#				}
+#				 AND = {
+#					exists = c:NGF
+#					this = c:NGF
+#					NOT = { exists = c:PRU }
+#				}
+#				AND = {
+#					exists = c:PRU
+#					this = c:PRU
+#				}
+#			}
+#		}
+#		interest_group_trigger = {
+#			is_interest_group_type = ig_industrialists
+#		}
+#		earliest_usage_date = 1909.1.1
+#		latest_usage_date = 1951.3.12
+#		chance = 65
+#	}
+#}
 
-ecchi_ger_engels = {
-	first_name = Friedrich
-	last_name = Engels
-	culture = cu:north_german
-	female = no
-	religion = rel:protestant
-	ideology = ideology_communist
-	interest_group = ig_trade_unions
-	dna = ecchi_dna_friedrich_engels
-	birth_date = 1820.11.28
-	traits = { cancer romantic expensive_tastes }
-	interest_group_leader_usage = {
-		country_trigger = {
-			OR = {
-				AND = {
-					exists = c:GER
-					this = c:GER
-					NOT = {
-						exists = c:PRU
-						exists = c:NGF
-					}
-				}
-				 AND = {
-					exists = c:NGF
-					this = c:NGF
-					NOT = { exists = c:PRU }
-				}
-				AND = {
-					exists = c:PRU
-					this = c:PRU
-				}
-			}
-		}
-		interest_group_trigger = {
-			ig_counts_as_marginal = no
-			OR = {
-				is_interest_group_type = ig_trade_unions
-				is_interest_group_type = ig_intelligentsia
-			}
-		}
-		earliest_usage_date = 1849.1.1
-		latest_usage_date = 1895.8.5
-		chance = 65
-	}
-}
+#ecchi_ger_engels = {
+#	first_name = Friedrich
+#	last_name = Engels
+#	culture = cu:north_german
+#	female = no
+#	religion = rel:protestant
+#	ideology = ideology_communist
+#	interest_group = ig_trade_unions
+#	dna = ecchi_dna_friedrich_engels
+#	birth_date = 1820.11.28
+#	traits = { cancer romantic expensive_tastes }
+#	interest_group_leader_usage = {
+#		country_trigger = {
+#			OR = {
+#				AND = {
+#					exists = c:GER
+#					this = c:GER
+#					NOT = {
+#						exists = c:PRU
+#						exists = c:NGF
+#					}
+#				}
+#				 AND = {
+#					exists = c:NGF
+#					this = c:NGF
+#					NOT = { exists = c:PRU }
+#				}
+#				AND = {
+#					exists = c:PRU
+#					this = c:PRU
+#				}
+#			}
+#		}
+#		interest_group_trigger = {
+#			ig_counts_as_marginal = no
+#			OR = {
+#				is_interest_group_type = ig_trade_unions
+#				is_interest_group_type = ig_intelligentsia
+#			}
+#		}
+#		earliest_usage_date = 1849.1.1
+#		latest_usage_date = 1895.8.5
+#		chance = 65
+#	}
+#}
 
 # ecchi_ger_liebknecht = {
 #     first_name = Karl
@@ -185,49 +185,49 @@ ecchi_ger_engels = {
 #     }
 # }
 
-ecchi_ger_einstein = {
-    first_name = Albert
-    last_name = ecchi_Einstein
-    historical = yes
-    culture = cu:south_german
-
-    religion = rel:jewish
-    ideology = ideology_pacifist
-    interest_group = ig_intelligentsia
-	dna = ecchi_dna_albert_einstein
-    birth_date = 1879.3.14
-    traits = { meticulous reserved innovative }
-    interest_group_leader_usage = {
-		country_trigger = {
-			morgenrote_is_active = no #This character is in Morgenröte and should not spawn if Morgenröte is active
-			OR = {
-				AND = {
-					exists = c:USA
-					this = c:USA
-					NOT = {
-						exists = c:GER
-						exists = c:PRU
-					}
-				}
-				 AND = {
-					exists = c:GER
-					this = c:GER
-					NOT = { exists = c:PRU }
-				}
-				AND = {
-					exists = c:PRU
-					this = c:PRU
-				}
-			}
-		}
-        interest_group_trigger = {
-            is_interest_group_type = ig_intelligentsia
-        }
-        earliest_usage_date = 1915.1.1
-        latest_usage_date = 1955.4.18
-        chance = 25
-    }
-}
+#ecchi_ger_einstein = {
+#    first_name = Albert
+#    last_name = ecchi_Einstein
+#    historical = yes
+#    culture = cu:south_german
+#
+#    religion = rel:jewish
+#    ideology = ideology_pacifist
+#    interest_group = ig_intelligentsia
+#	dna = ecchi_dna_albert_einstein
+#    birth_date = 1879.3.14
+#    traits = { meticulous reserved innovative }
+#    interest_group_leader_usage = {
+#		country_trigger = {
+#			morgenrote_is_active = no #This character is in Morgenröte and should not spawn if Morgenröte is active
+#			OR = {
+#				AND = {
+#					exists = c:USA
+#					this = c:USA
+#					NOT = {
+#						exists = c:GER
+#						exists = c:PRU
+#					}
+#				}
+#				 AND = {
+#					exists = c:GER
+#					this = c:GER
+#					NOT = { exists = c:PRU }
+#				}
+#				AND = {
+#					exists = c:PRU
+#					this = c:PRU
+#				}
+#			}
+#		}
+#        interest_group_trigger = {
+#            is_interest_group_type = ig_intelligentsia
+#        }
+#        earliest_usage_date = 1915.1.1
+#        latest_usage_date = 1955.4.18
+#        chance = 25
+#    }
+#}
 
 # ecchi_ger_alfred_krupp = {
 #     first_name = Alfred
@@ -587,33 +587,33 @@ ecchi_ger_benz_carl = {
 
 ## Jacob Grimm
 
-ecchi_ger_grimm = {
-	first_name = Jacob
-	last_name = ecchi_Grimm
-	culture = cu:north_german
-	religion = rel:protestant
-	historical = yes
-	female = no
-	ideology = ideology_corporatist
-	interest_group = ig_intelligentsia
-	dna = ecchi_dna_jacob_grimm
-	birth_date = 1785.1.4
-	traits = { meticulous erudite literary }
-	agitator_usage = {
-		country_trigger = {
-			has_state_in_state_region = STATE_HESSE
-            NOT = {
-                country_average_cultural_acceptance = { target = cu:north_german value < acceptance_status_4 }
-            }
-		}
-		interest_group_trigger = {
-			is_interest_group_type = ig_intelligentsia
-		}
-		earliest_usage_date = 1836.1.1
-		latest_usage_date = 1863.9.20
-		chance = 65
-	}
-}
+#ecchi_ger_grimm = {
+#	first_name = Jacob
+#	last_name = ecchi_Grimm
+#	culture = cu:north_german
+#	religion = rel:protestant
+#	historical = yes
+#	female = no
+#	ideology = ideology_corporatist
+#	interest_group = ig_intelligentsia
+#	dna = ecchi_dna_jacob_grimm
+#	birth_date = 1785.1.4
+#	traits = { meticulous erudite literary }
+#	agitator_usage = {
+#		country_trigger = {
+#			has_state_in_state_region = STATE_HESSE
+#            NOT = {
+#                country_average_cultural_acceptance = { target = cu:north_german value < acceptance_status_4 }
+#            }
+#		}
+#		interest_group_trigger = {
+#			is_interest_group_type = ig_intelligentsia
+#		}
+#		earliest_usage_date = 1836.1.1
+#		latest_usage_date = 1863.9.20
+#		chance = 65
+#	}
+#}
 
 ## August Bebel
 
@@ -623,7 +623,7 @@ ecchi_ger_bebel = {
 	culture = cu:north_german
 	religion = rel:protestant
 	historical = yes
-	ideology = ideology_social_democrat
+	ideology = ideology_state_socialist
 	interest_group = ig_trade_unions
 	dna = ecchi_dna_august_bebel
 	birth_date = 1840.2.22
@@ -688,7 +688,7 @@ ecchi_ger_ebert = {
 	culture = cu:north_german
 	religion = rel:protestant
 	historical = yes
-	ideology = ideology_social_democrat
+	ideology = ideology_state_socialist
 	interest_group = ig_trade_unions
 	dna = ecchi_dna_karl_liebknecht
 	birth_date = 1871.2.4
@@ -757,33 +757,33 @@ ecchi_ger_zetkin = {
 
 ## Ferdinand Lasalle
 
-ecchi_ger_lasalle = {
-	first_name = Ferdinand
-	last_name = ecchi_Lasalle
-	culture = cu:north_german
-	religion = rel:jewish
-	historical = yes
-	ideology = ideology_social_democrat
-	interest_group = ig_trade_unions
-	dna = ecchi_dna_ferdinand_lasalle
-	birth_date = 1825.5.11
-	traits = { innovative arrogant ambitious hedonist }
-	agitator_usage = {
-		country_trigger = {
-			has_state_in_state_region = STATE_LOWER_SILESIA
-			NOT = {
-				country_average_cultural_acceptance = { target = cu:north_german value < acceptance_status_4 }
-			}
-			has_technology_researched = socialism
-		}
-		interest_group_trigger = {
-			is_interest_group_type = ig_trade_unions
-		}
-		earliest_usage_date = 1845.1.1
-		latest_usage_date = 1864.8.31
-		chance = 85
-	}
-}
+#ecchi_ger_lasalle = {
+#	first_name = Ferdinand
+#	last_name = ecchi_Lasalle
+#	culture = cu:north_german
+#	religion = rel:jewish
+#	historical = yes
+#	ideology = ideology_social_democrat
+#	interest_group = ig_trade_unions
+#	dna = ecchi_dna_ferdinand_lasalle
+#	birth_date = 1825.5.11
+#	traits = { innovative arrogant ambitious hedonist }
+#	agitator_usage = {
+#		country_trigger = {
+#			has_state_in_state_region = STATE_LOWER_SILESIA
+#			NOT = {
+#				country_average_cultural_acceptance = { target = cu:north_german value < acceptance_status_4 }
+#			}
+#			has_technology_researched = socialism
+#		}
+#		interest_group_trigger = {
+#			is_interest_group_type = ig_trade_unions
+#		}
+#		earliest_usage_date = 1845.1.1
+#		latest_usage_date = 1864.8.31
+#		chance = 85
+#	}
+#}
 
 ## Martin Leo Arons
 
@@ -793,7 +793,7 @@ ecchi_ger_arons = {
 	culture = cu:north_german
 	religion = rel:jewish
 	historical = yes
-	ideology = ideology_social_democrat
+	ideology = ideology_state_socialist
 	interest_group = ig_industrialists
 	dna = ecchi_dna_martin_arons
 	birth_date = 1856.3.10
@@ -823,7 +823,7 @@ ecchi_ger_bernstein = {
 	culture = cu:north_german
 	religion = rel:jewish
 	historical = yes
-	ideology = ideology_communist
+	ideology = ideology_state_socialist
 	interest_group = ig_trade_unions
 	dna = ecchi_dna_eduard_bernstein
 	birth_date = 1850.1.6

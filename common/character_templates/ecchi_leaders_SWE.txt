@@ -41,7 +41,7 @@ ecchi_swe_branting = {
     culture = cu:swedish
     home_region = STATE_SVEALAND
 
-    ideology = ideology_social_democrat
+    ideology = ideology_state_socialist
     interest_group = ig_trade_unions
     dna = mr_swe_branting_hjalmar
     birth_date = 1860.11.23
@@ -75,7 +75,7 @@ ecchi_swe_wallenberg = {
     interest_group = ig_intelligentsia
     dna = ecchi_dna_raoul_wallenberg
     birth_date = 1912.8.4
-    traits = { charismatic brave honorable experienced_diplomat }
+    traits = { charismatic brave honorable experienced_diplomat tolerant }
     interest_group_leader_usage = {
         country_trigger = {
             has_state_in_state_region = STATE_SVEALAND

@@ -607,3 +607,94 @@ ecchi_lan_ye_tenghui = {
 		chance = 80
 	}
 }
+
+# Dutch East Indies / Java
+
+# Kartini
+# Female education and emancipation; correspondence campaign from 1899. Mononym, no invented surname.
+# Source: https://pdm.kemendikdasmen.go.id/berita-daerah/raden-adjeng-kartini
+ecchi_dei_kartini = {
+    first_name = ecchi_Kartini
+    last_name = ecchi_EmptyKartini
+    historical = yes
+    female = yes
+    is_agitator = yes
+    culture = cu:javan
+    religion = rel:sunni
+    home_region = STATE_CENTRAL_JAVA
+    ideology = ideology_feminist
+    interest_group = ig_intelligentsia
+    dna = ecchi_dna_dei_kartini
+    birth_date = 1879.4.21
+    traits = { literary persistent }
+    agitator_usage = {
+        country_trigger = {
+            has_state_in_state_region = STATE_CENTRAL_JAVA
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1899.1.1
+        latest_usage_date = 1904.9.17
+        chance = 65
+    }
+}
+
+# H.O.S. Tjokroaminoto
+# Sarekat Islam leader; anti-colonial sovereignty rather than exclusionary ethno-nationalism.
+# Source: https://en.wikipedia.org/wiki/Oemar_Said_Tjokroaminoto
+ecchi_dei_tjokroaminoto = {
+    first_name = ecchi_Oemar_Said
+    last_name = ecchi_Tjokroaminoto
+    historical = yes
+    culture = cu:javan
+    religion = rel:sunni
+    home_region = STATE_EAST_JAVA
+    ideology = ideology_sovereignist_leader
+    interest_group = ig_devout
+    dna = ecchi_dna_dei_tjokroaminoto
+    birth_date = 1882.8.16
+    traits = { charismatic pious inspirational_orator }
+    interest_group_leader_usage = {
+        country_trigger = {
+            has_state_in_state_region = STATE_EAST_JAVA
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_devout
+        }
+        earliest_usage_date = 1912.1.1
+        latest_usage_date = 1934.12.17
+        chance = 65
+    }
+}
+
+# Tan Malaka
+# Communist teacher, writer and anti-colonial organiser; political activity from 1921.
+# Minangkabau represented by existing Malay culture; no separate Minangkabau culture in base game.
+# Commonly reported birth date; sources differ on year. Public name split for display, not an invented family surname.
+# Source: https://en.wikipedia.org/wiki/Tan_Malaka
+ecchi_dei_tan_malaka = {
+    first_name = ecchi_Tan_1
+    last_name = ecchi_Malaka
+    historical = yes
+    is_agitator = yes
+    culture = cu:malay
+    religion = rel:sunni
+    home_region = STATE_NORTH_SUMATRA
+    ideology = ideology_communist_leader
+    interest_group = ig_trade_unions
+    dna = ecchi_dna_dei_tan_malaka
+    birth_date = 1897.6.2
+    traits = { literary persistent }
+    agitator_usage = {
+        country_trigger = {
+            has_state_in_state_region = STATE_NORTH_SUMATRA
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_trade_unions
+        }
+        earliest_usage_date = 1921.1.1
+        latest_usage_date = 1936.1.1
+        chance = 65
+    }
+}

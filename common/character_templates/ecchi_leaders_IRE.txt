@@ -70,7 +70,7 @@ ecchi_ire_larkin = {
     home_region = STATE_LANCASHIRE
 
     religion = rel:catholic
-    ideology = ideology_communist
+    ideology = ideology_state_socialist
     interest_group = ig_trade_unions
 	dna = ecchi_dna_james_larkin
     birth_date = 1874.1.28
@@ -213,7 +213,7 @@ ecchi_ire_bernal = {
     home_region = STATE_MUNSTER
 
     religion = rel:catholic
-    ideology = ideology_communist
+    ideology = ideology_communist_leader
     interest_group = ig_intelligentsia
     dna = ecchi_dna_john_bernal
     birth_date = 1901.5.10

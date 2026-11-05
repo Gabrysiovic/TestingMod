@@ -83,7 +83,7 @@ ecchi_tib_dorzhiev = {
     first_name = ecchi_Agvan
     last_name = ecchi_Dorzhiev
     historical = yes
-    culture = cu:siberian	#Buryat
+    culture = cu:buryat
 
     religion = rel:gelugpa
     ideology = ideology_theocrat

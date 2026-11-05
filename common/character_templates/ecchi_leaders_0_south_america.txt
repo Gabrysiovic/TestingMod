@@ -63,35 +63,35 @@ ecchi_uru_artigas = {
     }
 }
 
-ecchi_uru_berro = {
-    first_name = Bernardo
-    last_name = Berro
-    historical = yes
-    culture = cu:platinean
-
-    religion = rel:catholic
-    ideology = ideology_moderate
-    interest_group = ig_petty_bourgeoisie
-	dna = ecchi_dna_bernardo_berro
-    birth_date = 1803.4.28
-    traits = { tactful basic_political_operator }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:URU
-            this = c:URU
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            OR = {
-                is_interest_group_type = ig_petty_bourgeoisie
-                is_interest_group_type = ig_landowners
-            }
-        }
-        earliest_usage_date = 1852.1.1
-        latest_usage_date = 1868.2.19
-        chance = 65
-    }
-}
+#ecchi_uru_berro = {
+#    first_name = Bernardo
+#    last_name = Berro
+#    historical = yes
+#    culture = cu:platinean
+#
+#    religion = rel:catholic
+#    ideology = ideology_moderate
+#    interest_group = ig_petty_bourgeoisie
+#	dna = ecchi_dna_bernardo_berro
+#    birth_date = 1803.4.28
+#    traits = { tactful basic_political_operator }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            exists = c:URU
+#            this = c:URU
+#        }
+#        interest_group_trigger = {
+#            ig_counts_as_marginal = no
+#            OR = {
+#                is_interest_group_type = ig_petty_bourgeoisie
+#                is_interest_group_type = ig_landowners
+#            }
+#        }
+#        earliest_usage_date = 1852.1.1
+#        latest_usage_date = 1868.2.19
+#        chance = 65
+#    }
+#}
 
 ## José Batlle y Ordóñez
 

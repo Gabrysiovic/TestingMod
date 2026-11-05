@@ -128,7 +128,7 @@ ecchi_dai_ho_chi_minh = {
     culture = cu:vietnamese
     home_region = STATE_ANNAM
 
-    ideology = ideology_communist
+    ideology = ideology_vanguardist
     interest_group = ig_rural_folk
 	dna = ecchi_dna_ho_chi_minh
     birth_date = 1890.5.19
@@ -178,6 +178,64 @@ ecchi_dai_huynh_thuc_khang = {
         }
         earliest_usage_date = 1919.1.1
         latest_usage_date = 1947.4.21
+        chance = 65
+    }
+}
+
+# Phan Bội Châu
+# Modernization Association from 1904; monarchist then republican, so sovereignty is the consistent central position. Survived to 1940.
+# Source: https://en.wikipedia.org/wiki/Phan_B%E1%BB%99i_Ch%C3%A2u
+ecchi_dai_phan_boi_chau = {
+    first_name = ecchi_Boi_Chau
+    last_name = ecchi_Phan
+    historical = yes
+    is_agitator = yes
+    culture = cu:vietnamese
+    religion = rel:confucian
+    home_region = STATE_ANNAM
+    ideology = ideology_sovereignist_leader
+    interest_group = ig_intelligentsia
+    dna = ecchi_dna_dai_phan_boi_chau
+    birth_date = 1867.12.26
+    traits = { literary persistent }
+    agitator_usage = {
+        country_trigger = {
+            has_state_in_state_region = STATE_ANNAM
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1904.1.1
+        latest_usage_date = 1936.1.1
+        chance = 65
+    }
+}
+
+# Phan Châu Trinh
+# Peaceful democratic and anti-monarchical reform; reform campaign from 1906.
+# Source: https://vienphanchautrinh.org/phan-chau-trinh/
+ecchi_dai_phan_chau_trinh = {
+    first_name = ecchi_Chau_Trinh
+    last_name = ecchi_Phan
+    historical = yes
+    is_agitator = yes
+    culture = cu:vietnamese
+    religion = rel:confucian
+    home_region = STATE_ANNAM
+    ideology = ideology_radical
+    interest_group = ig_intelligentsia
+    dna = ecchi_dna_dai_phan_chau_trinh
+    birth_date = 1872.9.9
+    traits = { literary meticulous }
+    agitator_usage = {
+        country_trigger = {
+            has_state_in_state_region = STATE_ANNAM
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1906.1.1
+        latest_usage_date = 1926.3.24
         chance = 65
     }
 }

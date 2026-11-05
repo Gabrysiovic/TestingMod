@@ -36,74 +36,75 @@ ecchi_pol_prus = {
     }
 }
 
-ecchi_pol_pilsudski = {
-    first_name = Jozef
-    last_name = Pilsudski
-    historical = yes
-    culture = cu:polish
-    home_region = STATE_VILNIUS
+#ecchi_pol_pilsudski = {
+#    first_name = Jozef
+#    last_name = Pilsudski
+#    historical = yes
+#    culture = cu:polish
+#    home_region = STATE_VILNIUS
+#
+#    religion = rel:catholic
+#    ideology = ideology_radical
+#    interest_group = ig_armed_forces
+#	dna = ecchi_dna_jozef_pilsudski
+#    birth_date = 1867.12.5
+#    traits = { experienced_diplomat experienced_offensive_planner }
+#    commander_rank = default
+#    commander_usage = {
+#        country_trigger = {
+#            OR = {
+#                AND = {
+#                    exists = c:PLC
+#                    this = c:PLC
+#                    NOT = { exists = c:POL }
+#                }
+#                AND = {
+#                    exists = c:POL
+#                    this = c:POL
+#                }
+#            }
+#        }
+#        role = general
+#        earliest_usage_date = 1890.1.1
+#        latest_usage_date = 1935.5.12
+#        chance = 65
+#    }
+#}
 
-    religion = rel:catholic
-    ideology = ideology_positivist
-    interest_group = ig_armed_forces
-	dna = ecchi_dna_jozef_pilsudski
-    birth_date = 1867.12.5
-    traits = { celebrity_commander experienced_offensive_planner charismatic ambitious }
-    commander_rank = commander_rank_4
-    commander_usage = {
-        country_trigger = {
-            OR = {
-                AND = {
-                    exists = c:PLC
-                    this = c:PLC
-                    NOT = { exists = c:POL }
-                }
-                AND = {
-                    exists = c:POL
-                    this = c:POL
-                }
-            }
-        }
-        role = general
-        earliest_usage_date = 1892.1.1
-        latest_usage_date = 1935.5.12
-    }
-}
-
-ecchi_pol_mieroslawski = {
-    first_name = Ludwik
-    last_name = Mieroslawski
-    historical = yes
-    culture = cu:polish
-    home_region = STATE_MAZOVIA
-
-    religion = rel:catholic
-    ideology = ideology_jingoist_leader
-    interest_group = ig_intelligentsia
-	dna = ecchi_dna_ludwik_mieroslawski
-    birth_date = 1814.1.17
-    traits = { surveyor inspirational_orator experienced_offensive_planner }
-    commander_rank = default
-    commander_usage = {
-        country_trigger = {
-            OR = {
-                AND = {
-                    exists = c:PLC
-                    this = c:PLC
-                    NOT = { exists = c:POL }
-                }
-                AND = {
-                    exists = c:POL
-                    this = c:POL
-                }
-            }
-        }
-        role = general
-        earliest_usage_date = 1839.1.1
-        latest_usage_date = 1878.11.22
-        chance = 65
-    }
-}
+#ecchi_pol_mieroslawski = {
+#    first_name = Ludwik
+#    last_name = Mieroslawski
+#    historical = yes
+#    culture = cu:polish
+#    home_region = STATE_MAZOVIA
+#
+#    religion = rel:catholic
+#    ideology = ideology_jingoist_leader
+#    interest_group = ig_intelligentsia
+#	dna = ecchi_dna_ludwik_mieroslawski
+#    birth_date = 1814.1.17
+#    traits = { surveyor inspirational_orator experienced_offensive_planner }
+#    commander_rank = default
+#    commander_usage = {
+#        country_trigger = {
+#            OR = {
+#                AND = {
+#                    exists = c:PLC
+#                    this = c:PLC
+#                    NOT = { exists = c:POL }
+#                }
+#                AND = {
+#                    exists = c:POL
+#                    this = c:POL
+#                }
+#            }
+#        }
+#        role = general
+#        earliest_usage_date = 1839.1.1
+#        latest_usage_date = 1878.11.22
+#        chance = 65
+#    }
+#}
 
 ecchi_pol_wysocki = {
     first_name = Piotr

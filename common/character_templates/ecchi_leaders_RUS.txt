@@ -62,52 +62,52 @@
 # 		chance = 65
 # 	}
 # }
-ecchi_rus_stalin = {
-	first_name = Joseph
-	last_name = ecchi_Stalin
-	historical = yes
-	culture = cu:georgian
-	home_region = STATE_GREATER_CAUCASUS
-	female = no
-	religion = rel:orthodox
-	ideology = ideology_vanguardist
-	interest_group = ig_rural_folk
-	dna = ecchi_dna_joseph_stalin
-	birth_date = 1878.12.18
-	traits = {
-		cruel
-		ambitious
-		direct
-	}
-	interest_group_leader_usage = {
-		country_trigger = {
-			OR = {
-				AND = {
-					exists = c:RUS
-					this = c:RUS
-					NOT = {
-						exists = c:GEO
-					}
-				}
-				AND = {
-					exists = c:GEO
-					this = c:GEO
-				}
-			}
-		}
-		interest_group_trigger = {
-			ig_counts_as_marginal = no
-			OR = {
-				is_interest_group_type = ig_rural_folk
-				is_interest_group_type = ig_trade_unions
-				is_interest_group_type = ig_armed_forces
-			}
-		}
-		earliest_usage_date = 1910.1.1
-		latest_usage_date = 1953.3.5
-		chance = 65
-	}
-}
+#ecchi_rus_stalin = {
+#	first_name = Joseph
+#	last_name = ecchi_Stalin
+#	historical = yes
+#	culture = cu:georgian
+#	home_region = STATE_GREATER_CAUCASUS
+#	female = no
+#	religion = rel:orthodox
+#	ideology = ideology_vanguardist
+#	interest_group = ig_rural_folk
+#	dna = ecchi_dna_joseph_stalin
+#	birth_date = 1878.12.18
+#	traits = {
+#		cruel
+#		ambitious
+#		direct
+#	}
+#	interest_group_leader_usage = {
+#		country_trigger = {
+#			OR = {
+#				AND = {
+#					exists = c:RUS
+#					this = c:RUS
+#					NOT = {
+#						exists = c:GEO
+#					}
+#				}
+#				AND = {
+#					exists = c:GEO
+#					this = c:GEO
+#				}
+#			}
+#		}
+#		interest_group_trigger = {
+#			ig_counts_as_marginal = no
+#			OR = {
+#				is_interest_group_type = ig_rural_folk
+#				is_interest_group_type = ig_trade_unions
+#				is_interest_group_type = ig_armed_forces
+#			}
+#		}
+#		earliest_usage_date = 1910.1.1
+#		latest_usage_date = 1953.3.5
+#		chance = 65
+#	}
+#}
 
 # ecchi_rus_kerensky = {
 # 	first_name = Alexander
@@ -143,41 +143,41 @@ ecchi_rus_stalin = {
 # 	}
 # }
 # Russia - theocrats
-ecchi_rus_rasputin = {
-	first_name = ecchi_Grigori
-	last_name = ecchi_Rasputin
-	historical = yes
-	culture = cu:russian
-	home_region = STATE_TOBOLSK
-	female = no
-	religion = rel:orthodox
-	ideology = ideology_theocrat
-	interest_group = ig_devout
-	dna = ecchi_dna_grigori_rasputin
-	birth_date = 1869.1.21
-	traits = {
-		inspirational_orator
-		firebrand
-		ambitious
-		psychological_affliction
-	}
-	interest_group_leader_usage = {
-		country_trigger = {
-			exists = c:RUS
-			this = c:RUS
-		}
-		interest_group_trigger = {
-			ig_counts_as_marginal = no
-			OR = {
-				is_interest_group_type = ig_rural_folk
-				is_interest_group_type = ig_devout
-			}
-		}
-		earliest_usage_date = 1903.1.1
-		latest_usage_date = 1916.12.30
-		chance = 65
-	}
-}
+#ecchi_rus_rasputin = {
+#	first_name = ecchi_Grigori
+#	last_name = ecchi_Rasputin
+#	historical = yes
+#	culture = cu:russian
+#	home_region = STATE_TOBOLSK
+#	female = no
+#	religion = rel:orthodox
+#	ideology = ideology_theocrat
+#	interest_group = ig_devout
+#	dna = ecchi_dna_grigori_rasputin
+#	birth_date = 1869.1.21
+#	traits = {
+#		inspirational_orator
+#		firebrand
+#		ambitious
+#		psychological_affliction
+#	}
+#	interest_group_leader_usage = {
+#		country_trigger = {
+#			exists = c:RUS
+#			this = c:RUS
+#		}
+#		interest_group_trigger = {
+#			ig_counts_as_marginal = no
+#			OR = {
+#				is_interest_group_type = ig_rural_folk
+#				is_interest_group_type = ig_devout
+#			}
+#		}
+#		earliest_usage_date = 1903.1.1
+#		latest_usage_date = 1916.12.30
+#		chance = 65
+#	}
+#}
 
 # Russian admirals
 # ecchi_rus_kolchak = {
@@ -234,7 +234,7 @@ ecchi_rus_krasnov = {
 	birth_date = 1869.9.22
 	traits = {
 		cruel
-		mountain_commander
+		experienced_cavalry_commander
 		wrathful
 	}
 	commander_rank = default
@@ -261,67 +261,67 @@ ecchi_rus_krasnov = {
 	}
 }
 
-ecchi_rus_dostoevsky = {
-	first_name = Fyodor
-	last_name = ecchi_Dostoevsky
-	historical = yes
-	culture = cu:russian
-	home_region = STATE_MOSCOW
-	female = no
-	religion = rel:orthodox
-	ideology = ideology_traditionalist
-	interest_group = ig_intelligentsia
-	dna = ecchi_dna_fyodor_dostoevsky
-	birth_date = 1821.11.11
-	traits = {
-		inspirational_orator
-		pious
-	}
-	interest_group_leader_usage = {
-		country_trigger = {
-			morgenrote_is_active = no			#This character is in Morgenröte and should not spawn if Morgenröte is active
-			exists = c:RUS
-			this = c:RUS
-		}
-		interest_group_trigger = {
-			is_interest_group_type = ig_intelligentsia
-		}
-		earliest_usage_date = 1854.1.1
-		latest_usage_date = 1881.2.9
-		chance = 25
-	}
-}
+#ecchi_rus_dostoevsky = {
+#	first_name = Fyodor
+#	last_name = ecchi_Dostoevsky
+#	historical = yes
+#	culture = cu:russian
+#	home_region = STATE_MOSCOW
+#	female = no
+#	religion = rel:orthodox
+#	ideology = ideology_traditionalist
+#	interest_group = ig_intelligentsia
+#	dna = ecchi_dna_fyodor_dostoevsky
+#	birth_date = 1821.11.11
+#	traits = {
+#		inspirational_orator
+#		pious
+#	}
+#	interest_group_leader_usage = {
+#		country_trigger = {
+#			morgenrote_is_active = no			#This character is in Morgenröte and should not spawn if Morgenröte is active
+#			exists = c:RUS
+#			this = c:RUS
+#		}
+#		interest_group_trigger = {
+#			is_interest_group_type = ig_intelligentsia
+#		}
+#		earliest_usage_date = 1854.1.1
+#		latest_usage_date = 1881.2.9
+#		chance = 25
+#	}
+#}
 
-ecchi_rus_tolstoy = {
-	first_name = Leo
-	last_name = Tolstoy
-	historical = yes
-	culture = cu:russian
-	home_region = STATE_ORYOL
-	female = no
-	religion = rel:orthodox
-	ideology = ideology_pacifist
-	interest_group = ig_intelligentsia
-	dna = ecchi_dna_leo_tolstoy
-	birth_date = 1828.9.9
-	traits = {
-		inspirational_orator
-		pious
-	}
-	interest_group_leader_usage = {
-		country_trigger = {
-			morgenrote_is_active = no			#This character is in Morgenröte and should not spawn if Morgenröte is active
-			exists = c:RUS
-			this = c:RUS
-		}
-		interest_group_trigger = {
-			is_interest_group_type = ig_intelligentsia
-		}
-		earliest_usage_date = 1860.1.1
-		latest_usage_date = 1910.11.20
-		chance = 25
-	}
-}
+#ecchi_rus_tolstoy = {
+#	first_name = Leo
+#	last_name = Tolstoy
+#	historical = yes
+#	culture = cu:russian
+#	home_region = STATE_ORYOL
+#	female = no
+#	religion = rel:orthodox
+#	ideology = ideology_pacifist
+#	interest_group = ig_intelligentsia
+#	dna = ecchi_dna_leo_tolstoy
+#	birth_date = 1828.9.9
+#	traits = {
+#		inspirational_orator
+#		pious
+#	}
+#	interest_group_leader_usage = {
+#		country_trigger = {
+#			morgenrote_is_active = no			#This character is in Morgenröte and should not spawn if Morgenröte is active
+#			exists = c:RUS
+#			this = c:RUS
+#		}
+#		interest_group_trigger = {
+#			is_interest_group_type = ig_intelligentsia
+#		}
+#		earliest_usage_date = 1860.1.1
+#		latest_usage_date = 1910.11.20
+#		chance = 25
+#	}
+#}
 
 ecchi_rus_vereshchagin = {
 	first_name = Vasily
@@ -426,125 +426,125 @@ ecchi_rus_goldman = {
 # 	}
 # }
 ## Grigory Zinoviev
-ecchi_rus_zinoviev = {
-	first_name = Grigory
-	last_name = ecchi_Zinoviev
-	historical = yes
-	culture = cu:russian
-	home_region = STATE_KIEV
-	female = no
-	religion = rel:jewish
-	ideology = ideology_vanguardist
-	interest_group = ig_intelligentsia
-	dna = ecchi_dna_grigory_zinoviev
-	birth_date = 1883.9.23
-	traits = {
-		charismatic
-		experienced_political_operator
-		persistent
-	}
-	agitator_usage = {
-		country_trigger = {
-			c:RUS ?= this
-		}
-		interest_group_trigger = {
-			is_interest_group_type = ig_intelligentsia
-		}
-		earliest_usage_date = 1906.3.1
-		latest_usage_date = 1936.8.25
-		chance = 60
-	}
-}
+#ecchi_rus_zinoviev = {
+#	first_name = Grigory
+#	last_name = ecchi_Zinoviev
+#	historical = yes
+#	culture = cu:russian
+#	home_region = STATE_KIEV
+#	female = no
+#	religion = rel:jewish
+#	ideology = ideology_vanguardist
+#	interest_group = ig_intelligentsia
+#	dna = ecchi_dna_grigory_zinoviev
+#	birth_date = 1883.9.23
+#	traits = {
+#		charismatic
+#		experienced_political_operator
+#		persistent
+#	}
+#	agitator_usage = {
+#		country_trigger = {
+#			c:RUS ?= this
+#		}
+#		interest_group_trigger = {
+#			is_interest_group_type = ig_intelligentsia
+#		}
+#		earliest_usage_date = 1906.3.1
+#		latest_usage_date = 1936.8.25
+#		chance = 60
+#	}
+#}
 
 ## Lev Kamenev
-ecchi_rus_kamenev = {
-	first_name = Lev
-	last_name = ecchi_Kamenev
-	historical = yes
-	culture = cu:russian
-	home_region = STATE_MOSCOW
-	female = no
-	religion = rel:jewish
-	ideology = ideology_social_democrat
-	interest_group = ig_intelligentsia
-	dna = ecchi_dna_lev_kamenev
-	birth_date = 1883.7.6
-	traits = {
-		experienced_political_operator
-		persistent
-	}
-	agitator_usage = {
-		country_trigger = {
-			c:RUS ?= this
-		}
-		interest_group_trigger = {
-			is_interest_group_type = ig_intelligentsia
-		}
-		earliest_usage_date = 1907.5.1
-		latest_usage_date = 1936.8.25
-		chance = 65
-	}
-}
+#ecchi_rus_kamenev = {
+#	first_name = Lev
+#	last_name = ecchi_Kamenev
+#	historical = yes
+#	culture = cu:russian
+#	home_region = STATE_MOSCOW
+#	female = no
+#	religion = rel:jewish
+#	ideology = ideology_social_democrat
+#	interest_group = ig_intelligentsia
+#	dna = ecchi_dna_lev_kamenev
+#	birth_date = 1883.7.6
+#	traits = {
+#		experienced_political_operator
+#		persistent
+#	}
+#	agitator_usage = {
+#		country_trigger = {
+#			c:RUS ?= this
+#		}
+#		interest_group_trigger = {
+#			is_interest_group_type = ig_intelligentsia
+#		}
+#		earliest_usage_date = 1907.5.1
+#		latest_usage_date = 1936.8.25
+#		chance = 65
+#	}
+#}
 
 ## Mikhail Bakunin
-ecchi_rus_bakunin = {
-	first_name = Mikhail
-	last_name = Bakunin
-	historical = yes
-	culture = cu:russian
-	home_region = STATE_TVER
-	female = no
-	religion = rel:orthodox
-	ideology = ideology_anarchist
-	interest_group = ig_petty_bourgeoisie
-	dna = ecchi_dna_mikhail_bakunin
-	birth_date = 1814.5.30
-	traits = {
-		brave
-		persistent
-	}
-	agitator_usage = {
-		country_trigger = {
-			c:RUS ?= this
-		}
-		interest_group_trigger = {
-			is_interest_group_type = ig_petty_bourgeoisie
-		}
-		earliest_usage_date = 1857.1.1
-		latest_usage_date = 1876.7.1
-		chance = 45
-	}
-}
+#ecchi_rus_bakunin = {
+#	first_name = Mikhail
+#	last_name = Bakunin
+#	historical = yes
+#	culture = cu:russian
+#	home_region = STATE_TVER
+#	female = no
+#	religion = rel:orthodox
+#	ideology = ideology_anarchist
+#	interest_group = ig_petty_bourgeoisie
+#	dna = ecchi_dna_mikhail_bakunin
+#	birth_date = 1814.5.30
+#	traits = {
+#		brave
+#		persistent
+#	}
+#	agitator_usage = {
+#		country_trigger = {
+#			c:RUS ?= this
+#		}
+#		interest_group_trigger = {
+#			is_interest_group_type = ig_petty_bourgeoisie
+#		}
+#		earliest_usage_date = 1857.1.1
+#		latest_usage_date = 1876.7.1
+#		chance = 45
+#	}
+#}
 
 ## Nikolai Bukharin
-ecchi_rus_bukharin = {
-	first_name = Nikolai
-	last_name = ecchi_Bukharin
-	historical = yes
-	culture = cu:russian
-	home_region = STATE_MOSCOW
-	female = no
-	religion = rel:orthodox
-	ideology = ideology_vanguardist
-	interest_group = ig_intelligentsia
-	dna = ecchi_dna_nikolai_bukharin
-	birth_date = 1888.10.9
-	traits = {
-		experienced_political_operator
-		persistent
-	}
-	interest_group_leader_usage = {
-		country_trigger = {
-			c:RUS ?= this
-		}
-		interest_group_trigger = {
-			is_interest_group_type = ig_intelligentsia
-		}
-		earliest_usage_date = 1917.5.1
-		latest_usage_date = 1938.3.15
-		chance = 55
-	}
-}
+#ecchi_rus_bukharin = {
+#	first_name = Nikolai
+#	last_name = ecchi_Bukharin
+#	historical = yes
+#	culture = cu:russian
+#	home_region = STATE_MOSCOW
+#	female = no
+#	religion = rel:orthodox
+#	ideology = ideology_vanguardist
+#	interest_group = ig_intelligentsia
+#	dna = ecchi_dna_nikolai_bukharin
+#	birth_date = 1888.10.9
+#	traits = {
+#		experienced_political_operator
+#		persistent
+#	}
+#	interest_group_leader_usage = {
+#		country_trigger = {
+#			c:RUS ?= this
+#		}
+#		interest_group_trigger = {
+#			is_interest_group_type = ig_intelligentsia
+#		}
+#		earliest_usage_date = 1917.5.1
+#		latest_usage_date = 1938.3.15
+#		chance = 55
+#	}
+#}
 
 ## Angelica Balabanoff
 ecchi_rus_balabanoff = {
@@ -555,7 +555,7 @@ ecchi_rus_balabanoff = {
 	home_region = STATE_CHERNIHIV
 	female = yes
 	religion = rel:jewish
-	ideology = ideology_social_democrat
+	ideology = ideology_state_socialist
 	interest_group = ig_intelligentsia
 	dna = ecchi_dna_angelica_balabanoff
 	birth_date = 1878.8.4
@@ -635,7 +635,7 @@ ecchi_rus_semyonov = {
 	dna = dna_grigory_semyonov
 	birth_date = 1890.9.25
 	traits = {
-		mountain_commander
+		experienced_cavalry_commander
 		wrathful
 	}
 	commander_rank = default
@@ -734,63 +734,34 @@ rus_general_alekseyev = {
 	}
 }
 
-rus_anton_denikin = {
-	first_name = Anton
-	last_name = Denikin
-	historical = yes
-	culture = cu:russian
-	home_region = STATE_MAZOVIA
-	female = no
-	ideology = ideology_royalist	# IDK
-	commander_rank = default
-	dna = dna_anton_denikin
-	interest_group = ig_armed_forces
-	birth_date = 1872.12.16
-	traits = {
-		honorable
-		literary
-		popular_commander
-	}
-	commander_usage = {
-		country_trigger = {
-			exists = c:RUS
-			this = c:RUS
-		}
-		role = general
-		earliest_usage_date = 1904.1.1
-		latest_usage_date = 1936.1.1
-		chance = 50
-	}
-}
-
 #Kolchak
-RUS_alexander_kolchak = {
-	first_name = Alexander
-	last_name = Kolchak
-	dna = dna_alexander_kolchak
-	historical = yes
-	culture = cu:russian
-	home_region = STATE_INGRIA
-	female = no
-	ideology = ideology_authoritarian
-	commander_rank = default
-	interest_group = ig_armed_forces
-	birth_date = 1874.11.16
-	traits = {
-		explorer
-		experienced_naval_commander
-	}
-	commander_usage = {
-		country_trigger = {
-			exists = c:RUS
-			this = c:RUS
-		}
-		role = admiral
-		earliest_usage_date = 1906.1.1
-		latest_usage_date = 1936.1.1
-		chance = 50
-	}
-}
+#RUS_alexander_kolchak = {
+#	first_name = Alexander
+#	last_name = Kolchak
+#	dna = dna_alexander_kolchak
+#	historical = yes
+#	culture = cu:russian
+#	home_region = STATE_INGRIA
+#	female = no
+#	ideology = ideology_authoritarian
+#	commander_rank = default
+#	interest_group = ig_armed_forces
+#	birth_date = 1874.11.16
+#	traits = {
+#		explorer
+#		experienced_naval_commander
+#	}
+#	commander_usage = {
+#		country_trigger = {
+#			exists = c:RUS
+#			this = c:RUS
+#		}
+#		role = admiral
+#		earliest_usage_date = 1906.1.1
+#		latest_usage_date = 1936.1.1
+#		chance = 50
+#	}
+#}
 
 # Savinkov was terrorist
 # Kill Vyacheslav von Plehve and  Grand Duke Sergei Alexandrovich of Russia
@@ -941,41 +912,41 @@ RUS_nikolai_ostrovsky = {
 }
 
 ## Anton Chekhov
-RUS_anton_chekhov = {
-	first_name = ecchi_Anton
-	last_name = ecchi_Chekhov
-	historical = yes
-	culture = cu:russian
-	home_region = STATE_ROSTOV
-	female = no
-	religion = rel:orthodox
-	ideology = ideology_liberal_leader
-	interest_group = ig_rural_folk
-	dna = dna_anton_chekhov
-	birth_date = 1860.1.29
-	traits = {
-		literary
-		innovative
-		sickly
-	}
-	agitator_usage = {
-		country_trigger = {
-			has_state_in_state_region = STATE_ROSTOV
-			NOT = {
-				country_average_cultural_acceptance = {
-					target = cu:russian
-					value < acceptance_status_4
-				}
-			}
-		}
-		interest_group_trigger = {
-			is_interest_group_type = ig_rural_folk
-		}
-		earliest_usage_date = 1880.1.1
-		latest_usage_date = 1904.7.15
-		chance = 55
-	}
-}
+#RUS_anton_chekhov = {
+#	first_name = ecchi_Anton
+#	last_name = ecchi_Chekhov
+#	historical = yes
+#	culture = cu:russian
+#	home_region = STATE_ROSTOV
+#	female = no
+#	religion = rel:orthodox
+#	ideology = ideology_liberal_leader
+#	interest_group = ig_rural_folk
+#	dna = dna_anton_chekhov
+#	birth_date = 1860.1.29
+#	traits = {
+#		literary
+#		innovative
+#		sickly
+#	}
+#	agitator_usage = {
+#		country_trigger = {
+#			has_state_in_state_region = STATE_ROSTOV
+#			NOT = {
+#				country_average_cultural_acceptance = {
+#					target = cu:russian
+#					value < acceptance_status_4
+#				}
+#			}
+#		}
+#		interest_group_trigger = {
+#			is_interest_group_type = ig_rural_folk
+#		}
+#		earliest_usage_date = 1880.1.1
+#		latest_usage_date = 1904.7.15
+#		chance = 55
+#	}
+#}
 
 ## Semyon Budyonny
 RUS_semyon_budyonny = {
@@ -985,13 +956,13 @@ RUS_semyon_budyonny = {
 	culture = cu:russian
 	home_region = STATE_ROSTOV
 	religion = rel:orthodox
-	ideology = ideology_communist
+	ideology = ideology_vanguardist
 	interest_group = ig_rural_folk
 	dna = dna_semyon_budyonny
 	birth_date = 1883.4.25
 	traits = {
 		ambitious
-		mountain_commander
+		expert_cavalry_commander
 	}
 	commander_rank = default
 	commander_usage = {

@@ -27,36 +27,36 @@ ecchi_que_lambton = {
     }
 }
 
-ecchi_que_nelson = {
-    first_name = Robert
-    last_name = Nelson
-    historical = yes
-    culture = cu:franco_canadian
-    home_region = STATE_QUEBEC
-
-    religion = rel:catholic
-    ideology = ideology_radical
-    interest_group = ig_rural_folk
-	dna = ecchi_dna_robert_nelson
-    birth_date = 1794.8.8
-    traits = { persistent reckless ambitious }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:QUE
-            this = c:QUE
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            OR = {
-                is_interest_group_type = ig_rural_folk
-                is_interest_group_type = ig_intelligentsia
-            }
-        }
-        earliest_usage_date = 1836.1.1
-        latest_usage_date = 1873.3.1
-        chance = 65
-    }
-}
+#ecchi_que_nelson = {
+#    first_name = Robert
+#    last_name = Nelson
+#    historical = yes
+#    culture = cu:franco_canadian
+#    home_region = STATE_QUEBEC
+#
+#    religion = rel:catholic
+#    ideology = ideology_radical
+#    interest_group = ig_rural_folk
+#	dna = ecchi_dna_robert_nelson
+#    birth_date = 1794.8.8
+#    traits = { persistent reckless ambitious }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            exists = c:QUE
+#            this = c:QUE
+#        }
+#        interest_group_trigger = {
+#            ig_counts_as_marginal = no
+#            OR = {
+#                is_interest_group_type = ig_rural_folk
+#                is_interest_group_type = ig_intelligentsia
+#            }
+#        }
+#        earliest_usage_date = 1836.1.1
+#        latest_usage_date = 1873.3.1
+#        chance = 65
+#    }
+#}
 
 ecchi_que_bowen = {
     first_name = Edward
@@ -89,36 +89,36 @@ ecchi_que_bowen = {
     }
 }
 
-ecchi_que_cartier = {
-    first_name = ecchi_George-Etienne
-    last_name = Cartier
-    historical = yes
-    culture = cu:franco_canadian
-    home_region = STATE_QUEBEC
-
-    religion = rel:catholic
-    ideology = ideology_republican_leader
-    interest_group = ig_petty_bourgeoisie
-	dna = ecchi_dna_george_etienne_cartier
-    birth_date = 1814.9.6
-    traits = { kidney_stones tactful romantic }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:QUE
-            this = c:QUE
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            OR = {
-                is_interest_group_type = ig_petty_bourgeoisie
-                is_interest_group_type = ig_intelligentsia
-            }
-        }
-        earliest_usage_date = 1838.1.1
-        latest_usage_date = 1873.5.20
-        chance = 65
-    }
-}
+#ecchi_que_cartier = {
+#    first_name = ecchi_George-Etienne
+#    last_name = Cartier
+#    historical = yes
+#    culture = cu:franco_canadian
+#    home_region = STATE_QUEBEC
+#
+#    religion = rel:catholic
+#    ideology = ideology_republican_leader
+#    interest_group = ig_petty_bourgeoisie
+#	dna = ecchi_dna_george_etienne_cartier
+#    birth_date = 1814.9.6
+#    traits = { kidney_stones tactful romantic }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            exists = c:QUE
+#            this = c:QUE
+#        }
+#        interest_group_trigger = {
+#            ig_counts_as_marginal = no
+#            OR = {
+#                is_interest_group_type = ig_petty_bourgeoisie
+#                is_interest_group_type = ig_intelligentsia
+#            }
+#        }
+#        earliest_usage_date = 1838.1.1
+#        latest_usage_date = 1873.5.20
+#        chance = 65
+#    }
+#}
 
 ## Ezekiel Hart
 
@@ -455,32 +455,32 @@ ecchi_ont_johnson = {
 
 ## John Strachan
 
-ecchi_ont_strachan = {
-    first_name = John
-    last_name = ecchi_Strachan
-    historical = yes
-    culture = cu:anglo_canadian
-    home_region = STATE_ONTARIO
-
-    religion = rel:protestant
-    ideology = ideology_humanitarian
-    interest_group = ig_devout
-    dna = ecchi_dna_john_strachan
-    birth_date = 1778.4.12
-    traits = { erudite imposing pious }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:ONT
-            this = c:ONT
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_devout
-        }
-        earliest_usage_date = 1812.1.1
-        latest_usage_date = 1867.11.1
-        chance = 65
-    }
-}
+#ecchi_ont_strachan = {
+#    first_name = John
+#    last_name = ecchi_Strachan
+#    historical = yes
+#    culture = cu:anglo_canadian
+#    home_region = STATE_ONTARIO
+#
+#    religion = rel:protestant
+#    ideology = ideology_humanitarian
+#    interest_group = ig_devout
+#    dna = ecchi_dna_john_strachan
+#    birth_date = 1778.4.12
+#    traits = { erudite imposing pious }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            exists = c:ONT
+#            this = c:ONT
+#        }
+#        interest_group_trigger = {
+#            is_interest_group_type = ig_devout
+#        }
+#        earliest_usage_date = 1812.1.1
+#        latest_usage_date = 1867.11.1
+#        chance = 65
+#    }
+#}
 
 ## James Morrow Walsh
 
@@ -556,64 +556,64 @@ ecchi_ont_steele = {
 
 # Canada
 
-ecchi_can_macdonald = {
-    first_name = ecchi_John_A
-    last_name = Macdonald
-    historical = yes
-    culture = cu:anglo_canadian
-    home_region = STATE_ONTARIO
+#ecchi_can_macdonald = {
+#    first_name = ecchi_John_A
+#    last_name = Macdonald
+#    historical = yes
+#    culture = cu:anglo_canadian
+#    home_region = STATE_ONTARIO
+#
+#    religion = rel:protestant
+#    ideology = ideology_republican_leader
+#    interest_group = ig_petty_bourgeoisie
+#	dna = ecchi_dna_john_a_macdonald
+#    birth_date = 1815.1.10
+#    traits = { expert_political_operator tactful bigoted }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            exists = c:CAN
+#            this = c:CAN
+#        }
+#        interest_group_trigger = {
+#            ig_counts_as_marginal = no
+#            is_interest_group_type = ig_petty_bourgeoisie
+#        }
+#        earliest_usage_date = 1844.1.1
+#        latest_usage_date = 1891.6.6
+#        chance = 65
+#    }
+#}
 
-    religion = rel:protestant
-    ideology = ideology_republican_leader
-    interest_group = ig_petty_bourgeoisie
-	dna = ecchi_dna_john_a_macdonald
-    birth_date = 1815.1.10
-    traits = { expert_political_operator tactful bigoted }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:CAN
-            this = c:CAN
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            is_interest_group_type = ig_petty_bourgeoisie
-        }
-        earliest_usage_date = 1844.1.1
-        latest_usage_date = 1891.6.6
-        chance = 65
-    }
-}
-
-ecchi_can_laurier = {
-    first_name = ecchi_Wilfrid
-    last_name = ecchi_Laurier
-    historical = yes
-    culture = cu:anglo_canadian
-    home_region = STATE_QUEBEC
-
-    religion = rel:protestant
-    ideology = ideology_moderate
-    interest_group = ig_intelligentsia
-	dna = ecchi_dna_wilfrid_laurier
-    birth_date = 1841.11.20
-    traits = { tactful experienced_diplomat expert_political_operator }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:CAN
-            this = c:CAN
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            OR = {
-                is_interest_group_type = ig_intelligentsia
-                is_interest_group_type = ig_rural_folk
-            }
-        }
-        earliest_usage_date = 1874.1.1
-        latest_usage_date = 1891.6.6
-        chance = 65
-    }
-}
+#ecchi_can_laurier = {
+#    first_name = ecchi_Wilfrid
+#    last_name = ecchi_Laurier
+#    historical = yes
+#    culture = cu:anglo_canadian
+#    home_region = STATE_QUEBEC
+#
+#    religion = rel:protestant
+#    ideology = ideology_moderate
+#    interest_group = ig_intelligentsia
+#	dna = ecchi_dna_wilfrid_laurier
+#    birth_date = 1841.11.20
+#    traits = { tactful experienced_diplomat expert_political_operator }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            exists = c:CAN
+#            this = c:CAN
+#        }
+#        interest_group_trigger = {
+#            ig_counts_as_marginal = no
+#            OR = {
+#                is_interest_group_type = ig_intelligentsia
+#                is_interest_group_type = ig_rural_folk
+#            }
+#        }
+#        earliest_usage_date = 1874.1.1
+#        latest_usage_date = 1891.6.6
+#        chance = 65
+#    }
+#}
 
 ecchi_can_king = {
     first_name = Mackenzie

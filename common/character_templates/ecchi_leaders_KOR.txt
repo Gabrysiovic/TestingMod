@@ -198,3 +198,62 @@ ecchi_kor_hak_yu = {
         chance = 100
     }
 }
+
+# Seo Jae-pil
+# Independent newspaper and Independence Club from 1896; democratic reform, US Protestant conversion. Survived to 1951.
+# Source: https://contents.history.go.kr/mobile/kc/view.do?levelId=kc_n401500
+ecchi_kor_seo_jae_pil = {
+    first_name = ecchi_Jae_pil
+    last_name = ecchi_Seo
+    historical = yes
+    is_agitator = yes
+    culture = cu:korean
+    religion = rel:protestant
+    home_region = STATE_SEOUL
+    ideology = ideology_radical
+    interest_group = ig_intelligentsia
+    dna = ecchi_dna_kor_seo_jae_pil
+    birth_date = 1864.1.17
+    traits = { literary innovative }
+    agitator_usage = {
+        country_trigger = {
+            has_state_in_state_region = STATE_SEOUL
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1896.1.1
+        latest_usage_date = 1936.1.1
+        chance = 65
+    }
+}
+
+# An Jung-geun
+# Anti-colonial resistance from 1907 and Catholic faith; sovereignty rather than racial exclusion.
+# Source: https://www.korea.net/NewsFocus/Culture/view?articleId=129419
+ecchi_kor_an_jung_geun = {
+    first_name = ecchi_Jung_geun
+    last_name = ecchi_An
+    historical = yes
+    is_agitator = yes
+    culture = cu:korean
+    religion = rel:catholic
+    home_region = STATE_SARIWON
+    ideology = ideology_sovereignist_leader
+    interest_group = ig_intelligentsia
+    dna = ecchi_dna_kor_an_jung_geun
+    birth_date = 1879.9.2
+    # age = 30
+    traits = { brave pious }
+    agitator_usage = {
+        country_trigger = {
+            has_state_in_state_region = STATE_SARIWON
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1907.1.1
+        latest_usage_date = 1910.3.26
+        chance = 65
+    }
+}

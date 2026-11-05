@@ -183,30 +183,30 @@ ecchi_chi_zhang_jian = {
 ## Ilibu
 
 ecchi_chi_ilibu = {
-    first_name = ecchi_Ilibu
-    home_region = STATE_SOUTHERN_MANCHURIA
-    last_name = Aisin_Gioro
-    historical = yes
-    culture = cu:manchu
+   first_name = ecchi_Ilibu
+   home_region = STATE_SOUTHERN_MANCHURIA
+   last_name = Aisin_Gioro
+   historical = yes
+   culture = cu:manchu
 
-    ideology = ideology_traditionalist
-    interest_group = ig_armed_forces
-    ig_leader = yes
-    dna = ecchi_dna_ilibu
-    birth_date = 1772.1.1
-    traits = { experienced_defensive_strategist persistent pillager opium_addiction }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:CHI
-            this = c:CHI
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_armed_forces
-        }
-        earliest_usage_date = 1801.1.1
-        latest_usage_date = 1843.3.4
-        chance = 100
-    }
+   ideology = ideology_traditionalist
+   interest_group = ig_armed_forces
+   ig_leader = yes
+   dna = ecchi_dna_ilibu
+   birth_date = 1772.1.1
+   traits = { experienced_defensive_strategist persistent pillager opium_addiction }
+   interest_group_leader_usage = {
+       country_trigger = {
+           exists = c:CHI
+           this = c:CHI
+       }
+       interest_group_trigger = {
+           is_interest_group_type = ig_armed_forces
+       }
+       earliest_usage_date = 1801.1.1
+       latest_usage_date = 1843.3.4
+       chance = 100
+   }
 }
 
 ## Zhao Sanduo
@@ -567,7 +567,7 @@ ecchi_chi_cai_yuanpei = {
     interest_group = ig_intelligentsia
 	dna = ecchi_dna_cai_yuanpei
     birth_date = 1868.1.11
-    traits = { romantic innovative }
+    traits = { romantic innovative tolerant }
     interest_group_leader_usage = {
         country_trigger = {
             AND = {
@@ -624,7 +624,7 @@ ecchi_chi_hu_shih = {
     interest_group = ig_intelligentsia
 	dna = ecchi_dna_hu_shih
     birth_date = 1891.12.17
-    traits = { romantic reserved }
+    traits = { romantic reserved tolerant }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:CHI
@@ -1105,7 +1105,7 @@ ecchi_chi_mao_zedong = {
     historical = yes
     culture = cu:han
 
-    ideology = ideology_communist
+    ideology = ideology_vanguardist
     interest_group = ig_rural_folk
 	dna = ecchi_dna_mao_zedong
     birth_date = 1893.12.26
@@ -1144,7 +1144,7 @@ ecchi_chi_li_dazhao = {
     historical = yes
     culture = cu:han
 
-    ideology = ideology_communist
+    ideology = ideology_communist_leader
     interest_group = ig_intelligentsia
 	dna = ecchi_dna_li_dazhao
     birth_date = 1889.10.29
@@ -1184,7 +1184,7 @@ ecchi_chi_chen_duxiu = {
     historical = yes
     culture = cu:han
 
-    ideology = ideology_communist
+    ideology = ideology_communist_leader
     interest_group = ig_intelligentsia
 	dna = ecchi_dna_chen_duxiu
     birth_date = 1879.10.8
@@ -1224,7 +1224,7 @@ ecchi_chi_zhu_de = {
     historical = yes
     culture = cu:han
 
-    ideology = ideology_communist
+    ideology = ideology_vanguardist
     interest_group = ig_armed_forces
 	dna = ecchi_dna_zhu_de
     birth_date = 1886.12.1
@@ -1254,36 +1254,36 @@ ecchi_chi_zhu_de = {
 
 # China - rebels and rural leaders
 
-ecchi_tpg_hong_xiuquan = {
-    first_name = Xiuquan
-    last_name = Hong
-    home_region = STATE_GUANGDONG
-    historical = yes
-    culture = cu:hakka
-
-    religion = rel:protestant
-    ideology = ideology_theocrat
-    interest_group = ig_devout
-	dna = ecchi_dna_hong_xiuquan
-    birth_date = 1814.1.1
-    traits = { pious romantic popular_commander psychological_affliction }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:TPG
-            this = c:TPG
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            OR = {
-                is_interest_group_type = ig_devout
-                is_interest_group_type = ig_rural_folk
-            }
-        }
-        earliest_usage_date = 1850.1.1
-        latest_usage_date = 1864.6.1
-        chance = 65
-    }
-}
+#ecchi_tpg_hong_xiuquan = {
+#    first_name = Xiuquan
+#    last_name = Hong
+#    home_region = STATE_GUANGDONG
+#    historical = yes
+#    culture = cu:hakka
+#
+#    religion = rel:protestant
+#    ideology = ideology_theocrat
+#    interest_group = ig_devout
+#	dna = ecchi_dna_hong_xiuquan
+#    birth_date = 1814.1.1
+#    traits = { pious romantic popular_commander psychological_affliction }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            exists = c:TPG
+#            this = c:TPG
+#        }
+#        interest_group_trigger = {
+#            ig_counts_as_marginal = no
+#            OR = {
+#                is_interest_group_type = ig_devout
+#                is_interest_group_type = ig_rural_folk
+#            }
+#        }
+#        earliest_usage_date = 1850.1.1
+#        latest_usage_date = 1864.6.1
+#        chance = 65
+#    }
+#}
 
 ecchi_chi_cao_futian = {
     first_name = ecchi_Futian
@@ -1455,7 +1455,7 @@ ecchi_chi_lu_xun = {
     historical = yes
     culture = cu:han
 
-    ideology = ideology_social_democrat
+    ideology = ideology_state_socialist
     interest_group = ig_intelligentsia
 	dna = ecchi_dna_lu_xun
     birth_date = 1881.9.25
@@ -1685,33 +1685,33 @@ ecchi_chi_lin_huiyin = {
 }
 
 ## Kung Te-cheng
-ecchi_chi_kung_techeng = {
-    first_name = ecchi_Techeng
-    last_name = ecchi_Kung
-    home_region = STATE_SHANDONG
-    historical = yes
-    culture = cu:han
-
-    ideology = ideology_moderate
-    interest_group = ig_devout
-    # dna = ecchi_dna_kung_techeng
-    birth_date = 1920.2.23
-    traits = { innovative }
-    interest_group_leader_usage = {
-        country_trigger = {
-            NOT = {
-                country_average_cultural_acceptance = { target = cu:han value < acceptance_status_4 }
-            }
-            has_state_in_state_region = STATE_SHANDONG
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_devout
-        }
-        earliest_usage_date = 1930.1.1
-        latest_usage_date = 2008.10.28
-        chance = 45
-    }
-}
+#ecchi_chi_kung_techeng = {
+#    first_name = ecchi_Techeng
+#    last_name = ecchi_Kung
+#    home_region = STATE_SHANDONG
+#    historical = yes
+#    culture = cu:han
+#
+#    ideology = ideology_moderate
+#    interest_group = ig_devout
+#    # dna = ecchi_dna_kung_techeng
+#    birth_date = 1920.2.23
+#    traits = { innovative }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            NOT = {
+#                country_average_cultural_acceptance = { target = cu:han value < acceptance_status_4 }
+#            }
+#            has_state_in_state_region = STATE_SHANDONG
+#        }
+#        interest_group_trigger = {
+#            is_interest_group_type = ig_devout
+#        }
+#        earliest_usage_date = 1930.1.1
+#        latest_usage_date = 2008.10.28
+#        chance = 45
+#    }
+#}
 
 ## Zhu Yuxun
 ecchi_chi_zhu_yuxun = {

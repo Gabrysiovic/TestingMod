@@ -1,120 +1,60 @@
 ﻿# Cuba
 
-ecchi_cub_de_cespedes = {
-    first_name = ecchi_Carlos_Manuel
-    last_name = de_Cespedes
-    historical = yes
-    culture = cu:caribeno
-
-    religion = rel:catholic
-    ideology = ideology_abolitionist
-    interest_group = ig_landowners
-	dna = ecchi_dna_carlos_manuel_de_cespedes
-    birth_date = 1819.4.18
-    traits = { arrogant persistent forest_commander }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:CUB
-            this = c:CUB
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            OR = {
-                is_interest_group_type = ig_landowners
-                is_interest_group_type = ig_petty_bourgeoisie
-            }
-        }
-        earliest_usage_date = 1865.1.1
-        latest_usage_date = 1874.2.27
-        chance = 65
-    }
-}
-
-ecchi_cub_marti = {
-    first_name = ecchi_Jose
-    last_name = ecchi_Marti
-    historical = yes
-    culture = cu:caribeno
-
-    religion = rel:catholic
-    ideology = ideology_reformer
-    interest_group = ig_intelligentsia
-	dna = ecchi_dna_jose_marti
-    birth_date = 1853.1.28
-    traits = { romantic brave reckless }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:CUB
-            this = c:CUB
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            OR = {
-                is_interest_group_type = ig_intelligentsia
-                is_interest_group_type = ig_rural_folk
-            }
-        }
-        earliest_usage_date = 1875.1.1
-        latest_usage_date = 1895.5.19
-        chance = 65
-    }
-}
-
 ## Antonio Maceo
 
-ecchi_cub_maceo = {
-    first_name = ecchi_Jose_Antonio
-    last_name = ecchi_Maceo
-    historical = yes
-    culture = cu:caribeno
-
-    religion = rel:catholic
-    ideology = ideology_jingoist_leader
-    interest_group = ig_armed_forces
-    dna = ecchi_dna_antonio_maceo
-    birth_date = 1845.6.14
-    traits = { forest_commander brave reckless }
-    commander_rank = default
-    commander_usage = {
-        country_trigger = {
-            has_state_in_state_region = STATE_WESTERN_CUBA
-			NOT = {
-				country_average_cultural_acceptance = { target = cu:caribeno value < acceptance_status_4 }
-			}
-        }
-        role = general
-        earliest_usage_date = 1868.1.1
-        latest_usage_date = 1896.12.7
-        chance = 55
-    }
-}
+#ecchi_cub_maceo = {
+#    first_name = ecchi_Jose_Antonio
+#    last_name = ecchi_Maceo
+#    historical = yes
+#    culture = cu:caribeno
+#
+#    religion = rel:catholic
+#    ideology = ideology_jingoist_leader
+#    interest_group = ig_armed_forces
+#    dna = ecchi_dna_antonio_maceo
+#    birth_date = 1845.6.14
+#    traits = { forest_commander brave reckless }
+#    commander_rank = default
+#    commander_usage = {
+#        country_trigger = {
+#            has_state_in_state_region = STATE_WESTERN_CUBA
+#			NOT = {
+#				country_average_cultural_acceptance = { target = cu:caribeno value < acceptance_status_4 }
+#			}
+#        }
+#        role = general
+#        earliest_usage_date = 1868.1.1
+#        latest_usage_date = 1896.12.7
+#        chance = 55
+#    }
+#}
 
 ## Máximo Goméz
 
-ecchi_cub_gomez = {
-    first_name = ecchi_Maximo
-    last_name = ecchi_Gomez
-    historical = yes
-    culture = cu:caribeno
-
-    religion = rel:catholic
-    ideology = ideology_jingoist_leader
-    interest_group = ig_armed_forces
-    dna = ecchi_dna_maximo_gomez
-    birth_date = 1836.11.18
-    traits = { brave reckless persistent }
-    commander_rank = default
-    commander_usage = {
-        country_trigger = {
-            exists = c:CUB
-            this = c:CUB
-        }
-        role = general
-        earliest_usage_date = 1868.1.1
-        latest_usage_date = 1902.5.1
-        chance = 65
-    }
-}
+#ecchi_cub_gomez = {
+#    first_name = ecchi_Maximo
+#    last_name = ecchi_Gomez
+#    historical = yes
+#    culture = cu:caribeno
+#
+#    religion = rel:catholic
+#    ideology = ideology_jingoist_leader
+#    interest_group = ig_armed_forces
+#    dna = ecchi_dna_maximo_gomez
+#    birth_date = 1836.11.18
+#    traits = { brave reckless persistent }
+#    commander_rank = default
+#    commander_usage = {
+#        country_trigger = {
+#            exists = c:CUB
+#            this = c:CUB
+#        }
+#        role = general
+#        earliest_usage_date = 1868.1.1
+#        latest_usage_date = 1902.5.1
+#        chance = 65
+#    }
+#}
 
 ## Calixto García
 
@@ -154,7 +94,7 @@ ecchi_cub_mella = {
     culture = cu:caribeno
 
     religion = rel:catholic
-    ideology = ideology_communist
+    ideology = ideology_communist_leader
     interest_group = ig_trade_unions
     dna = ecchi_dna_julio_antonio_mella
     birth_date = 1903.3.25
@@ -303,35 +243,35 @@ ecchi_cub_villate = {
 
 # Haiti
 
-ecchi_hai_soulouque = {
-    first_name = Faustin
-    last_name = Soulouque
-    historical = yes
-    culture = cu:afro_caribeno
-
-    religion = rel:animist #Vodou
-    ideology = ideology_royalist
-    interest_group = ig_rural_folk
-	dna = ecchi_dna_faustin_soulouque
-    birth_date = 1782.8.15
-    traits = { wrathful ambitious imperious }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:HAI
-            this = c:HAI
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            OR = {
-                is_interest_group_type = ig_rural_folk
-                is_interest_group_type = ig_armed_forces
-            }
-        }
-        earliest_usage_date = 1845.1.1
-        latest_usage_date = 1867.8.3
-        chance = 65
-    }
-}
+#ecchi_hai_soulouque = {
+#    first_name = Faustin
+#    last_name = Soulouque
+#    historical = yes
+#    culture = cu:afro_caribeno
+#
+#    religion = rel:animist #Vodou
+#    ideology = ideology_royalist
+#    interest_group = ig_rural_folk
+#	dna = ecchi_dna_faustin_soulouque
+#    birth_date = 1782.8.15
+#    traits = { wrathful ambitious imperious }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            exists = c:HAI
+#            this = c:HAI
+#        }
+#        interest_group_trigger = {
+#            ig_counts_as_marginal = no
+#            OR = {
+#                is_interest_group_type = ig_rural_folk
+#                is_interest_group_type = ig_armed_forces
+#            }
+#        }
+#        earliest_usage_date = 1845.1.1
+#        latest_usage_date = 1867.8.3
+#        chance = 65
+#    }
+#}
 
 ecchi_hai_pierrot = {
     first_name = Jean-Louis

@@ -1,125 +1,125 @@
 ﻿# Peru
 
-ecchi_peu_bermudez = {
-    first_name = ecchi_Pedro_Pablo
-    last_name = ecchi_Bermudez
-    historical = yes
-    culture = cu:south_andean
-    home_region = STATE_LIMA
+#ecchi_peu_bermudez = {
+#    first_name = ecchi_Pedro_Pablo
+#    last_name = ecchi_Bermudez
+#    historical = yes
+#    culture = cu:south_andean
+#    home_region = STATE_LIMA
+#
+#    religion = rel:catholic
+#    ideology = ideology_jingoist_leader
+#    interest_group = ig_armed_forces
+#	dna = ecchi_dna_pedro_pablo_bermudez
+#    birth_date = 1793.6.27
+#    traits = { reckless mountain_commander ambitious }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            exists = c:PEU
+#            this = c:PEU
+#        }
+#        interest_group_trigger = {
+#            is_interest_group_type = ig_armed_forces
+#        }
+#        earliest_usage_date = 1836.1.1
+#        latest_usage_date = 1852.3.30
+#        chance = 65
+#    }
+#}
 
-    religion = rel:catholic
-    ideology = ideology_jingoist_leader
-    interest_group = ig_armed_forces
-	dna = ecchi_dna_pedro_pablo_bermudez
-    birth_date = 1793.6.27
-    traits = { reckless mountain_commander ambitious }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:PEU
-            this = c:PEU
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_armed_forces
-        }
-        earliest_usage_date = 1836.1.1
-        latest_usage_date = 1852.3.30
-        chance = 65
-    }
-}
+#ecchi_peu_salaverry = {
+#    first_name = ecchi_Felipe_Santiago
+#    last_name = Salaverry
+#    historical = yes
+#    culture = cu:south_andean
+#    home_region = STATE_LIMA
+#
+#    religion = rel:catholic
+#    ideology = ideology_slaver
+#    interest_group = ig_armed_forces
+#	dna = ecchi_dna_felipe_santiago_salaverry
+#    birth_date = 1806.5.3
+#    traits = { resupply_commander ambitious imperious }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            exists = c:PEU
+#            this = c:PEU
+#        }
+#        interest_group_trigger = {
+#            ig_counts_as_marginal = no
+#            OR = {
+#                is_interest_group_type = ig_armed_forces
+#                is_interest_group_type = ig_landowners
+#            }
+#        }
+#        earliest_usage_date = 1836.1.1
+#        latest_usage_date = 1836.2.19
+#        chance = 65
+#    }
+#}
 
-ecchi_peu_salaverry = {
-    first_name = ecchi_Felipe_Santiago
-    last_name = Salaverry
-    historical = yes
-    culture = cu:south_andean
-    home_region = STATE_LIMA
+#ecchi_peu_gamarra = {
+#    first_name = Agustin
+#    last_name = Gamarra
+#    historical = yes
+#    culture = cu:south_andean
+#    home_region = STATE_AREQUIPA
+#
+#    religion = rel:catholic
+#    ideology = ideology_jingoist_leader
+#    interest_group = ig_armed_forces
+#	dna = ecchi_dna_agustin_gamarra
+#    birth_date = 1785.8.27
+#    traits = { basic_offensive_planner persistent }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            exists = c:PEU
+#            this = c:PEU
+#        }
+#        interest_group_trigger = {
+#            ig_counts_as_marginal = no
+#            OR = {
+#                is_interest_group_type = ig_armed_forces
+#                is_interest_group_type = ig_rural_folk
+#            }
+#        }
+#        earliest_usage_date = 1836.1.1
+#        latest_usage_date = 1841.11.21
+#        chance = 65
+#    }
+#}
 
-    religion = rel:catholic
-    ideology = ideology_slaver
-    interest_group = ig_armed_forces
-	dna = ecchi_dna_felipe_santiago_salaverry
-    birth_date = 1806.5.3
-    traits = { resupply_commander ambitious imperious }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:PEU
-            this = c:PEU
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            OR = {
-                is_interest_group_type = ig_armed_forces
-                is_interest_group_type = ig_landowners
-            }
-        }
-        earliest_usage_date = 1836.1.1
-        latest_usage_date = 1836.2.19
-        chance = 65
-    }
-}
-
-ecchi_peu_gamarra = {
-    first_name = Agustin
-    last_name = Gamarra
-    historical = yes
-    culture = cu:south_andean
-    home_region = STATE_AREQUIPA
-
-    religion = rel:catholic
-    ideology = ideology_jingoist_leader
-    interest_group = ig_armed_forces
-	dna = ecchi_dna_agustin_gamarra
-    birth_date = 1785.8.27
-    traits = { basic_offensive_planner persistent }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:PEU
-            this = c:PEU
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            OR = {
-                is_interest_group_type = ig_armed_forces
-                is_interest_group_type = ig_rural_folk
-            }
-        }
-        earliest_usage_date = 1836.1.1
-        latest_usage_date = 1841.11.21
-        chance = 65
-    }
-}
-
-ecchi_peu_de_san_roman = {
-    first_name = Miguel
-    last_name = ecchi_de_San_Roman
-    historical = yes
-    culture = cu:south_andean
-    home_region = STATE_AREQUIPA
-
-    religion = rel:catholic
-    ideology = ideology_moderate
-    interest_group = ig_armed_forces
-	dna = ecchi_dna_miguel_de_san_roman
-    birth_date = 1802.5.17
-    traits = { traditionalist_commander surveyor }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:PEU
-            this = c:PEU
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            OR = {
-                is_interest_group_type = ig_armed_forces
-                is_interest_group_type = ig_rural_folk
-                is_interest_group_type = ig_intelligentsia
-            }
-        }
-        earliest_usage_date = 1845.1.1
-        latest_usage_date = 1863.4.3
-        chance = 65
-    }
-}
+#ecchi_peu_de_san_roman = {
+#    first_name = Miguel
+#    last_name = ecchi_de_San_Roman
+#    historical = yes
+#    culture = cu:south_andean
+#    home_region = STATE_AREQUIPA
+#
+#    religion = rel:catholic
+#    ideology = ideology_moderate
+#    interest_group = ig_armed_forces
+#	dna = ecchi_dna_miguel_de_san_roman
+#    birth_date = 1802.5.17
+#    traits = { traditionalist_commander surveyor }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            exists = c:PEU
+#            this = c:PEU
+#        }
+#        interest_group_trigger = {
+#            ig_counts_as_marginal = no
+#            OR = {
+#                is_interest_group_type = ig_armed_forces
+#                is_interest_group_type = ig_rural_folk
+#                is_interest_group_type = ig_intelligentsia
+#            }
+#        }
+#        earliest_usage_date = 1845.1.1
+#        latest_usage_date = 1863.4.3
+#        chance = 65
+#    }
+#}
 
 ecchi_peu_prado = {
     first_name = ecchi_Leoncio
@@ -152,6 +152,67 @@ ecchi_peu_prado = {
         role = general
         earliest_usage_date = 1874.1.1
         latest_usage_date = 1883.7.15
+        chance = 65
+    }
+}
+
+# Clorinda Matto de Turner
+# Aves sin nido (1889), indigenous rights and female education. BNP confirms birth year 1852, not 1854. Cusco lies in the game's southern Peru region.
+# Source: https://www.gob.pe/institucion/bnp/noticias/1057386-bnp-se-cumplen-172-anos-del-nacimiento-de-clorinda-matto-de-turner
+ecchi_peu_clorinda_matto = {
+    first_name = ecchi_Clorinda
+    last_name = ecchi_Matto_de_Turner
+    historical = yes
+    female = yes
+    is_agitator = yes
+    culture = cu:south_andean
+    religion = rel:catholic
+    home_region = STATE_AREQUIPA
+    ideology = ideology_humanitarian
+    interest_group = ig_intelligentsia
+    dna = ecchi_dna_peu_clorinda_matto
+    birth_date = 1852.11.11
+    traits = { literary persistent }
+    agitator_usage = {
+        country_trigger = {
+            exists = c:PEU
+            this = c:PEU
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1889.1.1
+        latest_usage_date = 1909.10.25
+        chance = 65
+    }
+}
+
+# José Carlos Mariátegui
+# Returned to Peru in 1923; Marxist thinker, Socialist Party in 1928. Communist rather than an automatic Leninist/vanguardist assignment.
+# Source: https://mariategui.cultura.pe/biografia
+ecchi_peu_jose_carlos_mariategui = {
+    first_name = ecchi_Jose_Carlos
+    last_name = ecchi_Mariategui
+    historical = yes
+    is_agitator = yes
+    culture = cu:south_andean
+    religion = rel:catholic
+    home_region = STATE_AREQUIPA
+    ideology = ideology_communist_leader
+    interest_group = ig_trade_unions
+    dna = ecchi_dna_peu_jose_carlos_mariategui
+    birth_date = 1894.6.14
+    traits = { literary persistent }
+    agitator_usage = {
+        country_trigger = {
+            exists = c:PEU
+            this = c:PEU
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_trade_unions
+        }
+        earliest_usage_date = 1923.1.1
+        latest_usage_date = 1930.4.16
         chance = 65
     }
 }

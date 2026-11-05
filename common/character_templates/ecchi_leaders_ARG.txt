@@ -101,62 +101,62 @@ ecchi_arg_de_san_martin = {
 #    }
 #}
 
-ecchi_arg_sarmiento = {
-    first_name = ecchi_Domingo_Faustino
-    last_name = ecchi_Sarmiento
-    historical = yes
-    culture = cu:platinean
-    home_region = STATE_TUCUMAN
+#ecchi_arg_sarmiento = {
+#    first_name = ecchi_Domingo_Faustino
+#    last_name = ecchi_Sarmiento
+#    historical = yes
+#    culture = cu:platinean
+#    home_region = STATE_TUCUMAN
+#
+#    religion = rel:catholic
+#    ideology = ideology_reformer
+#    interest_group = ig_intelligentsia
+#	dna = ecchi_dna_domingo_faustino_sarmiento
+#    birth_date = 1811.2.15
+#    traits = { romantic charismatic }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            exists = c:ARG
+#            this = c:ARG
+#        }
+#        interest_group_trigger = {
+#            ig_counts_as_marginal = no
+#            OR = {
+#                is_interest_group_type = ig_intelligentsia
+#                is_interest_group_type = ig_rural_folk
+#            }
+#        }
+#        earliest_usage_date = 1862.1.1
+#        latest_usage_date = 1888.9.11
+#        chance = 65
+#    }
+#}
 
-    religion = rel:catholic
-    ideology = ideology_reformer
-    interest_group = ig_intelligentsia
-	dna = ecchi_dna_domingo_faustino_sarmiento
-    birth_date = 1811.2.15
-    traits = { romantic charismatic }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:ARG
-            this = c:ARG
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            OR = {
-                is_interest_group_type = ig_intelligentsia
-                is_interest_group_type = ig_rural_folk
-            }
-        }
-        earliest_usage_date = 1862.1.1
-        latest_usage_date = 1888.9.11
-        chance = 65
-    }
-}
-
-ecchi_arg_roca = {
-    first_name = ecchi_Julio_Argentino
-    last_name = Roca
-    historical = yes
-    culture = cu:platinean
-    home_region = STATE_RIO_NEGRO
-
-    religion = rel:catholic
-    ideology = ideology_jingoist_leader
-    interest_group = ig_armed_forces
-	dna = ecchi_dna_julio_argentino_roca
-    birth_date = 1843.7.17
-    traits = { wrathful plains_commander }
-    commander_rank = default
-    commander_usage = {
-        country_trigger = {
-            exists = c:ARG
-            this = c:ARG
-        }
-        role = general
-        earliest_usage_date = 1877.1.1
-        latest_usage_date = 1914.10.19
-        chance = 65
-    }
-}
+#ecchi_arg_roca = {
+#    first_name = ecchi_Julio_Argentino
+#    last_name = Roca
+#    historical = yes
+#    culture = cu:platinean
+#    home_region = STATE_RIO_NEGRO
+#
+#    religion = rel:catholic
+#    ideology = ideology_jingoist_leader
+#    interest_group = ig_armed_forces
+#	dna = ecchi_dna_julio_argentino_roca
+#    birth_date = 1843.7.17
+#    traits = { wrathful plains_commander }
+#    commander_rank = default
+#    commander_usage = {
+#        country_trigger = {
+#            exists = c:ARG
+#            this = c:ARG
+#        }
+#        role = general
+#        earliest_usage_date = 1877.1.1
+#        latest_usage_date = 1914.10.19
+#        chance = 65
+#    }
+#}
 
 ## Juan Perón
 

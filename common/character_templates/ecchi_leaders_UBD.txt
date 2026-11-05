@@ -29,32 +29,32 @@ ecchi_ubd_von_klot = {
 
 ## Fabian Gottlieb von Bellingshausen
 
-ecchi_ubd_von_bellingshausen = {
-    first_name = ecchi_Fabian_Gottlieb
-    last_name = ecchi_von_Bellingshausen
-    historical = yes
-    culture = cu:east_german
-    home_region = STATE_TALINN
-
-    religion = rel:protestant
-    ideology = ideology_moderate
-    interest_group = ig_armed_forces
-	#dna = mr_net_groen_van_prinsterer_guillaume
-    birth_date = 1778.9.11
-    traits = { direct explorer }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:UBD
-            this = c:UBD
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_armed_forces
-        }
-        earliest_usage_date = 1836.1.1
-        latest_usage_date = 1852.1.13
-        chance = 100
-    }
-}
+#ecchi_ubd_von_bellingshausen = {
+#    first_name = ecchi_Fabian_Gottlieb
+#    last_name = ecchi_von_Bellingshausen
+#    historical = yes
+#    culture = cu:east_german
+#    home_region = STATE_TALINN
+#
+#    religion = rel:protestant
+#    ideology = ideology_moderate
+#    interest_group = ig_armed_forces
+#	#dna = mr_net_groen_van_prinsterer_guillaume
+#    birth_date = 1778.9.11
+#    traits = { direct explorer }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            exists = c:UBD
+#            this = c:UBD
+#        }
+#        interest_group_trigger = {
+#            is_interest_group_type = ig_armed_forces
+#        }
+#        earliest_usage_date = 1836.1.1
+#        latest_usage_date = 1852.1.13
+#        chance = 100
+#    }
+#}
 
 ## Johann Karl Girard de Soucanton
 

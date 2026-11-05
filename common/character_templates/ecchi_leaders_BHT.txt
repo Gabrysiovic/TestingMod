@@ -95,121 +95,121 @@
 #     }
 # }
 
-ecchi_bht_nehru = {
-    first_name = ecchi_Jawaharlal
-    last_name = ecchi_Nehru
-    historical = yes
-    culture = cu:kashmiri
+#ecchi_bht_nehru = {
+#    first_name = ecchi_Jawaharlal
+#    last_name = ecchi_Nehru
+#    historical = yes
+#    culture = cu:kashmiri
+#
+#    religion = rel:hindu
+#    ideology = ideology_republican_leader
+#    interest_group = ig_intelligentsia
+#	dna = ecchi_dna_jawaharlal_nehru
+#    birth_date = 1889.11.14
+#    traits = { masterful_diplomat meticulous direct }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            OR = {
+#                AND = {
+#                    exists = c:BIC
+#                    this = c:BIC
+#                    NOT = {
+#						exists = c:BHT
+#						exists = c:HND
+#					}
+#                }
+#				 AND = {
+#                    exists = c:HND
+#                    this = c:HND
+#                    NOT = { exists = c:BHT }
+#                }
+#                AND = {
+#                    exists = c:BHT
+#                    this = c:BHT
+#                }
+#            }
+#        }
+#        interest_group_trigger = {
+#            ig_counts_as_marginal = no
+#            OR = {
+#                is_interest_group_type = ig_intelligentsia
+#                is_interest_group_type = ig_trade_unions
+#            }
+#        }
+#        earliest_usage_date = 1912.1.1
+#        latest_usage_date = 1964.5.27
+#        chance = 65
+#    }
+#}
 
-    religion = rel:hindu
-    ideology = ideology_republican_leader
-    interest_group = ig_intelligentsia
-	dna = ecchi_dna_jawaharlal_nehru
-    birth_date = 1889.11.14
-    traits = { masterful_diplomat meticulous direct }
-    interest_group_leader_usage = {
-        country_trigger = {
-            OR = {
-                AND = {
-                    exists = c:BIC
-                    this = c:BIC
-                    NOT = {
-						exists = c:BHT
-						exists = c:HND
-					}
-                }
-				 AND = {
-                    exists = c:HND
-                    this = c:HND
-                    NOT = { exists = c:BHT }
-                }
-                AND = {
-                    exists = c:BHT
-                    this = c:BHT
-                }
-            }
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            OR = {
-                is_interest_group_type = ig_intelligentsia
-                is_interest_group_type = ig_trade_unions
-            }
-        }
-        earliest_usage_date = 1912.1.1
-        latest_usage_date = 1964.5.27
-        chance = 65
-    }
-}
+#ecchi_sin_jinnah = {
+#    first_name = Muhammad_Ali
+#    last_name = ecchi_Jinnah
+#    historical = yes
+#    culture = cu:gujarati
+#
+#    religion = rel:sunni
+#    ideology = ideology_republican_leader
+#    interest_group = ig_intelligentsia
+#	dna = ecchi_dna_muhammad_ali_jinnah
+#    birth_date = 1876.12.25
+#    traits = { tactful romantic demagogue }
+#	interest_group_leader_usage = {
+#        country_trigger = {
+#            OR = {
+#				AND = {
+#                    exists = c:KAL
+#                    this = c:KAL
+#                    NOT = {
+#						exists = c:MAK
+#						exists = c:SIN
+#					}
+#                }
+#                AND = {
+#                    exists = c:MAK
+#                    this = c:MAK
+#                    NOT = { exists = c:SIN }
+#                }
+#                AND = {
+#                    exists = c:SIN
+#                    this = c:SIN
+#                }
+#            }
+#        }
+#        interest_group_trigger = {
+#            is_interest_group_type = ig_intelligentsia
+#        }
+#        earliest_usage_date = 1910.1.1
+#        latest_usage_date = 1948.9.11
+#        chance = 65
+#    }
+#}
 
-ecchi_sin_jinnah = {
-    first_name = Muhammad_Ali
-    last_name = ecchi_Jinnah
-    historical = yes
-    culture = cu:gujarati
-
-    religion = rel:sunni
-    ideology = ideology_republican_leader
-    interest_group = ig_intelligentsia
-	dna = ecchi_dna_muhammad_ali_jinnah
-    birth_date = 1876.12.25
-    traits = { tactful romantic demagogue }
-	interest_group_leader_usage = {
-        country_trigger = {
-            OR = {
-				AND = {
-                    exists = c:KAL
-                    this = c:KAL
-                    NOT = {
-						exists = c:MAK
-						exists = c:SIN
-					}
-                }
-                AND = {
-                    exists = c:MAK
-                    this = c:MAK
-                    NOT = { exists = c:SIN }
-                }
-                AND = {
-                    exists = c:SIN
-                    this = c:SIN
-                }
-            }
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_intelligentsia
-        }
-        earliest_usage_date = 1910.1.1
-        latest_usage_date = 1948.9.11
-        chance = 65
-    }
-}
-
-ecchi_gwa_rani = {
-    first_name = ecchi_Lakshmibai # Rani of Jhansi
-    last_name = Newalkar
-    historical = yes
-    culture = cu:marathi
-    female = yes
-    religion = rel:hindu
-    ideology = ideology_royalist
-    interest_group = ig_landowners
-	dna = ecchi_dna_rani_of_jhansi
-    birth_date = 1828.11.19
-    traits = { demagogue inspirational_orator charismatic }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:GWA
-            this = c:GWA
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_landowners
-        }
-        earliest_usage_date = 1855.1.1
-        latest_usage_date = 1858.6.18
-        chance = 65
-    }
-}
+#ecchi_gwa_rani = {
+#    first_name = ecchi_Lakshmibai # Rani of Jhansi
+#    last_name = Newalkar
+#    historical = yes
+#    culture = cu:marathi
+#    female = yes
+#    religion = rel:hindu
+#    ideology = ideology_royalist
+#    interest_group = ig_landowners
+#	dna = ecchi_dna_rani_of_jhansi
+#    birth_date = 1828.11.19
+#    traits = { demagogue inspirational_orator charismatic }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            exists = c:GWA
+#            this = c:GWA
+#        }
+#        interest_group_trigger = {
+#            is_interest_group_type = ig_landowners
+#        }
+#        earliest_usage_date = 1855.1.1
+#        latest_usage_date = 1858.6.18
+#        chance = 65
+#    }
+#}
 
 ecchi_awa_hazrat_mahal = {
     first_name = Hazrat
@@ -353,3 +353,92 @@ ecchi_bht_malaviya = {
 #         chance = 65
 #     }
 # }
+
+# Jyotirao Phule
+# Anti-caste equality and education for women; school founded in 1848.
+# Source: https://www.mjpru.ac.in/AboutMJP.aspx
+ecchi_bht_jyotirao_phule = {
+    first_name = ecchi_Jyotirao
+    last_name = ecchi_Phule
+    historical = yes
+    is_agitator = yes
+    culture = cu:marathi
+    religion = rel:hindu
+    home_region = STATE_BOMBAY
+    ideology = ideology_humanitarian
+    interest_group = ig_intelligentsia
+    dna = ecchi_dna_bht_jyotirao_phule
+    birth_date = 1827.4.11
+    traits = { literary persistent }
+    agitator_usage = {
+        country_trigger = {
+            has_state_in_state_region = STATE_BOMBAY
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1848.1.1
+        latest_usage_date = 1890.11.28
+        chance = 65
+    }
+}
+
+# Savitribai Phule
+# Girls' school founded in 1848; usage starts at age 18. Female educator and anti-caste reformer.
+# Source: https://ramnathkovind.nic.in/pdf/sp231018.pdf
+ecchi_bht_savitribai_phule = {
+    first_name = ecchi_Savitribai
+    last_name = ecchi_Phule
+    historical = yes
+    female = yes
+    is_agitator = yes
+    culture = cu:marathi
+    religion = rel:hindu
+    home_region = STATE_BOMBAY
+    ideology = ideology_feminist
+    interest_group = ig_intelligentsia
+    dna = ecchi_dna_bht_savitribai_phule
+    birth_date = 1831.1.3
+    traits = { literary brave }
+    agitator_usage = {
+        country_trigger = {
+            has_state_in_state_region = STATE_BOMBAY
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1849.1.3
+        latest_usage_date = 1897.3.10
+        chance = 65
+    }
+}
+
+# Begum Rokeya
+# Sultana's Dream published in 1905; school founded in 1909 and later moved to Calcutta. Conventional birthday is not securely documented.
+# Source: https://bmri.co.uk/muslim-heritage/historically-significant-muslim-persons-in-bengal/begum-rokeya/
+ecchi_bht_begum_rokeya = {
+    first_name = ecchi_Rokeya
+    last_name = ecchi_Sakhawat_Hossain
+    historical = yes
+    female = yes
+    is_agitator = yes
+    culture = cu:bengali
+    religion = rel:sunni
+    home_region = STATE_EAST_BENGAL
+    ideology = ideology_feminist
+    interest_group = ig_intelligentsia
+    dna = ecchi_dna_bht_begum_rokeya
+    birth_date = 1880.12.9
+    traits = { literary innovative }
+    agitator_usage = {
+        country_trigger = {
+            has_state_in_state_region = STATE_WEST_BENGAL
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1905.1.1
+        latest_usage_date = 1932.12.9
+        chance = 65
+    }
+}

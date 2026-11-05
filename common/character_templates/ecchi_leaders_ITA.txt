@@ -131,44 +131,44 @@ mr_ita_bugatti_ettore = {
 
 ## Camillo Benso
 
-mr_ita_cavour = {
-    dna = ecchi_dna_ita_cavour
-    first_name = ecchi_Camillo
-    last_name = ecchi_Benso
-    culture = cu:north_italian
-    home_region = STATE_PIEDMONT
-
-    interest_group = ig_industrialists
-    birth_date = 1810.8.10
-    historical = yes
-    ideology = ideology_corporatist_leader
-    religion = rel:catholic
-    traits = {
-        ambitious
-        masterful_diplomat
-		experienced_political_operator
-    }
-    interest_group_leader_usage = {
-        country_trigger = {
-            OR = {
-                AND = {
-                    exists = c:ITA
-                    this = c:ITA
-                    NOT = { exists = c:SAR }
-                }
-                AND = {
-                    exists = c:SAR
-                    this = c:SAR
-                }
-            }
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_industrialists
-        }
-        earliest_usage_date = 1847.1.1
-        latest_usage_date = 1861.6.6
-    }
-}
+#mr_ita_cavour = {
+#    dna = ecchi_dna_ita_cavour
+#    first_name = ecchi_Camillo
+#    last_name = ecchi_Benso
+#    culture = cu:north_italian
+#    home_region = STATE_PIEDMONT
+#
+#    interest_group = ig_industrialists
+#    birth_date = 1810.8.10
+#    historical = yes
+#    ideology = ideology_corporatist_leader
+#    religion = rel:catholic
+#    traits = {
+#        ambitious
+#        masterful_diplomat
+#    }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            OR = {
+#                AND = {
+#                    exists = c:ITA
+#                    this = c:ITA
+#                    NOT = { exists = c:SAR }
+#                }
+#                AND = {
+#                    exists = c:SAR
+#                    this = c:SAR
+#                }
+#            }
+#        }
+#        interest_group_trigger = {
+#            is_interest_group_type = ig_industrialists
+#        }
+#        earliest_usage_date = 1847.1.1
+#        latest_usage_date = 1861.6.6
+#        chance = 80
+#    }
+#}
 
 ## Italo Balbo
 
@@ -269,7 +269,7 @@ mr_ita_togliatti = {
     interest_group = ig_petty_bourgeoisie
     birth_date = 1893.3.26
     historical = yes
-    ideology = ideology_communist
+    ideology = ideology_vanguardist
     traits = {
         charismatic
         masterful_diplomat
@@ -309,7 +309,7 @@ mr_ita_canepa = {
     interest_group = ig_armed_forces
     birth_date = 1908.10.25
     historical = yes
-    ideology = ideology_social_democrat
+    ideology = ideology_state_socialist
     traits = {
         charismatic
         persistent
@@ -471,7 +471,7 @@ ecchi_ita_de_leva_gravina = {
             is_interest_group_type = ig_devout
         }
         earliest_usage_date = 1836.1.1
-        latest_usage_date = 1861.4.31
+        latest_usage_date = 1861.3.31
         chance = 100
     }
 }
@@ -663,7 +663,7 @@ ecchi_ita_statella_di_cassaro = {
     ideology = ideology_royalist
     interest_group = ig_landowners
 	#dna = mr_net_groen_van_prinsterer_guillaume
-    birth_date = 1785.6.31
+    birth_date = 1785.7.31
     traits = { experienced_diplomat basic_political_operator ambitious }
     interest_group_leader_usage = {
         country_trigger = {
@@ -681,30 +681,30 @@ ecchi_ita_statella_di_cassaro = {
 
 ## Giovanni Gentile
 
-ecchi_ita_gentile = {
-    first_name = ecchi_Giovanni
-    last_name = ecchi_Gentile
-    historical = yes
-    culture = cu:south_italian
-    religion = rel:catholic
-    home_region = STATE_SICILY
-    ideology = ideology_fascist
-    interest_group = ig_intelligentsia
-    dna = ecchi_dna_giovanni_gentile
-    birth_date = 1875.5.30
-    traits = { erudite charismatic }
-    interest_group_leader_usage = {
-        country_trigger = {
-            NOT = {
-                country_average_cultural_acceptance = { target = cu:south_italian value < acceptance_status_4 }
-            }
-            has_state_in_state_region = STATE_SICILY
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_intelligentsia
-        }
-        earliest_usage_date = 1914.1.1
-        latest_usage_date = 1944.4.15
-        chance = 80
-    }
-}
+#ecchi_ita_gentile = {
+#    first_name = ecchi_Giovanni
+#    last_name = ecchi_Gentile
+#    historical = yes
+#    culture = cu:south_italian
+#    religion = rel:catholic
+#    home_region = STATE_SICILY
+#    ideology = ideology_fascist
+#    interest_group = ig_intelligentsia
+#    dna = ecchi_dna_giovanni_gentile
+#    birth_date = 1875.5.30
+#    traits = { erudite charismatic }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            NOT = {
+#                country_average_cultural_acceptance = { target = cu:south_italian value < acceptance_status_4 }
+#            }
+#            has_state_in_state_region = STATE_SICILY
+#        }
+#        interest_group_trigger = {
+#            is_interest_group_type = ig_intelligentsia
+#        }
+#        earliest_usage_date = 1914.1.1
+#        latest_usage_date = 1944.4.15
+#        chance = 80
+#    }
+#}

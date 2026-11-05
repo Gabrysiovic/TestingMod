@@ -70,7 +70,7 @@ ecchi_nzl_savage = {
     home_region = STATE_VICTORIA
 
     religion = rel:protestant
-    ideology = ideology_social_democrat
+    ideology = ideology_state_socialist
     interest_group = ig_trade_unions
 	dna = ecchi_dna_michael_joseph_savage
     birth_date = 1872.3.23

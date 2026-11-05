@@ -166,3 +166,32 @@ ecchi_saf_hertzog = {
     }
 }
 
+
+# Sol Plaatje
+# SANNC founding secretary, Tswana writer and opponent of the 1913 Natives Land Act.
+# Source: https://sahistory.org.za/people/solomon-tshekisho-plaatje
+ecchi_saf_plaatje = {
+    first_name = ecchi_Sol
+    last_name = ecchi_Plaatje
+    historical = yes
+    is_agitator = yes
+    culture = cu:tswana
+    religion = rel:protestant
+    home_region = STATE_NORTHERN_CAPE
+    ideology = ideology_humanitarian
+    interest_group = ig_intelligentsia
+    dna = ecchi_dna_saf_plaatje
+    birth_date = 1876.10.9
+    traits = { literary persistent tactful }
+    agitator_usage = {
+        country_trigger = {
+            has_state_in_state_region = STATE_NORTHERN_CAPE
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1912.1.8
+        latest_usage_date = 1932.6.19
+        chance = 65
+    }
+}

@@ -1,88 +1,118 @@
 ﻿# Philippines
 
-ecchi_phi_bonifacio = {
-    first_name = Andres
-    last_name = Bonifacio
-    historical = yes
-    culture = cu:filipino
-    home_region = STATE_LUZON
+#ecchi_phi_aguinaldo = {
+#    first_name = Emilio
+#    last_name = ecchi_Aguinaldo
+#    historical = yes
+#    culture = cu:filipino
+#    home_region = STATE_LUZON
+#
+#    religion = rel:catholic
+#    ideology = ideology_reformer
+#    interest_group = ig_landowners
+#	dna = ecchi_dna_emilio_aguinaldo
+#    birth_date = 1869.3.22
+#    traits = { cruel ambitious tactful basic_diplomat forest_commander }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            exists = c:PHI
+#            this = c:PHI
+#        }
+#        interest_group_trigger = {
+#            ig_counts_as_marginal = no
+#            OR = {
+#                is_interest_group_type = ig_landowners
+#                is_interest_group_type = ig_petty_bourgeoisie
+#                is_interest_group_type = ig_armed_forces
+#            }
+#        }
+#        earliest_usage_date = 1895.1.1
+#        latest_usage_date = 1964.2.6
+#        chance = 65
+#    }
+#}
 
+
+#ecchi_phi_rizal = {
+#    first_name = ecchi_Jose
+#    last_name = Rizal
+#    historical = yes
+#    culture = cu:filipino
+#    home_region = STATE_LUZON
+#
+#    religion = rel:catholic
+#    ideology = ideology_reformer
+#    interest_group = ig_intelligentsia
+#	dna = ecchi_dna_jose_rizal
+#    birth_date = 1861.6.19
+#    traits = { romantic tactful inspirational_orator }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            exists = c:PHI
+#            this = c:PHI
+#        }
+#        interest_group_trigger = {
+#            is_interest_group_type = ig_intelligentsia
+#        }
+#        earliest_usage_date = 1890.1.1
+#        latest_usage_date = 1896.12.30
+#        chance = 65
+#    }
+#}
+
+# Apolinario Mabini
+# Revolutionary adviser and First Philippine Republic statesman; active revolutionary leadership from 1898.
+# Source: https://philhistoricsites.nhcp.gov.ph/registry_database/birthplace-of-mabini/
+ecchi_phi_mabini = {
+    first_name = ecchi_Apolinario
+    last_name = ecchi_Mabini
+    historical = yes
+    culture = cu:tagalog
     religion = rel:catholic
-    ideology = ideology_republican_leader
+    home_region = STATE_LUZON
+    ideology = ideology_radical
     interest_group = ig_intelligentsia
-	dna = ecchi_dna_andres_bonifacio
-    birth_date = 1863.11.30
-    traits = { popular_commander romantic persistent }
+    dna = ecchi_dna_phi_mabini
+    birth_date = 1864.7.23
+    traits = { reserved literary expert_political_operator }
     interest_group_leader_usage = {
         country_trigger = {
-            exists = c:PHI
-            this = c:PHI
+            has_state_in_state_region = STATE_LUZON
         }
         interest_group_trigger = {
             is_interest_group_type = ig_intelligentsia
         }
-        earliest_usage_date = 1892.1.1
-        latest_usage_date = 1897.5.10
+        earliest_usage_date = 1898.6.1
+        latest_usage_date = 1903.5.13
         chance = 65
     }
 }
 
-ecchi_phi_aguinaldo = {
-    first_name = Emilio
-    last_name = ecchi_Aguinaldo
+# Isabelo de los Reyes
+# Union Obrera Democratica founder; labour reformer, not a command-economy socialist.
+# Philippine Independent Church represented by the existing Protestant religion; no new religion added.
+# Source: https://philhistoricsites.nhcp.gov.ph/labels/isabelo-f-de-los-reyes-1864-1938/
+ecchi_phi_de_los_reyes = {
+    first_name = ecchi_Isabelo
+    last_name = ecchi_de_los_Reyes
     historical = yes
-    culture = cu:filipino
+    culture = cu:ilocano
+    religion = rel:protestant
     home_region = STATE_LUZON
-
-    religion = rel:catholic
     ideology = ideology_reformer
-    interest_group = ig_landowners
-	dna = ecchi_dna_emilio_aguinaldo
-    birth_date = 1869.3.22
-    traits = { cruel ambitious tactful basic_diplomat forest_commander }
+    interest_group = ig_trade_unions
+    dna = ecchi_dna_phi_de_los_reyes
+    birth_date = 1864.7.7
+    traits = { literary persistent }
     interest_group_leader_usage = {
         country_trigger = {
-            exists = c:PHI
-            this = c:PHI
+            has_state_in_state_region = STATE_LUZON
         }
         interest_group_trigger = {
-            ig_counts_as_marginal = no
-            OR = {
-                is_interest_group_type = ig_landowners
-                is_interest_group_type = ig_petty_bourgeoisie
-                is_interest_group_type = ig_armed_forces
-            }
+            is_interest_group_type = ig_trade_unions
         }
-        earliest_usage_date = 1895.1.1
-        latest_usage_date = 1964.2.6
-        chance = 65
-    }
-}
-
-
-ecchi_phi_rizal = {
-    first_name = ecchi_Jose
-    last_name = Rizal
-    historical = yes
-    culture = cu:filipino
-    home_region = STATE_LUZON
-
-    religion = rel:catholic
-    ideology = ideology_reformer
-    interest_group = ig_intelligentsia
-	dna = ecchi_dna_jose_rizal
-    birth_date = 1861.6.19
-    traits = { romantic tactful inspirational_orator }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:PHI
-            this = c:PHI
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_intelligentsia
-        }
-        earliest_usage_date = 1890.1.1
-        latest_usage_date = 1896.12.30
+        earliest_usage_date = 1902.1.1
+        latest_usage_date = 1936.1.1
         chance = 65
     }
 }

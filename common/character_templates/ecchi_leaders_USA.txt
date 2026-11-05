@@ -724,7 +724,7 @@ ecchi_usa_long = {
     home_region = STATE_LOUISIANA
 
     religion = rel:protestant
-    ideology = ideology_social_democrat
+    ideology = ideology_reformer
     interest_group = ig_rural_folk
     birth_date = 1893.8.30
 	dna = ecchi_dna_huey_long
@@ -758,69 +758,69 @@ ecchi_usa_long = {
     }
 }
 
-ecchi_usa_norton = {
-    first_name = Joshua
-    last_name = Norton
-    historical = yes
-    culture = cu:british
-    home_region = STATE_HOME_COUNTIES
+#ecchi_usa_norton = {
+#    first_name = Joshua
+#    last_name = Norton
+#    historical = yes
+#    culture = cu:british
+#    home_region = STATE_HOME_COUNTIES
+#
+#    religion = rel:protestant
+#    ideology = ideology_royalist
+#    interest_group = ig_petty_bourgeoisie
+#    birth_date = 1818.2.4
+#	dna = ecchi_dna_joshua_norton
+#    traits = { psychological_affliction imperious romantic }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            is_usfp_active = no
+#            OR = {
+#                AND = {
+#                    exists = c:USA
+#                    this = c:USA
+#                    NOT = { exists = c:CAL }
+#                }
+#                AND = {
+#                    exists = c:CAL
+#                    this = c:CAL
+#                }
+#            }
+#        }
+#        interest_group_trigger = {
+#			is_interest_group_type = ig_petty_bourgeoisie
+#        }
+#        earliest_usage_date = 1859.9.1
+#        latest_usage_date = 1880.1.8
+#        chance = 10 #Easter Egg
+#    }
+#}
 
-    religion = rel:protestant
-    ideology = ideology_royalist
-    interest_group = ig_petty_bourgeoisie
-    birth_date = 1818.2.4
-	dna = ecchi_dna_joshua_norton
-    traits = { psychological_affliction imperious romantic }
-    interest_group_leader_usage = {
-        country_trigger = {
-            is_usfp_active = no
-            OR = {
-                AND = {
-                    exists = c:USA
-                    this = c:USA
-                    NOT = { exists = c:CAL }
-                }
-                AND = {
-                    exists = c:CAL
-                    this = c:CAL
-                }
-            }
-        }
-        interest_group_trigger = {
-			is_interest_group_type = ig_petty_bourgeoisie
-        }
-        earliest_usage_date = 1859.9.1
-        latest_usage_date = 1880.1.8
-        chance = 10 #Easter Egg
-    }
-}
-
-ecchi_usa_brown = {
-    first_name = John
-    last_name = Brown
-    historical = yes
-    culture = cu:yankee
-    home_region = STATE_CONNECTICUT
-
-    religion = rel:protestant
-    ideology = ideology_abolitionist
-    interest_group = ig_rural_folk
-	dna = ecchi_dna_john_brown
-    birth_date = 1800.5.9
-    traits = { reckless pious brave}
-    interest_group_leader_usage = {
-        country_trigger = {
-            is_usfp_active = no
-            c:USA ?= this
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_rural_folk
-        }
-        earliest_usage_date = 1854.1.1
-        latest_usage_date = 1859.12.2
-        chance = 65
-    }
-}
+#ecchi_usa_brown = {
+#    first_name = John
+#    last_name = Brown
+#    historical = yes
+#    culture = cu:yankee
+#    home_region = STATE_CONNECTICUT
+#
+#    religion = rel:protestant
+#    ideology = ideology_abolitionist
+#    interest_group = ig_rural_folk
+#	dna = ecchi_dna_john_brown
+#    birth_date = 1800.5.9
+#    traits = { reckless pious brave}
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            is_usfp_active = no
+#            c:USA ?= this
+#        }
+#        interest_group_trigger = {
+#            is_interest_group_type = ig_rural_folk
+#        }
+#        earliest_usage_date = 1854.1.1
+#        latest_usage_date = 1859.12.2
+#        chance = 65
+#    }
+#}
 
 # United States - USA - GENERALS
 
@@ -865,7 +865,7 @@ ecchi_usa_custer = {
     interest_group = ig_armed_forces
 	dna = ecchi_dna_george_armstrong_custer
     birth_date = 1839.12.5
-    traits = { reckless experienced_defensive_strategist }
+    traits = { reckless experienced_cavalry_commander }
     commander_rank = default
     commander_usage = {
 		country_trigger = {
@@ -910,38 +910,38 @@ ecchi_usa_astor = {
 				is_interest_group_type = ig_landowners
 			}
         }
-        earliest_usage_date = 1936.1.1
+        earliest_usage_date = 1836.1.1
         latest_usage_date = 1848.3.29
         chance = 65
     }
 }
 
-ecchi_usa_morgan = {
-    first_name = ecchi_J_P
-    last_name = Morgan
-    historical = yes
-    culture = cu:yankee
-    home_region = STATE_CONNECTICUT
-
-    religion = rel:protestant
-    ideology = ideology_reformer
-    interest_group = ig_industrialists
-    birth_date = 1837.4.17
-	dna = ecchi_dna_j_p_morgan
-    traits = { meticulous tactful persistent }
-    interest_group_leader_usage = {
-        country_trigger = {
-            is_usfp_active = no
-            c:USA ?= this
-        }
-        interest_group_trigger = {
-			is_interest_group_type = ig_industrialists
-        }
-        earliest_usage_date = 1895.1.1
-        latest_usage_date = 1913.3.31
-        chance = 65
-    }
-}
+#ecchi_usa_morgan = {
+#    first_name = ecchi_J_P
+#    last_name = Morgan
+#    historical = yes
+#    culture = cu:yankee
+#    home_region = STATE_CONNECTICUT
+#
+#    religion = rel:protestant
+#    ideology = ideology_reformer
+#    interest_group = ig_industrialists
+#    birth_date = 1837.4.17
+#	dna = ecchi_dna_j_p_morgan
+#    traits = { meticulous tactful persistent }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            is_usfp_active = no
+#            c:USA ?= this
+#        }
+#        interest_group_trigger = {
+#			is_interest_group_type = ig_industrialists
+#        }
+#        earliest_usage_date = 1895.1.1
+#        latest_usage_date = 1913.3.31
+#        chance = 65
+#    }
+#}
 
 # ecchi_usa_rockefeller = {
 #     first_name = ecchi_John_D
@@ -1080,7 +1080,7 @@ ecchi_usa_thomas = {
     home_region = STATE_OHIO
 
     religion = rel:protestant
-    ideology = ideology_social_democrat
+    ideology = ideology_state_socialist
     interest_group = ig_trade_unions
 	dna = ecchi_dna_norman_thomas
     birth_date = 1884.11.20
@@ -1107,7 +1107,7 @@ ecchi_usa_foster = {
     home_region = STATE_MASSACHUSETTS
 
     religion = rel:protestant
-    ideology = ideology_communist
+    ideology = ideology_vanguardist
     interest_group = ig_trade_unions
 	dna = ecchi_dna_william_z_foster
     birth_date = 1881.2.25
@@ -1385,7 +1385,7 @@ ecchi_usa_keller = {
     culture = cu:dixie
     female = yes
     religion = rel:protestant
-    ideology = ideology_communist
+    ideology = ideology_state_socialist
     interest_group = ig_trade_unions
 	dna = ecchi_dna_helen_keller
     birth_date = 1880.6.27
@@ -1440,7 +1440,7 @@ ecchi_usa_hill = {
     culture = cu:swedish
 
     religion = rel:protestant
-    ideology = ideology_communist
+    ideology = ideology_anarchist
     interest_group = ig_trade_unions
 	dna = ecchi_dna_joe_hill
     birth_date = 1879.10.7
@@ -1468,7 +1468,7 @@ ecchi_usa_hill = {
             }
         }
         earliest_usage_date = 1910.1.1
-        latest_usage_date = 1905.4.3
+        latest_usage_date = 1915.11.19
         chance = 65
     }
 }
@@ -1551,7 +1551,7 @@ ecchi_usa_seward = {
                 is_interest_group_type = ig_intelligentsia
             }
         }
-        earliest_usage_date = 1939.1.1
+        earliest_usage_date = 1839.1.1
         latest_usage_date = 1872.10.10
         chance = 65
     }
@@ -1814,7 +1814,7 @@ ecchi_usa_baum = {
         interest_group_trigger = {
             is_interest_group_type = ig_intelligentsia
         }
-        earliest_usage_date = 1985.1.1
+        earliest_usage_date = 1890.1.1
         latest_usage_date = 1919.5.6
         chance = 25
     }
@@ -1822,38 +1822,38 @@ ecchi_usa_baum = {
 
 # United States - USA - CSA LEADERS
 
-ecchi_usa_jefferson_davis = {
-    first_name = Jefferson
-    last_name = Davis
-    historical = yes
-    culture = cu:dixie
-    home_region = STATE_KENTUCKY
-
-    religion = rel:protestant
-    ideology = ideology_slaver
-    interest_group = ig_rural_folk
-    birth_date = 1808.6.3
-	dna = ecchi_dna_jefferson_davis
-    traits = { meticulous arrogant persistent }
-    interest_group_leader_usage = {
-        country_trigger = {
-            is_usfp_active = no
-            exists = c:CSA
-            this = c:CSA
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-			OR = {
-				is_interest_group_type = ig_rural_folk
-				is_interest_group_type = ig_landowners
-				is_interest_group_type = ig_armed_forces
-			}
-        }
-        earliest_usage_date = 1862.2.22
-        latest_usage_date = 1889.12.6
-        chance = 65
-    }
-}
+#ecchi_usa_jefferson_davis = {
+#    first_name = Jefferson
+#    last_name = Davis
+#    historical = yes
+#    culture = cu:dixie
+#    home_region = STATE_KENTUCKY
+#
+#    religion = rel:protestant
+#    ideology = ideology_slaver
+#    interest_group = ig_rural_folk
+#    birth_date = 1808.6.3
+#	dna = ecchi_dna_jefferson_davis
+#    traits = { meticulous arrogant persistent }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            is_usfp_active = no
+#            exists = c:CSA
+#            this = c:CSA
+#        }
+#        interest_group_trigger = {
+#            ig_counts_as_marginal = no
+#			OR = {
+#				is_interest_group_type = ig_rural_folk
+#				is_interest_group_type = ig_landowners
+#				is_interest_group_type = ig_armed_forces
+#			}
+#        }
+#        earliest_usage_date = 1862.2.22
+#        latest_usage_date = 1889.12.6
+#        chance = 65
+#    }
+#}
 
 ecchi_usa_stephens = {
     first_name = ecchi_Alexander_H
@@ -1953,7 +1953,7 @@ ecchi_usa_forrest = {
     interest_group = ig_armed_forces
 	dna = ecchi_dna_nathan_bedford_forrest
     birth_date = 1821.7.13
-    traits = { bigoted cruel wrathful experienced_offensive_planner }
+    traits = { bigoted cruel wrathful expert_cavalry_commander }
     commander_rank = default
     commander_usage = {
 		country_trigger = {
@@ -2325,7 +2325,7 @@ ecchi_usa_joseph_smith = {
         interest_group_trigger = {
             is_interest_group_type = ig_devout
         }
-        earliest_usage_date = 1936.1.1
+        earliest_usage_date = 1836.1.1
         latest_usage_date = 1844.6.27
         chance = 65
     }
@@ -2585,7 +2585,7 @@ ecchi_usa_london = {
     home_region = STATE_CALIFORNIA
 
     religion = rel:protestant
-    ideology = ideology_communist
+    ideology = ideology_state_socialist
     interest_group = ig_trade_unions
     dna = ecchi_dna_jack_london
     birth_date = 1876.1.12
@@ -2718,4 +2718,35 @@ ecchi_usa_spooner = {
             set_ideology = ideology:ideology_anarchist
         }
 	}
+}
+
+# Ida B. Wells
+# Anti-lynching journalism and equal civil rights from 1892; humanitarian covers citizenship equality as well as women's rights.
+# Source: https://home.nps.gov/people/idabwells.htm
+ecchi_usa_ida_b_wells = {
+    first_name = ecchi_Ida_B
+    last_name = ecchi_Wells_1
+    historical = yes
+    female = yes
+    is_agitator = yes
+    culture = cu:afro_american
+    religion = rel:protestant
+    home_region = STATE_MISSISSIPPI
+    ideology = ideology_humanitarian
+    interest_group = ig_intelligentsia
+    dna = ecchi_dna_usa_ida_b_wells
+    birth_date = 1862.7.16
+    traits = { literary brave }
+    agitator_usage = {
+        country_trigger = {
+            exists = c:USA
+            this = c:USA
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1892.1.1
+        latest_usage_date = 1931.3.25
+        chance = 65
+    }
 }

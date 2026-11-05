@@ -186,35 +186,35 @@ ecchi_dom_salcedo = {
     }
 }
 
-ecchi_dom_duarte = {
-    first_name = Juan_Pablo
-    last_name = Duarte
-    historical = yes
-    culture = cu:caribeno
-
-    religion = rel:catholic
-    ideology = ideology_radical
-    interest_group = ig_petty_bourgeoisie
-	dna = ecchi_dna_juan_pablo_duarte
-    birth_date = 1813.1.26
-    traits = { reckless meticulous demagogue }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:DOM
-            this = c:DOM
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            OR = {
-                is_interest_group_type = ig_petty_bourgeoisie
-                is_interest_group_type = ig_intelligentsia
-            }
-        }
-        earliest_usage_date = 1838.1.1
-        latest_usage_date = 1876.7.15
-        chance = 65
-    }
-}
+#ecchi_dom_duarte = {
+#    first_name = Juan_Pablo
+#    last_name = Duarte
+#    historical = yes
+#    culture = cu:caribeno
+#
+#    religion = rel:catholic
+#    ideology = ideology_radical
+#    interest_group = ig_petty_bourgeoisie
+#	dna = ecchi_dna_juan_pablo_duarte
+#    birth_date = 1813.1.26
+#    traits = { reckless meticulous demagogue }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            exists = c:DOM
+#            this = c:DOM
+#        }
+#        interest_group_trigger = {
+#            ig_counts_as_marginal = no
+#            OR = {
+#                is_interest_group_type = ig_petty_bourgeoisie
+#                is_interest_group_type = ig_intelligentsia
+#            }
+#        }
+#        earliest_usage_date = 1838.1.1
+#        latest_usage_date = 1876.7.15
+#        chance = 65
+#    }
+#}
 
 ecchi_dom_polanco = {
     first_name = Gaspar

@@ -274,35 +274,35 @@ ecchi_rom_ghica = { #leader of the Agriculture Society of Romania 1836, intellig
 
 # Belarus
 
-ecchi_bye_kalinowski = {
-    first_name = Konstanty
-    last_name = Kalinowski
-    historical = yes
-    culture = cu:byelorussian
-    home_region = STATE_MINSK
-    religion = rel:orthodox
-    ideology = ideology_reformer
-    interest_group = ig_intelligentsia
-	dna = ecchi_dna_konstanty_kalinowski
-    birth_date = 1838.2.2
-    traits = { reckless inspirational_orator }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:BYE
-            this = c:BYE
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            OR = {
-                is_interest_group_type = ig_intelligentsia
-                is_interest_group_type = ig_armed_forces
-            }
-        }
-        earliest_usage_date = 1860.1.1
-        latest_usage_date = 1864.3.22
-        chance = 65
-    }
-}
+#ecchi_bye_kalinowski = {
+#    first_name = Konstanty
+#    last_name = Kalinowski
+#    historical = yes
+#    culture = cu:byelorussian
+#    home_region = STATE_MINSK
+#    religion = rel:orthodox
+#    ideology = ideology_reformer
+#    interest_group = ig_intelligentsia
+#	dna = ecchi_dna_konstanty_kalinowski
+#    birth_date = 1838.2.2
+#    traits = { reckless inspirational_orator }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            exists = c:BYE
+#            this = c:BYE
+#        }
+#        interest_group_trigger = {
+#            ig_counts_as_marginal = no
+#            OR = {
+#                is_interest_group_type = ig_intelligentsia
+#                is_interest_group_type = ig_armed_forces
+#            }
+#        }
+#        earliest_usage_date = 1860.1.1
+#        latest_usage_date = 1864.3.22
+#        chance = 65
+#    }
+#}
 
 # Greece
 
@@ -383,32 +383,32 @@ ecchi_gre_trikoupis = {
 
 ## Constantine Paparrigopoulos
 
-ecchi_gre_paparrigopoulos = {
-    first_name = Constantine
-    last_name = ecchi_Paparrigopoulos
-    historical = yes
-    culture = cu:greek
-    home_region = STATE_ATTICA
-    religion = rel:orthodox
-    ideology = ideology_traditionalist
-    interest_group = ig_intelligentsia
-    dna = ecchi_dna_constantine_paparrigopoulos
-    birth_date = 1815.5.18
-    ig_leader = yes
-    traits = { cautious experienced_diplomat }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:GRE
-            this = c:GRE
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_intelligentsia
-        }
-        earliest_usage_date = 1836.1.1
-        latest_usage_date = 1891.2.15
-        chance = 100
-    }
-}
+#ecchi_gre_paparrigopoulos = {
+#    first_name = Constantine
+#    last_name = ecchi_Paparrigopoulos
+#    historical = yes
+#    culture = cu:greek
+#    home_region = STATE_ATTICA
+#    religion = rel:orthodox
+#    ideology = ideology_traditionalist
+#    interest_group = ig_intelligentsia
+#    dna = ecchi_dna_constantine_paparrigopoulos
+#    birth_date = 1815.5.18
+#    ig_leader = yes
+#    traits = { cautious experienced_diplomat }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            exists = c:GRE
+#            this = c:GRE
+#        }
+#        interest_group_trigger = {
+#            is_interest_group_type = ig_intelligentsia
+#        }
+#        earliest_usage_date = 1836.1.1
+#        latest_usage_date = 1891.2.15
+#        chance = 100
+#    }
+#}
 
 # Hungary
 
@@ -419,7 +419,7 @@ ecchi_hun_lukacs = {
     culture = cu:hungarian
     home_region = STATE_CENTRAL_HUNGARY
     religion = rel:orthodox
-    ideology = ideology_communist
+    ideology = ideology_communist_leader
     interest_group = ig_intelligentsia
 	dna = ecchi_dna_lukacs_gyorgy
     birth_date = 1885.4.13
@@ -532,7 +532,7 @@ ecchi_ukr_petliura = {
     culture = cu:ukrainian
     home_region = STATE_KIEV
     religion = rel:orthodox
-    ideology = ideology_socialist
+    ideology = ideology_state_socialist
     interest_group = ig_rural_folk
     dna = ecchi_dna_symon_petliura
     birth_date = 1879.5.10
@@ -600,41 +600,41 @@ ecchi_ukr_bandera = {
 }
 
 ## Taras Shevchenko
-ecchi_ukr_shevchenko = {
-    first_name = ecchi_Taras
-    last_name = Shevchenko
-    historical = yes
-    culture = cu:ukrainian
-    home_region = STATE_KIEV
-    religion = rel:orthodox
-    ideology = ideology_abolitionist
-    interest_group = ig_rural_folk
-    dna = ecchi_dna_taras_shevchenko
-    birth_date = 1814.3.9
-    traits = { literary romantic }
-    agitator_usage = {
-        country_trigger = {
-            OR = {
-                AND = {
-                    exists = c:UKR
-                    this = c:UKR
-                    NOT = { exists = c:RUS }
-                }
-                AND = {
-                    exists = c:RUS
-                    this = c:RUS
-                    NOT = { exists = c:UKR }
-                }
-            }
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_rural_folk
-        }
-        earliest_usage_date = 1840.1.1
-        latest_usage_date = 1861.3.10
-        chance = 60
-    }
-}
+#ecchi_ukr_shevchenko = {
+#    first_name = ecchi_Taras
+#    last_name = Shevchenko
+#    historical = yes
+#    culture = cu:ukrainian
+#    home_region = STATE_KIEV
+#    religion = rel:orthodox
+#    ideology = ideology_abolitionist
+#    interest_group = ig_rural_folk
+#    dna = ecchi_dna_taras_shevchenko
+#    birth_date = 1814.3.9
+#    traits = { literary romantic }
+#    agitator_usage = {
+#        country_trigger = {
+#            OR = {
+#                AND = {
+#                    exists = c:UKR
+#                    this = c:UKR
+#                    NOT = { exists = c:RUS }
+#                }
+#                AND = {
+#                    exists = c:RUS
+#                    this = c:RUS
+#                    NOT = { exists = c:UKR }
+#                }
+#            }
+#        }
+#        interest_group_trigger = {
+#            is_interest_group_type = ig_rural_folk
+#        }
+#        earliest_usage_date = 1840.1.1
+#        latest_usage_date = 1861.3.10
+#        chance = 60
+#    }
+#}
 
 ## Mykhailo Hrushevsky
 ecchi_ukr_hrushevsky = {
@@ -644,7 +644,7 @@ ecchi_ukr_hrushevsky = {
     culture = cu:ukrainian
     home_region = STATE_KIEV
     religion = rel:orthodox
-    ideology = ideology_social_democrat
+    ideology = ideology_state_socialist
     interest_group = ig_intelligentsia
     dna = ecchi_dna_mykhailo_hrushevsky
     birth_date = 1866.9.29
@@ -717,37 +717,37 @@ ecchi_bel_wahis = {
 # Switzerland
 
 ## Dufour, Guillaume Henri by LordR
-mr_swi_dufour_guillaume_henri = {
-	# Guillaume Henri Dufour, one of Switzerland's foremost generals from the 1810s through to the 1860s
-	dna = mr_swi_dufour_guillaume_henri
-	first_name = "Guillaume_Henri"
-	last_name = "Dufour"
-	culture = cu:francoprovencal
-	home_region = STATE_WEST_SWITZERLAND
-	religion = rel:protestant # Not entirely sure, but his family was from Geneva
-	birth_date = 1787.9.15
-	interest_group = ig_armed_forces
-	ideology = ideology_moderate
-	historical = yes
-	traits = {
-		meticulous
-		surveyor
-		engineer
-		basic_diplomat
-	}
-	is_general = yes
-    commander_rank = default
-    commander_usage = {
-        country_trigger = {
-            exists = c:SWI
-            this = c:SWI
-        }
-        role = general
-        earliest_usage_date = 1815.1.1
-        latest_usage_date = 1865.7.14
-        chance = 65
-    }
-}
+#mr_swi_dufour_guillaume_henri = {
+#	# Guillaume Henri Dufour, one of Switzerland's foremost generals from the 1810s through to the 1860s
+#	dna = mr_swi_dufour_guillaume_henri
+#	first_name = "Guillaume_Henri"
+#	last_name = "Dufour"
+#	culture = cu:francoprovencal
+#	home_region = STATE_WEST_SWITZERLAND
+#	religion = rel:protestant # Not entirely sure, but his family was from Geneva
+#	birth_date = 1787.9.15
+#	interest_group = ig_armed_forces
+#	ideology = ideology_moderate
+#	historical = yes
+#	traits = {
+#		meticulous
+#		surveyor
+#		engineer
+#		basic_diplomat
+#	}
+#	is_general = yes
+#    commander_rank = default
+#    commander_usage = {
+#        country_trigger = {
+#            exists = c:SWI
+#            this = c:SWI
+#        }
+#        role = general
+#        earliest_usage_date = 1815.1.1
+#        latest_usage_date = 1865.7.14
+#        chance = 65
+#    }
+#}
 
 ## Karl Ludwig von Haller
 

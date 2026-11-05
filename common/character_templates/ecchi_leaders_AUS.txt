@@ -1,45 +1,45 @@
 ﻿# Austria
 
-ecchi_aus_lueger = {
-    first_name = Karl
-    last_name = ecchi_Lueger
-    historical = yes
-    culture = cu:south_german
-    home_region = STATE_AUSTRIA
-
-    religion = rel:catholic
-    ideology = ideology_ethno_nationalist
-    interest_group = ig_petty_bourgeoisie
-	dna = ecchi_dna_karl_lueger
-    birth_date = 1844.10.24
-    traits = { bigoted demagogue }
-    interest_group_leader_usage = {
-        country_trigger = {
-            OR = {
-                AND = {
-                    exists = c:SGF
-					this = c:SGF
-					c:SGF = { owns_entire_state_region = STATE_AUSTRIA }
-                    NOT = { exists = c:AUS }
-                }
-                AND = {
-                    exists = c:AUS
-                    this = c:AUS
-                }
-            }
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            OR = {
-                is_interest_group_type = ig_petty_bourgeoisie
-                is_interest_group_type = ig_devout
-            }
-        }
-        earliest_usage_date = 1875.1.1
-        latest_usage_date = 1910.3.10
-        chance = 65
-    }
-}
+#ecchi_aus_lueger = {
+#    first_name = Karl
+#    last_name = ecchi_Lueger
+#    historical = yes
+#    culture = cu:south_german
+#    home_region = STATE_AUSTRIA
+#
+#    religion = rel:catholic
+#    ideology = ideology_ethno_nationalist
+#    interest_group = ig_petty_bourgeoisie
+#	dna = ecchi_dna_karl_lueger
+#    birth_date = 1844.10.24
+#    traits = { bigoted demagogue }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            OR = {
+#                AND = {
+#                    exists = c:SGF
+#					this = c:SGF
+#					c:SGF = { owns_entire_state_region = STATE_AUSTRIA }
+#                    NOT = { exists = c:AUS }
+#                }
+#                AND = {
+#                    exists = c:AUS
+#                    this = c:AUS
+#                }
+#            }
+#        }
+#        interest_group_trigger = {
+#            ig_counts_as_marginal = no
+#            OR = {
+#                is_interest_group_type = ig_petty_bourgeoisie
+#                is_interest_group_type = ig_devout
+#            }
+#        }
+#        earliest_usage_date = 1875.1.1
+#        latest_usage_date = 1910.3.10
+#        chance = 65
+#    }
+#}
 
 ecchi_aus_bauer = {
     first_name = Otto
@@ -49,7 +49,7 @@ ecchi_aus_bauer = {
     home_region = STATE_AUSTRIA
 
     religion = rel:jewish
-    ideology = ideology_social_democrat
+    ideology = ideology_state_socialist
     interest_group = ig_trade_unions
 	dna = ecchi_dna_otto_bauer
     birth_date = 1881.9.5
@@ -384,7 +384,7 @@ ecchi_aus_franko = {
     home_region = STATE_WEST_GALICIA
 
     religion = rel:orthodox
-    ideology = ideology_social_democrat
+    ideology = ideology_state_socialist
     interest_group = ig_rural_folk
     dna = ecchi_dna_ivan_franko
     birth_date = 1856.8.27
@@ -420,7 +420,7 @@ ecchi_aus_tito = {
     home_region = STATE_SLOVENIA
 
     religion = rel:orthodox
-    ideology = ideology_communist
+    ideology = ideology_communist_leader
     interest_group = ig_armed_forces
     dna = ecchi_dna_josip_tito
     birth_date = 1892.5.7
@@ -466,7 +466,7 @@ ecchi_aus_kautsky = {
     home_region = STATE_BOHEMIA
 
     religion = rel:jewish
-    ideology = ideology_social_democrat
+    ideology = ideology_state_socialist
     interest_group = ig_intelligentsia
     dna = ecchi_dna_karl_johann_kautsky
     birth_date = 1854.10.16

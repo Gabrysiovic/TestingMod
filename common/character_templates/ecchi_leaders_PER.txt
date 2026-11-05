@@ -93,3 +93,63 @@ ecchi_per_amin_al_soltan = {
 		chance = 65
 	}
 }
+
+# Mirza Malkom Khan
+# Qanun reformist newspaper from 1890; constitutional monarchy, not a republican template. Armenian-born, nominal Muslim convert. Birth year follows Iranica; exact dates unknown. End bounded before death year 1908.
+# Source: https://www.iranicaonline.org/articles/constitutional-revolution-I/
+ecchi_per_mirza_malkom_khan = {
+    first_name = ecchi_Mirza_Malkom
+    last_name = ecchi_Khan
+    historical = yes
+    is_agitator = yes
+    culture = cu:armenian
+    religion = rel:shiite
+    home_region = STATE_IRAKAJEMI
+    ideology = ideology_reformer
+    interest_group = ig_intelligentsia
+    dna = ecchi_dna_per_mirza_malkom_khan
+    birth_date = 1833.1.1
+    traits = { literary innovative }
+    agitator_usage = {
+        country_trigger = {
+            exists = c:PER
+            this = c:PER
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1890.1.1
+        latest_usage_date = 1907.12.31
+        chance = 65
+    }
+}
+
+# Sheikh Fazlollah Nouri
+# Usage represents his anti-secular constitutional-revolution phase from 1907, not his earlier alliance with constitutionalists. Dates follow IICHS.
+# Source: https://www.iichs.org/index_en.asp?img_cat=122&img_type=1
+ecchi_per_fazlollah_nouri = {
+    first_name = ecchi_Sheikh_Fazlollah
+    last_name = ecchi_Nouri
+    historical = yes
+    culture = cu:persian
+    religion = rel:shiite
+    home_region = STATE_IRAKAJEMI
+    ideology = ideology_theocrat
+    interest_group = ig_devout
+    dna = ecchi_dna_per_fazlollah_nouri
+    birth_date = 1843.12.24
+    traits = { pious persistent }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:PER
+            this = c:PER
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_devout
+        }
+        earliest_usage_date = 1907.1.1
+        latest_usage_date = 1909.7.31
+        chance = 65
+    }
+}

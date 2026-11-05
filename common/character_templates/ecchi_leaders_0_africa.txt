@@ -1,34 +1,34 @@
 ﻿# Zanzibar
 
-ecchi_zan_tip = {
-    first_name = ecchi_Tippu
-    last_name = ecchi_Tip
-    historical = yes
-    culture = cu:swahili
-
-    religion = rel:shiite
-    ideology = ideology_slaver
-    interest_group = ig_landowners
-	dna = ecchi_dna_tippu_tip
-    birth_date = 1832.11.24
-    traits = { explorer ambitious cruel }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:ZAN
-            this = c:ZAN
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-			OR = {
-				is_interest_group_type = ig_petty_bourgeoisie
-				is_interest_group_type = ig_landowners
-			}
-        }
-        earliest_usage_date = 1860.1.1
-        latest_usage_date = 1905.6.14
-        chance = 65
-    }
-}
+#ecchi_zan_tip = {
+#    first_name = ecchi_Tippu
+#    last_name = ecchi_Tip
+#    historical = yes
+#    culture = cu:swahili
+#
+#    religion = rel:shiite
+#    ideology = ideology_slaver
+#    interest_group = ig_landowners
+#	dna = ecchi_dna_tippu_tip
+#    birth_date = 1832.11.24
+#    traits = { explorer ambitious cruel }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            exists = c:ZAN
+#            this = c:ZAN
+#        }
+#        interest_group_trigger = {
+#            ig_counts_as_marginal = no
+#			OR = {
+#				is_interest_group_type = ig_petty_bourgeoisie
+#				is_interest_group_type = ig_landowners
+#			}
+#        }
+#        earliest_usage_date = 1860.1.1
+#        latest_usage_date = 1905.6.14
+#        chance = 65
+#    }
+#}
 
 # Ethiopia
 # Given name becomes patronymic for kids, so I give them of XXX surnames instead
@@ -94,39 +94,39 @@ ecchi_eth_makonnen = {
 }
 
 
-ecchi_eth_tekle_haymanot = {
-    first_name = ecchi_Tekle_Haymanot #Tekle Haymanot of Gojjam
-    last_name = ecchi_of_Gojjam
-    historical = yes
-    culture = cu:amhara
-
-    religion = rel:oriental_orthodox
-    ideology = ideology_traditionalist
-    interest_group = ig_armed_forces
-	dna = ecchi_dna_tekle_haymanot
-    birth_date = 1847.9.11
-    traits = { forest_commander stalwart_defender }
-    commander_rank = default
-    commander_usage = {
-        country_trigger = {
-            OR = {
-                AND = {
-                    exists = c:ETH
-                    this = c:ETH
-                    NOT = { exists = c:GJM }
-                }
-                AND = {
-                    exists = c:GJM
-                    this = c:GJM
-                }
-            }
-        }
-        role = general
-        earliest_usage_date = 1881.1.1
-        latest_usage_date = 1901.1.10
-        chance = 65
-    }
-}
+#ecchi_eth_tekle_haymanot = {
+#    first_name = ecchi_Tekle_Haymanot #Tekle Haymanot of Gojjam
+#    last_name = ecchi_of_Gojjam
+#    historical = yes
+#    culture = cu:amhara
+#
+#    religion = rel:oriental_orthodox
+#    ideology = ideology_traditionalist
+#    interest_group = ig_armed_forces
+#	dna = ecchi_dna_tekle_haymanot
+#    birth_date = 1847.9.11
+#    traits = { forest_commander stalwart_defender }
+#    commander_rank = default
+#    commander_usage = {
+#        country_trigger = {
+#            OR = {
+#                AND = {
+#                    exists = c:ETH
+#                    this = c:ETH
+#                    NOT = { exists = c:GJM }
+#                }
+#                AND = {
+#                    exists = c:GJM
+#                    this = c:GJM
+#                }
+#            }
+#        }
+#        role = general
+#        earliest_usage_date = 1881.1.1
+#        latest_usage_date = 1901.1.10
+#        chance = 65
+#    }
+#}
 
 ecchi_eth_mikael = {
     first_name = Mikael #Mikael of Wollo
@@ -358,6 +358,99 @@ ecchi_sud_taha_hussein = {
     }
 }
 
+# Egypt
+
+# Saad Zaghloul
+# Wafd founded in 1918; anti-colonial constitutionalism. Birth date follows Egyptian SIS; other sources give 1857/1859.
+# Source: https://sis.gov.eg/en/egypt/egyptian-figures/saad-zaghloul/
+ecchi_egy_saad_zaghloul = {
+    first_name = ecchi_Saad
+    last_name = ecchi_Zaghloul
+    historical = yes
+    culture = cu:misri
+    religion = rel:sunni
+    home_region = STATE_LOWER_EGYPT
+    ideology = ideology_sovereignist_leader
+    interest_group = ig_intelligentsia
+    dna = ecchi_dna_egy_saad_zaghloul
+    birth_date = 1858.7.1
+    traits = { charismatic inspirational_orator }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:EGY
+            this = c:EGY
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1918.1.1
+        latest_usage_date = 1927.8.23
+        chance = 65
+    }
+}
+
+# Muhammad Abduh
+# Islamic educational reform, not secular anti-religion. Birth month/day unknown: January 1 is an engine placeholder.
+# Source: https://islamansiklopedisi.org.tr/muhammed-abduh
+ecchi_egy_muhammad_abduh = {
+    first_name = ecchi_Muhammad
+    last_name = ecchi_Abduh
+    historical = yes
+    culture = cu:misri
+    religion = rel:sunni
+    home_region = STATE_LOWER_EGYPT
+    ideology = ideology_reformer
+    interest_group = ig_devout
+    dna = ecchi_dna_egy_muhammad_abduh
+    birth_date = 1849.1.1
+    traits = { pious innovative literary }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:EGY
+            this = c:EGY
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_devout
+        }
+        earliest_usage_date = 1877.1.1
+        latest_usage_date = 1905.7.11
+        chance = 65
+    }
+}
+
+# Huda Sha’arawi
+# Egyptian Feminist Union founded in 1923. Survived to 1947; usage capped at the game end.
+# Source: https://en.wikipedia.org/wiki/Huda_Sha%27arawi
+ecchi_egy_huda_shaarawi = {
+    first_name = ecchi_Huda
+    last_name = ecchi_Shaarawi
+    historical = yes
+    female = yes
+    is_agitator = yes
+    culture = cu:misri
+    religion = rel:sunni
+    home_region = STATE_MIDDLE_EGYPT
+    ideology = ideology_feminist
+    interest_group = ig_intelligentsia
+    dna = ecchi_dna_egy_huda_shaarawi
+    birth_date = 1879.6.23
+    traits = { charismatic persistent }
+    agitator_usage = {
+        country_trigger = {
+            exists = c:EGY
+            this = c:EGY
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1923.1.1
+        latest_usage_date = 1936.1.1
+        chance = 65
+    }
+}
+
 # Somali
 
 ecchi_wsg_hassan = {
@@ -458,30 +551,30 @@ ecchi_mad_rainivoninahitriniony = {
 
 # Algeria
 
-ecchi_ald_ben_aissa = {
-    first_name = Ali
-    last_name = ecchi_ben_Aissa
-    historical = yes
-    culture = cu:maghrebi
-
-    religion = rel:sunni
-    ideology = ideology_moderate
-    interest_group = ig_armed_forces
-	dna = ecchi_dna_ali_ben_aissa
-    birth_date = 1810.6.11
-    traits = { charismatic plains_commander }
-    commander_rank = default
-    commander_usage = {
-        country_trigger = {
-            exists = c:ALD
-            this = c:ALD
-        }
-        role = general
-        earliest_usage_date = 1840.1.1
-        latest_usage_date = 1865.2.21
-        chance = 65
-    }
-}
+#ecchi_ald_ben_aissa = {
+#    first_name = Ali
+#    last_name = ecchi_ben_Aissa
+#    historical = yes
+#    culture = cu:maghrebi
+#
+#    religion = rel:sunni
+#    ideology = ideology_moderate
+#    interest_group = ig_armed_forces
+#	dna = ecchi_dna_ali_ben_aissa
+#    birth_date = 1810.6.11
+#    traits = { charismatic plains_commander }
+#    commander_rank = default
+#    commander_usage = {
+#        country_trigger = {
+#            exists = c:ALD
+#            this = c:ALD
+#        }
+#        role = general
+#        earliest_usage_date = 1840.1.1
+#        latest_usage_date = 1865.2.21
+#        chance = 65
+#    }
+#}
 
 # ecchi_ald_nsoumer = {
 #     first_name = ecchi_Lalla_Fatma
@@ -561,6 +654,36 @@ ecchi_tri_karamanli = {
         }
         earliest_usage_date = 1836.1.1
         latest_usage_date = 1838.8.20
+        chance = 65
+    }
+}
+
+
+# Omar al-Mukhtar
+# Senussi resistance commander in Cyrenaica; principal leadership from 1923.
+# Birth year is uncertain (approximately 1856-1862); 1860.1.1 is a game-required approximate date, not an attested birthday.
+# Birth-date reference: https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/omar-al-mukhtar
+# Source: https://sharinghistory.museumwnf.org/database_item.php?id=object%3Bawe%3Bit%3B84%3Ben
+ecchi_tri_omar_al_mukhtar = {
+    first_name = ecchi_Omar
+    last_name = ecchi_al_Mukhtar
+    historical = yes
+    culture = cu:maghrebi
+    religion = rel:sunni
+    home_region = STATE_LIBYA
+    ideology = ideology_sovereignist_leader
+    interest_group = ig_armed_forces
+    dna = ecchi_dna_tri_omar_al_mukhtar
+    birth_date = 1860.1.1
+    traits = { pious popular_commander experienced_defensive_strategist mountain_commander }
+    commander_rank = default
+    commander_usage = {
+        country_trigger = {
+            has_state_in_state_region = STATE_LIBYA
+        }
+        role = general
+        earliest_usage_date = 1923.1.1
+        latest_usage_date = 1931.9.16
         chance = 65
     }
 }
@@ -701,35 +824,35 @@ ecchi_zul_kampande = {
     }
 }
 
-ecchi_zul_zibhebhu = {
-    first_name = ecchi_Zibhebhu_kaMaphitha
-    last_name = ecchi_Zulu
-    historical = yes
-    culture = cu:zulu
-
-    religion = rel:animist
-    ideology = ideology_jingoist_leader
-    interest_group = ig_armed_forces
-	dna = ecchi_dna_zibhebhu_kamaphitha
-    birth_date = 1841.1.8
-    traits = { ambitious reckless pillager }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:ZUL
-            this = c:ZUL
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            OR = {
-                is_interest_group_type = ig_armed_forces
-                is_interest_group_type = ig_landowners
-            }
-        }
-        earliest_usage_date = 1880.1.1
-        latest_usage_date = 1904.6.9
-        chance = 65
-    }
-}
+#ecchi_zul_zibhebhu = {
+#    first_name = ecchi_Zibhebhu_kaMaphitha
+#    last_name = ecchi_Zulu
+#    historical = yes
+#    culture = cu:zulu
+#
+#    religion = rel:animist
+#    ideology = ideology_jingoist_leader
+#    interest_group = ig_armed_forces
+#	dna = ecchi_dna_zibhebhu_kamaphitha
+#    birth_date = 1841.1.8
+#    traits = { ambitious reckless pillager }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            exists = c:ZUL
+#            this = c:ZUL
+#        }
+#        interest_group_trigger = {
+#            ig_counts_as_marginal = no
+#            OR = {
+#                is_interest_group_type = ig_armed_forces
+#                is_interest_group_type = ig_landowners
+#            }
+#        }
+#        earliest_usage_date = 1880.1.1
+#        latest_usage_date = 1904.6.9
+#        chance = 65
+#    }
+#}
 
 # Dahomey
 
@@ -865,6 +988,38 @@ ecchi_ash_asantewaa = {
     }
 }
 
+# Liberia
+
+# Edward Wilmot Blyden
+# Born in Danish West Indies, moved to Liberia in 1850; foreign minister in 1864. Pan-African self-determination is approximated with sovereignty, not ethno-nationalist laws.
+# Source: https://history.web.ox.ac.uk/sites/default/files/history/documents/media/teachingresourcecrowtherblackvictoriansandfutureofafricapdf.pdf
+ecchi_lib_edward_wilmot_blyden = {
+    first_name = ecchi_Edward_Wilmot
+    last_name = ecchi_Blyden
+    historical = yes
+    culture = cu:afro_caribbean
+    religion = rel:protestant
+    home_region = STATE_WEST_INDIES
+    ideology = ideology_sovereignist_leader
+    interest_group = ig_intelligentsia
+    dna = ecchi_dna_lib_edward_wilmot_blyden
+    birth_date = 1832.8.3
+    traits = { literary charismatic }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:LIB
+            this = c:LIB
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1864.1.1
+        latest_usage_date = 1912.2.7
+        chance = 65
+    }
+}
+
 # Sierra Leone
 
 ecchi_sil_cinque = {
@@ -920,6 +1075,35 @@ ecchi_oyo_ogedengbe = {
         role = general
         earliest_usage_date = 1860.1.1
         latest_usage_date = 1910.7.29
+        chance = 65
+    }
+}
+
+# Samuel Ajayi Crowther
+# Former enslaved person; Anglican missionary ordained in 1843. Approximate birth year; January 1 is a placeholder.
+# Source: https://www.bu.edu/missiology/missionary-biography/c-d/crowther-samuel-adjai-or-ajayi-c-1807-1891/
+ecchi_oyo_samuel_ajayi_crowther = {
+    first_name = ecchi_Samuel_Ajayi
+    last_name = ecchi_Crowther
+    historical = yes
+    culture = cu:yoruba
+    religion = rel:protestant
+    home_region = STATE_YORUBA_STATES
+    ideology = ideology_abolitionist
+    interest_group = ig_devout
+    dna = ecchi_dna_oyo_samuel_ajayi_crowther
+    birth_date = 1807.1.1
+    traits = { pious literary }
+    interest_group_leader_usage = {
+        country_trigger = {
+            has_state_in_state_region = STATE_YORUBA_STATES
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_devout
+        }
+        earliest_usage_date = 1843.1.1
+        latest_usage_date = 1891.12.31
         chance = 65
     }
 }

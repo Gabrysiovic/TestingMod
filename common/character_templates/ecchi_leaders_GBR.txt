@@ -36,41 +36,41 @@ ecchi_gbr_grey = {
     }
 }
 
-ecchi_gbr_john_russell = {
-    first_name = John
-    last_name = Russell
-    historical = yes
-    culture = cu:british
-    home_region = STATE_HOME_COUNTIES
-
-    religion = rel:protestant
-    ideology = ideology_reformer
-    interest_group = ig_intelligentsia
-    birth_date = 1792.8.18
-	dna = ecchi_dna_john_russell
-    traits = { reckless basic_political_operator }
-    interest_group_leader_usage = {
-        country_trigger = {
-            OR = {
-                AND = {
-                    exists = c:GBR
-                    this = c:GBR
-                    NOT = { exists = c:ENG }
-                }
-                AND = {
-                    exists = c:ENG
-                    this = c:ENG
-                }
-            }
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_intelligentsia
-        }
-        earliest_usage_date = 1839.8.30
-        latest_usage_date = 1878.5.28
-        chance = 65
-    }
-}
+#ecchi_gbr_john_russell = {
+#    first_name = John
+#    last_name = Russell
+#    historical = yes
+#    culture = cu:british
+#    home_region = STATE_HOME_COUNTIES
+#
+#    religion = rel:protestant
+#    ideology = ideology_reformer
+#    interest_group = ig_intelligentsia
+#    birth_date = 1792.8.18
+#	dna = ecchi_dna_john_russell
+#    traits = { reckless basic_political_operator }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            OR = {
+#                AND = {
+#                    exists = c:GBR
+#                    this = c:GBR
+#                    NOT = { exists = c:ENG }
+#                }
+#                AND = {
+#                    exists = c:ENG
+#                    this = c:ENG
+#                }
+#            }
+#        }
+#        interest_group_trigger = {
+#            is_interest_group_type = ig_intelligentsia
+#        }
+#        earliest_usage_date = 1839.8.30
+#        latest_usage_date = 1878.5.28
+#        chance = 65
+#    }
+#}
 
 # ecchi_gbr_hamilton_gordon = {
 #     first_name = George
@@ -1318,32 +1318,32 @@ ecchi_gbr_wood = {
 
 ## Richard Cobden
 
-ecchi_gbr_cobden = {
-    first_name = Richard
-    last_name = ecchi_Cobden
-    historical = yes
-    culture = cu:british
-    home_region = STATE_HOME_COUNTIES
-
-    religion = rel:protestant
-    ideology = ideology_pacifist
-    interest_group = ig_industrialists
-    dna = ecchi_dna_richard_cobden
-    birth_date = 1804.6.3
-    traits = { tactful masterful_diplomat }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:GBR
-            this = c:GBR
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_industrialists
-        }
-        earliest_usage_date = 1836.1.1
-        latest_usage_date = 1865.4.20
-        chance = 65
-    }
-}
+#ecchi_gbr_cobden = {
+#    first_name = Richard
+#    last_name = ecchi_Cobden
+#    historical = yes
+#    culture = cu:british
+#    home_region = STATE_HOME_COUNTIES
+#
+#    religion = rel:protestant
+#    ideology = ideology_radical
+#    interest_group = ig_industrialists
+#    dna = ecchi_dna_richard_cobden
+#    birth_date = 1804.6.3
+#    traits = { tactful masterful_diplomat }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            exists = c:GBR
+#            this = c:GBR
+#        }
+#        interest_group_trigger = {
+#            is_interest_group_type = ig_industrialists
+#        }
+#        earliest_usage_date = 1836.1.1
+#        latest_usage_date = 1865.4.20
+#        chance = 65
+#    }
+#}
 
 ## Millicent Fawcett
 
@@ -1472,7 +1472,7 @@ ecchi_gbr_wells_hg = {
 	interest_group = ig_intelligentsia
 	birth_date = 1866.9.21
 	historical = yes
-    ideology = ideology_social_democrat
+    ideology = ideology_state_socialist
 	traits = {
 		literary
 		innovative
