@@ -1,5 +1,0 @@
-﻿is_struct_of_type = {
-	scope:$struct_scope$ = {
-		var:com_type ?= $struct_type$
-	}
-}

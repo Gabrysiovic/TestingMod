@@ -1,6 +1,0 @@
-﻿my_trigger_event = {
-    trigger_event = {
-        on_action = $on_action_name$
-        days = $num_days$
-    }
-}

@@ -1,4 +1,4 @@
-﻿# Up to date as of 1.12.4
+﻿# Up to date as of 1.15.0
 # Root = Character
 on_heir_born = {
     effect = {
@@ -16,6 +16,11 @@ on_heir_born = {
         else = { # Vanilla logic sits in this else block
             if = {
                 limit = {
+                    NOT = { # Iesada Tokugawa cannot produce heirs
+                        owner.ruler ?= {
+                            has_template = JAP_iesada_tokugawa
+                        }
+                    }
                     owner ?= {
                         has_gov_regency = no
                     }
@@ -31,133 +36,10 @@ on_heir_born = {
                         c:FRA ?= this
                     }
                 }
-                if = {
-                    limit = {
-                        owner.ruler ?= {
-                            has_variable = house_orleans
-                        }
-                    }
-                }
-                owner = {
-                    heir ?= {
-                        set_variable = house_orleans
-                        set_ideology = ideology:ideology_orleanist
-                    }
-                }
+                on_heir_born_french_heir_ideology_effect = yes
             }
-            if = {
-                limit = {
-                    owner.ruler ?= {
-                        has_variable = legitimist_leader
-                    }
-                }
-                owner = {
-                    heir ?= {
-                        set_variable = legitimist_leader
-                        set_ideology = ideology:ideology_legitimist
-                    }
-                }
-            }
-            if = {
-                limit = {
-                    owner.ruler ?= {
-                        has_variable = house_bonaparte
-                    }
-                }
-                owner = {
-                    heir ?= {
-                        set_variable = house_bonaparte
-                        set_ideology = ideology:ideology_bonapartist
-                    }
-                }
-            }
-            if = {
-                limit = {
-                    owner.ruler ?= {
-                        has_variable = house_savoy
-                    }
-                }
-                owner = {
-                    heir ?= {
-                        set_variable = house_savoy
-                    }
-                }
-            }
-            if = {
-                limit = {
-                    owner.ruler ?= {
-                        has_variable = house_braganca
-                    }
-                }
-                owner = {
-                    heir ?= {
-                        set_variable = house_braganca
-                    }
-                }
-            }
-            if = {
-                limit = {
-                    owner.ruler ?= {
-                        has_variable = house_espartero
-                    }
-                }
-                owner = {
-                    heir ?= {
-                        set_variable = house_espartero
-                    }
-                }
-            }
-            if = {
-                limit = {
-                    owner.ruler ?= {
-                        has_variable = house_bourbon
-                    }
-                }
-                owner = {
-                    heir ?= {
-                        set_variable = house_bourbon
-                    }
-                }
-            }
-            if = {
-                limit = {
-                    owner.ruler ?= {
-                        has_variable = house_hohenzollern
-                    }
-                }
-                owner = {
-                    heir ?= {
-                        set_variable = house_hohenzollern
-                    }
-                }
-            }
-            if = {
-                limit = {
-                    owner = {
-                        c:SER ?= this
-                    }
-                }
-                if = {
-                    limit = {
-                        owner.ruler ?= {
-                            has_variable = house_obrenovic
-                        }
-                    }
-                    owner.heir ?= {
-                        set_variable = house_obrenovic
-                    }
-                }
-                else_if = {
-                    limit = {
-                        owner.ruler ?= {
-                            has_variable = house_karadordevic
-                        }
-                    }
-                    owner.heir ?= {
-                        set_variable = house_karadordevic
-                    }
-                }
-            }
+            ### Royal House Variables
+            on_heir_born_inherit_royal_house_effect = yes
         }
     }
 }
