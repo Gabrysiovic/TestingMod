@@ -11,10 +11,8 @@
 	home_region = STATE_UGANDA
 	traits = {
 		charismatic
-		ruthless
 		arrogant
 		cruel
-		ambitious
 	}
 }
 
