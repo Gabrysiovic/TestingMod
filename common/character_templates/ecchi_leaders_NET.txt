@@ -106,7 +106,7 @@ ecchi_net_troelstra = {
     home_region = STATE_HOLLAND
 
     religion = rel:protestant
-    ideology = ideology_republican
+    ideology = ideology_state_socialist
     interest_group = ig_trade_unions
 	dna = ecchi_dna_pieter_jelles_troelstra
     birth_date = 1860.4.20

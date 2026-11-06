@@ -6,6 +6,7 @@ ecchi_bel_rogier = {
     historical = yes
     culture = cu:wallonian
     home_region = STATE_WALLONIA
+    home_region = STATE_WALLONIA
     religion = rel:catholic
     ideology = ideology_liberal_leader
     interest_group = ig_intelligentsia
@@ -14,15 +15,15 @@ ecchi_bel_rogier = {
     traits = { experienced_diplomat reserved }
     interest_group_leader_usage = {
         country_trigger = {
-            OR = {
+			OR = {
                 AND = {
-                    exists = c:BEL
-                    this = c:BEL
-                    NOT = { exists = c:WLL }
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:BEL }
                 }
                 AND = {
-                    exists = c:WLL
-                    this = c:WLL
+                    exists = c:BEL
+					this = c:BEL
                 }
             }
         }
@@ -49,15 +50,15 @@ ecchi_bel_pirenne = {
     traits = { direct tactful }
     interest_group_leader_usage = {
         country_trigger = {
-            OR = {
+			OR = {
                 AND = {
-                    exists = c:BEL
-                    this = c:BEL
-                    NOT = { exists = c:WLL }
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:BEL }
                 }
                 AND = {
-                    exists = c:WLL
-                    this = c:WLL
+                    exists = c:BEL
+					this = c:BEL
                 }
             }
         }
@@ -75,7 +76,7 @@ ecchi_bel_brialmont = {
     last_name = Brialmont
     historical = yes
     culture = cu:flemish
-    home_region = STATE_FLANDERS
+    home_region = STATE_WALLONIA
     religion = rel:catholic
     ideology = ideology_jingoist_leader
     interest_group = ig_armed_forces
@@ -85,17 +86,15 @@ ecchi_bel_brialmont = {
     commander_rank = default
     commander_usage = {
         country_trigger = {
-            hga_is_active = no
-            morgenrote_is_active = no #This character is in Morgenröte and should not spawn if Morgenröte is active
-            OR = {
+			OR = {
                 AND = {
-                    exists = c:BEL
-                    this = c:BEL
-                    NOT = { exists = c:FLA }
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:BEL }
                 }
                 AND = {
-                    exists = c:FLA
-                    this = c:FLA
+                    exists = c:BEL
+					this = c:BEL
                 }
             }
         }
@@ -111,7 +110,7 @@ ecchi_bel_de_paepe = {
     last_name = ecchi_De_Paepe
     historical = yes
     culture = cu:flemish
-    home_region = STATE_FLANDERS
+    home_region = STATE_WALLONIA
     ideology = ideology_vanguardist
     interest_group = ig_trade_unions
 	dna = ecchi_dna_cesar_de_paepe
@@ -119,15 +118,15 @@ ecchi_bel_de_paepe = {
     traits = { demagogue direct }
     interest_group_leader_usage = {
         country_trigger = {
-            OR = {
+			OR = {
                 AND = {
-                    exists = c:BEL
-                    this = c:BEL
-                    NOT = { exists = c:FLA }
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:BEL }
                 }
                 AND = {
-                    exists = c:FLA
-                    this = c:FLA
+                    exists = c:BEL
+					this = c:BEL
                 }
             }
         }
@@ -157,18 +156,18 @@ ecchi_bel_hamer = {
     traits = { romantic persistent }
     agitator_usage = {
 		country_trigger = {
-            OR = {
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:BEL }
+                }
                 AND = {
                     exists = c:BEL
-                    this = c:BEL
-                    NOT = { exists = c:FLA }
-                }
-                AND = {
-                    exists = c:FLA
-                    this = c:FLA
+					this = c:BEL
                 }
             }
-			has_technology_researched = feminism
+			has_technology_researched = feminism	
         }
         interest_group_trigger = {
             is_interest_group_type = ig_intelligentsia
@@ -195,15 +194,15 @@ ecchi_bel_la_fontaine = {
     traits = { persistent erudite }
     agitator_usage = {
         country_trigger = {
-            OR = {
+			OR = {
                 AND = {
-                    exists = c:BEL
-                    this = c:BEL
-                    NOT = { exists = c:FLA }
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:BEL }
                 }
                 AND = {
-                    exists = c:FLA
-                    this = c:FLA
+                    exists = c:BEL
+					this = c:BEL
                 }
             }
         }
@@ -222,6 +221,7 @@ ecchi_bel_la_fontaine = {
 #    last_name = "de_Brouckere"
 #    historical = yes
 #    culture = cu:wallonian
+    home_region = STATE_WALLONIA
 #    ig_leader = yes
 #    birth_date = 1796.1.18
 #    interest_group = ig_intelligentsia
@@ -242,15 +242,24 @@ bel_janson = {
     home_region = STATE_WALLONIA
 
     religion = rel:catholic
-    ideology = ideology_liberal_leader
+    ideology = ideology_modernizer_leader
     interest_group = ig_intelligentsia
 	#dna = mr_net_groen_van_prinsterer_guillaume
     birth_date = 1840.11.4
     traits = { persistent ambitious }
     interest_group_leader_usage = {
         country_trigger = {
-            exists = c:BEL
-            this = c:BEL
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:BEL }
+                }
+                AND = {
+                    exists = c:BEL
+					this = c:BEL
+                }
+            }
         }
         interest_group_trigger = {
             is_interest_group_type = ig_intelligentsia
@@ -266,7 +275,7 @@ bel_jottrand = {
     last_name = Jottrand
     historical = yes
     culture = cu:flemish
-    home_region = STATE_FLANDERS
+    home_region = STATE_WALLONIA
 
     religion = rel:catholic
     ideology = ideology_radical
@@ -276,8 +285,18 @@ bel_jottrand = {
     traits = { literary aesthete }
 	agitator_usage = {
 		country_trigger = {
-			c:BEL ?= this
-		}
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:BEL }
+                }
+                AND = {
+                    exists = c:BEL
+					this = c:BEL
+                }
+            }
+        }
         interest_group_trigger = {
             ig_counts_as_marginal = no
             is_interest_group_type = ig_intelligentsia
@@ -303,15 +322,15 @@ bel_destree = {
     traits = { aesthete imperious }
     interest_group_leader_usage = {
         country_trigger = {
-            OR = {
+			OR = {
                 AND = {
-                    exists = c:BEL
-                    this = c:BEL
-                    NOT = { exists = c:WLL }
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:BEL }
                 }
                 AND = {
-                    exists = c:WLL
-                    this = c:WLL
+                    exists = c:BEL
+					this = c:BEL
                 }
             }
         }
@@ -329,7 +348,7 @@ net_popelin = {
 	last_name = Popelin
 	historical = yes
 	culture = cu:wallonian
-	home_region = STATE_WALLONIA
+    home_region = STATE_WALLONIA
 	religion = rel:catholic
     female = yes
 	interest_group = ig_petty_bourgeoisie
@@ -339,8 +358,18 @@ net_popelin = {
 	traits = { ambitious charismatic  }
 	agitator_usage = {
 		country_trigger = {
-			c:BEL ?= this
-		}
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:BEL }
+                }
+                AND = {
+                    exists = c:BEL
+					this = c:BEL
+                }
+            }
+        }
         interest_group_trigger = {
             ig_counts_as_marginal = no
             is_interest_group_type = ig_petty_bourgeoisie
@@ -366,15 +395,15 @@ bel_beernaert = {
     traits = { aesthete experienced_diplomat }
     interest_group_leader_usage = {
         country_trigger = {
-            OR = {
+			OR = {
                 AND = {
-                    exists = c:BEL
-                    this = c:BEL
-                    NOT = { exists = c:WLL }
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:BEL }
                 }
                 AND = {
-                    exists = c:WLL
-                    this = c:WLL
+                    exists = c:BEL
+					this = c:BEL
                 }
             }
         }
@@ -392,6 +421,7 @@ bel_beernaert = {
 #    last_name = Previnaire
 #    historical = yes
 #    culture = cu:wallonian
+    home_region = STATE_WALLONIA
 #
 #    religion = rel:catholic
 #    ideology = ideology_market_liberal
@@ -418,6 +448,7 @@ bel_beernaert = {
 #    last_name = Peers
 #    historical = yes
 #    culture = cu:flemish
+    home_region = STATE_WALLONIA
 #
 #    religion = rel:catholic
 #    ideology = ideology_liberal_leader
@@ -454,8 +485,17 @@ bel_dumont = {
     traits = { ambitious experienced_entrepreneur }
     interest_group_leader_usage = {
         country_trigger = {
-            exists = c:BEL
-            this = c:BEL
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:BEL }
+                }
+                AND = {
+                    exists = c:BEL
+					this = c:BEL
+                }
+            }
         }
         interest_group_trigger = {
             is_interest_group_type = ig_industrialists
@@ -481,8 +521,17 @@ bel_eloy = {
     traits = { persistent honorable }
     interest_group_leader_usage = {
         country_trigger = {
-            exists = c:BEL
-            this = c:BEL
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:BEL }
+                }
+                AND = {
+                    exists = c:BEL
+					this = c:BEL
+                }
+            }
         }
         interest_group_trigger = {
             is_interest_group_type = ig_rural_folk
@@ -498,18 +547,28 @@ bel_daens = {
     last_name = Daens
     historical = yes
     culture = cu:flemish
-    home_region = STATE_FLANDERS
+    home_region = STATE_WALLONIA
 
     religion = rel:catholic
-    ideology = ideology_corporatist_leader
+    ideology = ideology_modernizer_leader
     interest_group = ig_devout
 	#dna = mr_net_groen_van_prinsterer_guillaume
     birth_date = 1804.1.31
     traits = { charismatic pious }
 	agitator_usage = {
 		country_trigger = {
-			c:BEL ?= this
-		}
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:BEL }
+                }
+                AND = {
+                    exists = c:BEL
+					this = c:BEL
+                }
+            }
+        }
         interest_group_trigger = {
             ig_counts_as_marginal = no
             is_interest_group_type = ig_devout
