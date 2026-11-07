@@ -1,14 +1,12 @@
 ﻿REPLACE:grant_leadership_to_agitator = {
 	icon = "gfx/interface/character_panel/grant_command_not.dds"
 	clicksound = "event:/SFX/DLC/1.3_ip1/UI/agitator_promote"
-
 	potential = {
 		has_dlc_feature = agitators
 		has_role_of_type = agitator
 		exists = owner
 		owner ?= scope:actor
 	}
-
 	possible = {
 		interest_group ?= {
 			is_in_government = yes
@@ -78,7 +76,6 @@
 			}
 		}
 	}
-
 	effect = {
 		show_as_tooltip = {
 			remove_character_role = agitator
@@ -88,9 +85,7 @@
 			set_as_interest_group_leader = yes
 		}
 	}
-
 	cooldown = { days = normal_modifier_time }
-
 	ai_chance = {
 		value = -50
 		if = {
@@ -124,6 +119,21 @@
 				this.ideology = owner.ruler.ideology
 			}
 			add = 50
+		}
+		if = {
+			limit = {
+				character_matches_divided_monarchists_ai_path = yes
+				interest_group.leader ?= {
+					NOT = { character_matches_divided_monarchists_ai_path = yes }
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				character_is_rival_french_house = yes
+			}
+			multiply = 0
 		}
 	}
 }

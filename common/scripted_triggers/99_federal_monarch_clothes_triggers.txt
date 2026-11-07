@@ -22,14 +22,14 @@ REPLACE:monarchy_clothes_trigger = {
 				}
 				is_ruler_of_own_country = yes
 			}
-	     	is_heir_of_own_country = yes
+			is_heir_of_own_country = yes
 			character_is_federal_monarch = yes
 		}
-     	owner = {
+		owner ?= {
 			OR = {
-     			has_law = law_type:law_monarchy
-     			has_law = law_type:law_social_monarchy
+				has_law = law_type:law_monarchy
+				has_law = law_type:law_social_monarchy
 			}
-     	}
+		}
 	}
 }

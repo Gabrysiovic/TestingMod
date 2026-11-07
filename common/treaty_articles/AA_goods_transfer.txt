@@ -43,6 +43,20 @@ REPLACE:goods_transfer = {
 			}
 		}
 	}
+	requirement_to_maintain = {
+		trigger = {
+			scope:source_country ?= {
+				is_junior_in_customs_union = no
+			}
+		}
+	}
+	requirement_to_maintain = {
+		trigger = {
+			scope:target_country ?= {
+				is_junior_in_customs_union = no
+			}
+		}
+	}
 	non_fulfillment = {
 		consequences = freeze
 		max_consecutive_contraventions = 3
@@ -160,7 +174,7 @@ REPLACE:goods_transfer = {
 				exists = "scope:article.input_market_goods(scope:target_country)"
 			}
 			"scope:article.input_market_goods(scope:source_country)" ?= {
-				value = 
+				value =
 				{
 					add = market_export_cap
 					subtract = treaty_exports
@@ -221,7 +235,7 @@ REPLACE:goods_transfer = {
 					}
 					else = {
 						multiply = 0.10
-					}	
+					}
 				}
 				########## INFAMY - source
 				"scope:source_country" ?= {
@@ -239,7 +253,7 @@ REPLACE:goods_transfer = {
 					}
 					else = {
 						multiply = 1
-					}	
+					}
 				}
 				#### INFAMY - TARGET
 				"scope:target_country" ?= {
@@ -257,9 +271,8 @@ REPLACE:goods_transfer = {
 					}
 					else = {
 						multiply = 1
-					}	
+					}
 				}
-				
 			}
 		}
 		min = 10
@@ -744,45 +757,57 @@ REPLACE:goods_transfer = {
 					exists = scope:quantity
 				}
 				add = {
-					desc = "INFAMY_QUANTITY_FACTOR"
+					desc = "INFAMY_GOODS_TRANSFER_TARGET_SHARE"
 					value = scope:quantity
 					divide = {
 						value = scope:market_goods.market_goods_sell_orders
 						min = 10
 					}
-					multiply = 15
-					min = 0
-					max = 20
-					if = {
-						limit = {
-							scope:market_goods ?= {
-								goods ?= {
-									g:grain ?= this
-								}
-							}
-						}
-						multiply = 6
-					}
-					else_if = {
-						limit = {
-							scope:market_goods ?= {
-								goods ?= {
-									OR = {
-										g:fish ?= this
-										g:meat ?= this
-										g:fruit ?= this
-										g:groceries ?= this
-									}
-								}
-							}
-						}
-						multiply = 3
-					}
-					max = {
-						value = scope:market_goods.market_goods_sell_orders
-						max = 75
+					multiply = define:NDiplomacy|WAR_GOAL_INFAMY_GOODS_TRANSFER_SHARE_MULT
+					min = define:NDiplomacy|WAR_GOAL_INFAMY_GOODS_TRANSFER_SHARE_MIN
+					max = define:NDiplomacy|WAR_GOAL_INFAMY_GOODS_TRANSFER_SHARE_MAX
+				}
+				add = {
+					desc = "INFAMY_GOODS_TRANSFER_SELF_SHARE"
+					value = scope:quantity
+					divide = {
+						value = scope:own_market_goods.market_goods_sell_orders
 						min = 10
 					}
+					multiply = define:NDiplomacy|WAR_GOAL_INFAMY_GOODS_TRANSFER_SHARE_MULT
+					min = define:NDiplomacy|WAR_GOAL_INFAMY_GOODS_TRANSFER_SHARE_MIN
+					max = define:NDiplomacy|WAR_GOAL_INFAMY_GOODS_TRANSFER_SHARE_MAX
+				}
+			}
+			if = {
+				limit = {
+					scope:market_goods ?= {
+						goods ?= {
+							g:grain ?= this
+						}
+					}
+				}
+				multiply = {
+					desc = "INFAMY_GOODS_TRANSFER_FOOD"
+					value = define:NDiplomacy|WAR_GOAL_INFAMY_GOODS_TRANSFER_GRAIN_MULT
+				}
+			}
+			else_if = {
+				limit = {
+					scope:market_goods ?= {
+						goods ?= {
+							OR = {
+								g:fish ?= this
+								g:meat ?= this
+								g:fruit ?= this
+								g:groceries ?= this
+							}
+						}
+					}
+				}
+				multiply = {
+					desc = "INFAMY_GOODS_TRANSFER_FOOD"
+					value = define:NDiplomacy|WAR_GOAL_INFAMY_GOODS_TRANSFER_STAPLE_FOOD_MULT
 				}
 			}
 		}

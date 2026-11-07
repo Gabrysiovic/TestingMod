@@ -1,37 +1,30 @@
-# Confédération générale des vignerons
+# ConfÃ©dÃ©ration gÃ©nÃ©rale des vignerons
 INJECT:company_cgv = {
 	building_types = {
 		building_tobacco_plantation
 	}
 }
 
-# Manufacture d'armes de Saint-Étienne
+# Manufacture d'armes de Saint-Ã‰tienne
 REPLACE:company_saint_etienne = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/france_saint_etienne.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
-
 	flavored_company = yes
-
 	preferred_headquarters = { STATE_RHONE }
-
 	building_types = {
 		building_arms_industry
 		building_artillery_foundry
 		building_munition_plant
 	}
-
 	extension_building_types = {
 		building_explosives_factory
 	}
-
 	possible_prestige_goods = {
 		prestige_good_saint_etienne_rifles
 	}
-
 	potential = {
 		has_interest_marker_in_region = sr:region_southern_europe
 	}
-
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
@@ -39,24 +32,19 @@ REPLACE:company_saint_etienne = {
 			}
 		}
 	}
-
 	possible = {
+		has_building_levels_in_state_region = {
+			region = STATE_RHONE
+			building = building_arms_industry
+			levels >= 5
 		has_technology_researched = repeaters
-		any_scope_state = {
-			state_region = s:STATE_RHONE
 			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_arms_industry
-				level >= 5
-			}
 		}
 	}
-
 	prosperity_modifier = {
 		unit_offense_mult = 0.05
 		unit_defense_mult = 0.05
 	}
-
 	ai_will_do = {
 		has_technology_researched = repeaters
 		any_scope_state = {
@@ -64,7 +52,6 @@ REPLACE:company_saint_etienne = {
 			is_incorporated = yes
 		}
 	}
-
 	ai_construction_targets = {
 		building_arms_industry = {
 			level = 5
@@ -73,9 +60,14 @@ REPLACE:company_saint_etienne = {
 			}
 		}
 	}
-
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
+		if = {
+			limit = {
+				divided_monarchists_ai_backs_orleanist = yes
+			}
+			add = 6
+		}
 	}
 }
 
@@ -84,32 +76,24 @@ REPLACE:company_saint_etienne = {
 REPLACE:company_maison_worth = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_maison_worth.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
-
 	category = shopkeeper_owned
-
 	flavored_company = yes
-
 	preferred_headquarters = { STATE_ILE_DE_FRANCE }
-
 	building_types = {
 		building_textile_mill
 		building_cotton_plantation
 		building_silk_plantation
 	}
-
 	extension_building_types = {
 		building_art_academy
 	}
-
 	possible_prestige_goods = {
 		prestige_good_haute_couture
 	}
-
 	potential = {
 		has_dlc_feature = mp1_content
 		has_interest_marker_in_region = sr:region_western_europe
 	}
-
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			s:STATE_ILE_DE_FRANCE = {
@@ -119,31 +103,25 @@ REPLACE:company_maison_worth = {
 			}
 		}
 	}
-
 	possible = {
-		any_scope_state = {
-			state_region = s:STATE_ILE_DE_FRANCE
+		has_building_levels_in_state_region = {
+			region = STATE_ILE_DE_FRANCE
+			building = building_textile_mill
+			levels >= 5
 			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_textile_mill
-				level >= 5
-			}
 		}
 	}
-
 	prosperity_modifier = {
 		country_influence_mult = 0.05
 		country_leverage_generation_mult = 0.05
 		state_assimilation_mult = 0.05
 	}
-
 	ai_will_do = {
 		any_scope_state = {
 			state_region = s:STATE_ILE_DE_FRANCE
 			is_incorporated = yes
 		}
 	}
-
 	ai_construction_targets = {
 		building_textile_mill = {
 			level = 5
@@ -152,9 +130,14 @@ REPLACE:company_maison_worth = {
 			}
 		}
 	}
-
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
+		if = {
+			limit = {
+				divided_monarchists_ai_backs_orleanist = yes
+			}
+			add = 6
+		}
 	}
 }
 
@@ -166,7 +149,7 @@ INJECT:company_mines_anzin = {
 	}
 }
 
-# Société Mokta El Hadid
+# SociÃ©tÃ© Mokta El Hadid
 INJECT:company_societe_mokta_el_hadid = {
 	possible_prestige_goods = {
 		prestige_good_swedish_bar_iron

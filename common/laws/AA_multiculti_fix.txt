@@ -92,5 +92,21 @@ REPLACE:law_multicultural = {
 			}
 			add = 750
 		}
+		if = {
+			limit = {
+				has_journal_entry = je_tp_pool_cultural_dominance
+				scope:law.type.progressiveness > active_law:lawgroup_citizenship.type.progressiveness
+			}
+			add = -750
+		}
+		if = {
+			limit = {
+				OR = {
+					has_variable = ai_ukraine_renaissance_repress
+					has_variable = ai_belarus_renaissance_repress
+				}
+			}
+			add = -750
+		}
 	}
 }

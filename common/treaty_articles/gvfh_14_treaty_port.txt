@@ -1,15 +1,11 @@
 ﻿REPLACE:treaty_port = {
-    kind = directed
-    cost = 50
-
-    relations_progress_per_day = -0.5
-    relations_improvement_min = 0
-
+	kind = directed
+	cost = 50
+	relations_progress_per_day = -0.5
+	relations_improvement_min = 0
 	max_target_involvement = 3000
 	target_involvement_applies_to = source_country
-
 	icon = "gfx/interface/icons/diplomatic_treaties_articles_icons/treaty_port_treaties.dds"
-
 	flags = {
 		is_treaty_port
 		can_be_enforced
@@ -17,26 +13,20 @@
 		giftable
 		hostile
 	}
-
 	usage_limit = once_per_side_with_same_inputs
-
 	maintenance_paid_by = target_country
-
-    required_inputs = {
-        state
-    }
-
-    unlocked_by_technologies = {
-        colonization
-    }
-
+	required_inputs = {
+		state
+	}
+	unlocked_by_technologies = {
+		colonization
+	}
 	visible = {
 		is_revolutionary = no
 		any_scope_state = {
 			is_coastal = yes
 		}
 	}
-
 	possible = {
 		any_scope_state = {
 			is_coastal = yes
@@ -46,12 +36,11 @@
 			NOT = { is_subject_of = root }
 		}
 	}
-
 	non_fulfillment = { # GVFH: Treaty port non fullfill instead of straight up breaking when revolution spawn and cut access
-        consequences = freeze
-        max_consecutive_contraventions = 3
-        conditions = {
-            weekly = {
+		consequences = freeze
+		max_consecutive_contraventions = 3
+		conditions = {
+			weekly = {
 				scope:article.input_state ?= {
 					state_region = {
 						NAND = {
@@ -65,16 +54,14 @@
 						}
 					}
 				}
-            }
+			}
 		}
 	}
-
 	requirement_to_maintain = {
 		trigger = {
 			exists = scope:article.input_state
 		}
 	}
-
 	requirement_to_maintain = {
 		trigger = {
 			trigger_if = {
@@ -86,6 +73,7 @@
 						any_scope_state = {
 							OR = {
 								owner = scope:article.target_country
+										is_special_civil_war_tag = yes
 								owner = { # GVFH: Remove condition to always happen if a war happen
 									is_diplomatic_play_enemy_of = scope:article.target_country
 								}
@@ -100,7 +88,6 @@
 			}
 		}
 	}
-
 	requirement_to_maintain = {
 		trigger = {
 			trigger_if = {
@@ -113,8 +100,9 @@
 							owner = {
 								OR = {
 									this = scope:article.source_country
-									# GVFH: Remove condition to always happen if a war happen
+											is_special_civil_war_tag = yes
 										is_diplomatic_play_enemy_of = scope:article.source_country
+									# GVFH: Remove condition to always happen if a war happen
 								}
 							}
 							is_treaty_port = no
@@ -127,13 +115,11 @@
 			}
 		}
 	}
-
-    can_ratify = {
-        scope:source_country = {
+	can_ratify = {
+		scope:source_country = {
 			country_rank <= scope:target_country.country_rank
-        }
-    }
-
+		}
+	}
 	can_withdraw = {
 		trigger_if = {
 			limit = {
@@ -147,9 +133,7 @@
 				}
 			}
 		}
-
 	}
-
 	state_valid_trigger = {
 		scope:input = {
 			is_potential_treaty_port = scope:other_country
@@ -164,8 +148,7 @@
 			}
 		}
 	}
-
-    on_entry_into_force = {
+	on_entry_into_force = {
 		scope:article_options = {
 			target_country = {
 				save_scope_as = state_taker
@@ -173,7 +156,6 @@
 			source_country = {
 				save_scope_as = state_giver
 			}
-
 			if = {
 				limit = { exists = input_state }
 				input_state = {
@@ -183,7 +165,6 @@
 				}
 			}
 		}
-
 		scope:state_taker ?= {
 			if = {
 				limit = {
@@ -204,8 +185,6 @@
 				}
 			}
 		}
-
-
 		scope:state_giver ?= {
 			if = {
 				limit = {
@@ -233,7 +212,6 @@
 			}
 		}
 	}
-
 	on_withdrawal = {
 		scope:article_options.input_state = {
 			state_region = {
@@ -270,23 +248,18 @@
 			}
 		}
 	}
-
 	ai = {
 		treaty_categories = {
 			expansion
 		}
-
 		evaluation_chance = {
 			value = 0.1
 		}
-
 		article_ai_usage = {
-            request
-        }
-
+			request
+		}
 		inherent_accept_score = {
 			value = 0
-
 			if = {
 				limit = {
 					exists = scope:article.input_state
@@ -304,7 +277,6 @@
 							multiply = 0.5
 							desc = "DIPLOMATIC_ACCEPTANCE_TRADE_STATE_SOURCE"
 						}
-
 						if = {
 							limit = {
 								is_country_type = recognized
@@ -320,7 +292,6 @@
 							desc = "great_power"
 						}
 					}
-
 					if = {
 						limit = {
 							country_has_isolationism_or_sakoku = yes
@@ -330,7 +301,6 @@
 							add = -1000
 						}
 					}
-				
 					if = {
 						limit = {
 							c:JAP ?= scope:source_country
@@ -375,10 +345,8 @@
 				}
 			}
 		}
-
 		wargoal_score_multiplier = {
 			value = 1
-
 			# Britain should go for Hong Kong when starting Opium Wars play against Qing
 			if = {
 				limit = {
@@ -395,54 +363,31 @@
 			}
 		}
 	}
-
 	wargoal = {
 		execution_priority = 71
 		contestion_type = control_target_state
-
 		maneuvers = {
 			value = 0
-
 			add = {
 				desc = "MANEUVERS_BASE_VALUE"
 				value = 5
 			}
-
 			scope:target_country = {
 				multiply = {
 					desc = "MANEUVERS_TARGET_COUNTRY_POPULATION_FACTOR"
 					value = total_population
 					divide = define:NDiplomacy|SWAY_OFFER_WARGOAL_MANEUVERS_COST_POPULATION_SCALING_FACTOR
 					multiply = define:NDiplomacy|SWAY_OFFER_WARGOAL_MANEUVERS_COST_POPULATION_SCALING_MULTIPLIER
-                    max = define:NDiplomacy|SWAY_OFFER_WARGOAL_MANEUVERS_COST_POPULATION_SCALING_MULTIPLIER_MAX_PER_STATE
+					max = define:NDiplomacy|SWAY_OFFER_WARGOAL_MANEUVERS_COST_POPULATION_SCALING_MULTIPLIER_MAX_PER_STATE
 				}
 			}
 		}
-
+		infamy_severity = 0.4
 		infamy = {
 			value = 0
-
-			if = {
-				limit = {
-					exists = scope:state
-				}
-				scope:state = {
-					save_temporary_scope_as = target_state
-				}
-				add = {
-					desc = "INFAMY_STATE_POPULATION_FACTOR"
-					value = scope:state.state_population
-					divide = 10000
-					max = 5
-				}
-				add = {
-					desc = "INFAMY_STATE_GDP_FACTOR"
-					value = scope:state.gdp
-					divide = 50000
-					max = 5
-				}
+			scope:state ?= {
+				add = state_infamy_value
 			}
-			min = 5
 		}
 	}
 }

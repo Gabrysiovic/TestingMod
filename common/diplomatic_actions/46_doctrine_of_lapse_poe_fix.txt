@@ -2,19 +2,15 @@
 	groups = {
 		overlord
 	}
-
 	texture = "gfx/interface/icons/diplomatic_action_icons/doctrine_of_lapse.dds"
-
 	requires_approval = no
 	should_notify_third_parties = yes
 	show_effect_in_tooltip = yes
 	can_use_obligations = no
-
 	selectable = {
 		NOT = { has_variable = doctrine_of_lapse_ended }
 		c:BIC ?= this
 	}
-
 	possible = {
 		is_at_war = no
 		custom_tooltip = {
@@ -34,8 +30,8 @@
 			is_player = no
 		}
 	}
-
 	accept_effect = {
+		save_temporary_scope_as = annexing_overlord
 		set_variable = { name = doctrine_of_lapse_cooldown years = 2 }
 		create_incident = {
 			country = scope:target_country
@@ -74,23 +70,69 @@
 			}
 			annex = scope:target_country
 		}
+		hidden_effect = {
+			if = {
+				limit = {
+					is_player = yes
+					NOR = {
+						has_global_variable = nemo_chain_started_global_var
+						has_game_rule = no_fantastical_content
+					}
+					OR = {
+						real_month = 10
+						real_month = 11
+					}
+				}
+				random_list = {
+					10 = {
+						set_global_variable = nemo_chain_started_global_var
+						set_variable = {
+							name = nemo_raid_count_var
+							value = 0
+						}
+						random_list = {
+							1 = {
+								set_variable = {
+									name = nemo_raid_limit_var
+									value = 2
+								}
+							}
+							1 = {
+								set_variable = {
+									name = nemo_raid_limit_var
+									value = 3
+								}
+							}
+						}
+						create_character = {
+							template = nemo_prince
+							on_created = {
+								set_character_immortal = yes
+								place_character_in_void = 700
+							}
+							save_scope_as = nemo_scope
+						}
+						post_notification = nemo_appears_notification
+						set_variable = nemo_pending_raid_var
+					}
+					90 = {
+					}
+				}
+			}
+		}
 	}
-
 	ai = {
 		evaluation_chance = {
 			value = 0.0
-
 			if = {
 				limit = { NOT = { has_variable = doctrine_of_lapse_cooldown } }
 				add = 0.25
 			}
 		}
-
 		propose_score = {
 			value = 15
 			subtract = infamy
 		}
-
 		will_propose = {
 			OR = {
 				scope:target_country ?= {
@@ -101,7 +143,7 @@
 							OR = {
 								NOT = {
 									exists = heir
-								}	
+								}
 								heir ?= {
 									is_female = yes # I don't even get this policy; isn't your monarch female?
 								}

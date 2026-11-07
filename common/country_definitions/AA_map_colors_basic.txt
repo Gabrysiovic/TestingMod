@@ -1,4 +1,5 @@
 ﻿REPLACE:GBR = {
+	color = hsv{ 0.99  0.7  0.9 } # 356 70 90
 	color = {
 		120
 		0
@@ -11,6 +12,20 @@
 		scottish
 	}
 	capital = STATE_HOME_COUNTIES
+	regnal_numbers = {
+		Anne = 2
+		Charles = 3
+		Edward = 7 # the six post-Conquest Edwards; Edward the Confessor is not numbered
+		Elizabeth = 2
+		George = 5
+		Henry = 9
+		James = 3 # English numbering, as the British crown uses
+		John = 2
+		Mary = 3 # Mary I and Mary II
+		Richard = 4
+		Stephen = 2
+		William = 4 # William IV reigns at the start and is numbered from here
+	}
 }
 
 REPLACE:BYZ = {

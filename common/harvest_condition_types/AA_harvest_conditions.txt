@@ -30,9 +30,9 @@ REPLACE:drought = {
 		building_group_bg_plantations_throughput_add = -0.08
 		building_group_bg_ranching_throughput_add = -0.08
 		#Infrastructure - removed
-##		building_group_bg_agriculture_infrastructure_usage_mult = 0.1
-##		building_group_bg_plantations_infrastructure_usage_mult = 0.1
-##		building_group_bg_ranching_infrastructure_usage_mult = 0.1
+		##		building_group_bg_agriculture_infrastructure_usage_mult = 0.1
+		##		building_group_bg_plantations_infrastructure_usage_mult = 0.1
+		##		building_group_bg_ranching_infrastructure_usage_mult = 0.1
 		#Subsistence
 		state_peasants_consumption_multiplier_add = 0.025
 	}
@@ -90,7 +90,7 @@ REPLACE:flood = {
 	}
 	modifier = {
 		#Infrastructure - removed
-##		state_infrastructure_mult = -0.05
+		##		state_infrastructure_mult = -0.05
 		#MAPI
 		state_market_access_price_impact = -0.05
 		#Throughput - stronger
@@ -99,7 +99,7 @@ REPLACE:flood = {
 		building_group_bg_ranching_throughput_add = -0.08
 		building_group_bg_extraction_throughput_add = -0.08
 		#Subsistence
-		state_peasants_consumption_multiplier_add = 0.025
+		state_peasants_consumption_multiplier_add = 0.03
 	}
 	intensity = {
 		fixed_range = {
@@ -228,9 +228,9 @@ REPLACE:wildfire = {
 		building_group_bg_ranching_throughput_add = -0.08
 		building_group_bg_extraction_throughput_add = -0.08
 		# Infra - Building
-##		building_group_bg_agriculture_infrastructure_usage_mult = 0.1
-##		building_group_bg_plantations_infrastructure_usage_mult = 0.1
-##		building_group_bg_ranching_infrastructure_usage_mult = 0.1
+		##		building_group_bg_agriculture_infrastructure_usage_mult = 0.1
+		##		building_group_bg_plantations_infrastructure_usage_mult = 0.1
+		##		building_group_bg_ranching_infrastructure_usage_mult = 0.1
 		# Infra - State
 		building_group_bg_agriculture_throughput_add = -0.05
 		#Subsistence
@@ -551,6 +551,8 @@ REPLACE:torrential_rains = {
 		building_group_bg_ranching_throughput_add = -0.03
 		building_group_bg_extraction_throughput_add = -0.03
 		#Infra
+		#Subsistence
+		state_peasants_consumption_multiplier_add = 0.025
 		building_group_bg_agriculture_throughput_add = -0.05
 	}
 	intensity = {

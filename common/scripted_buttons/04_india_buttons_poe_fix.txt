@@ -193,12 +193,10 @@ add_indian_nationalism_button = {
 REPLACE:je_india_home_rule_request_democracy_permission = {
 	name = "je_india_home_rule_request_democracy_permission"
 	desc = "je_india_home_rule_request_democracy_permission_desc"
-
 	visible = {
 		c:BIC ?= this
 		is_subject = yes
 	}
-
 	ai_chance = {
 		value = 0
 		if = {
@@ -228,7 +226,6 @@ REPLACE:je_india_home_rule_request_democracy_permission = {
 			add = 100
 		}
 	}
-
 	possible = {
 		NOT = {
 			is_subject_type = subject_type_chartered_company
@@ -299,7 +296,6 @@ REPLACE:je_india_home_rule_request_democracy_permission = {
 			}
 		}
 	}
-
 	effect = {
 		set_variable = { name = requested_dop_permission years = 2 }
 		trigger_event = { id = indian_reform_request_events.1 popup = yes }
@@ -557,7 +553,6 @@ REPLACE_OR_CREATE:je_india_home_rule_sovereign_government = {
 REPLACE:je_india_nationalism_britain_indian_self_governance = {
 	name = "je_india_nationalism_britain_indian_self_governance"
 	desc = "je_india_nationalism_britain_indian_self_governance_desc"
-
 	ai_chance = {
 		# Only reformist-only governments will proactively initiate reforms
 		value = 0
@@ -579,14 +574,12 @@ REPLACE:je_india_nationalism_britain_indian_self_governance = {
 			add = 100
 		}
 	}
-
 	visible = {
 		c:BIC ?= {
 			is_direct_subject_of = ROOT
 			is_player = no
 		}
 	}
-
 	possible = {
 		c:BIC ?= {
 			NOT = {
@@ -667,11 +660,12 @@ REPLACE:je_india_nationalism_britain_indian_self_governance = {
 			}
 		}
 	}
-
 	effect = {
 		c:BIC ?= {
 			set_variable = { name = requested_dop_permission years = 2 }
 		}
+				exists = py:socialist_party
+					is_member_of_party = py:socialist_party
 		show_as_tooltip = {
 			c:BIC ?= {
 				indian_reform_passed_effect = yes
@@ -682,9 +676,9 @@ REPLACE:je_india_nationalism_britain_indian_self_governance = {
 					is_marginal = no
 				}
 				add_modifier = {
-	    			name = approved_indian_government_reform_good
-	    			days = short_modifier_time
-	    		}
+					name = approved_indian_government_reform_good
+					days = short_modifier_time
+				}
 			}
 			every_interest_group = {
 				limit = {
@@ -692,9 +686,9 @@ REPLACE:je_india_nationalism_britain_indian_self_governance = {
 					is_marginal = no
 				}
 				add_modifier = {
-	    			name = approved_indian_government_reform_bad
-	    			days = short_modifier_time
-	    		}
+					name = approved_indian_government_reform_bad
+					days = short_modifier_time
+				}
 			}
 			custom_tooltip = indian_nationalism_increase_0_1_per_month_tt
 		}
@@ -969,15 +963,12 @@ REPLACE:je_india_nationalism_britain_dispatch_simon_commission = {
 REPLACE:je_communal_divides_federal_solution = {
 	name = "je_communal_divides_federal_solution"
 	desc = "je_communal_divides_federal_solution_desc"
-
 	visible = {
 		always = yes
 	}
-
 	ai_chance = {
 		value = 0
 	}
-
 	possible = {
 		hidden_trigger = {
 			NOT = {
@@ -1004,13 +995,12 @@ REPLACE:je_communal_divides_federal_solution = {
 			}
 		}
 		custom_tooltip = {
-            text = communal_divides_10_timer_tt
-            je:je_communal_divides = {
-                journal_entry_age > 3650
-            }
-        }
+			text = communal_divides_10_timer_tt
+			je:je_communal_divides = {
+				journal_entry_age > 3650
+			}
+		}
 	}
-
 	effect = {
 		set_variable = selected_federal_solution_var
 		custom_tooltip = confederacy_of_india
@@ -1162,17 +1152,13 @@ REPLACE:je_communal_divides_federal_solution = {
 REPLACE:je_federation_of_india_invite_princely_states = {
 	name = "je_federation_of_india_invite_princely_states"
 	desc = "je_federation_of_india_invite_princely_states_desc"
-
 	visible = {
 		always = yes
 	}
-
 	cooldown = { days = 365 }
-
 	ai_chance = {
 		value = 0
 	}
-
 	possible = {
 		is_at_war = no
 		any_princely_state = {
@@ -1181,7 +1167,6 @@ REPLACE:je_federation_of_india_invite_princely_states = {
 			liberty_desire < define:NDiplomacy|WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD
 		}
 	}
-
 	effect = {
 		custom_tooltip = {
 			text = all_princely_states_get_invitation_tt

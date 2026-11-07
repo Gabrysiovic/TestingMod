@@ -22,7 +22,7 @@
 	}
 	unlocking_technologies = {
 		labor_movement
-		nationalism
+		pan-nationalism
 	}
 	ai_weight = {
 		value = 1
