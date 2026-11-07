@@ -1,6 +1,8 @@
 ﻿ecchi_dna_sam_steele={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 196 170 196 170 }
  		skin_color={ 16 24 16 24 }
  		eye_color={ 45 56 45 56 }

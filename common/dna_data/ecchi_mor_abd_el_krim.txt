@@ -1,6 +1,8 @@
 ﻿ecchi_dna_abd_el_krim = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 126 237 126 237 }
  		skin_color={ 164 129 164 129 }
  		eye_color={ 40 252 40 252 }

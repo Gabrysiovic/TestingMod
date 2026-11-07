@@ -1,6 +1,8 @@
 ﻿ecchi_dna_ali_ben_aissa = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 91 236 91 236 }
  		skin_color={ 146 140 146 140 }
  		eye_color={ 38 242 38 242 }

@@ -1,5 +1,9 @@
 ﻿je_spring_reforms_government = {
 	group = je_group_internal_affairs
+
+	activation_description = {
+		always = yes
+	}
 	is_shown_when_inactive = {
 		OR = {
 			c:JAP ?= THIS			#JAPAN
@@ -33,32 +37,43 @@
 	possible = {
 		always = yes
 	}
-	complete = {
-		AND = {
-			NOT = {
-				has_law = law_type:law_autocracy
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			AND = {
+				NOT = {
+					has_law = law_type:law_autocracy
+				}
+				NOT = {
+					has_law = law_type:law_state_religion
+				}
+				NOT = {
+					has_law = law_type:law_hereditary_bureaucrats
+				}
+				has_law = law_type:law_slavery_banned
 			}
-			NOT = {
-				has_law = law_type:law_state_religion
+		}
+		effect = {
+			add_modifier = {
+				name = AA_modernize_government_modifier
+				months = 128
 			}
-			NOT = {
-				has_law = law_type:law_hereditary_bureaucrats
-			}
-			has_law = law_type:law_slavery_banned
 		}
 	}
-	on_complete = {
-		add_modifier = {
-			name = AA_modernize_government_modifier
-			months = 128
-		}
-	}
+	
 	weight = 200
 	should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
 je_spring_reforms_economic = {
 	group = je_group_internal_affairs
+
+	activation_description = {
+		always = yes
+	}
 	is_shown_when_inactive = {
 		OR = {
 			c:JAP ?= THIS			#JAPAN
@@ -92,31 +107,42 @@ je_spring_reforms_economic = {
 	possible = {
 		always = yes
 	}
-	complete = {
-		AND = {
-			NOT = {
-				has_law = law_type:law_serfdom
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			AND = {
+				NOT = {
+					has_law = law_type:law_serfdom
+				}
+				NOT = {
+					has_law = law_type:law_land_based_taxation
+				}
+				NOT = {
+					has_law = law_type:law_traditionalism
+				}
 			}
-			NOT = {
-				has_law = law_type:law_land_based_taxation
-			}
-			NOT = {
-				has_law = law_type:law_traditionalism
+		}
+		effect = {
+			add_modifier = {
+				name = AA_modernize_economy_modifier
+				months = 128
 			}
 		}
 	}
-	on_complete = {
-		add_modifier = {
-			name = AA_modernize_economy_modifier
-			months = 128
-		}
-	}
+	
 	weight = 200
 	should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
 je_spring_reforms_landowners = {
 	group = je_group_internal_affairs
+
+	activation_description = {
+		always = yes
+	}
 	is_shown_when_inactive = {
 		OR = {
 			c:JAP ?= THIS			#JAPAN
@@ -150,33 +176,40 @@ je_spring_reforms_landowners = {
 	possible = {
 		always = yes
 	}
-	complete = {
-		AND = {
-			NOT = {
-				ig:ig_landowners = {
-					is_powerful = yes
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			AND = {
+				NOT = {
+					ig:ig_landowners = {
+						is_powerful = yes
+					}
+				}
+				NOT = {
+					ig:ig_devout = {
+						is_powerful = yes
+					}
+				}
+				NOT = {
+					has_law = law_type:law_guild_system
+				}
+				pop_type_percent_country = {
+					target = pop_type:peasants
+					value < 0.35
 				}
 			}
-			NOT = {
-				ig:ig_devout = {
-					is_powerful = yes
-				}
-			}
-			NOT = {
-				has_law = law_type:law_guild_system
-			}
-			pop_type_percent_country = {
-				pop_type = peasants
-				percent < 0.35
+		}
+		effect = {
+			add_modifier = {
+				name = AA_modernize_landowners_modifier
+				months = 128
 			}
 		}
 	}
-	on_complete = {
-		add_modifier = {
-			name = AA_modernize_landowners_modifier
-			months = 128
-		}
-	}
+	
 	weight = 200
 	should_be_pinned_by_default_uninvolved_or_context = yes
 }

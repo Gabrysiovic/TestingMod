@@ -1,6 +1,8 @@
 ﻿ecchi_dna_alfred_dreyfus = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 117 155 9 241 }
  		skin_color={ 65 24 65 24 }
  		eye_color={ 221 172 221 172 }

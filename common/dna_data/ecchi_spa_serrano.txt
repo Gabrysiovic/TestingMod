@@ -1,6 +1,8 @@
 ﻿ecchi_dna_francisco_serrano = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 79 234 79 234 }
  		skin_color={ 16 9 16 9 }
  		eye_color={ 170 204 170 204 }

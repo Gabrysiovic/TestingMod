@@ -1,6 +1,8 @@
 ﻿mr_swi_von_haller_karl_ludwig={
 	portrait_info = {
 		genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 			hair_color={ 50 68 0 0 }
 			skin_color={ 0 0 0 0 }
 			eye_color={ 183 19 0 0 }

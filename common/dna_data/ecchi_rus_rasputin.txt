@@ -1,6 +1,8 @@
 ﻿ecchi_dna_grigori_rasputin = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 104 229 104 229 }
  		skin_color={ 40 16 40 16 }
  		eye_color={ 23 186 23 186 }

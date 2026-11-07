@@ -1,6 +1,8 @@
 ﻿ecchi_dna_michael_joseph_savage = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 200 196 200 177 }
  		skin_color={ 12 28 12 28 }
  		eye_color={ 25 156 25 156 }

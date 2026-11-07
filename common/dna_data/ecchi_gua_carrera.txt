@@ -1,6 +1,8 @@
 ﻿ecchi_dna_rafael_carrera = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 22 235 22 235 }
  		skin_color={ 134 127 134 127 }
  		eye_color={ 87 242 87 242 }

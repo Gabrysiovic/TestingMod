@@ -1,6 +1,8 @@
 ﻿mr_ire_joyce_james = {
 	portrait_info = {
 		genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 			hair_color={ 105 207 0 0 }
 			skin_color={ 0 0 0 0 }
 			eye_color={ 121 91 0 0 }

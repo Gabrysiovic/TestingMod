@@ -1,6 +1,8 @@
 ﻿mr_fra_dumas_alexandre={
 	portrait_info = {
 		genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 			hair_color={ 66 225 0 0 }
 			skin_color={ 0 33 0 0 }
 			eye_color={ 5 48 0 0 }

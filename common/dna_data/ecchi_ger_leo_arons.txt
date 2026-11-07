@@ -1,6 +1,8 @@
 ﻿ecchi_dna_martin_arons={
     portrait_info = {
-	genes={ 		hair_color={ 27 244 27 244 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 27 244 27 244 }
  		skin_color={ 81 7 81 7 }
  		eye_color={ 186 56 186 56 }
  		gene_cheek_fat={ "cheek_fat" 90 "cheek_fat" 90 }

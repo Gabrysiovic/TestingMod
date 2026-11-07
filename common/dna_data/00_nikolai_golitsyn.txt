@@ -2,7 +2,9 @@
 
 dna_nikolai_golitsyn = {
      portrait_info = {
-     genes={ 		hair_color={ 35 216 119 125 }
+     genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 35 216 119 125 }
  		skin_color={ 54 4 54 4 }
  		eye_color={ 56 172 56 172 }
  		gene_cheek_fat={ "cheek_fat" 167 "cheek_fat" 127 }

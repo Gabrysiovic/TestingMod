@@ -1,6 +1,8 @@
 ﻿ecchi_dna_jose_bonifacio_de_andrada = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 113 235 113 235 }
  		skin_color={ 143 127 143 127 }
  		eye_color={ 23 247 23 247 }

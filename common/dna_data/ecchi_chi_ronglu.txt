@@ -1,6 +1,8 @@
 ﻿ecchi_dna_ronglu = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 19 229 19 229 }
  		skin_color={ 51 76 51 76 }
  		eye_color={ 77 249 77 249 }

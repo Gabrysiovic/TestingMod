@@ -1,6 +1,8 @@
 ﻿ecchi_dna_jose_gervasio_artigas = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 235 224 49 235 }
  		skin_color={ 135 116 132 127 }
  		eye_color={ 170 181 87 248 }

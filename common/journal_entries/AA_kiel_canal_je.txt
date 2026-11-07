@@ -3,6 +3,10 @@
 
 	group = je_group_technology
 
+	activation_description = {
+		always = yes
+	}
+
 	on_monthly_pulse = {
 		effect = {
 			change_variable = {
@@ -12,13 +16,38 @@
 		}
 	}
 
-	complete = {
-		scope:journal_entry = { is_goal_complete = yes }
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			scope:journal_entry = { is_goal_complete = yes }
+		}
+		effect = {
+			remove_modifier = modifier_surveying_kiel
+			trigger_event = { id = canal_events.111 }
+		}
 	}
 
-	on_complete = {
-		remove_modifier = modifier_surveying_kiel
-		trigger_event = { id = canal_events.111 }
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			OR = {
+				NOT = { has_variable = survey_kiel_taken }
+				s:STATE_SCHLESWIG_HOLSTEIN = {
+					any_scope_state = {
+						NOT = { owner = ROOT }
+						has_building = building_kiel_canal
+					}
+				}
+			}
+		}
+		effect = {
+			remove_variable = survey_kiel_taken
+			remove_modifier = modifier_surveying_kiel
+		}
 	}
 
 	current_value = {
@@ -27,23 +56,6 @@
 
 	goal_add_value = {
 		value = 18
-	}
-
-	invalid = {
-		OR = {
-			NOT = { has_variable = survey_kiel_taken }
-			s:STATE_SCHLESWIG_HOLSTEIN = {
-				any_scope_state = {
-					NOT = { owner = ROOT }
-					has_building = building_kiel_canal
-				}
-			}
-		}
-	}
-
-	on_invalid = {
-		remove_variable = survey_kiel_taken
-		remove_modifier = modifier_surveying_kiel
 	}
 
 	progressbar = yes
@@ -58,38 +70,50 @@ je_kiel_canal = {
 
 	group = je_group_technology
 
-	complete = {
-		s:STATE_SCHLESWIG_HOLSTEIN = {
-			any_scope_state = {
-				owner = root
-				any_scope_building = {
-					is_building_type = building_kiel_canal
-					occupancy >= 0.9
-				}
-			}
-		}
+	activation_description = {
+		always = yes
 	}
 
-	on_complete = {
-		set_global_variable = kiel_canal_complete
-	}
-
-	invalid = {
-		OR = {
-			NOT = { has_variable = survey_kiel_taken }
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
 			s:STATE_SCHLESWIG_HOLSTEIN = {
 				any_scope_state = {
-					NOT = { owner = ROOT }
-					has_building = building_kiel_canal
+					owner = root
+					any_scope_building = {
+						is_building_type = building_kiel_canal
+						occupancy >= 0.9
+					}
 				}
 			}
 		}
+		effect = {
+			set_global_variable = kiel_canal_complete
+		}
 	}
 
-	on_invalid = {
-		remove_variable = survey_kiel_taken
-		remove_modifier = modifier_surveying_kiel
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			OR = {
+				NOT = { has_variable = survey_kiel_taken }
+				s:STATE_SCHLESWIG_HOLSTEIN = {
+					any_scope_state = {
+						NOT = { owner = ROOT }
+						has_building = building_kiel_canal
+					}
+				}
+			}
+		}
+		effect = {
+			remove_variable = survey_kiel_taken
+			remove_modifier = modifier_surveying_kiel
+		}
 	}
-		
+
 	should_be_pinned_by_default_uninvolved_or_context = yes
 }

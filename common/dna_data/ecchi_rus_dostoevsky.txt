@@ -1,6 +1,8 @@
 ﻿ecchi_dna_fyodor_dostoevsky = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 187 183 55 243 }
  		skin_color={ 77 22 77 22 }
  		eye_color={ 188 194 188 194 }

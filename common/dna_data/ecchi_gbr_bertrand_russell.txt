@@ -1,6 +1,8 @@
 ﻿ecchi_dna_bertrand_russell = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 206 160 206 160 }
  		skin_color={ 71 4 71 4 }
  		eye_color={ 35 83 35 83 }

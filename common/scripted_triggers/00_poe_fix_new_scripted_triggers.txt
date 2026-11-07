@@ -13,7 +13,7 @@
 
 REPLACE_OR_CREATE:ig_is_indian_reformist = {
 	OR = {
-		has_ideology = ideology:ideology_socialist
+		#has_ideology = ideology:ideology_socialist # removed in 1.15
 		leader = {
 			has_ideology = ideology:ideology_pacifist
 		}

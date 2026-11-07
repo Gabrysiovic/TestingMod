@@ -1,6 +1,8 @@
 ﻿ecchi_dna_antonio_santos={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 207 172 170 115 }
  		skin_color={ 20 3 20 3 }
  		eye_color={ 132 32 132 32 }

@@ -1,6 +1,8 @@
 ﻿ecchi_dna_constantin_radulescu_motru = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 43 243 43 243 }
  		skin_color={ 66 12 66 12 }
  		eye_color={ 172 199 172 199 }

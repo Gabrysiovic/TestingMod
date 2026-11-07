@@ -1,6 +1,8 @@
 ﻿ecchi_dna_joseph_conrad = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 106 245 106 245 }
  		skin_color={ 64 8 64 8 }
  		eye_color={ 199 166 199 166 }

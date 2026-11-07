@@ -1,4 +1,4 @@
-# COPY-PASTED FOR NOW
+﻿# COPY-PASTED FOR NOW
 @panel_width_minus_10 = 530			# used to be 450
 @panel_width = 540  				# used to be 460
 @panel_width_half = 270				# used to be 230
@@ -143,7 +143,7 @@ types budget
 				blockoverride "third_button_name" {
 					name = "tutorial_highlight_assets"
 				}
-				
+
 				blockoverride "fourth_button"
 				{
 					text = "BUDGET_TAB_MONEY_TRANSFER"
@@ -1062,8 +1062,9 @@ types budget
 				}
 
 				flowcontainer = {
-					direction = vertical
 					visible = "[GreaterThan_CFixedPoint(GetPlayer.GetUnrealizedTaxes, '(CFixedPoint)0')]"
+					direction = vertical
+					spacing = 10
 
 					default_header_2texts = {
 						blockoverride "text1" {
@@ -1074,11 +1075,114 @@ types budget
 							tooltip = UNREALIZED_TAXES_BREAKDOWN
 						}
 					}
-					textbox = {
-						autoresize = yes
-						margin = { 10 0 }
-						margin_bottom = 10
-						text = "[GetPlayer.GetAverageStateTaxCollectionMultBreakdown]"
+
+					flowcontainer = {
+						direction = vertical
+						parentanchor = hcenter
+
+						widget = {
+							size = { @panel_width 30 }
+
+							hbox = {
+
+								sort_button = {
+									layoutpolicy_horizontal = expanding
+									layoutstretchfactor_horizontal = 2.2
+									size = { 0 30 }
+									onclick = "[AccessPlayer.SortUnrealizedTaxStates('name')]"
+									align = hcenter|nobaseline
+									tooltip = "SORT_BY_STATE"
+									text = "concept_state"
+								}
+
+								sort_button = {
+									layoutpolicy_horizontal = expanding
+									layoutstretchfactor_horizontal = 1
+									size = { 0 30 }
+									onclick = "[AccessPlayer.SortUnrealizedTaxStates('taxwaste')]"
+									align = hcenter|nobaseline
+									tooltip = "SORT_BY_TAX_WASTE"
+									text = "UNREALIZED_TAXES_TAX_WASTE_TITLE"
+								}
+
+								sort_button = {
+									layoutpolicy_horizontal = expanding
+									layoutstretchfactor_horizontal = 1
+									size = { 0 30 }
+									onclick = "[AccessPlayer.SortUnrealizedTaxStates('uncollected')]"
+									align = hcenter|nobaseline
+									tooltip = "SORT_BY_UNCOLLECTED_TAXES"
+									text = "UNREALIZED_TAXES_UNCOLLECTED_TITLE"
+								}
+							}
+						}
+
+						flowcontainer = {
+							direction = vertical
+							datamodel = "[AccessPlayer.AccessUnrealizedTaxStates]"
+
+							item = {
+								button = {
+									size = { @panel_width 40 }
+									onmousehierarchyenter = "[AccessHighlightManager.HighlightState(State.Self)]"
+									onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+									onclick = "[InformationPanelBar.OpenStatePanel( State.AccessSelf )]"
+									onrightclick = "[RightClickMenuManager.ShowForState(State.AccessSelf)]"
+									alwaystransparent = no
+									using = default_button
+
+									hbox = {
+										margin = { 8 0 }
+
+										textbox = {
+											layoutpolicy_horizontal = expanding
+											layoutstretchfactor_horizontal = 2.2
+											size = { 0 40 }
+											margin_left = 3
+											multiline = yes
+											align = nobaseline
+											using = tooltip_se
+											raw_text = "[AddTextIf(Not(State.GetMarket.IsSame(GetPlayer.GetCapital.GetMarket)), State.GetMarket.GetOwner.GetFlagTextIcon)] [State.GetNameNoFormatting]"
+
+											tooltipwidget = {
+												FancyTooltip_State = {}
+											}
+										}
+
+										widget = {
+											layoutpolicy_horizontal = expanding
+											layoutstretchfactor_horizontal = 1
+											size = { 0 30 }
+
+											textbox = {
+												size = { 80 30 }
+												parentanchor = center
+												align = nobaseline
+												alpha = "[TransparentIfZero(State.GetTaxWasteAmount)]"
+												using = tooltip_se
+												tooltip = "[State.GetTaxWasteDesc]"
+												raw_text = "@money![State.GetTaxWasteAmount|D-]"
+											}
+										}
+
+										widget = {
+											layoutpolicy_horizontal = expanding
+											layoutstretchfactor_horizontal = 1
+											size = { 0 30 }
+
+											textbox = {
+												size = { 100% 100% }
+												align = right|nobaseline
+												alpha = "[TransparentIfZero(State.GetUncollectedTaxAmount)]"
+												using = tooltip_se
+												tooltip = "[State.GetTaxCollectionMultDesc]"
+												raw_text = "@money![State.GetUncollectedTaxAmount|D-] ([State.GetTaxCollectionMult|+%1])"
+											}
+										}
+									}
+								}
+							}
+						}
 					}
 				}
 			}
@@ -1500,10 +1604,10 @@ types budget
 					}
 				}
 			}
-			
+
 ### MONEY TRANSFER
 			flowcontainer = {
-				visible = "[InformationPanel.IsTabSelected('money_transfer')]"			
+				visible = "[InformationPanel.IsTabSelected('money_transfer')]"
 				using = default_content_fade
 				direction = vertical
 				using = default_list_position
@@ -1518,8 +1622,8 @@ types budget
 					spacing = 30
 					direction = horizontal
 					using = default_list_position
-					
-					
+
+
 					# Ten million
 					flowcontainer = {
 						spacing = 30
@@ -1548,7 +1652,6 @@ types budget
 								fontsize = 45
 								autoresize = yes
 								margin = { 10 10 }
-								align = center
 								parentanchor = center
 							}
 						}
@@ -1596,7 +1699,6 @@ types budget
 								fontsize = 45
 								autoresize = yes
 								margin = { 10 10 }
-								align = center
 								parentanchor = center
 							}
 						}
@@ -1630,7 +1732,7 @@ types budget
 							fontsize = 60
 							parentanchor = center
 						}
-						
+
 					}
 					# One hundred k
 					flowcontainer = {
@@ -1660,7 +1762,6 @@ types budget
 								fontsize = 45
 								autoresize = yes
 								margin = { 10 10 }
-								align = center
 								parentanchor = center
 							}
 						}
@@ -1708,7 +1809,6 @@ types budget
 								fontsize = 45
 								autoresize = yes
 								margin = { 10 10 }
-								align = center
 								parentanchor = center
 							}
 						}
@@ -1756,7 +1856,6 @@ types budget
 								fontsize = 45
 								autoresize = yes
 								margin = { 10 10 }
-								align = center
 								parentanchor = center
 							}
 						}
@@ -1790,7 +1889,7 @@ types budget
 							fontsize = 60
 							parentanchor = center
 						}
-						
+
 					}
 				}
                 divider_clean = {}

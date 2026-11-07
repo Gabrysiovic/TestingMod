@@ -3,14 +3,15 @@
 	first_name = "Willem"
 	last_name = "van_Oranje-Nassau"
 	historical = yes
-	culture = primary_culture
 	heir = yes
+	culture = cu:dutch
+	religion = rel:protestant
 	birth_date = 1792.12.6
 	noble = yes
 	dna = dna_king_william_02
-	home_region = STATE_HOLLAND
 	interest_group = ig_intelligentsia
 	ideology = ideology_reformer
+	home_region = STATE_HOLLAND
 	traits = {
 		persistent
 	}

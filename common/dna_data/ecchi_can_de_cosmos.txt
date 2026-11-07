@@ -1,6 +1,8 @@
 ﻿ecchi_dna_amor_de_cosmos = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 36 231 36 231 }
  		skin_color={ 7 25 7 25 }
  		eye_color={ 195 130 195 130 }

@@ -1,7 +1,9 @@
 ﻿#### Friedrich Wilhelm IV
 dna_pru_friedrich_wilhelm_04 = {
 	portrait_info = {
-		genes={         
+		genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+         
 			hair_color={ 216 147 0 0 }
 			skin_color={ 0 0 0 0 }
 			eye_color={ 119 186 0 0 }
@@ -121,7 +123,9 @@ dna_pru_friedrich_wilhelm_04 = {
 ## Wilhelm I
 dna_pru_wilhelm_01 = {
 	portrait_info = {
-		genes={         
+		genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+         
 			hair_color={ 174 193 0 0 }
 			skin_color={ 0 0 0 0 }
 			eye_color={ 221 65 0 0 }
@@ -237,7 +241,9 @@ dna_pru_wilhelm_01 = {
 ## Friedrich III
 dna_pru_friedrich_03 = {
 	portrait_info = {
-		genes={         
+		genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+         
 			hair_color={ 174 193 0 0 }
 			skin_color={ 0 0 0 0 }
 			eye_color={ 221 65 0 0 }
@@ -353,7 +359,9 @@ dna_pru_friedrich_03 = {
 ##### Kaiser Wilhelm II
 dna_pru_wilhelm_02 = {
 	portrait_info = {
-		genes={         
+		genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+         
 			hair_color={ 225 163 0 0 }
 					skin_color={ 0 0 0 0 }
 					eye_color={ 221 65 0 0 }
@@ -469,7 +477,9 @@ dna_pru_wilhelm_02 = {
 ### Wilhelm (crown prince)
 dna_pru_wilhelm_03 = {
 	portrait_info = {
-		genes={         
+		genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+         
 			hair_color={ 225 163 0 0 }
 			skin_color={ 0 0 0 0 }
 			eye_color={ 221 65 0 0 }
@@ -585,7 +595,9 @@ dna_pru_wilhelm_03 = {
 ### Wilhelm IV (Other prince royal)
 dna_pru_wilhelm_04 = {
 	portrait_info = {
-		genes={         
+		genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+         
 			hair_color={ 225 163 0 0 }
 			skin_color={ 0 0 0 0 }
 			eye_color={ 221 65 0 0 }

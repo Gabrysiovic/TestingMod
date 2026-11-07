@@ -1,6 +1,8 @@
 ﻿ecchi_dna_deodoro_da_fonseca = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 15 245 15 245 }
  		skin_color={ 136 127 136 127 }
  		eye_color={ 83 243 83 243 }

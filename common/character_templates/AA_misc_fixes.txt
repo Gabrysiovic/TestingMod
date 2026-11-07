@@ -1,15 +1,16 @@
 ﻿REPLACE:usa_joshua_norton_character_template = {
 	first_name = Joshua
 	last_name = Norton
+	female = no
+	dna = dna_emperor_norton
 	historical = yes
+	birth_date = 1818.2.4
+	is_agitator = yes
 	culture = cu:british
 	religion = rel:protestant
-	female = no
-	is_agitator = yes
 	interest_group = ig_petty_bourgeoisie
+	home_region = STATE_CALIFORNIA
 	ideology = ideology_liberal_leader
-	birth_date = 1818.2.4
-	dna = dna_emperor_norton
 	traits = {
 		charismatic
 		honorable
@@ -19,63 +20,67 @@
 
 
 TRY_REPLACE:aus_maximilian_I_habsburg_template = {
-    # Maximilian I of Mexico
-    first_name = Maximillian
-    last_name = von_Habsburg_Lothringen
-    historical = yes
-    dna = dna_maximilian_i_of_mexico
-    culture = cu:south_german
-    religion = rel:catholic
-    heir = yes
-    noble = yes
-    is_admiral = yes
-    birth_date = 1832.7.6
-    interest_group = ig_landowners
-    ideology = ideology_liberal_leader
-    traits = {
-        tactful
+	# Maximilian I of Mexico
+	first_name = Maximillian
+	last_name = von_Habsburg_Lothringen
+	dna = dna_maximilian_i_of_mexico
+	historical = yes
+	noble = yes
+	birth_date = 1832.7.6
+	heir = yes
+	is_admiral = yes
+	culture = cu:south_german
+	religion = rel:catholic
+	interest_group = ig_landowners
+	home_region = STATE_AUSTRIA
+	ideology = ideology_liberal_leader
+	traits = {
+		tactful
 		charismatic
-        #experienced_naval_commander trait is added in austria_events.31
-    }
+		#experienced_naval_commander trait is added in austria_events.31
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_habsburg }
+	}
 }
 
 
 REPLACE:GBR_john_maynard_keynes = {
-    first_name = John
-    last_name = Keynes
-    historical = yes
-    culture = cu:british
-    female = no
-    religion = rel:atheist
-    role = character_role_politician
-    ideology = ideology_modernizer_leader
+	first_name = John
+	last_name = Keynes
+	female = no
+	dna = dna_john_maynard_keynes
+	historical = yes
+	birth_date = 1883.6.5
+	role = character_role_politician
+	culture = cu:british
+	religion = rel:atheist
+	interest_group = ig_industrialists
+	ideology = ideology_modernizer_leader
 	home_region = STATE_EAST_ANGLIA
-    interest_group = ig_industrialists
-    birth_date = 1883.6.5
-    dna = dna_john_maynard_keynes
-    traits = {
-        literary
+	traits = {
+		literary
 		meticulous
-        erudite
+		erudite
 		demagogue
-    }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:GBR
-            c:GBR ?= THIS
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			exists = c:GBR
+			c:GBR ?= THIS
 			has_dlc_feature = ep1_content
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            OR = {
-                is_interest_group_type = ig_industrialists
+		}
+		interest_group_trigger = {
+			ig_counts_as_marginal = no
+			OR = {
+				is_interest_group_type = ig_industrialists
 				is_interest_group_type = ig_intelligentsia
-            }
-        }
-        earliest_usage_date = 1914.1.1
-        latest_usage_date = 1936.12.31
-        #guaranteed to spawn if possible
-    }
+			}
+		}
+		earliest_usage_date = 1914.1.1
+		latest_usage_date = 1936.12.31
+		#guaranteed to spawn if possible
+	}
 }
 
 
@@ -83,60 +88,65 @@ REPLACE:GBR_john_maynard_keynes = {
 
 # Sardinia-Piedmont - SAR
 REPLACE:sar_benso_character_template = { # The Count of Cavour
-    first_name = Camillo
-    last_name = Benso
-    historical = yes
-    culture = cu:north_italian
-    female = no
-    religion = rel:catholic
-    dna = dna_count_of_cavour
-    ideology = ideology_reformer
-    interest_group = ig_industrialists
-    birth_date = 1810.8.10
-    home_region = STATE_PIEDMONT
-    traits = {
-        experienced_political_operator
-        meticulous
-        innovative
-    }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:SAR
-            c:SAR ?= THIS
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            is_interest_group_type = ig_industrialists
-            NOR = {
+	first_name = Camillo
+	last_name = Benso
+	female = no
+	dna = dna_count_of_cavour
+	historical = yes
+	birth_date = 1810.8.10
+	culture = cu:north_italian
+	religion = rel:catholic
+	interest_group = ig_industrialists
+	ideology = ideology_reformer
+	home_region = STATE_PIEDMONT
+	traits = {
+		experienced_political_operator
+		meticulous
+		innovative
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			exists = c:SAR
+			c:SAR ?= THIS
+		}
+		interest_group_trigger = {
+			ig_counts_as_marginal = no
+			is_interest_group_type = ig_industrialists
+			NOR = {
 				has_variable = communist_ig_var
 				has_variable = chose_vanguardism
 				has_variable = chose_fascism
 				has_variable = chose_conservatism
 				has_variable = chose_ethno_nationalism
 			}
-        }
-        earliest_usage_date = 1850.1.1
-        latest_usage_date = 1862.1.1
-        chance = 1
-    }
+		}
+		earliest_usage_date = 1850.1.1
+		latest_usage_date = 1862.1.1
+		chance = 1
+	}
 }
 
 REPLACE:aus_rudolf_habsburg = {
-    # Rudolf, Crown Prince of Austria
-    first_name = Rudolf
-    last_name = von_Habsburg_Lothringen
-    historical = yes
-    dna = dna_aus_rudolf_01
-    culture = cu:south_german
-    heir = yes
-    noble = yes
-    birth_date = 1858.8.21
-    interest_group = ig_intelligentsia
-    ideology = ideology_royalist
+	# Rudolf, Crown Prince of Austria
+	first_name = Rudolf
+	last_name = von_Habsburg_Lothringen
+	dna = dna_aus_rudolf_01
+	historical = yes
+	noble = yes
+	birth_date = 1858.8.21
+	heir = yes
+	culture = cu:south_german
+	religion = rel:catholic
+	interest_group = ig_intelligentsia
+	ideology = ideology_royalist
 	home_region = STATE_AUSTRIA
-    traits = {
-        reckless
-        charismatic
+	traits = {
+		reckless
+		charismatic
+		scandalous
 		cocaine_addict
-    }
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_habsburg }
+	}
 }

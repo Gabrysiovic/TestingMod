@@ -1,7 +1,9 @@
 ﻿### Ibrahim Al-Alawi
 dna_egy_ibrahim = {
 	portrait_info = {
-		genes={         
+		genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+         
 			hair_color={ 101 234 101 234 }
 			skin_color={ 124 81 124 143 }
 			eye_color={ 164 206 13 226 }
@@ -119,7 +121,9 @@ dna_egy_ibrahim = {
 ### Abbas Helmy
 dna_egy_abbas_hilmi = {
 	portrait_info = {
-		genes={         
+		genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+         
 			hair_color={ 101 234 101 234 }
 			skin_color={ 33 56 124 143 }
 			eye_color={ 164 206 13 226 }
@@ -238,7 +242,9 @@ dna_egy_abbas_hilmi = {
 ### Ismail Al-Alawi
 dna_egy_ismail = {
 	portrait_info = {
-		genes={         
+		genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+         
 			hair_color={ 101 234 101 234 }
 					skin_color={ 33 56 124 143 }
 					eye_color={ 164 206 13 226 }
@@ -357,7 +363,9 @@ dna_egy_ismail = {
 ### Muhammad Tewfik
 dna_egy_muhammad_tewfik = {
 	portrait_info = {
-		genes={         
+		genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+         
 			hair_color={ 101 234 101 234 }
 			skin_color={ 33 56 124 143 }
 			eye_color={ 164 206 13 226 }

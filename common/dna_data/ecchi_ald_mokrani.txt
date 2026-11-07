@@ -1,6 +1,8 @@
 ﻿ecchi_dna_cheikh_mokrani = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 26 243 26 243 }
  		skin_color={ 93 161 93 161 }
  		eye_color={ 69 234 69 234 }

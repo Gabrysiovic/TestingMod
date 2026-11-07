@@ -1,15 +1,15 @@
 ﻿REPLACE:GRE_george_i_of_greece = { # King Georgios I of Greece
 	first_name = Georgios
 	last_name = of_Glucksburg
-	historical = yes
-	culture = cu:danish
 	female = no
+	dna = dna_george_i_of_greece
+	historical = yes
+	birth_date = 1845.12.24
 	ruler = yes
 	noble = yes
-	dna = dna_george_i_of_greece
+	culture = cu:danish
 	interest_group = ig_landowners
 	ideology = ideology_reformer
-	birth_date = 1845.12.24
 	home_region = STATE_ZEALAND
 	traits = {
 		basic_naval_commander

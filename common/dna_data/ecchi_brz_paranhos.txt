@@ -1,6 +1,8 @@
 ﻿ecchi_dna_jose_paranhos = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 37 232 37 232 }
  		skin_color={ 138 99 146 127 }
  		eye_color={ 49 243 49 243 }

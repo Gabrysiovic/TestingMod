@@ -1,6 +1,8 @@
 ﻿ecchi_dna_henry_parkes = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 103 77 103 77 }
  		skin_color={ 32 2 32 2 }
  		eye_color={ 45 177 45 177 }

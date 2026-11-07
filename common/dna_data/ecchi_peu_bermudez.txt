@@ -1,6 +1,8 @@
 ﻿ecchi_dna_pedro_pablo_bermudez = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 193 205 13 235 }
  		skin_color={ 144 127 144 127 }
  		eye_color={ 73 246 73 246 }

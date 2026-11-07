@@ -1,6 +1,8 @@
 ﻿ecchi_dna_joaquim_machado_de={
     portrait_info = {
-	genes={ 		hair_color={ 167 228 167 228 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 167 228 167 228 }
  		skin_color={ 87 13 87 13 }
  		eye_color={ 50 163 50 163 }
  		gene_cheek_fat={ "cheek_fat" 84 "cheek_fat" 84 }

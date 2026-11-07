@@ -1,6 +1,8 @@
 ﻿ecchi_dna_ahmed_djemal={
     portrait_info = {
-	genes={ 		hair_color={ 200 203 200 203 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 200 203 200 203 }
  		skin_color={ 84 16 84 16 }
  		eye_color={ 174 161 174 161 }
  		gene_cheek_fat={ "cheek_fat" 161 "cheek_fat" 161 }

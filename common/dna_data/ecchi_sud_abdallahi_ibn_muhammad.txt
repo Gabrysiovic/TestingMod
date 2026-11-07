@@ -1,6 +1,8 @@
 ﻿ecchi_dna_abdallahi_ibn_muhammad = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 104 250 104 250 }
  		skin_color={ 206 181 206 181 }
  		eye_color={ 45 249 45 249 }

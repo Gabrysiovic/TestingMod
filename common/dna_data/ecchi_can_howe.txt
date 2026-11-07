@@ -1,6 +1,8 @@
 ﻿ecchi_dna_joseph_howe = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 212 196 212 196 }
  		skin_color={ 17 24 17 24 }
  		eye_color={ 34 192 34 192 }

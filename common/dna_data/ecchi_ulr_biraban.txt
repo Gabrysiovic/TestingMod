@@ -1,6 +1,8 @@
 ﻿ecchi_dna_biraban = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 82 248 82 248 }
  		skin_color={ 186 243 141 224 }
  		eye_color={ 26 255 26 255 }

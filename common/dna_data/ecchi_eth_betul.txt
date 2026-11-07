@@ -1,6 +1,8 @@
 ﻿ecchi_dna_taytu_betul = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 49 250 49 250 }
  		skin_color={ 217 195 217 195 }
  		eye_color={ 50 245 50 245 }

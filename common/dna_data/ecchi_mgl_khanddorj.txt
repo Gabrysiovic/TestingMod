@@ -1,6 +1,8 @@
 ﻿ecchi_dna_mijiddorjiin_khanddorj = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 49 244 49 244 }
  		skin_color={ 76 127 76 127 }
  		eye_color={ 63 250 63 250 }

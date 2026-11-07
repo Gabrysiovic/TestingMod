@@ -1,6 +1,8 @@
 ﻿ecchi_dna_benito_mussolini = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 55 248 55 248 }
  		skin_color={ 53 14 53 14 }
  		eye_color={ 238 215 238 133 }

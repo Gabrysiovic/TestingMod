@@ -1,6 +1,8 @@
 ﻿ecchi_dna_felipe_santiago_salaverry = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 39 249 39 249 }
  		skin_color={ 131 127 131 127 }
  		eye_color={ 58 243 58 243 }

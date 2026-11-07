@@ -1,6 +1,8 @@
 ﻿ecchi_dna_jamsetji_tata = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 118 244 118 244 }
  		skin_color={ 121 173 121 173 }
  		eye_color={ 44 252 44 252 }

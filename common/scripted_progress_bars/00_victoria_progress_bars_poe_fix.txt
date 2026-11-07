@@ -273,7 +273,8 @@
 	desc = "je_communal_divides_hindu_progressbar_left_desc"
  	second_desc = "je_communal_divides_hindu_progressbar_right_desc"
 
-	double_sided_bad = yes
+	default_bad = yes
+	marker = yes
 
 	monthly_progress = {
 		# Activism
@@ -494,7 +495,8 @@
 	desc = "je_communal_divides_muslim_progressbar_left_desc"
  	second_desc = "je_communal_divides_muslim_progressbar_right_desc"
 
-	double_sided_bad = yes
+	default_bad = yes
+	marker = yes
 
 	monthly_progress = {
 		# Activism

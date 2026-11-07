@@ -1,6 +1,8 @@
 ﻿ecchi_dna_andre_citroen={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 187 65 187 65 }
  		skin_color={ 27 11 27 11 }
  		eye_color={ 226 134 226 134 }

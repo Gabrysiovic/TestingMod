@@ -1,6 +1,8 @@
 ﻿ecchi_dna_arthur_guinness_ii={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 44 250 44 250 }
  		skin_color={ 56 6 56 6 }
  		eye_color={ 159 69 159 69 }

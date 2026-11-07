@@ -1,6 +1,8 @@
 ﻿ecchi_dna_risto_ryti={
 	portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 214 192 214 192 }
  		skin_color={ 24 27 24 27 }
  		eye_color={ 27 177 27 177 }

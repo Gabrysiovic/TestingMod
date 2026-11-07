@@ -1,6 +1,8 @@
 ﻿ecchi_dna_madan_mohan_malaviya = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 38 247 38 247 }
  		skin_color={ 119 147 119 147 }
  		eye_color={ 53 246 53 246 }

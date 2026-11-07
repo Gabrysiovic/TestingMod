@@ -1,6 +1,8 @@
 ﻿ecchi_dna_teofilo_braga={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 42 251 42 251 }
  		skin_color={ 91 2 91 2 }
  		eye_color={ 218 54 218 54 }

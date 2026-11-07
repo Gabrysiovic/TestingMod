@@ -1,6 +1,8 @@
 ﻿ecchi_dna_friedrich_engels = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 16 234 16 234 }
  		skin_color={ 48 4 48 4 }
  		eye_color={ 208 136 208 136 }

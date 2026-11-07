@@ -1,21 +1,22 @@
 ﻿REPLACE:BEL_leopold_II_saxe_coburg_gotha_template = {
 	# Leopold II
-    first_name = "Leopold"
-    last_name = "of_Saxe-Coburg-Gotha"
-    historical = yes
-    culture = cu:wallonian
-    heir = yes
+	first_name = "Leopold"
+	last_name = "of_Saxe-Coburg-Gotha"
 	noble = yes
-    dna = dna_leopold_ii
-    birth_date = 1835.4.9
-    interest_group = ig_petty_bourgeoisie
-    ideology = ideology_jingoist_leader
-    home_region = STATE_FLANDERS
-    traits = {
+	dna = dna_leopold_ii
+	historical = yes
+	birth_date = 1835.4.9
+	heir = yes
+	culture = cu:wallonian
+	religion = rel:catholic
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_jingoist_leader
+	home_region = STATE_FLANDERS
+	traits = {
 		trait_child
-        ruthless
+		ruthless
 		masterful_diplomat
-    }
+	}
 	on_created = {
 		set_variable = house_saxe_coburg_gotha
 	}

@@ -1,6 +1,8 @@
 ﻿ecchi_dna_eduard_bernstein={
     portrait_info = {
-	genes={ 		hair_color={ 42 254 42 254 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 42 254 42 254 }
  		skin_color={ 8 12 8 12 }
  		eye_color={ 62 137 62 137 }
  		gene_cheek_fat={ "cheek_fat" 120 "cheek_fat" 120 }

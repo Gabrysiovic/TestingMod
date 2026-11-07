@@ -1,6 +1,8 @@
 ﻿ecchi_dna_jbm_hertzog = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 187 203 187 203 }
  		skin_color={ 96 9 96 9 }
  		eye_color={ 23 162 23 162 }

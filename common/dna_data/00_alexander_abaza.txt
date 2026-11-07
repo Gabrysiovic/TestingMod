@@ -3,7 +3,9 @@
 dna_alexander_abaza = {
      portrait_info = {
  
-      genes={ 		hair_color={ 170 241 170 241 }
+      genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 170 241 170 241 }
  		skin_color={ 15 28 15 28 }
  		eye_color={ 28 158 146 124 }
  		gene_cheek_fat={ "cheek_fat" 141 "cheek_fat" 127 }

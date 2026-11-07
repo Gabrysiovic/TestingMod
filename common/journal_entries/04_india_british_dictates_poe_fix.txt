@@ -4,6 +4,10 @@
 
 	group = je_group_british_india
 
+	activation_description = {
+		always = yes
+	}
+
 	is_shown_when_inactive = {
 		has_dlc_feature = ip2_content
 		c:BIC ?= this
@@ -30,53 +34,68 @@
 		add_journal_entry = { type = je_british_dictate_universities }
 	}
 
-	complete = {
-		custom_tooltip = {
-			text = je_british_dictate_plantations_complete_tt
-			has_variable = british_dictate_plantations_complete
-		}
-		custom_tooltip = {
-			text = je_british_dictate_military_complete_tt
-			has_variable = british_dictate_military_complete
-		}
-		custom_tooltip = {
-			text = je_british_dictate_universities_complete_tt
-			has_variable = british_dictate_universities_complete
-		}
-	}
-
-	on_complete = {
-		hidden_effect = {
-			trigger_event = { id = british_dictates.6 popup = yes }
-		}
-		show_as_tooltip = {
-			execute_event_option = { event = british_dictates.6 option = 0 }
-		}
-	}
-
-	on_timeout = {
-		hidden_effect = {
-			trigger_event = { id = british_dictates.7 popup = yes }
-		}
-		show_as_tooltip = {
-			execute_event_option = { event = british_dictates.7 option = 0 }
-		}
-		if = {
-			limit = {
-				calc_true_if = {
-					amount <= 1
-					has_variable = british_dictate_plantations_complete
-					has_variable = british_dictate_military_complete
-					has_variable = british_dictate_universities_complete
-				}
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_british_dictate_plantations_complete_tt
+				has_variable = british_dictate_plantations_complete
 			}
-			custom_tooltip = je_british_dictates_consequences_scaled_tt
+			custom_tooltip = {
+				text = je_british_dictate_military_complete_tt
+				has_variable = british_dictate_military_complete
+			}
+			custom_tooltip = {
+				text = je_british_dictate_universities_complete_tt
+				has_variable = british_dictate_universities_complete
+			}
+		}
+		effect = {
+			hidden_effect = {
+				trigger_event = { id = british_dictates.6 popup = yes }
+			}
+			show_as_tooltip = {
+				execute_event_option = { event = british_dictates.6 option = 0 }
+			}
 		}
 	}
 
-	invalid = {
-		NOT = {
-			c:BIC ?= this
+	outcome = {
+		header = JOURNAL_ENTRY_TIMEOUT
+		effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+		flags = { timeout }
+		conclusion_desc = JOURNAL_ENTRY_TIMEOUT_CONCLUSION_DESC
+		effect = {
+			hidden_effect = {
+				trigger_event = { id = british_dictates.7 popup = yes }
+			}
+			show_as_tooltip = {
+				execute_event_option = { event = british_dictates.7 option = 0 }
+			}
+			if = {
+				limit = {
+					calc_true_if = {
+						amount <= 1
+						has_variable = british_dictate_plantations_complete
+						has_variable = british_dictate_military_complete
+						has_variable = british_dictate_universities_complete
+					}
+				}
+				custom_tooltip = je_british_dictates_consequences_scaled_tt
+			}
+		}
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			NOT = {
+				c:BIC ?= this
+			}
 		}
 	}
 
@@ -89,6 +108,10 @@ REPLACE:je_british_dictate_plantations = {
 	icon = "gfx/interface/icons/invention_icons/intensive_agriculture.dds"
 
 	group = je_group_british_india
+
+	activation_description = {
+		always = yes
+	}
 
 	scripted_button = je_british_dictate_plantations_prioritize_construction
 	scripted_button = je_british_dictate_plantations_deprioritize_construction
@@ -109,77 +132,92 @@ REPLACE:je_british_dictate_plantations = {
 		}
 	}
 
-	complete = {
-		custom_tooltip = {
-			text = je_british_dictate_plantations_completion_condition_tt
-			var:num_plantations >= var:target_plantations
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_british_dictate_plantations_completion_condition_tt
+				var:num_plantations >= var:target_plantations
+			}
+			trigger_if = {
+				limit = {
+					has_variable = plantations_prioritize_construction
+				}
+				calc_true_if = {
+					amount >= 2
+					leading_producer_of = g:opium
+					leading_producer_of = g:tea
+					leading_producer_of = g:dye
+					leading_producer_of = g:fabric
+					leading_producer_of = g:silk
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = plantations_prioritize_productivity
+				}
+				calc_true_if = {
+					amount >= 4
+					leading_producer_of = g:opium
+					leading_producer_of = g:tea
+					leading_producer_of = g:dye
+					leading_producer_of = g:fabric
+					leading_producer_of = g:silk
+				}
+			}
+			trigger_else = {
+				calc_true_if = {
+					amount >= 3
+					leading_producer_of = g:opium
+					leading_producer_of = g:tea
+					leading_producer_of = g:dye
+					leading_producer_of = g:fabric
+					leading_producer_of = g:silk
+				}
+			}
+			custom_tooltip = {
+				text = colonial_dictates_timer_tt
+				scope:journal_entry ?= {
+					journal_entry_age > 730
+				}
+			}
 		}
-		trigger_if = {
-			limit = {
-				has_variable = plantations_prioritize_construction
+		effect = {
+			set_variable = british_dictate_plantations_complete
+			hidden_effect = {
+				trigger_event = { id = british_dictates.8 }
 			}
-			calc_true_if = {
-				amount >= 2
-				leading_producer_of = g:opium
-				leading_producer_of = g:tea
-				leading_producer_of = g:dye
-				leading_producer_of = g:fabric
-				leading_producer_of = g:silk
-			}
-		}
-		trigger_else_if = {
-			limit = {
-				has_variable = plantations_prioritize_productivity
-			}
-			calc_true_if = {
-				amount >= 4
-				leading_producer_of = g:opium
-				leading_producer_of = g:tea
-				leading_producer_of = g:dye
-				leading_producer_of = g:fabric
-				leading_producer_of = g:silk
-			}
-		}
-		trigger_else = {
-			calc_true_if = {
-			amount >= 3
-				leading_producer_of = g:opium
-				leading_producer_of = g:tea
-				leading_producer_of = g:dye
-				leading_producer_of = g:fabric
-				leading_producer_of = g:silk
-			}
-		}
-		custom_tooltip = {
-			text = colonial_dictates_timer_tt
-			scope:journal_entry ?= {
-				journal_entry_age > 730
+			show_as_tooltip = {
+				execute_event_option = { event = british_dictates.8 option = 0 }
 			}
 		}
 	}
 
-	on_complete = {
-		set_variable = british_dictate_plantations_complete
-		hidden_effect = {
-			trigger_event = { id = british_dictates.8 }
-		}
-		show_as_tooltip = {
-			execute_event_option = { event = british_dictates.8 option = 0 }
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = british_dictates_time_run_out_tt
+				NOT = {
+					has_journal_entry = je_british_dictates
+				}
+			}
 		}
 	}
 
-	fail = {
-		custom_tooltip = {
-			text = british_dictates_time_run_out_tt
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
 			NOT = {
-				has_journal_entry = je_british_dictates
+				c:BIC ?= this
 			}
-		}
-	}
-
-	invalid = {
-		NOT = {
-			c:BIC ?= this
 		}
 	}
 
@@ -193,60 +231,79 @@ REPLACE:je_british_dictate_military = {
 
 	group = je_group_british_india
 
+	activation_description = {
+		always = yes
+	}
+
 	scripted_button = je_british_dictate_military_prioritize_army
 	scripted_button = je_british_dictate_military_deprioritize_army
 	scripted_button = je_british_dictate_military_prioritize_navy
 	scripted_button = je_british_dictate_military_deprioritize_navy
 
-	complete = {
-		trigger_if = {
-			limit = {
-				has_variable = military_prioritize_army
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			trigger_if = {
+				limit = {
+					has_variable = military_prioritize_army
+				}
+				army_power_projection >= 8000
+				naval_power_projection >= 5000
 			}
-			army_power_projection >= 8000
-			naval_power_projection >= 5000
-		}
-		trigger_else_if = {
-			limit = {
-				has_variable = military_prioritize_navy
+			trigger_else_if = {
+				limit = {
+					has_variable = military_prioritize_navy
+				}
+				army_power_projection >= 5000
+				naval_power_projection >= 8000
 			}
-			army_power_projection >= 5000
-			naval_power_projection >= 8000
+			trigger_else = {
+				army_power_projection >= 6500
+				naval_power_projection >= 6500
+			}
+			custom_tooltip = {
+				text = colonial_dictates_timer_tt
+				scope:journal_entry ?= {
+					journal_entry_age > 730
+				}
+			}
 		}
-		trigger_else = {
-			army_power_projection >= 6500
-			naval_power_projection >= 6500
-		}
-		custom_tooltip = {
-			text = colonial_dictates_timer_tt
-			scope:journal_entry ?= {
-				journal_entry_age > 730
+		effect = {
+			set_variable = british_dictate_military_complete
+			hidden_effect = {
+				trigger_event = { id = british_dictates.9 }
+			}
+			show_as_tooltip = {
+				execute_event_option = { event = british_dictates.9 option = 0 }
 			}
 		}
 	}
 
-	on_complete = {
-		set_variable = british_dictate_military_complete
-		hidden_effect = {
-			trigger_event = { id = british_dictates.9 }
-		}
-		show_as_tooltip = {
-			execute_event_option = { event = british_dictates.9 option = 0 }
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = british_dictates_time_run_out_tt
+				NOT = {
+					has_journal_entry = je_british_dictates
+				}
+			}
 		}
 	}
 
-	fail = {
-		custom_tooltip = {
-			text = british_dictates_time_run_out_tt
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
 			NOT = {
-				has_journal_entry = je_british_dictates
+				c:BIC ?= this
 			}
-		}
-	}
-
-	invalid = {
-		NOT = {
-			c:BIC ?= this
 		}
 	}
 
@@ -258,6 +315,10 @@ REPLACE:je_british_dictate_law = {
     icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
 	group = je_group_british_india
+
+	activation_description = {
+		always = yes
+	}
 }
 
 REPLACE:je_british_dictate_universities = {
@@ -267,69 +328,88 @@ REPLACE:je_british_dictate_universities = {
 
 	group = je_group_british_india
 
+	activation_description = {
+		always = yes
+	}
+
 	scripted_button = je_british_dictate_universities_prioritize_higher_education
 	scripted_button = je_british_dictate_universities_deprioritize_higher_education
 	scripted_button = je_british_dictate_universities_prioritize_public_schools
 	scripted_button = je_british_dictate_universities_deprioritize_public_schools
 
-	complete = {
-		trigger_if = {
-			limit = {
-				has_variable = universities_prioritize_higher_education
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			trigger_if = {
+				limit = {
+					has_variable = universities_prioritize_higher_education
+				}
+				country_has_building_type_levels = {
+					target = bt:building_university
+					value >= 40
+				}
+				literacy_rate >= 0.30
 			}
-			country_has_building_type_levels = {
-				target = bt:building_university
-				value >= 40
+			trigger_else_if = {
+				limit = {
+					has_variable = universities_prioritize_public_schools
+				}
+				country_has_building_type_levels = {
+					target = bt:building_university
+					value >= 12
+				}
+				literacy_rate >= 0.50
 			}
-			literacy_rate >= 0.30
+			trigger_else = {
+				country_has_building_type_levels = {
+					target = bt:building_university
+					value >= 25
+				}
+				literacy_rate >= 0.40
+			}
+			custom_tooltip = {
+				text = colonial_dictates_timer_tt
+				scope:journal_entry ?= {
+					journal_entry_age > 730
+				}
+			}
 		}
-		trigger_else_if = {
-			limit = {
-				has_variable = universities_prioritize_public_schools
+		effect = {
+			set_variable = british_dictate_universities_complete
+			hidden_effect = {
+				trigger_event = { id = british_dictates.10 }
 			}
-			country_has_building_type_levels = {
-				target = bt:building_university
-				value >= 12
-			}
-			literacy_rate >= 0.50
-		}
-		trigger_else = {
-			country_has_building_type_levels = {
-				target = bt:building_university
-				value >= 25
-			}
-			literacy_rate >= 0.40
-		}
-		custom_tooltip = {
-			text = colonial_dictates_timer_tt
-			scope:journal_entry ?= {
-				journal_entry_age > 730
+			show_as_tooltip = {
+				execute_event_option = { event = british_dictates.10 option = 0 }
 			}
 		}
 	}
 
-	on_complete = {
-		set_variable = british_dictate_universities_complete
-		hidden_effect = {
-			trigger_event = { id = british_dictates.10 }
-		}
-		show_as_tooltip = {
-			execute_event_option = { event = british_dictates.10 option = 0 }
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = british_dictates_time_run_out_tt
+				NOT = {
+					has_journal_entry = je_british_dictates
+				}
+			}
 		}
 	}
 
-	fail = {
-		custom_tooltip = {
-			text = british_dictates_time_run_out_tt
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
 			NOT = {
-				has_journal_entry = je_british_dictates
+				c:BIC ?= this
 			}
-		}
-	}
-
-	invalid = {
-		NOT = {
-			c:BIC ?= this
 		}
 	}
 

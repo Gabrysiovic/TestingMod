@@ -1,6 +1,8 @@
 ﻿mr_fra_verne_jules={
 	portrait_info = {
 		genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 			hair_color={ 85 212 0 0 }
 			skin_color={ 0 0 0 0 }
 			eye_color={ 12 133 0 0 }

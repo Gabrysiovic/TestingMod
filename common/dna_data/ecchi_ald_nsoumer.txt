@@ -1,6 +1,8 @@
 ﻿ecchi_dna_lalla_fatma_nsoumer = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 7 242 7 242 }
  		skin_color={ 168 164 168 164 }
  		eye_color={ 83 249 83 249 }

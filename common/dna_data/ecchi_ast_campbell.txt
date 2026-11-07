@@ -1,6 +1,8 @@
 ﻿ecchi_dna_eric_campbell={
     portrait_info = {
-	genes={ 		hair_color={ 112 101 245 13 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 112 101 245 13 }
  		skin_color={ 127 12 127 12 }
  		eye_color={ 60 116 60 116 }
  		gene_cheek_fat={ "cheek_fat" 157 "cheek_fat" 157 }

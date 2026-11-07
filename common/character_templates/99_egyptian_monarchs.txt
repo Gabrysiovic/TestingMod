@@ -2,16 +2,17 @@
 	# Ibrahim Pasha of Egypt
 	first_name = Ibrahim
 	last_name = "al-_Alawi"
-	historical = yes
-	heir = yes
 	dna = dna_egy_ibrahim
-	culture = cu:albanian
-	is_general = yes
+	historical = yes
 	age = 47
+	heir = yes
+	is_general = yes
+	commander_rank = commander_rank_3
+	hq = region_nile_basin
+	culture = cu:albanian
+	religion = rel:sunni
 	interest_group = ig_armed_forces
 	ideology = ideology_royalist
-	hq = region_nile_basin
-	commander_rank = commander_rank_3
 	home_region = STATE_LOWER_EGYPT
 	traits = {
 		persistent

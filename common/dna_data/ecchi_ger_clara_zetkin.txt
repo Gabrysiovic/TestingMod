@@ -1,6 +1,8 @@
 ﻿ecchi_dna_clara_zetkin={
     portrait_info = {
-	genes={ 		hair_color={ 165 198 165 198 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 165 198 165 198 }
  		skin_color={ 83 10 83 10 }
  		eye_color={ 199 78 199 78 }
  		gene_cheek_fat={ "cheek_fat" 133 "cheek_fat" 133 }

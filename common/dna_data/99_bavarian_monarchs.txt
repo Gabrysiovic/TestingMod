@@ -1,6 +1,8 @@
 ﻿dna_ludwig_ii_of_bavaria = {
     portrait_info = {
         genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 			hair_color={ 225 196 169 196 }
 			skin_color={ 63 20 20 28 }
 			eye_color={ 68 161 101 161 }
@@ -123,6 +125,8 @@
 dna_otto_i_of_bavaria = {
     portrait_info = {
         genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 			hair_color={ 188 183 227 189 }
 			skin_color={ 49 28 13 28 }
 			eye_color={ 73 179 159 179 }
@@ -245,6 +249,8 @@ dna_otto_i_of_bavaria = {
 dna_luitpold_of_bavaria = {
     portrait_info = {
         genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 			hair_color={ 201 196 201 166 }
 			skin_color={ 85 28 85 28 }
 			eye_color={ 245 157 245 157 }
@@ -367,6 +373,8 @@ dna_luitpold_of_bavaria = {
 dna_ludwig_iii_of_bavaria = {
     portrait_info = {
         genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 			hair_color={ 172 169 172 169 }
 			skin_color={ 112 28 112 28 }
 			eye_color={ 210 168 210 168 }
@@ -489,6 +497,8 @@ dna_ludwig_iii_of_bavaria = {
 dna_prince_rupprecht_of_bavaria = {
     portrait_info = {
         genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 			hair_color={ 215 184 166 199 }
 			skin_color={ 95 3 95 3 }
 			eye_color={ 187 130 187 130 }
@@ -611,6 +621,8 @@ dna_prince_rupprecht_of_bavaria = {
 dna_prince_albrecht_of_bavaria = {
     portrait_info = {
 		genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 			hair_color={ 179 183 179 183 }
 			skin_color={ 126 15 126 15 }
 			eye_color={ 89 135 89 135 }

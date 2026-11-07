@@ -3,6 +3,8 @@
 mr_net_snijders_cornelius_jacobus = {
 	portrait_info = {
 		genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 			hair_color={ 168 212 0 0 }
 			skin_color={ 0 1 0 0 }
 			eye_color={ 114 94 0 0 }

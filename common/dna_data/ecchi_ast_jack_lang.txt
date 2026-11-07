@@ -1,6 +1,8 @@
 ﻿ecchi_dna_jack_lang={
     portrait_info = {
-	genes={ 		hair_color={ 198 217 198 217 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 198 217 198 217 }
  		skin_color={ 34 0 125 26 }
  		eye_color={ 52 204 52 204 }
  		gene_cheek_fat={ "cheek_fat" 116 "cheek_fat" 116 }

@@ -1,6 +1,8 @@
 ﻿ecchi_dna_douglas_haig = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 87 52 87 52 }
  		skin_color={ 21 24 21 24 }
  		eye_color={ 246 145 246 145 }

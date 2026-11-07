@@ -400,7 +400,7 @@ REPLACE:movement_muslim_nationalist = {
 	ideology = ideology_traditionalist_minoritarian_movement
 	character_ideologies = {
 		ideology_theocrat
-		ideology_social_democrat
+		ideology_state_socialist
 	}
 
 	creation_trigger = {
@@ -454,7 +454,7 @@ REPLACE:movement_muslim_nationalist = {
 			limit = {
 				OR = {
 					has_ideology = ideology:ideology_traditionalist_minoritarian
-					has_ideology = ideology:ideology_social_democrat
+					has_ideology = ideology:ideology_state_socialist
 					has_ideology = ideology:ideology_theocrat
 				}
 			}

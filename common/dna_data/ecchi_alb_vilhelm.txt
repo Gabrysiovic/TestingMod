@@ -1,6 +1,8 @@
 ﻿ecchi_dna_vilhelm_of_albania = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 209 202 209 202 }
  		skin_color={ 19 10 19 10 }
  		eye_color={ 248 153 248 153 }

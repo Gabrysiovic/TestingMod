@@ -1,6 +1,8 @@
 ﻿ecchi_dna_andres_bonifacio = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 92 236 92 236 }
  		skin_color={ 147 92 147 92 }
  		eye_color={ 17 180 17 180 }

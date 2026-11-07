@@ -1,6 +1,8 @@
 ﻿ecchi_dna_maximo_gomez={
     portrait_info = {
-	genes={ 		hair_color={ 178 128 178 128 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 178 128 178 128 }
  		skin_color={ 70 21 70 21 }
  		eye_color={ 37 191 37 191 }
  		gene_cheek_fat={ "cheek_fat" 117 "cheek_fat" 117 }

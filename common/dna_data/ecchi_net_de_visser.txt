@@ -1,6 +1,8 @@
 ﻿ecchi_net_de_visser_louis={
     portrait_info = {
-	genes={ 		hair_color={ 8 253 8 253 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 8 253 8 253 }
  		skin_color={ 60 20 60 20 }
  		eye_color={ 142 28 142 28 }
  		gene_cheek_fat={ "cheek_fat" 134 "cheek_fat" 134 }

@@ -1,6 +1,8 @@
 ﻿ecchi_dna_praxedes_mateo_sagasta={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 36 175 36 234 }
  		skin_color={ 97 10 97 10 }
  		eye_color={ 30 92 30 92 }

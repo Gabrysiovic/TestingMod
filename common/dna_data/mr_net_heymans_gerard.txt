@@ -5,6 +5,8 @@
 mr_net_heymans_gerard={
 	portrait_info = {
 		genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 			hair_color={ 220 133 0 0 }
 			skin_color={ 0 0 0 0 }
 			eye_color={ 228 179 0 0 }

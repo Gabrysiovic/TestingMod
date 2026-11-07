@@ -1,6 +1,8 @@
 ﻿ecchi_dna_muhumusa = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 75 245 75 245 }
  		skin_color={ 159 229 159 229 }
  		eye_color={ 26 244 26 244 }

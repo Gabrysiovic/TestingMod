@@ -1,6 +1,8 @@
 ﻿ecchi_dna_j_r_r_tolkien = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 26 246 26 246 }
  		skin_color={ 50 5 50 5 }
  		eye_color={ 40 63 40 63 }

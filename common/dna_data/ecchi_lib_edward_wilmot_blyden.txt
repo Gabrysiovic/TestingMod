@@ -7,6 +7,8 @@
 ecchi_dna_lib_edward_wilmot_blyden = {
     portrait_info = {
         genes = {
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
             hair_color = { 80 235 80 235 }
             skin_color = { 170 210 170 210 }
             eye_color = { 57 251 57 251 }

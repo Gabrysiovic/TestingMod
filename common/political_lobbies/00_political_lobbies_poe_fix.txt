@@ -1,43 +1,49 @@
 ﻿REPLACE:lobby_anti_overlord = {
 	category = foreign_anti_country
-
 	texture = "gfx/interface/icons/political_lobby_icons/lobby_anti.dds"
-
 	can_create = {
-		NOT = { is_country_type = decentralized }
+		NOT = {
+			is_country_type = decentralized
+		}
 		is_revolutionary = no
-		scope:target_country = { is_revolutionary = no }
+		scope:target_country = {
+			is_revolutionary = no
+		}
 		ROOT.owner = {
 			NAND = {
 				c:BIC ?= this
 				has_journal_entry = je_india_home_rule
 			}
 		}
+		is_subject_of = scope:target_country
 	}
-
 	requirement_to_maintain = {
-		trigger = { is_subject_of = scope:target_country }
-
+		trigger = {
+			is_subject_of = scope:target_country
+		}
 		swap_type_on_failed = lobby_anti_country
-
 		on_failed = {
-			scope:political_lobby = { initialize_lobby_custom_name = yes }
+			scope:political_lobby = {
+				initialize_lobby_custom_name = yes
+			}
 		}
 	}
-
 	requirement_to_maintain = {
 		trigger = {
 			OR = {
-				NOT = { exists = scope:political_lobby }
+				NOT = {
+					exists = scope:political_lobby
+				}
 				scope:political_lobby ?= {
-					any_lobby_member = { ig_counts_as_marginal = no }
+					any_lobby_member = {
+						ig_counts_as_marginal = no
+					}
 				}
 			}
 		}
-
-		on_failed = { }
+		on_failed = {
+		}
 	}
-
 	requirement_to_maintain = {
 		trigger = {
 			OR = {
@@ -52,24 +58,20 @@
 				}
 			}
 		}
-
 		swap_type_on_failed = lobby_indian_national_congress
-
-		on_failed = {}
+		on_failed = {
+		}
 	}
-
 	on_created = {
 		save_temporary_scope_as = lobby_country
 		scope:political_lobby ?= {
 			change_appeasement = {
-			   amount = anti_overlord_lobby_starting_appeasement
-			   factor = appeasement_diplomatic_status_quo
+				amount = anti_overlord_lobby_starting_appeasement
+				factor = appeasement_diplomatic_status_quo
 			}
-
 			initialize_lobby_custom_name = yes
 		}
 	}
-
 	appeasement_factors_pro = {
 		appeasement_relations_decreased
 		appeasement_autonomy_increased
@@ -79,7 +81,6 @@
 		appeasement_support_regime_ended
 		appeasement_foreign_investment_agreement_broken
 	}
-
 	appeasement_factors_anti = {
 		appeasement_relations_increased
 		appeasement_autonomy_decreased
@@ -88,7 +89,6 @@
 		appeasement_support_regime_started
 		appeasement_foreign_investment_agreement_formed
 	}
-
 	available_for_interest_group = {
 		NOT = {
 			any_political_lobby = {
@@ -96,20 +96,22 @@
 			}
 		}
 	}
-
 	join_weight = {
 		### Stickyness factor if already in lobby
 		if = {
 			limit = {
 				exists = scope:political_lobby
-				scope:political_lobby = { any_lobby_member = { this = root } }
+				scope:political_lobby = {
+					any_lobby_member = {
+						this = root
+					}
+				}
 			}
 			add = {
 				value = 50
 				desc = "member_of_lobby"
 			}
 		}
-
 		scope:target_country = {
 			add = {
 				every_active_law = {
@@ -136,25 +138,24 @@
 						add = 5
 					}
 				}
-
 				max = 100
 				min = -100
-
 				if = {
-					limit = { is_lobby_formation_reason_ideology = yes }
+					limit = {
+						is_lobby_formation_reason_ideology = yes
+					}
 					multiply = 1.5
 				}
-
 				desc = "enacted_laws"
 			}
 		}
-
 		### Culture
 		add = {
 			if = {
 				limit = {
 					OR = {
 						has_ideology = ideology:ideology_patriotic
+						has_ideology = ideology:ideology_militarist
 						has_ideology = ideology:ideology_military_absolutist
 						leader ?= {
 							OR = {
@@ -164,7 +165,6 @@
 						}
 					}
 				}
-
 				if = {
 					limit = {
 						scope:target_country = {
@@ -192,10 +192,8 @@
 					add = 15
 				}
 			}
-
 			desc = "primary_culture_similarity"
 		}
-
 		### Religion
 		add = {
 			if = {
@@ -210,7 +208,6 @@
 						}
 					}
 				}
-
 				if = {
 					limit = {
 						scope:target_country = {
@@ -230,7 +227,6 @@
 					}
 					add = 25
 				}
-
 				# Catholics
 				if = {
 					limit = {
@@ -245,10 +241,8 @@
 					add = 25
 				}
 			}
-
 			desc = "religion_opinion"
 		}
-
 		### Ideologies
 		# Communists
 		if = {
@@ -257,7 +251,6 @@
 					has_law_or_variant = law_type:law_council_republic
 				}
 			}
-
 			if = {
 				limit = {
 					law_stance = {
@@ -265,7 +258,6 @@
 						value <= disapprove
 					}
 				}
-
 				add = {
 					value = 200
 					desc = "anti_communism"
@@ -278,7 +270,6 @@
 						value < approve
 					}
 				}
-
 				add = {
 					value = 100
 					desc = "baseline_opposition_to_communism"
@@ -286,21 +277,20 @@
 			}
 			else_if = {
 				limit = {
-					NOT = { # Equals 'count'
+					NOT = {
+						# Equals 'count'
 						law_stance = {
 							law = law_type:law_council_republic
 							value > strongly_approve
 						}
 					}
 				}
-
 				add = {
 					value = -50
 					desc = "communist_solidarity"
 				}
 			}
 		}
-
 		# Ideological Republicans
 		if = {
 			limit = {
@@ -323,9 +313,7 @@
 				desc = "republican_anti_monarchism"
 			}
 		}
-
 		min = 0
-
 		# Pacts
 		if = {
 			limit = {
@@ -336,13 +324,11 @@
 					}
 				}
 			}
-
 			multiply = {
 				value = 0.5
 				desc = "funding_lobbies"
 			}
 		}
-
 		if = {
 			limit = {
 				scope:target_country = {
@@ -354,13 +340,11 @@
 					}
 				}
 			}
-
 			multiply = {
 				value = 1.25
 				desc = "rival_funding_lobbies"
 			}
 		}
-
 		### Overlord Relations
 		if = {
 			limit = {
@@ -379,7 +363,6 @@
 				}
 			}
 		}
-
 		add = {
 			desc = "from_liberty_desire"
 			owner ?= {
@@ -389,7 +372,6 @@
 				min = 0
 			}
 		}
-
 		if = {
 			limit = {
 				is_in_government = yes
@@ -402,7 +384,6 @@
 				desc = "relations_negative"
 			}
 		}
-
 		### British India
 		if = {
 			limit = {
@@ -486,7 +467,7 @@ REPLACE_OR_CREATE:lobby_indian_national_congress = {
 			limit = {
 				OR = {
 					has_ideology = ideology:ideology_humanitarian
-					has_ideology = ideology:ideology_social_democrat
+					has_ideology = ideology:ideology_state_socialist
 					has_ideology = ideology:ideology_sovereignist_leader
 				}
 				leader = {

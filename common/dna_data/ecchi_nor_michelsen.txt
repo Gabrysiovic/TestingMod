@@ -1,6 +1,8 @@
 ﻿ecchi_nor_michelsen_christian={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 46 240 46 240 }
  		skin_color={ 120 3 120 3 }
  		eye_color={ 194 26 194 26 }

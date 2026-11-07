@@ -1,6 +1,8 @@
 ﻿ecchi_dna_jan_smuts = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 183 116 94 251 }
  		skin_color={ 43 20 43 20 }
  		eye_color={ 178 185 178 185 }

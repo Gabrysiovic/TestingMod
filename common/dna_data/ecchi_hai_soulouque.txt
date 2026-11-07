@@ -1,6 +1,8 @@
 ﻿ecchi_dna_faustin_soulouque = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 99 248 99 248 }
  		skin_color={ 133 208 133 208 }
  		eye_color={ 88 229 88 229 }

@@ -1,6 +1,8 @@
 ﻿ecchi_dna_william_elphinstone = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 93 86 93 86 }
  		skin_color={ 22 3 22 3 }
  		eye_color={ 236 166 236 166 }

@@ -90,7 +90,7 @@ REPLACE:flood = {
 	}
 	modifier = {
 		#Infrastructure - removed
-##		state_infrastructure_mult = -0.05
+		##		state_infrastructure_mult = -0.05
 		#MAPI
 		state_market_access_price_impact = -0.05
 		#Throughput - stronger
@@ -99,7 +99,7 @@ REPLACE:flood = {
 		building_group_bg_ranching_throughput_add = -0.08
 		building_group_bg_extraction_throughput_add = -0.08
 		#Subsistence
-		state_peasants_consumption_multiplier_add = 0.025
+		state_peasants_consumption_multiplier_add = 0.03
 	}
 	intensity = {
 		fixed_range = {
@@ -552,6 +552,8 @@ REPLACE:torrential_rains = {
 		building_group_bg_extraction_throughput_add = -0.03
 		#Infra
 		building_group_bg_agriculture_throughput_add = -0.05
+		#Subsistence
+		state_peasants_consumption_multiplier_add = 0.025
 	}
 	intensity = {
 		fixed_range = {
@@ -575,7 +577,8 @@ REPLACE:torrential_rains = {
 		34
 		75
 		120
-	}	# darker slate gray
+	}
+	# darker slate gray
 	icon = "gfx/interface/icons/harvest_condition_icons/torrential_rains.dds"
 	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
 	graphics = torrential_rains

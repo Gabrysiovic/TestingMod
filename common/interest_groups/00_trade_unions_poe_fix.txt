@@ -3,33 +3,27 @@
 	texture = "gfx/interface/icons/ig_icons/trade_unions.dds"
 	layer = "revolution_dynamic_trade_unions"
 	index = 7
-
 	ideologies = {
-		ideology_proletarian
 		ideology_egalitarian
 		ideology_populist
+		ideology_proletarian
 		ideology_anti_slavery
 	}
-
 	character_ideologies = {
 		ideology_moderate
 		ideology_reformer
 		ideology_radical
 		ideology_utopian
-		ideology_despotic_utopian
 	}
-
 	enable = {
 		always = yes
 	}
-
 	# Deprecated; use on_enable effect to assign traits instead
 	traits = {
 		ig_trait_solidarity
 		ig_trait_industrial_organizers
 		ig_trait_work_to_rule
 	}
-
 	on_enable = {
 		ig:ig_trade_unions ?= {
 			if = {
@@ -47,17 +41,6 @@
 				set_ig_trait = ig_trait:ig_trait_solidarity
 			}
 		}
-
-		### Socialism
-		if = {
-			limit = {
-				has_technology_researched = socialism
-			}
-			ig:ig_trade_unions ?= {
-				add_ideology = ideology_socialist
-			}
-		}
-
 		### Feminism
 		if = {
 			limit = {
@@ -72,7 +55,6 @@
 			}
 		}
 	}
-
 	on_disable = {}
 	priority_cultures = { #Country scope
 		rule = {
@@ -96,7 +78,6 @@
 		}
 	}
 	on_character_ig_membership = {}
-
 	pop_potential = {
 		NOR = {
 			is_pop_type = aristocrats
@@ -127,10 +108,8 @@
 			}
 		}
 	}
-
 	pop_weight = {
 		value = 0
-
 		add = {
 			desc = "URBAN_POP"
 			if = {
@@ -153,7 +132,6 @@
 				}
 			}
 		}
-
 		add = {
 			desc = "POP_MACHINISTS"
 			if = {
@@ -163,7 +141,6 @@
 				value = 150
 			}
 		}
-
 		add = {
 			desc = "POP_LABORERS"
 			if = {
@@ -185,7 +162,6 @@
 				}
 			}
 		}
-
 		add = {
 			desc = "POP_CLERKS"
 			if = {
@@ -195,8 +171,15 @@
 				value = 35
 				subtract = standard_of_living
 			}
+			if = {
+				limit = {
+					owner ?= {
+						has_law = law_type:law_communal_administration
+					}
+				}
+				add = 75
+			}
 		}
-
 		add = {
 			desc = "CONSCRIPTS"
 			if = {
@@ -206,8 +189,15 @@
 				}
 				value = 25
 			}
+			if = {
+				limit = {
+					owner ?= {
+						has_law = law_type:law_revolutionary_guard
+					}
+				}
+				add = 75
+			}
 		}
-
 		multiply = {
 			desc = "LEADER_POPULARITY"
 			scope:interest_group ?= {
@@ -220,11 +210,9 @@
 				}
 			}
 		}
-
 		multiply = {
 			desc = "decentralized_power"
 			value = 1.0
-
 			if = {
 				limit = {
 					owner = {
@@ -247,7 +235,6 @@
 				min = 0
 			}
 		}
-
 		if = {
 			limit = {
 				scope:interest_group ?= {
@@ -275,7 +262,6 @@
 			}
 		}
 	}
-
 	monarch_weight = {
 		value = 0.1 # this is just inherently unlikely
 		# Monarch is not likely to adopt a marginal IG
@@ -319,7 +305,6 @@
 			}
 		}
 	}
-
 	agitator_weight = {
 		# Agitators more likely to come from populist IG's rather than elitist
 		value = 1.0
@@ -335,18 +320,14 @@
 			}
 		}
 	}
-
 	commander_weight = {
 		value = 0.5
 	}
-
 	magnate_weight = {
 		value = 0.1
 	}
-
 	executive_weight = {
 		value = 0.2
-
 		# The company owning BIC should not get non-industrialist executives
 		if = {
 			limit = {
@@ -362,26 +343,20 @@
 			}
 		}
 	}
-
 	noble_chance = {
 		value = 0.05
 	}
-
 	female_commander_chance = {
 		value = 0.0
 	}
-
 	female_executive_chance = {
 		value = 0.0
 	}
-
 	female_monarch_chance = {
 		value = 0.025
 	}
-
 	female_politician_chance = {
 		value = 0.0
-
 		if = {
 			limit = {
 				owner = {
@@ -397,53 +372,44 @@
 			}
 		}
 	}
-
 	female_agitator_chance = {
 		value = 0.05
-
 		if = {
 			limit = {
 				owner = {
 					has_law_or_variant = law_type:law_women_own_property
 				}
-
 			}
 			add = {
 				value = 0.05
 			}
 		}
-
 		if = {
 			limit = {
 				owner = {
 					has_law_or_variant = law_type:law_women_in_the_workplace
 				}
-
 			}
 			add = {
 				value = 0.05
 			}
 		}
-
 		if = {
 			limit = {
 				owner = {
 					has_law_or_variant = law_type:law_womens_suffrage
 				}
-
 			}
 			add = {
 				value = 0.05
 			}
 		}
 	}
-
 	# Multiplier applied to the weight for an appropriate commander will be selected from the character pool to lead the IG
 	# root = interest group
 	commander_leader_weight = {
 		value = 0.75
 	}
-	
 	# Multiplier applied to the weight for an appropriate magnate will be selected from the character pool to lead the IG
 	# root = interest group
 	magnate_leader_weight = {
@@ -458,7 +424,6 @@
 			add = 5
 		}
 	}
-
 	# Multiplier applied to the weight for an appropriate executive will be selected from the character pool to lead the IG
 	# root = interest group
 	executive_leader_weight = {

@@ -1,6 +1,8 @@
 ﻿ecchi_dna_james_morrow_walsh={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 15 250 15 250 }
  		skin_color={ 14 25 14 25 }
  		eye_color={ 181 73 181 73 }

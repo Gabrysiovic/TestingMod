@@ -3,7 +3,9 @@
 dna_michael_alexandrovich_romanov = {
      portrait_info = {
 
-	genes={ 		hair_color={ 116 164 110 77 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 116 164 110 77 }
  		skin_color={ 82 0 118 12 }
  		eye_color={ 221 163 162 89 }
  		gene_cheek_fat={ "cheek_fat" 167 "cheek_fat" 100 }

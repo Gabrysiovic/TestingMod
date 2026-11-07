@@ -1,6 +1,8 @@
 ﻿ecchi_dna_edward_bowen = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 223 98 223 98 }
  		skin_color={ 53 23 53 23 }
  		eye_color={ 197 201 197 201 }

@@ -1,6 +1,8 @@
 ﻿ecchi_dna_jack_london={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 177 217 177 217 }
  		skin_color={ 21 8 21 8 }
  		eye_color={ 58 65 58 65 }

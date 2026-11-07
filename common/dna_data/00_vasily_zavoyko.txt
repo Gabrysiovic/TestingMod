@@ -3,7 +3,9 @@
 dna_vasily_zavoyko = {
      portrait_info = {
  
-      genes={ 		hair_color={ 0 0 0 0 }
+      genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 0 0 0 0 }
  		skin_color={ 38 43 0 0 }
  		eye_color={ 34 255 0 0 }
  		gene_cheek_fat={ "cheek_fat" 127 "cheek_fat" 127 }
@@ -115,7 +117,7 @@ dna_vasily_zavoyko = {
  		medals={ "all_medals" 141 "all_medals" 0 }
  		aiguillettes={ "no_aiguillettes" 0 "all_aiguillettes" 0 }
  		legwear={ "slavic_legwear" 49 "all_legwear" 0 }
- 		decals={ "wounded_1" 0 "wounded_1" 0 }
+ 		decals={ "wounded_01" 0 "wounded_01" 0 }
  }
 }
      enabled=yes

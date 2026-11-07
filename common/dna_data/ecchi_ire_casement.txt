@@ -1,6 +1,8 @@
 ﻿ecchi_dna_roger_casement={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 49 238 49 238 }
  		skin_color={ 106 5 106 5 }
  		eye_color={ 75 134 75 134 }

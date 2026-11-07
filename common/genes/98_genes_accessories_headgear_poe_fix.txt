@@ -9,7 +9,7 @@
 	#####################################
 		TRY_INJECT:headgear = {
 			indian_military_turban = {
-				index = 122
+				index = 126
 				male = {
 					1 = male_headgear_arabic_common_02
 				}

@@ -1,6 +1,8 @@
 ﻿ecchi_dna_louis_botha = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 70 235 70 235 }
  		skin_color={ 28 2 28 2 }
  		eye_color={ 239 180 239 180 }

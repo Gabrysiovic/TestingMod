@@ -1,6 +1,8 @@
 ﻿ecchi_swi_carl_jung={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 211 254 211 254 }
  		skin_color={ 37 2 37 2 }
  		eye_color={ 43 146 43 146 }

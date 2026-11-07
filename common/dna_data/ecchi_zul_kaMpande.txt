@@ -1,6 +1,8 @@
 ﻿ecchi_dna_dabulamanzi_kaMpande = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 110 252 110 252 }
  		skin_color={ 133 223 133 223 }
  		eye_color={ 51 244 51 244 }

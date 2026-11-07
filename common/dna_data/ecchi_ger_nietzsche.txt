@@ -1,6 +1,8 @@
 ﻿ecchi_dna_friedrich_nietzsche = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 195 198 195 172 }
  		skin_color={ 26 11 26 11 }
  		eye_color={ 234 191 234 191 }

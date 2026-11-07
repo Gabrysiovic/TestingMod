@@ -1,6 +1,8 @@
 ﻿ecchi_dna_august_bebel={
     portrait_info = {
-	genes={ 		hair_color={ 226 222 226 222 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 226 222 226 222 }
  		skin_color={ 2 24 2 24 }
  		eye_color={ 238 111 238 111 }
  		gene_cheek_fat={ "cheek_fat" 90 "cheek_fat" 90 }

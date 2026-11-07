@@ -3,6 +3,8 @@
 mr_net_van_houten_samuel = {
 	portrait_info = {
 		genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 			hair_color={ 107 165 0 0 }
 			skin_color={ 0 6 0 0 }
 			eye_color={ 248 38 0 0 }

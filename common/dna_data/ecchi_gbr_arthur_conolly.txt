@@ -1,6 +1,8 @@
 ﻿ecchi_gbr_conolly_arthur={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 178 226 178 226 }
  		skin_color={ 88 17 88 17 }
  		eye_color={ 225 39 225 39 }

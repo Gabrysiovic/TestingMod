@@ -480,7 +480,7 @@ fra_formation_of_power_blocs.4 = {
 						has_ideology = ideology:ideology_positivist
 						has_ideology = ideology:ideology_radical
 						has_ideology = ideology:ideology_reformer
-						has_ideology = ideology:ideology_social_democrat
+						has_ideology = ideology:ideology_state_socialist
 						has_ideology = ideology:ideology_sovereignist_leader
 						has_ideology = ideology:ideology_ilustrado_leader
 					}
@@ -563,7 +563,7 @@ fra_formation_of_power_blocs.4 = {
 								has_ideology = ideology:ideology_positivist
 								has_ideology = ideology:ideology_radical
 								has_ideology = ideology:ideology_reformer
-								has_ideology = ideology:ideology_social_democrat
+								has_ideology = ideology:ideology_state_socialist
 								has_ideology = ideology:ideology_sovereignist_leader
 								has_ideology = ideology:ideology_ilustrado_leader
 							}

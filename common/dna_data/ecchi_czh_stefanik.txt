@@ -1,6 +1,8 @@
 ﻿ecchi_dna_milan_rastislav_stefanik = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 40 252 40 252 }
  		skin_color={ 14 1 14 1 }
  		eye_color={ 200 204 200 204 }

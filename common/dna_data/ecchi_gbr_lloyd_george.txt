@@ -1,6 +1,8 @@
 ﻿ecchi_dna_david_lloyd_george = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 40 250 40 250 }
  		skin_color={ 30 0 30 0 }
  		eye_color={ 206 159 206 159 }

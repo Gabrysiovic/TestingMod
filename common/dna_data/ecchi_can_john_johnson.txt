@@ -1,6 +1,8 @@
 ﻿ecchi_dna_john_smoke_johnson={
     portrait_info = {
-	genes={ 		hair_color={ 89 240 89 240 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 89 240 89 240 }
  		skin_color={ 99 135 99 135 }
  		eye_color={ 76 244 76 244 }
  		gene_cheek_fat={ "cheek_fat" 0 "cheek_fat" 90 }

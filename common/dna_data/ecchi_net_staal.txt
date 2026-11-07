@@ -1,6 +1,8 @@
 ﻿ecchi_net_staal_henri={
     portrait_info = {
-	genes={ 		hair_color={ 195 173 195 173 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 195 173 195 173 }
  		skin_color={ 56 2 56 2 }
  		eye_color={ 171 53 171 53 }
  		gene_cheek_fat={ "cheek_fat" 127 "cheek_fat" 127 }

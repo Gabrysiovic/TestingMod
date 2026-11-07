@@ -1,6 +1,8 @@
 ﻿ecchi_dna_pius_x = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 167 181 167 181 }
  		skin_color={ 64 20 64 20 }
  		eye_color={ 219 204 219 204 }

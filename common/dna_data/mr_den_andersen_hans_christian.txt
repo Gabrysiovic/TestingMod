@@ -1,6 +1,8 @@
 ﻿mr_den_andersen_hans_christian={
 	portrait_info = {
-		genes={ 		
+		genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 			hair_color={ 107 177 0 0 }
 			skin_color={ 0 0 0 0 }
 			eye_color={ 127 53 0 0 }

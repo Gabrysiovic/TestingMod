@@ -1,6 +1,8 @@
 ﻿ecchi_dna_jean_louis_pierrot = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 60 242 60 242 }
  		skin_color={ 151 226 151 226 }
  		eye_color={ 56 247 56 247 }

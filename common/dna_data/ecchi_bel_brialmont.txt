@@ -1,6 +1,8 @@
 ﻿ecchi_dna_henri_alexis_brialmont = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 217 192 217 145 }
  		skin_color={ 111 4 111 4 }
  		eye_color={ 95 185 95 185 }

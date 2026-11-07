@@ -1,6 +1,8 @@
 ﻿ecchi_dna_theodor_herzel={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 127 172 252 75 }
  		skin_color={ 38 24 38 24 }
  		eye_color={ 193 28 193 28 }

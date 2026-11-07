@@ -1,6 +1,8 @@
 ﻿ecchi_dna_grigory_semyonov={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 136 135 136 82 }
  		skin_color={ 125 1 125 1 }
  		eye_color={ 236 141 236 141 }

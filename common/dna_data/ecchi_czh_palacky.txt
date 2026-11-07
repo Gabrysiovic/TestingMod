@@ -1,6 +1,8 @@
 ﻿ecchi_dna_frantisek_palacky = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 169 73 210 113 }
  		skin_color={ 53 13 53 13 }
  		eye_color={ 245 158 245 158 }

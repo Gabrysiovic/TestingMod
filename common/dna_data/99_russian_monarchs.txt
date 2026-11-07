@@ -1,7 +1,9 @@
 ﻿## Nicholas I
 dna_rus_nikolai_01 = {
     portrait_info = {
-    genes={         
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+         
         hair_color={ 222 167 222 83 }
         skin_color={ 22 10 36 10 }
         eye_color={ 190 74 190 74 }
@@ -119,7 +121,9 @@ dna_rus_nikolai_01 = {
 ## Alexander II
 dna_rus_aleksandr_02 = {
     portrait_info = {
-    genes={         
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+         
         hair_color={ 191 144 39 245 }
         skin_color={ 22 10 36 10 }
         eye_color={ 197 139 197 139 }
@@ -237,7 +241,9 @@ dna_rus_aleksandr_02 = {
 ### Alexander III
 dna_rus_aleksandr_03 = {
     portrait_info = {
-    genes={         
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+         
         hair_color={ 191 173 39 245 }
         skin_color={ 22 10 36 10 }
         eye_color={ 162 89 162 89 }
@@ -357,7 +363,9 @@ dna_rus_aleksandr_03 = {
 
 dna_rus_nikolai_02 = {
     portrait_info = {
-    genes={         
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+         
         hair_color={ 191 173 39 245 }
         skin_color={ 22 10 36 10 }
         eye_color={ 162 89 162 89 }
@@ -476,7 +484,9 @@ dna_rus_nikolai_02 = {
 
 dna_rus_georgy_aleksandrovich = {
     portrait_info = {
-    genes={         
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+         
         hair_color={ 191 173 39 245 }
         skin_color={ 22 10 36 10 }
         eye_color={ 197 139 197 139 }
@@ -596,7 +606,9 @@ dna_rus_georgy_aleksandrovich = {
 
 dna_rus_mikhail_aleksandrovich = {
     portrait_info = {
-    genes={         
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+         
         hair_color={ 191 173 39 245 }
         skin_color={ 22 10 36 10 }
         eye_color={ 197 139 197 139 }
@@ -716,7 +728,9 @@ dna_rus_mikhail_aleksandrovich = {
 
 dna_rus_aleksei_02 = {
     portrait_info = {
-    genes={         
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+         
         hair_color={ 255 118 110 77 }
         skin_color={ 15 0 118 12 }
         eye_color={ 162 89 162 89 }

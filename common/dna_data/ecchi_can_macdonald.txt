@@ -1,6 +1,8 @@
 ﻿ecchi_dna_john_a_macdonald = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 167 204 167 204 }
  		skin_color={ 105 13 105 13 }
  		eye_color={ 175 132 175 132 }

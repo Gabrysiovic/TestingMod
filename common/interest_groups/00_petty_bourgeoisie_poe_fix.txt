@@ -1,15 +1,17 @@
 ﻿REPLACE:ig_petty_bourgeoisie = {
-	color = hsv{ 0.65 0.54 0.52 }
+	color = hsv{
+		0.65
+		0.54
+		0.52
+	}
 	texture = "gfx/interface/icons/ig_icons/petty_bourgeoisie.dds"
 	layer = "revolution_dynamic_petty_bourgeoisie"
 	index = 5
-
 	ideologies = {
 		ideology_reactionary
 		ideology_meritocratic
 		ideology_patriotic
 	}
-
 	character_ideologies = {
 		ideology_moderate
 		ideology_traditionalist
@@ -18,23 +20,23 @@
 		ideology_sovereignist_leader
 		ideology_despotic_utopian
 	}
-
 	enable = {
 		always = yes
 	}
-
 	# Deprecated; use on_enable effect to assign traits instead
 	traits = {
 		ig_trait_treasury_bonds
 		ig_trait_middle_managers
 		ig_trait_xenophobia
 	}
-
 	on_enable = {
+		# ONLY HANDLE IG TRAITS IN THIS BLOCK
 		ig:ig_petty_bourgeoisie ?= {
 			if = {
 				limit = {
-					owner = { c:SWE ?= this}
+					owner = {
+						c:SWE ?= this
+					}
 				}
 				set_ig_trait = ig_trait:ig_trait_xenophobia
 				set_ig_trait = ig_trait:ig_trait_bergsbrukens_valdistrikten
@@ -42,7 +44,9 @@
 			}
 			else_if = {
 				limit = {
-					owner = { c:TUR ?= this }
+					owner = {
+						c:TUR ?= this
+					}
 				}
 				set_ig_trait = ig_trait:ig_trait_xenophobia
 				set_ig_trait = ig_trait:ig_trait_effendi
@@ -50,7 +54,9 @@
 			}
 			else_if = {
 				limit = {
-					owner = { c:EGY ?= this }
+					owner = {
+						c:EGY ?= this
+					}
 				}
 				set_ig_trait = ig_trait:ig_trait_xenophobia
 				set_ig_trait = ig_trait:ig_trait_effendi
@@ -59,7 +65,9 @@
 			else_if = {
 				limit = {
 					has_dlc_feature = voice_of_the_people_content
-					owner = { c:FRA ?= this }
+					owner = {
+						c:FRA ?= this
+					}
 				}
 				set_ig_trait = ig_trait:ig_trait_xenophobia
 				set_ig_trait = ig_trait:ig_trait_haute_finance
@@ -67,7 +75,9 @@
 			}
 			else_if = {
 				limit = {
-					owner = { c:GBR ?= this }
+					owner = {
+						c:GBR ?= this
+					}
 				}
 				set_ig_trait = ig_trait:ig_trait_bah_humbug
 				set_ig_trait = ig_trait:ig_trait_civil_service
@@ -75,45 +85,14 @@
 			}
 			else_if = {
 				limit = {
-					c:POR ?= owner
-				}
-				remove_ideology = ideology_meritocratic
-				add_ideology = ideology_cartist
-
-				set_ig_trait = ig_trait:ig_trait_xenophobia
-				set_ig_trait = ig_trait:ig_trait_middle_managers
-				set_ig_trait = ig_trait:ig_trait_treasury_bonds
-			}
-			else_if = {
-				limit = {
-					owner = {
-						country_has_primary_culture = cu:japanese
-					}
-				}
-				set_interest_group_name = ig_chonin
-				set_ig_trait = ig_trait:ig_trait_xenophobia
-				set_ig_trait = ig_trait:ig_trait_middle_managers
-				set_ig_trait = ig_trait:ig_trait_treasury_bonds
-			}
-			else_if = {
-				limit = {
 					owner = {
 						this.country_definition ?= cd:BIC
 					}
 				}
-				set_interest_group_name = ig_bhadralok
-
-				# Ideologies
-				remove_ideology = ideology_patriotic
-				add_ideology = ideology_sovereignist
-				remove_ideology = ideology_reactionary
-				add_ideology = ideology_modernizer
-				# Traits
 				set_ig_trait = ig_trait:ig_trait_swadesh
 				set_ig_trait = ig_trait:ig_trait_lines_of_credit
 				set_ig_trait = ig_trait:ig_trait_cooperative_agencies
 			}
-			# Kleinbürger
 			else_if = {
 				limit = {
 					has_dlc_feature = ip3_content
@@ -123,7 +102,6 @@
 						}
 					}
 				}
-				set_interest_group_name = ig_kleinburger
 				set_ig_trait = ig_trait:ig_trait_xenophobia
 				set_ig_trait = ig_trait:ig_trait_middle_managers
 				set_ig_trait = ig_trait:ig_trait_biedermanner
@@ -133,29 +111,99 @@
 				set_ig_trait = ig_trait:ig_trait_middle_managers
 				set_ig_trait = ig_trait:ig_trait_treasury_bonds
 			}
-
-			if = { # For newly-released countries. For game-start, initialisation is handled in global history
-				limit = {
-					owner = {
-						OR = {
-							has_law_or_variant = law_type:law_traditionalism
-							has_law_or_variant = law_type:law_isolationism
-						}
+		}
+		# FLAVOUR AND IDEOLOGIES GO HERE
+		if = {
+			limit = {
+				c:POR ?= this
+			}
+			ig:ig_petty_bourgeoisie ?= {
+				remove_ideology = ideology_meritocratic
+				add_ideology = ideology_cartist
+			}
+		}
+		else_if = {
+			# British India
+			limit = {
+				c:BIC ?= this
+			}
+			ig:ig_petty_bourgeoisie ?= {
+				set_interest_group_name = ig_bhadralok
+				remove_ideology = ideology_patriotic
+				add_ideology = ideology_sovereignist
+				remove_ideology = ideology_reactionary
+				add_ideology = ideology_modernizer
+			}
+		}
+		else_if = {
+			# Chonin
+			limit = {
+				owner = {
+					country_has_primary_culture = cu:japanese
+				}
+			}
+			ig:ig_petty_bourgeoisie ?= {
+				set_interest_group_name = ig_chonin
+			}
+		}
+		else_if = {
+			# Kleinbürger
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = language_germanophone
+				}
+			}
+			ig:ig_petty_bourgeoisie ?= {
+				set_interest_group_name = ig_kleinburger
+			}
+		}
+		if = {
+			# For newly-released countries. For game-start, initialisation is handled in global history
+			limit = {
+				owner = {
+					OR = {
+						has_law_or_variant = law_type:law_traditionalism
+						has_law_or_variant = law_type:law_isolationism
 					}
 				}
+			}
+			ig:ig_petty_bourgeoisie ?= {
 				add_ideology = ideology_mercantile
 			}
 		}
 	}
-
-	on_disable = {}
-	priority_cultures = { #Country scope
+	on_disable = {
+	}
+	priority_cultures = {
+		#Country scope
 		rule = {
 			trigger = {
 				this.country_definition ?= cd:BIC
 			}
 			cultures = {
-				assamese avadhi baluchi bengali bihari gujarati kannada malayalam marathi oriya panjabi pathan rajput sindi tamil telegu hindustani bundeli pahari gondi bageli chhattisgarhi deccani
+				assamese
+				avadhi
+				baluchi
+				bengali
+				bihari
+				gujarati
+				kannada
+				malayalam
+				marathi
+				oriya
+				panjabi
+				pathan
+				rajput
+				sindi
+				tamil
+				telegu
+				hindustani
+				bundeli
+				pahari
+				gondi
+				bageli
+				chhattisgarhi
+				deccani
 			}
 		}
 		rule = {
@@ -166,19 +214,33 @@
 				}
 			}
 			cultures = {
-				swahili gujarati
+				swahili
+				gujarati
 			}
 		}
 		rule = {
 			trigger = {
 				c:PHI ?= this
-				NOT = { has_variable = je_philippines_main_reliance_happened }
-				NOT = { any_primary_culture = { cu:filipino = this } }
-				NOT = { any_primary_culture = { cu:filipino_hispanophone = this } }
-				any_primary_culture = { cu:spanish = this }
+				NOT = {
+					has_variable = je_philippines_main_reliance_happened
+				}
+				NOT = {
+					any_primary_culture = {
+						cu:filipino = this
+					}
+				}
+				NOT = {
+					any_primary_culture = {
+						cu:filipino_hispanophone = this
+					}
+				}
+				any_primary_culture = {
+					cu:spanish = this
+				}
 			}
 			cultures = {
-				spanish filipino_mestizo
+				spanish
+				filipino_mestizo
 			}
 		}
 		rule = {
@@ -192,7 +254,8 @@
 				}
 			}
 			cultures = {
-				spanish filipino_hispanophone
+				spanish
+				filipino_hispanophone
 			}
 		}
 	}
@@ -210,7 +273,6 @@
 			change_character_religion = rel:shiite
 		}
 	}
-
 	pop_potential = {
 		OR = {
 			custom_tooltip = {
@@ -224,7 +286,9 @@
 						AND = {
 							c:ZAN ?= prev.owner
 							c:ZAN ?= {
-								any_primary_culture = { cu:bedouin = this }
+								any_primary_culture = {
+									cu:bedouin = this
+								}
 							}
 							OR = {
 								cu:swahili = this
@@ -290,7 +354,6 @@
 			}
 		}
 	}
-
 	pop_weight = {
 		if = {
 			limit = {
@@ -313,7 +376,6 @@
 				multiply = 3
 			}
 		}
-
 		add = {
 			desc = "POP_SHOPKEEPERS"
 			if = {
@@ -323,7 +385,6 @@
 				value = 150
 			}
 		}
-
 		add = {
 			desc = "POP_CLERKS"
 			if = {
@@ -334,7 +395,6 @@
 				add = standard_of_living
 			}
 		}
-
 		add = {
 			desc = "POP_ENGINEERS"
 			if = {
@@ -344,7 +404,6 @@
 				value = 50
 			}
 		}
-
 		if = {
 			limit = {
 				owner = {
@@ -361,7 +420,18 @@
 				}
 			}
 		}
-
+		if = {
+			limit = {
+				is_pop_type = bureaucrats
+				owner.ig:ig_intelligentsia ?= {
+					has_ideology = ideology:ideology_managerial
+				}
+			}
+			multiply = {
+				desc = "POP_BUREAUCRATS_MANAGERIAL_INTELLIGENTSIA"
+				value = 0.5
+			}
+		}
 		add = {
 			desc = "HOMESTEADING_LAW"
 			if = {
@@ -372,7 +442,6 @@
 					}
 				}
 				value = 25
-
 				if = {
 					limit = {
 						state = {
@@ -383,7 +452,6 @@
 				}
 			}
 		}
-
 		if = {
 			limit = {
 				standard_of_living >= 10
@@ -399,7 +467,6 @@
 				multiply = 2
 			}
 		}
-
 		if = {
 			limit = {
 				owner.country_definition ?= cd:BIC
@@ -412,7 +479,6 @@
 				value = 0.1
 			}
 		}
-
 		if = {
 			limit = {
 				owner.country_definition ?= cd:BIC
@@ -429,7 +495,6 @@
 				value = 75
 			}
 		}
-
 		multiply = {
 			desc = "LEADER_POPULARITY"
 			scope:interest_group ?= {
@@ -442,11 +507,9 @@
 				}
 			}
 		}
-
 		multiply = {
 			desc = "decentralized_power"
 			value = 1.0
-
 			if = {
 				limit = {
 					owner = {
@@ -469,14 +532,14 @@
 				min = 0
 			}
 		}
-
 		if = {
 			limit = {
 				scope:interest_group ?= {
 					is_in_government = yes
 				}
 			}
-			multiply = { # Multiplied by 1.25x max
+			multiply = {
+				# Multiplied by 1.25x max
 				desc = "POP_LOYALISTS"
 				value = pop_loyalist_fraction
 				divide = 4
@@ -489,7 +552,8 @@
 					is_in_government = no
 				}
 			}
-			multiply = { # Multiplied by 1.25x max
+			multiply = {
+				# Multiplied by 1.25x max
 				desc = "POP_RADICALS"
 				value = pop_radical_fraction
 				divide = 4
@@ -497,7 +561,6 @@
 			}
 		}
 	}
-
 	monarch_weight = {
 		value = 1
 		# Monarch is not likely to adopt a marginal IG
@@ -541,7 +604,6 @@
 			}
 		}
 	}
-
 	agitator_weight = {
 		# Agitators more likely to come from populist IG's rather than elitist
 		value = 1.0
@@ -557,18 +619,14 @@
 			}
 		}
 	}
-
 	commander_weight = {
 		value = 1.0
 	}
-
 	magnate_weight = {
 		value = 0.25
 	}
-
 	executive_weight = {
 		value = 1.5
-		
 		# The company owning BIC should not get non-industrialist executives
 		if = {
 			limit = {
@@ -584,26 +642,20 @@
 			}
 		}
 	}
-
 	noble_chance = {
 		value = 0.1
 	}
-
 	female_commander_chance = {
 		value = 0.0
 	}
-
 	female_executive_chance = {
 		value = 0.0
 	}
-
 	female_monarch_chance = {
 		value = 0.10
 	}
-
 	female_politician_chance = {
 		value = 0.0
-
 		if = {
 			limit = {
 				owner = {
@@ -619,53 +671,44 @@
 			}
 		}
 	}
-
 	female_agitator_chance = {
 		value = 0.025
-
 		if = {
 			limit = {
 				owner = {
 					has_law_or_variant = law_type:law_women_own_property
 				}
-
 			}
 			add = {
 				value = 0.025
 			}
 		}
-
 		if = {
 			limit = {
 				owner = {
 					has_law_or_variant = law_type:law_women_in_the_workplace
 				}
-
 			}
 			add = {
 				value = 0.025
 			}
 		}
-
 		if = {
 			limit = {
 				owner = {
 					has_law_or_variant = law_type:law_womens_suffrage
 				}
-
 			}
 			add = {
 				value = 0.025
 			}
 		}
 	}
-
 	# Multiplier applied to the weight for an appropriate commander will be selected from the character pool to lead the IG
 	# root = interest group
 	commander_leader_weight = {
 		value = 1.0
 	}
-	
 	# Multiplier applied to the weight for an appropriate magnate will be selected from the character pool to lead the IG
 	# root = interest group
 	magnate_leader_weight = {
@@ -680,7 +723,6 @@
 			add = 5
 		}
 	}
-
 	# Multiplier applied to the weight for an appropriate executive will be selected from the character pool to lead the IG
 	# root = interest group
 	executive_leader_weight = {

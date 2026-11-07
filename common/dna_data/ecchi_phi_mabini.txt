@@ -7,6 +7,8 @@
 ecchi_dna_phi_mabini = {
     portrait_info = {
         genes = {
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
             hair_color = { 40 240 40 240 }
             skin_color = { 80 100 80 100 }
             eye_color = { 53 246 53 246 }

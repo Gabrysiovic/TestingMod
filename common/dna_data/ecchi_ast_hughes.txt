@@ -1,6 +1,8 @@
 ﻿ecchi_dna_billy_hughes = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 26 233 26 233 }
  		skin_color={ 43 13 43 13 }
  		eye_color={ 213 203 213 203 }

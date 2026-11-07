@@ -1,6 +1,8 @@
 ﻿dna_king_william_02 = {
     portrait_info = {
-        genes={ 		
+        genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 			hair_color={ 235 165 219 195 }
 			skin_color={ 24 0 97 15 }
 			eye_color={ 255 221 159 133 }
@@ -122,7 +124,9 @@
 
 dna_king_william_03 = {
     portrait_info = {
-        genes={ 		
+        genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 			hair_color={ 112 165 188 188 }
 			skin_color={ 27 24 27 24 }
 			eye_color={ 67 195 82 167 }
@@ -244,7 +248,9 @@ dna_king_william_03 = {
 
 dna_prince_willem_oranje = {
     portrait_info = {
-        genes={ 		
+        genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 			hair_color={ 131 149 221 170 }
 			skin_color={ 60 27 60 27 }
 			eye_color={ 86 152 86 152 }
@@ -366,7 +372,9 @@ dna_prince_willem_oranje = {
 
 dna_prince_alexander_oranje = {
     portrait_info = {
-        genes={ 		
+        genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 			hair_color={ 136 173 220 165 }
 			skin_color={ 39 30 39 30 }
 			eye_color={ 87 140 87 140 }
@@ -488,7 +496,9 @@ dna_prince_alexander_oranje = {
 
 dna_queen_wilhelmina = {
     portrait_info = {
-        genes={ 		
+        genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 			hair_color={ 160 207 180 179 }
 			skin_color={ 32 11 32 11 }
 			eye_color={ 196 205 211 201 }
@@ -610,7 +620,9 @@ dna_queen_wilhelmina = {
 
 dna_queen_juliana = {
     portrait_info = {
-        genes={ 		
+        genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 			hair_color={ 186 142 184 166 }
 			skin_color={ 93 16 93 16 }
 			eye_color={ 196 205 211 201 }
@@ -732,7 +744,9 @@ dna_queen_juliana = {
 
 dna_emma_of_waldeck = {
 	portrait_info = {
-        genes={ 	
+        genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 	
 			hair_color={ 186 164 186 192 }
 			skin_color={ 112 28 112 28 }
 			eye_color={ 95 181 242 166 }

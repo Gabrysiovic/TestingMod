@@ -3,6 +3,10 @@
 
 	group = je_group_british_india_global
 
+	activation_description = {
+		always = yes
+	}
+
 	should_be_involved = {
 		c:BIC ?= this
 	}
@@ -124,99 +128,109 @@
 		}
 	}
 
-	custom_completion_header = je_uneasy_raj_complete_header
-
-	complete = {
-		custom_tooltip = {
-			text = je_uneasy_raj_tt_1
-			always = no
+	outcome = {
+		header = je_uneasy_raj_complete_header
+		effect_header = je_uneasy_raj_on_complete_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_uneasy_raj_tt_1
+				always = no
+			}
+		}
+		effect = {
+			show_as_tooltip = {
+				c:BIC ?= {
+					trigger_event = { id = sepoy_mutiny_events.11 popup = yes }
+				}
+			}
+		}
+		event_outcome_effect_desc = {
+			header = event_effects_header_sepoy_mutiny_events_11.a
+			effect = {
+				execute_event_option = { event = sepoy_mutiny_events.11 option = 0 }
+			}
+		}
+		event_outcome_effect_desc = {
+			header = event_effects_header_sepoy_mutiny_events_11.b
+			effect = {
+				execute_event_option = { event = sepoy_mutiny_events.11 option = 1 }
+			}
 		}
 	}
 
-	custom_failure_header = je_uneasy_raj_fail_header
-
-	fail = {
-		custom_tooltip = {
-			text = je_uneasy_raj_tt_2
-			"scope:journal_entry.scripted_bar_progress(sepoy_mutiny_progress_bar_indian_instability)" >= 600
+	outcome = {
+		header = je_uneasy_raj_fail_header
+		effect_header = je_uneasy_raj_on_fail_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_uneasy_raj_tt_2
+				"scope:journal_entry.scripted_bar_progress(sepoy_mutiny_progress_bar_indian_instability)" >= 600
+			}
+			# TODO: Delete below, for debugging
+			#custom_tooltip = {
+			#	text = je_uneasy_raj_tt_3
+			#}
 		}
-		# TODO: Delete below, for debugging
-		#custom_tooltip = {
-		#	text = je_uneasy_raj_tt_3
-		#}
+		effect = {
+			custom_tooltip = {
+				text = indian_uprising_triggered_tt
+				c:BIC ?= {
+					add_contextless_journal_entry = je_sepoy_mutiny
+				}
+			}
+			if = {
+				limit = {
+					c:BIC ?= {
+						is_subject = yes
+						is_subject_type = subject_type_chartered_company
+					}
+				}
+				custom_tooltip = british_raj_later_tt
+			}
+			if = {
+				limit = {
+					c:BIC ?= {
+						NOR = {
+							has_variable = utilitarianism_done
+							has_variable = rejected_imperialism_of_promise
+						}
+					}
+				}
+				custom_tooltip = no_more_utilitarianism_tt
+			}
+		}
+	}
+
+	outcome = {
+		header = JOURNAL_ENTRY_TIMEOUT
+		effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+		flags = { timeout }
+		conclusion_desc = JOURNAL_ENTRY_TIMEOUT_CONCLUSION_DESC
+		effect = {
+			hidden_effect = {
+				c:BIC ?= {
+					set_variable = company_rule_enduring
+					trigger_event = { id = sepoy_mutiny_events.11 popup = yes }
+				}
+			}
+		}
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			NOT = {
+				exists = c:BIC
+			}
+		}
 	}
 
 	timeout = 9125
-
-	on_timeout = {
-		hidden_effect = {
-			c:BIC ?= {
-				set_variable = company_rule_enduring
-				trigger_event = { id = sepoy_mutiny_events.11 popup = yes }
-			}
-		}
-	}
-
-	invalid = {
-		NOT = {
-			exists = c:BIC
-		}
-	}
-
-	custom_on_completion_header = je_uneasy_raj_on_complete_header
-
-	on_complete = {
-		show_as_tooltip = {
-			c:BIC ?= {
-				trigger_event = { id = sepoy_mutiny_events.11 popup = yes }
-			}
-		}
-	}
-
-	event_outcome_completed_effect_desc = {
-        header = event_effects_header_sepoy_mutiny_events_11.a
-        effect = {
-        	execute_event_option = { event = sepoy_mutiny_events.11 option = 0 }
-        }
-    }
-
-    event_outcome_completed_effect_desc = {
-        header = event_effects_header_sepoy_mutiny_events_11.b
-        effect = {
-        	execute_event_option = { event = sepoy_mutiny_events.11 option = 1 }
-        }
-    }
-
-	custom_on_failure_header = je_uneasy_raj_on_fail_header
-
-	on_fail = {
-		custom_tooltip = {
-			text = indian_uprising_triggered_tt
-			c:BIC ?= {
-				add_contextless_journal_entry = je_sepoy_mutiny
-			}
-		}
-		if = {
-			limit = {
-				c:BIC ?= {
-					is_subject = yes
-					is_subject_type = subject_type_chartered_company
-				}
-			}
-			custom_tooltip = british_raj_later_tt
-		}
-		if = {
-			limit = {
-				c:BIC ?= {
-					NOR = {
-						has_variable = utilitarianism_done
-						has_variable = rejected_imperialism_of_promise
-					}
-				}
-			}
-			custom_tooltip = no_more_utilitarianism_tt
-		}
-	}
 
 	on_monthly_pulse = {
 		effect = {
@@ -349,6 +363,10 @@ REPLACE:je_sepoy_mutiny = {
 
 	group = je_group_british_india_global
 
+	activation_description = {
+		always = yes
+	}
+
 	should_be_involved = {
 		OR = {
 			c:BIC ?= this
@@ -426,38 +444,30 @@ REPLACE:je_sepoy_mutiny = {
 		}
 	}
 
-	custom_completion_header = je_sepoy_mutiny_complete_header
-
-	complete = {
-		custom_tooltip = {
-			text = sepoy_mutiny_defeated_tt
-			NOT = {
-				exists = scope:sepoy_mutiny_dp
-			}
-			NOT = {
-				# Given by sepoy_mutiny wargoal
-				c:BIC ?= {
-					has_variable = sepoy_mutiny_failed
+	outcome = {
+		header = je_sepoy_mutiny_complete_header
+		effect_header = je_sepoy_mutiny_on_complete_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = sepoy_mutiny_defeated_tt
+				NOT = {
+					exists = scope:sepoy_mutiny_dp
+				}
+				NOT = {
+					# Given by sepoy_mutiny wargoal
+					c:BIC ?= {
+						has_variable = sepoy_mutiny_failed
+					}
 				}
 			}
 		}
-	}
-
-	custom_on_completion_header = je_sepoy_mutiny_on_complete_header
-
-	on_complete = {
-		hidden_effect = {
-			c:BIC ?= {
-				sepoy_mutiny_after_effects = yes
-				# Reward every Princely State that sided with BIC with no subject payments
-				every_direct_subject = {
-					limit = {
-						has_variable = loyal_in_sepoy_mutiny
-					}
-					remove_variable = loyal_in_sepoy_mutiny
-					add_modifier = indian_loyalty_rewarded
-				}
-				overlord ?= {
+		effect = {
+			hidden_effect = {
+				c:BIC ?= {
+					sepoy_mutiny_after_effects = yes
+					# Reward every Princely State that sided with BIC with no subject payments
 					every_direct_subject = {
 						limit = {
 							has_variable = loyal_in_sepoy_mutiny
@@ -465,66 +475,76 @@ REPLACE:je_sepoy_mutiny = {
 						remove_variable = loyal_in_sepoy_mutiny
 						add_modifier = indian_loyalty_rewarded
 					}
-				}
-				# Reincorporate incorporated states that rebelled
-				every_scope_state = {
-					limit = {
-						has_variable = bic_incorporated_state
+					overlord ?= {
+						every_direct_subject = {
+							limit = {
+								has_variable = loyal_in_sepoy_mutiny
+							}
+							remove_variable = loyal_in_sepoy_mutiny
+							add_modifier = indian_loyalty_rewarded
+						}
 					}
-					remove_variable = bic_incorporated_state
-					set_state_type = incorporated
+					# Reincorporate incorporated states that rebelled
+					every_scope_state = {
+						limit = {
+							has_variable = bic_incorporated_state
+						}
+						remove_variable = bic_incorporated_state
+						set_state_type = incorporated
+					}
+				}
+			}
+			c:BIC ?= {
+				if = {
+					limit = {
+						is_subject = yes
+						is_subject_type = subject_type_chartered_company
+					}
+					custom_tooltip = {
+						text = british_raj_now_tt
+						overlord ?= {
+							trigger_event = { id = raj.1 popup = yes }
+						}
+					}
 				}
 			}
 		}
-		c:BIC ?= {
-			if = {
-				limit = {
-					is_subject = yes
-					is_subject_type = subject_type_chartered_company
+	}
+
+	outcome = {
+		header = je_sepoy_mutiny_fail_header
+		effect_header = je_sepoy_mutiny_on_fail_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = sepoy_mutiny_won_tt
+				NOT = {
+					exists = scope:sepoy_mutiny_dp
+				}
+				# Given by sepoy_mutiny wargoal
+				c:BIC ?= {
+					has_variable = sepoy_mutiny_failed
+				}
+			}
+		}
+		effect = {
+			c:BIC ?= {
+				hidden_effect = {
+					sepoy_mutiny_after_effects = yes
 				}
 				custom_tooltip = {
-					text = british_raj_now_tt
-					overlord ?= {
-						trigger_event = { id = raj.1 popup = yes }
-					}
+					text = colonial_administration_expelled_from_india_tt
+					trigger_event = { id = sepoy_mutiny_events.2 popup = yes }
 				}
 			}
-		}
-	}
-
-	custom_failure_header = je_sepoy_mutiny_fail_header
-
-	fail = {
-		custom_tooltip = {
-			text = sepoy_mutiny_won_tt
-			NOT = {
-				exists = scope:sepoy_mutiny_dp
-			}
-			# Given by sepoy_mutiny wargoal
-			c:BIC ?= {
-				has_variable = sepoy_mutiny_failed
-			}
-		}
-	}
-
-	custom_on_failure_header = je_sepoy_mutiny_on_fail_header
-
-	on_fail = {
-		c:BIC ?= {
 			hidden_effect = {
-				sepoy_mutiny_after_effects = yes
-			}
-			custom_tooltip = {
-				text = colonial_administration_expelled_from_india_tt
-				trigger_event = { id = sepoy_mutiny_events.2 popup = yes }
-			}
-		}
-		hidden_effect = {
-			every_country = {
-				limit = {
-					has_variable = sepoy_mutiny_revolter_var
+				every_country = {
+					limit = {
+						has_variable = sepoy_mutiny_revolter_var
+					}
+					trigger_event = { id = sepoy_mutiny_events.12 popup = yes }
 				}
-				trigger_event = { id = sepoy_mutiny_events.12 popup = yes }
 			}
 		}
 	}

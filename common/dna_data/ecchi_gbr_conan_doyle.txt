@@ -1,6 +1,8 @@
 ﻿ecchi_dna_arthur_conan_doyle = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 127 205 127 92 }
  		skin_color={ 23 15 23 15 }
  		eye_color={ 253 64 253 64 }

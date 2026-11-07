@@ -1,6 +1,8 @@
 ﻿ecchi_dna_alfred_krupp = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 30 241 30 241 }
  		skin_color={ 86 21 86 21 }
  		eye_color={ 205 155 205 155 }

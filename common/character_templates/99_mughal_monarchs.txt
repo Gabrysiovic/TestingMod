@@ -1,37 +1,37 @@
 ﻿REPLACE:mug_mirza_mughal = {
-    first_name = "Mughal"
-    last_name = "Gurkani"
-    historical = yes
-    dna = dna_mirza_mughal
-    birth_date = 1817.1.5 # excact date unknown.
-    culture = cu:hindustani
-    is_general = yes
-    religion = rel:sunni
-    interest_group = ig_landowners
-    ideology = ideology_moderate
-    home_region = STATE_DELHI
-    traits = {
-        resupply_commander
-        basic_political_operator
-        cruel
-        grifter
-    }
+	first_name = "Mughal"
+	last_name = "Gurkani"
+	dna = dna_mirza_mughal
+	historical = yes
+	birth_date = 1817.1.5 # excact date unknown.
+	is_general = yes
+	culture = cu:hindustani
+	religion = rel:sunni
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	home_region = STATE_DELHI
+	traits = {
+		resupply_commander
+		basic_political_operator
+		cruel
+		grifter
+	}
 }
 
 REPLACE:mug_mirza_fakhru = { # Mirza Fakhru historically died in 1856, potentially from poisoning, allegedly from cholera.
-    first_name = "Fakhru"
-    last_name = "Gurkani"
-    historical = yes
-    birth_date = 1818.4.1 # excact date unknown.
-    culture = cu:avadhi
-    heir = yes
-    religion = rel:sunni
-    noble = yes
-    interest_group = ig_landowners
-    ideology = ideology_moderate
-    home_region = STATE_DELHI
-    traits = {
-    }
+	first_name = "Fakhru"
+	last_name = "Gurkani"
+	historical = yes
+	noble = yes
+	birth_date = 1818.4.1 # excact date unknown.
+	heir = yes
+	culture = cu:avadhi
+	religion = rel:sunni
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	home_region = STATE_DELHI
+	traits = {
+	}
 }
 
 MUG_mirza_abu_bakht = { # Son of Mirza Fakhru
