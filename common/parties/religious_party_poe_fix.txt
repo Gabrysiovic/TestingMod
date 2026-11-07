@@ -2,7 +2,11 @@
 # When devout are powerful, other religious IG's might join
 
 REPLACE:religious_party = {
-	color = { 200 200 200 }
+	color = {
+		200
+		200
+		200
+	}
 	name = {
 		first_valid = {
 			triggered_desc = {
@@ -386,17 +390,24 @@ REPLACE:religious_party = {
 				desc = "ideology_legitimist"
 			}
 		}
-		if = { # nobody will join if the devout don't join
+		if = {
+			# nobody will join if the devout don't join
 			limit = {
 				scope:founding_party = no
-				NOT = { is_interest_group_type = ig_devout }
+				NOT = {
+					is_interest_group_type = ig_devout
+				}
 				OR = {
-					NOT = { exists = owner.py:religious_party }
+					NOT = {
+						exists = owner.py:religious_party
+					}
 					AND = {
 						exists = owner.py:religious_party
 						owner = {
 							ig:ig_devout ?= {
-								NOT = { is_member_of_party = owner.py:religious_party }
+								NOT = {
+									is_member_of_party = owner.py:religious_party
+								}
 							}
 						}
 					}
@@ -407,7 +418,8 @@ REPLACE:religious_party = {
 				desc = "from_no_devout_in_party" # this should probably never actually display in game because the party won't exist
 			}
 		}
-		if = { # a party for powerful religious people
+		if = {
+			# a party for powerful religious people
 			limit = {
 				is_interest_group_type = ig_devout
 				is_powerful = yes
@@ -417,7 +429,8 @@ REPLACE:religious_party = {
 				desc = "from_powerful_devout"
 			}
 		}
-		if = { # religiously inclined people might join if devout are powerful
+		if = {
+			# religiously inclined people might join if devout are powerful
 			limit = {
 				is_powerful = no
 				owner = {
@@ -440,7 +453,8 @@ REPLACE:religious_party = {
 				desc = "from_powerful_devout_other"
 			}
 		}
-		if = { # antireligious characters and IG's will never join
+		if = {
+			# antireligious characters and IG's will never join
 			limit = {
 				law_stance = {
 					law = law_type:law_total_separation
@@ -452,7 +466,8 @@ REPLACE:religious_party = {
 				desc = "from_antireligious"
 			}
 		}
-		if = { # Corporatism
+		if = {
+			# Corporatism
 			limit = {
 				OR = {
 					has_ideology = ideology:ideology_corporatist
@@ -469,7 +484,8 @@ REPLACE:religious_party = {
 				desc = "from_corporatism"
 			}
 		}
-		if = { # patriarchs more likely to join conservatives with women's suffrage
+		if = {
+			# patriarchs more likely to join conservatives with women's suffrage
 			limit = {
 				owner = {
 					has_law_or_variant = law_type:law_womens_suffrage
@@ -484,9 +500,14 @@ REPLACE:religious_party = {
 				desc = "from_patriarchy"
 			}
 		}
-		if = { # Carlists and Miguelists were against participating in electoral politics for a good while
+		if = {
+			# Carlists and Miguelists were against participating in electoral politics for a good while
 			limit = {
-				NOT = { owner = { has_technology_researched = corporatism } }
+				NOT = {
+					owner = {
+						has_technology_researched = corporatism
+					}
+				}
 				leader = {
 					OR = {
 						character_has_carlist_ideology = yes
@@ -512,7 +533,8 @@ REPLACE:religious_party = {
 				desc = "from_archetype_party"
 			}
 		}
-		if = { # French Monarchists
+		if = {
+			# French Monarchists
 			limit = {
 				OR = {
 					AND = {

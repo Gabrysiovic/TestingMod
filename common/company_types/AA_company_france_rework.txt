@@ -1,16 +1,18 @@
-# ConfÃ©dÃ©ration gÃ©nÃ©rale des vignerons
+# Confédération générale des vignerons
 INJECT:company_cgv = {
 	building_types = {
 		building_tobacco_plantation
 	}
 }
 
-# Manufacture d'armes de Saint-Ã‰tienne
+# Manufacture d'armes de Saint-Étienne
 REPLACE:company_saint_etienne = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/france_saint_etienne.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 	flavored_company = yes
-	preferred_headquarters = { STATE_RHONE }
+	preferred_headquarters = {
+		STATE_RHONE
+	}
 	building_types = {
 		building_arms_industry
 		building_artillery_foundry
@@ -26,18 +28,19 @@ REPLACE:company_saint_etienne = {
 		has_interest_marker_in_region = sr:region_southern_europe
 	}
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
+			# Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
 				state_region = s:STATE_RHONE
 			}
 		}
 	}
 	possible = {
+		has_technology_researched = repeaters
 		has_building_levels_in_state_region = {
 			region = STATE_RHONE
 			building = building_arms_industry
 			levels >= 5
-		has_technology_researched = repeaters
 			is_incorporated = yes
 		}
 	}
@@ -78,7 +81,9 @@ REPLACE:company_maison_worth = {
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 	category = shopkeeper_owned
 	flavored_company = yes
-	preferred_headquarters = { STATE_ILE_DE_FRANCE }
+	preferred_headquarters = {
+		STATE_ILE_DE_FRANCE
+	}
 	building_types = {
 		building_textile_mill
 		building_cotton_plantation
@@ -95,7 +100,8 @@ REPLACE:company_maison_worth = {
 		has_interest_marker_in_region = sr:region_western_europe
 	}
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
+			# Hide attainable if it's always fulfilled by possible
 			s:STATE_ILE_DE_FRANCE = {
 				any_scope_state = {
 					owner = root
@@ -149,7 +155,7 @@ INJECT:company_mines_anzin = {
 	}
 }
 
-# SociÃ©tÃ© Mokta El Hadid
+# Société Mokta El Hadid
 INJECT:company_societe_mokta_el_hadid = {
 	possible_prestige_goods = {
 		prestige_good_swedish_bar_iron

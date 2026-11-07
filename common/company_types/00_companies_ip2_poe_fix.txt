@@ -3,7 +3,9 @@ REPLACE:company_assam_company = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/ip2_assam_company.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 	flavored_company = yes
-	preferred_headquarters = { STATE_ASSAM }
+	preferred_headquarters = {
+		STATE_ASSAM
+	}
 	building_types = {
 		building_tea_plantation
 	}
@@ -17,7 +19,8 @@ REPLACE:company_assam_company = {
 		has_interest_marker_in_region = sr:region_north_india
 	}
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
+			# Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
 				state_region = s:STATE_ASSAM
 			}

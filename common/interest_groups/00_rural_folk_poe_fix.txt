@@ -1,6 +1,10 @@
 ﻿
 REPLACE:ig_rural_folk = {
-	color = hsv{ 0.32 0.45 0.47 }
+	color = hsv{
+		0.32
+		0.45
+		0.47
+	}
 	texture = "gfx/interface/icons/ig_icons/rural_folk.dds"
 	layer = "revolution_dynamic_rural_folk"
 	index = 6
@@ -28,7 +32,9 @@ REPLACE:ig_rural_folk = {
 			if = {
 				limit = {
 					has_dlc_feature = rp1_content
-					owner = { c:BRZ ?= this }
+					owner = {
+						c:BRZ ?= this
+					}
 				}
 				set_ig_trait = ig_trait:ig_trait_old_ways
 				set_ig_trait = ig_trait:ig_trait_plantation_work
@@ -36,7 +42,9 @@ REPLACE:ig_rural_folk = {
 			}
 			else_if = {
 				limit = {
-					owner = { c:RUS ?= this }
+					owner = {
+						c:RUS ?= this
+					}
 				}
 				set_ig_trait = ig_trait:ig_trait_old_ways
 				set_ig_trait = ig_trait:ig_trait_honest_work
@@ -44,7 +52,9 @@ REPLACE:ig_rural_folk = {
 			}
 			else_if = {
 				limit = {
-					owner = { c:EGY ?= this }
+					owner = {
+						c:EGY ?= this
+					}
 				}
 				set_ig_trait = ig_trait:ig_trait_old_ways
 				set_ig_trait = ig_trait:ig_trait_fellahin
@@ -70,7 +80,9 @@ REPLACE:ig_rural_folk = {
 			}
 			else_if = {
 				limit = {
-					owner = { c:PAN ?= this }
+					owner = {
+						c:PAN ?= this
+					}
 				}
 				set_ig_trait = ig_trait:ig_trait_old_ways
 				set_ig_trait = ig_trait:ig_trait_honest_work
@@ -95,7 +107,8 @@ REPLACE:ig_rural_folk = {
 			}
 		}
 		# FLAVOUR AND IDEOLOGIES GO HERE
-		if = { # Jeffersonian Ideology
+		if = {
+			# Jeffersonian Ideology
 			limit = {
 				OR = {
 					country_has_primary_culture = cu:yankee
@@ -108,7 +121,8 @@ REPLACE:ig_rural_folk = {
 				set_interest_group_name = ig_yeoman_farmers
 			}
 		}
-		else_if = { # Heimin
+		else_if = {
+			# Heimin
 			limit = {
 				country_has_primary_culture = cu:japanese
 			}
@@ -116,7 +130,8 @@ REPLACE:ig_rural_folk = {
 				set_interest_group_name = ig_peasants
 			}
 		}
-		else_if = { # Maka'āinana
+		else_if = {
+			# Maka'āinana
 			limit = {
 				country_has_primary_culture = cu:hawaiian
 			}
@@ -124,7 +139,8 @@ REPLACE:ig_rural_folk = {
 				set_interest_group_name = ig_maka_ainana
 			}
 		}
-		else_if = { # Sikh Empire
+		else_if = {
+			# Sikh Empire
 			limit = {
 				c:PAN ?= this
 			}
@@ -132,7 +148,8 @@ REPLACE:ig_rural_folk = {
 				set_interest_group_name = ig_jats
 			}
 		}
-		else_if = { # India
+		else_if = {
+			# India
 			limit = {
 				OR = {
 					this.country_definition ?= cd:BIC
@@ -148,7 +165,8 @@ REPLACE:ig_rural_folk = {
 				set_interest_group_name = ig_ryots
 			}
 		}
-		else_if = { # Nepal
+		else_if = {
+			# Nepal
 			limit = {
 				any_primary_culture = {
 					has_discrimination_trait_group = heritage_group_south_asian
@@ -163,25 +181,54 @@ REPLACE:ig_rural_folk = {
 			limit = {
 				c:EGY ?= this
 			}
-			ig:ig_rural_folk ?= { set_interest_group_name = ig_fellahin }
+			ig:ig_rural_folk ?= {
+				set_interest_group_name = ig_fellahin
+			}
 		}
-		else_if = { # Germans
+		else_if = {
+			# Germans
 			limit = {
 				any_primary_culture = {
 					has_discrimination_trait = language_germanophone
 				}
 			}
-			ig:ig_rural_folk ?= { set_interest_group_name = ig_landvolk }
+			ig:ig_rural_folk ?= {
+				set_interest_group_name = ig_landvolk
+			}
 		}
 	}
-	on_disable = {}
-	priority_cultures = { #Country scope
+	on_disable = {
+	}
+	priority_cultures = {
+		#Country scope
 		rule = {
 			trigger = {
 				this.country_definition ?= cd:BIC
 			}
 			cultures = {
-				assamese avadhi baluchi bengali bihari gujarati kannada malayalam marathi oriya panjabi pathan rajput sindi tamil telegu hindustani bundeli pahari gondi bageli chhattisgarhi deccani
+				assamese
+				avadhi
+				baluchi
+				bengali
+				bihari
+				gujarati
+				kannada
+				malayalam
+				marathi
+				oriya
+				panjabi
+				pathan
+				rajput
+				sindi
+				tamil
+				telegu
+				hindustani
+				bundeli
+				pahari
+				gondi
+				bageli
+				chhattisgarhi
+				deccani
 			}
 		}
 		rule = {
@@ -192,7 +239,9 @@ REPLACE:ig_rural_folk = {
 				}
 			}
 			cultures = {
-				swahili lacustrine_bantu oromo
+				swahili
+				lacustrine_bantu
+				oromo
 			}
 		}
 	}
@@ -211,8 +260,12 @@ REPLACE:ig_rural_folk = {
 				}
 			}
 			random_list = {
-				2 = { change_character_religion = rel:sunni }
-				1 = { change_character_religion = rel:animist }
+				2 = {
+					change_character_religion = rel:sunni
+				}
+				1 = {
+					change_character_religion = rel:animist
+				}
 			}
 		}
 	}
@@ -328,7 +381,8 @@ REPLACE:ig_rural_folk = {
 					is_in_government = yes
 				}
 			}
-			multiply = { # Multiplied by 1.25x max
+			multiply = {
+				# Multiplied by 1.25x max
 				desc = "POP_LOYALISTS"
 				value = pop_loyalist_fraction
 				divide = 4
@@ -341,7 +395,8 @@ REPLACE:ig_rural_folk = {
 					is_in_government = no
 				}
 			}
-			multiply = { # Multiplied by 1.25x max
+			multiply = {
+				# Multiplied by 1.25x max
 				desc = "POP_RADICALS"
 				value = pop_radical_fraction
 				divide = 4

@@ -1,5 +1,9 @@
 ﻿REPLACE:ig_petty_bourgeoisie = {
-	color = hsv{ 0.65 0.54 0.52 }
+	color = hsv{
+		0.65
+		0.54
+		0.52
+	}
 	texture = "gfx/interface/icons/ig_icons/petty_bourgeoisie.dds"
 	layer = "revolution_dynamic_petty_bourgeoisie"
 	index = 5
@@ -30,7 +34,9 @@
 		ig:ig_petty_bourgeoisie ?= {
 			if = {
 				limit = {
-					owner = { c:SWE ?= this}
+					owner = {
+						c:SWE ?= this
+					}
 				}
 				set_ig_trait = ig_trait:ig_trait_xenophobia
 				set_ig_trait = ig_trait:ig_trait_bergsbrukens_valdistrikten
@@ -38,7 +44,9 @@
 			}
 			else_if = {
 				limit = {
-					owner = { c:TUR ?= this }
+					owner = {
+						c:TUR ?= this
+					}
 				}
 				set_ig_trait = ig_trait:ig_trait_xenophobia
 				set_ig_trait = ig_trait:ig_trait_effendi
@@ -46,7 +54,9 @@
 			}
 			else_if = {
 				limit = {
-					owner = { c:EGY ?= this }
+					owner = {
+						c:EGY ?= this
+					}
 				}
 				set_ig_trait = ig_trait:ig_trait_xenophobia
 				set_ig_trait = ig_trait:ig_trait_effendi
@@ -55,7 +65,9 @@
 			else_if = {
 				limit = {
 					has_dlc_feature = voice_of_the_people_content
-					owner = { c:FRA ?= this }
+					owner = {
+						c:FRA ?= this
+					}
 				}
 				set_ig_trait = ig_trait:ig_trait_xenophobia
 				set_ig_trait = ig_trait:ig_trait_haute_finance
@@ -63,7 +75,9 @@
 			}
 			else_if = {
 				limit = {
-					owner = { c:GBR ?= this }
+					owner = {
+						c:GBR ?= this
+					}
 				}
 				set_ig_trait = ig_trait:ig_trait_bah_humbug
 				set_ig_trait = ig_trait:ig_trait_civil_service
@@ -108,7 +122,8 @@
 				add_ideology = ideology_cartist
 			}
 		}
-		else_if = { # British India
+		else_if = {
+			# British India
 			limit = {
 				c:BIC ?= this
 			}
@@ -120,7 +135,8 @@
 				add_ideology = ideology_modernizer
 			}
 		}
-		else_if = { # Chonin
+		else_if = {
+			# Chonin
 			limit = {
 				owner = {
 					country_has_primary_culture = cu:japanese
@@ -130,7 +146,8 @@
 				set_interest_group_name = ig_chonin
 			}
 		}
-		else_if = { # Kleinbürger
+		else_if = {
+			# Kleinbürger
 			limit = {
 				any_primary_culture = {
 					has_discrimination_trait = language_germanophone
@@ -140,7 +157,8 @@
 				set_interest_group_name = ig_kleinburger
 			}
 		}
-		if = { # For newly-released countries. For game-start, initialisation is handled in global history
+		if = {
+			# For newly-released countries. For game-start, initialisation is handled in global history
 			limit = {
 				owner = {
 					OR = {
@@ -149,17 +167,43 @@
 					}
 				}
 			}
-			ig:ig_petty_bourgeoisie ?= { add_ideology = ideology_mercantile }
+			ig:ig_petty_bourgeoisie ?= {
+				add_ideology = ideology_mercantile
+			}
 		}
 	}
-	on_disable = {}
-	priority_cultures = { #Country scope
+	on_disable = {
+	}
+	priority_cultures = {
+		#Country scope
 		rule = {
 			trigger = {
 				this.country_definition ?= cd:BIC
 			}
 			cultures = {
-				assamese avadhi baluchi bengali bihari gujarati kannada malayalam marathi oriya panjabi pathan rajput sindi tamil telegu hindustani bundeli pahari gondi bageli chhattisgarhi deccani
+				assamese
+				avadhi
+				baluchi
+				bengali
+				bihari
+				gujarati
+				kannada
+				malayalam
+				marathi
+				oriya
+				panjabi
+				pathan
+				rajput
+				sindi
+				tamil
+				telegu
+				hindustani
+				bundeli
+				pahari
+				gondi
+				bageli
+				chhattisgarhi
+				deccani
 			}
 		}
 		rule = {
@@ -170,19 +214,33 @@
 				}
 			}
 			cultures = {
-				swahili gujarati
+				swahili
+				gujarati
 			}
 		}
 		rule = {
 			trigger = {
 				c:PHI ?= this
-				NOT = { has_variable = je_philippines_main_reliance_happened }
-				NOT = { any_primary_culture = { cu:filipino = this } }
-				NOT = { any_primary_culture = { cu:filipino_hispanophone = this } }
-				any_primary_culture = { cu:spanish = this }
+				NOT = {
+					has_variable = je_philippines_main_reliance_happened
+				}
+				NOT = {
+					any_primary_culture = {
+						cu:filipino = this
+					}
+				}
+				NOT = {
+					any_primary_culture = {
+						cu:filipino_hispanophone = this
+					}
+				}
+				any_primary_culture = {
+					cu:spanish = this
+				}
 			}
 			cultures = {
-				spanish filipino_mestizo
+				spanish
+				filipino_mestizo
 			}
 		}
 		rule = {
@@ -196,7 +254,8 @@
 				}
 			}
 			cultures = {
-				spanish filipino_hispanophone
+				spanish
+				filipino_hispanophone
 			}
 		}
 	}
@@ -227,7 +286,9 @@
 						AND = {
 							c:ZAN ?= prev.owner
 							c:ZAN ?= {
-								any_primary_culture = { cu:bedouin = this }
+								any_primary_culture = {
+									cu:bedouin = this
+								}
 							}
 							OR = {
 								cu:swahili = this
@@ -477,7 +538,8 @@
 					is_in_government = yes
 				}
 			}
-			multiply = { # Multiplied by 1.25x max
+			multiply = {
+				# Multiplied by 1.25x max
 				desc = "POP_LOYALISTS"
 				value = pop_loyalist_fraction
 				divide = 4
@@ -490,7 +552,8 @@
 					is_in_government = no
 				}
 			}
-			multiply = { # Multiplied by 1.25x max
+			multiply = {
+				# Multiplied by 1.25x max
 				desc = "POP_RADICALS"
 				value = pop_radical_fraction
 				divide = 4

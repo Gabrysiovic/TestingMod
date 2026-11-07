@@ -39,13 +39,18 @@
 					}
 				}
 			}
-			character_acceptance = { # In light of the Multiculturalism nerf
+			character_acceptance = {
+				# In light of the Multiculturalism nerf
 				target = scope:actor
 				value >= acceptance_status_3
 			}
 		}
 		trigger_else_if = {
-			limit = { owner ?= { has_law_or_variant = law_type:law_state_atheism } }
+			limit = {
+				owner ?= {
+					has_law_or_variant = law_type:law_state_atheism
+				}
+			}
 			character_acceptance = {
 				target = scope:actor
 				value >= acceptance_status_4
@@ -65,7 +70,9 @@
 		}
 		OR = {
 			is_female = no
-			scope:actor ?= { has_law_or_variant = law_type:law_womens_suffrage }
+			scope:actor ?= {
+				has_law_or_variant = law_type:law_womens_suffrage
+			}
 		}
 		custom_tooltip = {
 			text = grant_leadership_must_be_pressured_ig
@@ -85,7 +92,9 @@
 			set_as_interest_group_leader = yes
 		}
 	}
-	cooldown = { days = normal_modifier_time }
+	cooldown = {
+		days = normal_modifier_time
+	}
 	ai_chance = {
 		value = -50
 		if = {
@@ -124,7 +133,9 @@
 			limit = {
 				character_matches_divided_monarchists_ai_path = yes
 				interest_group.leader ?= {
-					NOT = { character_matches_divided_monarchists_ai_path = yes }
+					NOT = {
+						character_matches_divided_monarchists_ai_path = yes
+					}
 				}
 			}
 			add = 100

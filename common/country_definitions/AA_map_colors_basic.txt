@@ -1,10 +1,10 @@
 ﻿REPLACE:GBR = {
-	color = hsv{ 0.99  0.7  0.9 } # 356 70 90
 	color = {
 		120
 		0
 		0
 	}
+	# 356 70 90
 	country_type = recognized
 	tier = empire
 	cultures = {

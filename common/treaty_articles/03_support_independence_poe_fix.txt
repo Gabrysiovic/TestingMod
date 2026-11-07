@@ -35,13 +35,17 @@
 	requirement_to_maintain = {
 		trigger = {
 			scope:source_country = {
-				NOT = { has_subject_relation_with = scope:target_country }
+				NOT = {
+					has_subject_relation_with = scope:target_country
+				}
 			}
 		}
 	}
 	requirement_to_maintain = {
 		trigger = {
-			scope:target_country = { is_subject = yes }
+			scope:target_country = {
+				is_subject = yes
+			}
 		}
 	}
 	requirement_to_maintain = {
@@ -66,8 +70,12 @@
 	requirement_to_maintain = {
 		trigger = {
 			OR = {
-				scope:source_country = { aggressive_diplomatic_plays_permitted = yes }
-				scope:source_country = { overlord = scope:target_country.overlord }
+				scope:source_country = {
+					aggressive_diplomatic_plays_permitted = yes
+				}
+				scope:source_country = {
+					overlord = scope:target_country.overlord
+				}
 			}
 		}
 	}
@@ -76,7 +84,8 @@
 			custom_tooltip = {
 				text = "DIPLOMATIC_PACT_REQUIREMENT_HIGHER_RANK_OR_SAME_OVERLORD"
 				trigger_if = {
-					limit = { #exception for same overlords
+					limit = {
+						#exception for same overlords
 						scope:source_country = {
 							is_subject = yes
 						}
@@ -84,7 +93,8 @@
 					}
 					always = yes
 				}
-				trigger_else = { #otherwise must be of same or higher rank
+				trigger_else = {
+					#otherwise must be of same or higher rank
 					scope:source_country.country_rank >= scope:target_country.country_rank
 				}
 			}
@@ -96,13 +106,23 @@
 				text = "DIPLOMATIC_PACT_REQUIREMENT_NOT_HUMILIATED_BY_OVERLORD"
 				trigger_if = {
 					limit = {
-						scope:target_country = { is_subject = yes }
+						scope:target_country = {
+							is_subject = yes
+						}
 					}
 					scope:target_country.overlord = {
-						NOT = { has_diplomatic_pact = { who = scope:source_country type = humiliation is_initiator = yes } }
+						NOT = {
+							has_diplomatic_pact = {
+								who = scope:source_country type = humiliation is_initiator = yes
+							}
+						}
 					}
 					scope:target_country.top_overlord = {
-						NOT = { has_diplomatic_pact = { who = scope:source_country type = humiliation is_initiator = yes } }
+						NOT = {
+							has_diplomatic_pact = {
+								who = scope:source_country type = humiliation is_initiator = yes
+							}
+						}
 					}
 				}
 			}
@@ -112,26 +132,38 @@
 		trigger = {
 			trigger_if = {
 				limit = {
-					scope:target_country = { is_subject = yes }
+					scope:target_country = {
+						is_subject = yes
+					}
 				}
 				scope:source_country = {
-					NOT = { has_truce_with = scope:target_country.overlord }
+					NOT = {
+						has_truce_with = scope:target_country.overlord
+					}
 				}
 				trigger_if = {
 					limit = {
 						scope:target_country = {
-							NOT = { overlord = top_overlord }
+							NOT = {
+								overlord = top_overlord
+							}
 						}
 					}
 					scope:source_country = {
-						NOT = { has_truce_with = scope:target_country.top_overlord }
+						NOT = {
+							has_truce_with = scope:target_country.top_overlord
+						}
 					}
 				}
 			}
 		}
 	}
 	can_ratify = {
-		scope:source_country = { highest_overlapping_interest_tier = { target = scope:target_country value >= interest_tier_effect_can_sign_support_independence_min_tier } }
+		scope:source_country = {
+			highest_overlapping_interest_tier = {
+				target = scope:target_country value >= interest_tier_effect_can_sign_support_independence_min_tier
+			}
+		}
 		scope:target_country.overlord ?= {
 			NOT = {
 				any_scope_treaty = {
@@ -180,10 +212,13 @@
 			}
 		}
 	}
-	on_entry_into_force = {}
+	on_entry_into_force = {
+	}
 	on_withdrawal = {
 		scope:withdrawing_country = {
-			create_bidirectional_truce = { country = scope:non_withdrawing_country months = 12 }
+			create_bidirectional_truce = {
+				country = scope:non_withdrawing_country months = 12
+			}
 		}
 	}
 	on_break = {
@@ -209,7 +244,9 @@
 				}
 			}
 			scope:withdrawing_country = {
-				change_relations = { country = scope:non_withdrawing_country value = -10 }
+				change_relations = {
+					country = scope:non_withdrawing_country value = -10
+				}
 			}
 		}
 	}
@@ -297,8 +334,12 @@
 				}
 				if = {
 					limit = {
-						NOT = { is_country_type = unrecognized }
-						scope:target_country = { is_country_type = unrecognized }
+						NOT = {
+							is_country_type = unrecognized
+						}
+						scope:target_country = {
+							is_country_type = unrecognized
+						}
 					}
 					add = {
 						desc = "DIPLOMATIC_ACCEPTANCE_UNRECOGNIZED"

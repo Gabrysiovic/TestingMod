@@ -11,8 +11,9 @@
 	leader_modifier = {
 		state_trade_capacity_mult = 0.25
 	}
-	non_leader_modifier = {}
+	non_leader_modifier = {
 		# country_convoy_contribution_to_market_owner_add removed — modifier no longer exists in this game version
+	}
 	can_leave = {
 		OR = {
 			is_power_bloc_leader = yes
@@ -378,7 +379,7 @@ REPLACE:identity_ideological_union = {
 		}
 		add = {
 			add = legitimacy
-			divide = 100			# legitimacy max value
+			divide = 100 # legitimacy max value
 			multiply = define:NPowerBlocs|COHESION_TARGET_MAX
 			multiply = 0.7
 			desc = POWER_BLOC_COHESION_LEGITIMACY
@@ -412,7 +413,7 @@ REPLACE:identity_ideological_union = {
 			}
 			add = {
 				add = "scope:power_bloc.power_bloc_worst_progressiveness_difference_government_type_with(scope:with_country)"
-				divide = 200				# bad progressiveness difference is usually around 100
+				divide = 200 # bad progressiveness difference is usually around 100
 				multiply = -1
 				multiply = define:NPowerBlocs|COHESION_TARGET_MAX
 				desc = POWER_BLOC_COHESION_WORST_PROGRESSIVENESS_DIFFERENCE
@@ -425,7 +426,7 @@ REPLACE:identity_ideological_union = {
 			}
 			add = {
 				add = "scope:power_bloc.power_bloc_worst_progressiveness_difference_government_type_without(scope:without_country)"
-				divide = 200				# bad progressiveness difference is usually around 100
+				divide = 200 # bad progressiveness difference is usually around 100
 				multiply = -1
 				multiply = define:NPowerBlocs|COHESION_TARGET_MAX
 				desc = POWER_BLOC_COHESION_WORST_PROGRESSIVENESS_DIFFERENCE
@@ -437,7 +438,7 @@ REPLACE:identity_ideological_union = {
 			}
 			add = {
 				add = scope:power_bloc.power_bloc_worst_progressiveness_difference_government_type
-				divide = 200				# bad progressiveness difference is usually around 100
+				divide = 200 # bad progressiveness difference is usually around 100
 				multiply = -1
 				multiply = define:NPowerBlocs|COHESION_TARGET_MAX
 				desc = POWER_BLOC_COHESION_WORST_PROGRESSIVENESS_DIFFERENCE
@@ -761,15 +762,18 @@ REPLACE:identity_religious = {
 						}
 					}
 				}
-					exists = scope:without_country
 			}
 			add = {
 				if = {
-					limit = { exists = scope:with_country }
+					limit = {
+						exists = scope:with_country
+					}
 					add = "scope:power_bloc.power_bloc_worst_leader_religion_population_fraction_with(scope:with_country)"
 				}
 				else_if = {
-					limit = { exists = scope:without_country }
+					limit = {
+						exists = scope:without_country
+					}
 					add = "scope:power_bloc.power_bloc_worst_leader_religion_population_fraction_without(scope:without_country)"
 				}
 				else = {

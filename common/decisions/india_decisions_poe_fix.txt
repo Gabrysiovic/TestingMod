@@ -39,16 +39,22 @@
 		}
 	}
 	when_taken = {
-		set_global_variable = { name = koh_i_noor_decision_return_demanded years = 10 }
+		set_global_variable = {
+			name = koh_i_noor_decision_return_demanded years = 10
+		}
 		random_country_in_europe = {
 			limit = {
 				has_variable = koh_i_noor
 			}
 			save_scope_as = diamond_country
-			set_variable = { name = koh_i_noor_decision_user value = prev days = 180 }
+			set_variable = {
+				name = koh_i_noor_decision_user value = prev days = 180
+			}
 			custom_tooltip = {
 				text = demand_return_of_diamond_tt
-				trigger_event = { id = india_events.4 }
+				trigger_event = {
+					id = india_events.4
+				}
 			}
 		}
 		custom_tooltip = if_they_accept_tt
@@ -105,15 +111,16 @@ REPLACE:make_delhi_capital = {
 			}
 		}
 		OR = {
-			any_political_movement = {
-				is_political_movement_type = movement_muslim_nationalist
-			}
-			any_political_movement = {
-				is_political_movement_type = movement_hindu_nationalist
-			}
-			has_technology_researched = political_agitation
+		    any_political_movement = {
+		        is_political_movement_type = movement_muslim_nationalist
+		    }
+		    any_political_movement = {
+		        is_political_movement_type = movement_hindu_nationalist
+		    }
+		    has_technology_researched = political_agitation
 		}
 	}
+
 	possible = {
 		is_at_war = no
 		any_scope_state = {
@@ -124,17 +131,18 @@ REPLACE:make_delhi_capital = {
 			}
 		}
 		OR = {
-			any_political_movement = {
-				is_political_movement_type = movement_muslim_nationalist
-				political_movement_radicalism >= 0.1
-			}
-			any_political_movement = {
-				is_political_movement_type = movement_hindu_nationalist
-				political_movement_radicalism >= 0.1
-			}
-			has_technology_researched = political_agitation
+		    any_political_movement = {
+		        is_political_movement_type = movement_muslim_nationalist
+		        political_movement_radicalism >= 0.1
+		    }
+		    any_political_movement = {
+		        is_political_movement_type = movement_hindu_nationalist
+		        political_movement_radicalism >= 0.1
+		    }
+		    has_technology_researched = political_agitation
 		}
 	}
+
 	when_taken = {
 		if = {
 			limit = {
@@ -183,6 +191,7 @@ REPLACE:make_delhi_capital = {
 			}
 		}
 	}
+
 	ai_chance = {
 		value = 100
 		if = {
@@ -201,6 +210,7 @@ REPLACE:bic_end_company_rule = {
 		is_subject_type = subject_type_chartered_company
 		has_variable = company_rule_enduring
 	}
+
 	possible = {
 		has_technology_researched = civilizing_mission
 		trigger_if = {
@@ -212,6 +222,7 @@ REPLACE:bic_end_company_rule = {
 			}
 		}
 	}
+
 	when_taken = {
 		hidden_effect = {
 			overlord = {
@@ -227,6 +238,7 @@ REPLACE:bic_end_company_rule = {
 		}
 		remove_variable = company_rule_enduring
 	}
+
 	ai_chance = {
 		value = 100
 		if = {
@@ -244,6 +256,7 @@ REPLACE:bht_end_privy_purse_payments = {
 	is_shown = {
 		has_modifier = modifier_privy_purse_payments
 	}
+
 	possible = {
 		ig:ig_landowners ?= {
 			is_in_government = no
@@ -268,6 +281,7 @@ REPLACE:bht_end_privy_purse_payments = {
 			}
 		}
 	}
+
 	when_taken = {
 		remove_modifier = modifier_privy_purse_payments
 		add_radicals = {
@@ -281,6 +295,7 @@ REPLACE:bht_end_privy_purse_payments = {
 			}
 		}
 	}
+
 	ai_chance = {
 		value = -10
 		if = {

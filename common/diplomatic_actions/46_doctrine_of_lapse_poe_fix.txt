@@ -8,14 +8,18 @@
 	show_effect_in_tooltip = yes
 	can_use_obligations = no
 	selectable = {
-		NOT = { has_variable = doctrine_of_lapse_ended }
+		NOT = {
+			has_variable = doctrine_of_lapse_ended
+		}
 		c:BIC ?= this
 	}
 	possible = {
 		is_at_war = no
 		custom_tooltip = {
 			text = doctrine_of_lapse_cooldown_tt
-			NOT = { has_variable = doctrine_of_lapse_cooldown }
+			NOT = {
+				has_variable = doctrine_of_lapse_cooldown
+			}
 		}
 		scope:target_country = {
 			is_subject_of = ROOT
@@ -32,7 +36,9 @@
 	}
 	accept_effect = {
 		save_temporary_scope_as = annexing_overlord
-		set_variable = { name = doctrine_of_lapse_cooldown years = 2 }
+		set_variable = {
+			name = doctrine_of_lapse_cooldown years = 2
+		}
 		create_incident = {
 			country = scope:target_country
 			value = {
@@ -60,7 +66,9 @@
 		custom_tooltip = {
 			text = princely_state_lapsed_tt
 			scope:target_country = {
-				trigger_event = { id = raj.2 popup = yes }
+				trigger_event = {
+					id = raj.2 popup = yes
+				}
 			}
 		}
 		show_as_tooltip = {
@@ -125,7 +133,11 @@
 		evaluation_chance = {
 			value = 0.0
 			if = {
-				limit = { NOT = { has_variable = doctrine_of_lapse_cooldown } }
+				limit = {
+					NOT = {
+						has_variable = doctrine_of_lapse_cooldown
+					}
+				}
 				add = 0.25
 			}
 		}

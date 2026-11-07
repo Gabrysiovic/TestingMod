@@ -27,7 +27,8 @@
 	creation_weight = {
 		value = 5000
 	}
-	on_created = { }
+	on_created = {
+	}
 	disband_trigger = {
 		OR = {
 			AND = {
@@ -43,7 +44,9 @@
 		OR = {
 			has_ideology = ideology:ideology_sovereignist
 			has_ideology = ideology:ideology_humanitarian
-			culture = { has_discrimination_trait_group = heritage_group_south_asian }
+			culture = {
+				has_discrimination_trait_group = heritage_group_south_asian
+			}
 		}
 	}
 	character_support_weight = {
@@ -208,7 +211,8 @@
 				limit = {
 					standard_of_living < state.average_expected_sol
 				}
-				add = { # Increases likelihood of support if impoverished
+				add = {
+					# Increases likelihood of support if impoverished
 					desc = "POP_POVERTY"
 					value = state.average_expected_sol
 					subtract = standard_of_living
@@ -224,20 +228,23 @@
 						}
 					}
 				}
-				add = { # From 1.21x at 79 to 2x at 0
+				add = {
+					# From 1.21x at 79 to 2x at 0
 					desc = "POP_DISCRIMINATED"
 					value = 100
 					subtract = pop_acceptance
 					divide = 10
 				}
 			}
-			else = { # Non-discriminated pops are less likely to form separatist movements
+			else = {
+				# Non-discriminated pops are less likely to form separatist movements
 				multiply = {
 					desc = "POP_ACCEPTANCE"
 					value = 0.25
 				}
 			}
-			multiply = { # Multiplied by 2x max
+			multiply = {
+				# Multiplied by 2x max
 				desc = "POP_RADICALS"
 				value = pop_radical_fraction
 				add = 1
@@ -264,7 +271,8 @@
 					desc = "NATIONALISM_TECH"
 				}
 			}
-			multiply = { # Range from x0.775 to 2.275
+			multiply = {
+				# Range from x0.775 to 2.275
 				desc = "POP_CULTURE_FERVOR"
 				value = culture.culture_current_fervor
 				subtract = 15
@@ -300,7 +308,9 @@
 				multiply = 5
 			}
 			add = scope:clout
-			add = { value = this.turmoil divide = 2 }
+			add = {
+				value = this.turmoil divide = 2
+			}
 			subtract = this.loyalists
 		}
 		forced_tags = {
@@ -324,7 +334,9 @@
 		}
 		if = {
 			limit = {
-				neighboring_country_has_insurrectionary_movement_trigger = { TYPE = movement_india_pan_national }
+				neighboring_country_has_insurrectionary_movement_trigger = {
+					TYPE = movement_india_pan_national
+				}
 			}
 			add = {
 				desc = "NEIGHBOURING_COUNTRY_WITH_REVOLUTION"

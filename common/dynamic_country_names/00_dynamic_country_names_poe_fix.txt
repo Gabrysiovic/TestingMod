@@ -3,10 +3,11 @@
 		name = dyn_c_british_raj
 		adjective = dyn_c_british_raj_adj
 		use_overlord_prefix = yes
+
 		is_main_tag_only = yes
 		priority = 50
+
 		trigger = {
-					who = scope:actor
 			scope:actor ?= {
 				is_subject = yes
 				NOT = {
@@ -18,10 +19,12 @@
 	dynamic_country_name = {
 		name = dyn_c_east_india_company
 		adjective = dyn_c_east_india_company_adj
-		# This doesn't work with Chartered companies; we updated the localization for the adjective to be "British Indian"
+		 # This doesn't work with Chartered companies; we updated the localization for the adjective to be "British Indian"
 		use_overlord_prefix = no
+
 		is_main_tag_only = yes
 		priority = 10
+
 		trigger = {
 			scope:actor ?= {
 				is_subject = yes
@@ -29,12 +32,15 @@
 			}
 		}
 	}
+
 	dynamic_country_name = {
 		name = dyn_c_bengal_mutiny
 		adjective = dyn_c_bengal_presidency_adj
 		use_overlord_prefix = no
+
 		is_main_tag_only = no
 		priority = 100
+
 		trigger = {
 			scope:actor ?= {
 				has_variable = sepoy_mutiny_country
@@ -42,12 +48,15 @@
 			}
 		}
 	}
+
 	dynamic_country_name = {
 		name = dyn_c_bombay_mutiny
 		adjective = dyn_c_bombay_presidency_adj
 		use_overlord_prefix = no
+
 		is_main_tag_only = no
 		priority = 100
+
 		trigger = {
 			scope:actor ?= {
 				has_variable = sepoy_mutiny_country
@@ -55,12 +64,15 @@
 			}
 		}
 	}
+
 	dynamic_country_name = {
 		name = dyn_c_madras_mutiny
 		adjective = dyn_c_madras_presidency_adj
 		use_overlord_prefix = no
+
 		is_main_tag_only = no
 		priority = 100
+
 		trigger = {
 			scope:actor ?= {
 				has_variable = sepoy_mutiny_country
@@ -68,11 +80,14 @@
 			}
 		}
 	}
+
 	dynamic_country_name = {
 		name = dyn_c_republic_of_india
 		adjective = dyn_c_colonial_india_adj
+
 		is_main_tag_only = yes
 		priority = 50
+
 		trigger = {
 			scope:actor ?= {
 				is_subject = no
@@ -80,11 +95,14 @@
 			}
 		}
 	}
+
 	dynamic_country_name = {
 		name = dyn_c_indian_empire
 		adjective = dyn_c_colonial_india_adj
+
 		is_main_tag_only = yes
 		priority = 50
+
 		trigger = {
 			scope:actor ?= {
 				is_subject = no
@@ -92,11 +110,14 @@
 			}
 		}
 	}
+
 	dynamic_country_name = {
 		name = dyn_c_madras_presidency
 		adjective = dyn_c_madras_presidency_adj
+
 		is_main_tag_only = yes
 		priority = 25
+
 		trigger = {
 			scope:actor ?= {
 				is_subject = yes
@@ -114,11 +135,14 @@
 			}
 		}
 	}
+
 	dynamic_country_name = {
 		name = dyn_c_madras_republic
 		adjective = dyn_c_madras_presidency_adj
+
 		is_main_tag_only = yes
 		priority = 25
+
 		trigger = {
 			scope:actor ?= {
 				is_subject = no
@@ -137,11 +161,14 @@
 			}
 		}
 	}
+
 	dynamic_country_name = {
 		name = dyn_c_madras_empire
 		adjective = dyn_c_madras_presidency_adj
+
 		is_main_tag_only = yes
 		priority = 25
+
 		trigger = {
 			scope:actor ?= {
 				is_subject = no
@@ -160,11 +187,14 @@
 			}
 		}
 	}
+
 	dynamic_country_name = {
 		name = dyn_c_bombay_presidency
 		adjective = dyn_c_bombay_presidency_adj
+
 		is_main_tag_only = yes
 		priority = 25
+
 		trigger = {
 			scope:actor ?= {
 				is_subject = yes
@@ -182,11 +212,14 @@
 			}
 		}
 	}
+
 	dynamic_country_name = {
 		name = dyn_c_bombay_presidency
 		adjective = dyn_c_bombay_presidency_adj
+
 		is_main_tag_only = yes
 		priority = 25
+
 		trigger = {
 			scope:actor ?= {
 				is_subject = no
@@ -205,11 +238,14 @@
 			}
 		}
 	}
+
 	dynamic_country_name = {
 		name = dyn_c_bombay_empire
 		adjective = dyn_c_bombay_presidency_adj
+
 		is_main_tag_only = yes
 		priority = 25
+
 		trigger = {
 			scope:actor ?= {
 				is_subject = no
@@ -228,11 +264,14 @@
 			}
 		}
 	}
+
 	dynamic_country_name = {
 		name = dyn_c_bengal_presidency
 		adjective = dyn_c_bengal_presidency_adj
+
 		is_main_tag_only = yes
 		priority = 25
+
 		trigger = {
 			scope:actor ?= {
 				is_subject = yes
@@ -250,11 +289,14 @@
 			}
 		}
 	}
+
 	dynamic_country_name = {
 		name = dyn_c_bengal_republic
 		adjective = dyn_c_bengal_presidency_adj
+
 		is_main_tag_only = yes
 		priority = 25
+
 		trigger = {
 			scope:actor ?= {
 				is_subject = no
@@ -273,11 +315,14 @@
 			}
 		}
 	}
+
 	dynamic_country_name = {
 		name = dyn_c_bengal_empire
 		adjective = dyn_c_bengal_presidency_adj
+
 		is_main_tag_only = yes
 		priority = 25
+
 		trigger = {
 			scope:actor ?= {
 				is_subject = no
@@ -302,19 +347,24 @@ REPLACE:BHT = {
 	dynamic_country_name = {
 		name = dyn_c_dominion_of_india
 		adjective = BHT_ADJ
+
 		is_main_tag_only = yes
 		priority = 1
+
 		trigger = {
 			scope:actor ?= {
 				is_subject = yes
 			}
 		}
 	}
+
 	dynamic_country_name = {
 		name = dyn_c_confederacy_of_india
 		adjective = BHT_ADJ
+
 		is_main_tag_only = yes
 		priority = 25
+
 		trigger = {
 			scope:actor ?= {
 				has_variable = selected_federal_solution_var

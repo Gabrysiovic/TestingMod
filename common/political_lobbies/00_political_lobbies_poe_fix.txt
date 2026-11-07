@@ -2,34 +2,47 @@
 	category = foreign_anti_country
 	texture = "gfx/interface/icons/political_lobby_icons/lobby_anti.dds"
 	can_create = {
-		NOT = { is_country_type = decentralized }
+		NOT = {
+			is_country_type = decentralized
+		}
 		is_revolutionary = no
-		scope:target_country = { is_revolutionary = no }
-		is_subject_of = scope:target_country
+		scope:target_country = {
+			is_revolutionary = no
+		}
 		ROOT.owner = {
 			NAND = {
 				c:BIC ?= this
 				has_journal_entry = je_india_home_rule
 			}
 		}
+		is_subject_of = scope:target_country
 	}
 	requirement_to_maintain = {
-		trigger = { is_subject_of = scope:target_country }
+		trigger = {
+			is_subject_of = scope:target_country
+		}
 		swap_type_on_failed = lobby_anti_country
 		on_failed = {
-			scope:political_lobby = { initialize_lobby_custom_name = yes }
+			scope:political_lobby = {
+				initialize_lobby_custom_name = yes
+			}
 		}
 	}
 	requirement_to_maintain = {
 		trigger = {
 			OR = {
-				NOT = { exists = scope:political_lobby }
+				NOT = {
+					exists = scope:political_lobby
+				}
 				scope:political_lobby ?= {
-					any_lobby_member = { ig_counts_as_marginal = no }
+					any_lobby_member = {
+						ig_counts_as_marginal = no
+					}
 				}
 			}
 		}
-		on_failed = { }
+		on_failed = {
+		}
 	}
 	requirement_to_maintain = {
 		trigger = {
@@ -46,7 +59,8 @@
 			}
 		}
 		swap_type_on_failed = lobby_indian_national_congress
-		on_failed = {}
+		on_failed = {
+		}
 	}
 	on_created = {
 		save_temporary_scope_as = lobby_country
@@ -87,7 +101,11 @@
 		if = {
 			limit = {
 				exists = scope:political_lobby
-				scope:political_lobby = { any_lobby_member = { this = root } }
+				scope:political_lobby = {
+					any_lobby_member = {
+						this = root
+					}
+				}
 			}
 			add = {
 				value = 50
@@ -123,7 +141,9 @@
 				max = 100
 				min = -100
 				if = {
-					limit = { is_lobby_formation_reason_ideology = yes }
+					limit = {
+						is_lobby_formation_reason_ideology = yes
+					}
 					multiply = 1.5
 				}
 				desc = "enacted_laws"
@@ -257,7 +277,8 @@
 			}
 			else_if = {
 				limit = {
-					NOT = { # Equals 'count'
+					NOT = {
+						# Equals 'count'
 						law_stance = {
 							law = law_type:law_council_republic
 							value > strongly_approve

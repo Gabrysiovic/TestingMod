@@ -353,7 +353,7 @@ REPLACE:goods_transfer = {
 					multiply = {
 						"scope:article.input_market_goods(root)" ?= {
 							value = ai_treaty_export_value:root
-							divide = 4							# Have to pay for convoys etc
+							divide = 4 # Have to pay for convoys etc
 						}
 					}
 					divide = {
@@ -365,7 +365,7 @@ REPLACE:goods_transfer = {
 					max = {
 						"scope:article.input_market_goods(root)" ?= {
 							value = ai_treaty_export_value:root
-							divide = 4							# Have to pay for convoys etc
+							divide = 4 # Have to pay for convoys etc
 						}
 						max = 50
 					}

@@ -33,10 +33,13 @@
 			is_potential_treaty_port = scope:other_country
 		}
 		scope:other_country = {
-			NOT = { is_subject_of = root }
+			NOT = {
+				is_subject_of = root
+			}
 		}
 	}
-	non_fulfillment = { # GVFH: Treaty port non fullfill instead of straight up breaking when revolution spawn and cut access
+	non_fulfillment = {
+		# GVFH: Treaty port non fullfill instead of straight up breaking when revolution spawn and cut access
 		consequences = freeze
 		max_consecutive_contraventions = 3
 		conditions = {
@@ -73,8 +76,8 @@
 						any_scope_state = {
 							OR = {
 								owner = scope:article.target_country
-										is_special_civil_war_tag = yes
-								owner = { # GVFH: Remove condition to always happen if a war happen
+								owner = {
+									# GVFH: Remove condition to always happen if a war happen
 									is_diplomatic_play_enemy_of = scope:article.target_country
 								}
 							}
@@ -100,9 +103,8 @@
 							owner = {
 								OR = {
 									this = scope:article.source_country
-											is_special_civil_war_tag = yes
-										is_diplomatic_play_enemy_of = scope:article.source_country
 									# GVFH: Remove condition to always happen if a war happen
+									is_diplomatic_play_enemy_of = scope:article.source_country
 								}
 							}
 							is_treaty_port = no
@@ -128,8 +130,12 @@
 			scope:withdrawing_country = {
 				country_rank > scope:non_withdrawing_country.country_rank
 				OR = {
-					NOT = { is_country_type = unrecognized }
-					scope:target_country = { is_country_type = unrecognized }
+					NOT = {
+						is_country_type = unrecognized
+					}
+					scope:target_country = {
+						is_country_type = unrecognized
+					}
 				}
 			}
 		}
@@ -157,7 +163,9 @@
 				save_scope_as = state_giver
 			}
 			if = {
-				limit = { exists = input_state }
+				limit = {
+					exists = input_state
+				}
 				input_state = {
 					hidden_effect = {
 						cede_treaty_port = scope:state_taker
@@ -177,7 +185,9 @@
 			}
 			else_if = {
 				limit = {
-					NOT = { has_variable = recently_traded_states_counter }
+					NOT = {
+						has_variable = recently_traded_states_counter
+					}
 				}
 				set_variable = {
 					name = recently_traded_states_counter
@@ -316,7 +326,9 @@
 				}
 				else = {
 					if = {
-						limit = { "scope:article.input_state.ai_treaty_port_value(root)" > 0 }
+						limit = {
+							"scope:article.input_state.ai_treaty_port_value(root)" > 0
+						}
 						add = {
 							value = "scope:article.input_state.ai_treaty_port_value(root)"
 							desc = "DIPLOMATIC_ACCEPTANCE_TRADE_STATE_TARGET"
@@ -351,7 +363,9 @@
 			if = {
 				limit = {
 					has_journal_entry = je_opium_wars
-					NOT = { is_diplomatic_play_enemy_of = scope:source_country }
+					NOT = {
+						is_diplomatic_play_enemy_of = scope:source_country
+					}
 					scope:source_country = {
 						has_variable = opium_wars_target
 					}
