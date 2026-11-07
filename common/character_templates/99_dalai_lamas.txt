@@ -5,10 +5,11 @@
 	historical = yes
 	ruler = yes
 	culture = cu:tibetan
+	religion = rel:gelugpa
 	birth_date = 1816.5.25
-	home_region = STATE_LHASA
 	interest_group = ig_devout
 	ideology = ideology_theocrat
+	home_region = STATE_LHASA
 	traits = {
 		cautious
 	}

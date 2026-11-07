@@ -1,45 +1,45 @@
 ﻿REPLACE:pru_wilhelm_III_hohenzollern_template = {
-    # Frederick William III of Prussia
-    first_name = "Friedrich_Wilhelm"
-    last_name = "von_Hohenzollern"
-    historical = yes
+	# Frederick William III of Prussia
+	first_name = "Friedrich_Wilhelm"
+	last_name = "von_Hohenzollern"
+	dna = dna_king_frederik_william_03
+	historical = yes
+	birth_date = 1770.08.03
 	noble = yes
-    culture = primary_culture
-    is_general = yes # both ruler and general
-    birth_date = 1770.08.03
-    dna = dna_king_frederik_william_03
-    hq = region_central_europe
-    interest_group = ig_armed_forces
-    ideology= ideology_royalist
-    home_region = STATE_BRANDENBURG
-    traits = {
-        direct
-    }
-    on_created = {
-        set_variable = is_married
-		set_variable = house_hohenzollern
-    }
+	is_general = yes # both ruler and general
+	hq = region_central_europe
+	culture = primary_culture
+	interest_group = ig_armed_forces
+	ideology= ideology_royalist
+	home_region = STATE_BRANDENBURG
+	traits = {
+		direct
+	}
+	on_created = {
+		set_variable = is_married
+		set_variable = { name = dynasty_var value = flag:house_hohenzollern }
+	}
 }
 REPLACE:pru_wilhelm_IV_hohenzollern_template = {
-    # Frederick William IV of Prussia
-    first_name = "Friedrich_Wilhelm"
-    last_name = "von_Hohenzollern"
-    historical = yes
+	# Frederick William IV of Prussia
+	first_name = "Friedrich_Wilhelm"
+	last_name = "von_Hohenzollern"
+	dna = dna_pru_friedrich_wilhelm_04
+	historical = yes
 	noble = yes
-    culture = primary_culture
-    dna = dna_pru_friedrich_wilhelm_04
-    birth_date = 1795.10.15
-    interest_group = ig_armed_forces
-    ideology = ideology_royalist
-    home_region = STATE_BRANDENBURG
-    traits = {
-        reserved
+	birth_date = 1795.10.15
+	culture = primary_culture
+	interest_group = ig_armed_forces
+	ideology = ideology_royalist
+	home_region = STATE_BRANDENBURG
+	traits = {
+		reserved
 		pious
-    }
-    on_created = {
-        set_variable = is_married
-		set_variable = house_hohenzollern
-    }
+	}
+	on_created = {
+		set_variable = is_married
+		set_variable = { name = dynasty_var value = flag:house_hohenzollern }
+	}
 }
 
 PRU_wilhelm_I = { # William I of Prussia

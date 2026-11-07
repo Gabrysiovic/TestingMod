@@ -1,22 +1,22 @@
 ﻿REPLACE:BUL_alexander_i = {
-    #  Alexander Joseph von Battenberg
-    first_name = "Alexander"
-    last_name = "of_Battenberg"
-    historical = yes
-    culture = cu:south_german
-    religion = rel:catholic
-    is_general = yes
+	#  Alexander Joseph von Battenberg
+	first_name = "Alexander"
+	last_name = "of_Battenberg"
+	historical = yes
+	birth_date = 1857.8.5
+	is_general = yes
 	noble = yes
-    birth_date = 1857.8.5
-    interest_group = ig_armed_forces
-    ideology = ideology_jingoist_leader
-    home_region = STATE_HESSE
-    traits = {
-        popular_commander
-        basic_diplomat
-        persistent
+	culture = cu:south_german
+	religion = rel:catholic
+	interest_group = ig_armed_forces
+	ideology = ideology_jingoist_leader
+	home_region = STATE_HESSE
+	traits = {
+		popular_commander
+		basic_diplomat
+		persistent
 		imperious
-    }
+	}
 } # heir:
 BUL_assen_hartenau = {
 	first_name = Assen
@@ -104,18 +104,18 @@ hm_prince_nikolay = {
 }
 
 REPLACE:BUL_ferdinand_i = {
-    #  Ferdinand Maximilian Karl Leopold Maria von Saxe-Coburg-Gotha
+	#  Ferdinand Maximilian Karl Leopold Maria von Saxe-Coburg-Gotha
 	first_name = Ferdinand
 	last_name = of_Saxe-Coburg-Gotha-KohA_ry
 	historical = yes
-	culture = cu:south_german
-    religion = rel:catholic
-    is_general = yes
+	birth_date = 1861.2.26
+	is_general = yes
 	ruler = yes
 	noble = yes
+	culture = cu:south_german
+	religion = rel:catholic
 	interest_group = ig_armed_forces
-	ideology = ideology_jingoist_leader
-	birth_date = 1861.2.26
+	ideology = ideology_moderate
 	home_region = STATE_AUSTRIA
 	traits = {
 		popular_commander
@@ -132,15 +132,15 @@ REPLACE:BUL_ferdinand_i = {
 }
 
 REPLACE:BUL_boris_iii = {
-    # or Boris Klemens Robert Maria Pius Ludwig Stanislaus Xaver as his friends call him
+	# or Boris Klemens Robert Maria Pius Ludwig Stanislaus Xaver as his friends call him
 	first_name = Boris
 	last_name = of_Saxe-Coburg-Gotha-KohA_ry
 	historical = yes
+	birth_date = 1894.1.30
 	culture = cu:bulgarian
 	noble = yes
 	interest_group = ig_armed_forces
 	ideology = ideology_authoritarian
-	birth_date = 1894.1.30
 	home_region = STATE_BULGARIA
 	traits = {
 		imperious

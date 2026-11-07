@@ -1,23 +1,23 @@
 ﻿REPLACE:CRO_juraj_haulik = {
-    # Juraj Haulik de Váralya, future Ban of Croatia
-    first_name = "Juraj"
-    last_name = "Haulik"
-    historical = yes
-    culture = cu:slovak
-    religion = rel:catholic
-    ig_leader = yes
-    birth_date = 1788.4.20
-    interest_group = ig_devout
-    ideology = ideology_reformer
-    home_region = STATE_SLOVAKIA
-    traits = {
+	# Juraj Haulik de Váralya, future Ban of Croatia
+	first_name = "Juraj"
+	last_name = "Haulik"
+	historical = yes
+	birth_date = 1788.4.20
+	ig_leader = yes
+	culture = cu:slovak
+	religion = rel:catholic
+	interest_group = ig_devout
+	ideology = ideology_reformer
+	home_region = STATE_SLOVAKIA
+	traits = {
 		pious
-        basic_political_operator
-        cautious
-    }
-    on_created = {
-        set_variable = is_married
-    }
+		basic_political_operator
+		cautious
+	}
+	on_created = {
+		set_variable = is_married
+	}
 }
 
 CRO_franz_haller = {

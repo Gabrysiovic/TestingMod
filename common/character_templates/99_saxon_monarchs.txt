@@ -4,12 +4,12 @@
 	last_name = "von_Wettin"
 	historical = yes
 	noble = yes
-	culture = primary_culture
-	religion = rel:catholic
 	age = 81 # died June 6th, 1836
-	home_region = STATE_SAXONY
+	culture = cu:north_german
+	religion = rel:catholic
 	interest_group = ig_landowners
 	ideology = ideology_moderate
+	home_region = STATE_SAXONY
 	traits = {
 		reserved # dude was old and did nothing
 	}
@@ -23,12 +23,12 @@ REPLACE:SAX_friedrich_august_von_wettin = {
 	last_name = "von_Wettin"
 	historical = yes
 	noble = yes
-	culture = primary_culture
-	religion = rel:catholic
 	age = 29
-	home_region = STATE_SAXONY
+	culture = cu:north_german
+	religion = rel:catholic
 	interest_group = ig_petty_bourgeoisie
 	ideology = ideology_moderate
+	home_region = STATE_SAXONY
 	traits = {
 		meticulous
 	}

@@ -3,13 +3,14 @@
 	first_name = "Mustafa"
 	last_name = "al_Husaini"
 	historical = yes
-	culture = cu:turkish
-	ruler = yes
 	age = 50
 	noble = yes
-	home_region = STATE_TUNISIA
+	ruler = yes
+	culture = cu:turkish
+	religion = rel:sunni
 	interest_group = ig_landowners
 	ideology = ideology_traditionalist
+	home_region = STATE_TUNISIA
 	traits = {
 		reserved
 	}
@@ -19,15 +20,16 @@ REPLACE:TUN_ahmad_al_husaini = {
 	# Abmad I ibn Mustafa
 	first_name = "Ahmad"
 	last_name = "al_Husaini"
+	dna = dna_ahmad_i_ibn_mustafa
 	historical = yes
-	culture = cu:turkish
+	age = 31
 	heir = yes
 	noble = yes
-	dna = dna_ahmad_i_ibn_mustafa
-	age = 31
-	home_region = STATE_TUNISIA
+	culture = cu:turkish
+	religion = rel:sunni
 	interest_group = ig_landowners
 	ideology = ideology_moderate
+	home_region = STATE_TUNISIA
 	traits = {
 		ambitious
 	}

@@ -2,11 +2,12 @@
 	# Heonjong of Joseon
 	first_name = "Hwan"
 	last_name = "Yi"
-	historical = yes
-	culture = primary_culture
-	heir = yes
-	birth_date = 1827.9.8
 	dna = dna_king_heonjong
+	historical = yes
+	birth_date = 1827.9.8
+	heir = yes
+	culture = cu:korean
+	religion = rel:confucian
 	interest_group = ig_landowners
 	ideology = ideology_traditionalist
 	home_region = STATE_SEOUL

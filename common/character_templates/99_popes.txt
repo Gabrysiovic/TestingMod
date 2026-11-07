@@ -1,10 +1,12 @@
 ﻿REPLACE:PAP_gregorius_cappellari = { # Gregory XVI
+	# Gregory XVI
 	first_name = "Gregorius"
 	last_name = "None"
-	historical = yes
-	ruler = yes
-	birth_date = 1765.9.18
 	dna = dna_pope_gregory_16
+	historical = yes
+	birth_date = 1765.9.18
+	ruler = yes
+	religion = rel:catholic
 	interest_group = ig_devout
 	ideology = ideology_theocrat
 	home_region = STATE_VENETIA

@@ -2,11 +2,12 @@
 	# The Daoguang Emperor
 	first_name = Minning
 	last_name = "Aisin_Gioro" # Not used by the emperor himself but there's got to be something here
-	historical = yes
-	ruler = yes
-	birth_date = 1782.9.16
 	dna = dna_daoguang_emperor
+	historical = yes
+	birth_date = 1782.9.16
+	ruler = yes
 	culture = cu:manchu
+	religion = rel:confucian
 	interest_group = ig_landowners
 	ideology = ideology_traditionalist
 	home_region = STATE_BEIJING
@@ -20,9 +21,10 @@ REPLACE:chi_xianfeng_template = {
 	first_name = "Yizhu"
 	last_name = "Aisin_Gioro"
 	historical = yes
-	heir = yes
 	birth_date = 1831.7.17
+	heir = yes
 	culture = cu:manchu
+	religion = rel:confucian
 	interest_group = ig_landowners
 	ideology = ideology_traditionalist
 	home_region = STATE_BEIJING
@@ -98,18 +100,19 @@ CHI_puyi = { # Emperor Puyi
 REPLACE:chi_cixi_template = {
 	first_name = Cixi
 	last_name = Yehe_Nara
-	historical = yes
-	culture = cu:manchu
 	female = yes
+	dna = dna_empress_dowager_cixi
+	historical = yes
+	birth_date = 1835.11.29
+	culture = cu:manchu
+	religion = rel:confucian
 	noble = yes
 	ideology = ideology_modernizer_leader
 	home_region = STATE_BEIJING
-	birth_date = 1835.11.29
-	dna = dna_empress_dowager_cixi
 	traits = {
-	   ambitious
-	   reckless
-	   experienced_political_operator
+		ambitious
+		reckless
+		experienced_political_operator
 	}
 	interest_group_leader_usage = {
 		country_trigger = {

@@ -3,11 +3,12 @@
 	first_name = "Christian"
 	last_name = "von_Oldenburg"
 	historical = yes
-	culture = primary_culture
-	heir = yes
 	dna = dna_king_christian_08
 	noble = yes
 	birth_date = 1786.9.18
+	heir = yes
+	culture = cu:danish
+	religion = rel:protestant
 	interest_group = ig_landowners
 	ideology = ideology_traditionalist
 	home_region = STATE_ZEALAND

@@ -4,8 +4,9 @@
 	last_name = "von_Braunschweig"
 	historical = yes
 	noble = yes
-	culture = primary_culture	
 	age = 30
+	culture = cu:north_german
+	religion = rel:protestant
 	interest_group = ig_petty_bourgeoisie
 	ideology = ideology_moderate
 	home_region = STATE_BRUNSWICK

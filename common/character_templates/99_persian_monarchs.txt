@@ -1,41 +1,43 @@
 ﻿REPLACE:per_mohammad_shah_qajar_template = {
-    # Mohammad Shah Qajar
-    is_general = yes
-    first_name = "Mohammad_Shah"
-    last_name = "Qajar"
-    historical = yes
-    culture = cu:azerbaijani
-    ruler = yes
+	first_name = "Mohammad_Shah"
+	last_name = "Qajar"
+	dna = dna_king_mohammad_shah_qajar
+	historical = yes
+	birth_date = 1808.1.5
+	# Mohammad Shah Qajar
+	is_general = yes
+	ruler = yes
 	noble = yes
-    birth_date = 1808.1.5
-    home_region = STATE_IRAKAJEMI
-    dna = dna_king_mohammad_shah_qajar
-    interest_group = ig_landowners
-    ideology = ideology_traditionalist
-    traits = {
-        imperious
-    }
+	culture = cu:azerbaijani
+	religion = rel:shiite
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+	home_region = STATE_IRAKAJEMI
+	traits = {
+		imperious
+	}
 	on_created = {
 		set_variable = is_married
 	}
 }
 REPLACE:per_nasir_al_din_qajar_template = {
-    # Nasir al-Din Shah
-    first_name = "Nasir_al-Din"
-    last_name = "Qajar"
-    historical = yes
-    culture = cu:azerbaijani
-    heir = yes
-	noble = yes
-    birth_date = 1831.7.16
-    home_region = STATE_IRAKAJEMI
+	# Nasir al-Din Shah
+	first_name = "Nasir_al-Din"
+	last_name = "Qajar"
 	dna = dna_naser_qajar
-    interest_group = ig_petty_bourgeoisie
-    ideology = ideology_traditionalist
-    traits = {
-        cautious
+	historical = yes
+	birth_date = 1831.7.16
+	heir = yes
+	noble = yes
+	culture = cu:azerbaijani
+	religion = rel:shiite
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_traditionalist
+	home_region = STATE_IRAKAJEMI
+	traits = {
+		cautious
 		expensive_tastes
-    }
+	}
 	on_created = {
 		set_variable = is_married
 	}
@@ -127,22 +129,21 @@ PER_prince_freydoun_qajar = { # Freydoun Qajar
 REPLACE:PER_reza_pahlavi = {
 	first_name = Reza
 	last_name = Pahlavi
+	dna = dna_reza_shah_pahlavi
 	historical = yes
+	birth_date = 1878.3.15
+	role = character_role_politician
 	culture = cu:mazanderani
+	religion = rel:shiite
 	interest_group = ig_armed_forces
 	ideology = ideology_modernizer_leader
-	role = character_role_politician
-	birth_date = 1878.3.15
 	home_region = STATE_MAZANDARAN
-	dna = dna_reza_shah_pahlavi
 	traits = {
 		direct
 		popular_commander
 		basic_diplomat
 		imperious
 	}
-	trait_generation = { }
-
 	commander_usage = {
 		country_trigger = {
 			exists = c:PER
@@ -153,19 +154,20 @@ REPLACE:PER_reza_pahlavi = {
 		latest_usage_date = 1936.1.1
 		chance = 50
 	}
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:PER
-            c:PER ?= THIS
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            is_interest_group_type = ig_armed_forces
-        }
-        earliest_usage_date = 1919.1.1 # Minister of War
-        latest_usage_date = 1936.1.1
-        #guaranteed to spawn if possible
-    }
+	interest_group_leader_usage = {
+		country_trigger = {
+			exists = c:PER
+			c:PER ?= THIS
+		}
+		interest_group_trigger = {
+			ig_counts_as_marginal = no
+			is_interest_group_type = ig_armed_forces
+		}
+		earliest_usage_date = 1919.1.1 # Minister of War
+		latest_usage_date = 1936.1.1
+		#guaranteed to spawn if possible
+	}
+	trait_generation = { }
 }
 
 PER_mohammad_reza_pahlavi = { # Mohammad Reza Shah Pahlavi

@@ -2,13 +2,15 @@
 REPLACE:aus_admiral_tegetthoff = {
 	first_name = Wilhelm
 	last_name = von_Tegetthoff
-	historical = yes
-	culture = cu:south_german
 	female = no
-	ideology = ideology_reformer
-	commander_rank = default
-	interest_group = ig_armed_forces
+	historical = yes
 	birth_date = 1827.12.23
+	commander_rank = default
+	culture = cu:south_german
+	religion = rel:catholic
+	interest_group = ig_armed_forces
+	ideology = ideology_reformer
+	home_region = STATE_STYRIA
 	traits = {
 		expert_naval_commander
 		direct
@@ -46,21 +48,23 @@ REPLACE:aus_admiral_tegetthoff = {
 		role = admiral
 		earliest_usage_date = 1854.1.1
 		latest_usage_date = 1880.1.1
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }
 
 REPLACE:aus_admiral_archduke_friedrich = {
 	first_name = Archduke_Friedrich
 	last_name = von_Habsburg_Lothringen
-	historical = yes
-	culture = cu:south_german
 	female = no
-	ideology = ideology_reformer
-	commander_rank = default
 	dna = dna_archduke_friedrich
-	interest_group = ig_armed_forces
+	historical = yes
 	birth_date = 1821.5.14
+	commander_rank = default
+	culture = cu:south_german
+	religion = rel:catholic
+	interest_group = ig_armed_forces
+	ideology = ideology_reformer
+	home_region = STATE_MORAVIA
 	traits = {
 		basic_naval_commander
 		brave
@@ -73,7 +77,7 @@ REPLACE:aus_admiral_archduke_friedrich = {
 					exists = c:AUS
 					c:AUS ?= THIS
 					c:AUS ?= {
-						has_law = law_type:law_monarchy
+						country_has_monarchy_law = yes
 					}
 				}
 				AND = {
@@ -84,7 +88,7 @@ REPLACE:aus_admiral_archduke_friedrich = {
 					c:GER ?= THIS
 					c:GER ?= {
 						owns_entire_state_region = STATE_AUSTRIA
-						has_law = law_type:law_monarchy
+						country_has_monarchy_law = yes
 					}
 				}
 				AND = {
@@ -99,20 +103,25 @@ REPLACE:aus_admiral_archduke_friedrich = {
 		role = admiral
 		earliest_usage_date = 1840.1.1
 		latest_usage_date = 1870.1.1
-		chance = 50
+		#guaranteed to spawn if possible
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_habsburg }
 	}
 }
 
 REPLACE:aus_general_von_windisch_gratz = {
 	first_name = Alfred
 	last_name = von_Windisch_Gratz
-	historical = yes
-	culture = cu:south_german
 	female = no
-	ideology = ideology_traditionalist
-	commander_rank = default
-	interest_group = ig_landowners
+	historical = yes
 	birth_date = 1787.5.11
+	commander_rank = default
+	culture = cu:south_german
+	religion = rel:catholic
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+	home_region = STATE_BOHEMIA
 	traits = {
 		cautious
 	}
@@ -145,20 +154,22 @@ REPLACE:aus_general_von_windisch_gratz = {
 		role = general
 		earliest_usage_date = 1836.1.1
 		latest_usage_date = 1850.1.1
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }
 
 REPLACE:aus_general_von_hotzendorf = {
 	first_name = Franz_Conrad
 	last_name = von_Hotzendorf
-	historical = yes
-	culture = cu:south_german
 	female = no
-	ideology = ideology_traditionalist
-	commander_rank = default
-	interest_group = ig_landowners
+	historical = yes
 	birth_date = 1852.11.11
+	commander_rank = default
+	culture = cu:south_german
+	religion = rel:catholic
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+	home_region = STATE_AUSTRIA
 	traits = {
 		basic_offensive_planner
 		arrogant
@@ -193,21 +204,23 @@ REPLACE:aus_general_von_hotzendorf = {
 		role = general
 		earliest_usage_date = 1876.1.1
 		latest_usage_date = 1925.1.1
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }
 
 REPLACE:aus_general_boroevic = {
 	first_name = Svetozar
 	last_name = BoroeviC
-	historical = yes
-	culture = cu:south_german
 	female = no
-	ideology = ideology_royalist
-	commander_rank = default
 	dna = dna_svetozar_boroevic
-	interest_group = ig_armed_forces
+	historical = yes
 	birth_date = 1856.12.13
+	commander_rank = default
+	culture = cu:south_german
+	religion = rel:catholic
+	interest_group = ig_armed_forces
+	ideology = ideology_royalist
+	home_region = STATE_CROATIA
 	traits = {
 		expert_defensive_strategist
 		experienced_offensive_planner
@@ -252,21 +265,23 @@ REPLACE:aus_general_boroevic = {
 		role = general
 		earliest_usage_date = 1896.1.1
 		latest_usage_date = 1927.1.1
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }
 
 REPLACE:aus_general_von_benedek = {
 	first_name = Ludwig
 	last_name = von_Benedek
-	historical = yes
-	culture = cu:south_german
 	female = no
-	ideology = ideology_traditionalist
-	commander_rank = default
 	dna = dna_ludwig_von_benedek
-	interest_group = ig_armed_forces
+	historical = yes
 	birth_date = 1804.7.14
+	commander_rank = default
+	culture = cu:south_german
+	religion = rel:catholic
+	interest_group = ig_armed_forces
+	ideology = ideology_traditionalist
+	home_region = STATE_TRANSDANUBIA
 	traits = {
 		basic_offensive_planner
 		stalwart_defender
@@ -301,7 +316,7 @@ REPLACE:aus_general_von_benedek = {
 		role = general
 		earliest_usage_date = 1840.1.1
 		latest_usage_date = 1880.1.1
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }
 
@@ -350,12 +365,15 @@ REPLACE:AUS_friedrich_schwarzenberg = {
 	first_name = Friedrich
 	last_name = Schwarzenberg
 	historical = yes
+	birth_date = 1809.4.6
+	role = character_role_politician
+	role = character_role_magnate
 	culture = cu:south_german
 	religion = rel:catholic
-	birth_date = 1809.4.6
-	ig_leader = yes
 	interest_group = ig_devout
 	ideology = ideology_royalist
+	home_region = STATE_BOHEMIA
+	holding_type = building_manor_house
 	traits = {
 		pious
 		erudite
@@ -379,7 +397,7 @@ REPLACE:AUS_friedrich_schwarzenberg = {
 		}
 		earliest_usage_date = 1850.8.15
 		latest_usage_date = 1885.3.27
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }
 
@@ -388,12 +406,13 @@ REPLACE:AUS_anton_josef_gruscha = {
 	first_name = Anton_Josef
 	last_name = Gruscha
 	historical = yes
+	birth_date = 1820.11.3
+	role = character_role_politician
 	culture = cu:south_german
 	religion = rel:catholic
-	birth_date = 1820.11.3
-	ig_leader = yes
 	interest_group = ig_devout
 	ideology = ideology_traditionalist
+	home_region = STATE_AUSTRIA
 	traits = {
 		pious
 		charismatic
@@ -417,7 +436,7 @@ REPLACE:AUS_anton_josef_gruscha = {
 		}
 		earliest_usage_date = 1873.5.4
 		latest_usage_date = 1911.8.5
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }
 
@@ -426,12 +445,13 @@ REPLACE:AUS_theodor_innitzer = {
 	first_name = Theodor
 	last_name = Innitzer
 	historical = yes
+	birth_date = 1875.12.25
+	role = character_role_politician
 	culture = cu:south_german
 	religion = rel:catholic
-	birth_date = 1875.12.25
-	ig_leader = yes
 	interest_group = ig_devout
 	ideology = ideology_authoritarian
+	home_region = STATE_BOHEMIA
 	traits = {
 		pious
 		charismatic
@@ -456,7 +476,7 @@ REPLACE:AUS_theodor_innitzer = {
 		}
 		earliest_usage_date = 1902.7.25
 		latest_usage_date = 1936.1.1
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }
 
@@ -466,12 +486,15 @@ REPLACE:AUS_freidrich_schey_von_koromla = {
 	first_name = Friedrich_Schey
 	last_name = von_Koromla
 	historical = yes
+	birth_date = 1815.3.5
+	role = character_role_politician
+	role = character_role_magnate
 	culture = cu:ashkenazi
 	religion = rel:jewish
-	birth_date = 1815.3.5
-	ig_leader = yes
 	interest_group = ig_industrialists
 	ideology = ideology_market_liberal
+	home_region = STATE_TRANSDANUBIA
+	holding_type = building_financial_district
 	traits = {
 		charismatic
 		meticulous
@@ -496,7 +519,7 @@ REPLACE:AUS_freidrich_schey_von_koromla = {
 		}
 		earliest_usage_date = 1842.1.1
 		latest_usage_date = 1881.7.15
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }
 
@@ -505,12 +528,15 @@ REPLACE:AUS_anselm_salomon_von_rothschild = {
 	first_name = Anselm_Salomon
 	last_name = von_Rothschild
 	historical = yes
+	birth_date = 1803.1.29
+	role = character_role_politician
+	role = character_role_magnate
 	culture = cu:ashkenazi
 	religion = rel:jewish
-	birth_date = 1803.1.29
-	ig_leader = yes
 	interest_group = ig_industrialists
 	ideology = ideology_market_liberal
+	home_region = STATE_AUSTRIA
+	holding_type = building_financial_district
 	traits = {
 		charismatic
 		meticulous
@@ -535,7 +561,7 @@ REPLACE:AUS_anselm_salomon_von_rothschild = {
 		}
 		earliest_usage_date = 1836.1.1
 		latest_usage_date = 1874.7.27
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }
 
@@ -544,12 +570,15 @@ REPLACE:AUS_camillo_castiglioni = {
 	first_name = Camillo
 	last_name = Castiglioni
 	historical = yes
+	birth_date = 1879.10.22
+	role = character_role_politician
+	role = character_role_magnate
 	culture = cu:ashkenazi
 	religion = rel:jewish
-	birth_date = 1879.10.22
-	ig_leader = yes
 	interest_group = ig_industrialists
 	ideology = ideology_market_liberal
+	home_region = STATE_ISTRIA
+	holding_type = building_financial_district
 	traits = {
 		ambitious
 		reckless
@@ -574,7 +603,7 @@ REPLACE:AUS_camillo_castiglioni = {
 		}
 		earliest_usage_date = 1904.1.1
 		latest_usage_date = 1933.12.31
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }
 
@@ -584,11 +613,13 @@ REPLACE:AUS_ernst_mach = {
 	first_name = Ernst
 	last_name = Mach
 	historical = yes
-	culture = cu:south_german
 	birth_date = 1838.2.18
-	ig_leader = yes
+	role = character_role_politician
+	culture = cu:south_german
+	religion = rel:catholic
 	interest_group = ig_intelligentsia
 	ideology = ideology_positivist
+	home_region = STATE_MORAVIA
 	traits = {
 		ambitious
 		literary
@@ -612,7 +643,7 @@ REPLACE:AUS_ernst_mach = {
 		}
 		earliest_usage_date = 1860.1.1
 		latest_usage_date = 1916.2.19
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }
 
@@ -621,11 +652,13 @@ REPLACE:AUS_ludwig_boltzmann = {
 	first_name = Ludwig
 	last_name = Boltzmann
 	historical = yes
-	culture = cu:south_german
 	birth_date = 1844.2.20
-	ig_leader = yes
+	role = character_role_politician
+	culture = cu:south_german
+	religion = rel:catholic
 	interest_group = ig_intelligentsia
 	ideology = ideology_positivist
+	home_region = STATE_AUSTRIA
 	traits = {
 		meticulous
 		erudite
@@ -649,7 +682,7 @@ REPLACE:AUS_ludwig_boltzmann = {
 		}
 		earliest_usage_date = 1869.1.1
 		latest_usage_date = 1906.9.5
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }
 
@@ -658,12 +691,13 @@ REPLACE:AUS_karl_kraus = {
 	first_name = Karl
 	last_name = Kraus
 	historical = yes
+	birth_date = 1874.4.28
+	role = character_role_politician
 	culture = cu:ashkenazi
 	religion = rel:jewish
-	birth_date = 1874.4.28
-	ig_leader = yes
 	interest_group = ig_intelligentsia
 	ideology = ideology_positivist
+	home_region = STATE_BOHEMIA
 	traits = {
 		persistent
 		brave
@@ -688,7 +722,7 @@ REPLACE:AUS_karl_kraus = {
 		}
 		earliest_usage_date = 1899.1.1
 		latest_usage_date = 1936.6.12
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }
 
@@ -698,12 +732,13 @@ REPLACE:AUS_felix_von_schwarzenberg = {
 	first_name = Felix_2
 	last_name = von_Schwarzenberg
 	historical = yes
+	birth_date = 1800.10.2
+	role = character_role_politician
 	culture = cu:south_german
 	religion = rel:catholic
-	birth_date = 1800.10.2
-	ig_leader = yes
 	interest_group = ig_landowners
 	ideology = ideology_authoritarian
+	home_region = STATE_BOHEMIA
 	traits = {
 		direct
 		imperious
@@ -728,7 +763,7 @@ REPLACE:AUS_felix_von_schwarzenberg = {
 		}
 		earliest_usage_date = 1836.1.1
 		latest_usage_date = 1852.4.5
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }
 
@@ -737,12 +772,13 @@ REPLACE:AUS_eduard_taaffe = {
 	first_name = Eduard
 	last_name = Taaffe
 	historical = yes
+	birth_date = 1833.2.24
+	role = character_role_politician
 	culture = cu:south_german
 	religion = rel:catholic
-	birth_date = 1833.2.24
-	ig_leader = yes
 	interest_group = ig_landowners
 	ideology = ideology_integralist
+	home_region = STATE_AUSTRIA
 	traits = {
 		tactful
 		masterful_diplomat
@@ -766,7 +802,7 @@ REPLACE:AUS_eduard_taaffe = {
 		}
 		earliest_usage_date = 1867.1.1
 		latest_usage_date = 1893.1.1
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }
 
@@ -775,12 +811,13 @@ REPLACE:AUS_heinrich_clam_martinic = {
 	first_name = Heinrich
 	last_name = Clam_Martinic
 	historical = yes
+	birth_date = 1863.1.1
+	role = character_role_politician
 	culture = cu:south_german
 	religion = rel:catholic
-	birth_date = 1863.1.1
-	ig_leader = yes
 	interest_group = ig_landowners
-	ideology = ideology_royalist
+	ideology = ideology_reformer
+	home_region = STATE_BOHEMIA
 	traits = {
 		cautious
 		imperious
@@ -805,7 +842,7 @@ REPLACE:AUS_heinrich_clam_martinic = {
 		}
 		earliest_usage_date = 1886.1.1
 		latest_usage_date = 1932.3.7
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }
 
@@ -814,14 +851,15 @@ REPLACE:AUS_baron_alexander_von_bach = {
 	# Baron Alexander von Bach, Austrian politician
 	first_name = Alexander
 	last_name = von_Bach
-	historical = yes
 	dna = dna_baron_alexander_von_bach
+	historical = yes
+	birth_date = 1813.1.4
+	role = character_role_politician
 	culture = cu:south_german
 	religion = rel:catholic
-	birth_date = 1813.1.4
-	ig_leader = yes
 	interest_group = ig_petty_bourgeoisie
 	ideology = ideology_authoritarian
+	home_region = STATE_AUSTRIA
 	traits = {
 		master_bureaucrat
 		ambitious
@@ -846,7 +884,7 @@ REPLACE:AUS_baron_alexander_von_bach = {
 		}
 		earliest_usage_date = 1849.7.28
 		latest_usage_date = 1893.1.1
-		chance = 60
+		#guaranteed to spawn if possible
 	}
 }
 
@@ -855,12 +893,13 @@ REPLACE:AUS_franz_schuselka = {
 	first_name = Franz
 	last_name = Schuselka
 	historical = yes
+	birth_date = 1811.8.15
+	role = character_role_politician
 	culture = cu:south_german
 	religion = rel:catholic
-	birth_date = 1811.8.15
-	ig_leader = yes
 	interest_group = ig_petty_bourgeoisie
 	ideology = ideology_reformer
+	home_region = STATE_AUSTRIA
 	traits = {
 		persistent
 		ambitious
@@ -885,21 +924,21 @@ REPLACE:AUS_franz_schuselka = {
 		}
 		earliest_usage_date = 1848.1.1
 		latest_usage_date = 1886.9.1
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }
 
 REPLACE:AUS_anton_von_schmerling = {
-	# Anton von Schmerling, Austrian statesman
 	first_name = Anton
 	last_name = von_Schmerling
 	historical = yes
+	birth_date = 1805.8.23
+	role = character_role_politician
 	culture = cu:south_german
 	religion = rel:catholic
-	birth_date = 1805.8.23
-	ig_leader = yes
 	interest_group = ig_petty_bourgeoisie
-	ideology = ideology_state_socialist
+	ideology = ideology_liberal_leader
+	home_region = STATE_AUSTRIA
 	traits = {
 		cautious
 		experienced_diplomat
@@ -923,7 +962,7 @@ REPLACE:AUS_anton_von_schmerling = {
 		}
 		earliest_usage_date = 1836.1.1
 		latest_usage_date = 1849.1.1
-		chance = 40
+		#guaranteed to spawn if possible
 	}
 }
 
@@ -932,12 +971,13 @@ REPLACE:AUS_karl_lueger = {
 	first_name = Karl
 	last_name = Lueger
 	historical = yes
+	birth_date = 1844.10.24
+	role = character_role_politician
 	culture = cu:south_german
 	religion = rel:catholic
-	birth_date = 1844.10.24
-	ig_leader = yes
 	interest_group = ig_petty_bourgeoisie
 	ideology = ideology_traditionalist
+	home_region = STATE_AUSTRIA
 	traits = {
 		direct
 		ambitious
@@ -962,7 +1002,7 @@ REPLACE:AUS_karl_lueger = {
 		}
 		earliest_usage_date = 1875.1.1
 		latest_usage_date = 1910.3.10
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }
 
@@ -972,12 +1012,13 @@ REPLACE:AUS_josef_schoffel = {
 	first_name = Josef
 	last_name = Schoffel
 	historical = yes
+	birth_date = 1832.7.29
+	role = character_role_politician
 	culture = cu:south_german
 	religion = rel:catholic
-	birth_date = 1832.7.29
-	ig_leader = yes
 	interest_group = ig_rural_folk
 	ideology = ideology_land_reformer
+	home_region = STATE_AUSTRIA
 	traits = {
 		brave
 		persistent
@@ -1002,7 +1043,7 @@ REPLACE:AUS_josef_schoffel = {
 		}
 		earliest_usage_date = 1860.1.1
 		latest_usage_date = 1910.2.7
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }
 
@@ -1011,12 +1052,13 @@ REPLACE:AUS_leopold_kunschak = {
 	first_name = Leopold
 	last_name = Schoffel
 	historical = yes
+	birth_date = 1871.11.11
+	role = character_role_politician
 	culture = cu:south_german
 	religion = rel:catholic
-	birth_date = 1871.11.11
-	ig_leader = yes
 	interest_group = ig_rural_folk
 	ideology = ideology_royalist
+	home_region = STATE_AUSTRIA
 	traits = {
 		tactful
 		cautious
@@ -1040,7 +1082,7 @@ REPLACE:AUS_leopold_kunschak = {
 		}
 		earliest_usage_date = 1896.1.1
 		latest_usage_date = 1936.1.1
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }
 
@@ -1049,12 +1091,13 @@ REPLACE:AUS_karl_freiherr_von_vogelsang = {
 	first_name = Karl_Freiherr
 	last_name = von_Vogelsang
 	historical = yes
+	birth_date = 1818.9.3
+	role = character_role_politician
 	culture = cu:south_german
 	religion = rel:catholic
-	birth_date = 1818.9.3
-	ig_leader = yes
 	interest_group = ig_rural_folk
 	ideology = ideology_traditionalist
+	home_region = STATE_MECKLENBURG
 	traits = {
 		ambitious
 		direct
@@ -1079,7 +1122,7 @@ REPLACE:AUS_karl_freiherr_von_vogelsang = {
 		}
 		earliest_usage_date = 1850.1.1
 		latest_usage_date = 1990.11.8
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }
 
@@ -1089,12 +1132,13 @@ REPLACE:AUS_victor_adler = {
 	first_name = Victor
 	last_name = Adler
 	historical = yes
+	birth_date = 1852.6.24
+	role = character_role_politician
 	culture = cu:ashkenazi
 	religion = rel:jewish
-	birth_date = 1852.6.24
-	ig_leader = yes
 	interest_group = ig_trade_unions
 	ideology = ideology_state_socialist
+	home_region = STATE_BOHEMIA
 	traits = {
 		charismatic
 		tactful
@@ -1119,7 +1163,7 @@ REPLACE:AUS_victor_adler = {
 		}
 		earliest_usage_date = 1886.1.1
 		latest_usage_date = 1918.11.11
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }
 
@@ -1128,12 +1172,13 @@ REPLACE:AUS_andreas_scheu = {
 	first_name = Andreas
 	last_name = Scheu
 	historical = yes
+	birth_date = 1844.1.27
+	role = character_role_politician
 	culture = cu:south_german
 	religion = rel:catholic
-	birth_date = 1844.1.27
-	ig_leader = yes
 	interest_group = ig_trade_unions
 	ideology = ideology_utopian
+	home_region = STATE_AUSTRIA
 	traits = {
 		brave
 		ruthless
@@ -1158,7 +1203,7 @@ REPLACE:AUS_andreas_scheu = {
 		}
 		earliest_usage_date = 1866.1.1
 		latest_usage_date = 1884.1.1
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }
 
@@ -1167,12 +1212,13 @@ REPLACE:AUS_heinrich_oberwinder = {
 	first_name = Heinrich
 	last_name = Oberwinder
 	historical = yes
+	birth_date = 1845.3.14
+	role = character_role_politician
 	culture = cu:south_german
 	religion = rel:catholic
-	birth_date = 1845.3.14
-	ig_leader = yes
 	interest_group = ig_trade_unions
 	ideology = ideology_state_socialist
+	home_region = STATE_AUSTRIA
 	traits = {
 		cautious
 		meticulous
@@ -1197,7 +1243,7 @@ REPLACE:AUS_heinrich_oberwinder = {
 		}
 		earliest_usage_date = 1867.1.1
 		latest_usage_date = 1878.12.31
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }
 
@@ -1207,12 +1253,13 @@ REPLACE:AUS_josef_peukert = {
 	first_name = Josef
 	last_name = Peukert
 	historical = yes
+	birth_date = 1855.1.22
 	is_agitator = yes
 	culture = cu:south_german
 	religion = rel:catholic
 	interest_group = ig_trade_unions
 	ideology = ideology_anarchist
-	birth_date = 1855.1.22
+	home_region = STATE_BOHEMIA
 	traits = {
 		reckless
 		wrathful
@@ -1237,7 +1284,7 @@ REPLACE:AUS_josef_peukert = {
 		}
 		earliest_usage_date = 1880.1.1
 		latest_usage_date = 1910.3.3
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }
 
@@ -1247,13 +1294,14 @@ REPLACE:AUS_general_albrecht_dominik = {
 	first_name = Albrecht
 	last_name = Dominik
 	historical = yes
+	birth_date = 1817.8.3
+	is_general = yes
+	commander_rank = commander_rank_2
 	culture = cu:south_german
 	religion = rel:catholic
-	ideology = ideology_royalist
 	interest_group = ig_armed_forces
-	birth_date = 1817.8.3
-	commander_rank = commander_rank_2
-	is_general = yes
+	ideology = ideology_royalist
+	home_region = STATE_AUSTRIA
 	traits = {
 		compliant
 		persistent
@@ -1276,7 +1324,7 @@ REPLACE:AUS_general_albrecht_dominik = {
 		role = general
 		earliest_usage_date = 1836.1.1
 		latest_usage_date = 1895.2.18
-		chance = 75
+		#guaranteed to spawn if possible
 	}
 }
 
@@ -1286,13 +1334,14 @@ REPLACE:AUS_admiral_anton_haus = {
 	first_name = Anton
 	last_name = Haus
 	historical = yes
+	birth_date = 1851.6.13
+	is_admiral = yes
+	commander_rank = commander_rank_2
 	culture = cu:south_german
 	religion = rel:catholic
-	ideology = ideology_authoritarian
 	interest_group = ig_armed_forces
-	birth_date = 1851.6.13
-	commander_rank = commander_rank_2
-	is_admiral = yes
+	ideology = ideology_authoritarian
+	home_region = STATE_VENETIA
 	traits = {
 		reserved
 		experienced_naval_commander
@@ -1314,28 +1363,32 @@ REPLACE:AUS_admiral_anton_haus = {
 		role = admiral
 		earliest_usage_date = 1869.1.1
 		latest_usage_date = 1917.2.2
-		chance = 75
+		#guaranteed to spawn if possible
 	}
 }
 
 ### RULERS
 
 REPLACE:aus_franz_ferdinand = {
-    # Archduke Franz Ferdinand of Austria
-    first_name = Franz_Ferdinand
-    last_name = von_Osterreich-Este
-    historical = yes
-    culture = cu:south_german
-    heir = yes
-    noble = yes
-    dna = dna_archduke_franz_ferdinand_of_austria
-    birth_date = 1863.12.18
-    interest_group = ig_armed_forces
-    ideology = ideology_reformer
+	# Archduke Franz Ferdinand of Austria
+	first_name = Franz_Ferdinand
+	last_name = von_Osterreich-Este
+	dna = dna_archduke_franz_ferdinand_of_austria
+	historical = yes
+	noble = yes
+	birth_date = 1863.12.18
+	heir = yes
+	culture = cu:south_german
+	religion = rel:catholic
+	interest_group = ig_armed_forces
+	ideology = ideology_reformer
 	home_region = STATE_STYRIA
-    traits = {
-        explorer
+	traits = {
+		explorer
 		direct
 		experienced_diplomat
-    }
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_habsburg }
+	}
 }
