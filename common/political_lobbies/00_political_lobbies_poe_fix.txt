@@ -486,7 +486,7 @@ REPLACE_OR_CREATE:lobby_indian_national_congress = {
 			limit = {
 				OR = {
 					has_ideology = ideology:ideology_humanitarian
-					has_ideology = ideology:ideology_social_democrat
+					has_ideology = ideology:ideology_state_socialist
 					has_ideology = ideology:ideology_sovereignist_leader
 				}
 				leader = {

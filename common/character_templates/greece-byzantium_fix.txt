@@ -356,7 +356,7 @@ TRY_REPLACE:GRE_anastasios_polyzoidis = {
 	birth_date = 1802.12.25
 	ig_leader = yes
 	interest_group = ig_petty_bourgeoisie
-	ideology = ideology_social_democrat
+	ideology = ideology_state_socialist
 	home_region = STATE_BULGARIA
 	traits = {
 		charismatic

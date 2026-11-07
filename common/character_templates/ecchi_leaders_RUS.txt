@@ -116,7 +116,7 @@
 # 	culture = cu:russian
 # 	female = no
 # 	religion = rel:orthodox
-# 	ideology = ideology_social_democrat
+# 	ideology = ideology_state_socialist
 # 	interest_group = ig_rural_folk
 # 	dna = ecchi_dna_alexander_kerensky
 # 	birth_date = 1881.5.4
@@ -465,7 +465,7 @@ ecchi_rus_goldman = {
 #	home_region = STATE_MOSCOW
 #	female = no
 #	religion = rel:jewish
-#	ideology = ideology_social_democrat
+#	ideology = ideology_state_socialist
 #	interest_group = ig_intelligentsia
 #	dna = ecchi_dna_lev_kamenev
 #	birth_date = 1883.7.6

@@ -126,7 +126,7 @@
 #    culture = cu:spanish
 #
 #    religion = rel:catholic
-#    ideology = ideology_social_democrat
+#    ideology = ideology_state_socialist
 #    interest_group = ig_trade_unions
 #	dna = ecchi_dna_pablo_iglesias
 #    birth_date = 1850.10.17

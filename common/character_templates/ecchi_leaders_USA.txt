@@ -1481,7 +1481,7 @@ ecchi_usa_hill = {
 #     culture = cu:yankee
 # 
 #     religion = rel:protestant
-#     ideology = ideology_social_democrat
+#     ideology = ideology_state_socialist
 #     interest_group = ig_intelligentsia
 # 	dna = ecchi_dna_mark_twain
 #     birth_date = 1835.11.30

@@ -1224,7 +1224,7 @@ ecchi_gbr_harcourt = {
 #     culture = cu:british
 # 
 #     religion = rel:protestant
-#     ideology = ideology_social_democrat
+#     ideology = ideology_state_socialist
 #     interest_group = ig_intelligentsia
 # 	dna = ecchi_dna_john_maynard_keynes
 #     birth_date = 1883.6.5

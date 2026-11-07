@@ -899,7 +899,7 @@ REPLACE:AUS_anton_von_schmerling = {
 	birth_date = 1805.8.23
 	ig_leader = yes
 	interest_group = ig_petty_bourgeoisie
-	ideology = ideology_social_democrat
+	ideology = ideology_state_socialist
 	traits = {
 		cautious
 		experienced_diplomat
@@ -1094,7 +1094,7 @@ REPLACE:AUS_victor_adler = {
 	birth_date = 1852.6.24
 	ig_leader = yes
 	interest_group = ig_trade_unions
-	ideology = ideology_social_democrat
+	ideology = ideology_state_socialist
 	traits = {
 		charismatic
 		tactful
@@ -1172,7 +1172,7 @@ REPLACE:AUS_heinrich_oberwinder = {
 	birth_date = 1845.3.14
 	ig_leader = yes
 	interest_group = ig_trade_unions
-	ideology = ideology_social_democrat
+	ideology = ideology_state_socialist
 	traits = {
 		cautious
 		meticulous
