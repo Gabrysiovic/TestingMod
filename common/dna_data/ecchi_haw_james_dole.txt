@@ -1,6 +1,8 @@
 ﻿ecchi_dna_james_dole = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 225 189 225 189 }
  		skin_color={ 58 14 58 14 }
  		eye_color={ 49 145 49 145 }

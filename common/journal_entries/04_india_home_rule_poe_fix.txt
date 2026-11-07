@@ -6,6 +6,10 @@ REPLACE:je_india_home_rule = {
 
 	group = je_group_british_india_global
 
+	activation_description = {
+		always = yes
+	}
+
 	scripted_progress_bar = je_india_home_rule_progressbar
 
 	scripted_button = je_india_home_rule_request_democracy_permission
@@ -191,330 +195,344 @@ REPLACE:je_india_home_rule = {
 		}
 	}
 
-	complete = {
-		c:BIC ?= {
-			trigger_if = {
-				limit = {
-					is_subject = yes
-					NOT = {
-						has_variable = india_home_rule_failed
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			c:BIC ?= {
+				trigger_if = {
+					limit = {
+						is_subject = yes
+						NOT = {
+							has_variable = india_home_rule_failed
+						}
+					}
+					has_law_or_variant = law_type:law_elected_bureaucrats
+					country_has_voting_franchise = yes
+					custom_tooltip = {
+						text = simon_commission_complete_tt
+						scope:journal_entry = {
+							has_variable = simon_commission_complete
+						}
+					}
+					OR = {
+						has_law_or_variant = law_type:law_multicultural
+						active_law:lawgroup_citizenship ?= {
+							has_amendment = amendment_type:amendment_government_of_india_act
+						}
+					}
+					OR = {
+						is_subject_type = subject_type_dominion
+						is_subject_type = subject_type_protectorate
 					}
 				}
-				has_law_or_variant = law_type:law_elected_bureaucrats
-				country_has_voting_franchise = yes
 				custom_tooltip = {
-					text = simon_commission_complete_tt
+					text = indian_nationalism_above_500_tt
 					scope:journal_entry = {
-						has_variable = simon_commission_complete
+						"scripted_bar_progress(je_india_home_rule_progressbar)" >= 500
 					}
 				}
-				OR = {
-					has_law_or_variant = law_type:law_multicultural
-					active_law:lawgroup_citizenship ?= {
-						has_amendment = amendment_type:amendment_government_of_india_act
-					}
+				custom_tooltip = {
+					text = indian_self_governance_has_been_granted_tt
+					has_variable = indian_sovereignty_granted
 				}
-				OR = {
-					is_subject_type = subject_type_dominion
-					is_subject_type = subject_type_protectorate
-				}
-			}
-			custom_tooltip = {
-				text = indian_nationalism_above_500_tt
-				scope:journal_entry = {
-					"scripted_bar_progress(je_india_home_rule_progressbar)" >= 500
-				}
-			}
-			custom_tooltip = {
-				text = indian_self_governance_has_been_granted_tt
-				has_variable = indian_sovereignty_granted
 			}
 		}
-	}
-
-	on_complete = {
-		c:BIC ?= {
-			if = {
-				limit = {
-					is_subject = yes
-				}
-				overlord = {
-					# Used for scripted effects
-					save_scope_as = overlord_scope
-				}
-			}
-			# Free from jail all Indian National Movement agitators
-			if = {
-				limit = {
-					any_character_in_jail = {
-						has_variable = indian_national_movement_prisoner
-					}
-				}
-				custom_tooltip = {
-					text = all_indian_national_movement_agitators_freed_tt
-					every_character_in_jail = {
-						limit = {
-							has_variable = indian_national_movement_prisoner
-						}
-						free_character_from_void = yes
-						remove_variable = prison_country
-						remove_variable = prison_time_var
-					}
-				}
-			}
-			# Make India
-			change_tag = BHT
-			# Take Indian states and any princely states owned by overlord
-			if = {
-				limit = {
-					exists = scope:overlord_scope
-				}
-				custom_tooltip = {
-					text = all_indian_states_transferred_from_overlord_tt
-					transfer_all_indian_states_from_overlord = yes
-					transfer_all_princely_state_subjects_from_overlord = yes
-				}
-			}
-			# Change Cultures
-			custom_tooltip = {
-				text = south_asian_primary_cultures_tt
-				grant_indian_regional_cultures = yes
-			}
-			if = {
-				limit = {
-					has_variable = india_home_rule_failed
-					is_subject = yes
-				}
-				remove_non_indian_cultures = yes
-			}
-			# Update Religion
-			if = {
-				limit = {
-					has_variable = indian_partition_promised
-					 # Has the necessary land to create Pakistan
-					OR = {
-						has_state_in_state_region = STATE_PUNJAB
-						has_state_in_state_region = STATE_SINDH
-						has_state_in_state_region = STATE_KASHMIR
-						has_state_in_state_region = STATE_PASHTUNISTAN
-						has_state_in_state_region = STATE_BALUCHISTAN
-						has_state_in_state_region = STATE_QUETTA
-						has_state_in_state_region = STATE_EAST_BENGAL
-					}
-				}
-				set_state_religion = rel:hindu
-			} else = {
-				change_indian_state_religion = yes
-			}
-			# Other Effects
-			india_independence_ig_effects = yes
-			remove_bic_modifiers = yes
-			remove_indian_peaceful_protest_effects = yes
-			# Get rid of the East India Company in the off-chance it still exists
-			scope:overlord_scope ?= {
+		effect = {
+			c:BIC ?= {
 				if = {
 					limit = {
-						any_company = {
-							is_company_type = company_type:company_east_india_company
+						is_subject = yes
+					}
+					overlord = {
+						# Used for scripted effects
+						save_scope_as = overlord_scope
+					}
+				}
+				# Free from jail all Indian National Movement agitators
+				if = {
+					limit = {
+						any_character_in_jail = {
+							has_variable = indian_national_movement_prisoner
 						}
 					}
-					remove_company = company_type:company_east_india_company
-				}
-			}
-			# Change country type if applicable
-			if = {
-				limit = {
-					OR = {
-						is_subject = no
-						has_variable = india_home_rule_failed
+					custom_tooltip = {
+						text = all_indian_national_movement_agitators_freed_tt
+						every_character_in_jail = {
+							limit = {
+								has_variable = indian_national_movement_prisoner
+							}
+							free_character_from_void = yes
+							remove_variable = prison_country
+							remove_variable = prison_time_var
+						}
 					}
 				}
-				hidden_effect = {
-					set_country_type = recognized
-				}
-			}
-			# Make independent if seeking independence
-			if = {
-				limit = {
-					has_variable = india_home_rule_failed
-					is_subject = yes
-				}
-				make_independent = yes
-			}
-			# Don't go from Monarchy/Theocracy -> Monarchy/Theocracy
-			if = {
-				limit = {
-					OR = {
-						# Includes Colonial Administration
-						has_law_or_variant = law_type:law_monarchy
-						has_law_or_variant = law_type:law_social_monarchy
-						has_law_or_variant = law_type:law_theocracy
+				# Make India
+				change_tag = BHT
+				# Take Indian states and any princely states owned by overlord
+				if = {
+					limit = {
+						exists = scope:overlord_scope
+					}
+					custom_tooltip = {
+						text = all_indian_states_transferred_from_overlord_tt
+						transfer_all_indian_states_from_overlord = yes
+						transfer_all_princely_state_subjects_from_overlord = yes
 					}
 				}
-				activate_law = law_type:law_parliamentary_republic
-			}
-			# Remove some/all non-Indian characters
-			hidden_effect = {
+				# Change Cultures
+				custom_tooltip = {
+					text = south_asian_primary_cultures_tt
+					grant_indian_regional_cultures = yes
+				}
 				if = {
 					limit = {
 						has_variable = india_home_rule_failed
 						is_subject = yes
 					}
-					remove_non_indian_characters = yes
+					remove_non_indian_cultures = yes
 				}
-				else = {
-					remove_non_indian_politicians = yes
-				}
-			}
-			hidden_effect = {
-				every_political_lobby = {
-					limit = {
-						OR = {
-							is_political_lobby_type = lobby_pro_overlord
-							is_political_lobby_type = lobby_indian_national_congress
-						}
-					}
-					disband_political_lobby = yes
-				}
-			}
-			# Recalc IG support and call election
-			hidden_effect = {
-				recalculate_pop_ig_support = yes
+				# Update Religion
 				if = {
 					limit = {
-						country_has_voting_franchise = yes
+						has_variable = indian_partition_promised
+						# Has the necessary land to create Pakistan
+						OR = {
+							has_state_in_state_region = STATE_PUNJAB
+							has_state_in_state_region = STATE_SINDH
+							has_state_in_state_region = STATE_KASHMIR
+							has_state_in_state_region = STATE_PASHTUNISTAN
+							has_state_in_state_region = STATE_BALUCHISTAN
+							has_state_in_state_region = STATE_QUETTA
+							has_state_in_state_region = STATE_EAST_BENGAL
+						}
 					}
-					call_election = {
-						months = 6
+					set_state_religion = rel:hindu
+				} else = {
+					change_indian_state_religion = yes
+				}
+				# Other Effects
+				india_independence_ig_effects = yes
+				remove_bic_modifiers = yes
+				remove_indian_peaceful_protest_effects = yes
+				# Get rid of the East India Company in the off-chance it still exists
+				scope:overlord_scope ?= {
+					if = {
+						limit = {
+							any_company = {
+								is_company_type = company_type:company_east_india_company
+							}
+						}
+						remove_company = company_type:company_east_india_company
 					}
 				}
-			}
-			# Diplomatic Relations and Truce w/ Former Overlord
-			if = {
-				limit = {
-					exists = scope:overlord_scope
+				# Change country type if applicable
+				if = {
+					limit = {
+						OR = {
+							is_subject = no
+							has_variable = india_home_rule_failed
+						}
+					}
+					hidden_effect = {
+						set_country_type = recognized
+					}
+				}
+				# Make independent if seeking independence
+				if = {
+					limit = {
+						has_variable = india_home_rule_failed
+						is_subject = yes
+					}
+					make_independent = yes
+				}
+				# Don't go from Monarchy/Theocracy -> Monarchy/Theocracy
+				if = {
+					limit = {
+						OR = {
+							# Includes Colonial Administration
+							has_law_or_variant = law_type:law_monarchy
+							has_law_or_variant = law_type:law_social_monarchy
+							has_law_or_variant = law_type:law_theocracy
+						}
+					}
+					activate_law = law_type:law_parliamentary_republic
+				}
+				# Remove some/all non-Indian characters
+				hidden_effect = {
+					if = {
+						limit = {
+							has_variable = india_home_rule_failed
+							is_subject = yes
+						}
+						remove_non_indian_characters = yes
+					}
+					else = {
+						remove_non_indian_politicians = yes
+					}
 				}
 				hidden_effect = {
-					scope:overlord_scope = {
-						set_local_variable = {
-							name = relations_set
-							value = 0
-						}
-						if = {
-							limit = {
-								any_interest_group = {
-									is_in_government = yes
-									ig_is_indian_imperialist = yes
-								}
-							}
-							change_local_variable = {
-								name = relations_set
-								subtract = 30
+					every_political_lobby = {
+						limit = {
+							OR = {
+								is_political_lobby_type = lobby_pro_overlord
+								is_political_lobby_type = lobby_indian_national_congress
 							}
 						}
-						if = {
-							limit = {
-								any_interest_group = {
-									is_in_government = yes
-									ig_is_indian_reformist = yes
-								}
-							}
-							change_local_variable = {
-								name = relations_set
-								add = 30
-							}
-						}
-						set_relations = {
-							country = scope:india_scope
-							value = local_var:relations_set
-						}
-						create_bidirectional_truce = {
-							country = scope:india_scope
-							months = 60
-						}
+						disband_political_lobby = yes
 					}
 				}
-			}
-			# Give Union of India JE
-			if = {
-				limit = {
-					any_direct_subject = {
-						is_princely_state = yes
-					}
-				}
+				# Recalc IG support and call election
 				hidden_effect = {
-					add_journal_entry = {
-						type = je_federation_of_india
+					recalculate_pop_ig_support = yes
+					if = {
+						limit = {
+							country_has_voting_franchise = yes
+						}
+						call_election = {
+							months = 6
+						}
 					}
 				}
+				# Diplomatic Relations and Truce w/ Former Overlord
+				if = {
+					limit = {
+						exists = scope:overlord_scope
+					}
+					hidden_effect = {
+						scope:overlord_scope = {
+							set_local_variable = {
+								name = relations_set
+								value = 0
+							}
+							if = {
+								limit = {
+									any_interest_group = {
+										is_in_government = yes
+										ig_is_indian_imperialist = yes
+									}
+								}
+								change_local_variable = {
+									name = relations_set
+									subtract = 30
+								}
+							}
+							if = {
+								limit = {
+									any_interest_group = {
+										is_in_government = yes
+										ig_is_indian_reformist = yes
+									}
+								}
+								change_local_variable = {
+									name = relations_set
+									add = 30
+								}
+							}
+							set_relations = {
+								country = scope:india_scope
+								value = local_var:relations_set
+							}
+							create_bidirectional_truce = {
+								country = scope:india_scope
+								months = 60
+							}
+						}
+					}
+				}
+				# Give Union of India JE
+				if = {
+					limit = {
+						any_direct_subject = {
+							is_princely_state = yes
+						}
+					}
+					hidden_effect = {
+						add_journal_entry = {
+							type = je_federation_of_india
+						}
+					}
+				}
+				# Burmese Sovereignty Effects
+				indian_sovereignty_je_burma_effects = yes
+				# Partition India if Communal Divides failed
+				if = {
+					limit = {
+						has_variable = indian_partition_promised
+						# Has the necessary land to create Pakistan
+						OR = {
+							has_state_in_state_region = STATE_PUNJAB
+							has_state_in_state_region = STATE_SINDH
+							has_state_in_state_region = STATE_KASHMIR
+							has_state_in_state_region = STATE_PASHTUNISTAN
+							has_state_in_state_region = STATE_BALUCHISTAN
+							has_state_in_state_region = STATE_QUETTA
+							has_state_in_state_region = STATE_EAST_BENGAL
+						}
+					}
+					custom_tooltip = {
+						text = india_will_partition_tt
+						trigger_event = { id = indian_nation_events.7 }
+					}
+				}
+				trigger_event = { id = india_home_rule_events.1 popup = yes }
 			}
-			# Burmese Sovereignty Effects
-			indian_sovereignty_je_burma_effects = yes
-			# Partition India if Communal Divides failed
-			if = {
-				limit = {
-					has_variable = indian_partition_promised
-					# Has the necessary land to create Pakistan
-					OR = {
-						has_state_in_state_region = STATE_PUNJAB
-						has_state_in_state_region = STATE_SINDH
-						has_state_in_state_region = STATE_KASHMIR
-						has_state_in_state_region = STATE_PASHTUNISTAN
-						has_state_in_state_region = STATE_BALUCHISTAN
-						has_state_in_state_region = STATE_QUETTA
-						has_state_in_state_region = STATE_EAST_BENGAL
+		}
+	}
+
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			c:BIC ?= {
+				has_civil_war_from_movement_type = movement_type:movement_india_pan_national
+			}
+		}
+		effect = {
+			# The Indian War of Independence JE should automatically trigger
+			custom_tooltip = {
+				text = begin_indian_war_of_independence_tt
+				c:BIC ?= {
+					# So that Burma becomes independent for Indian War of Independence
+					set_variable = india_home_rule_failed
+				}
+			}
+		}
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			OR = {
+				custom_tooltip = {
+					text = bic_does_not_exist_tt
+					NOT = {
+						exists = c:BIC
 					}
 				}
 				custom_tooltip = {
-					text = india_will_partition_tt
-					trigger_event = { id = indian_nation_events.7 }
-				}
-			}
-			trigger_event = { id = india_home_rule_events.1 popup = yes }
-		}
-	}
-
-	fail = {
-		c:BIC ?= {
-			has_civil_war_from_movement_type = movement_type:movement_india_pan_national
-		}
-	}
-
-	on_fail = {
-		# The Indian War of Independence JE should automatically trigger
-		custom_tooltip = {
-			text = begin_indian_war_of_independence_tt
-			c:BIC ?= {
-				# So that Burma becomes independent for Indian War of Independence
-				set_variable = india_home_rule_failed
-			}
-		}
-	}
-
-	invalid = {
-		OR = {
-			custom_tooltip = {
-				text = bic_does_not_exist_tt
-				NOT = {
-					exists = c:BIC
-				}
-			}
-			custom_tooltip = {
-				text = no_indian_homeland_states_tt
-				c:BIC ?= {
-					NOT = {
-						any_scope_state = {
-							state_is_homeland_of_indian_cultures = yes
+					text = no_indian_homeland_states_tt
+					c:BIC ?= {
+						NOT = {
+							any_scope_state = {
+								state_is_homeland_of_indian_cultures = yes
+							}
 						}
 					}
 				}
-			}
-			custom_tooltip = {
-				text = another_country_formed_india_tt
-				AND = {
-					exists = c:BHT
-					c:BHT ?= {
-						is_revolutionary = no
+				custom_tooltip = {
+					text = another_country_formed_india_tt
+					AND = {
+						exists = c:BHT
+						c:BHT ?= {
+							is_revolutionary = no
+						}
 					}
 				}
 			}
@@ -1053,6 +1071,10 @@ REPLACE:je_india_nationalism_britain = {
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
 	group = je_group_british_india
+
+	activation_description = {
+		always = yes
+	}
 
 	immediate = {
 		# Dumping all these variables into this now-unused Journal Entry

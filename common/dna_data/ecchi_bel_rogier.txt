@@ -1,6 +1,8 @@
 ﻿ecchi_dna_charles_rogier = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 51 250 51 250 }
  		skin_color={ 94 17 94 17 }
  		eye_color={ 214 143 214 143 }

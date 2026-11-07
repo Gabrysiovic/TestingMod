@@ -1,6 +1,8 @@
 ﻿ecchi_dna_calixto_garcia={
     portrait_info = {
-	genes={ 		hair_color={ 202 213 202 213 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 202 213 202 213 }
  		skin_color={ 126 21 126 21 }
  		eye_color={ 178 52 178 52 }
  		gene_cheek_fat={ "cheek_fat" 95 "cheek_fat" 95 }

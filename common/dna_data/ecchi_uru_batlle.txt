@@ -1,6 +1,8 @@
 ﻿ecchi_dna_jose_batlle={
 	portrait_info = {
 	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 196 202 196 202 }
  		skin_color={ 0 0 0 0 }
  		eye_color={ 0 0 0 0 }

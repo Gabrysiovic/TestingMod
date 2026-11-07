@@ -1,6 +1,8 @@
 ﻿ecchi_dna_seh_dong_hong_beh = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 34 248 34 248 }
  		skin_color={ 141 204 141 204 }
  		eye_color={ 14 242 14 242 }

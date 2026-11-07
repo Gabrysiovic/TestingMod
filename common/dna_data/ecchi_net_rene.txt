@@ -1,6 +1,8 @@
 ﻿ecchi_net_de_marees_van_swinderen_rene={
     portrait_info = {
-	genes={ 		hair_color={ 46 233 46 233 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 46 233 46 233 }
  		skin_color={ 11 24 11 24 }
  		eye_color={ 165 135 165 135 }
  		gene_cheek_fat={ "cheek_fat" 124 "cheek_fat" 124 }

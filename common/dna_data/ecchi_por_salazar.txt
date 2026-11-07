@@ -1,6 +1,8 @@
 ﻿ecchi_dna_antonio_salazar={
     portrait_info = {
-	genes={ 		hair_color={ 210 181 210 181 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 210 181 210 181 }
  		skin_color={ 120 7 120 7 }
  		eye_color={ 134 63 134 63 }
  		gene_cheek_fat={ "cheek_fat" 178 "cheek_fat" 136 }

@@ -1,6 +1,8 @@
 ﻿ecchi_dna_henryk_sienkiewicz={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 138 147 216 17 }
  		skin_color={ 18 7 18 7 }
  		eye_color={ 149 18 149 18 }

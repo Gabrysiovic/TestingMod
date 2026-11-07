@@ -1,6 +1,8 @@
 ﻿ecchi_dna_hart_massey = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 188 180 188 180 }
  		skin_color={ 21 21 21 21 }
  		eye_color={ 222 150 222 150 }

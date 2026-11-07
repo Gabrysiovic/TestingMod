@@ -1,6 +1,8 @@
 ﻿ecchi_dna_constantine_paparrigopoulos={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 195 177 105 114 }
  		skin_color={ 79 17 79 17 }
  		eye_color={ 141 29 141 29 }

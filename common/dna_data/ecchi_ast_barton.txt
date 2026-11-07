@@ -1,6 +1,8 @@
 ﻿ecchi_dna_edmund_barton = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 222 190 222 190 }
  		skin_color={ 109 1 109 1 }
  		eye_color={ 119 128 119 128 }

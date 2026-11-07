@@ -1,6 +1,8 @@
 ﻿ecchi_dna_samori_ture = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 5 249 5 249 }
  		skin_color={ 170 228 170 228 }
  		eye_color={ 23 252 23 252 }

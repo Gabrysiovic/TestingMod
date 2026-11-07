@@ -3,7 +3,9 @@
 ecchi_dna_pavel_milyukov = {
      portrait_info = {
  
-     	genes={ 		hair_color={ 1 68 227 68 }
+     	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 1 68 227 68 }
  		skin_color={ 52 12 52 12 }
  		eye_color={ 57 71 57 71 }
  		gene_cheek_fat={ "cheek_fat" 195 "cheek_fat" 127 }

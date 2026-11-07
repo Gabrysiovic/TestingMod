@@ -1,6 +1,8 @@
 ﻿ecchi_dna_charwe_nyakasikana = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 93 236 93 236 }
  		skin_color={ 139 215 139 215 }
  		eye_color={ 55 240 55 240 }

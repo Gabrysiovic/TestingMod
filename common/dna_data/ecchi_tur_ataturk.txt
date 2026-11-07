@@ -1,6 +1,8 @@
 ﻿ecchi_dna_mustafa_kemal_ataturk = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 65 236 65 236 }
  		skin_color={ 114 98 86 136 }
  		eye_color={ 50 208 50 208 }

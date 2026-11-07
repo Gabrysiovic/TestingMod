@@ -1,6 +1,8 @@
 ﻿ecchi_dna_richard_cobden={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 237 9 237 9 }
  		skin_color={ 91 8 91 8 }
  		eye_color={ 145 36 145 36 }

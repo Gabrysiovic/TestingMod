@@ -3,7 +3,9 @@
 ecchi_dna_nikolai_bunge = {
      portrait_info = {
  
-      genes={ 		hair_color={ 138 197 206 185 }
+      genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 138 197 206 185 }
  		skin_color={ 126 4 126 4 }
  		eye_color={ 250 168 250 168 }
  		gene_cheek_fat={ "cheek_fat" 0 "cheek_fat" 134 }

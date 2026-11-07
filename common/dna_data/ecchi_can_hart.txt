@@ -1,6 +1,8 @@
 ﻿ecchi_dna_ezekiel_hart={
     portrait_info = {
-	genes={ 		hair_color={ 66 152 148 110 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 66 152 148 110 }
  		skin_color={ 126 14 126 14 }
  		eye_color={ 156 153 156 153 }
  		gene_cheek_fat={ "cheek_fat" 95 "cheek_fat" 95 }

@@ -1,7 +1,9 @@
 ﻿### Edward VII
 dna_gbr_edward_07 = {
 	portrait_info = {
-		genes={         
+		genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+         
 			hair_color={ 172 146 0 0 }
 			skin_color={ 0 0 0 0 }
 			eye_color={ 200 121 0 0 }
@@ -117,7 +119,9 @@ dna_gbr_edward_07 = {
 ### George V
 dna_gbr_george_05 = {
 	portrait_info = {
-		genes={         
+		genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+         
 			hair_color={ 225 163 0 0 }
 			skin_color={ 0 0 0 0 }
 			eye_color={ 221 15 0 0 }
@@ -233,7 +237,9 @@ dna_gbr_george_05 = {
 ### Edward VII
 dna_gbr_edward_08 = {
 	portrait_info = {
-		genes={         
+		genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+         
 			hair_color={ 135 110 0 0 }
 			skin_color={ 0 0 0 0 }
 			eye_color={ 221 15 0 0 }

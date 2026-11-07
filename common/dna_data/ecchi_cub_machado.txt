@@ -1,6 +1,8 @@
 ﻿ecchi_dna_gerardo_machado={
     portrait_info = {
-	genes={ 		hair_color={ 0 245 0 245 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 0 245 0 245 }
  		skin_color={ 113 0 113 0 }
  		eye_color={ 155 42 155 42 }
  		gene_cheek_fat={ "cheek_fat" 171 "cheek_fat" 171 }

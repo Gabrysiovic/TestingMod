@@ -1,6 +1,8 @@
 ﻿ecchi_dna_antonio_maceo={
     portrait_info = {
-	genes={ 		hair_color={ 228 156 228 156 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 228 156 228 156 }
  		skin_color={ 0 58 0 0 }
  		eye_color={ 0 0 0 0 }
  		gene_cheek_fat={ "cheek_fat" 127 "cheek_fat" 127 }

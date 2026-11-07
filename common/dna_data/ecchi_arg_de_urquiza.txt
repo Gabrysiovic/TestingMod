@@ -1,6 +1,8 @@
 ﻿ecchi_dna_justo_jose_de_urquiza = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 18 232 18 232 }
  		skin_color={ 152 127 152 127 }
  		eye_color={ 57 247 57 247 }

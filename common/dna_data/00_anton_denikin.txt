@@ -3,7 +3,9 @@
 ecchi_dna_anton_denikin = {
      portrait_info = {
  
-      genes={ 		hair_color={ 167 240 167 240 }
+      genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 167 240 167 240 }
  		skin_color={ 242 0 122 27 }
  		eye_color={ 211 173 154 22 }
  		gene_cheek_fat={ "cheek_fat" 175 "cheek_fat" 127 }

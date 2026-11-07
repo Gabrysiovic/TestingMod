@@ -1,6 +1,8 @@
 ﻿ecchi_dna_joseph_cinque = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 122 232 122 232 }
  		skin_color={ 172 213 172 213 }
  		eye_color={ 15 243 15 243 }

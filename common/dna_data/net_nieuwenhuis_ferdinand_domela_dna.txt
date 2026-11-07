@@ -3,6 +3,8 @@
 net_nieuwenhuis_ferdinand_domela_dna = {
 	portrait_info = {
 		genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 			hair_color={ 158 193 0 0 }
 			skin_color={ 0 6 0 0 }
 			eye_color={ 110 114 0 0 }

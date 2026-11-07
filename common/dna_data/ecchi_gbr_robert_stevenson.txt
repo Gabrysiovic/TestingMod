@@ -1,6 +1,8 @@
 ﻿ecchi_gbr_stevenson_robert={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 197 146 250 114 }
  		skin_color={ 64 9 64 9 }
  		eye_color={ 215 63 215 63 }

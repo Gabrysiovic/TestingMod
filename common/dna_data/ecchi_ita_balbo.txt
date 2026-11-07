@@ -1,6 +1,8 @@
 ﻿ecchi_dna_ita_balbo={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 11 145 11 245 }
  		skin_color={ 68 14 68 14 }
  		eye_color={ 153 43 153 43 }

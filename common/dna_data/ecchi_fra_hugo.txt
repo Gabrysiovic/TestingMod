@@ -1,6 +1,8 @@
 ﻿ecchi_dna_victor_hugo = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 81 247 81 247 }
  		skin_color={ 42 18 42 18 }
  		eye_color={ 59 190 59 190 }

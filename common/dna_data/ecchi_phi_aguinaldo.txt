@@ -1,6 +1,8 @@
 ﻿ecchi_dna_emilio_aguinaldo = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 38 229 38 229 }
  		skin_color={ 131 94 131 94 }
  		eye_color={ 251 164 251 164 }

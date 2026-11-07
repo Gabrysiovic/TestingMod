@@ -1,6 +1,8 @@
 ﻿dna_johan_rudolph_thorbecke = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 197 184 5 234 }
  		skin_color={ 17 25 17 25 }
  		eye_color={ 246 180 246 180 }

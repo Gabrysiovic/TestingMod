@@ -1,6 +1,8 @@
 ﻿ecchi_dna_jose_marti = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 70 242 70 242 }
  		skin_color={ 135 127 135 127 }
  		eye_color={ 31 250 31 250 }

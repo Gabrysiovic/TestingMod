@@ -1,6 +1,8 @@
 ﻿dna_abraham_kuyper = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 184 205 184 205 }
  		skin_color={ 81 11 81 11 }
  		eye_color={ 240 168 240 168 }

@@ -1,6 +1,8 @@
 ﻿ecchi_dna_franz_kafka = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 122 238 122 238 }
  		skin_color={ 96 4 96 4 }
  		eye_color={ 197 154 197 154 }

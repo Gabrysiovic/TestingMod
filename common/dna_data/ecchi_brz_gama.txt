@@ -1,6 +1,8 @@
 ﻿ecchi_dna_luis_gama = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 15 237 15 237 }
  		skin_color={ 162 216 162 216 }
  		eye_color={ 32 242 32 242 }

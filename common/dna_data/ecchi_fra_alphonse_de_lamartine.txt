@@ -1,6 +1,8 @@
 ﻿ecchi_dna_alphonse_de_lamartine={
 	portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 186 142 186 142 }
  		skin_color={ 0 0 0 0 }
  		eye_color={ 0 0 0 0 }

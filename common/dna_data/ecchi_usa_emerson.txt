@@ -1,6 +1,8 @@
 ﻿ecchi_dna_ralph_emerson = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 114 241 114 241 }
  		skin_color={ 106 5 106 5 }
  		eye_color={ 64 148 64 148 }

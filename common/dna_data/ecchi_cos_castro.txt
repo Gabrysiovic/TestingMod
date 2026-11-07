@@ -1,6 +1,8 @@
 ﻿ecchi_dna_jose_maria_castro = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 111 248 111 248 }
  		skin_color={ 96 58 128 127 }
  		eye_color={ 70 248 70 248 }

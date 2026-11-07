@@ -1,6 +1,8 @@
 ﻿ecchi_dna_francisco_de_souza = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 14 233 14 233 }
  		skin_color={ 173 164 149 127 }
  		eye_color={ 66 248 66 248 }

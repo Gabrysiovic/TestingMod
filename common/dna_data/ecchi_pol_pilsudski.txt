@@ -1,6 +1,8 @@
 ﻿ecchi_dna_jozef_pilsudski = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 93 240 93 240 }
  		skin_color={ 64 12 64 12 }
  		eye_color={ 46 154 46 154 }

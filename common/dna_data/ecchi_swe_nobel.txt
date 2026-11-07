@@ -1,6 +1,8 @@
 ﻿ecchi_dna_alfred_nobel = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 199 168 199 168 }
  		skin_color={ 71 18 71 18 }
  		eye_color={ 207 173 207 173 }

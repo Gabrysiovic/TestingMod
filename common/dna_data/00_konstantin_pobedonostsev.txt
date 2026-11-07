@@ -1,7 +1,9 @@
 ﻿#uv+6yogAaBwhmSGZAMoAfwAPAJMAhACEADIAfwCSAJgAXQCYACgAfwCuAEoAfwB/AH8AfwByAHIAjQCNAG4AbgDOAH8AiwCLAJYAlgC/AHMA/wB8AJIAkgCRAJEAlACUAF0AqwCYAJgAfwB/AH8AfwBrAH8AigBOAJUAlQB8AHwAfwB/AH8AfwB/AH8ApwC8AL8AfwDdAH8AfwB/AEAAQACHAIcAfwB/ADkAOQCoAKgAAACrAH8AfwB2AHYAAwBoAIQAhAB/AH8ArgB/AKMAowB/AH8AlgCWAGYAZgB/AH8AkACQAIoAigB/AH8AfwB/AH8AfwB/AH8AigCKAH8AfwBuAKwAfwB/AM4AxQDAAH8AfwB/AJoAfwCnAKcA1wB/AH8AfwB/AH8AvQC9AIMAtgDnAOcAJgCOAH8AfwCtAEMAfwB/AH8AfwB/AH8AfwB/AX8BfwB/AH8AfwB/AP8AfwL/Af8C/wH/Av8B/wF/AH8AAAAAAF4CqgEHAQcB/wL/AggCCAIUAhQI/whbA3sDewabBsQBAAYcBgAGJQQAAAAAAAAAAAAAAAAAAAA=
 ecchi_dna_konstantin_pobedonostsev = {
      portrait_info = {
-      genes={ 		hair_color={ 186 255 186 202 }
+      genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 186 255 186 202 }
  		skin_color={ 136 0 104 28 }
  		eye_color={ 33 153 33 153 }
  		gene_cheek_fat={ "cheek_fat" 202 "cheek_fat" 127 }

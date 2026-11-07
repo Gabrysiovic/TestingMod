@@ -1,6 +1,8 @@
 ﻿ecchi_dna_jose_de_san_martin = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 80 250 80 250 }
  		skin_color={ 140 127 140 127 }
  		eye_color={ 47 242 47 242 }

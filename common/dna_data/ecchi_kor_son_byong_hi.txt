@@ -1,6 +1,8 @@
 ﻿ecchi_dna_song_byong_hi = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 106 229 106 229 }
  		skin_color={ 51 76 51 76 }
  		eye_color={ 12 243 12 243 }

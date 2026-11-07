@@ -1,6 +1,8 @@
 ﻿ecchi_dna_boleslaw_prus = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 52 230 52 230 }
  		skin_color={ 72 4 72 4 }
  		eye_color={ 105 142 105 142 }

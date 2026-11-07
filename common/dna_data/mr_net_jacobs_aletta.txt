@@ -3,6 +3,8 @@
 mr_net_jacobs_aletta = {
 	portrait_info = {
 		genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 			hair_color={ 160 188 0 0 }
 			skin_color={ 0 5 0 0 }
 			eye_color={ 22 197 0 0 }

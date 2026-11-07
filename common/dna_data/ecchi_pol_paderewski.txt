@@ -1,6 +1,8 @@
 ﻿ecchi_dna_ignacy_paderewski={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 39 250 39 250 }
  		skin_color={ 29 4 29 4 }
  		eye_color={ 169 81 169 81 }

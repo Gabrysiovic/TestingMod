@@ -2,7 +2,9 @@
 ecchi_dna_yevhen_hrebinka = {
      portrait_info = {
  
-      genes={ 		hair_color={ 87 247 87 247 }
+      genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 87 247 87 247 }
  		skin_color={ 62 10 62 10 }
  		eye_color={ 207 183 207 183 }
  		gene_cheek_fat={ "cheek_fat" 139 "cheek_fat" 139 }

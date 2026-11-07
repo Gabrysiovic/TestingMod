@@ -1,6 +1,8 @@
 ﻿ecchi_dna_giovanni_gentile={
     portrait_info = {
-	genes={ 		hair_color={ 183 147 167 64 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 183 147 167 64 }
  		skin_color={ 39 7 39 7 }
  		eye_color={ 172 69 172 69 }
  		gene_cheek_fat={ "cheek_fat" 139 "cheek_fat" 139 }

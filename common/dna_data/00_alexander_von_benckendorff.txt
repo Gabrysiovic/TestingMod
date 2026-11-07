@@ -3,7 +3,9 @@
 ecchi_dna_alexander_von_benckendorff = {
      portrait_info = {
  
-      genes={ 		hair_color={ 197 200 171 185 }
+      genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 197 200 171 185 }
  		skin_color={ 82 11 82 11 }
  		eye_color={ 180 193 180 193 }
  		gene_cheek_fat={ "cheek_fat" 137 "cheek_fat" 127 }

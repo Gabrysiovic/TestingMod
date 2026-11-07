@@ -2,7 +2,9 @@
 
 ecchi_dna_mikhail_lazarev = {
      portrait_info = {
-     genes={ 		hair_color={ 0 255 0 0 }
+     genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 0 255 0 0 }
  		skin_color={ 182 61 0 0 }
  		eye_color={ 255 189 0 0 }
  		gene_cheek_fat={ "cheek_fat" 255 "cheek_fat" 127 }

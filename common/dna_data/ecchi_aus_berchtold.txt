@@ -1,6 +1,8 @@
 ﻿ecchi_dna_leopold_berchtold={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 139 141 139 80 }
  		skin_color={ 15 12 15 12 }
  		eye_color={ 39 181 39 181 }

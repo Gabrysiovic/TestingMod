@@ -1,6 +1,8 @@
 ﻿ecchi_dna_otto_bauer = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 52 230 52 230 }
  		skin_color={ 124 28 124 28 }
  		eye_color={ 140 157 140 157 }

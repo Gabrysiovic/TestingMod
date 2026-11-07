@@ -3,7 +3,9 @@
 ecchi_dna_maxim_gorky = {
      portrait_info = {
  
-      genes={ 		hair_color={ 117 207 207 192 }
+      genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 117 207 207 192 }
  		skin_color={ 6 7 6 7 }
  		eye_color={ 184 193 63 159 }
  		gene_cheek_fat={ "cheek_fat" 57 "cheek_fat" 127 }

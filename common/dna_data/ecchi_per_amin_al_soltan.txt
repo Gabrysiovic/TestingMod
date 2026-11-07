@@ -1,6 +1,8 @@
 ﻿ecchi_dna_amin_al_soltan={
     portrait_info = {
-	genes={ 		hair_color={ 16 237 16 237 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 16 237 16 237 }
  		skin_color={ 175 131 175 131 }
  		eye_color={ 23 204 23 204 }
  		gene_cheek_fat={ "cheek_fat" 175 "cheek_fat" 175 }

@@ -1,6 +1,8 @@
 ﻿ecchi_dna_isaac_butt={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 4 243 4 243 }
  		skin_color={ 77 20 77 20 }
  		eye_color={ 137 111 137 111 }

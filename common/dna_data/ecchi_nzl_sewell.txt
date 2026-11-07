@@ -1,6 +1,8 @@
 ﻿ecchi_dna_henry_sewell = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 190 171 190 171 }
  		skin_color={ 47 27 47 27 }
  		eye_color={ 13 198 13 198 }

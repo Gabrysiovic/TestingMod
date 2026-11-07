@@ -1,6 +1,8 @@
 ﻿ecchi_dna_louis_riel = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 26 250 26 250 }
  		skin_color={ 154 87 127 153 }
  		eye_color={ 31 178 31 178 }

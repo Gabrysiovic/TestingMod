@@ -1,6 +1,8 @@
 ﻿ecchi_dna_irineu_de_sousa = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 158 89 25 229 }
  		skin_color={ 141 108 141 127 }
  		eye_color={ 85 242 85 242 }

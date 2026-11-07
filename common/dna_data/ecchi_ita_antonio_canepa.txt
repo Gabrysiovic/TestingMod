@@ -1,6 +1,8 @@
 ﻿ecchi_dna_ita_canepa={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 12 234 12 234 }
  		skin_color={ 56 25 56 25 }
  		eye_color={ 202 84 202 84 }

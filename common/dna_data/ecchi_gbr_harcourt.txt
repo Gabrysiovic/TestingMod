@@ -1,6 +1,8 @@
 ﻿ecchi_dna_william_harcourt = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 157 108 157 108 }
  		skin_color={ 127 15 127 15 }
  		eye_color={ 131 122 131 122 }

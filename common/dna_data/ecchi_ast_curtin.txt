@@ -1,6 +1,8 @@
 ﻿ecchi_dna_john_curtin = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 203 203 203 203 }
  		skin_color={ 12 20 12 20 }
  		eye_color={ 222 197 222 197 }

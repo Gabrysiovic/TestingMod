@@ -1,6 +1,8 @@
 ﻿mr_nor_nansen_fridtjof = {
 	portrait_info = {
 		genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 			hair_color={ 3 59 0 0 }
 			skin_color={ 0 0 0 0 }
 			eye_color={ 200 0 0 0 }

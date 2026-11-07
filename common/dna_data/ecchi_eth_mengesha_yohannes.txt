@@ -1,6 +1,8 @@
 ﻿ecchi_dna_mengesha_yohannes = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 175 223 175 223 }
  		skin_color={ 209 188 209 188 }
  		eye_color={ 31 247 31 247 }

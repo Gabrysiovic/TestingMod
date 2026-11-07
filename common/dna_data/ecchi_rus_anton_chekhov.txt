@@ -1,6 +1,8 @@
 ﻿dna_anton_chekhov={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 223 173 223 173 }
  		skin_color={ 58 26 58 26 }
  		eye_color={ 122 136 122 136 }

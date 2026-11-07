@@ -1,6 +1,8 @@
 ﻿ecchi_dna_tahirih_qurrat_al_ayn={
     portrait_info = {
-	genes={ 		hair_color={ 5 240 5 240 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 5 240 5 240 }
  		skin_color={ 163 160 163 160 }
  		eye_color={ 77 195 77 195 }
  		gene_cheek_fat={ "cheek_fat" 89 "cheek_fat" 89 }

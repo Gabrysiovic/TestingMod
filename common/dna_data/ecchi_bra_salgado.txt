@@ -1,6 +1,8 @@
 ﻿ecchi_dna_plinio_salgado={
     portrait_info = {
-	genes={ 		hair_color={ 31 234 31 234 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 31 234 31 234 }
  		skin_color={ 115 11 115 11 }
  		eye_color={ 240 39 240 39 }
  		gene_cheek_fat={ "cheek_fat" 133 "cheek_fat" 133 }

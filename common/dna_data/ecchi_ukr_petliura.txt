@@ -1,6 +1,8 @@
 ﻿ecchi_dna_symon_petliura={
     portrait_info = {
-	genes={ 		hair_color={ 3 243 3 243 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 3 243 3 243 }
  		skin_color={ 0 0 0 0 }
  		eye_color={ 0 0 0 0 }
  		gene_cheek_fat={ "cheek_fat" 127 "cheek_fat" 127 }

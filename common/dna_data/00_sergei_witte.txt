@@ -3,7 +3,9 @@
 ecchi_dna_sergei_witte = {
      portrait_info = {
  
-      genes={ 		hair_color={ 160 184 224 172 }
+      genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 160 184 224 172 }
  		skin_color={ 27 2 27 2 }
  		eye_color={ 101 203 101 159 }
  		gene_cheek_fat={ "cheek_fat" 93 "cheek_fat" 127 }

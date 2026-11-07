@@ -1,6 +1,8 @@
 ﻿ecchi_dna_tommy_solomon = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 21 252 21 252 }
  		skin_color={ 73 195 96 167 }
  		eye_color={ 80 242 80 242 }

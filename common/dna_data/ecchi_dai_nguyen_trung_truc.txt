@@ -1,6 +1,8 @@
 ﻿ecchi_dna_nguyen_trung_truc = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 57 233 57 233 }
  		skin_color={ 151 113 151 113 }
  		eye_color={ 36 168 36 168 }

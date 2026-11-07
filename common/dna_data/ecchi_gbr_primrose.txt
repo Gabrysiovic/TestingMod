@@ -1,6 +1,8 @@
 ﻿ecchi_dna_archibald_primrose = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 209 193 209 193 }
  		skin_color={ 2 13 2 13 }
  		eye_color={ 255 140 255 140 }

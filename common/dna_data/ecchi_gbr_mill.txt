@@ -1,6 +1,8 @@
 ﻿ecchi_dna_john_stuart_mill = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 174 199 174 199 }
  		skin_color={ 48 7 48 7 }
  		eye_color={ 250 141 250 141 }

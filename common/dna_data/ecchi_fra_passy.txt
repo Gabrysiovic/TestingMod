@@ -1,6 +1,8 @@
 ﻿ecchi_dna_frederic_passy={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 223 52 223 52 }
  		skin_color={ 64 21 64 21 }
  		eye_color={ 227 63 227 63 }

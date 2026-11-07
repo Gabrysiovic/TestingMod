@@ -1,6 +1,8 @@
 ﻿ecchi_dna_isa_boletini = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 79 231 79 231 }
  		skin_color={ 104 84 104 14 }
  		eye_color={ 220 164 220 164 }

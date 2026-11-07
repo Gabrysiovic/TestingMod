@@ -1,6 +1,8 @@
 ﻿ecchi_dna_charles_dickens = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 17 239 17 239 }
  		skin_color={ 102 11 102 11 }
  		eye_color={ 54 147 54 147 }

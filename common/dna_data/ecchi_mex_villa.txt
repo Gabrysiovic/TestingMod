@@ -1,6 +1,8 @@
 ﻿ecchi_dna_pancho_villa = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 35 243 35 243 }
  		skin_color={ 152 127 152 127 }
  		eye_color={ 56 247 56 247 }

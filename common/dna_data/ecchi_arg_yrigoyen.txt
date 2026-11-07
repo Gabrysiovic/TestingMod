@@ -1,6 +1,8 @@
 ﻿ecchi_dna_hipolito_yrigoyen={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 183 206 183 206 }
  		skin_color={ 106 18 106 18 }
  		eye_color={ 83 133 83 133 }

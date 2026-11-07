@@ -1,6 +1,8 @@
 ﻿ecchi_dna_lucretia_mott={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 145 126 42 245 }
  		skin_color={ 60 2 60 2 }
  		eye_color={ 52 149 52 149 }

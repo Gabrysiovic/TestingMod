@@ -1,6 +1,8 @@
 ﻿ecchi_dna_john_russell = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 78 235 78 235 }
  		skin_color={ 105 4 105 4 }
  		eye_color={ 150 174 150 174 }

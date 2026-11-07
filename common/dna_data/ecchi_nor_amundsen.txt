@@ -1,6 +1,8 @@
 ﻿ecchi_dna_roald_amundsen = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 194 203 194 203 }
  		skin_color={ 48 29 48 29 }
  		eye_color={ 214 133 214 133 }

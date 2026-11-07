@@ -1,6 +1,8 @@
 ﻿ecchi_dna_ferdinand_lasalle={
     portrait_info = {
-	genes={ 		hair_color={ 148 101 148 101 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 148 101 148 101 }
  		skin_color={ 47 9 47 9 }
  		eye_color={ 33 104 33 104 }
  		gene_cheek_fat={ "cheek_fat" 139 "cheek_fat" 139 }

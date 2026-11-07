@@ -1,6 +1,8 @@
 ﻿ecchi_dna_pyotr_krasnov = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 92 252 92 252 }
  		skin_color={ 108 9 108 9 }
  		eye_color={ 206 199 206 199 }

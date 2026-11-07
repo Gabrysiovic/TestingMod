@@ -1,6 +1,8 @@
 ﻿ecchi_dna_karl_lueger = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 225 168 225 168 }
  		skin_color={ 100 22 100 22 }
  		eye_color={ 212 154 212 154 }

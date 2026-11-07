@@ -1,6 +1,8 @@
 ﻿ecchi_dna_louis_blanc={
 	portrait_info = {
 	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 189 160 174 69 }
  		skin_color={ 36 24 36 24 }
  		eye_color={ 217 152 217 152 }

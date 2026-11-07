@@ -1,6 +1,8 @@
 ﻿dna_king_christian_08 = {
     portrait_info = {
-        genes={ 		
+        genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 			hair_color={ 253 169 207 169 }
 			skin_color={ 99 12 99 12 }
 			eye_color={ 218 201 218 201 }
@@ -122,7 +124,9 @@
 
 dna_king_fredrick_07 = {
     portrait_info = {
-        genes={ 		
+        genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 			hair_color={ 255 193 173 203 }
 			skin_color={ 48 16 48 16 }
 			eye_color={ 24 172 24 172 }
@@ -244,7 +248,9 @@ dna_king_fredrick_07 = {
 
 dna_king_christian_09 = {
     portrait_info = {
-        genes={ 		
+        genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 			hair_color={ 255 182 211 182 }
 			skin_color={ 88 13 88 13 }
 			eye_color={ 63 192 63 192 }
@@ -366,7 +372,9 @@ dna_king_christian_09 = {
 
 dna_prince_julius = {
     portrait_info = {
-        genes={ 		
+        genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 			hair_color={ 253 170 227 170 }
 			skin_color={ 127 29 127 29 }
 			eye_color={ 59 187 142 187 }
@@ -489,6 +497,8 @@ dna_prince_julius = {
 dna_king_frederick_08 = {
     portrait_info = {
         genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 			hair_color={ 253 170 227 170 }
 			skin_color={ 127 29 127 29 }
 			eye_color={ 59 187 142 187 }
@@ -610,7 +620,9 @@ dna_king_frederick_08 = {
 
 dna_king_christian_10 = {
     portrait_info = {
-        genes={ 		
+        genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 			hair_color={ 212 150 226 184 }
 			skin_color={ 91 7 91 7 }
 			eye_color={ 90 163 218 163 }
@@ -733,6 +745,8 @@ dna_king_christian_10 = {
 dna_king_frederick_09 = {
     portrait_info = {
         genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 			hair_color={ 238 164 229 200 }
 			skin_color={ 3 16 3 16 }
 			eye_color={ 225 215 14 141 }

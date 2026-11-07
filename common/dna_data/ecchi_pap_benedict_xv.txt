@@ -1,6 +1,8 @@
 ﻿ecchi_dna_benedict_xv = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 196 237 196 182 }
  		skin_color={ 105 15 105 15 }
  		eye_color={ 203 195 203 195 }

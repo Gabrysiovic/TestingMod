@@ -3,7 +3,9 @@
 dna_sergey_uvarov = {
      portrait_info = {
  
-      genes={ 		hair_color={ 0 249 3 236 }
+      genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 0 249 3 236 }
  		skin_color={ 99 21 4 21 }
  		eye_color={ 19 91 27 70 }
  		gene_cheek_fat={ "cheek_fat" 45 "cheek_fat" 127 }

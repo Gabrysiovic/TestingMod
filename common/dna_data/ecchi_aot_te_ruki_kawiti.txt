@@ -1,6 +1,8 @@
 ﻿ecchi_dna_te_ruki_kawiti = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 14 252 14 252 }
  		skin_color={ 117 167 117 167 }
  		eye_color={ 86 252 86 252 }

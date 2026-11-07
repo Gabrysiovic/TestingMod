@@ -3,6 +3,10 @@
 
 	group = je_group_historical_content
 
+	activation_description = {
+		always = yes
+	}
+
     scripted_progress_bar = je_princely_states_dissent_progress_bar
 
     scripted_button = je_princely_states_spread_dissent
@@ -181,84 +185,97 @@
         }
     }
 
-    complete = {
-        custom_tooltip = {
-            text = sepoy_mutiny_triggered_fomenting_rebellion_tt
-            c:BIC ?= {
-                has_journal_entry = je_sepoy_mutiny
-            }
-        }
-    }
+    outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = sepoy_mutiny_triggered_fomenting_rebellion_tt
+				c:BIC ?= {
+					has_journal_entry = je_sepoy_mutiny
+				}
+			}
+		}
+		effect = {
+			#trigger_event = { id = princely_states.2 }
+			custom_tooltip = join_indian_rebellion_tt
+			custom_tooltip = gain_colonial_indian_territory_rebellion_tt
+		}
+	}
 
-    on_complete = {
-        #trigger_event = { id = princely_states.2 }
-        custom_tooltip = join_indian_rebellion_tt
-        custom_tooltip = gain_colonial_indian_territory_rebellion_tt
-    }
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = indian_rebellion_averted_fomenting_rebellion_tt
+				c:BIC ?= {
+					# Variable set when BIC completes (timeout) je_unasy_raj
+					has_variable = company_rule_enduring
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				trigger_event = { id = princely_states.2 }
+			}
+			show_as_tooltip = {
+				execute_event_option = { event = princely_states.2 option = 0 }
+			}
+		}
+	}
 
-    invalid = {
-        OR = {
-            NOT = {
-                exists = c:BIC
-            }
-            trigger_if = {
-                limit = {
-                    scope:journal_entry ?= {
-                        has_variable = started_subject
-                    }
-                }
-                is_subject = no
-            }
-            AND = {
-                is_subject = yes
-                NOR = {
-                    is_direct_subject_of = c:BIC
-                    AND = {
-                        c:BIC ?= {
-                            is_subject = yes
-                        }
-                        is_direct_subject_of = c:BIC.overlord
-                    }
-                }
-            }
-        }
-    }
-
-    on_invalid = {
-        if = {
-            limit = {
-                has_variable = sepoy_mutiny_instigator
-            }
-            remove_variable = sepoy_mutiny_instigator
-        }
-        c:BIC ?= {
-            je:je_uneasy_raj ?= {
-                remove_list_variable = {
-                    name = fomenting_rebellion_countries
-                    target = ROOT
-                }
-            }
-        }
-    }
-
-    fail = {
-        custom_tooltip = {
-            text = indian_rebellion_averted_fomenting_rebellion_tt
-            c:BIC ?= {
-                # Variable set when BIC completes (timeout) je_unasy_raj
-                has_variable = company_rule_enduring
-            }
-        }
-    }
-
-    on_fail = {
-        hidden_effect = {
-            trigger_event = { id = princely_states.2 }
-        }
-        show_as_tooltip = {
-            execute_event_option = { event = princely_states.2 option = 0 }
-        }
-    }
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			OR = {
+				NOT = {
+					exists = c:BIC
+				}
+				trigger_if = {
+					limit = {
+						scope:journal_entry ?= {
+							has_variable = started_subject
+						}
+					}
+					is_subject = no
+				}
+				AND = {
+					is_subject = yes
+					NOR = {
+						is_direct_subject_of = c:BIC
+						AND = {
+							c:BIC ?= {
+								is_subject = yes
+							}
+							is_direct_subject_of = c:BIC.overlord
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_variable = sepoy_mutiny_instigator
+				}
+				remove_variable = sepoy_mutiny_instigator
+			}
+			c:BIC ?= {
+				je:je_uneasy_raj ?= {
+					remove_list_variable = {
+						name = fomenting_rebellion_countries
+						target = ROOT
+					}
+				}
+			}
+		}
+	}
 
     on_monthly_pulse = {
         effect = {

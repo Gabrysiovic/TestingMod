@@ -1,6 +1,8 @@
 ﻿ecchi_dna_jemmy_wood = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 117 203 38 255 }
  		skin_color={ 124 23 124 23 }
  		eye_color={ 215 59 215 59 }

@@ -1,6 +1,8 @@
 ﻿ecchi_dna_grigory_zinoviev={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 27 249 27 249 }
  		skin_color={ 84 28 84 28 }
  		eye_color={ 226 101 226 101 }

@@ -2,7 +2,9 @@
 dna_sergey_markov = {
      portrait_info = {
  
-      genes={ 		hair_color={ 255 240 100 240 }
+      genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 255 240 100 240 }
  		skin_color={ 87 16 44 16 }
  		eye_color={ 215 209 179 174 }
  		gene_cheek_fat={ "cheek_fat" 181 "cheek_fat" 139 }

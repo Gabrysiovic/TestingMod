@@ -1,6 +1,8 @@
 ﻿ecchi_dna_anita_malfatti={
     portrait_info = {
-	genes={ 		hair_color={ 165 201 165 92 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 165 201 165 92 }
  		skin_color={ 20 24 20 24 }
  		eye_color={ 128 102 128 102 }
  		gene_cheek_fat={ "cheek_fat" 106 "cheek_fat" 106 }

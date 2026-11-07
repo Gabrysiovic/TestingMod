@@ -1,6 +1,8 @@
 ﻿ecchi_dna_josip_tito={
     portrait_info = {
-	genes={ 		hair_color={ 178 142 178 82 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 178 142 178 82 }
  		skin_color={ 56 7 56 7 }
  		eye_color={ 82 114 82 114 }
  		gene_cheek_fat={ "cheek_fat" 127 "cheek_fat" 127 }

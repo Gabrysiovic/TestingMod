@@ -1,6 +1,8 @@
 ﻿ecchi_dna_francisco_silvela={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 19 240 19 240 }
  		skin_color={ 68 2 68 2 }
  		eye_color={ 86 125 86 125 }

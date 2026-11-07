@@ -1,6 +1,8 @@
 ﻿dna_semyon_budyonny={
     portrait_info = {
-	genes={ 		hair_color={ 52 247 52 247 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 52 247 52 247 }
  		skin_color={ 52 12 52 12 }
  		eye_color={ 149 187 149 187 }
  		gene_cheek_fat={ "cheek_fat" 138 "cheek_fat" 138 }

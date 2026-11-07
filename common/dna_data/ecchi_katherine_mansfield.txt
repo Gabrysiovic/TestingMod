@@ -1,6 +1,8 @@
 ﻿ecchi_dna_katherine_mansfield={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 34 147 34 229 }
  		skin_color={ 99 12 99 12 }
  		eye_color={ 129 111 129 111 }

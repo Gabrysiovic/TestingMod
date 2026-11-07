@@ -1,6 +1,8 @@
 ﻿ecchi_dna_ned_kelly = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 47 240 47 240 }
  		skin_color={ 37 0 37 0 }
  		eye_color={ 243 138 243 138 }

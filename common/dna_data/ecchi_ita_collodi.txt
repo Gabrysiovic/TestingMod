@@ -1,6 +1,8 @@
 ﻿ecchi_dna_carlo_collodi={
     portrait_info = {
-	genes={ 		 		hair_color={ 167 124 167 124 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		 		hair_color={ 167 124 167 124 }
  		skin_color={ 50 10 50 10 }
  		eye_color={ 179 127 179 127 }
  		gene_cheek_fat={ "cheek_fat" 117 "cheek_fat" 117 }

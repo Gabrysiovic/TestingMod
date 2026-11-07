@@ -1,6 +1,8 @@
 ﻿ecchi_dna_wilhelm_liebknecht={
     portrait_info = {
-	genes={ 		hair_color={ 226 157 226 157 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 226 157 226 157 }
  		skin_color={ 8 11 8 11 }
  		eye_color={ 215 59 215 59 }
  		gene_cheek_fat={ "cheek_fat" 85 "cheek_fat" 85 }

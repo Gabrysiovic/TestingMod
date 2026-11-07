@@ -4,7 +4,9 @@
 dna_lavr_kornilov = {
      portrait_info = {
  
-      genes={ 		hair_color={ 0 251 55 251 }
+      genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 0 251 55 251 }
  		skin_color={ 61 72 76 127 }
  		eye_color={ 42 252 42 252 }
  		gene_cheek_fat={ "cheek_fat" 0 "cheek_fat" 220 }

@@ -1,6 +1,8 @@
 ﻿ecchi_dna_alexis_de_tocqueville = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 30 231 30 231 }
  		skin_color={ 54 26 54 26 }
  		eye_color={ 227 171 227 171 }

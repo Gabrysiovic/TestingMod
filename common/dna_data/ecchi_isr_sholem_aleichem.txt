@@ -1,6 +1,8 @@
 ﻿ecchi_dna_sholem_aleichem={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 184 206 184 102 }
  		skin_color={ 0 0 0 0 }
  		eye_color={ 0 0 0 0 }

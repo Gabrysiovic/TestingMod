@@ -1,6 +1,8 @@
 ﻿ecchi_dna_mackenzie_king = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 33 149 205 198 }
  		skin_color={ 108 16 108 16 }
  		eye_color={ 218 203 218 203 }

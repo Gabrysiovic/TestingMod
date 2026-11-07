@@ -1,6 +1,8 @@
 ﻿ecchi_dna_millicent_fawcett={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 168 250 168 250 }
  		skin_color={ 20 10 20 10 }
  		eye_color={ 39 155 39 155 }

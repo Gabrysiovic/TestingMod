@@ -1,6 +1,8 @@
 ﻿mr_ire_stoker_bram={
 	portrait_info = {
 		genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 			hair_color={ 107 175 0 0 }
 			skin_color={ 0 0 0 0 }
 			eye_color={ 1 211 0 0 }

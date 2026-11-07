@@ -1,6 +1,8 @@
 ﻿ecchi_dna_tomas_masaryk = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 228 216 228 173 }
  		skin_color={ 15 19 15 19 }
  		eye_color={ 179 156 179 156 }

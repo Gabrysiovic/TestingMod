@@ -1,6 +1,8 @@
 ﻿ecchi_dna_tomas_estrada_palma={
     portrait_info = {
-	genes={ 		hair_color={ 210 154 235 96 }
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 210 154 235 96 }
  		skin_color={ 11 25 11 25 }
  		eye_color={ 53 147 53 147 }
  		gene_cheek_fat={ "cheek_fat" 133 "cheek_fat" 133 }

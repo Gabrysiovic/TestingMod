@@ -1,6 +1,8 @@
 ﻿ecchi_dna_ludwik_mieroslawski = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 95 248 95 248 }
  		skin_color={ 38 28 38 28 }
  		eye_color={ 228 146 228 146 }

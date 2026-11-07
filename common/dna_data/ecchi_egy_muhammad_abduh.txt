@@ -7,6 +7,8 @@
 ecchi_dna_egy_muhammad_abduh = {
     portrait_info = {
         genes = {
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
             hair_color = { 40 240 40 240 }
             skin_color = { 155 145 155 145 }
             eye_color = { 53 246 53 246 }

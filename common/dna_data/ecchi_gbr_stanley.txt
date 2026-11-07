@@ -1,6 +1,8 @@
 ﻿ecchi_dna_henry_morgan_stanley = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 251 224 251 4 }
  		skin_color={ 110 6 110 6 }
  		eye_color={ 90 128 90 128 }

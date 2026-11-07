@@ -1,6 +1,8 @@
 ﻿ecchi_dna_simon_wonga = {
     portrait_info = {
-    genes={      
+    genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+      
 		hair_color={ 88 229 88 229 }
  		skin_color={ 151 247 160 228 }
  		eye_color={ 33 243 33 243 }

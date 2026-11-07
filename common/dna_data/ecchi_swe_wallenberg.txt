@@ -1,6 +1,8 @@
 ﻿ecchi_dna_raoul_wallenberg={
     portrait_info = {
-	genes={ 		
+	genes={
+		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		
 		hair_color={ 26 249 26 249 }
  		skin_color={ 111 1 111 1 }
  		eye_color={ 184 15 184 15 }
