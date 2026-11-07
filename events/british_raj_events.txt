@@ -260,7 +260,6 @@ raj.4 = {
 
 	# Random event for je_uneasy_raj
 	trigger = {
-		NOT = { has_variable = kala_pani_event }
 		is_at_war = yes
 		# No war enemies are adjacent or in India
 		NOT = {

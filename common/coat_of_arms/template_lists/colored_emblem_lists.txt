@@ -1,4 +1,4 @@
-colored_emblem_texture_lists = {
+﻿colored_emblem_texture_lists = {
 
 	charge = {
 		5 = "ce_circle.dds"
@@ -1106,22 +1106,22 @@ colored_emblem_texture_lists = {
 		20 = "pb_shield_pattern_02.dds"
 		20 = "pb_shield_pattern_03.dds"
 	}
-	
+
 	power_bloc_shields_absolute_monarchy_close_colors = {
 		1 = "shield_mcoa_cross_throughout.png"
 		1 = "shield_mcoa_fess.png"
 		1 = "shield_mcoa_pale.png"
 		1 = "shield_mcoa_st_andrews.png"
 	}
-	
-	power_bloc_shields_two_color_nation = { 
+
+	power_bloc_shields_two_color_nation = {
 		1 = "shield_mcoa_barry.png"
 		1 = "shield_mcoa_chequy.png"
 		1 = "shield_mcoa_fess.png"
 		1 = "shield_mcoa_pale.png"
 		1 = "shield_mcoa_paly.png"
 	}
-	
+
 	power_bloc_shields_absolute_monarchy = {
 		1 = "pb_shield_pattern_00.dds"
         1 = "pb_shield_pattern_01.dds"
@@ -1138,7 +1138,7 @@ colored_emblem_texture_lists = {
 		1 = "shield_mcoa_st_andrews.png"
 		1 = "shield_mcoa_wave.png"
 	}
-		
+
 	power_bloc_charges_absolute_monarchy_small = {
 		1 = "charge_animals_mcoa_aurochs_head_small.png"
 		1 = "charge_animals_mcoa_doubleheaded_eagle_small.png"
@@ -1150,7 +1150,7 @@ colored_emblem_texture_lists = {
 		1 = "charge_animals_mcoa_deer_small.png"
 		1 = "charge_animals_mcoa_griffin_rampant_small.png"
 	}
-	
+
 		power_bloc_charges_absolute_monarchy = {
 		1 = "charge_animals_mcoa_aurochs_head.png"
 		1 = "charge_animals_mcoa_doubleheaded_eagle.png"
@@ -1162,50 +1162,50 @@ colored_emblem_texture_lists = {
 		1 = "charge_animals_mcoa_deer.png"
 		1 = "charge_animals_mcoa_griffin_rampant.png"
 	}
-	
+
     power_bloc_shield = {
         1 = "pb_shield_pattern_00.dds"
     }
     power_bloc_center = {
         1 = "charge_animals_mcoa_lion_passant.png"
     }
-	
+
 	power_bloc_europe_FRA_monarchy_charges = {
 		1 = "charge_symbols_mcoa_fleur_de_lis.png"
 		1 = "charge_symbols_mcoa_fleur_de_lis_triple.png"
 	}
-	
+
 	power_bloc_europe_FRA_constitutional_charges = {
 		1 = "charge_symbols_mcoa_fleur_de_lis.png"
 		1 = "charge_symbols_mcoa_fleur_de_lis_triple.png"
 		1 = "charge_symbols_mcoa_fleur_de_lis_small.png"
-		1 = "charge_symbols_mcoa_fleur_de_lis_triple_small.png"	
+		1 = "charge_symbols_mcoa_fleur_de_lis_triple_small.png"
 	}
-	
+
 	power_bloc_europe_FRA_constitutional_charges_dark = {
 		1 = "charge_symbols_mcoa_fleur_de_lis_small.png"
-		1 = "charge_symbols_mcoa_fleur_de_lis_triple_small.png"	
+		1 = "charge_symbols_mcoa_fleur_de_lis_triple_small.png"
 	}
-	
+
 	power_bloc_europe_FRA_dictatorship_charges = {
 		1 = "charge_animals_mcoa_eagle_napoleon.png"
-		1 = "charge_animals_mcoa_eagle_napoleon_small.png"	
-		1 = "charge_symbols_mcoa_fasces_french_republic.png"	
-		1 = "charge_symbols_mcoa_fasces_french_republic_small.png"	
-		1 = "charge_symbols_mcoa_fasces_hires.png"	
+		1 = "charge_animals_mcoa_eagle_napoleon_small.png"
+		1 = "charge_symbols_mcoa_fasces_french_republic.png"
+		1 = "charge_symbols_mcoa_fasces_french_republic_small.png"
+		1 = "charge_symbols_mcoa_fasces_hires.png"
 	}
-	
+
 	power_bloc_europe_FRA_republic = {
 		4 = "pb_center_11.dds"
 		1 = "charge_animals_mcoa_cockerel_small.png"
 	}
-	
+
 	power_bloc_usa_monarchy_shield = {
 		1 = "shield_mcoa_paly_pale_stars.png"
 		1 = "shield_mcoa_paly_pale.png"
 		1 = "shield_mcoa_paly_pale_stars_smaller.png"
 	}
-	
+
 	power_bloc_usa_dictatorship_shield = {
 		1 = "pb_shield_pattern_00.dds"
 		1 = "pb_shield_pattern_01.dds"
@@ -1213,7 +1213,7 @@ colored_emblem_texture_lists = {
 		1 = "shield_mcoa_wave.png"
 		1 = "shield_mcoa_emanating.png"
 	}
-	
+
 	power_bloc_usa_dictatorship_charges = {
 		1 = "charge_symbols_stars_star_five.png"
 		1 = "charge_symbols_stars_star_five_circle.png"
@@ -1228,14 +1228,14 @@ colored_emblem_texture_lists = {
 		1 = "shield_mcoa_pale.png"
 		1 = "shield_mcoa_paly.png"
 	}
-	
+
 	power_bloc_christian_theocracy_big = {
 		1 = "charge_symbols_mcoa_cross_fleury.png"
 		1 = "charge_symbols_mcoa_cross_occitan.png"
 		1 = "charge_symbols_mcoa_cross_crosslet.png"
 		1 = "charge_symbols_religion_christogramm.png"
 	}
-	
+
 	power_bloc_anarchy_shields_dark = {
 		1 = "pb_shield_pattern_00.dds"
 		1 = "pb_shield_pattern_01.dds"
@@ -1253,7 +1253,7 @@ colored_emblem_texture_lists = {
 		1 = "charge_symbols_mcoa_anarchy_2.png"
 		1 = "charge_symbols_stars_star_five.png"
 	}
-	
+
 	power_bloc_anarchy_charges_for_cirlce = {
 		1 = "charge_symbols_mcoa_fist_1_medium.png"
 		1 = "charge_symbols_mcoa_fist_2_medium.png"
@@ -1278,7 +1278,7 @@ colored_emblem_texture_lists = {
 		1 = "charge_symbols_mcoa_hammer_sickle_5.png"
 		1 = "charge_symbols_mcoa_hammer_sickle_6.png"
 	}
-	
+
 	power_bloc_fascist_standard = {
 		1 = "charge_symbols_mcoa_runes_algiz.png"
 		1 = "charge_symbols_mcoa_runes_hagal.png"
@@ -1291,7 +1291,7 @@ colored_emblem_texture_lists = {
 		1 = "charge_symbols_mcoa_runes_wolfsangel_2.png"
 		1 = "charge_symbols_mcoa_labrys_2.png"
 	}
-	
+
 	power_bloc_christian_theocracy_standard = {
 		1 = "pb_shield_pattern_01.dds"
 		1 = "shield_mcoa_fess.png"
@@ -1301,7 +1301,7 @@ colored_emblem_texture_lists = {
 		1 = "shield_mcoa_wave.png"
 		1 = "shield_mcoa_emanating.png"
 	}
-	
+
 	power_bloc_center = {
 		1 = "pb_center_00.dds"
 		1 = "pb_center_01.dds"
@@ -1410,9 +1410,11 @@ colored_emblem_texture_lists = {
 		# Islamic
 		special_selection = {
 			trigger = {
-				has_law_or_variant = law_type:law_state_religion
-				religion = {
-					has_discrimination_trait = heritage_islamic
+				power_bloc_leader ?= {
+					has_law_or_variant = law_type:law_state_religion
+					religion = {
+						has_discrimination_trait = heritage_islamic
+					}
 				}
 			}
 			20 = "pb_zulfikar.dds"
@@ -1448,9 +1450,11 @@ colored_emblem_texture_lists = {
 		# Christian
 		special_selection = {
 			trigger = {
-				has_law_or_variant = law_type:law_state_religion
-				religion = {
-					has_discrimination_trait = heritage_christian
+				power_bloc_leader ?= {
+					has_law_or_variant = law_type:law_state_religion
+					religion = {
+						has_discrimination_trait = heritage_christian
+					}
 				}
 			}
 			20 = "pb_chi_rho.dds"
@@ -1477,8 +1481,10 @@ colored_emblem_texture_lists = {
 		# Sikh
 		special_selection = {
 			trigger = {
-				has_law_or_variant = law_type:law_state_religion
-				religion = rel:sikh
+				power_bloc_leader ?= {
+					has_law_or_variant = law_type:law_state_religion
+					religion = rel:sikh
+				}
 			}
 			20 = "pb_khanda.dds"
 			20 = "pb_sun_sikh.dds"
@@ -1486,17 +1492,21 @@ colored_emblem_texture_lists = {
 		# Jewish
 		special_selection = {
 			trigger = {
-				has_law_or_variant = law_type:law_state_religion
-				religion = rel:jewish
+				power_bloc_leader ?= {
+					has_law_or_variant = law_type:law_state_religion
+					religion = rel:jewish
+				}
 			}
 			20 = "pb_star_hexagram.dds"
 		}
 		# Dharmic
 		special_selection = {
 			trigger = {
-				has_law_or_variant = law_type:law_state_religion
-				religion = {
-					has_discrimination_trait = heritage_dharmic
+				power_bloc_leader ?= {
+					has_law_or_variant = law_type:law_state_religion
+					religion = {
+						has_discrimination_trait = heritage_dharmic
+					}
 				}
 			}
 			20 = "pb_buddha.dds"
@@ -1517,7 +1527,9 @@ colored_emblem_texture_lists = {
 		# Communist
 		special_selection = {
 			trigger = {
-				coa_communist_trigger = yes
+				power_bloc_leader ?= {
+					coa_communist_trigger = yes
+				}
 			}
 			20 = "pb_hammer_and_sickle_round.dds"
 			20 = "pb_hammer_and_sickle.dds"
@@ -1538,7 +1550,9 @@ colored_emblem_texture_lists = {
 		# Fascist
 		special_selection = {
 			trigger = {
-				coa_fascist_trigger = yes
+				power_bloc_leader ?= {
+					coa_fascist_trigger = yes
+				}
 			}
 		    20 = "pb_eagle_italy_fascist.dds"
 		    20 = "pb_balkenkreuz.dds"
@@ -1641,5 +1655,33 @@ colored_emblem_texture_lists = {
 			50 = "ce_umbrella_champasak.dds"
 			50 = "ce_bird_paradise.dds"
 		}
+	}
+	russian_small_charges = {
+		20 = "ce_cross_couped.dds"
+		20 = "ce_cross_patty.dds"
+		20 = "ce_cross_patty_hollow.dds"
+		20 = "ce_eagle_double_headed.dds"
+		20 = "ce_crown_imperial_russia.dds"
+		10 = "ce_banner_escutcheon.dds"
+		10 = "ce_horse.dds"
+	}
+	russian_full_charges = {
+		20 = "ce_saltire_fimbriated.dds"
+		20 = "ce_saltire_fimbriated_02.dds"
+		20 = "ce_cross_patty_hollow.dds"
+		20 = "ce_eagle_double_headed.dds"
+		20 = "ce_bend_dexter_fimbriated.dds"
+		20 = "ce_bend_sinister_fimbriated.dds"
+		10 = "ce_iron_cross.dds"
+	}
+	russian_regimental_flag_frames = {
+		20 = "ce_border_russian_regimental_flag.dds"
+		20 = "ce_border_russian_regimental_flag_2knots.dds"
+		20 = "ce_border_russian_regimental_flag_3knots.dds"
+	}
+	russian_central_shield_charge = {
+		10 = "ce_shield_accolade_02.dds"
+		10 = "ce_shield_accolade_03.dds"
+		10 = "ce_shield_heater_border.dds"
 	}
 }

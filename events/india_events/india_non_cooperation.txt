@@ -12,7 +12,7 @@ india_non_cooperation.1 = { # The Non-Cooperation Movement
 	flavor = india_non_cooperation.1.f
 
 	event_image = {
-		video = "gfx/event_pictures/ip2_india_protest.bk2"
+		video = "ip2_india_protest"
 	}
 
 	dlc = dlc011
@@ -64,6 +64,10 @@ india_non_cooperation.1 = { # The Non-Cooperation Movement
 				}
 			}
 		}
+	}
+
+	after = {
+		revoke_temporary_event_immortality = { CHARACTER = scope:indian_independence_movement_agitator }
 	}
 
 	option = {
@@ -143,7 +147,7 @@ india_non_cooperation.2 = { # overlord alert of The Swadeshi Movement
 	flavor = india_non_cooperation.2.f
 
 	event_image = {
-		video = "gfx/event_pictures/ip2_telegraph_dictate.bk2"
+		video = "ip2_telegraph_dictate"
 	}
 
 	dlc = dlc011
@@ -196,7 +200,7 @@ india_non_cooperation.3 = { # Hartal! (Now a Protest Event for je_india_home_rul
 	flavor = india_non_cooperation.3.f
 
 	event_image = {
-		video = "gfx/event_pictures/ip2_india_factory.bk2"
+		video = "ip2_india_factory_floor"
 	}
 
 	dlc = dlc011
@@ -323,7 +327,7 @@ india_non_cooperation.4 = { # The Swadeshi Movement
 	flavor = india_non_cooperation.4.f
 
 	event_image = {
-		video = "gfx/event_pictures/ip2_india_protest.bk2"
+		video = "ip2_india_protest"
 	}
 
 	dlc = dlc011
@@ -431,6 +435,10 @@ india_non_cooperation.5 = { # The Chauri Chaura Incident / The Blazing Chowki
 		}
 	}
 
+	after = {
+		revoke_temporary_event_immortality = { CHARACTER = scope:nonviolent_movement_leader }
+	}
+
 	option = {
 		name = india_non_cooperation.5.a
 		default_option = yes
@@ -516,6 +524,10 @@ india_non_cooperation.6 = { # Insufficient Self-Sufficiency
 			}
 		}
 	}
+
+	after = {
+		je_india_non_cooperation_movement_cleanup = yes
+	}
 }
 
 india_non_cooperation.7 = { # The Victory of Satyagraha
@@ -529,7 +541,7 @@ india_non_cooperation.7 = { # The Victory of Satyagraha
 	flavor = india_non_cooperation.7.f
 
 	event_image = {
-		video = "gfx/event_pictures/ip2_crosscultural_festival.bk2"
+		video = "ip2_cross_cultural_festival"
 	}
 
 	dlc = dlc011
@@ -683,5 +695,9 @@ india_non_cooperation.8 = { # Successful Swadeshi
 				add_progress = { value = 25 name = je_india_home_rule_progressbar }
 			}
 		}
+	}
+
+	after = {
+		je_india_non_cooperation_movement_cleanup = yes
 	}
 }

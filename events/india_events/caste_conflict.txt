@@ -82,7 +82,7 @@ caste_conflict.1 = {
 					text = an_agitator_appears_tt
 					create_character = {
 						interest_group = ig_rural_folk
-		    			ideology = ideology_social_democrat
+		    			ideology = ideology_state_socialist
 		    			is_agitator = yes
 		    			culture = cu:tamil
 	    				religion = rel:atheist
@@ -137,7 +137,7 @@ caste_conflict.1 = {
 					text = an_agitator_appears_tt
 					create_character = {
 						interest_group = ig_rural_folk
-		    			ideology = ideology_social_democrat
+		    			ideology = ideology_state_socialist
 		    			is_agitator = yes
 		    			culture = cu:tamil
 	    				religion = rel:atheist
@@ -217,6 +217,10 @@ caste_conflict.2 = {
 			days = long_modifier_time
 		}
 	}
+
+	after = {
+		je_dravidian_movement_cleanup = yes
+	}
 }
 
 # (No longer used) je_dravidian_movement fail event
@@ -274,7 +278,7 @@ caste_conflict.4 = {
 	}
 
 	cancellation_trigger = {
-		NAND = { 
+		NAND = {
 			has_journal_entry = je_india_home_rule
 			has_social_hierarchy = british_indian_caste_system
 		}
@@ -311,6 +315,10 @@ caste_conflict.4 = {
 				days = normal_modifier_time
 			}
 		}
+	}
+
+	after = {
+		revoke_temporary_event_immortality = { CHARACTER = scope:intelligentsia_leader_scope }
 	}
 }
 
@@ -403,5 +411,9 @@ caste_conflict.5 = {
 			name = priestly_polluted_water
 			days = normal_modifier_time
 		}
+	}
+
+	after = {
+		revoke_temporary_event_immortality = { CHARACTER = scope:character_scope }
 	}
 }

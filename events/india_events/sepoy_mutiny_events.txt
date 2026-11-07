@@ -23,6 +23,9 @@ sepoy_mutiny_events.1 = {
 		create_character = {
 			template = SAT_nana_saheb_template
 			save_scope_as = nana_saheb_scope
+			on_created = {
+				set_temporary_event_immortality = { DURATION = 3 }
+			}
 		}
 		if = {
 			limit = {
@@ -144,6 +147,10 @@ sepoy_mutiny_events.1 = {
 				multiplier = 1.5
 			}
 		}
+	}
+
+	after = {
+		revoke_temporary_event_immortality = { CHARACTER = scope:nana_saheb_scope }
 	}
 }
 
@@ -647,6 +654,7 @@ sepoy_mutiny_events.2 = {
 		c:GBR ?= {
 			trigger_event = { id = bic_breakup.7 popup = yes }
 		}
+		je_sepoy_mutiny_cleanup = yes
 	}
 }
 
@@ -870,6 +878,10 @@ sepoy_mutiny_events.3 = {
 				}
 			}
 		}
+	}
+
+	after = {
+		je_uneasy_raj_cleanup = yes
 	}
 }
 
@@ -1231,7 +1243,7 @@ sepoy_mutiny_events.4 = {
 		}
 		trigger = {
 			# To prevent race conditions, AI can always select this option and later become a vassal of MUG
-			# But a player should never be able to select this unless MUG has revolted, but if MUG's an AI 
+			# But a player should never be able to select this unless MUG has revolted, but if MUG's an AI
 			# then it should do it right away before the human has the chance to choose an option or pause
 			NOR = {
 				c:MUG ?= this
@@ -1368,7 +1380,7 @@ sepoy_mutiny_events.4 = {
 				c:SAT ?= this
 			}
 			# To prevent race conditions, AI can always select this option and later become a puppet of SAT
-			# But a player should never be able to select this unless SAT has revolted, but if SAT's an AI 
+			# But a player should never be able to select this unless SAT has revolted, but if SAT's an AI
 			# then it should do it right away before the human has the chance to choose an option or pause
 			trigger_if = {
 				limit = {
@@ -1632,9 +1644,6 @@ sepoy_mutiny_events.6 = {
 		}
 	}
 
-	immediate = {
-		set_variable = sepoy_mutiny_cartridge_event_var
-	}
 
 	option = {
 		name = sepoy_mutiny_events.6.a
@@ -2081,6 +2090,10 @@ sepoy_mutiny_events.10 = {
 			value = local_var:radical_amount
 		}
 	}
+
+	after = {
+		revoke_temporary_event_immortality = { CHARACTER = scope:sepoy_general_scope }
+	}
 }
 
 sepoy_mutiny_events.11 = {
@@ -2213,5 +2226,9 @@ sepoy_mutiny_events.12 = {
 				value = medium_radicals
 			}
 		}
+	}
+
+	after = {
+		je_uneasy_raj_cleanup = yes
 	}
 }

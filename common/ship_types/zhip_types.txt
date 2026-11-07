@@ -1,6 +1,7 @@
 ﻿ship_type_merchantman = {
 
     ship_group = ship_group_cruisers
+    ai_ship_category = ai_ship_category_transports
 
     modification_construction_cost = 7
 

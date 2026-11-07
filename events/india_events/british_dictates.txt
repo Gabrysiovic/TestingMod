@@ -31,6 +31,7 @@ british_dictates.2 = {
 	hidden = yes
 
 	trigger = {
+		# triggered by on_action - british_dictate_yearly_events
 		has_dlc_feature = ip2_content
 		c:BIC ?= this
 		NOR = {
@@ -101,7 +102,7 @@ british_dictates.5 = { # Opening Event for Colonial Dictates
 
 	duration = 3
 
-	cooldown = { days = never_fire_again_modifier_time }
+	fire_only_once = yes
 
 	# Triggered by je_british_dictates
 
@@ -150,9 +151,13 @@ british_dictates.6 = { # Colonial Dictates Success
 
 	duration = 3
 
-	cooldown = { days = never_fire_again_modifier_time }
+	fire_only_once = yes
 
 	# Triggered by je_british_dictates
+
+	after = {
+		revoke_temporary_event_immortality = { CHARACTER = scope:board_of_control_character }
+	}
 
 	cancellation_trigger = {
 		NOT = {
@@ -505,7 +510,7 @@ british_dictates.9 = { # je_british_dictate_military complete
 
 	duration = 3
 
-	cooldown = { days = never_fire_again_modifier_time }
+	fire_only_once = yes
 
 	# Triggered by je_british_dictate_military
 

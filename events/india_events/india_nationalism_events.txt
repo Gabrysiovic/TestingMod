@@ -131,6 +131,7 @@ india_nationalism_events.2 = { # The Jewel Secured
 		custom_tooltip = {
 			text = indian_sovereignty_movement_dead_tt
 		}
+		bic_become_bengal_effect = yes
 	}
 }
 
@@ -172,6 +173,7 @@ india_nationalism_events.3 = { # The Salt March
 
 	# Triggered by indian_nation_events.3 or je_india_home_rule
 	trigger = {
+		# triggered by journal entry - je_india_nationalism [on_monthly_pulse]
 		has_dlc_feature = ip2_content
 		c:BIC ?= this
 		any_scope_state = {
@@ -387,6 +389,10 @@ india_nationalism_events.3 = { # The Salt March
 			}
 		}
 	}
+
+	after = {
+		revoke_temporary_event_immortality = { CHARACTER = scope:prisoner_scope }
+	}
 }
 
 india_nationalism_events.4 = { # Gandhi in Sooth Efrika
@@ -414,6 +420,7 @@ india_nationalism_events.4 = { # Gandhi in Sooth Efrika
 
 	# Triggered by on_yearly_events
 	trigger = {
+		# triggered by on_action - historical_agitators_yearly_events
 		has_dlc_feature = ip2_content
 		game_date >= 1893.1.1
 		# So Gandhi doesn't spend an insignificant amount of time in South Africa
@@ -441,12 +448,11 @@ india_nationalism_events.4 = { # Gandhi in Sooth Efrika
 			has_law_or_variant = law_type:law_multicultural
 		}
 		NOT = {
-			has_global_variable = gandhi_spawn
+			is_template_used = BIC_mohandas_karamchand_gandhi
 		}
 	}
 
 	immediate = {
-		set_global_variable = gandhi_spawn
 		if = {
 			limit = {
 				any_scope_state = {
@@ -491,6 +497,7 @@ india_nationalism_events.4 = { # Gandhi in Sooth Efrika
 		}
 		create_character = {
 			template = BIC_mohandas_karamchand_gandhi
+			save_scope_as = gandhi_scope
 			on_created = {
 				set_variable = gandhi_var
 				set_variable = gandhi_south_africa
@@ -506,8 +513,11 @@ india_nationalism_events.4 = { # Gandhi in Sooth Efrika
 			limit = {
 				has_variable = gandhi_var
 			}
-			save_scope_as = gandhi_scope
 		}
+	}
+
+	after = {
+		revoke_temporary_event_immortality = { CHARACTER = scope:gandhi_scope }
 	}
 
 	option = {
@@ -573,6 +583,7 @@ india_nationalism_events.5 = { # Gandhi in India
 	cooldown = { days = stupidly_long_modifier_time }
 
 	trigger = {
+		# triggered by on_action - historical_agitators_yearly_events
 		has_dlc_feature = ip2_content
 		c:BIC ?= this
 		has_journal_entry = je_india_home_rule
@@ -659,8 +670,9 @@ india_nationalism_events.5 = { # Gandhi in India
 		else = {
 			create_character = {
 				template = BIC_mohandas_karamchand_gandhi
+				save_scope_as = gandhi_scope
 				on_created = {
-					set_variable = gandhi_var
+					set_temporary_event_immortality = { DURATION = 3 }
 				}
 			}
 		}
@@ -714,6 +726,10 @@ india_nationalism_events.5 = { # Gandhi in India
 			}
 		}
 	}
+
+	after = {
+		revoke_temporary_event_immortality = { CHARACTER = scope:gandhi_scope }
+	}
 }
 
 india_nationalism_events.6 = { # India League
@@ -739,6 +755,7 @@ india_nationalism_events.6 = { # India League
 	cooldown = { days = stupidly_long_modifier_time }
 
 	trigger = {
+		# triggered by journal entry - je_india_nationalism_britain [on_monthly_pulse]
 		has_dlc_feature = ip2_content
 		any_direct_subject = {
 			c:BIC ?= this
@@ -800,6 +817,10 @@ india_nationalism_events.6 = { # India League
 			}
 		}
 	}
+
+	after = {
+		revoke_temporary_event_immortality = { CHARACTER = scope:india_league_character }
+	}
 }
 
 india_nationalism_events.7 = { # The Condition of India
@@ -825,6 +846,7 @@ india_nationalism_events.7 = { # The Condition of India
 	cooldown = { days = stupidly_long_modifier_time }
 
 	trigger = {
+		# triggered by journal entry - je_india_nationalism_britain [on_monthly_pulse]
 		has_dlc_feature = ip2_content
 		has_variable = india_league
 		any_subject_or_below = {

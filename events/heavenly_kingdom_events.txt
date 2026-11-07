@@ -213,6 +213,7 @@ heavenly.3 = {
 	cooldown = { months = 6 }
 
 	trigger = {
+		# triggered by journal entry - je_heavenly_kingdom_main [on_monthly_pulse]
 		any_scope_state = {
 			has_variable = cult_center
 			religion_percent_state = {
@@ -494,12 +495,7 @@ heavenly.4 = {
 				days = long_modifier_time
 			}
 		}
-	}
 
-	option = {
-		name = heavenly.4.a
-		default_option = yes
-		ai_chance = { base = 1 }
 		add_journal_entry = {
 			type = je_taiping
 		}
@@ -536,7 +532,7 @@ heavenly.4 = {
 						is_diplomatic_play_target = yes
 					}
 				}
-				add_diplomatic_play_war_support = { target = c:TPG value = 100 }
+				add_diplomatic_play_war_support = { target = c:TPG value = 50 }
 			}
 			c:CHI ?= {
 				every_scope_state = {
@@ -555,64 +551,19 @@ heavenly.4 = {
 			}
 		}
 	}
+
+	option = {
+		name = heavenly.4.a
+		default_option = yes
+		ai_chance = { base = 1 }
+	}
 	option = {
 		name = heavenly.4.b
 		ai_chance = { base = 0 }
-		add_journal_entry = {
-			type = je_taiping
-		}
-		c:TPG ?= {
-			add_journal_entry = {
-				type = je_taiping_revolution
-			}
-		}
-		assign_taiping_states = yes
-		scope:heavenly_kingdom_scope = {
-			create_diplomatic_play = {
-				name = taiping_rebellion
-				target_country = c:CHI
-				type = dp_taiping_rebellion
-			}
-			hidden_effect = {
-				change_infamy = -150
-			}
-		}
-		hidden_effect = {
-			c:TPG ?= {
-				create_taiping_characters = yes
-				c:CHI ?= {
-					add_treasury = prev.var:gold_transfer_nil
-				}
-				add_treasury = var:gold_transfer
-			}
-			random_diplomatic_play = {
-				limit = {
-					c:TPG ?= {
-						is_diplomatic_play_initiator = yes
-					}
-					c:CHI ?= {
-						is_diplomatic_play_target = yes
-					}
-				}
-				add_diplomatic_play_war_support = { target = c:TPG value = 100 }
-			}
-			c:CHI ?= {
-				every_scope_state = {
-					limit = {
-						is_split_state = yes
-						state_region = {
-							any_scope_state = {
-								is_treaty_port = yes
-							}
-						}
-					}
-					this.state_region = {
-						add_claim = c:TPG
-					}
-				}
-			}
-		}
 		play_as = scope:heavenly_kingdom_scope
+	}
+	after = {
+		je_heavenly_kingdom_main_cleanup = yes
 	}
 }
 
@@ -713,6 +664,9 @@ heavenly.5 = {
 			religion = rel:protestant
 		}
 	}
+	after = {
+		je_taiping_cleanup = yes
+	}
 }
 
 
@@ -777,12 +731,18 @@ heavenly.6 = {
 			ig:ig_intelligentsia ?= {
 				leader = {
 					save_scope_as = hong_rengan_scope
+					set_temporary_event_immortality = { DURATION = 3 }
 				}
 			}
 		}
 		cu:manchu = {
 			save_scope_as = manchu_culture
 		}
+	}
+
+	after = {
+		revoke_temporary_event_immortality = { CHARACTER = scope:hong_rengan_scope }
+		je_taiping_revolution_cleanup = yes
 	}
 
 	option = {
@@ -907,6 +867,7 @@ CHI_missionaries.1 = {
 	cooldown = { days = normal_modifier_time }
 
 	trigger = {
+		# triggered by journal entry - je_chinese_missions [on_monthly_pulse]
 		any_scope_state = {
 			has_variable = open_to_missionaries_state
 		}
@@ -976,6 +937,7 @@ CHI_missionaries.2 = {
 	cooldown = { days = normal_modifier_time }
 
 	trigger = {
+		# triggered by journal entry - je_chinese_missions [on_monthly_pulse]
 		NOT = {
 			has_law_or_variant = law_type:law_closed_borders
 		}
@@ -1099,6 +1061,7 @@ CHI_missionaries.3 = {
 	cooldown = { days = normal_modifier_time }
 
 	trigger = {
+		# triggered by journal entry - je_chinese_missions [on_monthly_pulse]
 		any_scope_state = {
 			has_variable = open_to_missionaries_state
 			NOT = {
@@ -1171,6 +1134,7 @@ CHI_missionaries.4 = {
 	cooldown = { days = normal_modifier_time }
 
 	trigger = {
+		# triggered by journal entry - je_chinese_missions [on_monthly_pulse]
 		any_scope_state = {
 			has_variable = open_to_missionaries_state
 			NOT = {
@@ -1243,6 +1207,7 @@ CHI_missionaries.5 = {
 	cooldown = { days = normal_modifier_time }
 
 	trigger = {
+		# triggered by journal entry - je_chinese_missions [on_monthly_pulse]
 		any_scope_state = {
 			has_variable = open_to_missionaries_state
 		}

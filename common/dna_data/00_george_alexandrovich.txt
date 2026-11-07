@@ -122,7 +122,7 @@ dna_george_alexandrovich = {
  		aiguillettes={ "all_aiguillettes" 0 "all_aiguillettes" 0 }
  		legwear={ "male_legwear_russian_military_01" 0 "all_legwear" 0 }
  		power_blocks={ "all_shirts" 255 "all_shirts" 0 }
- 		decals={ "wounded_1" 0 "wounded_1" 0 }
+ 		decals={ "wounded_01" 0 "wounded_01" 0 }
  }
 
 }

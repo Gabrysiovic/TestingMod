@@ -9,7 +9,7 @@
 		TRY_INJECT:coats = {
 
 			british_indian_uniform_coats_mid = {
-				index = 61
+				index = 64
 				male = {
 					1 = male_coat_british_01
 				}
@@ -23,7 +23,7 @@
 			}
 
 			british_indian_uniform_coats_late = {
-				index = 62
+				index = 65
 				male = {
 					1 = male_coat_late_british_military_01
 				}
