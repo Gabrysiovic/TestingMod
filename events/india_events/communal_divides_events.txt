@@ -14,6 +14,8 @@ communal_divides_events.1 = {
 		video = "ip2_cross_cultural_festival"
 	}
 
+	dlc = dlc011
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
@@ -61,10 +63,6 @@ communal_divides_events.1 = {
 			name = marching_as_one_modifier
 		}
 	}
-
-	after = {
-		je_communal_divides_cleanup = yes
-	}
 }
 
 communal_divides_events.2 = {
@@ -95,6 +93,8 @@ communal_divides_events.2 = {
 	event_image = {
 		video = "ip2_intercommunal_tensions"
 	}
+
+	dlc = dlc011
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -161,10 +161,6 @@ communal_divides_events.2 = {
 				set_variable = indian_partition_promised
 			}
 		}
-	}
-
-	after = {
-		je_communal_divides_cleanup = yes
 	}
 }
 
@@ -497,7 +493,6 @@ communal_divides_events.5 = {
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
 	trigger = {
-		# triggered by journal entry - je_communal_divides [on_monthly_pulse]
 		any_scope_state = {
 			is_in_geographic_region = geographic_region_india
 			any_scope_pop = {
@@ -664,7 +659,6 @@ communal_divides_events.6 = {
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
 	trigger = {
-		# triggered by journal entry - je_communal_divides [on_monthly_pulse]
 		any_scope_state = {
 			is_in_geographic_region = geographic_region_india
 			any_scope_pop = {
@@ -1893,7 +1887,7 @@ communal_divides_events.15 = { # The Federal Solution
 
 	option = {
 		name = communal_divides_events.15.a
-		default_option = yes
+		default_option = yes	
 		add_radicals = {
 			value = large_radicals
 			religion = rel:hindu

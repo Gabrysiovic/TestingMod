@@ -91,10 +91,7 @@ bic_breakup.1 = {
 
 	duration = 3
 
-	fire_only_once = yes
-
 	trigger = {
-		# triggered by on_action - on_monthly_pulse_country
 		c:BIC ?= this
 		is_subject = no
 		is_revolutionary = no
@@ -275,7 +272,7 @@ bic_breakup.1 = {
 				has_journal_entry = je_india_home_rule
 			}
 			trigger_event = { id = indian_nation_events.9 days = 1 }
-		}
+		}	
 	}
 }
 
@@ -438,7 +435,7 @@ bic_breakup.5 = { # Hidden event that fires other relevant events when GBR loses
 	hidden = yes
 
 	cooldown = { days = never_fire_again_modifier_time }
-
+	
 	trigger = {
 		c:GBR ?= this
 		NOR = {

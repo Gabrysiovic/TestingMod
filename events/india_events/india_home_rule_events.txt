@@ -179,10 +179,6 @@ india_home_rule_events.1 = { # The Indian Home Rule Act / Purni Swaraj / Freedom
 		}
 		add_large_indian_loyalists = yes
 	}
-
-	after = {
-		je_india_home_rule_cleanup = yes
-	}
 }
 
 india_home_rule_events.2 = { # Permission for Democritisation
@@ -453,8 +449,9 @@ india_home_rule_events.3 = { # Jallianwala Bagh Massacre
 				template = BIC_reginald_dyer
 				on_created = {
 					set_character_busy_and_immortal = yes
+					place_character_in_void = 2400
+					set_variable = dyer_variable
 				}
-				save_scope_as = dyer_scope
 			}
 		}
 		else = {
@@ -469,8 +466,9 @@ india_home_rule_events.3 = { # Jallianwala Bagh Massacre
 				}
 				on_created = {
 					set_character_busy_and_immortal = yes
+					place_character_in_void = 2400
+					set_variable = dyer_variable
 				}
-				save_scope_as = dyer_scope
 			}
 		}
 		random_character_in_void = {
@@ -527,10 +525,6 @@ india_home_rule_events.3 = { # Jallianwala Bagh Massacre
 				post_notification = jallianwala_massacre
 			}
 		}
-	}
-
-	after = {
-		je_india_home_rule_cleanup = yes
 	}
 }
 
@@ -835,7 +829,9 @@ india_home_rule_events.6 = { # Dyer's Homecoming
 		}
 		hidden_effect = {
 			scope:dyer_scope = {
-				retire_character = yes
+				kill_character = {
+					hidden = yes
+				}
 			}
 		}
 	}
@@ -855,7 +851,9 @@ india_home_rule_events.6 = { # Dyer's Homecoming
 		}
 		hidden_effect = {
 			scope:dyer_scope = {
-				retire_character = yes
+				kill_character = {
+					hidden = yes
+				}
 			}
 		}
 	}
@@ -1015,14 +1013,12 @@ india_home_rule_events.9 = { # Montagu-Chelmsford Reforms
 				}
 				leader = {
 					save_scope_as = montagu_scope
-					set_temporary_event_immortality = { DURATION = 3 }
 				}
 			}
 			save_scope_as = overlord_scope
 		}
 		ruler = {
 			save_scope_as = chelmsford_scope
-			set_temporary_event_immortality = { DURATION = 3 }
 		}
 		random_political_lobby = {
 			limit = {
@@ -1050,11 +1046,6 @@ india_home_rule_events.9 = { # Montagu-Chelmsford Reforms
 		}
 		indian_reform_passed_effect = yes
 		custom_tooltip = indian_nationalism_increase_0_1_per_month_tt
-	}
-
-	after = {
-		revoke_temporary_event_immortality = { CHARACTER = scope:montagu_scope }
-		revoke_temporary_event_immortality = { CHARACTER = scope:chelmsford_scope }
 	}
 }
 
@@ -1355,7 +1346,6 @@ india_home_rule_events.11 = { # Simon Commission
 					leader = {
 						set_variable = simon_var
 						save_scope_as = simon_scope
-						set_temporary_event_immortality = { DURATION = 3 }
 					}
 				}
 			}

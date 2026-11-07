@@ -60,12 +60,6 @@ jail.1 = {
 				}
 				add = -3
 			}
-			modifier = {
-				trigger = {
-					ai_wants_radicals = yes
-				}
-				add = 10
-			}
 		}
 		if = {
 			limit = {
@@ -150,12 +144,6 @@ jail.1 = {
 					}
 				}
 				add = -3
-			}
-			modifier = {
-				trigger = {
-					ai_wants_radicals = yes
-				}
-				add = 10
 			}
 		}
 		if = {
@@ -243,12 +231,6 @@ jail.1 = {
 					}
 				}
 				add = -3
-			}
-			modifier = {
-				trigger = {
-					ai_wants_radicals = yes
-				}
-				add = 10
 			}
 		}
 		trigger = {

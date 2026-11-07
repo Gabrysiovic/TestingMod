@@ -33,7 +33,6 @@ india_railway.1 = {
 			NOT = { has_variable = railway_robbery_happened }
 			NOT = { has_variable = railway_trial_completed }
 			any_scope_pop = {
-				pop_has_primary_culture = no
 				pop_acceptance < acceptance_status_4
 				culture = {
 					has_discrimination_trait_group = heritage_group_south_asian
@@ -60,7 +59,6 @@ india_railway.1 = {
 				NOT = { has_variable = railway_robbery_happened }
 				NOT = { has_variable = railway_trial_completed }
 				any_scope_pop = {
-					pop_has_primary_culture = no
 					pop_acceptance < acceptance_status_4
 					culture = {
 						has_discrimination_trait_group = heritage_group_south_asian
@@ -76,7 +74,6 @@ india_railway.1 = {
 			}
 			random_scope_pop = {
 				limit = {
-					pop_has_primary_culture = no
 					pop_acceptance < acceptance_status_4
 					culture = {
 						has_discrimination_trait_group = heritage_group_south_asian
@@ -163,7 +160,6 @@ india_railway.2 = {
 			has_variable = railway_robbery_happened
 			NOT = { has_variable = railway_trial_completed }
 			any_scope_pop = {
-				pop_has_primary_culture = no
 				pop_acceptance < acceptance_status_4
 				culture = {
 					has_discrimination_trait_group = heritage_group_south_asian
@@ -180,7 +176,6 @@ india_railway.2 = {
 				has_variable = railway_robbery_happened
 				NOT = { has_variable = railway_trial_completed }
 				any_scope_pop = {
-					pop_has_primary_culture = no
 					pop_acceptance < acceptance_status_4
 					culture = {
 						has_discrimination_trait_group = heritage_group_south_asian
@@ -190,7 +185,6 @@ india_railway.2 = {
 			}
 			random_scope_pop = {
 				limit = {
-					pop_has_primary_culture = no
 					pop_acceptance < acceptance_status_4
 					culture = {
 						has_discrimination_trait_group = heritage_group_south_asian
@@ -269,7 +263,6 @@ india_railway.3 = {
 			is_in_geographic_region = geographic_region_india
 			has_building = building_railway
 			any_scope_pop = {
-				pop_has_primary_culture = no
 				pop_acceptance < acceptance_status_4
 				culture = {
 					has_discrimination_trait_group = heritage_group_south_asian
@@ -286,7 +279,6 @@ india_railway.3 = {
 				is_in_geographic_region = geographic_region_india
 				has_building = building_railway
 				any_scope_pop = {
-					pop_has_primary_culture = no
 					pop_acceptance < acceptance_status_4
 					culture = {
 						has_discrimination_trait_group = heritage_group_south_asian
@@ -382,7 +374,6 @@ india_railway.4 = {
 			is_in_geographic_region = geographic_region_india
 			has_building = building_railway
 			any_scope_pop = {
-				pop_has_primary_culture = no
 				pop_acceptance < acceptance_status_4
 				culture = {
 					has_discrimination_trait_group = heritage_group_south_asian
@@ -419,7 +410,6 @@ india_railway.4 = {
 			}
 			random_scope_pop = {
 				limit = {
-					pop_has_primary_culture = no
 					pop_acceptance < acceptance_status_4
 					culture = {
 						has_discrimination_trait_group = heritage_group_south_asian
@@ -567,9 +557,5 @@ india_railway.5 = {
 				add_modifier = grand_indian_railway
 			}
 		}
-	}
-
-	after = {
-		je_india_railway_cleanup = yes
 	}
 }
