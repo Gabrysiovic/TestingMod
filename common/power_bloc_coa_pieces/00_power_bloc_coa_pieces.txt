@@ -1033,6 +1033,14 @@ charge_symbols_mcoa_liberty_torch_blow_small.png = {
     colors = 1
     piece = center
 }
+charge_symbols_mcoa_torch_handshake.png = {
+    colors = 1
+    piece = center
+}
+charge_symbols_mcoa_torch_handshake_small.png = {
+    colors = 1
+    piece = center
+}
 charge_symbols_mcoa_liberty_bolt.png = {
     colors = 1
     piece = center
@@ -1089,6 +1097,14 @@ charge_symbols_mcoa_anarchy_1.png = {
     piece = center
 }
 charge_symbols_mcoa_anarchy_2.png = {
+    colors = 1
+    piece = center
+}
+charge_symbols_mcoa_vive_la_commune.png = {
+    colors = 1
+    piece = center
+}
+charge_symbols_mcoa_vive_la_commune_small.png = {
     colors = 1
     piece = center
 }
@@ -1456,6 +1472,14 @@ pb_tamga_idel_ural.dds = {
 }
 
 pb_tamga_tatar.dds = {
+    colors = 1
+    piece = center
+}
+charge_symbols_mcoa_tamga_tore.png = {
+    colors = 1
+    piece = center
+}
+charge_symbols_mcoa_tamga_tore_small.png = {
     colors = 1
     piece = center
 }
@@ -1999,6 +2023,14 @@ charge_symbols_stars_star_five_small.png = {
     colors = 1
     piece = center
 }
+charge_symbols_mcoa_star_05_rays.png = {
+    colors = 1
+    piece = center
+}
+charge_symbols_mcoa_star_05_rays_small.png = {
+    colors = 1
+    piece = center
+}
 charge_symbols_stars_star_five_circle.png = {
     colors = 1
     piece = center
@@ -2040,6 +2072,10 @@ charge_symbols_stars_circle_whole.png = {
     piece = center
 }
 charge_symbols_stars_circle_whole_loose.png = {
+    colors = 1
+    piece = center
+}
+charge_symbols_mcoa_frame_kazakh.png = {
     colors = 1
     piece = center
 }
@@ -2112,6 +2148,14 @@ charge_symbols_sun_face.png = {
     piece = center
 }
 charge_symbols_sun_face_small.png = {
+    colors = 1
+    piece = center
+}
+charge_symbols_mcoa_sun_long_rays.png = {
+    colors = 1
+    piece = center
+}
+charge_symbols_mcoa_sun_long_rays_small.png = {
     colors = 1
     piece = center
 }

@@ -682,6 +682,10 @@ fra_formation_of_power_blocs.5 = {
 				has_law = law_type:law_wealth_voting
 				has_law = law_type:law_census_voting
 				has_law = law_type:law_universal_suffrage
+				AND = {
+					has_law = law_type:law_labour_suffrage
+					NOT = { has_law = law_type:law_corporate_state }
+				}
 			}
 			NOT = {
 				has_law_or_variant = law_type:law_anarchy
@@ -763,6 +767,10 @@ fra_formation_of_power_blocs.5 = {
 						has_law = law_type:law_wealth_voting
 						has_law = law_type:law_census_voting
 						has_law = law_type:law_universal_suffrage
+						AND = {
+							has_law = law_type:law_labour_suffrage
+							NOT = { has_law = law_type:law_corporate_state }
+						}
 					}
 					NOT = {
 						has_law_or_variant = law_type:law_anarchy
@@ -896,6 +904,7 @@ fra_formation_of_power_blocs.7 = {
 				has_law = law_type:law_technocracy
 				has_law_or_variant = law_type:law_autocracy
 				has_law = law_type:law_single_party_state						
+				has_law = law_type:law_labour_suffrage
 				ruler ?= {
 					OR = {
 						has_ideology = ideology:ideology_fascist
@@ -938,6 +947,7 @@ fra_formation_of_power_blocs.7 = {
 						has_law = law_type:law_technocracy
 						has_law_or_variant = law_type:law_autocracy
 						has_law = law_type:law_single_party_state						
+						has_law = law_type:law_labour_suffrage
 						ruler ?= {
 							OR = {
 								has_ideology = ideology:ideology_fascist
