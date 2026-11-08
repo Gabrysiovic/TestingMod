@@ -214,7 +214,7 @@
 	}
 
 	dynamic_country_name = {
-		name = dyn_c_bombay_presidency
+		name = dyn_c_bombay_republic
 		adjective = dyn_c_bombay_presidency_adj
 
 		is_main_tag_only = yes

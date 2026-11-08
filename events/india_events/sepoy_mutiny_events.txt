@@ -1145,7 +1145,7 @@ sepoy_mutiny_events.4 = {
 				}
 				add_war_goal = {
 					holder = c:BIC
-					type = annex_country
+					type = suppress_sepoy_mutiny
 					target_country = prev
 					primary_demand = yes
 				}
@@ -1286,7 +1286,7 @@ sepoy_mutiny_events.4 = {
 				}
 				add_war_goal = {
 					holder = c:BIC
-					type = annex_country
+					type = suppress_sepoy_mutiny
 					target_country = prev
 					primary_demand = yes
 				}
@@ -1419,7 +1419,7 @@ sepoy_mutiny_events.4 = {
 				}
 				add_war_goal = {
 					holder = c:BIC
-					type = annex_country
+					type = suppress_sepoy_mutiny
 					target_country = prev
 					primary_demand = yes
 				}
@@ -2211,6 +2211,118 @@ sepoy_mutiny_events.12 = {
 		else = {
 			add_loyalists = {
 				value = medium_radicals
+			}
+		}
+	}
+}
+
+sepoy_mutiny_events.13 = {
+	type = country_event
+	placement = root
+	title = sepoy_mutiny_events.13.t
+	desc = {
+		triggered_desc = {
+			desc = sepoy_mutiny_events.13.d
+			trigger = {
+				NOT = {
+					any_country = {
+						has_variable = sepoy_mutiny_revolter_var
+					}
+				}
+			}
+		}
+		triggered_desc = {
+			desc = sepoy_mutiny_events.13.d_surviving_princes
+			trigger = {
+				any_country = {
+					has_variable = sepoy_mutiny_revolter_var
+				}
+			}
+		}
+	}
+	flavor = sepoy_mutiny_events.13.f
+
+	duration = 3
+
+	event_image = {
+		video = "middleeast_battlefield_trenches"
+	}
+
+	dlc = dlc011
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	# Triggered by je_sepoy_mutiny
+	trigger = {
+		NOT = {
+			# If MUG has this JE, they will get event mughal.7 for completing
+			has_journal_entry = je_mughal_hindustan
+		}
+	}
+
+	immediate = {
+		c:BIC ?= {
+			save_scope_as = bic_scope
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				overlord ?= {
+					save_scope_as = overlord_scope
+				}
+			}
+			else = {
+				save_scope_as = overlord_scope
+			}
+		}
+	}
+
+	# For BIC and Overlord
+	option = {
+		name = sepoy_mutiny_events.13.a
+		default_option = yes
+		trigger = {
+			OR = {
+				c:BIC ?= this
+				c:BIC ?= {
+					is_subject_of = ROOT
+				}
+			}
+		}
+		if = {
+			limit = {
+				c:BIC ?= this
+				is_subject = yes
+				is_subject_type = subject_type_chartered_company
+			}
+			custom_tooltip = {
+				text = british_raj_now_tt
+				overlord ?= {
+					trigger_event = { id = raj.1 popup = yes }
+				}
+			}
+		}
+	}
+
+	# For Rebelling Countries
+	option = {
+		name = sepoy_mutiny_events.13.b
+		trigger = {
+			has_variable = sepoy_mutiny_revolter_var
+		}
+		if = {
+			limit = {
+				has_variable = sepoy_mutiny_instigator
+			}
+			add_loyalists = {
+				value = medium_radicals
+			}
+		}
+		else = {
+			add_loyalists = {
+				value = small_radicals
 			}
 		}
 	}

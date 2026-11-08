@@ -13,10 +13,10 @@
  continue_as_princely_state_tt:0 "We will continue as one of the $concept_princely_states$."
 
  bic_breakup.2.t:0 "India Shattered"
- bic_breakup.2.d:0 "India is divided once again, its foreign rulers expelled by Indian rebels, the colonial territory split among the [Concept('concept_princely_state', '$concept_princely_states$')]. The era of colonial rule over India is no more, but so too is the era of unity under a single ruler."
+ bic_breakup.2.d:0 "India is divided once again, its foreign rulers expelled by Indian rebels, the colonial territory split among the [Concept('concept_princely_state', '$concept_princely_states|q$')]. The era of colonial rule over India is no more, but so too is the era of unity under a single ruler."
  bic_breakup.2.f:0 ""Is it true? The foreigners have been made to leave?"\n\n"Aye, forced out at gunpoint. I wonder though, does their expulsion herald prosperity or strife not just for [ROOT.GetCountry.GetNameNoFormatting], but for all of India...""
  bic_breakup.2.a:0 "What was united is fractured once more."
- india_now_divided_tt:0 "#b India#! has been divided among the [Concept('concept_princely_state', '$concept_princely_states$')]."
+ india_now_divided_tt:0 "#b India#! has been divided among the [Concept('concept_princely_state', '$concept_princely_states|q$')]."
  can_one_unite_india_tt:0 "But perhaps one will rise to re-unite the subcontinent..."
  unify_india_now_available_tt:0 "The #b [GetDiplomaticPlayType('dp_unify_india').GetName]#! [concept_diplomatic_play] and [concept_war_goal] are now available, allowing us to militarily unify [GetGeographicRegion('geographic_region_india').GetName] at a reduced [concept_infamy] cost."
 

@@ -2,6 +2,7 @@
 	icon = "gfx/interface/icons/invention_icons/central_planning.dds"
 
 	group = je_group_british_india
+	dlc = dlc011
 
 	activation_description = {
 		always = yes
@@ -120,6 +121,17 @@
 	}
 
 	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+	            text = rejected_imperialism_of_promise_tt
+	            has_variable = rejected_imperialism_of_promise
+	        }
+		}
+	}
+
+	outcome = {
 		header = JOURNAL_ENTRY_TIMEOUT
 		effect_header = JOURNAL_ENTRY_ON_TIMEOUT
 		flags = { timeout }
@@ -132,17 +144,6 @@
 			custom_tooltip = utilitarian_timeout_success_modifiers_tt
 			custom_tooltip = utilitarian_timeout_success_ideology_tt
 			set_variable = utilitarianism_done
-		}
-	}
-
-	outcome = {
-		flags = { hidden invalid_outcome }
-		conclusion_desc = je_standard_failure_conclusion_desc
-		trigger = {
-			custom_tooltip = {
-				text = rejected_imperialism_of_promise_tt
-				has_variable = rejected_imperialism_of_promise
-			}
 		}
 	}
 
@@ -164,6 +165,7 @@
 	timeout = 10950
 
 	weight = 100
+
 
 	should_be_pinned_by_default_uninvolved_or_context = yes
 

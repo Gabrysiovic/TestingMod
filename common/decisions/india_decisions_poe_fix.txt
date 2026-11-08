@@ -6,12 +6,13 @@
 		any_scope_state = {
 			state_region = s:STATE_PUNJAB
 		}
-		is_independent_and_not_being_subjugated = yes
+		is_subject = no
 		country_rank >= rank_value:unrecognized_major_power
 		any_diplomatically_relevant_country = {
 			has_variable = koh_i_noor
 		}
 	}
+
 	possible = {
 		custom_tooltip = {
 			text = koh_i_noor_in_europe_tt
@@ -22,11 +23,8 @@
 		custom_tooltip = {
 			text = not_at_war_with_koh_i_noor_owner_tt
 			NOT = {
-				any_country_in_europe = {
-					custom_tooltip = {
-						text = owns_koh_i_noor_tt
-						has_variable = koh_i_noor
-					}
+				any_diplomatically_relevant_country = {
+					has_variable = koh_i_noor
 					has_war_with = ROOT
 				}
 			}
@@ -38,23 +36,18 @@
 			}
 		}
 	}
+
 	when_taken = {
-		set_global_variable = {
-			name = koh_i_noor_decision_return_demanded years = 10
-		}
-		random_country_in_europe = {
+		set_global_variable = { name = koh_i_noor_decision_return_demanded years = 10 }
+		random_country = {
 			limit = {
 				has_variable = koh_i_noor
 			}
 			save_scope_as = diamond_country
-			set_variable = {
-				name = koh_i_noor_decision_user value = prev days = 180
-			}
+			set_variable = { name = koh_i_noor_decision_user value = prev days = 180 }
 			custom_tooltip = {
 				text = demand_return_of_diamond_tt
-				trigger_event = {
-					id = india_events.4
-				}
+				trigger_event = { id = india_events.4 }
 			}
 		}
 		custom_tooltip = if_they_accept_tt
@@ -65,11 +58,12 @@
 			}
 		}
 	}
+
 	ai_chance = {
 		value = 0
 		if = {
 			limit = {
-				any_country_in_europe = {
+				any_diplomatically_relevant_country = {
 					has_variable = koh_i_noor
 					relations:root <= relations_threshold:cordial
 				}

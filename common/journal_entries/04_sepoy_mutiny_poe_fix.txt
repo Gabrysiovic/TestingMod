@@ -2,6 +2,7 @@
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
 	group = je_group_british_india_global
+	dlc = dlc011
 
 	activation_description = {
 		always = yes
@@ -37,7 +38,6 @@
 	#scripted_button = increase_bombay_stability_button
 	#scripted_button = lower_madras_stability_button
 	#scripted_button = increase_madras_stability_button
-	#scripted_button = mutiny_effect_button
 
 	immediate = {
 		c:BIC ?= {
@@ -128,11 +128,14 @@
 		}
 	}
 
+	timeout = 9125
+
 	outcome = {
 		header = je_uneasy_raj_complete_header
 		effect_header = je_uneasy_raj_on_complete_header
 		color = "gold_positive"
-		conclusion_desc = je_standard_completion_conclusion_desc
+		conclusion_desc = je_uneasy_raj_complete_conclusion_desc
+		#flags = { timeout }
 		trigger = {
 			custom_tooltip = {
 				text = je_uneasy_raj_tt_1
@@ -147,24 +150,25 @@
 			}
 		}
 		event_outcome_effect_desc = {
-			header = event_effects_header_sepoy_mutiny_events_11.a
-			effect = {
-				execute_event_option = { event = sepoy_mutiny_events.11 option = 0 }
-			}
-		}
-		event_outcome_effect_desc = {
-			header = event_effects_header_sepoy_mutiny_events_11.b
-			effect = {
-				execute_event_option = { event = sepoy_mutiny_events.11 option = 1 }
-			}
-		}
+	        header = event_effects_header_sepoy_mutiny_events_11.a
+	        effect = {
+	        	execute_event_option = { event = sepoy_mutiny_events.11 option = 0 }
+	        }
+	    }
+	    event_outcome_effect_desc = {
+	        header = event_effects_header_sepoy_mutiny_events_11.b
+	        effect = {
+	        	execute_event_option = { event = sepoy_mutiny_events.11 option = 1 }
+	        }
+	    }
 	}
 
 	outcome = {
 		header = je_uneasy_raj_fail_header
 		effect_header = je_uneasy_raj_on_fail_header
 		color = "blue_negative"
-		conclusion_desc = je_standard_failure_conclusion_desc
+		conclusion_desc = je_uneasy_raj_fail_conclusion_desc
+		flags = { historical }
 		trigger = {
 			custom_tooltip = {
 				text = je_uneasy_raj_tt_2
@@ -206,31 +210,26 @@
 	}
 
 	outcome = {
-		header = JOURNAL_ENTRY_TIMEOUT
-		effect_header = JOURNAL_ENTRY_ON_TIMEOUT
-		flags = { timeout }
-		conclusion_desc = JOURNAL_ENTRY_TIMEOUT_CONCLUSION_DESC
+		flags = { hidden timeout }
+		conclusion_desc = je_uneasy_raj_complete_conclusion_desc
 		effect = {
-			hidden_effect = {
-				c:BIC ?= {
-					set_variable = company_rule_enduring
-					trigger_event = { id = sepoy_mutiny_events.11 popup = yes }
-				}
+			c:BIC ?= {
+				set_variable = company_rule_enduring
+				trigger_event = { id = sepoy_mutiny_events.11 popup = yes }
 			}
 		}
 	}
 
 	outcome = {
-		flags = { hidden invalid_outcome }
-		conclusion_desc = je_standard_failure_conclusion_desc
-		trigger = {
-			NOT = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            NOT = {
 				exists = c:BIC
 			}
-		}
-	}
-
-	timeout = 9125
+        }
+        effect = {}
+    }
 
 	on_monthly_pulse = {
 		effect = {
@@ -362,6 +361,7 @@ REPLACE:je_sepoy_mutiny = {
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
 
 	group = je_group_british_india_global
+	dlc = dlc011
 
 	activation_description = {
 		always = yes
@@ -453,12 +453,26 @@ REPLACE:je_sepoy_mutiny = {
 			custom_tooltip = {
 				text = sepoy_mutiny_defeated_tt
 				NOT = {
-					exists = scope:sepoy_mutiny_dp
-				}
-				NOT = {
 					# Given by sepoy_mutiny wargoal
 					c:BIC ?= {
 						has_variable = sepoy_mutiny_failed
+					}
+				}
+				NAND = {
+					exists = scope:sepoy_mutiny_dp
+					scope:sepoy_mutiny_dp ?= {
+						OR = {
+							has_play_goal = sepoy_mutiny
+							has_play_goal = suppress_sepoy_mutiny
+						}
+					}
+				}
+				NOT = {
+					any_scope_je_involved = {
+						OR = {
+							has_variable = sepoy_mutiny_country
+							has_variable = sepoy_mutiny_revolter_var
+						}
 					}
 				}
 			}
@@ -479,6 +493,9 @@ REPLACE:je_sepoy_mutiny = {
 						every_direct_subject = {
 							limit = {
 								has_variable = loyal_in_sepoy_mutiny
+								NOT = {
+									has_modifier = indian_loyalty_rewarded
+								}
 							}
 							remove_variable = loyal_in_sepoy_mutiny
 							add_modifier = indian_loyalty_rewarded
@@ -519,16 +536,27 @@ REPLACE:je_sepoy_mutiny = {
 		trigger = {
 			custom_tooltip = {
 				text = sepoy_mutiny_won_tt
-				NOT = {
-					exists = scope:sepoy_mutiny_dp
-				}
-				# Given by sepoy_mutiny wargoal
 				c:BIC ?= {
 					has_variable = sepoy_mutiny_failed
 				}
 			}
 		}
 		effect = {
+			while = {
+				limit = {
+					scope:sepoy_mutiny_dp ?= {
+						war = {
+							has_war_goal = suppress_sepoy_mutiny
+						}
+					}
+				}
+				scope:sepoy_mutiny_dp ?= {
+					remove_war_goal = {
+						who = c:BIC
+						type = suppress_sepoy_mutiny
+					}
+				}
+			}
 			c:BIC ?= {
 				hidden_effect = {
 					sepoy_mutiny_after_effects = yes
@@ -544,6 +572,52 @@ REPLACE:je_sepoy_mutiny = {
 						has_variable = sepoy_mutiny_revolter_var
 					}
 					trigger_event = { id = sepoy_mutiny_events.12 popup = yes }
+				}
+			}
+		}
+	}
+
+	outcome = {
+		flags = { hidden }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			NOT = {
+				# Given by sepoy_mutiny wargoal
+				c:BIC ?= {
+					has_variable = sepoy_mutiny_failed
+				}
+			}
+			NAND = {
+				exists = scope:sepoy_mutiny_dp
+				scope:sepoy_mutiny_dp ?= {
+					OR = {
+						has_play_goal = sepoy_mutiny
+						has_play_goal = suppress_sepoy_mutiny
+					}
+				}
+			}
+			any_scope_je_involved = {
+				OR = {
+					has_variable = sepoy_mutiny_country
+					has_variable = sepoy_mutiny_revolter_var
+				}
+			}
+		}
+		effect = {
+			# BIC annexes Sepoy Countries in case they still exist
+			scope:journal_entry ?= {
+				every_scope_je_involved = {
+					if = {
+						limit = {
+							has_variable = sepoy_mutiny_country
+						}
+						c:BIC ?= {
+							annex = prev
+						}
+					}
+					else = {
+						trigger_event = { id = sepoy_mutiny_events.13 popup = yes }
+					}
 				}
 			}
 		}

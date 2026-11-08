@@ -149,7 +149,7 @@ victoria_terminus.2 = {
 	option = {
 		name = victoria_terminus.2.a
 		default_option = yes
-		scope:relevant_bombay_state = {
+		scope:relevant_bombay_state ?= {
 			add_modifier = {
 				name = victoria_terminus_reward_loc
 				days = long_modifier_time
@@ -163,9 +163,5 @@ victoria_terminus.2 = {
 			name = victoria_terminus_reward_int
 			days = long_modifier_time
 		}
-	}
-
-	after = {
-		je_victoria_terminus_cleanup = yes
 	}
 }

@@ -496,7 +496,7 @@ india_non_cooperation.6 = { # Insufficient Self-Sufficiency
 	option = {
 		name = india_non_cooperation.6.a
 		default_option = yes
-		scope:indian_national_movement = {
+		scope:indian_national_movement ?= {
 			if = {
 				limit = {
 					has_modifier = swadeshi_agitation
@@ -564,7 +564,7 @@ india_non_cooperation.7 = { # The Victory of Satyagraha
 		name = india_non_cooperation.7.a
 		default_option = yes
 
-		scope:indian_national_movement = {
+		scope:indian_national_movement ?= {
 			add_modifier = {
 				name = satyagraha_triumphant
 				days = long_modifier_time

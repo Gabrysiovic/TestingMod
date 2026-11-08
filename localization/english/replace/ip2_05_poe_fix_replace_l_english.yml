@@ -34,7 +34,7 @@
   india_non_cooperation.4.a:1 "This action is insignificant."
   india_non_cooperation.4.b:1 "Suppress this at once!"
 
-  india_non_cooperation.5.d:1 "Rising [Concept('concept_activism', '$concept_activism_short$')] has sparked a clash between supporters of the [SCOPE.sPoliticalMovement('indian_national_movement').GetName] and the local police in [SCOPE.sState('chauri_chaura_state').GetName]. Protesters were fired on, and in response a mob burned down the local police station. Representatives of the [SCOPE.sPoliticalMovement('indian_national_movement').GetNameNoFormatting] appear visibly shaken by the reports of violence."
+  india_non_cooperation.5.d:1 "Rising [Concept('concept_activism', '$concept_activism_short|q$')] has sparked a clash between supporters of the [SCOPE.sPoliticalMovement('indian_national_movement').GetName] and the local police in [SCOPE.sState('chauri_chaura_state').GetName]. Protesters were fired on, and in response a mob burned down the local police station. Representatives of the [SCOPE.sPoliticalMovement('indian_national_movement').GetNameNoFormatting] appear visibly shaken by the reports of violence."
   india_non_cooperation.5.a:1 "The actions of a few have sullied the entire movement."
 
   india_non_cooperation.6.d:2 "The [SCOPE.sPoliticalMovement('indian_national_movement').GetName]'s efforts to break the foreign stranglehold on Indian trade has fizzled out, with no resounding successes."

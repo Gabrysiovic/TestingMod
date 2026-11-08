@@ -33,8 +33,8 @@ subject_interactions.1 = {
 				save_scope_as = primary_culture_scope
 			}
 			if = {
-				limit = { # BIC governors are company men
-					c:BIC ?= this
+				limit = { # These special colonial countries are only allowed to have Industrialist leaders (and of these types)
+					is_colonial_industrialist_led_country = yes
 				}
 				ig:ig_industrialists ?= {
 					save_scope_as = business_ig_scope
@@ -51,7 +51,7 @@ subject_interactions.1 = {
 				}
 				ig:ig_industrialists ?= {
 					save_scope_as = extraction_ig_scope
-				}
+				}	
 			}
 			save_scope_as = relevant_country
 		}
@@ -64,9 +64,8 @@ subject_interactions.1 = {
 		scope:relevant_country = {
 			# Plantation Man
 			create_character = {
-				template = character_template_colonial_governor_plantation
+				template = character_template_colonial_governor_plantation		
 				on_created = {
-					set_temporary_event_immortality = { DURATION = 3 }
 					place_character_in_void = 6
 					set_variable = { name = colonial_governor_term value = 0 }
 				}
@@ -76,7 +75,6 @@ subject_interactions.1 = {
 			create_character = {
 				template = character_template_colonial_governor_local
 				on_created = {
-					set_temporary_event_immortality = { DURATION = 3 }
 					place_character_in_void = 6
 					set_variable = { name = colonial_governor_term value = 0 }
 				}
@@ -86,7 +84,6 @@ subject_interactions.1 = {
 			create_character = {
 				template = character_template_colonial_governor_extraction
 				on_created = {
-					set_temporary_event_immortality = { DURATION = 3 }
 					place_character_in_void = 6
 					set_variable = { name = colonial_governor_term value = 0 }
 				}
@@ -96,7 +93,6 @@ subject_interactions.1 = {
 			create_character = {
 				template = character_template_colonial_governor_business
 				on_created = {
-					set_temporary_event_immortality = { DURATION = 3 }
 					place_character_in_void = 6
 					set_variable = { name = colonial_governor_term value = 0 }
 				}
@@ -106,21 +102,12 @@ subject_interactions.1 = {
 			create_character = {
 				template = character_template_colonial_governor_military
 				on_created = {
-					set_temporary_event_immortality = { DURATION = 3 }
 					place_character_in_void = 6
 					set_variable = { name = colonial_governor_term value = 0 }
 				}
 				save_scope_as = colonial_governor_military_scope
 			}
 		}
-	}
-
-	after = {
-		revoke_temporary_event_immortality = { CHARACTER = scope:colonial_governor_plantation_scope }
-		revoke_temporary_event_immortality = { CHARACTER = scope:colonial_governor_local_scope }
-		revoke_temporary_event_immortality = { CHARACTER = scope:colonial_governor_extraction_scope }
-		revoke_temporary_event_immortality = { CHARACTER = scope:colonial_governor_business_scope }
-		revoke_temporary_event_immortality = { CHARACTER = scope:colonial_governor_military_scope }
 	}
 
 	option = {
@@ -150,10 +137,9 @@ subject_interactions.1 = {
 	option = {
 		name = subject_interactions.1.b
 		trigger = {
-			NOT = { # BIC governors don't get to be local men
-				scope:relevant_country = {
-					c:BIC ?= this
-				}
+			scope:relevant_country = {
+				# These special countries can't have local men as leaders
+				is_colonial_industrialist_led_country = no
 			}
 		}
 		scope:relevant_country = {
@@ -247,10 +233,9 @@ subject_interactions.1 = {
 	option = {
 		name = subject_interactions.1.g
 		trigger = {
-			NOT = { # BIC governors don't get to be military men
-				scope:relevant_country = {
-					c:BIC ?= this
-				}
+			scope:relevant_country = {
+				# These special countries can't have military men as leaders
+				is_colonial_industrialist_led_country = no
 			}
 		}
 		scope:relevant_country = {
@@ -297,7 +282,6 @@ subject_interactions.3 = {
 	immediate = {
 		ruler = {
 			save_scope_as = relevant_character
-			set_temporary_event_immortality = { DURATION = 3 }
 		}
 		random_primary_culture = {
 			save_scope_as = primary_culture_scope
@@ -312,8 +296,8 @@ subject_interactions.3 = {
 			}
 		}
 		if = {
-			limit = { # BIC governors are company men
-				c:BIC ?= this
+			limit = { # These special colonial countries are only allowed to have Industrialist leaders (and of these types)
+				is_colonial_industrialist_led_country = yes
 			}
 			ig:ig_industrialists ?= {
 				save_scope_as = business_ig_scope
@@ -330,13 +314,12 @@ subject_interactions.3 = {
 			}
 			ig:ig_industrialists ?= {
 				save_scope_as = extraction_ig_scope
-			}
+			}	
 		}
 		# Plantation Man
 		create_character = {
-			template = character_template_colonial_governor_plantation
+			template = character_template_colonial_governor_plantation		
 			on_created = {
-				set_temporary_event_immortality = { DURATION = 3 }
 				place_character_in_void = 6
 				set_variable = { name = colonial_governor_term value = 0 }
 			}
@@ -346,7 +329,6 @@ subject_interactions.3 = {
 		create_character = {
 			template = character_template_colonial_governor_local
 			on_created = {
-				set_temporary_event_immortality = { DURATION = 3 }
 				place_character_in_void = 6
 				set_variable = { name = colonial_governor_term value = 0 }
 			}
@@ -356,7 +338,6 @@ subject_interactions.3 = {
 		create_character = {
 			template = character_template_colonial_governor_extraction
 			on_created = {
-				set_temporary_event_immortality = { DURATION = 3 }
 				place_character_in_void = 6
 				set_variable = { name = colonial_governor_term value = 0 }
 			}
@@ -366,7 +347,6 @@ subject_interactions.3 = {
 		create_character = {
 			template = character_template_colonial_governor_business
 			on_created = {
-				set_temporary_event_immortality = { DURATION = 3 }
 				place_character_in_void = 6
 				set_variable = { name = colonial_governor_term value = 0 }
 			}
@@ -376,21 +356,11 @@ subject_interactions.3 = {
 		create_character = {
 			template = character_template_colonial_governor_military
 			on_created = {
-				set_temporary_event_immortality = { DURATION = 3 }
 				place_character_in_void = 6
 				set_variable = { name = colonial_governor_term value = 0 }
 			}
 			save_scope_as = colonial_governor_military_scope
 		}
-	}
-
-	after = {
-		revoke_temporary_event_immortality = { CHARACTER = scope:relevant_character }
-		revoke_temporary_event_immortality = { CHARACTER = scope:colonial_governor_plantation_scope }
-		revoke_temporary_event_immortality = { CHARACTER = scope:colonial_governor_local_scope }
-		revoke_temporary_event_immortality = { CHARACTER = scope:colonial_governor_extraction_scope }
-		revoke_temporary_event_immortality = { CHARACTER = scope:colonial_governor_business_scope }
-		revoke_temporary_event_immortality = { CHARACTER = scope:colonial_governor_military_scope }
 	}
 
 	option = {
@@ -414,9 +384,8 @@ subject_interactions.3 = {
 	option = {
 		name = subject_interactions.3.b
 		trigger = {
-			NOT = { # BIC governors don't get to be local men
-				c:BIC ?= this
-			}
+			# These special countries can't have local men as leaders
+			is_colonial_industrialist_led_country = no
 		}
 		scope:colonial_governor_local_scope = {
 			hidden_effect = {
@@ -487,9 +456,8 @@ subject_interactions.3 = {
 	option = {
 		name = subject_interactions.3.g
 		trigger = {
-			NOT = { # BIC governors don't get to be military men
-				c:BIC ?= this
-			}
+			# These special countries can't have military men as leaders
+			is_colonial_industrialist_led_country = no
 		}
 		scope:colonial_governor_military_scope = {
 			hidden_effect = {

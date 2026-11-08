@@ -5,6 +5,7 @@ REPLACE:je_india_home_rule = {
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
 	group = je_group_british_india_global
+	dlc = dlc011
 
 	activation_description = {
 		always = yes
@@ -20,7 +21,7 @@ REPLACE:je_india_home_rule = {
 	scripted_button = je_india_enact_home_rule
 	scripted_button = je_india_nationalism_britain_dispatch_simon_commission
 	# TODO: Remove this debugging button
-	#scripted_button = add_indian_nationalism_button
+	scripted_button = add_indian_nationalism_button
 
 	should_be_involved = {
 		OR = {
@@ -299,7 +300,7 @@ REPLACE:je_india_home_rule = {
 				if = {
 					limit = {
 						has_variable = indian_partition_promised
-						# Has the necessary land to create Pakistan
+						 # Has the necessary land to create Pakistan
 						OR = {
 							has_state_in_state_region = STATE_PUNJAB
 							has_state_in_state_region = STATE_SINDH

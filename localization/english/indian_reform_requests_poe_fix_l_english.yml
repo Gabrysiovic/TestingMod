@@ -32,7 +32,7 @@
   indian_reform_request_events.5.b: "Send the word. India shall be re-organized into a dominion with sovereign home rule for the native population."
   india_granted_home_rule_tt: "#b India#! will be granted sovereign home rule as a [concept_dominion] within the [ROOT.GetCountry.GetAdjective] Empire."
   notification_overlord_home_rule_denied_name: "Home Rule Denied"
-  notification_overlord_home_rule_denied_desc: "[SCOPE.sCountry('overlord_scope').GetName] has denied the petition for sovereign home rule. This has greatly increased the number of native Indian [concept_radicals], the disapproval of the [SCOPE.sPoliticalLobby('inc_scope').GetName], and the [Concept('concept_activism','$concept_activism_short$')] of the [SCOPE.sPoliticalMovement('indian_national_movement').GetName]."
+  notification_overlord_home_rule_denied_desc: "[SCOPE.sCountry('overlord_scope').GetName] has denied the petition for sovereign home rule. This has greatly increased the number of native Indian [concept_radicals], the disapproval of the [SCOPE.sPoliticalLobby('inc_scope').GetName], and the [Concept('concept_activism', '$concept_activism_short|q$')] of the [SCOPE.sPoliticalMovement('indian_national_movement').GetName]."
   notification_overlord_home_rule_denied_tooltip: "#header $notification_overlord_home_rule_denied_name$#!\n$TOOLTIP_DELIMITER$\n$notification_overlord_home_rule_denied_desc$"
 
   indian_reform_request_events.6.t: "[SCOPE.sPoliticalMovement('indian_national_movement').GetNameNoFormatting] Demands Independence"
@@ -42,7 +42,7 @@
   indian_reform_request_events.6.b: "We're left with little choice. If they want their independence, then they shall have it."
   india_granted_independence_tt: "#b India#! will be granted full independence with a sovereign government."
   notification_overlord_independence_denied_name: "Indian Independence Denied"
-  notification_overlord_independence_denied_desc: "[SCOPE.sCountry('overlord_scope').GetName] has denied the [SCOPE.sPoliticalMovement('indian_national_movement').GetName]'s demand for full independence. This has greatly increased the number of native Indian [concept_radicals], the disapproval of the [SCOPE.sPoliticalLobby('inc_scope').GetName], and the [Concept('concept_activism','$concept_activism_short$')] of the [SCOPE.sPoliticalMovement('indian_national_movement').GetName]."
+  notification_overlord_independence_denied_desc: "[SCOPE.sCountry('overlord_scope').GetName] has denied the [SCOPE.sPoliticalMovement('indian_national_movement').GetName]'s demand for full independence. This has greatly increased the number of native Indian [concept_radicals], the disapproval of the [SCOPE.sPoliticalLobby('inc_scope').GetName], and the [Concept('concept_activism', '$concept_activism_short|q$')] of the [SCOPE.sPoliticalMovement('indian_national_movement').GetName]."
   notification_overlord_independence_denied_tooltip: "#header $notification_overlord_independence_denied_name$#!\n$TOOLTIP_DELIMITER$\n$notification_overlord_independence_denied_desc$"
 
   indian_reform_request_events.7.t: "Authorizing Government Reform"

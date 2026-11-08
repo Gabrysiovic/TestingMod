@@ -23,104 +23,113 @@ regency.1 = {
 
 	trigger = {
 		# Is a monarchy, ruler is undr age of majority
-		OR = {
-			has_law = law_type:law_monarchy
-			AND = {
-				has_law = law_type:law_theocracy
-				OR = {
-					government_transfer_of_power = hereditary
-					c:TIB ?= this
-				}
-			}
-		}
+		country_has_monarchy_law = yes
 		has_gov_regency = no
 	}
 
 	cancellation_trigger = {
 		OR = {
-			NOR = {
-				has_law = law_type:law_monarchy
-				AND = {
-					has_law = law_type:law_theocracy
-					OR = {
-						government_transfer_of_power = hereditary
-						c:TIB ?= this
-					}
-				}
-			}
+			country_has_monarchy_law = no
 			scope:monarch_scope ?= {
 				is_adult = yes
 			}
-			has_gov_regency = yes
 		}
 	}
 
 	immediate = {
-		ordered_interest_group = { # Just the most notable IG in government
+		if = {
+			# BIC should only choose Industrialist regents
 			limit = {
-				is_in_government = yes
+				ROOT.country_definition ?= cd:BIC
 			}
-			order_by = ig_clout
-			position = 0
-			check_range_bounds = no
-			save_scope_as = ig_candidate_1
+			ig:ig_industrialists = {
+				save_scope_as = ig_candidate_1
+			}
 		}
-		ordered_interest_group = { # Any pro-monarchy IG
-			limit = {
-				NOT = {
-					scope:ig_candidate_1 ?= this
+		else = {
+			ordered_interest_group = { # Just the most notable IG in government
+				limit = {
+					is_in_government = yes
 				}
-				law_stance = {
-					law = law_type:law_monarchy
-					value >= approve
-				}
-				ig_counts_as_marginal = no
+				order_by = ig_clout
+				position = 0
+				check_range_bounds = no
+				save_scope_as = ig_candidate_1
 			}
-			order_by = ig_clout
-			position = 0
-			check_range_bounds = no
-			save_scope_as = ig_candidate_2
-		}
-		ordered_interest_group = {
-			limit = {
-				NOR = {
-					scope:ig_candidate_1 ?= this
-					scope:ig_candidate_2 ?= this
+			ordered_interest_group = { # Any pro-monarchy IG
+				limit = {
+					NOT = {
+						scope:ig_candidate_1 ?= this
+					}
+					OR = {
+						law_stance = {
+							law = law_type:law_monarchy
+							value >= approve
+						}
+						law_stance = {
+							law = law_type:law_social_monarchy
+							value >= approve
+						}
+					}
+					ig_counts_as_marginal = no
 				}
-				law_stance = {
-					law = law_type:law_monarchy
-					value >= neutral
-				}
-				ig_counts_as_marginal = no
-				is_insurrectionary = no
+				order_by = ig_clout
+				position = 0
+				check_range_bounds = no
+				save_scope_as = ig_candidate_2
 			}
-			order_by = ig_clout
-			position = 0
-			check_range_bounds = no
-			save_scope_as = ig_candidate_3
-		}
-		ordered_interest_group = {
-			limit = {
-				NOR = {
-					scope:ig_candidate_1 ?= this
-					scope:ig_candidate_2 ?= this
-					scope:ig_candidate_3 ?= this
+			ordered_interest_group = {
+				limit = {
+					NOR = {
+						scope:ig_candidate_1 ?= this
+						scope:ig_candidate_2 ?= this
+					}
+					OR = {
+						law_stance = {
+							law = law_type:law_monarchy
+							value >= approve
+						}
+						law_stance = {
+							law = law_type:law_social_monarchy
+							value >= approve
+						}
+					}
+					ig_counts_as_marginal = no
+					is_insurrectionary = no
 				}
-				law_stance = {
-					law = law_type:law_monarchy
-					value >= neutral
-				}
-				ig_counts_as_marginal = no
-				is_insurrectionary = no
+				order_by = ig_clout
+				position = 0
+				check_range_bounds = no
+				save_scope_as = ig_candidate_3
 			}
-			order_by = this.leader.popularity
-			position = 0
-			check_range_bounds = no
-			save_scope_as = ig_candidate_4
+			ordered_interest_group = {
+				limit = {
+					NOR = {
+						scope:ig_candidate_1 ?= this
+						scope:ig_candidate_2 ?= this
+						scope:ig_candidate_3 ?= this
+					}
+					OR = {
+						law_stance = {
+							law = law_type:law_monarchy
+							value >= approve
+						}
+						law_stance = {
+							law = law_type:law_social_monarchy
+							value >= approve
+						}
+					}
+					ig_counts_as_marginal = no
+					is_insurrectionary = no
+				}
+				order_by = this.leader.popularity
+				position = 0
+				check_range_bounds = no
+				save_scope_as = ig_candidate_4
+			}
 		}
 		ruler ?= {
 			save_scope_as = monarch_scope
-			set_temporary_event_immortality = { DURATION = 3 }
 		}
 	}
 
@@ -131,8 +140,14 @@ regency.1 = {
 		set_variable = { name = hide_ruler_change_notification days = 3 }
 		scope:ig_candidate_1.leader = {
 			set_character_as_ruler = yes
-			designate_character_as_regent = {
-				YEARS = 0
+			set_variable = { name = regency_years value = 0 }
+			hidden_effect = {
+				if = {
+					limit = {
+						is_immortal = no
+					}
+					set_character_immortal = yes
+				}
 			}
 		}
 		set_heir = scope:monarch_scope
@@ -147,8 +162,14 @@ regency.1 = {
 		set_variable = { name = hide_ruler_change_notification days = 3 }
 		scope:ig_candidate_2.leader = {
 			set_character_as_ruler = yes
-			designate_character_as_regent = {
-				YEARS = 0
+			set_variable = { name = regency_years value = 0 }
+			hidden_effect = {
+				if = {
+					limit = {
+						is_immortal = no
+					}
+					set_character_immortal = yes
+				}
 			}
 		}
 		set_heir = scope:monarch_scope
@@ -163,8 +184,14 @@ regency.1 = {
 		set_variable = { name = hide_ruler_change_notification days = 3 }
 		scope:ig_candidate_3.leader = {
 			set_character_as_ruler = yes
-			designate_character_as_regent = {
-				YEARS = 0
+			set_variable = { name = regency_years value = 0 }
+			hidden_effect = {
+				if = {
+					limit = {
+						is_immortal = no
+					}
+					set_character_immortal = yes
+				}
 			}
 		}
 		set_heir = scope:monarch_scope
@@ -179,15 +206,17 @@ regency.1 = {
 		set_variable = { name = hide_ruler_change_notification days = 3 }
 		scope:ig_candidate_4.leader = {
 			set_character_as_ruler = yes
-			designate_character_as_regent = {
-				YEARS = 0
+			set_variable = { name = regency_years value = 0 }
+			hidden_effect = {
+				if = {
+					limit = {
+						is_immortal = no
+					}
+					set_character_immortal = yes
+				}
 			}
 		}
 		set_heir = scope:monarch_scope
-	}
-
-	after = {
-		revoke_temporary_event_immortality = { CHARACTER = scope:monarch_scope }
 	}
 }
 
@@ -212,7 +241,6 @@ regency.2 = {
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
 	trigger = {
-		# triggered by on_action - regency_monthly_events
 		has_gov_regency = yes
 		ruler ?= {
 			OR = {
@@ -231,81 +259,85 @@ regency.2 = {
 	}
 
 	immediate = {
-		ruler ?= {
-			save_scope_as = regent_scope
-			set_temporary_event_immortality = { DURATION = 3 }
-			interest_group ?= {
-				save_scope_as = ig_candidate_1
-				if = {
-					limit = {
-						NOT = {
-							any_scope_character = {
-								is_ruler_of_own_country = no
-								is_heir_of_own_country = no
-							}
+		if = {
+			# BIC should only choose Industrialist regents
+			limit = {
+				ROOT.country_definition ?= cd:BIC
+			}
+			ruler ?= {
+				interest_group = {
+					save_scope_as = ig_candidate_1
+				}
+			}
+		}
+		else = {
+			ruler ?= {
+				interest_group = {
+					save_scope_as = ig_candidate_1
+				}
+			}
+			ordered_interest_group = { # Just the most notable IG in government
+				limit = {
+					NOT = {
+						scope:ig_candidate_1 ?= this
+					}
+					is_in_government = yes
+					ig_counts_as_marginal = no
+				}
+				order_by = ig_clout
+				position = 0
+				check_range_bounds = no
+				save_scope_as = ig_candidate_2
+			}
+			ordered_interest_group = { # Any pro-monarchy IG
+				limit = {
+					NOR = {
+						scope:ig_candidate_1 ?= this
+						scope:ig_candidate_2 ?= this
+					}
+					OR = {
+						law_stance = {
+							law = law_type:law_monarchy
+							value >= approve
+						}
+						law_stance = {
+							law = law_type:law_social_monarchy
+							value >= approve
 						}
 					}
-					ROOT = {
-						create_character = {
-							interest_group = scope:ig_candidate_1
-							role = character_role_politician
-							save_scope_as = backup_regent_scope
-							on_created = {
-								set_temporary_event_immortality = { DURATION = 3 }
-							}
+					ig_counts_as_marginal = no
+				}
+				order_by = ig_clout
+				position = 0
+				check_range_bounds = no
+				save_scope_as = ig_candidate_3
+			}
+			ordered_interest_group = {
+				limit = {
+					NOR = {
+						scope:ig_candidate_1 ?= this
+						scope:ig_candidate_2 ?= this
+						scope:ig_candidate_3 ?= this
+					}
+					OR = {
+						law_stance = {
+							law = law_type:law_monarchy
+							value >= approve
+						}
+						law_stance = {
+							law = law_type:law_social_monarchy
+							value >= approve
 						}
 					}
+					is_insurrectionary = no
+					ig_counts_as_marginal = no
 				}
+				order_by = this.leader.popularity
+				position = 0
+				check_range_bounds = no
+				save_scope_as = ig_candidate_4
 			}
-		}
-		ordered_interest_group = { # Just the most notable IG in government
-			limit = {
-				NOT = {
-					scope:ig_candidate_1 ?= this
-				}
-				is_in_government = yes
-				ig_counts_as_marginal = no
-			}
-			order_by = ig_clout
-			position = 0
-			check_range_bounds = no
-			save_scope_as = ig_candidate_2
-		}
-		ordered_interest_group = { # Any pro-monarchy IG
-			limit = {
-				NOR = {
-					scope:ig_candidate_1 ?= this
-					scope:ig_candidate_2 ?= this
-				}
-				law_stance = {
-					law = law_type:law_monarchy
-					value >= approve
-				}
-				ig_counts_as_marginal = no
-			}
-			order_by = ig_clout
-			position = 0
-			check_range_bounds = no
-			save_scope_as = ig_candidate_3
-		}
-		ordered_interest_group = {
-			limit = {
-				NOR = {
-					scope:ig_candidate_1 ?= this
-					scope:ig_candidate_2 ?= this
-					scope:ig_candidate_3 ?= this
-				}
-				law_stance = {
-					law = law_type:law_monarchy
-					value >= neutral
-				}
-				is_insurrectionary = no
-				ig_counts_as_marginal = no
-			}
-			order_by = this.leader.popularity
-			position = 0
-			check_range_bounds = no
-			save_scope_as = ig_candidate_4
+
 		}
 		heir ?= {
 			save_scope_as = monarch_scope
@@ -315,42 +347,32 @@ regency.2 = {
 	option = {
 		name = regency.2.a
 		default_option = yes
-		if = {
-			limit = {
-				scope:ig_candidate_1 ?= {
-					any_scope_character = {
-						is_ruler_of_own_country = no
-						is_heir_of_own_country = no
-					}
-				}
-			}
-			scope:ig_candidate_1 ?= {
-				ordered_scope_character = {
-					limit = {
-						is_ruler_of_own_country = no
-						is_heir_of_own_country = no
-					}
-					order_by = loyalty
-					position = 0
+		create_character = {
+			culture = primary_culture
+			ig_leader = yes
+			interest_group = scope:ig_candidate_1
+			on_created = {
+				set_character_as_ruler = yes
+				set_variable = { name = regency_years value = 0 }
+				hidden_effect = {
 					if = {
 						limit = {
-							has_role_of_type = agitator
+							is_immortal = no
 						}
-						replace_character_roles = { remove = { agitator } add = { politician } }
-					}
-					set_character_as_ruler = yes
-					designate_character_as_regent = {
-						YEARS = 0
+						set_character_immortal = yes
 					}
 				}
 			}
 		}
-		else = {
-			scope:backup_regent_scope ?= {
-				set_character_as_ruler = yes
-				designate_character_as_regent = {
-					YEARS = 0
+		scope:regent_scope = {
+			hidden_effect = {
+				if = {
+					limit = {
+						is_immortal = yes
+					}
+					set_character_immortal = no
 				}
+				retire_character = yes
 			}
 		}
 	}
@@ -362,8 +384,25 @@ regency.2 = {
 		}
 		scope:ig_candidate_2.leader = {
 			set_character_as_ruler = yes
-			designate_character_as_regent = {
-				YEARS = 0
+			set_variable = { name = regency_years value = 0 }
+			hidden_effect = {
+				if = {
+					limit = {
+						is_immortal = no
+					}
+					set_character_immortal = yes
+				}
+			}
+		}
+		scope:regent_scope = {
+			hidden_effect = {
+				if = {
+					limit = {
+						is_immortal = yes
+					}
+					set_character_immortal = no
+				}
+				retire_character = yes
 			}
 		}
 	}
@@ -375,8 +414,25 @@ regency.2 = {
 		}
 		scope:ig_candidate_3.leader = {
 			set_character_as_ruler = yes
-			designate_character_as_regent = {
-				YEARS = 0
+			set_variable = { name = regency_years value = 0 }
+			hidden_effect = {
+				if = {
+					limit = {
+						is_immortal = no
+					}
+					set_character_immortal = yes
+				}
+			}
+		}
+		scope:regent_scope = {
+			hidden_effect = {
+				if = {
+					limit = {
+						is_immortal = yes
+					}
+					set_character_immortal = no
+				}
+				retire_character = yes
 			}
 		}
 	}
@@ -388,23 +444,24 @@ regency.2 = {
 		}
 		scope:ig_candidate_4.leader = {
 			set_character_as_ruler = yes
-			designate_character_as_regent = {
-				YEARS = 0
+			set_variable = { name = regency_years value = 0 }
+			hidden_effect = {
+				if = {
+					limit = {
+						is_immortal = no
+					}
+					set_character_immortal = yes
+				}
 			}
 		}
-	}
-	after = {
-		revoke_temporary_event_immortality = { CHARACTER = scope:backup_regent_scope }
 		scope:regent_scope = {
 			hidden_effect = {
 				if = {
 					limit = {
 						is_immortal = yes
-						has_variable = regent_immortality_var
 					}
 					set_character_immortal = no
 				}
-				revoke_temporary_event_immortality = { CHARACTER = scope:regent_scope }
 				retire_character = yes
 			}
 		}
@@ -434,13 +491,9 @@ regency.3 = {
 	cooldown = { days = 100 }
 
 	trigger = {
-		# triggered by on_action - on_monthly_pulse_country
 		has_gov_regency = yes
 		heir ?= {
 			is_adult = yes
-			NOT = {
-				has_variable = lifetime_regency
-			}
 		}
 	}
 
@@ -451,11 +504,9 @@ regency.3 = {
 	immediate = {
 		ruler ?= {
 			save_scope_as = regent_scope
-			set_temporary_event_immortality = { DURATION = 3 }
 		}
 		heir ?= {
 			save_scope_as = monarch_scope
-			set_temporary_event_immortality = { DURATION = 3 }
 		}
 	}
 
@@ -463,25 +514,19 @@ regency.3 = {
 		name = regency.3.a
 		default_option = yes
 		remove_regency_modifier = yes
+		scope:regent_scope ?= {
+			hidden_effect = {
+				if = {
+					limit = {
+						is_immortal = yes
+					}
+					set_character_immortal = no
+				}
+			}
+		}
 		scope:monarch_scope ?= {
 			set_character_as_ruler = yes
 			set_variable = regency_complete
-		}
-	}
-
-	after = {
-		revoke_temporary_event_immortality = { CHARACTER = scope:regent_scope }
-		revoke_temporary_event_immortality = { CHARACTER = scope:monarch_scope }
-		if = {
-			limit = {
-				scope:monarch_scope ?= {
-					has_template = JAP_iemochi_tokugawa
-				}
-				scope:regent_scope ?= {
-					has_template = JAP_yoshinobu_tokugawa
-				}
-			}
-			set_heir = scope:regent_scope # Prevent cloning Yoshinobu
 		}
 	}
 }

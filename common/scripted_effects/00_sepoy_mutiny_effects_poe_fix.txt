@@ -789,7 +789,7 @@ REPLACE:sepoy_mutiny_immediate_effects = {
 		scope:sepoy_mutiny_dp ?= {
 			add_war_goal = {
 				holder = c:BIC
-				type = annex_country
+				type = suppress_sepoy_mutiny
 				target_country = scope:sepoy_scope
 				primary_demand = yes
 			}
@@ -929,6 +929,9 @@ REPLACE:sepoy_mutiny_immediate_effects = {
 		}
 		else = {
 			scope:sepoy_mutiny_dp ?= {
+				add_initiator_backers = {
+					scope:sepoy_scope
+				}
 				add_war_goal = {
 					holder = scope:sepoy_scope
 					type = sepoy_mutiny
@@ -940,7 +943,7 @@ REPLACE:sepoy_mutiny_immediate_effects = {
 		scope:sepoy_mutiny_dp ?= {
 			add_war_goal = {
 				holder = c:BIC
-				type = annex_country
+				type = suppress_sepoy_mutiny
 				target_country = scope:sepoy_scope
 				primary_demand = yes
 			}
@@ -1080,6 +1083,9 @@ REPLACE:sepoy_mutiny_immediate_effects = {
 		}
 		else = {
 			scope:sepoy_mutiny_dp ?= {
+				add_initiator_backers = {
+					scope:sepoy_scope
+				}
 				add_war_goal = {
 					holder = scope:sepoy_scope
 					type = sepoy_mutiny
@@ -1091,7 +1097,7 @@ REPLACE:sepoy_mutiny_immediate_effects = {
 		scope:sepoy_mutiny_dp ?= {
 			add_war_goal = {
 				holder = c:BIC
-				type = annex_country
+				type = suppress_sepoy_mutiny
 				target_country = scope:sepoy_scope
 				primary_demand = yes
 			}

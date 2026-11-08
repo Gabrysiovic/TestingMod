@@ -19,15 +19,15 @@
 	possible = {
 		NOT = { is_country_type = decentralized }
 		aggressive_diplomatic_plays_permitted = yes
-		is_subject = no
 		has_technology_researched = pan-nationalism
+		is_subject = no
+		is_india_unification_pair = { TARGET = scope:target_country }
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
 		}
-		this ?= {
-			is_in_geographic_region = geographic_region_india
-		}
 	}
+
+	ai_acceptance_max = 75
 
 	on_weekly_pulse = {}
 
@@ -45,7 +45,6 @@ REPLACE_OR_CREATE:dp_sepoy_mutiny_new = {
 	target_can_add_war_goals = no
 	add_infamy_for_starting_initiator_wargoals = no
 	add_infamy_for_starting_target_wargoals = no
-	ai_acceptance_max = 0
 
 	texture = "gfx/interface/icons/war_goals/annex_country.dds"
 

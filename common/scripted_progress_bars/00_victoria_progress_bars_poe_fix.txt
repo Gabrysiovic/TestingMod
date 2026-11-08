@@ -273,8 +273,9 @@
 	desc = "je_communal_divides_hindu_progressbar_left_desc"
  	second_desc = "je_communal_divides_hindu_progressbar_right_desc"
 
-	default_bad = yes
-	marker = yes
+ 	progress_texture = "gfx/interface/progressbar/progressbar_default.dds"
+ 	background_texture = "gfx/interface/progressbar/progressbar_bad.dds"
+ 	marker = yes
 
 	monthly_progress = {
 		# Activism
@@ -495,8 +496,9 @@
 	desc = "je_communal_divides_muslim_progressbar_left_desc"
  	second_desc = "je_communal_divides_muslim_progressbar_right_desc"
 
-	default_bad = yes
-	marker = yes
+	progress_texture = "gfx/interface/progressbar/progressbar_default.dds"
+ 	background_texture = "gfx/interface/progressbar/progressbar_bad.dds"
+ 	marker = yes
 
 	monthly_progress = {
 		# Activism

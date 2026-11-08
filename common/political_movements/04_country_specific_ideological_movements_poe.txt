@@ -1,16 +1,20 @@
 ﻿REPLACE:movement_utilitarian = {
 	category = movement_category_ideological
+
 	active_law_radicalism_multiplier = 0.5
+
 	ideology = ideology_utilitarian_movement
 	character_ideologies = {
 		ideology_utilitarian_leader
 	}
+
 	disband_trigger = {
 		has_council_republic_law = yes
 	}
 	on_disbanded = {
 		fold_movement_into_anti_communist_movement_effect = yes
 	}
+
 	creation_trigger = {
 		OR = {
 			country_has_primary_culture = cu:british
@@ -22,8 +26,7 @@
 		value = 100
 		if = {
 			limit = {
-				owner ?= {
-					# If a movement of this type exists in a neighbouring country, make it more likely to spawn here as well
+				owner ?= { # If a movement of this type exists in a neighbouring country, make it more likely to spawn here as well
 					any_neighbouring_state = {
 						owner = {
 							prestige > ROOT.owner.prestige
@@ -42,6 +45,7 @@
 	on_created = {
 		add_movement_enthusiasm_modifier = yes
 	}
+
 	character_support_trigger = {
 		OR = {
 			AND = {
@@ -66,6 +70,7 @@
 			}
 		}
 	}
+
 	can_pressure_interest_group = {
 		OR = {
 			NOT = {
@@ -74,6 +79,7 @@
 			is_indian_interest_group = no
 		}
 	}
+
 	pop_support_trigger = {
 		OR = {
 			AND = {
@@ -97,6 +103,7 @@
 			is_pop_type = slaves
 		}
 	}
+
 	pop_support_factors = {
 		movement_support_colonial_rule
 		movement_support_high_acceptance
@@ -105,17 +112,18 @@
 		movement_support_officers
 		movement_support_clerks
 	}
+
 	pop_support_weight = {
 		if = {
 			limit = {
 				exists = scope:political_movement
 				scope:political_movement ?= {
-					OR = {
-						is_being_suppressed = yes
-						is_being_bolstered = yes
+						OR = {
+							is_being_suppressed = yes
+							is_being_bolstered = yes
+						}
 					}
 				}
-			}
 			if = {
 				limit = {
 					scope:political_movement = {
@@ -142,10 +150,12 @@
 				}
 			}
 		}
+
 		add = {
 			value = 1
 			desc = "POP_BASE_SUPPORT"
 		}
+
 		if = {
 			limit = {
 				owner = {
@@ -166,6 +176,7 @@
 				}
 			}
 		}
+
 		if = {
 			limit = {
 				is_pop_type = bureaucrats
@@ -211,34 +222,38 @@
 				value = 3
 			}
 		}
-		multiply = {
-			# Illiterate pops participate at 1/10 the rate of fully literate pops
+
+		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
 			desc = "POP_LITERACY"
 			value = literacy_rate
 			add = 0.10
 		}
+
 		multiply = {
 			desc = "POP_ACCEPTANCE"
 			value = pop_acceptance
 			divide = 75
 		}
 	}
+
 	revolution = {
 		possible = {
 			political_movement_support >= 0.05
 		}
+
 		weight = {
 			value = 100
 		}
+
 		state_weight = {
 			value = 1
 			if = {
 				limit = {
 					OR = {
-						any_scope_building = {
+					    any_scope_building = {
 							is_building_group = bg_bureaucracy
 							level >= 10
-						}
+					    }
 					}
 				}
 				multiply = 10
@@ -246,10 +261,10 @@
 			else_if = {
 				limit = {
 					OR = {
-						any_scope_building = {
+					    any_scope_building = {
 							is_building_group = bg_bureaucracy
 							level >= 5
-						}
+					    }
 					}
 				}
 				multiply = 5
@@ -259,23 +274,26 @@
 			}
 		}
 	}
+
 	secession = {
 		possible = {
 			political_movement_support >= 0.05
 			scope:clout <= 0
 		}
+
 		weight = {
 			value = 1000
 		}
+
 		state_weight = {
 			value = 1
 			if = {
 				limit = {
 					OR = {
-						any_scope_building = {
+					    any_scope_building = {
 							is_building_group = bg_bureaucracy
 							level >= 10
-						}
+					    }
 					}
 				}
 				multiply = 10
@@ -283,10 +301,10 @@
 			else_if = {
 				limit = {
 					OR = {
-						any_scope_building = {
+					    any_scope_building = {
 							is_building_group = bg_bureaucracy
 							level >= 5
-						}
+					    }
 					}
 				}
 				multiply = 5
@@ -296,13 +314,12 @@
 			}
 		}
 	}
+
 	additional_radicalism_factors = {
 		add = movement_radicalism_schools_funding
 		if = {
 			limit = {
-				neighboring_country_has_insurrectionary_movement_trigger = {
-					TYPE = movement_utilitarian
-				}
+				neighboring_country_has_insurrectionary_movement_trigger = { TYPE = movement_utilitarian }
 			}
 			add = {
 				desc = "NEIGHBOURING_COUNTRY_WITH_REVOLUTION"

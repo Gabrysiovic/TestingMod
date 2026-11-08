@@ -1,6 +1,6 @@
 ﻿l_english:
 sepoy_mutiny_events.2.g: "Leave the Princes to the mess they've created."
-overlord_annexes_non_indian_states_tt: "[ROOT.GetCountry.GetOverlord.GetName] will annex all of our [Concept('concept_state', '$concept_states$')] outside of [GetGeographicRegion('geographic_region_india').GetName]."
+overlord_annexes_non_indian_states_tt: "[ROOT.GetCountry.GetOverlord.GetName] will annex all of our [Concept('concept_state', '$concept_states|q$')] outside of [GetGeographicRegion('geographic_region_india').GetName]."
 
 sepoy_mutiny_begins_tt: "#b $je_sepoy_mutiny$#! has begun."
 
@@ -14,16 +14,16 @@ sepoy_mutiny_events.4.a_mug: "Doomed or destined, [ROOT.GetCountry.GetRuler.GetF
 sepoy_mutiny_events.4.e_mug: "The [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] would rather stick to his poetry."
 sepoy_mutiny_events.4.g: "Take up arms in support of the [SCOPE.sCountry('eic_scope').GetName]"
 sepoy_mutiny_events.4.g_mug: "They are sorely mistaken. [ROOT.GetCountry.GetNameNoFormatting] will come to the aid of the [ROOT.GetCountry.GetOverlord.GetNameNoFormatting]."
-mug_sat_princely_states_swear_fealty_tt: "Other adjacent, rebelling [Concept('concept_princely_state', '$concept_princely_states$')] may swear fealty to us and become [Concept('concept_vassal', '$concept_vassals$')]."
+mug_sat_princely_states_swear_fealty_tt: "Other adjacent, rebelling [Concept('concept_princely_state', '$concept_princely_states|q$')] may swear fealty to us and become [Concept('concept_vassal', '$concept_vassals|q$')]."
 princely_state_joins_rebellion_tt: "We will join the rebellion to expel the [SCOPE.sCountry('eic_scope').GetName] from #b India#!, risking annexation if we fail."
 princely_state_remains_neutral_tt: "We will remain neutral during the rebellion."
 princely_state_sides_with_eic_tt: "We will side with [SCOPE.sCountry('eic_scope').GetName] to put down the rebellion."
 after_sepoy_mutiny_reduce_subject_payments_tt: "If the #b rebellion#! is defeated, we will be rewarded for our loyalty by removing our subject payments."
 no_territory_after_sepoy_mutiny_tt: "If the #b rebellion#! succeeds in expelling the colonial administration, we will not be eligible to receive additional territory."
 
-begin_receiving_sepoy_cartridge_events_tt: "We will begin receiving events related to the introduction of the new cartridges. How we respond will affect the severity of the final impact on [concept_presidency_stability] and [Concept('concept_radical', '$concept_radicals$')] created among our [GetReligion('sunni').GetReligiousTraitsDesc] and [GetReligion('hindu').GetNameNoIcon] [GetPopType('soldiers').GetName]."
-sepoy_cartridge_effect_worsened_tt: "The impact on [concept_presidency_stability] and [Concept('concept_radical', '$concept_radicals$')] will be more severe."
-sepoy_cartridge_effect_lessened_tt: "The impact on [concept_presidency_stability] and [Concept('concept_radical', '$concept_radicals$')] will be lessened."
+begin_receiving_sepoy_cartridge_events_tt: "We will begin receiving events related to the introduction of the new cartridges. How we respond will affect the severity of the final impact on [concept_presidency_stability] and [Concept('concept_radical', '$concept_radicals|q$')] created among our [GetReligion('sunni').GetReligiousTraitsDesc] and [GetReligion('hindu').GetNameNoIcon] [GetPopType('soldiers').GetName]."
+sepoy_cartridge_effect_worsened_tt: "The impact on [concept_presidency_stability] and [Concept('concept_radical', '$concept_radicals|q$')] will be more severe."
+sepoy_cartridge_effect_lessened_tt: "The impact on [concept_presidency_stability] and [Concept('concept_radical', '$concept_radicals|q$')] will be lessened."
 
 sepoy_mutiny_events.10.t_severe: "Rampant Insubordination"
 sepoy_mutiny_events.10.d_severe: "Unrest over the Ensfield cartridges has gripped sepoys throughout the [ROOT.GetCountry.GetName]. Many now outright refuse to follow orders, suspecting their officers of ulterior motives."
@@ -34,6 +34,13 @@ sepoy_mutiny_events.12.t: "A Victorious Rebellion"
 sepoy_mutiny_events.12.d: "The Indian Rebellion has succeeded, and all across our country people celebrate. No more shall [ROOT.GetCountry.GetName] be threatened by the subjugation of overseas empires. Rule of India now returns to the princes: forever changed, but perhaps forever free."
 sepoy_mutiny_events.12.f: "No matter what the future may hold for India, today shall always be known as the day it took hold of its own destiny."
 sepoy_mutiny_events.12.a: "India and its neighbors have emerged from the shadow of foreign colonialism."
+
+sepoy_mutiny_events.13.t: "The Rebellion Withers"
+sepoy_mutiny_events.13.d: "The rebellion among the sepoys and princely states has devolved into a stalemate. With the fighting dieing down, the [SCOPE.sCountry('bic_scope').GetName] has now recaptured the rest of its core territory."
+sepoy_mutiny_events.13.d_surviving_princes: "$sepoy_mutiny_events.13.d$ Some of the rebel kingdoms have survived with their independence, but the rebellion has failed to fully expel the [SCOPE.sCountry('overlord_scope').GetAdjectiveNoFormatting] from the subcontinent."
+sepoy_mutiny_events.13.f: "The hills and plains of India were now littered with the dead on both sides. Though the [SCOPE.sCountry('overlord_scope').GetAdjectiveNoFormatting] had managed to maintain their grip on the subcontinent, it was hardly the decisive victory they had hoped for."
+sepoy_mutiny_events.13.a: "India remains ours, gentlemen."
+sepoy_mutiny_events.13.b: "A victory of sorts, but for how long?"
 
 sepoy_mutiny_progress_bar_indian_instability_name: "Instability"
 sepoy_mutiny_progress_bar_indian_instability_desc: "Indian Instability ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/600)"
@@ -47,24 +54,24 @@ unstable_raj_failed_tt: "$je_uneasy_raj$ [concept_journal_entry] was failed, tri
 sepoy_mutiny_defeated_tt: "The #b Indian Rebellion#! is defeated"
 british_raj_now_tt: "[SCOPE.sCountry('india_scope').GetOverlord.GetName] will reorganize the [SCOPE.sCountry('india_scope').GetName] into the #b [SCOPE.sCountry('india_scope').GetOverlord.GetAdjectiveNoFormatting] Raj#!."
 sepoy_mutiny_won_tt: "The #b Indian Rebellion#! is victorious"
-colonial_administration_expelled_from_india_tt: "The [SCOPE.sCountry('india_scope').GetName] will be expelled from #b India#! and its territory divided among the [Concept('concept_princely_state', '$concept_princely_states$')]."
+colonial_administration_expelled_from_india_tt: "The [SCOPE.sCountry('india_scope').GetName] will be expelled from #b India#! and its territory divided among the [Concept('concept_princely_state', '$concept_princely_states|q$')]."
 
 presidencies_utilitarian_reforms_tt: "[GetIdeology('ideology_utilitarian_millian').GetName] Reforms Enacted"
-presidencies_fomenting_rebellion_subjects_tt: "[Concept('concept_subject', '$concept_subjects$')] with the #b $je_princely_states$#! [concept_journal_entry]"
+presidencies_fomenting_rebellion_subjects_tt: "[Concept('concept_subject', '$concept_subjects|q$')] with the #b $je_princely_states$#! [concept_journal_entry]"
 
 bengal_progress_from_sol_tt: "[concept_sol] in the #bold Bengal [concept_presidency]#!"
-bengal_progress_from_liberty_desire_tt: "[concept_liberty_desire] of [concept_princely_state] [Concept('concept_subject', '$concept_subjects$')] in the #bold Bengal [concept_presidency]#!"
+bengal_progress_from_liberty_desire_tt: "[concept_liberty_desire] of [concept_princely_state] [Concept('concept_subject', '$concept_subjects|q$')] in the #bold Bengal [concept_presidency]#!"
 
 bombay_progress_from_sol_tt: "[concept_sol] in the #bold Bombay [concept_presidency]#!"
-bombay_progress_from_liberty_desire_tt: "[concept_liberty_desire] of [concept_princely_state] [Concept('concept_subject', '$concept_subjects$')] in the #bold Bombay [concept_presidency]#!"
+bombay_progress_from_liberty_desire_tt: "[concept_liberty_desire] of [concept_princely_state] [Concept('concept_subject', '$concept_subjects|q$')] in the #bold Bombay [concept_presidency]#!"
 
 madras_progress_from_sol_tt: "[concept_sol] in the #bold Madras [concept_presidency]#!"
-madras_progress_from_liberty_desire_tt: "[concept_liberty_desire] of [concept_princely_state] [Concept('concept_subject', '$concept_subjects$')] in the #bold Madras [concept_presidency]#!"
+madras_progress_from_liberty_desire_tt: "[concept_liberty_desire] of [concept_princely_state] [Concept('concept_subject', '$concept_subjects|q$')] in the #bold Madras [concept_presidency]#!"
 
 indian_instability_monthly_increase_tt: "Monthly Increase"
-change_in_bengal_stability_tt: "Change in #b Bengal Presidency#! [Concept('concept_presidency_stability', '$concept_presidency_stability_short$')]"
-change_in_bombay_stability_tt: "Change in #b Bombay Presidency#! [Concept('concept_presidency_stability', '$concept_presidency_stability_short$')]"
-change_in_madras_stability_tt: "Change in #b Madras Presidency#! [Concept('concept_presidency_stability', '$concept_presidency_stability_short$')]"
+change_in_bengal_stability_tt: "Change in #b Bengal Presidency#! [Concept('concept_presidency_stability', '$concept_presidency_stability_short|q$')]"
+change_in_bombay_stability_tt: "Change in #b Bombay Presidency#! [Concept('concept_presidency_stability', '$concept_presidency_stability_short|q$')]"
+change_in_madras_stability_tt: "Change in #b Madras Presidency#! [Concept('concept_presidency_stability', '$concept_presidency_stability_short|q$')]"
 
 # SGUI LOC
 FOMENTING_REBELLION_COUNTRIES_HEADER: "#b #underline Countries Fomenting Rebellion:#!#!"
@@ -84,8 +91,8 @@ dyn_c_madras_empire: "Kingdom of Madras"
 dyn_c_bombay_republic: "Republic of Bombay"
 dyn_c_bombay_empire: "Kingdom of Bombay"
 
-nationalist_movements_lose_support_activism_boost_from_self_rule_tt: "[SCOPE.sPoliticalMovement('hindu_mahasabha_scope').GetNameNoIcon] and the [SCOPE.sPoliticalMovement('muslim_league_scope').GetNameNoIcon] will no longer receive boosts to [Concept('concept_political_movement_support', '$concept_political_movement_support_short$')] and [Concept('concept_activism','$concept_activism_short$')] from #b Indian Self-Rule#!"
-nationalist_movements_lose_activism_boost_from_indian_nationalism_tt: "[SCOPE.sPoliticalMovement('hindu_mahasabha_scope').GetNameNoIcon] and the [SCOPE.sPoliticalMovement('muslim_league_scope').GetNameNoIcon] will no longer receive boosts to [Concept('concept_activism','$concept_activism_short$')] from #b Indian Nationalism#!"
+nationalist_movements_lose_support_activism_boost_from_self_rule_tt: "[SCOPE.sPoliticalMovement('hindu_mahasabha_scope').GetNameNoIcon] and the [SCOPE.sPoliticalMovement('muslim_league_scope').GetNameNoIcon] will no longer receive boosts to [Concept('concept_political_movement_support', '$concept_political_movement_support_short|q$')] and [Concept('concept_activism', '$concept_activism_short|q$')] from #b Indian Self-Rule#!"
+nationalist_movements_lose_activism_boost_from_indian_nationalism_tt: "[SCOPE.sPoliticalMovement('hindu_mahasabha_scope').GetNameNoIcon] and the [SCOPE.sPoliticalMovement('muslim_league_scope').GetNameNoIcon] will no longer receive boosts to [Concept('concept_activism', '$concept_activism_short|q$')] from #b Indian Nationalism#!"
 
 communal_divides_events.2.d1: "$communal_divides_events.2.d$\n\nTo quell the violence, authorities have promised eventual partition of India into separate $hindu$ and $muslim$ nations. For proponents of a united India, it is a dark day for the divided subcontinent."
 communal_divides_events.2.d2: "$communal_divides_events.2.d$\n\nTo quell the violence, authorities have promised to partition India into separate $hindu$ and $muslim$ nations. For proponents of a united India, it is a dark day for the divided subcontinent."
@@ -128,7 +135,7 @@ indian_more_influential_priesthood_bad: "More Influential PriestHood"
 indian_greater_say_in_government: "Greater Say in Government"
 
 communal_divides_events.8.t: "Preaching Tolerance"
-communal_divides_events.8.d: "His sermons may increase the [Concept('concept_political_movement_support', '$concept_political_movement_support_short$')] of the [SCOPE.sPoliticalMovement('target_movement').GetNameNoIcon], but may also decrease its [Concept('concept_activism','$concept_activism_short$')]."
+communal_divides_events.8.d: "His sermons may increase the [Concept('concept_political_movement_support', '$concept_political_movement_support_short|q$')] of the [SCOPE.sPoliticalMovement('target_movement').GetNameNoIcon], but may also decrease its [Concept('concept_activism', '$concept_activism_short|q$')]."
 communal_divides_events.8.d1: "A [GetReligion('hindu').GetNameNoIcon] priest has begun preaching tolerance and unity towards [GetReligion('sunni').GetReligiousTraitsDesc] indians. $communal_divides_events.8.d$"
 communal_divides_events.8.d2: "An [GetReligion('sunni').GetReligiousTraitsDesc] imam has begun preaching tolerance and unity towards [GetReligion('hindu').GetNameNoIcon] indians. $communal_divides_events.8.d$"
 communal_divides_events.8.f: ""Are we not all Indians in both spirit and flesh? Let's not let our differences divide us, but find what we have in common to unite us.""
@@ -184,7 +191,7 @@ communal_divides_events.13.a: "Will they focus on advancing the nationalist caus
 communal_divides_events.13.b: "Or mending fractured ties?"
 
 communal_divides_events.14.t: "Communal Division"
-communal_divides_events.14.d: "The division between [GetReligion('hindu').GetNameNoIcon] and [GetReligion('sunni').GetReligiousTraitsDesc] populations in #b India#! has reached a boiling point, with [Concept('concept_political_movement_support', '$concept_political_movement_support_short$')] and [Concept('concept_activism','$concept_activism_short$')] swelling in the [SCOPE.sPoliticalMovement('hindu_mahasabha_scope').GetNameNoIcon] and [SCOPE.sPoliticalMovement('muslim_league_scope').GetNameNoIcon] [Concept('concept_political_movement', '$concept_political_movements$')]. If the two sides cannot set aside their differences and learn to coexist, authorities may be forced to answer separatist calls by creating individual countries for both factions."
+communal_divides_events.14.d: "The division between [GetReligion('hindu').GetNameNoIcon] and [GetReligion('sunni').GetReligiousTraitsDesc] populations in #b India#! has reached a boiling point, with [Concept('concept_political_movement_support', '$concept_political_movement_support_short|q$')] and [Concept('concept_activism', '$concept_activism_short|q$')] swelling in the [SCOPE.sPoliticalMovement('hindu_mahasabha_scope').GetNameNoIcon] and [SCOPE.sPoliticalMovement('muslim_league_scope').GetNameNoIcon] [Concept('concept_political_movement', '$concept_political_movements|q$')]. If the two sides cannot set aside their differences and learn to coexist, authorities may be forced to answer separatist calls by creating individual countries for both factions."
 communal_divides_events.14.f: ""How can a country stand united when its divisions stand so clear? India has always been a land of myriad peoples, but can we stand together despite our differences or will we fracture because of them?""
 communal_divides_events.14.a: "The fate of India hangs in the balance."
 communal_divides_activated_tt: "The #b $je_communal_divides$#! [concept_journal_entry] has been activated."

@@ -2,10 +2,11 @@
     icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
 	group = je_group_historical_content
+    dlc = dlc011
 
-	activation_description = {
-		always = yes
-	}
+    activation_description = {
+        always = yes
+    }
 
     is_shown_in_lobby = {
         has_dlc_feature = ip2_content #Pivot of Empire
@@ -28,57 +29,55 @@
         }
     }
     outcome = {
-		header = je_standard_completion_header
-		effect_header = je_standard_on_completion_header
-		color = "gold_positive"
-		conclusion_desc = je_standard_completion_conclusion_desc
-		trigger = {
-			custom_tooltip = {
-				text = hindustan_acquires_territory_tt
-				OR = {
-					num_states >= 2
-					any_scope_state = {
-						num_provinces >= 2
-					}
-				}
-			}
-			is_subject = no
-			is_at_war = no
-			hidden_trigger = {
-				NOT = {
-					has_journal_entry = je_sepoy_mutiny
-				}
-			}
-		}
-		effect = {
-			trigger_event = { id = mughal.7 popup = yes }
-			set_variable = completed_mughal_hindustan_je
-		}
-		event_outcome_effect_desc = {
-			header = event_effects_header_mughal.7.a
-			effect = {
-				execute_event_option = { event = mughal.7 option = 0 }
-			}
-		}
-		event_outcome_effect_desc = {
-			header = event_effects_header_mughal.7.b
-			effect = {
-				execute_event_option = { event = mughal.7 option = 1 }
-			}
-		}
-	}
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            custom_tooltip = {
+                text = hindustan_acquires_territory_tt
+                OR = {
+                    num_states >= 2
+                    any_scope_state = {
+                        num_provinces >= 2
+                    }
+                }
+            }
+            is_subject = no
+            is_at_war = no
+            hidden_trigger = {
+                NOT = {
+                    has_journal_entry = je_sepoy_mutiny
+                }
+            }
+        }
+        effect = {
+            trigger_event = { id = mughal.7 popup = yes }
+            set_variable = completed_mughal_hindustan_je
+        }
+        event_outcome_effect_desc = {
+            header = event_effects_header_mughal.7.a
+            effect = {
+                execute_event_option = { event = mughal.7 option = 0 }
+            }
+        }
+        event_outcome_effect_desc = {
+            header = event_effects_header_mughal.7.b
+            effect = {
+                execute_event_option = { event = mughal.7 option = 1 }
+            }
+        }
+    }
 
-	outcome = {
-		header = je_standard_failure_header
-		effect_header = je_standard_on_failure_header
-		color = "blue_negative"
-		conclusion_desc = je_standard_failure_conclusion_desc
-		trigger = {
-			OR = {
-				country_has_monarchy_law = no
-			}
-		}
-	}
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            country_has_monarchy_law = no
+        }
+    }
 
     on_monthly_pulse = {
         random_events = {

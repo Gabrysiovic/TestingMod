@@ -1,2 +1,4 @@
 ﻿l_english:
+ STATE_VALUE_UNIFY_INDIA: "#v $ai_strategy_unify_india$#! [concept_ai_strategy]"
+
  NUM_PROVINCES: "Number of Provinces"

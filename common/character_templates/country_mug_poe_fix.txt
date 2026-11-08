@@ -8,16 +8,16 @@
 REPLACE_OR_CREATE:mug_robert_gordon = {
     first_name = Robert
     last_name = Gordon
-    historical = yes
-    culture = cu:scottish
     female = no
+    historical = yes
+    # birth_date is unknown, but the generated one will usually be plausible
     is_general = yes
-    religion = rel:sunni
     commander_rank = default
+    culture = cu:scottish
+    religion = rel:sunni
     interest_group = ig_armed_forces
     # ideology is randomly generated
     home_region = STATE_LOWLANDS
-    # birth_date is unknown, but the generated one will usually be plausible
     traits = {
         compliant
         experienced_artillery_commander

@@ -1322,7 +1322,7 @@ india_protest.12 = { # Mill Strike Concludes
 	}
 	desc = {
 		triggered_desc = {
-			desc = india_protest.12.d1_mill
+			desc = india_protest.12.d1_no_hash_conflict
 			trigger = {
 				has_variable = mill_strike_successful
 			}

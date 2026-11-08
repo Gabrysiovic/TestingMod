@@ -2,6 +2,7 @@
 	icon = "gfx/interface/icons/invention_icons/pan_nationalism.dds"
 
 	group = je_group_british_india
+	dlc = dlc011
 
 	activation_description = {
 		always = yes
@@ -63,8 +64,8 @@
 				trigger_event = { id = federation_of_india.2 popup = yes }
 			}
 			show_as_tooltip = {
-				execute_event_option = { event = federation_of_india.2 option = 0 }
-			}
+	            execute_event_option = { event = federation_of_india.2 option = 0 }
+	        }
 		}
 	}
 
@@ -90,12 +91,13 @@
 				trigger_event = { id = federation_of_india.3 popup = yes }
 			}
 			show_as_tooltip = {
-				execute_event_option = { event = federation_of_india.3 option = 0 }
-			}
+	            execute_event_option = { event = federation_of_india.3 option = 0 }
+	        }
 		}
 	}
 
 	weight = 100
+
 
 	should_be_pinned_by_default_uninvolved_or_context = yes
 

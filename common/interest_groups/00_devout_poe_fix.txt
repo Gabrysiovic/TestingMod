@@ -846,6 +846,14 @@
 
 	commander_weight = {
 		value = 1.0
+		if = {
+			limit = {
+				owner ?= {
+					is_colonial_industrialist_led_country = yes
+				}
+			}
+			multiply = 0
+		}
 	}
 
 	magnate_weight = {
@@ -868,6 +876,15 @@
 			multiply = {
 				value = 0
 			}
+		}
+
+		if = {
+			limit = {
+				owner ?= {
+					is_colonial_industrialist_led_country = yes
+				}
+			}
+			multiply = 0
 		}
 	}
 

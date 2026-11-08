@@ -1,40 +1,39 @@
 ﻿
 REPLACE:ig_rural_folk = {
-	color = hsv{
-		0.32
-		0.45
-		0.47
-	}
+	color = hsv{ 0.32 0.45 0.47 }
 	texture = "gfx/interface/icons/ig_icons/rural_folk.dds"
 	layer = "revolution_dynamic_rural_folk"
 	index = 6
+
 	ideologies = {
 		ideology_agrarian
 		ideology_particularist
 		ideology_isolationist
 	}
+
 	character_ideologies = {
 		ideology_moderate
 		ideology_pacifist
 	}
+
 	enable = {
 		always = yes
 	}
+
 	# Deprecated; use on_enable effect to assign traits instead
 	traits = {
 		ig_trait_farmers_markets
 		ig_trait_honest_work
 		ig_trait_old_ways
 	}
+
 	on_enable = {
 		# ONLY HANDLE IG TRAITS IN THIS BLOCK
 		ig:ig_rural_folk ?= {
 			if = {
 				limit = {
 					has_dlc_feature = rp1_content
-					owner = {
-						c:BRZ ?= this
-					}
+					owner = { c:BRZ ?= this }
 				}
 				set_ig_trait = ig_trait:ig_trait_old_ways
 				set_ig_trait = ig_trait:ig_trait_plantation_work
@@ -42,9 +41,7 @@ REPLACE:ig_rural_folk = {
 			}
 			else_if = {
 				limit = {
-					owner = {
-						c:RUS ?= this
-					}
+					owner = { c:RUS ?= this }
 				}
 				set_ig_trait = ig_trait:ig_trait_old_ways
 				set_ig_trait = ig_trait:ig_trait_honest_work
@@ -52,9 +49,7 @@ REPLACE:ig_rural_folk = {
 			}
 			else_if = {
 				limit = {
-					owner = {
-						c:EGY ?= this
-					}
+					owner = { c:EGY ?= this }
 				}
 				set_ig_trait = ig_trait:ig_trait_old_ways
 				set_ig_trait = ig_trait:ig_trait_fellahin
@@ -80,9 +75,7 @@ REPLACE:ig_rural_folk = {
 			}
 			else_if = {
 				limit = {
-					owner = {
-						c:PAN ?= this
-					}
+					owner = { c:PAN ?= this }
 				}
 				set_ig_trait = ig_trait:ig_trait_old_ways
 				set_ig_trait = ig_trait:ig_trait_honest_work
@@ -106,9 +99,10 @@ REPLACE:ig_rural_folk = {
 				set_ig_trait = ig_trait:ig_trait_farmers_markets
 			}
 		}
+
+
 		# FLAVOUR AND IDEOLOGIES GO HERE
-		if = {
-			# Jeffersonian Ideology
+		if = { # Jeffersonian Ideology
 			limit = {
 				OR = {
 					country_has_primary_culture = cu:yankee
@@ -121,8 +115,7 @@ REPLACE:ig_rural_folk = {
 				set_interest_group_name = ig_yeoman_farmers
 			}
 		}
-		else_if = {
-			# Heimin
+		if = { # Heimin
 			limit = {
 				country_has_primary_culture = cu:japanese
 			}
@@ -130,8 +123,7 @@ REPLACE:ig_rural_folk = {
 				set_interest_group_name = ig_peasants
 			}
 		}
-		else_if = {
-			# Maka'āinana
+		if = { # Maka'āinana
 			limit = {
 				country_has_primary_culture = cu:hawaiian
 			}
@@ -139,8 +131,7 @@ REPLACE:ig_rural_folk = {
 				set_interest_group_name = ig_maka_ainana
 			}
 		}
-		else_if = {
-			# Sikh Empire
+		if = { # Sikh Empire
 			limit = {
 				c:PAN ?= this
 			}
@@ -148,8 +139,7 @@ REPLACE:ig_rural_folk = {
 				set_interest_group_name = ig_jats
 			}
 		}
-		else_if = {
-			# India
+		else_if = { # India
 			limit = {
 				OR = {
 					this.country_definition ?= cd:BIC
@@ -165,8 +155,7 @@ REPLACE:ig_rural_folk = {
 				set_interest_group_name = ig_ryots
 			}
 		}
-		else_if = {
-			# Nepal
+		else_if = { # Nepal
 			limit = {
 				any_primary_culture = {
 					has_discrimination_trait_group = heritage_group_south_asian
@@ -181,54 +170,25 @@ REPLACE:ig_rural_folk = {
 			limit = {
 				c:EGY ?= this
 			}
-			ig:ig_rural_folk ?= {
-				set_interest_group_name = ig_fellahin
-			}
+			ig:ig_rural_folk ?= { set_interest_group_name = ig_fellahin }
 		}
-		else_if = {
-			# Germans
+		else_if = { # Germans
 			limit = {
 				any_primary_culture = {
 					has_discrimination_trait = language_germanophone
 				}
 			}
-			ig:ig_rural_folk ?= {
-				set_interest_group_name = ig_landvolk
-			}
+			ig:ig_rural_folk ?= { set_interest_group_name = ig_landvolk }
 		}
 	}
-	on_disable = {
-	}
-	priority_cultures = {
-		#Country scope
+	on_disable = {}
+	priority_cultures = { #Country scope
 		rule = {
 			trigger = {
 				this.country_definition ?= cd:BIC
 			}
 			cultures = {
-				assamese
-				avadhi
-				baluchi
-				bengali
-				bihari
-				gujarati
-				kannada
-				malayalam
-				marathi
-				oriya
-				panjabi
-				pathan
-				rajput
-				sindi
-				tamil
-				telegu
-				hindustani
-				bundeli
-				pahari
-				gondi
-				bageli
-				chhattisgarhi
-				deccani
+				assamese avadhi baluchi bengali bihari gujarati kannada malayalam marathi oriya panjabi pathan rajput sindi tamil telegu hindustani bundeli pahari gondi bageli chhattisgarhi deccani
 			}
 		}
 		rule = {
@@ -239,9 +199,7 @@ REPLACE:ig_rural_folk = {
 				}
 			}
 			cultures = {
-				swahili
-				lacustrine_bantu
-				oromo
+				swahili lacustrine_bantu oromo
 			}
 		}
 	}
@@ -260,15 +218,12 @@ REPLACE:ig_rural_folk = {
 				}
 			}
 			random_list = {
-				2 = {
-					change_character_religion = rel:sunni
-				}
-				1 = {
-					change_character_religion = rel:animist
-				}
+				2 = { change_character_religion = rel:sunni }
+				1 = { change_character_religion = rel:animist }
 			}
 		}
 	}
+
 	pop_potential = {
 		NOR = {
 			is_pop_type = aristocrats
@@ -284,8 +239,10 @@ REPLACE:ig_rural_folk = {
 			pop_employment_building_group = bg_manor_houses
 		}
 	}
+
 	pop_weight = {
 		value = 0
+
 		add = {
 			desc = "RURAL_POP"
 			if = {
@@ -311,6 +268,7 @@ REPLACE:ig_rural_folk = {
 				}
 			}
 		}
+
 		add = {
 			desc = "POP_FARMERS"
 			if = {
@@ -320,6 +278,7 @@ REPLACE:ig_rural_folk = {
 				value = 200
 			}
 		}
+
 		add = {
 			desc = "POP_PEASANTS"
 			if = {
@@ -329,6 +288,7 @@ REPLACE:ig_rural_folk = {
 				value = 200
 			}
 		}
+
 		add = {
 			desc = "POP_CLERGYMEN"
 			if = {
@@ -338,6 +298,7 @@ REPLACE:ig_rural_folk = {
 				value = 75
 			}
 		}
+
 		if = {
 			limit = {
 				owner.country_definition ?= cd:BIC
@@ -350,6 +311,7 @@ REPLACE:ig_rural_folk = {
 				value = 0.1
 			}
 		}
+
 		multiply = {
 			desc = "LEADER_POPULARITY"
 			scope:interest_group ?= {
@@ -375,14 +337,14 @@ REPLACE:ig_rural_folk = {
 				min = 0
 			}
 		}
+
 		if = {
 			limit = {
 				scope:interest_group ?= {
 					is_in_government = yes
 				}
 			}
-			multiply = {
-				# Multiplied by 1.25x max
+			multiply = { # Multiplied by 1.25x max
 				desc = "POP_LOYALISTS"
 				value = pop_loyalist_fraction
 				divide = 4
@@ -395,8 +357,7 @@ REPLACE:ig_rural_folk = {
 					is_in_government = no
 				}
 			}
-			multiply = {
-				# Multiplied by 1.25x max
+			multiply = { # Multiplied by 1.25x max
 				desc = "POP_RADICALS"
 				value = pop_radical_fraction
 				divide = 4
@@ -404,6 +365,7 @@ REPLACE:ig_rural_folk = {
 			}
 		}
 	}
+
 	monarch_weight = {
 		value = 0.25 # this is just inherently unlikely
 		# Monarch is not likely to adopt a marginal IG
@@ -447,6 +409,7 @@ REPLACE:ig_rural_folk = {
 			}
 		}
 	}
+
 	agitator_weight = {
 		# Agitators more likely to come from populist IG's rather than elitist
 		value = 1.0
@@ -462,14 +425,26 @@ REPLACE:ig_rural_folk = {
 			}
 		}
 	}
+
 	commander_weight = {
 		value = 1.0
+		if = {
+			limit = {
+				owner ?= {
+					is_colonial_industrialist_led_country = yes
+				}
+			}
+			multiply = 0
+		}
 	}
+
 	magnate_weight = {
 		value = 0.25
 	}
+
 	executive_weight = {
 		value = 0.1
+
 		# The company owning BIC should not get non-industrialist executives
 		if = {
 			limit = {
@@ -484,21 +459,36 @@ REPLACE:ig_rural_folk = {
 				value = 0
 			}
 		}
+		if = {
+			limit = {
+				owner ?= {
+					is_colonial_industrialist_led_country = yes
+				}
+			}
+			multiply = 0
+		}
 	}
+
 	noble_chance = {
 		value = 0.2
 	}
+
 	female_commander_chance = {
 		value = 0.0
 	}
+
 	female_executive_chance = {
 		value = 0.0
 	}
+
 	female_monarch_chance = {
 		value = 0.025
 	}
+
 	female_politician_chance = {
 		value = 0.0
+
+
 		if = {
 			limit = {
 				owner = {
@@ -514,44 +504,53 @@ REPLACE:ig_rural_folk = {
 			}
 		}
 	}
+
 	female_agitator_chance = {
 		value = 0.025
+
 		if = {
 			limit = {
 				owner = {
 					has_law_or_variant = law_type:law_women_own_property
 				}
+
 			}
 			add = {
 				value = 0.025
 			}
 		}
+
 		if = {
 			limit = {
 				owner = {
 					has_law_or_variant = law_type:law_women_in_the_workplace
 				}
+
 			}
 			add = {
 				value = 0.025
 			}
 		}
+
 		if = {
 			limit = {
 				owner = {
 					has_law_or_variant = law_type:law_womens_suffrage
 				}
+
 			}
 			add = {
 				value = 0.025
 			}
 		}
 	}
+
 	# Multiplier applied to the weight for an appropriate commander will be selected from the character pool to lead the IG
 	# root = interest group
 	commander_leader_weight = {
 		value = 0.75
 	}
+
 	# Multiplier applied to the weight for an appropriate magnate will be selected from the character pool to lead the IG
 	# root = interest group
 	magnate_leader_weight = {
@@ -566,6 +565,7 @@ REPLACE:ig_rural_folk = {
 			add = 5
 		}
 	}
+
 	# Multiplier applied to the weight for an appropriate executive will be selected from the character pool to lead the IG
 	# root = interest group
 	executive_leader_weight = {

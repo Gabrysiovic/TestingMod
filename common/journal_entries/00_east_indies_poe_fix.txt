@@ -22,27 +22,13 @@
 	}
 
 	outcome = {
+		flags = { historical }
 		header = je_standard_completion_header
 		effect_header = je_standard_on_completion_header
 		color = "gold_positive"
 		conclusion_desc = je_standard_completion_conclusion_desc
 		trigger = {
-			any_state = {
-				filter = {
-					OR = {
-						state_region = s:STATE_PUNJAB
-						state_region = s:STATE_HILL_PUNJAB
-						state_region = s:STATE_SINDH
-						state_region = s:STATE_PASHTUNISTAN
-						state_region = s:STATE_QUETTA
-						state_region = s:STATE_KASHMIR
-						state_region = s:STATE_BALUCHISTAN
-						state_region = s:STATE_MANDALAY
-						state_region = s:STATE_KACHIN
-						state_region = s:STATE_SHAN_STATES
-						state_region = s:STATE_PEGU
-					}
-				}
+			any_state_in_indian_frontier = {
 				OR = {
 					owner = ROOT
 					owner = {
@@ -50,20 +36,23 @@
 					}
 					trigger_if = {
 						limit = {
-							exists = ROOT.overlord
+							exists = ROOT.top_overlord
 						}
 						OR = {
-							owner = ROOT.overlord
+							owner = ROOT.top_overlord
 							owner = {
-								is_subject_of = ROOT.overlord
+								is_subject_of = ROOT.top_overlord
 							}
 						}
 					}
 				}
 				percent >= 0.80
+				list_scopes = yes
+				show_trigger_per_scope = yes
+
 			}
 			NOT = {
-				has_any_secessionists_growing = yes
+	            has_any_secessionists_growing = yes
 			}
 		}
 		effect = {
@@ -87,13 +76,13 @@
 		conclusion_desc = je_standard_failure_conclusion_desc
 		trigger = {
 			trigger_if = {
-				limit = {
-					has_dlc_feature = ip2_content
-				}
-				NOT = {
-					has_journal_entry = je_uneasy_raj
-				}
-			}
+	    		limit = {
+	    			has_dlc_feature = ip2_content
+	    		}
+	    		NOT = {
+	    			has_journal_entry = je_uneasy_raj
+	    		}
+	    	}
 		}
 	}
 

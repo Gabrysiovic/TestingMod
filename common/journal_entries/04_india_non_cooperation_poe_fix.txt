@@ -1,8 +1,10 @@
 ﻿REPLACE:je_india_non_cooperation_movement = {
+
 	should_be_pinned_by_default_uninvolved_or_context = yes
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
 	group = je_group_british_india
+	dlc = dlc011
 
 	activation_description = {
 		always = yes
@@ -112,9 +114,6 @@
 			}
 		}
 	}
-
-	#event_outcome_completed_desc = event_effects_india_non_cooperation.7_tt
-
 }
 
 je_india_swadeshi_movement = {
@@ -122,6 +121,7 @@ je_india_swadeshi_movement = {
 	icon = "gfx/interface/icons/event_icons/event_trade.dds"
 
 	group = je_group_british_india
+	dlc = dlc011
 
 	activation_description = {
 		always = yes
@@ -350,10 +350,10 @@ je_india_swadeshi_movement = {
 	}
 
 	outcome = {
-		header = je_standard_completion_header
-		effect_header = je_standard_on_completion_header
-		color = "gold_positive"
-		conclusion_desc = je_standard_completion_conclusion_desc
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
 		trigger = {
 			custom_tooltip = {
 				text = indian_clothes_self_sufficient_tt
@@ -431,5 +431,4 @@ je_india_swadeshi_movement = {
 			}
 		}
 	}
-
 }

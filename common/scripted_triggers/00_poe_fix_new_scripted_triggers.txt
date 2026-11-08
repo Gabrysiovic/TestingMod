@@ -13,7 +13,7 @@
 
 REPLACE_OR_CREATE:ig_is_indian_reformist = {
 	OR = {
-		#has_ideology = ideology:ideology_socialist # removed in 1.15
+		has_ideology = ideology:ideology_internationalist
 		leader = {
 			has_ideology = ideology:ideology_pacifist
 		}
@@ -54,4 +54,8 @@ REPLACE_OR_CREATE:country_is_in_burma = {
 	capital = {
 		state_is_homeland_of_burmese_cultures = yes
 	}
+}
+
+REPLACE_OR_CREATE:is_colonial_industrialist_led_country = {
+	this.country_definition ?= cd:BIC
 }

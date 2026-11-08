@@ -14,3 +14,9 @@
  war_goal_sepoy_mutiny:0 "$sepoy_mutiny$"
  war_goal_sepoy_mutiny_desc:0 "Expel the [WAR_GOAL_DRAFT.GetTarget.GetName] from #b India#!."
  war_goal_sepoy_mutiny_sway_desc:0 "Try to convince [WAR_GOAL_DRAFT.GetHolder.GetName] to join expelling [WAR_GOAL_DRAFT.GetTarget.GetName] from #b India#!."
+
+ war_goal_suppress_sepoy_mutiny_type_name:0 "Suppress Rebellion"
+ war_goal_suppress_sepoy_mutiny_type_desc:0 "Annex the rebelling country."
+ war_goal_suppress_sepoy_mutiny:0 "Crush [WAR_GOAL_DRAFT.GetTarget.GetAdjective] Rebellion"
+ war_goal_suppress_sepoy_mutiny_desc:0 "[WAR_GOAL_DRAFT.GetHolder.GetName] annexes the [concept_country] of [WAR_GOAL_DRAFT.GetTarget.GetName]"
+ war_goal_suppress_sepoy_mutiny_sway_desc:0 "Try to convince [WAR_GOAL_DRAFT.GetHolder.GetName] to join your side by allowing them to annex [WAR_GOAL_DRAFT.GetTarget.GetName]."

@@ -123,11 +123,26 @@ REPLACE:generate_governor_of_same_type = { # Run in country scope
 		scope:current_governor ?= {
 			remove_variable = colonial_governor_term
 		}
-		create_character = {
-			template = character_template_colonial_governor_plantation
-			on_created = {
-				set_character_as_ruler = yes
-				set_variable = { name = colonial_governor_term value = 0 }
+		if = {
+			limit = {
+				is_colonial_industrialist_led_country = yes
+			}
+			create_character = {
+				template = character_template_colonial_governor_plantation
+				interest_group = ig_industrialists
+				on_created = {
+					set_character_as_ruler = yes
+					set_variable = { name = colonial_governor_term value = 0 }
+				}
+			}
+		}
+		else = {
+			create_character = {
+				template = character_template_colonial_governor_plantation
+				on_created = {
+					set_character_as_ruler = yes
+					set_variable = { name = colonial_governor_term value = 0 }
+				}
 			}
 		}
 	}
@@ -157,11 +172,26 @@ REPLACE:generate_governor_of_same_type = { # Run in country scope
 		scope:current_governor ?= {
 			remove_variable = colonial_governor_term
 		}
-		create_character = {
-			template = character_template_colonial_governor_extraction
-			on_created = {
-				set_character_as_ruler = yes
-				set_variable = { name = colonial_governor_term value = 0 }
+		if = {
+			limit = {
+				is_colonial_industrialist_led_country = yes
+			}
+			create_character = {
+				template = character_template_colonial_governor_extraction
+				interest_group = ig_industrialists
+				on_created = {
+					set_character_as_ruler = yes
+					set_variable = { name = colonial_governor_term value = 0 }
+				}
+			}
+		}
+		else = {
+			create_character = {
+				template = character_template_colonial_governor_extraction
+				on_created = {
+					set_character_as_ruler = yes
+					set_variable = { name = colonial_governor_term value = 0 }
+				}
 			}
 		}
 	}
@@ -174,11 +204,26 @@ REPLACE:generate_governor_of_same_type = { # Run in country scope
 		scope:current_governor ?= {
 			remove_variable = colonial_governor_term
 		}
-		create_character = {
-			template = character_template_colonial_governor_business
-			on_created = {
-				set_character_as_ruler = yes
-				set_variable = { name = colonial_governor_term value = 0 }
+		if = {
+			limit = {
+				is_colonial_industrialist_led_country = yes
+			}
+			create_character = {
+				template = character_template_colonial_governor_business
+				interest_group = ig_industrialists
+				on_created = {
+					set_character_as_ruler = yes
+					set_variable = { name = colonial_governor_term value = 0 }
+				}
+			}
+		}
+		else = {
+			create_character = {
+				template = character_template_colonial_governor_business
+				on_created = {
+					set_character_as_ruler = yes
+					set_variable = { name = colonial_governor_term value = 0 }
+				}
 			}
 		}
 	}
@@ -205,7 +250,7 @@ REPLACE:generate_governor_of_same_type = { # Run in country scope
 		}
 		if = {
 			limit = {
-				c:BIC ?= this
+				is_colonial_industrialist_led_country = yes
 			}
 			create_character = {
 				template = character_template_colonial_governor_extraction
@@ -251,9 +296,7 @@ REPLACE:ip4_coup_victory_government_effects = {
 			glorious_revolution_coup_trigger = no
 			dynastic_coup_trigger = no
 			### Pivot of Empire Fixes New Code
-			NOT = {
-				this.country_definition ?= cd:BIC
-			}
+			is_colonial_industrialist_led_country = no
 			###
 		}
 		hidden_effect = {
@@ -442,9 +485,7 @@ REPLACE:ip4_coup_victory_effect_interaction_display = {
 				has_gov_regency = yes
 			}
 			### Pivot of Empire Fixes New Code
-			NOT = {
-				this.country_definition ?= cd:BIC
-			}
+			is_colonial_industrialist_led_country = no
 			###
 		}
 		scope:golpista_ig.leader ?= {

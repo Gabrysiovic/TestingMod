@@ -39,7 +39,7 @@
   british_dictates.10.a: "A shining achievement for the [ROOT.GetCountry.GetNameNoFormatting]."
 
   je_british_dictates: "The Colonial Dictates"
-  je_british_dictates_reason: "@information! Each dictate will offer differing strategies for achieving its objectives. Adopting a strategy will cost @aut! [concept_authority], but modify active [Concept('concept_modifier', '$concept_modifiers$')], completion conditions, and the final rewards for completing all dictates.\n$TOOLTIP_DELIMITER$\n#lore An ambitious plan has been laid out to turn the [ROOT.GetCountry.GetNameNoFormatting] into the model of a proper colonial empire. Growth in agricultural extraction, strengthening the education system, and increasing the might of the colonial military are all components of this bold new agenda.\n\nWhile officials debate the proper strategy to achieve these varied objectives, all agree upon the desired outcome: unlocking the true colonial might of the Indian subcontinent.#!"
+  je_british_dictates_reason: "@information! Each dictate will offer differing strategies for achieving its objectives. Adopting a strategy will cost @aut! [concept_authority], but modify active [Concept('concept_modifier', '$concept_modifiers|q$')], completion conditions, and the final rewards for completing all dictates.\n$TOOLTIP_DELIMITER$\n#lore An ambitious plan has been laid out to turn the [ROOT.GetCountry.GetNameNoFormatting] into the model of a proper colonial empire. Growth in agricultural extraction, strengthening the education system, and increasing the might of the colonial military are all components of this bold new agenda.\n\nWhile officials debate the proper strategy to achieve these varied objectives, all agree upon the desired outcome: unlocking the true colonial might of the Indian subcontinent.#!"
   british_dictates_officials_put_forth_plan_tt: "Government officials have put forth a plan to unlock the power of Colonial India."
   je_british_dictate_plantations_complete_tt: "We have completed the #b $je_british_dictate_plantations$#! [concept_journal_entry]"
   je_british_dictate_military_complete_tt: "We have completed the #b $je_british_dictate_military$#! [concept_journal_entry]"
@@ -55,7 +55,7 @@
 
   colonial_dictates_timer_tt: "This [concept_journal_entry] has been active for at least #v 2 years#!"
 
-  je_british_dictate_plantations_completion_condition_tt: "#v [ROOT.Var('arable_land_percent_goal').GetValue|%0]#! of all [concept_arable_land] across [ROOT.GetCountry.GetAdjective] [GetGeographicRegion('geographic_region_india').GetName] and its [Concept('concept_subject', '$concept_subjects$')] has been developed into [GetBuildingGroup('bg_plantations').GetName] (Currently #v [ROOT.Var('num_plantations').GetValue]/[ROOT.Var('target_plantations').GetValue]#!)"
+  je_british_dictate_plantations_completion_condition_tt: "#v [ROOT.Var('arable_land_percent_goal').GetValue|%0]#! of all [concept_arable_land] across [ROOT.GetCountry.GetAdjective] [GetGeographicRegion('geographic_region_india').GetName] and its [Concept('concept_subject', '$concept_subjects|q$')] has been developed into [GetBuildingGroup('bg_plantations').GetName] (Currently #v [ROOT.Var('num_plantations').GetValue]/[ROOT.Var('target_plantations').GetValue]#!)"
 
   british_dictate_plantations_prioritizing_construction: "Prioritizing Plantation Construction"
   colonial_prosperity_plantation_construction: "Colonial Prosperity - Plantation Construction"
@@ -153,12 +153,12 @@
   # india_events.17
   indian_lax_punishment_for_terrorists: "Lax on Terrorists"
 
-  add_small_heritage_trait_group_radicals_tt: "[SCOPE.ScriptValue('small_radicals')|-=1%] of [Concept('concept_pop', '$concept_pops$')] in [ROOT.GetCountry.GetNameNoFlag] sharing a [concept_discrimination_trait_group] with one of our [Concept('concept_primary_cultures', '$concept_primary_cultures$')] become more [concept_radical]"
-  add_medium_heritage_trait_group_radicals_tt: "[SCOPE.ScriptValue('medium_radicals')|-=1%] of [Concept('concept_pop', '$concept_pops$')] in [ROOT.GetCountry.GetNameNoFlag] sharing a [concept_discrimination_trait_group] with one of our [Concept('concept_primary_cultures', '$concept_primary_cultures$')] become more [concept_radical]"
-  add_large_heritage_trait_group_radicals_tt: "[SCOPE.ScriptValue('large_radicals')|-=1%] of [Concept('concept_pop', '$concept_pops$')] in [ROOT.GetCountry.GetNameNoFlag] sharing a [concept_discrimination_trait_group] with one of our [Concept('concept_primary_cultures', '$concept_primary_cultures$')] become more [concept_radical]"
-  add_small_heritage_trait_group_loyalists_tt: "[SCOPE.ScriptValue('small_radicals')|+=1%] of [Concept('concept_pop', '$concept_pops$')] in [ROOT.GetCountry.GetNameNoFlag] sharing a [concept_discrimination_trait_group] with one of our [Concept('concept_primary_cultures', '$concept_primary_cultures$')] become more [concept_loyalist]"
-  add_medium_heritage_trait_group_loyalists_tt: "[SCOPE.ScriptValue('medium_radicals')|+=1%] of [Concept('concept_pop', '$concept_pops$')] in [ROOT.GetCountry.GetNameNoFlag] sharing a [concept_discrimination_trait_group] with one of our [Concept('concept_primary_cultures', '$concept_primary_cultures$')] become more [concept_loyalist]"
-  add_large_heritage_trait_group_loyalists_tt: "[SCOPE.ScriptValue('large_radicals')|+=1%] of [Concept('concept_pop', '$concept_pops$')] in [ROOT.GetCountry.GetNameNoFlag] sharing a [concept_discrimination_trait_group] with one of our [Concept('concept_primary_cultures', '$concept_primary_cultures$')] become more [concept_loyalist]"
+  add_small_heritage_trait_group_radicals_tt: "[SCOPE.ScriptValue('small_radicals')|-=1%] of [Concept('concept_pop', '$concept_pops|q$')] in [ROOT.GetCountry.GetNameNoFlag] sharing a [concept_discrimination_trait_group] with one of our [Concept('concept_primary_cultures', '$concept_primary_cultures|q$')] become more [concept_radical]"
+  add_medium_heritage_trait_group_radicals_tt: "[SCOPE.ScriptValue('medium_radicals')|-=1%] of [Concept('concept_pop', '$concept_pops|q$')] in [ROOT.GetCountry.GetNameNoFlag] sharing a [concept_discrimination_trait_group] with one of our [Concept('concept_primary_cultures', '$concept_primary_cultures|q$')] become more [concept_radical]"
+  add_large_heritage_trait_group_radicals_tt: "[SCOPE.ScriptValue('large_radicals')|-=1%] of [Concept('concept_pop', '$concept_pops|q$')] in [ROOT.GetCountry.GetNameNoFlag] sharing a [concept_discrimination_trait_group] with one of our [Concept('concept_primary_cultures', '$concept_primary_cultures|q$')] become more [concept_radical]"
+  add_small_heritage_trait_group_loyalists_tt: "[SCOPE.ScriptValue('small_radicals')|+=1%] of [Concept('concept_pop', '$concept_pops|q$')] in [ROOT.GetCountry.GetNameNoFlag] sharing a [concept_discrimination_trait_group] with one of our [Concept('concept_primary_cultures', '$concept_primary_cultures|q$')] become more [concept_loyalist]"
+  add_medium_heritage_trait_group_loyalists_tt: "[SCOPE.ScriptValue('medium_radicals')|+=1%] of [Concept('concept_pop', '$concept_pops|q$')] in [ROOT.GetCountry.GetNameNoFlag] sharing a [concept_discrimination_trait_group] with one of our [Concept('concept_primary_cultures', '$concept_primary_cultures|q$')] become more [concept_loyalist]"
+  add_large_heritage_trait_group_loyalists_tt: "[SCOPE.ScriptValue('large_radicals')|+=1%] of [Concept('concept_pop', '$concept_pops|q$')] in [ROOT.GetCountry.GetNameNoFlag] sharing a [concept_discrimination_trait_group] with one of our [Concept('concept_primary_cultures', '$concept_primary_cultures|q$')] become more [concept_loyalist]"
 
   je_india_home_rule_reason_request_reforms: "The Indian Administration will also be given opportunities to request #tooltippable;tooltip:[GetPlayer.GetTooltipTag],indian_democratic_reforms_tt reforms#! from its [concept_overlord], which will temporarily appease the $movement_india_pan_national$."
   je_india_home_rule_reason_remainder_home_rule: "$je_india_home_rule_reason_request_reforms$ Once Indian Nationalism has reached #b 500#! and the proper reforms have been enacted, the colonial administration can petition its overlord to enact #b sovereign home rule#! for India.\n\n@warning! If the colonial government or its overlord take #v 3#! or more #tooltippable;tooltip:[GetPlayer.GetTooltipTag],je_india_home_rule_hostile_actions_tt hostile actions#! against the $movement_india_pan_national$, the movement will shifts its goal from sovereign home rule within the overlord's empire to full independence from their colonial masters.\n$TOOLTIP_DELIMITER$\n#lore Across India, national consciousness is rising amongst the native population. Native Indians educated in foreign schools and employed by the colonial government have begun to agitate for equal status within imperial institutions, greater economic opportunity, and the eventual establishment of home rule for all of India.#!"
@@ -171,13 +171,13 @@
   je_india_home_rule_self_government_status: "The [SCOPE.sPoliticalMovement('indian_national_movement').GetNameNoIcon] is seeking a sovereign, representative government."
 
   ig_indian_imperialist_tt: "[GetIdeology('ideology_jingoist').GetName], [GetIdeology('ideology_reactionary').GetName], #tooltippable;tooltip:[GetPlayer.GetTooltipTag],conservative_ideologies_list_tt Conservative#!, #tooltippable;tooltip:[GetPlayer.GetTooltipTag],reactionary_ideologies_list_tt Reactionary#!"
-  ig_indian_reformist_tt: "[GetIdeology('ideology_socialist').GetName], [GetIdeology('ideology_pacifist').GetName], #tooltippable;tooltip:[GetPlayer.GetTooltipTag],progressive_ideologies_list_tt Progressive#!, #tooltippable;tooltip:[GetPlayer.GetTooltipTag],socialist_ideologies_list_tt Socialist#!"
+  ig_indian_reformist_tt: "[GetIdeology('ideology_internationalist').GetName], [GetIdeology('ideology_pacifist').GetName], #tooltippable;tooltip:[GetPlayer.GetTooltipTag],progressive_ideologies_list_tt Progressive#!, #tooltippable;tooltip:[GetPlayer.GetTooltipTag],socialist_ideologies_list_tt Socialist#!"
 
   simon_commission_complete_tt: "India's [concept_overlord] has completed its statutory commission 10 years after granting permission for local elections."
   indian_self_governance_has_been_granted_tt: "The demands for #b Indian#! self-governance have been granted."
 
-  all_indian_national_movement_agitators_freed_tt: "All imprisoned [Concept('concept_agitator', '$concept_agitators$')] supporting the #b $movement_india_pan_national$#! will be set free."
-  all_indian_states_transferred_from_overlord_tt: "All [Concept('concept_state', '$concept_states$')] in [GetGeographicRegion('geographic_region_india').GetName] owned by [SCOPE.sCountry('overlord_scope').GetName], [SCOPE.sCountry('india_scope').GetName], or their non-[concept_princely_state] [Concept('concept_subject', '$concept_subjects$')] will be transferred to the new #b Indian#! nation. All [concept_princely_state] [Concept('concept_subject', '$concept_subjects$')] will be transferred as well."
+  all_indian_national_movement_agitators_freed_tt: "All imprisoned [Concept('concept_agitator', '$concept_agitators|q$')] supporting the #b $movement_india_pan_national$#! will be set free."
+  all_indian_states_transferred_from_overlord_tt: "All [Concept('concept_state', '$concept_states|q$')] in [GetGeographicRegion('geographic_region_india').GetName] owned by [SCOPE.sCountry('overlord_scope').GetName], [SCOPE.sCountry('india_scope').GetName], or their non-[concept_princely_state] [Concept('concept_subject', '$concept_subjects|q$')] will be transferred to the new #b Indian#! nation. All [concept_princely_state] [Concept('concept_subject', '$concept_subjects|q$')] will be transferred as well."
   india_loses_crown_rule_tt: "[SCOPE.sCountry('india_scope').GetName] loses #tooltippable;tooltip:[GetPlayer.GetTooltipTag],modifier_india_crown_rule_tt $modifier_india_crown_rule$#!"
   india_loses_company_rule_tt: "[SCOPE.sCountry('india_scope').GetName] loses #tooltippable;tooltip:[GetPlayer.GetTooltipTag],modifier_india_company_rule_tt $modifier_india_company_rule$#!"
   india_loses_company_rule_upgraded_tt: "[SCOPE.sCountry('india_scope').GetName] loses #tooltippable;tooltip:[GetPlayer.GetTooltipTag],modifier_india_company_rule_upgraded_tt $modifier_india_company_rule_upgraded$#!"
@@ -192,7 +192,7 @@
   begin_indian_war_of_independence_tt: "The [SCOPE.sPoliticalMovement('indian_national_movement').GetNameNoIcon] will begin a war of independence."
 
   bic_does_not_exist_tt: "[SCOPE.sCountry('india_scope').GetName] does not exist"
-  no_indian_homeland_states_tt: "[SCOPE.sCountry('india_scope').GetName] posssess no states with [GetCulture('bengali').GetHeritageTrait.GetTraitGroup.GetName] [Concept('concept_homeland', '$concept_homelands$')]"
+  no_indian_homeland_states_tt: "[SCOPE.sCountry('india_scope').GetName] posssess no states with [GetCulture('bengali').GetHeritageTrait.GetTraitGroup.GetName] [Concept('concept_homeland', '$concept_homelands|q$')]"
   another_country_formed_india_tt: "Another country has formed #v India#!"
 
   indian_nationalism_above_500_tt: "[concept_indian_nationalism] has reached #v 500#!"
@@ -214,7 +214,7 @@
 
   india_emerges_free_tt: "#b India#! will emerge a free, independent nation."
   british_rule_secured_indefinitely_tt: "Colonial rule in #b India#! will be secured indefinitely."
-  all_indian_national_movement_agitators_imprisoned_forever_tt: "All imprisoned [Concept('concept_agitator', '$concept_agitators$')] supporting the #b $movement_india_pan_national$#! will remain imprisoned permanently."
+  all_indian_national_movement_agitators_imprisoned_forever_tt: "All imprisoned [Concept('concept_agitator', '$concept_agitators|q$')] supporting the #b $movement_india_pan_national$#! will remain imprisoned permanently."
 
   india_home_rule_events.1.t_peaceful_independence: "Purna Swaraj"
   india_home_rule_events.1.t_war_of_independence: "Freedom Secured"
@@ -306,7 +306,7 @@
  # india_events.17
  modifier_indian_martyr_executed: "Martyr Executed"
 
- has_started_diplomatic_play_against_princely_state_subject_tt: "[ROOT.GetCountry.GetName] has started a [concept_diplomatic_play] against one of its [concept_princely_state] [Concept('concept_subject', '$concept_subjects$')]"
+ has_started_diplomatic_play_against_princely_state_subject_tt: "[ROOT.GetCountry.GetName] has started a [concept_diplomatic_play] against one of its [concept_princely_state] [Concept('concept_subject', '$concept_subjects|q$')]"
 
  notification_rowlatt_act_passed_name: "Indian Imprisonment Act Passed"
  notification_rowlatt_act_passed_desc: "The #b Imprisonment Act#! has been passed in India, pushing the #b $movement_india_pan_national$#! towards seeking independence."

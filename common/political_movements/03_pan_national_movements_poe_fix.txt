@@ -1,12 +1,15 @@
 ﻿REPLACE:movement_india_pan_national = {
 	category = movement_category_pan_national
+
 	ideology = ideology_sovereignist_movement
 	character_ideologies = {
 		ideology_sovereignist_leader
 		ideology_state_socialist
 		ideology_humanitarian
 	}
+
 	can_cause_obstinance = yes
+
 	creation_trigger = {
 		c:BIC ?= this
 		# Will not form again after The Indian Nation JE fails and Indian War of Independence begins
@@ -27,8 +30,8 @@
 	creation_weight = {
 		value = 5000
 	}
-	on_created = {
-	}
+	on_created = { }
+
 	disband_trigger = {
 		OR = {
 			AND = {
@@ -40,13 +43,12 @@
 			has_variable = indian_war_of_independence
 		}
 	}
+
 	character_support_trigger = {
 		OR = {
 			has_ideology = ideology:ideology_sovereignist
 			has_ideology = ideology:ideology_humanitarian
-			culture = {
-				has_discrimination_trait_group = heritage_group_south_asian
-			}
+			culture = { has_discrimination_trait_group = heritage_group_south_asian }
 		}
 	}
 	character_support_weight = {
@@ -77,14 +79,17 @@
 			}
 		}
 	}
+
 	can_pressure_interest_group = {
 		is_indian_interest_group = yes
 	}
+
 	pop_support_trigger = {
 		culture = {
 			has_discrimination_trait_group = heritage_group_south_asian
 		}
 	}
+
 	pop_support_factors = {
 		movement_support_national_awakening
 		movement_support_cultural_fervor
@@ -101,6 +106,7 @@
 		movement_support_pan_nationalism_tech
 		movement_support_indian_nationalism
 	}
+
 	pop_support_weight = {
 		if = {
 			limit = {
@@ -138,6 +144,7 @@
 				}
 			}
 		}
+
 		if = {
 			limit = {
 				culture = {
@@ -184,6 +191,7 @@
 					desc = "POP_CAPITALISTS"
 				}
 			}
+
 			if = {
 				limit = {
 					owner ?= {
@@ -202,23 +210,25 @@
 					desc = "INDIAN_NATIONALISM"
 				}
 			}
+
 			add = {
 				desc = "URBAN_STATE"
 				value = 10
 				multiply = state.state_urbanization_rate
 			}
+
 			if = {
 				limit = {
 					standard_of_living < state.average_expected_sol
 				}
-				add = {
-					# Increases likelihood of support if impoverished
+				add = { # Increases likelihood of support if impoverished
 					desc = "POP_POVERTY"
 					value = state.average_expected_sol
 					subtract = standard_of_living
 					max = 10
 				}
 			}
+
 			if = {
 				limit = {
 					state = {
@@ -228,27 +238,26 @@
 						}
 					}
 				}
-				add = {
-					# From 1.21x at 79 to 2x at 0
+				add = { # From 1.21x at 79 to 2x at 0
 					desc = "POP_DISCRIMINATED"
 					value = 100
 					subtract = pop_acceptance
 					divide = 10
 				}
 			}
-			else = {
-				# Non-discriminated pops are less likely to form separatist movements
+			else = { # Non-discriminated pops are less likely to form separatist movements
 				multiply = {
 					desc = "POP_ACCEPTANCE"
 					value = 0.25
 				}
 			}
-			multiply = {
-				# Multiplied by 2x max
+
+			multiply = { # Multiplied by 2x max
 				desc = "POP_RADICALS"
 				value = pop_radical_fraction
 				add = 1
 			}
+
 			if = {
 				limit = {
 					owner ?= {
@@ -271,14 +280,15 @@
 					desc = "NATIONALISM_TECH"
 				}
 			}
-			multiply = {
-				# Range from x0.775 to 2.275
+
+			multiply = { # Range from x0.775 to 2.275
 				desc = "POP_CULTURE_FERVOR"
 				value = culture.culture_current_fervor
 				subtract = 15
 				multiply = 0.015
 				add = 1
 			}
+
 			if = {
 				limit = {
 					culture ?= {
@@ -292,27 +302,30 @@
 			}
 		}
 	}
+
 	revolution = {
 		possible = {
 			political_movement_support >= 0.05
 		}
+
 		interest_group_can_join = {
 			is_indian_interest_group = yes
 		}
+
 		weight = {
 			value = 100
 		}
+
 		state_weight = {
 			add = {
 				value = state_urbanization_rate
 				multiply = 5
 			}
 			add = scope:clout
-			add = {
-				value = this.turmoil divide = 2
-			}
+			add = { value = this.turmoil divide = 2 }
 			subtract = this.loyalists
 		}
+
 		forced_tags = {
 			BHT = {
 				trigger = {
@@ -322,20 +335,31 @@
 			}
 		}
 	}
+
 	secession = {
 		possible = {
 			always = no
 		}
 	}
+
 	additional_radicalism_factors = {
 		add = {
 			desc = "INDIA_SEEKING_SOVEREIGNTY"
 			value = 0.25
 		}
+
 		if = {
 			limit = {
-				neighboring_country_has_insurrectionary_movement_trigger = {
-					TYPE = movement_india_pan_national
+				owner = {
+					any_neighbouring_state = {
+						owner = {
+							NOT = { THIS = ROOT.owner }
+							any_political_movement = {
+								is_political_movement_type = movement_india_pan_national
+								is_insurrectionary = yes
+							}
+						}
+					}
 				}
 			}
 			add = {

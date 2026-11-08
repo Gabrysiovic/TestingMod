@@ -94,7 +94,6 @@ independence.1 = {
 					value >= approve
 				}
 			}
-			has_factory_councils_law_or_amendment = yes
 		}
 		activate_law = law_type:law_council_republic
 	}
@@ -209,7 +208,6 @@ independence.2 = {
 					value >= approve
 				}
 			}
-			has_factory_councils_law_or_amendment = yes
 		}
 		activate_law = law_type:law_council_republic
 	}

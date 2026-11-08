@@ -38,7 +38,7 @@
   prati_sarkar_health_system: "Parallel Health System"
 
   india_protest.6.t: "Calls for Ahimsa"
-  india_protest.6.d: "With [Concept('concept_activism','$concept_activism_short$')] rising within the [SCOPE.sPoliticalMovement('indian_independence_movement').GetName], some leaders have spoken out. They call for Ahimsa, peaceful protest and a rejection of violence within the movement."
+  india_protest.6.d: "With [Concept('concept_activism', '$concept_activism_short|q$')] rising within the [SCOPE.sPoliticalMovement('indian_independence_movement').GetName], some leaders have spoken out. They call for Ahimsa, peaceful protest and a rejection of violence within the movement."
   india_protest.6.f: ""A country won through violent means is a country already lost.""
   india_protest.6.a: "Let's hope they heed the call."
   india_protest.6.b: "It may be too late for this."
@@ -81,7 +81,7 @@
 
   india_protest.12.t1: "Mill Strike Success!"
   india_protest.12.t2: "Mill Strike Unsuccessful"
-  india_protest.12.d1_mill: "Mill owners in [SCOPE.sState('mill_strike_state').GetCityHubName] have caved to the demands of the workers. A pay increase will be instituted immediately so long as the workers return to work. This marks a resounding success for the mills' workers and for the [SCOPE.sPoliticalMovement('indian_national_movement').GetName]."
+  india_protest.12.d1_no_hash_conflict: "Mill owners in [SCOPE.sState('mill_strike_state').GetCityHubName] have caved to the demands of the workers. A pay increase will be instituted immediately so long as the workers return to work. This marks a resounding success for the mills' workers and for the [SCOPE.sPoliticalMovement('indian_national_movement').GetName]."
   india_protest.12.d2: "The strike in [SCOPE.sState('mill_strike_state').GetCityHubName] has proven unsuccessful. The mills' owners have refused to institute the desired wage increases, and some fear the effort is at a standstill."
   india_protest.12.f1: ""Together we have shown the power of unity, solidarity, and organized protest action. This is a great day for workers in India.""
   india_protest.12.f2: ""If they think this is over, if they think we will simply abide this unfair treatment, then they could not be more wrong.""

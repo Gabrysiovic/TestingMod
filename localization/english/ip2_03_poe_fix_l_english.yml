@@ -25,7 +25,7 @@
  champion_of_utilitarianism: "Champion of Utilitarianism"
 
  # india_railway.5
- grand_indian_railway_granted_tt: "All of our [Concept('concept_state', '$concept_states$')] on the [GetGeographicRegion('geographic_region_delhi_calcutta_line').GetName], [GetGeographicRegion('geographic_region_allahabad_bombay_line').GetName], [GetGeographicRegion('geographic_region_bombay_madras_line').GetName], or [GetGeographicRegion('geographic_region_gujarat_bombay_line').GetName] gain the #tooltippable;tooltip:[GetPlayer.GetTooltipTag],grand_indian_railway_tt #b $grand_indian_railway$#!#! modifier #v indefinitely#!"
+ grand_indian_railway_granted_tt: "All of our [Concept('concept_state', '$concept_states|q$')] on the [GetGeographicRegion('geographic_region_delhi_calcutta_line').GetName], [GetGeographicRegion('geographic_region_allahabad_bombay_line').GetName], [GetGeographicRegion('geographic_region_bombay_madras_line').GetName], or [GetGeographicRegion('geographic_region_gujarat_bombay_line').GetName] gain the #tooltippable;tooltip:[GetPlayer.GetTooltipTag],grand_indian_railway_tt #b $grand_indian_railway$#!#! modifier #v indefinitely#!"
  grand_indian_railway_tt: "[GetStaticModifier('grand_indian_railway').GetName|v]\n[GetStaticModifier('grand_indian_railway').GetDesc]"
  grand_indian_railway: "Grand Indian Railway"
  
@@ -47,7 +47,7 @@
 
  je_princely_states_spread_dissent: "Spread Dissent"
  je_princely_states_spread_dissent_desc: "#lore #italic Through our diplomatic efforts, we can convince other $concept_princely_states$ to join our cause.#!#!"
- princely_states_spread_dissent_tt: "We will spend some of our #b Dissent#! and be given the option to spread the #b $je_princely_states$#! [concept_journal_entry] to a [concept_princely_state] in one of the three [Concept('concept_presidency', '$concept_presidencies$')]."
+ princely_states_spread_dissent_tt: "We will spend some of our #b Dissent#! and be given the option to spread the #b $je_princely_states$#! [concept_journal_entry] to a [concept_princely_state] in one of the three [Concept('concept_presidency', '$concept_presidencies|q$')]."
  dissent_over_20_tt: "#b Dissent#! is greater than #v 20#! and it has been #v 5#! years since we started the [concept_journal_entry] or last took this action."
  dissent_over_40_tt: "#b Dissent#! is greater than #v 40#! and it has been #v 4#! years since we started the [concept_journal_entry] or last took this action."
  dissent_over_60_tt: "#b Dissent#! is greater than #v 60#! and it has been #v 3#! years since we started the [concept_journal_entry] or last took this action."
@@ -56,7 +56,7 @@
 
  je_princely_states_stockpile_munitions: "Stockpile Munitions"
  je_princely_states_stockpile_munitions_desc: "We must stockpile weapons and ammunition to ensure ourselves and our rebel allies are properly supplied for the forthcoming rebellion.\n\nHalf of all #b locally produced#! [SCOPE.sGoods('small_arms_scope').GetName], [SCOPE.sGoods('artillery_scope').GetName], and [SCOPE.sGoods('ammunition_scope').GetName] will be spread among the potential rebels for use during the rebellion.\n\n$je_princely_states_stockpile_status$"
- je_princely_states_stockpile_status: "Enough munitions have been stockpiled to apply the following modifiers to all #v [GetGlobalVariable('num_sepoy_rebel_countries').GetValue]#! potential rebelling countries:\n• #v +[GetGlobalVariable('sepoy_rebels_small_arms_stockpile_var').GetValue|0]#! [SCOPE.sGoods('small_arms_scope').GetName] ([Concept('concept_decay', '$concept_decaying$')]) for #v 5 years#!\n• #v +[GetGlobalVariable('sepoy_rebels_artillery_stockpile_var').GetValue|0]#! [SCOPE.sGoods('artillery_scope').GetName] ([Concept('concept_decay', '$concept_decaying$')]) for #v 5 years#!\n• #v +[GetGlobalVariable('sepoy_rebels_ammunition_stockpile_var').GetValue|0]#! [SCOPE.sGoods('ammunition_scope').GetName] ([Concept('concept_decay', '$concept_decaying$')]) for #v 5 years#!"
+ je_princely_states_stockpile_status: "Enough munitions have been stockpiled to apply the following modifiers to all #v [GetGlobalVariable('num_sepoy_rebel_countries').GetValue]#! potential rebelling countries:\n• #v +[GetGlobalVariable('sepoy_rebels_small_arms_stockpile_var').GetValue|0]#! [SCOPE.sGoods('small_arms_scope').GetName] ([Concept('concept_decay', '$concept_decaying|q$')]) for #v 5 years#!\n• #v +[GetGlobalVariable('sepoy_rebels_artillery_stockpile_var').GetValue|0]#! [SCOPE.sGoods('artillery_scope').GetName] ([Concept('concept_decay', '$concept_decaying|q$')]) for #v 5 years#!\n• #v +[GetGlobalVariable('sepoy_rebels_ammunition_stockpile_var').GetValue|0]#! [SCOPE.sGoods('ammunition_scope').GetName] ([Concept('concept_decay', '$concept_decaying|q$')]) for #v 5 years#!"
  princely_state_begins_stockpiling_munitions_tt: "We will begin stockpiling #b locally produced#! [SCOPE.sGoods('small_arms_scope').GetName], [SCOPE.sGoods('artillery_scope').GetName], and [SCOPE.sGoods('ammunition_scope').GetName] for ourselves and our potential rebel allies."
  princely_state_pays_stockpiling_bureacuracy_cost_tt: "We will incur a a cost of #b #red -1#! @bur![concept_bureaucracy]#! per military good we stockpile"
 
@@ -77,7 +77,7 @@
 
  dissent_progress_from_unused_influence: "Unused [concept_influence]"
  dissent_progress_from_army_strength: "Army [concept_power_projection] relative to #b $BIC$#!"
- dissent_progress_from_ally_army_strength: "Army [concept_power_projection] of [Concept('concept_alliance', '$concept_allies$')] relative to #b $BIC$#!"
+ dissent_progress_from_ally_army_strength: "Army [concept_power_projection] of [Concept('concept_alliance', '$concept_allies|q$')] relative to #b $BIC$#!"
  dissent_progress_from_guarantee_army_strength: "Army [concept_power_projection] of countries who [GetArticleType('guarantee_independence').GetName] relative to #b $BIC$#!"
  dissent_progress_from_support_independence_army_strength: "Army [concept_power_projection] of countries who [GetArticleType('support_independence').GetName] relative to #b $BIC$#!"
  dissent_progress_from_relations: "[concept_relations] with #b $BIC$#!"
@@ -103,7 +103,7 @@
  next_victim_activates_je_princely_states_tt: "[SCOPE.sCountry('next_victim_scope').GetName] gets the #b $je_princely_states$#! [concept_journal_entry] and will join us if the #tooltippable;tooltip:[GetPlayer.GetTooltipTag],je_uneasy_raj_tt_4 #b Indian Rebellion#!#! occurs."
 
  princely_states.6.t: "Spreading Dissent"
- princely_states.6.d: "Our seeds of dissent have begun to bear fruit. We may be able to convince another of the [Concept('concept_princely_state', '$concept_princely_states$')] to join our rebellion against the [SCOPE.sCountry('overlord_scope').GetName].\n\nThe question now, is on who do we focus our efforts?"
+ princely_states.6.d: "Our seeds of dissent have begun to bear fruit. We may be able to convince another of the [Concept('concept_princely_state', '$concept_princely_states|q$')] to join our rebellion against the [SCOPE.sCountry('overlord_scope').GetName].\n\nThe question now, is on who do we focus our efforts?"
  princely_states.6.f: ""If they aren't coming for you now, then they'll come for you later. Every year the noose tightens, and the [SCOPE.sCountry('overlord_scope').GetNameNoFormatting] will not stop until all of India is in its stranglehold.""
  princely_states.6.a: "[SCOPE.sCountry('bengal_candidate').GetNameNoFormatting] in the Bengal Presidency."
  princely_states.6.b: "[SCOPE.sCountry('bombay_candidate').GetNameNoFormatting] in the Bombay Presidency."
@@ -111,9 +111,9 @@
  bengal_candidate_activates_je_princely_states_tt: "[SCOPE.sCountry('bengal_candidate').GetName] gets the #b $je_princely_states$#! [concept_journal_entry] and will join us if the #tooltippable;tooltip:[GetPlayer.GetTooltipTag],je_uneasy_raj_tt_4 #b Indian Rebellion#!#! occurs."
  bombay_candidate_activates_je_princely_states_tt: "[SCOPE.sCountry('bombay_candidate').GetName] gets the #b $je_princely_states$#! [concept_journal_entry] and will join us if the #tooltippable;tooltip:[GetPlayer.GetTooltipTag],je_uneasy_raj_tt_4 #b Indian Rebellion#!#! occurs."
  madras_candidate_activates_je_princely_states_tt: "[SCOPE.sCountry('madras_candidate').GetName] gets the #b $je_princely_states$#! [concept_journal_entry] and will join us if the #tooltippable;tooltip:[GetPlayer.GetTooltipTag],je_uneasy_raj_tt_4 #b Indian Rebellion#!#! occurs."
- bengal_candidate_focus_tt: "They will focus on decreasing [Concept('concept_presidency_stability', '$concept_presidency_stability_short$')] and recruiting other [Concept('concept_princely_state', '$concept_princely_states$')] within the [GetGeographicRegion('geographic_region_bengal_presidency').GetName]."
- bombay_candidate_focus_tt: "They will focus on decreasing [Concept('concept_presidency_stability', '$concept_presidency_stability_short$')] and recruiting other [Concept('concept_princely_state', '$concept_princely_states$')] within the [GetGeographicRegion('geographic_region_bombay_presidency').GetName]."
- madras_candidate_focus_tt: "They will focus on decreasing [Concept('concept_presidency_stability', '$concept_presidency_stability_short$')] and recruiting other [Concept('concept_princely_state', '$concept_princely_states$')] within the [GetGeographicRegion('geographic_region_madras_presidency').GetName]."
+ bengal_candidate_focus_tt: "They will focus on decreasing [Concept('concept_presidency_stability', '$concept_presidency_stability_short|q$')] and recruiting other [Concept('concept_princely_state', '$concept_princely_states|q$')] within the [GetGeographicRegion('geographic_region_bengal_presidency').GetName]."
+ bombay_candidate_focus_tt: "They will focus on decreasing [Concept('concept_presidency_stability', '$concept_presidency_stability_short|q$')] and recruiting other [Concept('concept_princely_state', '$concept_princely_states|q$')] within the [GetGeographicRegion('geographic_region_bombay_presidency').GetName]."
+ madras_candidate_focus_tt: "They will focus on decreasing [Concept('concept_presidency_stability', '$concept_presidency_stability_short|q$')] and recruiting other [Concept('concept_princely_state', '$concept_princely_states|q$')] within the [GetGeographicRegion('geographic_region_madras_presidency').GetName]."
 
  # caste_conflict.1
  je_dravidian_movement_advance_reasons_tt: "• #b #green +0.5#!#! per [concept_influential] [concept_interest_group] that #b #green approves#!#! of [GetLawType('law_hindu_caste_discrimination_outlawed').GetName]\n #b #green +1.0#!#! per [concept_powerful] [concept_interest_group] that #b #green approves#!#! of [GetLawType('law_hindu_caste_discrimination_outlawed').GetName]\n• #b #green x2#!#! if the [concept_interest_group] is [concept_in_government]"
@@ -122,10 +122,10 @@
  je_dravidian_movement_anti_caste_pressure_progressbar: "Anti-Caste Pressure"
  je_dravidian_movement_anti_caste_pressure_progressbar_desc: "Anti-Caste Pressure ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/50)"
 
- anti_caste_progress_from_influential_igs: "[concept_influential] [Concept('concept_interest_group', '$concept_interest_groups$')] that #b #green approve#!#! of [GetLawType('law_hindu_caste_discrimination_outlawed').GetName]"
- anti_caste_progress_from_powerful_igs: "[concept_powerful] [Concept('concept_interest_group', '$concept_interest_groups$')] that #b #green approve#!#! of [GetLawType('law_hindu_caste_discrimination_outlawed').GetName]"
- anti_caste_loss_from_influential_igs: "[concept_influential] [Concept('concept_interest_group', '$concept_interest_groups$')] that #b #red disapprove#!#! of [GetLawType('law_hindu_caste_discrimination_outlawed').GetName]"
- anti_caste_loss_from_powerful_igs: "[concept_powerful] [Concept('concept_interest_group', '$concept_interest_groups$')] that #b #red disapprove#!#! of [GetLawType('law_hindu_caste_discrimination_outlawed').GetName]"
+ anti_caste_progress_from_influential_igs: "[concept_influential] [Concept('concept_interest_group', '$concept_interest_groups|q$')] that #b #green approve#!#! of [GetLawType('law_hindu_caste_discrimination_outlawed').GetName]"
+ anti_caste_progress_from_powerful_igs: "[concept_powerful] [Concept('concept_interest_group', '$concept_interest_groups|q$')] that #b #green approve#!#! of [GetLawType('law_hindu_caste_discrimination_outlawed').GetName]"
+ anti_caste_loss_from_influential_igs: "[concept_influential] [Concept('concept_interest_group', '$concept_interest_groups|q$')] that #b #red disapprove#!#! of [GetLawType('law_hindu_caste_discrimination_outlawed').GetName]"
+ anti_caste_loss_from_powerful_igs: "[concept_powerful] [Concept('concept_interest_group', '$concept_interest_groups|q$')] that #b #red disapprove#!#! of [GetLawType('law_hindu_caste_discrimination_outlawed').GetName]"
 
  anti_caste_sentiment_50_tt: "#b Anti-Caste Sentiment#! has reached #v 50#!"
 

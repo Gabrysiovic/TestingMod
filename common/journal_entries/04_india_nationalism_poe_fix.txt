@@ -5,6 +5,7 @@ REPLACE:je_india_nationalism = {
 	icon = "gfx/interface/icons/war_goals/independence.dds"
 
 	group = je_group_british_india_global
+	dlc = dlc011
 
 	activation_description = {
 		always = yes

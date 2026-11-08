@@ -7,6 +7,8 @@
 				religion = rel:protestant
 				religion = rel:orthodox
 				religion = rel:oriental_orthodox
+				# Sikhs are monotheistic, Paradox >:U
+				religion = rel:sikh
 			}
 		}
 		localization_key = custom_god
@@ -29,13 +31,6 @@
 			religion = rel:hindu
 		}
 		localization_key = custom_gods
-	}
-	text = {
-		trigger = {
-			religion = rel:sikh
-		}
-		# Sikhs are monotheistic, Paradox >:U
-		localization_key = custom_god
 	}
 	text = {
 		trigger = {

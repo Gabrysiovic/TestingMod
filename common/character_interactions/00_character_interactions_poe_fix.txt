@@ -1,15 +1,62 @@
-﻿REPLACE:grant_leadership_to_agitator = {
+﻿REPLACE_OR_CREATE:grant_leadership_to_agitator = {
 	icon = "gfx/interface/character_panel/grant_command_not.dds"
 	clicksound = "event:/SFX/DLC/1.3_ip1/UI/agitator_promote"
+
 	potential = {
 		has_dlc_feature = agitators
 		has_role_of_type = agitator
 		exists = owner
 		owner ?= scope:actor
 	}
+
 	possible = {
 		interest_group ?= {
 			is_in_government = yes
+		}
+		trigger_if = {
+			limit = {
+				scope:actor ?= {
+					AND = {
+						has_law_or_variant = law_type:law_multicultural
+						has_law_or_variant = law_type:law_total_separation
+					}
+				}
+			}
+			character_acceptance = { # In light of the Multiculturalism nerf
+				target = scope:actor
+				value >= acceptance_status_3
+			}
+		}
+		trigger_else_if = {
+			limit = { owner ?= { has_law_or_variant = law_type:law_state_atheism } }
+			character_acceptance = {
+				target = scope:actor
+				value >= acceptance_status_4
+			}
+			NOR = {
+				has_ideology = ideology:ideology_theocrat
+				has_ideology = ideology:ideology_integralist
+				has_ideology = ideology:ideology_traditionalist
+				has_ideology = ideology:ideology_traditionalist_minoritarian
+			}
+		}
+		trigger_else = {
+			character_acceptance = {
+				target = scope:actor
+				value >= acceptance_status_4
+			}
+		}
+		OR = {
+			is_female = no
+			scope:actor ?= { has_law_or_variant = law_type:law_womens_suffrage }
+		}
+		custom_tooltip = {
+			text = grant_leadership_must_be_pressured_ig
+			political_movement ?= {
+				any_influenced_interest_group = {
+					this = root.interest_group
+				}
+			}
 		}
 		trigger_if = {
 			limit = {
@@ -30,59 +77,8 @@
 				}
 			}
 		}
-		trigger_else_if = {
-			limit = {
-				scope:actor ?= {
-					AND = {
-						has_law_or_variant = law_type:law_multicultural
-						has_law_or_variant = law_type:law_total_separation
-					}
-				}
-			}
-			character_acceptance = {
-				# In light of the Multiculturalism nerf
-				target = scope:actor
-				value >= acceptance_status_3
-			}
-		}
-		trigger_else_if = {
-			limit = {
-				owner ?= {
-					has_law_or_variant = law_type:law_state_atheism
-				}
-			}
-			character_acceptance = {
-				target = scope:actor
-				value >= acceptance_status_4
-			}
-			NOR = {
-				has_ideology = ideology:ideology_theocrat
-				has_ideology = ideology:ideology_integralist
-				has_ideology = ideology:ideology_traditionalist
-				has_ideology = ideology:ideology_traditionalist_minoritarian
-			}
-		}
-		trigger_else = {
-			character_acceptance = {
-				target = scope:actor
-				value >= acceptance_status_4
-			}
-		}
-		OR = {
-			is_female = no
-			scope:actor ?= {
-				has_law_or_variant = law_type:law_womens_suffrage
-			}
-		}
-		custom_tooltip = {
-			text = grant_leadership_must_be_pressured_ig
-			political_movement ?= {
-				any_influenced_interest_group = {
-					this = root.interest_group
-				}
-			}
-		}
 	}
+
 	effect = {
 		show_as_tooltip = {
 			remove_character_role = agitator
@@ -92,9 +88,9 @@
 			set_as_interest_group_leader = yes
 		}
 	}
-	cooldown = {
-		days = normal_modifier_time
-	}
+
+	cooldown = { days = normal_modifier_time }
+
 	ai_chance = {
 		value = -50
 		if = {
@@ -129,22 +125,83 @@
 			}
 			add = 50
 		}
+	}
+}
+
+REPLACE_OR_CREATE:grant_command_to_agitator = {
+	icon = "gfx/interface/character_panel/grant_command.dds"
+	clicksound = "event:/SFX/UI/Military/command_grant"
+
+	potential = {
+		has_dlc_feature = agitators
+		has_role_of_type = agitator
+		NOT = { has_role_of_type = general }
+		NOT = { has_role_of_type = admiral }
+		owner ?= scope:actor
+	}
+
+	possible = {
+		is_adult = yes
+		OR = {
+			is_female = no
+			owner ?= {
+				has_law_or_variant = law_type:law_womens_suffrage
+			}
+		}
+		exists = owner.capital.land_hq
+		trigger_if = {
+			limit = {
+				scope:actor.country_definition ?= cd:BIC
+			}
+			interest_group = {
+				is_indian_interest_group = no
+			}
+		}
+	}
+
+	effect = {
+		add_character_role = general
+	}
+
+	cooldown = { days = normal_modifier_time }
+
+	ai_chance = {
+		value = 0
 		if = {
 			limit = {
-				character_matches_divided_monarchists_ai_path = yes
-				interest_group.leader ?= {
-					NOT = {
-						character_matches_divided_monarchists_ai_path = yes
+				has_commander_traits = yes
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				is_interest_group_type = ig_armed_forces
+			}
+			add = 25
+		}
+		if = {
+			limit = {
+				NOT = {
+					owner ?= {
+						any_scope_general = {
+							exists = this
+						}
+					}
+				}
+			}
+			add = 25
+		}
+		if = {
+			limit = {
+				owner ?= {
+					any_scope_war = {
+						any_scope_front = {
+							is_vulnerable_front = root.owner
+						}
 					}
 				}
 			}
 			add = 100
-		}
-		if = {
-			limit = {
-				character_is_rival_french_house = yes
-			}
-			multiply = 0
 		}
 	}
 }

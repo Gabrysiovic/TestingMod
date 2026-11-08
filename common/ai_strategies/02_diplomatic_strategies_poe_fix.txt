@@ -85,34 +85,26 @@ REPLACE_OR_CREATE:ai_strategy_unify_india = {
 				scope:target_state = {
 					is_in_geographic_region = geographic_region_india
 				}
-				has_strategic_land_adjacency = scope:target_state
+				can_reach_target_state_to_conquer = { TARGET_STATE = scope:target_state }
 			}
-			add = 100
+			add = {
+				value = 100
+				desc = "STATE_VALUE_UNIFY_INDIA"
+			}
 		}
 	}
 
 	wargoal_scores = {
-		annex_country = {
+		conquer_state = {
 			if = {
 				limit = {
 					scope:target_country = {
 						is_in_geographic_region = geographic_region_india
 					}
-					has_strategic_land_adjacency = scope:target_country
+					can_reach_target_state_to_conquer = { TARGET_STATE = scope:target_state }
 				}
-				add = 300
+				add = 250
 			}
-		}
-		conquer_state = {
-			if = {
-				limit = {
-					scope:target_state = {
-						is_in_geographic_region = geographic_region_india
-					}
-					has_strategic_land_adjacency = scope:target_state
-				}
-			}
-			add = 250
 		}
 	}
 
@@ -130,7 +122,7 @@ REPLACE_OR_CREATE:ai_strategy_unify_india = {
 				if = {
 					limit = {
 						NOT = {
-							has_strategic_land_adjacency = scope:target_country
+							can_reach_target_state_to_conquer = { TARGET_STATE = scope:target_state }
 						}
 					}
 					add = 150
@@ -145,7 +137,7 @@ REPLACE_OR_CREATE:ai_strategy_unify_india = {
 						is_in_geographic_region = geographic_region_india
 					}
 				}
-				has_strategic_land_adjacency = scope:target_country
+				can_reach_target_state_to_conquer = { TARGET_STATE = scope:target_state }
 			}
 			score = {
 				value = 500

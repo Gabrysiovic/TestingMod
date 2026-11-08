@@ -72,12 +72,14 @@
 			value = scope:target_state.num_provinces
 			divide = scope:target_state.state_region.num_provinces
 		}
-		
-
 	}
 
 	on_enforced = {
 		# script effect on top of the predefined code effect
+	}
+
+	mirrored_wargoal = {
+		method = territorial
 	}
 
 	ai = {
