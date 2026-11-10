@@ -18,7 +18,7 @@
 		masterful_diplomat
 	}
 	on_created = {
-		set_variable = house_saxe_coburg_gotha
+		set_variable = { name = dynasty_var value = flag:house_saxe_coburg_gotha }
 	}
 }
 
@@ -39,7 +39,7 @@ BEL_Prince_Leopold = { # Prince Leopold
 		sickly
 	}
 	on_created = {
-		set_variable = house_saxe_coburg_gotha
+		set_variable = { name = dynasty_var value = flag:house_saxe_coburg_gotha }
 	}
 }
 
@@ -60,7 +60,7 @@ BEL_Prince_Philippe = { # Prince Philippe
 	}
 	on_created = {
 		set_variable = is_married
-		set_variable = house_saxe_coburg_gotha
+		set_variable = { name = dynasty_var value = flag:house_saxe_coburg_gotha }
 	}
 }
 
@@ -80,7 +80,7 @@ BEL_Prince_Baudouin = { # Prince Baudouin
 		honorable
 	}
 	on_created = {
-		set_variable = house_saxe_coburg_gotha
+		set_variable = { name = dynasty_var value = flag:house_saxe_coburg_gotha }
 	}
 }
 
@@ -102,7 +102,7 @@ BEL_albert_i = { # Albert I of Belgium
 		charismatic
 	}
 	on_created = {
-		set_variable = house_saxe_coburg_gotha
+		set_variable = { name = dynasty_var value = flag:house_saxe_coburg_gotha }
 	}
 }
 
@@ -123,6 +123,6 @@ BEL_leopold_iii = { # Leopold III of Belgium
 		grifter
 	}
 	on_created = {
-		set_variable = house_saxe_coburg_gotha
+		set_variable = { name = dynasty_var value = flag:house_saxe_coburg_gotha }
 	}
 }

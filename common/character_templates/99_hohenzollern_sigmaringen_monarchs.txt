@@ -11,7 +11,7 @@
 	ideology = ideology_royalist
 	on_created = {
 		set_variable = is_married
-		set_variable = house_hohenzollern
+		set_variable = { name = dynasty_var value = flag:house_hohenzollern }
 	}
 }
 
@@ -63,7 +63,7 @@ HOH_wilhelm_von_hohenzollern_sigmaringen = {
 	interest_group = ig_landowners
 	ideology = ideology_royalist
 	on_created = {
-		set_variable = house_hohenzollern
+		set_variable = { name = dynasty_var value = flag:house_hohenzollern }
 	}
 }
 
@@ -79,6 +79,6 @@ HOH_friedrich_von_hohenzollern_sigmaringen = {
 	interest_group = ig_landowners
 	ideology = ideology_royalist
 	on_created = {
-		set_variable = house_hohenzollern
+		set_variable = { name = dynasty_var value = flag:house_hohenzollern }
 	}
 }
