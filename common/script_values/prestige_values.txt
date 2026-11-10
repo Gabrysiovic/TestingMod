@@ -1,0 +1,21 @@
+﻿# Testingmod override of vanilla common/script_values/prestige_values.txt (1.15).
+# 1.13 had these as NDiplomacy defines (PRESTIGE_FROM_ARMY_POWER_PROJECTION, PRESTIGE_FROM_NAVY_POWER_PROJECTION);
+# 1.15 moved them to script values, so the old defines no longer do anything.
+# Mod keeps its prestige reduction: army and navy power projection give about two thirds of vanilla.
+# The two subject values are unchanged from vanilla.
+
+# Prestige per point of army power projection
+# root = country
+prestige_from_army_power_projection = 0.02 # Vanilla 0.03
+
+# Prestige per point of navy power projection, after scaling by PRESTIGE_FROM_NAVY_POWER_PROJECTION_HIT_POINTS_REFERENCE
+# root = country
+prestige_from_navy_power_projection = 0.0051 # Vanilla 0.0077
+
+# Prestige per point of army power projection in subjects
+# root = overlord country
+prestige_from_subject_army_power_projection = 0.0005
+
+# Prestige per point of navy power projection in subjects
+# root = overlord country
+prestige_from_subject_navy_power_projection = 0.01
