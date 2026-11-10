@@ -1,0 +1,3 @@
+﻿l_english:
+ GAME_PAUSED:0 "Game is paused. You [AddLocalizationIf(IsHost,' and host')] #instruction Click#! to resume"
+ PAUSED_BY_UNPAUSE_ANYONE:0 "You[AddLocalizationIf(NOT(IsHost),' and host')] can unpause"
