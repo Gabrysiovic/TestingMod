@@ -172,6 +172,14 @@ send_money_to_target = {
 			add_treasury = root.var:imperia_money_transfer_amount
 			post_notification = imperia_received_money
 		}
+		every_country = {
+			limit = {
+				is_player = yes
+				NOT = { this = scope:money_sender }
+				NOT = { this = scope:target }
+			}
+			post_notification = imperia_observed_money_transfer
+		}
 	}
 	is_valid = {
 		can_send_money_to_recipient_trigger = yes

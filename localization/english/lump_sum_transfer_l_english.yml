@@ -12,4 +12,6 @@
  notification_imperia_received_money_desc: "Received @money![SCOPE.GetValue('money_amount')|K+=] from [SCOPE.sCountry('money_sender').GetName]"
  notification_imperia_sent_money_name: "Sent Money"
  notification_imperia_sent_money_desc: "Sent @money![SCOPE.GetValue('money_amount')|K-=] to [SCOPE.sCountry('target').GetName]"
+ notification_imperia_observed_money_transfer_name: "Money Transfer"
+ notification_imperia_observed_money_transfer_desc: "[SCOPE.sCountry('money_sender').GetName] sent @money![SCOPE.GetValue('money_amount')|K=] to [SCOPE.sCountry('target').GetName]"
  EMPTY: ""
