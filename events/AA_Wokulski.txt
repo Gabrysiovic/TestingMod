@@ -1,0 +1,332 @@
+namespace = lalka_events
+
+# Event 1: Wokulski returns from Bulgaria and arrives in Warsaw
+lalka_events.1 = {
+    type = country_event
+    placement = root
+
+    title = lalka_events.1.t
+    desc = lalka_events.1.d
+    flavor = lalka_events.1.f
+
+    cooldown = { days = normal_modifier_time }
+
+    gui_window = event_window_1char_tabloid_halloween
+    left_icon = scope:Wokulski_scope
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+    duration = 3
+
+    trigger = {
+        NOR = {
+            has_game_rule = no_fantastical_content
+            has_global_variable = Wokulski_var
+        }
+        country_has_primary_culture = cu:polish
+        any_scope_state = {
+            state_region = s:STATE_GREATER_POLAND
+        }
+        game_date > 1870.1.1
+    }
+
+    cancellation_trigger = {
+        scope:Wokulski_scope ?= {
+            is_character_alive = no
+        }
+    }
+
+    immediate = {
+        create_character = {
+            template = Stanislaw_Wokulski
+            save_scope_as = Wokulski_scope
+        }
+        set_global_variable = Wokulski_var
+    }
+
+    # Option A: Bring him into the fold and trigger Event 3 in the background
+    option = {
+        name = lalka_events.1.a
+        default_option = yes
+        ai_chance = {
+            base = 2
+        }
+        show_as_tooltip = {
+            create_character = {
+                template = Stanislaw_Wokulski
+            }
+        }
+        scope:Wokulski_scope = {
+            set_as_interest_group_leader = yes
+        }
+        
+        hidden_effect = {
+            trigger_event = { 
+                id = lalka_events.3 
+                days = 30 
+            }
+        }                
+    }
+    
+    # Option C: Send him away abroad
+    option = {
+        name = lalka_events.1.c
+        ai_chance = {
+            base = 8
+        }
+        custom_tooltip = {
+            text = Wokulski_leaves_tt
+            scope:Wokulski_scope = {
+                retire_character = yes
+            }
+            create_character = {
+                template = Stanislaw_Wokulski
+                on_created = {
+                    exile_character_with_role_cleanup = yes
+                }
+            }
+        }
+    }
+}
+
+
+# Event 2: The tragic romance climax (triggered randomly between 6 and 30 months later)
+lalka_events.2 = {
+    type = country_event
+    placement = ROOT
+
+    title = lalka_events.2.t
+    desc = lalka_events.2.d
+    flavor = lalka_events.2.f
+
+    gui_window = event_window_2char_halloween
+
+    left_icon = scope:Wokulski_scope
+    right_icon = scope:Izabela_scope
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    on_opened_soundeffect = "event:/SFX/Events/misc/2Characters"
+
+    icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+    duration = 3
+
+    immediate = {
+        random_scope_character = {
+            limit = {
+                has_template = Stanislaw_Wokulski
+            }
+            save_scope_as = Wokulski_scope
+            set_temporary_event_immortality = { DURATION = 3 }
+        }
+        random_scope_character = {
+            limit = {
+                has_template = Izabela_Lecka
+            }
+            save_scope_as = Izabela_scope
+            set_temporary_event_immortality = { DURATION = 3 }
+        }
+    }
+
+    cancellation_trigger = {
+        OR = {
+            scope:Wokulski_scope ?= {
+                is_character_alive = no
+            }
+            scope:Izabela_scope ?= {
+                is_character_alive = no
+            }
+        }
+    }
+
+    # Option A: Attempt to forget Izabela (75% death, 25% psychological affliction)
+    option = {
+        name = lalka_events.2.a
+        default_option = yes
+        ai_chance = {
+            base = 10
+        }
+        custom_tooltip = lalka_events.2_tt
+        
+        scope:Wokulski_scope = {
+            random_list = {
+                25 = {
+                    remove_trait = romantic
+                    add_trait = psychological_affliction
+                }
+                75 = {
+                    kill_character = yes
+                }
+            }
+        }
+    }
+    
+    # Option B: Send Wokulski to science and research
+    option = {
+        name = lalka_events.2.b
+        ai_chance = {
+            base = 90
+        }
+        custom_tooltip = {
+            text = Wokulski_science_tt
+            scope:Wokulski_scope = {
+                remove_as_interest_group_leader = yes
+				add_trait = innovative
+                remove_trait = romantic
+                
+            }
+        }    
+    }
+
+    after = {
+        scope:Wokulski_scope = {
+            if = {
+                limit = { is_character_alive = yes }
+                revoke_temporary_event_immortality = yes
+            }
+        }
+        scope:Izabela_scope = {
+            if = {
+                limit = { is_character_alive = yes }
+                revoke_temporary_event_immortality = yes
+            }
+        }
+    }
+}
+
+
+# Hidden event 3: Spawns Izabela and Rzecki, then schedules Event 2 with 10 randomized steps (6 to 30 months)
+lalka_events.3 = {
+    type = country_event
+    placement = root
+    hidden = yes
+    
+    immediate = {
+        create_character = {
+            template = Izabela_Lecka
+            save_scope_as = Izabela_scope
+        }
+        create_character = {
+            template = Ignacy_Rzecki
+            save_scope_as = Rzecki_scope
+        }
+        
+        # 10 random steps spanning evenly between 180 days (6 months) and 900 days (30 months)
+        random_list = {
+            10 = {
+                trigger_event = {
+                    id = lalka_events.2
+                    days = 180 # ~6 months
+                }
+            }
+            10 = {
+                trigger_event = {
+                    id = lalka_events.2
+                    days = 252 # ~8.4 months
+                }
+            }
+            10 = {
+                trigger_event = {
+                    id = lalka_events.2
+                    days = 324 # ~10.8 months
+                }
+            }
+            10 = {
+                trigger_event = {
+                    id = lalka_events.2
+                    days = 396 # ~13.2 months
+                }
+            }
+            10 = {
+                trigger_event = {
+                    id = lalka_events.2
+                    days = 468 # ~15.6 months (approx. 1.5 years)
+                }
+            }
+            10 = {
+                trigger_event = {
+                    id = lalka_events.2
+                    days = 540 # ~18 months
+                }
+            }
+            10 = {
+                trigger_event = {
+                    id = lalka_events.2
+                    days = 612 # ~20.4 months
+                }
+            }
+            10 = {
+                trigger_event = {
+                    id = lalka_events.2
+                    days = 684 # ~22.8 months
+                }
+            }
+            10 = {
+                trigger_event = {
+                    id = lalka_events.2
+                    days = 756 # ~25.2 months
+                }
+            }
+            10 = {
+                trigger_event = {
+                    id = lalka_events.2
+                    days = 900 # ~30 months (2.5 years)
+                }
+            }
+        }
+    }
+}
+
+
+# Event 4: Ignacy Rzecki and the Napoleonic ideals
+lalka_events.4 = {
+    type = country_event
+    placement = root
+    duration = 3
+    
+    title = lalka_events.4.t
+    desc = lalka_events.4.d
+    flavor = lalka_events.4.f
+    
+    gui_window = event_window_1char_tabloid_halloween
+    left_icon = scope:Rzecki_scope
+    
+    trigger = {
+		NOR = {
+            has_game_rule = no_fantastical_content
+            has_global_variable = Rzecki_var
+        }
+        ROOT = {    
+            ig:ig_petty_bourgeoisie ?= {
+                leader = {
+                    has_template = Ignacy_Rzecki
+                }
+            }
+        }        
+    }
+    
+    immediate = {
+        ig:ig_petty_bourgeoisie = {
+            leader = {
+                save_scope_as = Rzecki_scope
+            }
+        }
+		set_global_variable = Rzecki_var
+    }
+    
+    option = {
+        name = lalka_events.4.a
+        custom_tooltip = {
+            text = Rzecki_Napoleon_tt
+            scope:Rzecki_scope = {
+                add_trait = special_character_napoleonic_return
+				add_trait = inspirational_orator
+                remove_trait = reserved
+                
+            }
+        }    
+    }
+}

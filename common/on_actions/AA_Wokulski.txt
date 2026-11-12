@@ -1,0 +1,11 @@
+on_monthly_pulse_country = {
+	events = {	
+		lalka_events.4
+	}
+}
+
+on_yearly_pulse_country = {
+	events = {	
+		lalka_events.1
+	}
+}

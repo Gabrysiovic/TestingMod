@@ -217,3 +217,28 @@
     maximilian_events.2.f: "Word has arrived across the Atlantic of a joyous birth in Styria: Archduke Karl Ludwig has welcomed a son, Franz Ferdinand. With our difficult dynastic standing, this newborn archduke offers the Mexican Empire a direct, legitimate bloodline to secure the dynasty's fragile future. This action will not create personal union in the event of Franz Ferdinand becoming ruler in both nations."    
     maximilian_events.2.a: "Proclaim the young Archduke as heir to the throne."
     maximilian_events.2_tt: "Removes current heir to the Mexican throne"
+    
+    # Lalka & Wokulski event - fantanstical
+    
+    lalka_events.1.t: "The Industrialist with a romantic heart"
+    lalka_events.1.d: "A fortune forged in the fires of the Balkan campaign, searching for purpose within the halls of power."
+    lalka_events.1.f: "Whispers ripple through the bustling streets of Warsaw. Stanisław Wokulski has returned. Having amassed a staggering fortune through military contracting during the campaign in Bulgaria, the former insurgent is no longer a man easily ignored. With pockets full of gold and a mind driven by science and organic enterprise, he stands at a crossroads: should he use his newfound wealth to seize control of the local industrial elite, or take his capital and depart for foreign shores, leaving the Vistula behind?"
+    lalka_events.1.a: "Bring him into the fold. Let him lead our Industrialists and revolutionize our economy, his personal affections be damned."
+    lalka_events.1.c: "A dangerous man with too much ambition and persistence. Let him take his gold and leave abroad."
+    Wokulski_leaves_tt: "Without looking back, Wokulski boards a carriage heading west, abandoning Warsaw to its own devices. He will offer his skills elsewhere."
+
+    # Event 2: The end of the romance / Choice
+    lalka_events.2.t: "The End of Illusion"
+    lalka_events.2.d: "The collision of romantic ideals with the cold reality of high society has left deep wounds in Wokulski's soul."
+    lalka_events.2.f: "Ignacy Rzecki watches his longtime friend with growing concern. Rejected by Izabela Łęcka, Wokulski stands at the precipice. Can he suppress his past affections in favor of hard pragmatism and state duties, or will he lose himself entirely?"
+    lalka_events.2.a: "He must forsake his painful love and focus entirely on the affairs of the state."
+    lalka_events.2.b: "There is nothing left for him in this world. Only science, experiments, and mysteries remain to be unraveled..."
+    lalka_events.2_tt: "Wokulski must kill the romantic within himself. Such transformation will take a huge toll on his well-being, as the heartbroken man will look for new beginning."
+    Wokulski_science_tt: "Wokulski withdraws from public life, entirely dedicating himself to scientific research and innovative technological pursuits."
+    
+    lalka_events.4.t: "The Old Bonapartist"
+    lalka_events.4.d: "A portrait of Napoleon Bonaparte hangs above the desk, illuminated by the warm, flickering light of a candle, watching over a lifetime of unwavering devotion."
+    lalka_events.4.f: "Decades have passed since the fall of the Great Emperor, yet within the quiet corners of the shop—and now upon the broader political stage, Ignacy Rzecki keeps the flame alive. Seeing his lifelong dreams of supporting the heirs of Napoleon Bonaparte finally echo through the hearts of the people, Rzecki has found newfound strength. Stirred by historical duty, he steps forward to guide the nation, ready to dedicate his remaining years to fulfilling the Napoleonic ideals."
+    lalka_events.4.a: "Long live the Emperor! Let the ideals of Napoleon guide our path."
+    Rzecki_Napoleon_tt: "Ignacy Rzecki embraces his Napoleonic conviction, marking the return of Bonapartist ideals in Warsaw."
+    Wokulski_start_tt: "The event chain for Lalka, written by Bolesław Prus, begins"

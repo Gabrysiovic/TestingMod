@@ -150,3 +150,61 @@ REPLACE:aus_rudolf_habsburg = {
 		set_variable = { name = dynasty_var value = flag:house_habsburg }
 	}
 }
+
+Stanislaw_Wokulski = {
+     first_name = Stanisław
+     last_name = Wokulski
+     historical = yes
+     culture = cu:polish
+     religion = rel:catholic
+     ideology = ideology_utopian
+     interest_group = ig_industrialists
+	 home_region = STATE_GREATER_POLAND
+ 	 dna = ecchi_dna_john_maynard_keynes
+     birth_date = 1832.1.1
+     traits = { 
+		romantic 
+		persistent 
+		erudite 
+		expert_entrepreneur
+	}
+}
+
+Izabela_Lecka = {
+	first_name = Izabela
+    last_name = Łęcka
+    female = yes
+    dna = dna_elena_romanova
+	noble = yes
+    historical = yes
+    birth_date = 1852.1.9
+    culture = cu:polish
+    religion = rel:catholic
+    interest_group = ig_intelligentsia
+    ideology = ideology_moderate
+    home_region = STATE_GREATER_POLAND
+    traits = {
+        hedonist
+        reckless
+		tactful
+    }
+}
+
+Ignacy_Rzecki = {
+    first_name = Ignacy
+    last_name = Rzecki
+    female = no
+    dna = dna_arsenio_martinez_campos
+    historical = yes
+    birth_date = 1828.4.20
+    culture = cu:polish
+    religion = rel:catholic
+    interest_group = ig_petty_bourgeoisie
+    ideology = ideology_bonapartist
+    home_region = STATE_GREATER_POLAND
+    traits = {
+        meticulous
+		reserved
+		brave
+    }
+}
