@@ -150,7 +150,7 @@ REPLACE:company_maison_worth = {
 
 # Compagnie des mines d'Anzin
 INJECT:company_mines_anzin = {
-	building_types = {
+	extension_building_types = {
 		building_railway
 	}
 }
