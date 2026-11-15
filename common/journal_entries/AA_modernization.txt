@@ -32,6 +32,12 @@
 			c:MOL ?= THIS			#MOLDAVIA
 			c:ROM ?= THIS			#ROMANIA
 			c:SOK ?= THIS			#SOKOTO
+            c:SER ?= THIS			#SERBIA
+            c:MON ?= THIS			#MONTENEGRO
+            c:BUG ?= THIS			#BUGANDA
+            c:MAD ?= THIS			#MADEGASCAR
+            c:CUB ?= THIS			#CUBA
+            c:PHI ?= THIS			#PHILIPINNES
 		}
 	}
 	possible = {
