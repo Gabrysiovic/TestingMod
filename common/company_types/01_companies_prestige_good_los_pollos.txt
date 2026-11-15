@@ -15,7 +15,7 @@ company_los_pollos_hermanos = {
 		building_maize_farm
 	}
 	possible_prestige_goods = {
-		prestige_good_los_pollos_chicken
+		prestige_good_generic_groceries
 	}
 	potential = {
 		AND = {
