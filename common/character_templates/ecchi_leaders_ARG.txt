@@ -15,18 +15,31 @@ ecchi_arg_de_san_martin = {
     traits = { celebrity_commander romantic brave charismatic }
     interest_group_leader_usage = {
         country_trigger = {
-            OR = {
-                AND = {
-                    exists = c:PEU
-                    this = c:PEU
-                    NOT = { exists = c:ARG }
-                }
-                AND = {
-                    exists = c:ARG
-                    this = c:ARG
-                }
-            }
+		OR = {
+        AND = {
+            exists = c:ARG
+            this = c:ARG
         }
+        AND = {
+            NOT = { exists = c:ARG }
+            exists = c:PLT
+            this = c:PLT
+        }
+        AND = {
+            NOT = { exists = c:ARG }
+            NOT = { exists = c:PLT }
+            exists = c:FND
+            this = c:FND
+        }
+        AND = {
+            NOT = { exists = c:ARG }
+            NOT = { exists = c:PLT }
+            NOT = { exists = c:FND }
+            exists = c:PEU
+            this = c:PEU
+        }
+		}
+		}
         interest_group_trigger = {
             ig_counts_as_marginal = no
             OR = {
@@ -37,7 +50,7 @@ ecchi_arg_de_san_martin = {
         }
         earliest_usage_date = 1836.1.1
         latest_usage_date = 1850.8.17
-        chance = 65
+        chance = 80
     }
 }
 
@@ -176,13 +189,28 @@ ecchi_arg_peron = {
     commander_rank = default
     commander_usage = {
         country_trigger = {
-            exists = c:ARG
-            this = c:ARG
-        }
+			OR = {
+				AND = {
+					exists = c:ARG
+					this = c:ARG
+				}
+				AND = {
+					NOT = { exists = c:ARG }
+					exists = c:PLT
+					this = c:PLT
+				}
+				AND = {
+					NOT = { exists = c:ARG }
+					NOT = { exists = c:PLT }
+					exists = c:FND
+					this = c:FND
+				}
+			}
+		}
         role = general
         earliest_usage_date = 1912.1.1
         latest_usage_date = 1974.7.1
-        chance = 65
+        chance = 80
     }
 }
 
@@ -203,9 +231,24 @@ ecchi_arg_yrigoyen = {
     traits = { ambitious }
     interest_group_leader_usage = {
         country_trigger = {
-            exists = c:ARG
-            this = c:ARG
-        }
+			OR = {
+				AND = {
+					exists = c:ARG
+					this = c:ARG
+				}
+				AND = {
+					NOT = { exists = c:ARG }
+					exists = c:PLT
+					this = c:PLT
+				}
+				AND = {
+					NOT = { exists = c:ARG }
+					NOT = { exists = c:PLT }
+					exists = c:FND
+					this = c:FND
+				}
+			}
+		}
         interest_group_trigger = {
             ig_counts_as_marginal = no
             OR = {
@@ -215,6 +258,6 @@ ecchi_arg_yrigoyen = {
         }
         earliest_usage_date = 1869.1.1
         latest_usage_date = 1933.7.3
-        chance = 65
+        chance = 80
     }
 }

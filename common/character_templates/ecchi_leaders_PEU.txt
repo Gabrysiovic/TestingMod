@@ -137,22 +137,35 @@ ecchi_peu_prado = {
     commander_rank = default
     commander_usage = {
         country_trigger = {
-            OR = {
-                AND = {
-                    exists = c:CUB
-                    this = c:CUB
-                    NOT = { exists = c:PEU }
-                }
-                AND = {
-                    exists = c:PEU
-                    this = c:PEU
-                }
-            }
-        }
+			OR = {
+				AND = {
+					exists = c:PEU
+					this = c:PEU
+				}
+				AND = {
+					NOT = { exists = c:PEU }
+					exists = c:PBC
+					this = c:PBC
+				}
+				AND = {
+					NOT = { exists = c:PEU }
+					NOT = { exists = c:PBC }
+					exists = c:FND
+					this = c:FND
+				}
+				AND = {
+					NOT = { exists = c:PEU }
+					NOT = { exists = c:PBC }
+					NOT = { exists = c:FND }
+					exists = c:CUB
+					this = c:CUB
+				}
+			}
+		}
         role = general
         earliest_usage_date = 1874.1.1
         latest_usage_date = 1883.7.15
-        chance = 65
+        chance = 80
     }
 }
 
@@ -175,9 +188,24 @@ ecchi_peu_clorinda_matto = {
     traits = { literary persistent }
     agitator_usage = {
         country_trigger = {
-            exists = c:PEU
-            this = c:PEU
-        }
+			OR = {
+				AND = {
+					exists = c:PEU
+					this = c:PEU
+				}
+				AND = {
+					NOT = { exists = c:PEU }
+					exists = c:PBC
+					this = c:PBC
+				}
+				AND = {
+					NOT = { exists = c:PEU }
+					NOT = { exists = c:PBC }
+					exists = c:FND
+					this = c:FND
+				}
+			}
+		}
         interest_group_trigger = {
             is_interest_group_type = ig_intelligentsia
         }
@@ -205,9 +233,24 @@ ecchi_peu_jose_carlos_mariategui = {
     traits = { literary persistent }
     agitator_usage = {
         country_trigger = {
-            exists = c:PEU
-            this = c:PEU
-        }
+			OR = {
+				AND = {
+					exists = c:PEU
+					this = c:PEU
+				}
+				AND = {
+					NOT = { exists = c:PEU }
+					exists = c:PBC
+					this = c:PBC
+				}
+				AND = {
+					NOT = { exists = c:PEU }
+					NOT = { exists = c:PBC }
+					exists = c:FND
+					this = c:FND
+				}
+			}
+		}
         interest_group_trigger = {
             is_interest_group_type = ig_trade_unions
         }

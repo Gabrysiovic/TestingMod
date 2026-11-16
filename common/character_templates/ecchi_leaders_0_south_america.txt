@@ -14,9 +14,24 @@ ecchi_chl_o_higgins = {
     traits = { senile romantic imperious ambitious }
     interest_group_leader_usage = {
         country_trigger = {
-            exists = c:CHL
-            this = c:CHL
-        }
+		OR = {
+			AND = {
+				exists = c:CHL
+				this = c:CHL
+			}
+			AND = {
+				NOT = { exists = c:CHL }
+				exists = c:PLT
+				this = c:PLT
+			}
+			AND = {
+				NOT = { exists = c:CHL }
+				NOT = { exists = c:PLT }
+				exists = c:FND
+				this = c:FND
+			}
+		}
+		}
         interest_group_trigger = {
             ig_counts_as_marginal = no
             OR = {
@@ -26,7 +41,7 @@ ecchi_chl_o_higgins = {
         }
         earliest_usage_date = 1836.1.1
         latest_usage_date = 1842.10.24
-        chance = 65
+        chance = 80
     }
 }
 
@@ -46,9 +61,24 @@ ecchi_uru_artigas = {
     traits = { pillager ambitious imperious }
     interest_group_leader_usage = {
         country_trigger = {
-            exists = c:URU
-            this = c:URU
-        }
+			OR = {
+				AND = {
+					exists = c:URU
+					this = c:URU
+				}
+				AND = {
+					NOT = { exists = c:URU }
+					exists = c:PLT
+					this = c:PLT
+				}
+				AND = {
+					NOT = { exists = c:URU }
+					NOT = { exists = c:PLT }
+					exists = c:FND
+					this = c:FND
+				}
+			}
+		}
         interest_group_trigger = {
             ig_counts_as_marginal = no
             OR = {
@@ -59,7 +89,7 @@ ecchi_uru_artigas = {
         }
         earliest_usage_date = 1836.1.1
         latest_usage_date = 1850.9.23
-        chance = 65
+        chance = 100
     }
 }
 
@@ -142,21 +172,34 @@ ecchi_vnz_lopez = {
     commander_rank = default
     commander_usage = {
         country_trigger = {
-            OR = {
-                AND = {
-                    exists = c:VNZ
-                    this = c:VNZ
-                    NOT = { exists = c:CUB }
-                }
-                AND = {
-                    exists = c:CUB
-                    this = c:CUB
-                }
-            }
-        }
+			OR = {
+				AND = {
+					exists = c:VNZ
+					this = c:VNZ
+				}
+				AND = {
+					NOT = { exists = c:VNZ }
+					exists = c:GCO
+					this = c:GCO
+				}
+				AND = {
+					NOT = { exists = c:VNZ }
+					NOT = { exists = c:GCO }
+					exists = c:FND
+					this = c:FND
+				}
+				AND = {
+					NOT = { exists = c:VNZ }
+					NOT = { exists = c:GCO }
+					NOT = { exists = c:FND }
+					exists = c:CUB
+					this = c:CUB
+				}
+			}
+		}
         role = general
         earliest_usage_date = 1840.1.1
         latest_usage_date = 1851.9.1
-        chance = 65
+        chance = 100
     }
 }
