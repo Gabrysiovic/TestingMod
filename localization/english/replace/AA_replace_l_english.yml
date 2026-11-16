@@ -1,7 +1,3 @@
 ﻿l_english:
   #Drasp mode
   mm_players: "Drasp Mode"
-  #Power Plants+ locs -Akiko
-  electricity: "Direct Current"
-  electrical_generation: "Direct Current Generation"
-  electrical_generation_desc: "The generation and use of direct current allows for reliable and decentralized power supply, ideal for local industrial centers and isolated networks, but limited in range and efficiency."
