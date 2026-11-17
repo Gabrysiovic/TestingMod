@@ -17,9 +17,6 @@ REPLACE:je_north_german_unification = {
 				has_global_variable = schleswig_holstein_question_solved
 				text = je_schleswig_holstein_question_solved_trigger_desc
 			}
-			hidden_trigger = {
-				has_variable = je_unification_progress
-			}
 			has_technology_researched = nationalism
 			is_unification_candidate = GER
 			custom_tooltip = {
@@ -48,21 +45,21 @@ REPLACE:je_north_german_unification = {
 				is_unification_candidate = GER
 			}
 		}
-    effect = {
-        if = {
-            limit = {
-                c:PRU = this
-            }
+		effect = {
+			if = {
+				limit = {
+					c:PRU = this
+				}
+				every_state_region = {
+					limit = {
+						is_homeland = cu:north_german
+					}
+					add_claim = c:PRU
+				}
+			}
 
-            every_state_region = {
-                limit = {
-                    is_homeland = cu:north_german
-                }
-                add_claim = c:PRU
-            }
-        }
-
-        je_north_german_unification_cleanup = yes
+			je_north_german_unification_cleanup = yes
+		}
 	}
 
 	on_monthly_pulse = {
@@ -83,6 +80,6 @@ REPLACE:je_north_german_unification = {
 	}
 
 	weight = 1000
-		
+
 	should_be_pinned_by_default_uninvolved_or_context = yes
 }
