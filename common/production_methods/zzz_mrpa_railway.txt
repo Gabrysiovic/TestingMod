@@ -102,7 +102,7 @@ REPLACE_OR_CREATE:pm_electric_trains = {
 		workforce_scaled = {
 			goods_input_engines_add = 5 # 300
 			goods_input_electricity_add = 6 # 180
-			goods_output_transportation_add = 3 # 1050
+			goods_output_transportation_add = 35 # 1050
 		}
 		level_scaled = {
 			building_employment_laborers_add = 400
