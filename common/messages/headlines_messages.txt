@@ -95,7 +95,15 @@ headlines_sepoy_mutiny_crushed = {
 	days = 28
 	color = neutral
 }
-
+#Russian Civil War
+headlines_russian_civil_war = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news.dds"
+    group = "headlines_major_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
 ##Collapses
 #Qing Collapse
 headlines_qing_collapse = {
@@ -250,6 +258,15 @@ headlines_iberia_esperanto_formed = {
 	notification_type = feed
 	days = 28
 	color = neutral
+}
+#World Socialist Republic
+headlines_world_socialist_republic_formed = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news.dds"
+    group = "headlines_major_group"
+    notification_type = feed
+    days = 28
+    color = neutral
 }
 ##Regime Changes
 #BEI into Raj
@@ -694,15 +711,6 @@ headlines_london_conference_luxembourg = {
 	type = country
 	texture = "gfx/interface/icons/notification_icons/news.dds"
 	group = "headlines_minor_group"
-	notification_type = feed
-	days = 28
-	color = neutral
-}
-#Japan Claims on Manchuria
-headlines_mukden = {
-	type = country
-	texture = "gfx/interface/icons/notification_icons/news.dds"
-	group = "headlines_major_group"
 	notification_type = feed
 	days = 28
 	color = neutral

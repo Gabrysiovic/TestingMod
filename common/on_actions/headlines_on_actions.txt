@@ -253,6 +253,35 @@ headlines_action = {
 			 set_variable = headlines_sepoy_mutiny_crushed_seen
 			 post_notification = headlines_sepoy_mutiny_crushed
 		}
+        #Russian Civil War
+        if = {
+            limit = {
+                NOT = {
+                    has_variable = headlines_russian_civil_war_seen
+                }
+                any_country = {
+                    has_journal_entry = je_russia_civil_war
+                }
+            }
+            if = {
+                limit = {
+                    exists = c:RUS
+                }
+                c:RUS ?= {
+                    save_scope_as = russia_scope
+                }
+            } else = {
+                s:STATE_MOSCOW = {
+                    random_scope_state = {
+                        owner = {
+                            save_scope_as = russia_scope
+                        }
+                    }
+                }
+            }
+            set_variable = headlines_russian_civil_war_seen
+            post_notification = headlines_russian_civil_war
+        }
 		##Collapses##
 		#Qing Collapse
 		if = {
@@ -482,7 +511,7 @@ headlines_action = {
 		}
 		#Iberia Formed - Esperanto
 		if = {
-			limit = { 
+			limit = {
 				exists = c:IBE
 				c:IBE ?= {
 					country_has_primary_culture = cu:iberian
@@ -497,6 +526,26 @@ headlines_action = {
 			set_variable = headlines_iberia_formed_seen
 			post_notification = headlines_iberia_esperanto_formed
 		}
+        #World Socialist Republic
+        if = {
+            limit = {
+                has_global_variable = socialist_world_republic
+                any_country = {
+                    has_variable = sozialistische_weltrepublik_var
+                }
+                NOT = {
+                    has_variable = headlines_wsr_formed_seen
+                }
+            }
+            random_country = {
+                limit = {
+                    has_variable = sozialistische_weltrepublik_var
+                }
+                save_scope_as = wsr_scope
+            }
+            set_variable = headlines_wsr_formed_seen
+            post_notification = headlines_world_socialist_republic_formed
+        }
 		##Regime Changes##
 		#British Republic
 		if = {
