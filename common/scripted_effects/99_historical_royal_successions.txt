@@ -2872,7 +2872,6 @@ character_china_ruler_succession_chain_effect = {
 					ON_CREATED_EFFECT = summon_generic_make_ruler_effect
 				}
 				ruler = {
-					set_interest_group = owner.ig:ig_armed_forces
 					remove_character_role = character_role_ig_leader
 					designate_character_as_regent = {
 						YEARS = 47
