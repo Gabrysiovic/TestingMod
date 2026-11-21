@@ -1,9 +1,7 @@
 ﻿### Edward VII
 dna_gbr_edward_07 = {
 	portrait_info = {
-		genes={
-		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
-         
+		genes={         
 			hair_color={ 172 146 0 0 }
 			skin_color={ 0 0 0 0 }
 			eye_color={ 200 121 0 0 }
@@ -111,6 +109,7 @@ dna_gbr_edward_07 = {
 			eye_accessory={ "normal_eyes" 0 "normal_eyes" 0 }
 			eye_lashes_accessory={ "normal_eyelashes" 0 "normal_eyelashes" 0 }
 			teeth_accessory={ "normal_teeth" 0 "normal_teeth" 0 }
+			gene_asian_east = { "asian_east" 0 "asian_east" 0 }
 		}
 	}
 	enabled=yes
@@ -119,9 +118,7 @@ dna_gbr_edward_07 = {
 ### George V
 dna_gbr_george_05 = {
 	portrait_info = {
-		genes={
-		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
-         
+		genes={         
 			hair_color={ 225 163 0 0 }
 			skin_color={ 0 0 0 0 }
 			eye_color={ 221 15 0 0 }
@@ -229,6 +226,7 @@ dna_gbr_george_05 = {
 			eye_accessory={ "normal_eyes" 0 "normal_eyes" 0 }
 			eye_lashes_accessory={ "normal_eyelashes" 0 "normal_eyelashes" 0 }
 			teeth_accessory={ "normal_teeth" 0 "normal_teeth" 0 }
+			gene_asian_east = { "asian_east" 0 "asian_east" 0 }
 		}
 	}
 	enabled=yes
@@ -237,9 +235,7 @@ dna_gbr_george_05 = {
 ### Edward VII
 dna_gbr_edward_08 = {
 	portrait_info = {
-		genes={
-		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
-         
+		genes={         
 			hair_color={ 135 110 0 0 }
 			skin_color={ 0 0 0 0 }
 			eye_color={ 221 15 0 0 }
@@ -347,6 +343,7 @@ dna_gbr_edward_08 = {
 			eye_accessory={ "normal_eyes" 0 "normal_eyes" 0 }
 			eye_lashes_accessory={ "normal_eyelashes" 0 "normal_eyelashes" 0 }
 			teeth_accessory={ "normal_teeth" 0 "normal_teeth" 0 }
+			gene_asian_east = { "asian_east" 0 "asian_east" 0 }
 		}
 	}
 	enabled=yes

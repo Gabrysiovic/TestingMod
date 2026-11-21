@@ -1,8 +1,6 @@
 ﻿dna_wilhelm_03_of_nassau = {
     portrait_info = {
-        genes={
-		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
- 		
+        genes={ 		
 			hair_color={ 230 169 228 169 }
 			skin_color={ 121 6 121 6 }
 			eye_color={ 255 203 25 203 }
@@ -117,6 +115,7 @@
 			top_layer={ "no_top_layer" 0 "all_top_layers" 0 }
 			legwear={ "european_legwear" 0 "all_legwear" 0 }
 			headgear={ "generic_headgear" 0 "all_headgear" 0 }
+			gene_asian_east = { "asian_east" 0 "asian_east" 0 }
 		}
     }
     enabled=yes
@@ -124,9 +123,7 @@
 
 dna_grand_duke_adolf = {
     portrait_info = {
-        genes={
-		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
- 		
+        genes={ 		
 			hair_color={ 179 181 179 181 }
 			skin_color={ 77 13 77 13 }
 			eye_color={ 201 138 201 138 }
@@ -241,6 +238,7 @@ dna_grand_duke_adolf = {
 			top_layer={ "no_top_layer" 0 "all_top_layers" 0 }
 			legwear={ "european_legwear" 0 "all_legwear" 0 }
 			headgear={ "generic_headgear" 0 "all_headgear" 0 }
+			gene_asian_east = { "asian_east" 0 "asian_east" 0 }
 		}
     }
     enabled=yes
@@ -248,9 +246,7 @@ dna_grand_duke_adolf = {
 
 dna_grand_duke_william_04 = {
     portrait_info = {
-        genes={
-		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
- 		
+        genes={ 		
 			hair_color={ 255 191 183 191 }
 			skin_color={ 51 25 51 25 }
 			eye_color={ 189 128 189 128 }
@@ -365,6 +361,7 @@ dna_grand_duke_william_04 = {
 			top_layer={ "no_top_layer" 0 "all_top_layers" 0 }
 			legwear={ "european_legwear" 0 "all_legwear" 0 }
 			headgear={ "generic_headgear" 0 "all_headgear" 0 }
+			gene_asian_east = { "asian_east" 0 "asian_east" 0 }
 		}
     }
     enabled=yes
@@ -372,9 +369,7 @@ dna_grand_duke_william_04 = {
 
 dna_grand_duchess_marie_adelaide = {
     portrait_info = {
-        genes={
-		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
- 		
+        genes={ 		
 			hair_color={ 198 168 177 201 }
 			skin_color={ 50 3 50 3 }
 			eye_color={ 217 149 217 149 }
@@ -489,6 +484,7 @@ dna_grand_duchess_marie_adelaide = {
 			top_layer={ "no_top_layer" 0 "all_top_layers" 0 }
 			legwear={ "european_legwear" 0 "all_legwear" 0 }
 			headgear={ "generic_headgear" 0 "all_headgear" 0 }
+			gene_asian_east = { "asian_east" 0 "asian_east" 0 }
 		}
     }
     enabled=yes
@@ -496,9 +492,7 @@ dna_grand_duchess_marie_adelaide = {
 
 dna_grand_duchess_charlotte = {
     portrait_info = {
-        genes={
-		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
- 		
+        genes={ 		
 			hair_color={ 253 178 181 178 }
 			skin_color={ 2 20 2 20 }
 			eye_color={ 235 164 235 164 }
@@ -613,6 +607,7 @@ dna_grand_duchess_charlotte = {
 			top_layer={ "no_top_layer" 0 "all_top_layers" 0 }
 			legwear={ "european_legwear" 0 "all_legwear" 0 }
 			headgear={ "generic_headgear" 0 "all_headgear" 0 }
+			gene_asian_east = { "asian_east" 0 "asian_east" 0 }
 		}
     }
     enabled=yes
@@ -620,9 +615,7 @@ dna_grand_duchess_charlotte = {
 
 dna_princess_hilda = {
     portrait_info = {
-        genes={
-		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
- 		
+        genes={ 		
 			hair_color={ 253 178 181 178 }
 			skin_color={ 2 20 2 20 }
 			eye_color={ 235 164 235 164 }
@@ -737,6 +730,7 @@ dna_princess_hilda = {
 			top_layer={ "no_top_layer" 0 "all_top_layers" 0 }
 			legwear={ "european_legwear" 0 "all_legwear" 0 }
 			headgear={ "generic_headgear" 0 "all_headgear" 0 }
+			gene_asian_east = { "asian_east" 0 "asian_east" 0 }
 		}
     }
     enabled=yes
@@ -744,9 +738,7 @@ dna_princess_hilda = {
 
 dna_grand_duke_jean = {
     portrait_info = {
-        genes={
-		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
- 		
+        genes={ 		
 			hair_color={ 206 179 169 195 }
 			skin_color={ 24 24 24 24 }
 			eye_color={ 214 179 214 179 }
@@ -861,6 +853,7 @@ dna_grand_duke_jean = {
 			top_layer={ "no_top_layer" 0 "all_top_layers" 0 }
 			legwear={ "european_legwear" 0 "all_legwear" 0 }
 			headgear={ "generic_headgear" 0 "all_headgear" 0 }
+			gene_asian_east = { "asian_east" 0 "asian_east" 0 }
 		}
     }
     enabled=yes

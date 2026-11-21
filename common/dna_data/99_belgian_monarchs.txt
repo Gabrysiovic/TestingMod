@@ -1,8 +1,6 @@
 ﻿dna_prince_leopold_belgium = {
     portrait_info = {
-        genes={
-		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
- 		
+        genes={ 		
 			hair_color={ 140 131 203 171 }
 			skin_color={ 23 9 23 9 }
 			eye_color={ 232 224 186 199 }
@@ -117,6 +115,7 @@
 			top_layer={ "no_top_layer" 0 "all_top_layers" 0 }
 			legwear={ "european_legwear" 0 "all_legwear" 0 }
 			headgear={ "generic_headgear" 0 "all_headgear" 0 }
+			gene_asian_east = { "asian_east" 0 "asian_east" 0 }
 		}
     }
     enabled=yes
@@ -124,9 +123,7 @@
 
 dna_prince_philippe_belgium = {
     portrait_info = {
-        genes={
-		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
- 		
+        genes={ 		
 			hair_color={ 212 150 217 165 }
 			skin_color={ 45 21 45 21 }
 			eye_color={ 79 178 79 178 }
@@ -241,6 +238,7 @@ dna_prince_philippe_belgium = {
 			top_layer={ "no_top_layer" 0 "all_top_layers" 0 }
 			legwear={ "european_legwear" 0 "all_legwear" 0 }
 			headgear={ "generic_headgear" 0 "all_headgear" 0 }
+			gene_asian_east = { "asian_east" 0 "asian_east" 0 }
 		}
     }
     enabled=yes
@@ -248,9 +246,7 @@ dna_prince_philippe_belgium = {
 
 dna_prince_baudouin_belgium = {
     portrait_info = {
-        genes={
-		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
- 		
+        genes={ 		
 			hair_color={ 255 166 185 166 }
 			skin_color={ 33 4 33 4 }
 			eye_color={ 81 128 81 128 }
@@ -365,6 +361,7 @@ dna_prince_baudouin_belgium = {
 			top_layer={ "no_top_layer" 0 "all_top_layers" 0 }
 			legwear={ "european_legwear" 0 "all_legwear" 0 }
 			headgear={ "generic_headgear" 0 "all_headgear" 0 }
+			gene_asian_east = { "asian_east" 0 "asian_east" 0 }
 		}
     }
     enabled=yes
@@ -372,9 +369,7 @@ dna_prince_baudouin_belgium = {
 
 dna_king_albert_01 = {
     portrait_info = {
-        genes={
-		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
- 		
+        genes={ 		
 			hair_color={ 188 109 214 179 }
 			skin_color={ 26 26 26 26 }
 			eye_color={ 89 215 222 136 }
@@ -489,6 +484,7 @@ dna_king_albert_01 = {
 			top_layer={ "no_top_layer" 0 "all_top_layers" 0 }
 			legwear={ "european_legwear" 0 "all_legwear" 0 }
 			headgear={ "generic_headgear" 0 "all_headgear" 0 }
+			gene_asian_east = { "asian_east" 0 "asian_east" 0 }
 		}
     }
     enabled=yes
@@ -496,9 +492,7 @@ dna_king_albert_01 = {
 
 dna_king_leopold_03 = {
     portrait_info = {
-        genes={
-		gene_asian_east = { "asian_east" 0 "asian_east" 0 }
- 		
+        genes={ 		
 			hair_color={ 225 186 197 185 }
 			skin_color={ 58 25 78 25 }
 			eye_color={ 76 157 201 157 }
@@ -613,6 +607,7 @@ dna_king_leopold_03 = {
 			top_layer={ "no_top_layer" 0 "all_top_layers" 0 }
 			legwear={ "european_legwear" 0 "all_legwear" 0 }
 			headgear={ "generic_headgear" 0 "all_headgear" 0 }
+			gene_asian_east = { "asian_east" 0 "asian_east" 0 }
 		}
     }
     enabled=yes

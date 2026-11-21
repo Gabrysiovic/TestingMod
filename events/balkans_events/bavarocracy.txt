@@ -465,7 +465,7 @@ bavarocracy_events.2 = {
 			type = catalyst_event_positive
 			target = c:FRA
 		}
-
+		
 		ai_chance = {
 			base = 0
 		}
